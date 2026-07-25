@@ -182,6 +182,72 @@ const pillars = [
     tags: ["eTIMS", "Invoicing", "QR Code"],
     featured: false,
   },
+  {
+    slug: "vat-auto-populated-return",
+    number: "15",
+    label: "Auto-Populated Return",
+    title: "KRA Auto-Populated VAT Return Kenya 2026: How It Works and How to Verify",
+    bluf:
+      "KRA's auto-populated VAT return pre-fills your sales and purchases using eTIMS and withholding data. But the data is often incomplete or incorrect. Learn how to review, correct, and file confidently — and what to do when the auto-populated amounts don't match your books.",
+    readTime: "8 min",
+    tags: ["Auto-Populated", "iTax", "Verification"],
+    featured: false,
+  },
+  {
+    slug: "input-vat-deduction-guide",
+    number: "16",
+    label: "Input VAT",
+    title: "Input VAT Deduction Kenya 2026: Full Guide to Claiming Input Tax",
+    bluf:
+      "You can deduct input VAT on purchases that are directly attributable to taxable supplies — but only with a valid eTIMS invoice. This guide covers the 5 conditions for deduction, the apportionment formula for mixed supplies, import VAT, and what happens when input VAT exceeds output VAT.",
+    readTime: "11 min",
+    tags: ["Input VAT", "Apportionment", "eTIMS"],
+    featured: false,
+  },
+  {
+    slug: "withholding-vat-kenya",
+    number: "17",
+    label: "Withholding VAT",
+    title: "Withholding VAT in Kenya 2026: A Complete Guide for Agents and Suppliers",
+    bluf:
+      "Withholding VAT requires appointed agents to deduct 2% (or 6% for petroleum) at source and remit to KRA within 5 days. Suppliers get a withholding certificate to claim the amount as paid. This guide explains who is an appointed agent, how to account for WHT VAT, and how suppliers claim refunds.",
+    readTime: "10 min",
+    tags: ["Withholding VAT", "Agents", "Refund"],
+    featured: false,
+  },
+  {
+    slug: "vat-digital-services-kenya",
+    number: "18",
+    label: "Digital Services",
+    title: "VAT on Digital Services in Kenya 2026: Non-Resident & Local Provider Guide",
+    bluf:
+      "Digital services supplied to Kenyan customers are subject to 16% VAT. Non-resident providers must register via the simplified regime or appoint a tax representative. Locals supplying e-books, SaaS, streaming, and online courses must charge VAT. Exports of digital services are zero-rated.",
+    readTime: "10 min",
+    tags: ["Digital Services", "Non-Resident", "SaaS"],
+    featured: false,
+  },
+  {
+    slug: "vat-refund-guide-kenya",
+    number: "19",
+    label: "VAT Refunds",
+    title: "KRA VAT Refund Guide Kenya 2026: How to Claim Excess Input VAT",
+    bluf:
+      "You can claim a VAT refund when your input VAT exceeds output VAT — for example, if you are a zero-rated exporter or have made large capital purchases. The refund window is 12 months from the date the tax became due. This guide covers the application process, timelines, documentation, and common rejection reasons.",
+    readTime: "10 min",
+    tags: ["VAT Refund", "iTax", "Excess Input"],
+    featured: false,
+  },
+  {
+    slug: "finance-act-vat-changes-kenya",
+    number: "20",
+    label: "Finance Act Changes",
+    title: "Finance Act 2025 & 2026 VAT Changes: What Kenyan Businesses Need to Know",
+    bluf:
+      "Two Finance Acts have reshaped Kenya's VAT landscape — the KES 8M threshold (pending), reduced refund window to 12 months, fintech services now taxed at 16%, bad debt relief reverted to 3 years, and the 90:10 apportionment rule deleted. This guide summarises every change you need to know.",
+    readTime: "9 min",
+    tags: ["Finance Act", "2025", "2026", "Changes"],
+    featured: false,
+  },
 ]
 
 const breadcrumbSchema = {
@@ -214,6 +280,12 @@ const collectionSchema = {
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-for-startups-tech-businesses", name: "VAT for Startups and Tech Businesses in Kenya 2026" },
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-special-table-risks", name: "KRA VAT Special Table: Risks and How to Avoid Being Flagged" },
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/etims-invoicing-guide", name: "eTIMS Compliant Invoice Guide Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-auto-populated-return", name: "KRA Auto-Populated VAT Return Guide 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/input-vat-deduction-guide", name: "Input VAT Deduction Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/withholding-vat-kenya", name: "Withholding VAT in Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-digital-services-kenya", name: "VAT on Digital Services in Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-refund-guide-kenya", name: "KRA VAT Refund Guide Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/finance-act-vat-changes-kenya", name: "Finance Act 2025 & 2026 VAT Changes Kenya" },
   ],
 }
 
