@@ -147,7 +147,7 @@ export default function WhatHappensIfIDontRegisterForVAT() {
 
             <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg my-6">
               <div className="flex gap-3">
-                <AlertTriangle size={20} className="text-red-600 shrink-0 mt-0.5" aria-hidden="true" />
+                <Warning size={20} className="text-red-600 shrink-0 mt-0.5" aria-hidden="true" />
                 <div>
                   <p className="font-semibold text-red-900 mb-1">Bottom line:</p>
                   <p className="text-red-800 text-sm">
