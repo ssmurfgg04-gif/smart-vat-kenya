@@ -3,9 +3,11 @@ import { DM_Sans, Outfit } from "next/font/google"
 import "./globals.css"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { WhatsAppButton } from "@/components/whatsapp-button"
-import { BackToTop } from "@/components/back-to-top"
 import Script from "next/script"
+import dynamic from "next/dynamic"
+
+const WhatsAppButton = dynamic(() => import("@/components/whatsapp-button").then(m => m.WhatsAppButton))
+const BackToTop = dynamic(() => import("@/components/back-to-top").then(m => m.BackToTop))
 
 // Dropped JetBrains Mono — only used for tiny labels; now using CSS font-stack instead
 const dmSans = DM_Sans({

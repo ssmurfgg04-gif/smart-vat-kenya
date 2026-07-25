@@ -36,7 +36,7 @@ Smart VAT Kenya handles KRA VAT compliance end-to-end for small and medium-sized
 - [Free VAT Calculator & Tools](https://smartvatkenya.co.ke/tools) — VAT calculator, penalty waiver wizard, iTax error diagnosis, and registration quiz
 - [Services & Pricing](https://smartvatkenya.co.ke/services) — Detailed service descriptions with published prices
 - [How It Works](https://smartvatkenya.co.ke/how-it-works) — 3-step WhatsApp process
-- [Resources & Guides](https://smartvatkenya.co.ke/resources) — Kenya VAT knowledge base (10 guides)
+- [Resources & Guides](https://smartvatkenya.co.ke/resources) — Kenya VAT knowledge base (20 guides)
 - [How to Register for VAT in Kenya](https://smartvatkenya.co.ke/resources/how-to-register-for-vat-in-kenya) — Step-by-step iTax registration guide 2026
 - [KRA Penalty for Late VAT Filing](https://smartvatkenya.co.ke/resources/kra-penalty-for-late-vat-filing) — Calculate penalties and apply for a waiver
 - [How to Calculate 16% VAT in Kenya](https://smartvatkenya.co.ke/resources/how-to-calculate-vat-in-kenya) — Free KRA VAT calculator and examples
@@ -51,6 +51,14 @@ Smart VAT Kenya handles KRA VAT compliance end-to-end for small and medium-sized
 - [VAT for Startups & Tech Businesses](https://smartvatkenya.co.ke/resources/vat-for-startups-tech-businesses) — VAT rules for SaaS, software, freelancers, e-commerce, and tech founders in Kenya
 - [KRA VAT Special Table Guide](https://smartvatkenya.co.ke/resources/vat-special-table-risks) — How the flagged supplier list works, consecutive nil return risks, and removal process
 - [eTIMS Compliant Invoicing Guide](https://smartvatkenya.co.ke/resources/etims-invoicing-guide) — Mandatory invoice fields, QR codes, B2B vs B2C rules, and verification
+- [Auto-Populated VAT Return Guide](https://smartvatkenya.co.ke/resources/vat-auto-populated-return) — How KRA pre-fills your return via eTIMS and how to verify before filing
+- [Input VAT Deduction Guide](https://smartvatkenya.co.ke/resources/input-vat-deduction-guide) — 5 conditions for deduction, apportionment for mixed supplies, import VAT
+- [Withholding VAT in Kenya](https://smartvatkenya.co.ke/resources/withholding-vat-kenya) — Agent obligations, 2%/6% rates, remittance deadlines, supplier refunds
+- [VAT on Digital Services](https://smartvatkenya.co.ke/resources/vat-digital-services-kenya) — 16% VAT on digital services, non-resident registration, SaaS, streaming
+- [KRA VAT Refund Guide](https://smartvatkenya.co.ke/resources/vat-refund-guide-kenya) — Excess input VAT refunds, 12-month window, iTax application, documentation
+- [Finance Act 2025 & 2026 VAT Changes](https://smartvatkenya.co.ke/resources/finance-act-vat-changes-kenya) — All VAT changes: threshold, refund window, fintech, bad debt, apportionment
+- [KRA VAT Filing Deadline August 2026](https://smartvatkenya.co.ke/resources/kra-vat-filing-deadline-august-2026) — Deadline reminder, late penalty breakdown, and filing instructions
+- [eTIMS Penalty KES 50,000 Per Month](https://smartvatkenya.co.ke/resources/etims-penalty-50000-per-month-kenya) — eTIMS non-compliance fine, triggers, and avoidance
 
 ## Contact
 

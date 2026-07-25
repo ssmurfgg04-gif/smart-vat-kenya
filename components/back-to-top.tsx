@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowUp } from "@phosphor-icons/react"
+import { ArrowUp } from "@phosphor-icons/react/dist/ssr"
 
 export function BackToTop() {
   const [visible, setVisible] = useState(false)

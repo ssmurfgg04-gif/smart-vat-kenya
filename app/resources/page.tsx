@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowRight, Clock } from "@phosphor-icons/react/dist/ssr"
+import { NewsletterSignup } from "@/components/newsletter-signup"
 
 export const metadata: Metadata = {
   title: "Kenya VAT Knowledge Base — Free KRA Guides for SMEs 2026",
@@ -248,6 +249,28 @@ const pillars = [
     tags: ["Finance Act", "2025", "2026", "Changes"],
     featured: false,
   },
+  {
+    slug: "kra-vat-filing-deadline-august-2026",
+    number: "21",
+    label: "Deadline",
+    title: "KRA VAT Filing Deadline August 2026: Don't Miss the 20th",
+    bluf:
+      "The KRA VAT return is due by the 20th of every month. Late filing costs KES 10,000 + 5% of tax due + 1%/month interest. Includes what to file, how to file on iTax, and what to do if you missed the deadline.",
+    readTime: "6 min",
+    tags: ["Deadline", "Penalty", "iTax"],
+    featured: false,
+  },
+  {
+    slug: "etims-penalty-50000-per-month-kenya",
+    number: "22",
+    label: "eTIMS Penalty",
+    title: "eTIMS Penalty KES 50,000 Per Month: How to Avoid the New Fine",
+    bluf:
+      "KRA charges KES 50,000/month for eTIMS non-compliance, separate from VAT penalties. This covers what triggers the fine, how to check your status, and how to stay compliant.",
+    readTime: "7 min",
+    tags: ["eTIMS", "Penalty", "Compliance"],
+    featured: false,
+  },
 ]
 
 const breadcrumbSchema = {
@@ -286,6 +309,8 @@ const collectionSchema = {
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-digital-services-kenya", name: "VAT on Digital Services in Kenya 2026" },
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-refund-guide-kenya", name: "KRA VAT Refund Guide Kenya 2026" },
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/finance-act-vat-changes-kenya", name: "Finance Act 2025 & 2026 VAT Changes Kenya" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/kra-vat-filing-deadline-august-2026", name: "KRA VAT Filing Deadline August 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/etims-penalty-50000-per-month-kenya", name: "eTIMS Penalty KES 50,000 Per Month Kenya" },
   ],
 }
 
@@ -401,7 +426,7 @@ export default function ResourcesPage() {
             id="all-guides-label"
             className="font-mono text-[0.67rem] uppercase tracking-[0.18em] text-ink-muted mb-6"
           >
-            All 14 definitive guides
+            All 22 resources
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">
@@ -451,6 +476,25 @@ export default function ResourcesPage() {
             ))}
           </div>
         </section>
+
+        {/* Newsletter + WhatsApp CTA */}
+        <div className="mt-14 grid sm:grid-cols-2 gap-5">
+          <NewsletterSignup />
+          <a
+            href="https://wa.me/254721725958?text=Hi%2C%20I%20read%20your%20VAT%20guides%20and%20I%20have%20a%20question."
+            target="_blank" rel="noopener noreferrer"
+            className="border border-hairline rounded-lg p-6 flex flex-col justify-center hover:border-brand/30 transition-colors group"
+          >
+            <p className="font-display text-[1rem] font-semibold text-ink mb-1">Not sure where to start?</p>
+            <p className="text-[0.83rem] text-ink-muted mb-4 leading-relaxed">
+              Ask us on WhatsApp. We reply in minutes — and we don&apos;t charge for the first conversation.
+            </p>
+            <span className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-[0.85rem] px-4 py-2.5 rounded-md w-fit group-hover:bg-brand-hover transition-colors">
+              Ask on WhatsApp
+              <ArrowRight size={14} weight="bold" aria-hidden="true" />
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   )

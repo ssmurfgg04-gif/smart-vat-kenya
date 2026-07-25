@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/services`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/how-it-works`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/resources`, lastModified: "2026-07-25", changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE}/resources/kra-vat-filing-deadline-august-2026`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/resources/etims-penalty-50000-per-month-kenya`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.8 },
     // Pillar guides
     { url: `${BASE}/resources/how-to-register-for-vat-in-kenya`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.95 },
     { url: `${BASE}/resources/kra-penalty-for-late-vat-filing`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.85 },
@@ -26,5 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/resources/vat-for-startups-tech-businesses`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/resources/vat-special-table-risks`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/resources/etims-invoicing-guide`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.85 },
+    // Phase 2 — July 2026 gap-filler guides
+    { url: `${BASE}/resources/vat-auto-populated-return`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/resources/input-vat-deduction-guide`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/resources/withholding-vat-kenya`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/resources/vat-digital-services-kenya`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/resources/vat-refund-guide-kenya`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/resources/finance-act-vat-changes-kenya`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.85 },
   ]
 }

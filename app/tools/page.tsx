@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Calculator, Info, WarningCircle, Question, CheckCircle, Wrench, ClipboardText } from "@phosphor-icons/react"
+import { ArrowRight, Calculator, Info, WarningCircle, Question, CheckCircle, Wrench, ClipboardText } from "@phosphor-icons/react/dist/ssr"
 
 const WA_BASE = "https://wa.me/254721725958"
 

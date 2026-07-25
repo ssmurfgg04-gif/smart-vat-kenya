@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
-import { List, X } from "@phosphor-icons/react"
+import { List, X } from "@phosphor-icons/react/dist/ssr"
 
 const navLinks = [
   { href: "/tools",           label: "VAT Calculator" },
