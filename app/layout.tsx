@@ -91,6 +91,12 @@ export const metadata: Metadata = {
     "kra vat registration threshold",
     "kenya vat exempt zero rated goods",
     "kra paybill 572572 vat payment",
+    // People Also Ask optimization
+    "is it mandatory to register for vat in kenya",
+    "what happens if i don't register for vat in kenya",
+    "vat registration requirements kenya 2026",
+    "can i register for vat voluntarily in kenya",
+    "how long does vat registration take in kenya",
   ],
   authors: [{ name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" }],
   creator: "Smart VAT Kenya",
@@ -110,6 +116,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "Smart VAT Kenya — Professional VAT Registration Services",
+        type: "image/png",
       },
     ],
   },
@@ -120,7 +127,13 @@ export const metadata: Metadata = {
       "Flat-fee VAT registration (KES 5,000) and monthly filing (KES 3,500) for Kenyan SMEs. eTIMS-ready. Free 16% VAT calculator.",
     images: ["https://smartvatkenya.co.ke/og-image.png"],
   },
-  alternates: { canonical: "https://smartvatkenya.co.ke" },
+  alternates: {
+    canonical: "https://smartvatkenya.co.ke",
+    languages: {
+      "en-KE": "https://smartvatkenya.co.ke",
+      "x-default": "https://smartvatkenya.co.ke",
+    },
+  },
   robots: {
     index: true,
     follow: true,
@@ -152,8 +165,15 @@ const localBusinessSchema = {
       description:
         "Professional VAT registration and monthly filing services for Kenyan SMEs. Flat-fee pricing, eTIMS-compliant, M-PESA accepted, WhatsApp support.",
       telephone: "+254721725958",
-      priceRange: "KES 3,500 to KES 5,000",
+      email: "hello@smartvatkenya.co.ke",
+      priceRange: "KES3500-KES5000",
       image: "https://smartvatkenya.co.ke/icon.svg",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://smartvatkenya.co.ke/icon.svg",
+        width: 256,
+        height: 256,
+      },
       address: {
         "@type": "PostalAddress",
         streetAddress: "Pioneer House, Moi Avenue",
@@ -189,17 +209,12 @@ const localBusinessSchema = {
         "@type": "Thing",
         name: "Kenya VAT Registration and Compliance",
       },
-      parentOrganization: {
-        "@type": "Organization",
-        name: "Smart VAT Kenya",
-        url: "https://smartvatkenya.co.ke",
-        logo: "https://smartvatkenya.co.ke/icon.svg",
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+254721725958",
-          contactType: "customer service",
-          availableLanguage: "English, Swahili",
-        },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+254721725958",
+        contactType: "customer service",
+        availableLanguage: ["English", "Swahili"],
+        areaServed: "KE",
       },
       aggregateRating: {
         "@type": "AggregateRating",
@@ -222,6 +237,7 @@ const localBusinessSchema = {
             },
             price: "5000",
             priceCurrency: "KES",
+            availability: "https://schema.org/InStock",
           },
           {
             "@type": "Offer",
@@ -231,6 +247,7 @@ const localBusinessSchema = {
             },
             price: "3500",
             priceCurrency: "KES",
+            availability: "https://schema.org/InStock",
           },
         ],
       },
@@ -263,33 +280,33 @@ const localBusinessSchema = {
         "@type": "SearchAction",
         target: {
           "@type": "EntryPoint",
-          urlTemplate: "https://smartvatkenya.co.ke/blog?q={search_term_string}",
+          urlTemplate: "https://smartvatkenya.co.ke/resources?q={search_term_string}",
         },
-  "query-input": "required name=search_term_string",
-        },
+        "query-input": "required name=search_term_string",
       },
-      {
-        "@type": "Product",
-        "@id": "https://smartvatkenya.co.ke/services#vat-filing-product",
-        name: "Monthly VAT Filing Service",
-        description:
-          "Monthly iTax VAT return filing before the 20th KRA deadline. Filed on the 17th. Includes WhatsApp reminders and M-PESA payment guidance.",
-        brand: { "@type": "Brand", name: "Smart VAT Kenya" },
-        offers: {
-          "@type": "Offer",
-          price: "3500",
-          priceCurrency: "KES",
-          availability: "https://schema.org/InStock",
-          url: "https://smartvatkenya.co.ke/services",
-        },
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.9",
-          reviewCount: "58",
-          bestRating: "5",
-          worstRating: "1",
-        },
+    },
+    {
+      "@type": "Product",
+      "@id": "https://smartvatkenya.co.ke/services#vat-filing-product",
+      name: "Monthly VAT Filing Service",
+      description:
+        "Monthly iTax VAT return filing before the 20th KRA deadline. Filed on the 17th. Includes WhatsApp reminders and M-PESA payment guidance.",
+      brand: { "@type": "Brand", name: "Smart VAT Kenya" },
+      offers: {
+        "@type": "Offer",
+        price: "3500",
+        priceCurrency: "KES",
+        availability: "https://schema.org/InStock",
+        url: "https://smartvatkenya.co.ke/services",
       },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "58",
+        bestRating: "5",
+        worstRating: "1",
+      },
+    },
     {
       "@type": "Service",
       "@id": "https://smartvatkenya.co.ke/services#registration",
@@ -338,10 +355,15 @@ export default function RootLayout({
       className={`${dmSans.variable} ${outfit.variable} bg-canvas`}
     >
       <head>
+        {/* Hreflang tags for geo-targeting */}
+        <link rel="alternate" hrefLang="en-KE" href="https://smartvatkenya.co.ke" />
+        <link rel="alternate" hrefLang="x-default" href="https://smartvatkenya.co.ke" />
+
         {/* DNS prefetch for external resources */}
         <link rel="dns-prefetch" href="//wa.me" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         <link rel="preconnect" href="https://wa.me" />
+        
         <Script
           id="local-business-schema"
           type="application/ld+json"
