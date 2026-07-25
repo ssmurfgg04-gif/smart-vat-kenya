@@ -22,8 +22,8 @@ export function NewsletterSignup() {
   if (submitted) {
     return (
       <div className="border border-brand/30 bg-brand-muted rounded-lg p-6 text-center">
-        <p className="font-semibold text-ink text-[0.95rem]">You&apos;re subscribed!</p>
-        <p className="text-[0.85rem] text-ink-muted mt-1">We&apos;ll send Kenya VAT updates and deadline reminders straight to your inbox.</p>
+        <p className="font-semibold text-ink text-[0.95rem]">You're subscribed!</p>
+        <p className="text-[0.85rem] text-ink-muted mt-1">We'll send Kenya VAT updates and deadline reminders straight to your inbox.</p>
       </div>
     )
   }
@@ -31,9 +31,7 @@ export function NewsletterSignup() {
   return (
     <form
       onSubmit={handleSubmit}
-      netlify="true"
       name="newsletter"
-      data-netlify="true"
       className="border border-hairline rounded-lg p-6"
     >
       <input type="hidden" name="form-name" value="newsletter" />
