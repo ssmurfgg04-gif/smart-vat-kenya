@@ -341,7 +341,44 @@ const localBusinessSchema = {
         validFrom: "2026-01-01",
       },
     },
-  ],
+  ,
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the VAT registration threshold in Kenya 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As of 2026, the mandatory VAT registration threshold in Kenya is an annual turnover of KES 5,000,000. Businesses can also register voluntarily."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the penalty for late VAT filing in Kenya?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Late filing of a VAT return attracts a penalty of KES 10,000 or 5% of the tax due, whichever is higher, plus interest on the unpaid amount."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does VAT registration cost in Kenya?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While KRA registration itself is free, professional assistance to handle the entire iTax process and ensure compliance typically costs a flat fee of KES 5,000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the VAT Special Table in Kenya?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The VAT Special Table is a KRA compliance measure that blocks input VAT claims from suppliers who are non-compliant or flagged, protecting your business from unexpected tax liabilities."
+          }
+        }
+      ]
+    }],
 }
 
 export default function RootLayout({
