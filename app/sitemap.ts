@@ -35,5 +35,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/resources/vat-digital-services-kenya`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/resources/vat-refund-guide-kenya`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/resources/finance-act-vat-changes-kenya`, lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.85 },
+    // Phase 3 — July 2026 new content
+    { url: `${BASE}/resources/faq`, lastModified: "2026-07-26", changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/resources/vat-for-landlords-kenya`, lastModified: "2026-07-26", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/resources/vat-for-restaurants-hospitality`, lastModified: "2026-07-26", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/resources/vat-for-importers-kenya`, lastModified: "2026-07-26", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/resources/kra-vat-audit-process`, lastModified: "2026-07-26", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/resources/how-to-apply-for-kra-pin`, lastModified: "2026-07-26", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/resources/vat-deregistration-kenya`, lastModified: "2026-07-26", changeFrequency: "monthly", priority: 0.85 },
+    // Service landing pages
+    { url: `${BASE}/services/vat-registration`, lastModified: "2026-07-26", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/services/monthly-vat-filing`, lastModified: "2026-07-26", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/services/kra-penalty-waiver`, lastModified: "2026-07-26", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/services/etims-onboarding`, lastModified: "2026-07-26", changeFrequency: "monthly", priority: 0.85 },
+    // Regional landing pages
+    { url: `${BASE}/services/vat-registration-nairobi`, lastModified: "2026-07-26", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/services/vat-registration-mombasa`, lastModified: "2026-07-26", changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/services/vat-registration-kisumu`, lastModified: "2026-07-26", changeFrequency: "monthly", priority: 0.85 },
   ]
 }

@@ -271,6 +271,73 @@ const pillars = [
     tags: ["eTIMS", "Penalty", "Compliance"],
     featured: false,
   },
+  // Phase 3 — July 2026 new content batch 1
+  {
+    slug: "vat-for-landlords-kenya",
+    number: "23",
+    label: "Landlords",
+    title: "VAT for Landlords Kenya 2026: Do I Charge VAT on Rental Income?",
+    bluf:
+      "Commercial rental income is subject to VAT if turnover exceeds the KES 5 million threshold. Residential rent is exempt. Learn the distinction, apportionment for mixed-use properties, and eTIMS for landlords.",
+    readTime: "9 min",
+    tags: ["Landlords", "Rental Income", "Property"],
+    featured: false,
+  },
+  {
+    slug: "vat-for-restaurants-hospitality",
+    number: "24",
+    label: "Hospitality",
+    title: "VAT for Restaurants & Hospitality in Kenya 2026: Complete Guide",
+    bluf:
+      "Restaurants charge 16% VAT on most food and beverage sales. Basic foodstuffs may be zero-rated. Includes eTIMS for hospitality, hotel accommodation VAT, and input VAT claims on supplies.",
+    readTime: "10 min",
+    tags: ["Hospitality", "Restaurants", "Hotels"],
+    featured: false,
+  },
+  {
+    slug: "vat-for-importers-kenya",
+    number: "25",
+    label: "Importers",
+    title: "VAT for Importers in Kenya 2026: Import VAT, Customs & Compliance",
+    bluf:
+      "Import VAT at 16% is charged on CIF value plus duty. Pay via SIMA or M-PESA Paybill 572572. Claim input VAT on imports with proper customs entry documents and eTIMS-compliant records.",
+    readTime: "11 min",
+    tags: ["Importers", "Customs", "SIMA"],
+    featured: false,
+  },
+  {
+    slug: "kra-vat-audit-process",
+    number: "26",
+    label: "Audit Guide",
+    title: "KRA VAT Audit Process Kenya 2026: What to Expect and How to Prepare",
+    bluf:
+      "What triggers a KRA VAT audit, the step-by-step process, documents KRA will request, how to object to an assessment, and how to prepare your business for an audit.",
+    readTime: "12 min",
+    tags: ["Audit", "KRA", "Compliance"],
+    featured: false,
+  },
+  {
+    slug: "how-to-apply-for-kra-pin",
+    number: "27",
+    label: "KRA PIN",
+    title: "How to Apply for a KRA PIN in Kenya 2026: Online & Offline Guide",
+    bluf:
+      "Apply for a KRA PIN online via iTax, at Huduma Centre, or through the M-Service mobile app. Documents needed, processing time, business PIN requirements, and how to check your status.",
+    readTime: "7 min",
+    tags: ["KRA PIN", "iTax", "Huduma Centre"],
+    featured: false,
+  },
+  {
+    slug: "vat-deregistration-kenya",
+    number: "28",
+    label: "Deregistration",
+    title: "VAT Deregistration Kenya 2026: How to Cancel Your VAT Registration",
+    bluf:
+      "When to deregister, the iTax process via Form VAT 4, final return and stock adjustments, eTIMS cancellation, involuntary deregistration by KRA, and re-registration if needed.",
+    readTime: "8 min",
+    tags: ["Deregistration", "VAT Cancellation", "Exit"],
+    featured: false,
+  },
 ]
 
 const breadcrumbSchema = {
@@ -311,6 +378,13 @@ const collectionSchema = {
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/finance-act-vat-changes-kenya", name: "Finance Act 2025 & 2026 VAT Changes Kenya" },
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/kra-vat-filing-deadline-august-2026", name: "KRA VAT Filing Deadline August 2026" },
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/etims-penalty-50000-per-month-kenya", name: "eTIMS Penalty KES 50,000 Per Month Kenya" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/faq", name: "Kenya VAT FAQ — 40+ Questions Answered" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-for-landlords-kenya", name: "VAT for Landlords Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-for-restaurants-hospitality", name: "VAT for Restaurants & Hospitality Kenya" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-for-importers-kenya", name: "VAT for Importers Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/kra-vat-audit-process", name: "KRA VAT Audit Process Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/how-to-apply-for-kra-pin", name: "How to Apply for a KRA PIN Kenya" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-deregistration-kenya", name: "VAT Deregistration Kenya 2026" },
   ],
 }
 
@@ -426,7 +500,7 @@ export default function ResourcesPage() {
             id="all-guides-label"
             className="font-mono text-[0.67rem] uppercase tracking-[0.18em] text-ink-muted mb-6"
           >
-            All 22 resources
+            All 28 resources
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">

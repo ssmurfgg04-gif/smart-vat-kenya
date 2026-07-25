@@ -59,7 +59,8 @@ export function Footer() {
                 { href: "/tools",        label: "Free VAT Calculator" },
                 { href: "/services",     label: "Services & Pricing" },
                 { href: "/how-it-works", label: "How It Works" },
-                { href: "/blog",         label: "Resources & Blog" },
+                { href: "/resources",    label: "Resources" },
+                { href: "/resources/faq", label: "VAT FAQ" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
