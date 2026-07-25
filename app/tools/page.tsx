@@ -1,0 +1,487 @@
+"use client"
+
+import { useState } from "react"
+import { ArrowRight, Calculator, Info, WarningCircle, Question } from "@phosphor-icons/react"
+
+const WA_BASE = "https://wa.me/254721725958"
+
+type RateType = "standard" | "zero" | "exempt"
+type Direction = "add" | "extract"
+
+function formatKES(n: number) {
+  return "KES " + n.toLocaleString("en-KE", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+}
+
+// ── Am I Required to Register Quiz ──────────────────────────
+
+type QuizStep =
+  | "turnover"
+  | "digital"
+  | "income_tax"
+  | "result_required"
+  | "result_optional"
+  | "result_recommended"
+
+const quizQuestions: Record<
+  string,
+  {
+    question: string
+    yes: QuizStep
+    no: QuizStep
+  }
+> = {
+  turnover: {
+    question: "Does your business have annual taxable turnover of KES 5 million or more?",
+    yes: "result_required",
+    no: "digital",
+  },
+  digital: {
+    question: "Do you supply digital services or content to Kenyan customers?",
+    yes: "result_required",
+    no: "income_tax",
+  },
+  income_tax: {
+    question: "Is your business already registered for income tax (do you have a KRA PIN)?",
+    yes: "result_recommended",
+    no: "result_optional",
+  },
+}
+
+export default function ToolsPage() {
+  // ── VAT Calculator ────────────────────────────────────────
+  const [amount, setAmount] = useState("")
+  const [rateType, setRateType] = useState<RateType>("standard")
+  const [direction, setDirection] = useState<Direction>("add")
+
+  const base = parseFloat(amount.replace(/,/g, "")) || 0
+  const vatAmount =
+    rateType === "standard"
+      ? direction === "add"
+        ? base * 0.16
+        : base - base / 1.16
+      : 0
+  const net = direction === "add" ? base : base / 1.16
+  const gross = direction === "add" ? base + vatAmount : base
+
+  // ── Penalty Estimator ─────────────────────────────────────
+  const [taxDue, setTaxDue] = useState("")
+  const [monthsLate, setMonthsLate] = useState("1")
+
+  const taxDueNum = parseFloat(taxDue.replace(/,/g, "")) || 0
+  const months = parseInt(monthsLate, 10) || 1
+  const fixedPenalty = 10000
+  const lateFee = Math.max(taxDueNum * 0.05, 0)
+  const interest = taxDueNum * 0.01 * months
+  const totalPenalty = fixedPenalty + lateFee + interest
+
+  const waPenaltyText = encodeURIComponent(
+    `Hi, I have KRA VAT penalties of approx KES ${Math.round(totalPenalty).toLocaleString()}. I need help with a penalty waiver.`
+  )
+
+  // ── Am I Required Quiz ────────────────────────────────────
+  const [quizStep, setQuizStep] = useState<QuizStep | "start">("start")
+
+  function handleQuizAnswer(step: string, answer: "yes" | "no") {
+    const q = quizQuestions[step]
+    setQuizStep(q[answer])
+  }
+
+  const resultLabels: Record<string, { label: string; color: string; message: string; cta: string }> = {
+    result_required: {
+      label: "Required",
+      color: "text-brand",
+      message:
+        "Based on your answers, VAT registration is mandatory for your business under KRA rules. You must register on iTax as soon as possible to avoid penalties.",
+      cta: "Register Now — KES 5,000",
+    },
+    result_recommended: {
+      label: "Strongly Recommended",
+      color: "text-[#b07a00]",
+      message:
+        "You are below the KES 5 million threshold, but as a registered business you can voluntarily register to claim input VAT on your purchases. KRA is also expanding mandatory registration — early registration is advisable.",
+      cta: "Ask us about voluntary registration",
+    },
+    result_optional: {
+      label: "Optional",
+      color: "text-ink-muted",
+      message:
+        "You may not yet be required to register for VAT. However, once your turnover approaches KES 5 million, or if KRA expands mandatory registration, you will need to comply. Start a KRA PIN first if you do not have one.",
+      cta: "Ask us a question",
+    },
+  }
+
+  return (
+    <div className="bg-canvas min-h-[100dvh]">
+      {/* Page header */}
+      <div className="bg-canvas-dark px-6 lg:px-10 py-16">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
+            Free tools — no sign-up required
+          </p>
+          <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
+            VAT Calculator KRA Kenya &amp; Penalty Estimator
+          </h1>
+          <p className="text-[0.95rem] text-canvas/70 max-w-[52ch] leading-relaxed">
+            Kenya VAT standard rate 16% (2026). Add VAT, extract VAT (reverse), estimate late-filing
+            penalties, and check if your business must register.
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
+        <div className="grid lg:grid-cols-2 gap-10 items-start">
+
+          {/* ── Tool 1: VAT Calculator ────────────────────── */}
+          <section aria-labelledby="vat-calc-heading">
+            <div className="flex items-center gap-2.5 mb-6">
+              <Calculator size={17} weight="duotone" className="text-brand" aria-hidden="true" />
+              <h2 id="vat-calc-heading" className="font-display text-[1rem] font-semibold text-ink">
+                Kenya VAT Calculator 2026 — 16% Standard Rate
+              </h2>
+            </div>
+
+            <div className="border border-hairline rounded-lg overflow-hidden divide-y divide-hairline">
+              {/* Amount */}
+              <div className="p-5">
+                <label htmlFor="amount" className="block text-[0.78rem] font-medium text-ink-muted mb-2">
+                  Amount (KES)
+                </label>
+                <input
+                  id="amount"
+                  type="text"
+                  inputMode="decimal"
+                  placeholder="50,000"
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
+                  className="w-full font-display text-[1.6rem] font-semibold text-ink bg-transparent focus:outline-none placeholder:text-ink-muted/30 placeholder:font-normal placeholder:text-xl"
+                />
+              </div>
+
+              {/* Rate */}
+              <div className="p-5">
+                <p className="text-[0.78rem] font-medium text-ink-muted mb-3">KRA VAT Rate</p>
+                <div className="flex flex-wrap gap-2">
+                  {(
+                    [
+                      { value: "standard", label: "Standard 16%" },
+                      { value: "zero", label: "Zero-rated 0%" },
+                      { value: "exempt", label: "Exempt" },
+                    ] as { value: RateType; label: string }[]
+                  ).map((r) => (
+                    <button
+                      key={r.value}
+                      onClick={() => setRateType(r.value)}
+                      className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${
+                        rateType === r.value
+                          ? "bg-ink text-canvas border-ink"
+                          : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"
+                      }`}
+                    >
+                      {r.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Direction */}
+              <div className="p-5">
+                <p className="text-[0.78rem] font-medium text-ink-muted mb-3">Calculate</p>
+                <div className="flex gap-2 flex-wrap">
+                  {(
+                    [
+                      { value: "add", label: "Add VAT to amount" },
+                      { value: "extract", label: "Extract VAT from total (reverse)" },
+                    ] as { value: Direction; label: string }[]
+                  ).map((d) => (
+                    <button
+                      key={d.value}
+                      onClick={() => setDirection(d.value)}
+                      className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${
+                        direction === d.value
+                          ? "bg-ink text-canvas border-ink"
+                          : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"
+                      }`}
+                    >
+                      {d.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Result */}
+              <div className="p-5 bg-canvas-alt">
+                {rateType === "exempt" ? (
+                  <div className="flex items-start gap-2.5 text-[0.82rem] text-ink-muted">
+                    <Info size={14} className="shrink-0 mt-0.5" aria-hidden="true" />
+                    Exempt supplies carry no VAT charge and do not qualify for input VAT credit.
+                  </div>
+                ) : rateType === "zero" ? (
+                  <div className="flex items-start gap-2.5 text-[0.82rem] text-ink-muted">
+                    <Info size={14} className="shrink-0 mt-0.5" aria-hidden="true" />
+                    Zero-rated at 0% — VAT is charged but at nil. Input VAT is still claimable.
+                  </div>
+                ) : (
+                  <dl className="space-y-3">
+                    <div className="flex items-baseline justify-between">
+                      <dt className="text-[0.78rem] text-ink-muted">
+                        {direction === "add" ? "Net (excl. VAT)" : "Net extracted"}
+                      </dt>
+                      <dd className="font-mono text-[0.88rem] text-ink tabular-nums">
+                        {formatKES(net)}
+                      </dd>
+                    </div>
+                    <div className="flex items-baseline justify-between">
+                      <dt className="text-[0.78rem] text-ink-muted">VAT @ 16%</dt>
+                      <dd className="font-mono text-[0.88rem] text-brand tabular-nums">
+                        + {formatKES(vatAmount)}
+                      </dd>
+                    </div>
+                    <div className="flex items-baseline justify-between border-t border-hairline pt-3">
+                      <dt className="text-[0.82rem] font-semibold text-ink">
+                        {direction === "add" ? "Total (incl. VAT)" : "Original total"}
+                      </dt>
+                      <dd className="font-display text-[1.25rem] font-semibold text-ink tabular-nums">
+                        {formatKES(gross)}
+                      </dd>
+                    </div>
+                  </dl>
+                )}
+              </div>
+            </div>
+
+            <p className="mt-3 text-[0.72rem] text-ink-muted leading-relaxed flex items-start gap-1.5">
+              <Info size={12} className="shrink-0 mt-0.5" aria-hidden="true" />
+              Kenya VAT standard rate is 16% (KRA 2026). For indicative purposes only.
+              <a
+                href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20get%20started%20with%20VAT%20registration%20or%20filing.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-1 text-brand underline underline-offset-2 hover:text-brand-hover"
+              >
+                Need help filing?
+              </a>
+            </p>
+          </section>
+
+          {/* ── Tool 2: Penalty Estimator ──────────────────── */}
+          <section aria-labelledby="penalty-heading">
+            <div className="flex items-center gap-2.5 mb-6">
+              <WarningCircle size={17} weight="duotone" className="text-brand" aria-hidden="true" />
+              <h2 id="penalty-heading" className="font-display text-[1rem] font-semibold text-ink">
+                KRA Late-Filing Penalty Estimator
+              </h2>
+            </div>
+
+            <div className="border border-hairline rounded-lg overflow-hidden divide-y divide-hairline">
+              {/* Tax due */}
+              <div className="p-5">
+                <label htmlFor="taxdue" className="block text-[0.78rem] font-medium text-ink-muted mb-2">
+                  VAT liability for the period (KES)
+                </label>
+                <input
+                  id="taxdue"
+                  type="text"
+                  inputMode="decimal"
+                  placeholder="80,000"
+                  value={taxDue}
+                  onChange={(e) => setTaxDue(e.target.value)}
+                  className="w-full font-display text-[1.6rem] font-semibold text-ink bg-transparent focus:outline-none placeholder:text-ink-muted/30 placeholder:font-normal placeholder:text-xl"
+                />
+              </div>
+
+              {/* Months slider */}
+              <div className="p-5">
+                <label
+                  htmlFor="months"
+                  className="flex items-baseline justify-between text-[0.78rem] font-medium text-ink-muted mb-3"
+                >
+                  <span>Months overdue</span>
+                  <span className="font-display text-[1rem] font-semibold text-ink tabular-nums">
+                    {months}
+                  </span>
+                </label>
+                <input
+                  id="months"
+                  type="range"
+                  min="1"
+                  max="24"
+                  value={monthsLate}
+                  onChange={(e) => setMonthsLate(e.target.value)}
+                  className="w-full accent-brand"
+                />
+                <div className="flex justify-between text-[0.7rem] text-ink-muted mt-1.5">
+                  <span>1 month</span>
+                  <span>24 months</span>
+                </div>
+              </div>
+
+              {/* Breakdown */}
+              <div className="p-5 bg-canvas-alt">
+                <dl className="space-y-3">
+                  <div className="flex items-baseline justify-between">
+                    <dt className="text-[0.78rem] text-ink-muted">Fixed late-filing penalty</dt>
+                    <dd className="font-mono text-[0.88rem] text-ink tabular-nums">
+                      {formatKES(fixedPenalty)}
+                    </dd>
+                  </div>
+                  <div className="flex items-baseline justify-between">
+                    <dt className="text-[0.78rem] text-ink-muted">5% of tax due</dt>
+                    <dd className="font-mono text-[0.88rem] text-ink tabular-nums">
+                      {formatKES(lateFee)}
+                    </dd>
+                  </div>
+                  <div className="flex items-baseline justify-between">
+                    <dt className="text-[0.78rem] text-ink-muted">
+                      Interest (1%/month &times; {months})
+                    </dt>
+                    <dd className="font-mono text-[0.88rem] text-ink tabular-nums">
+                      {formatKES(interest)}
+                    </dd>
+                  </div>
+                  <div className="flex items-baseline justify-between border-t border-hairline pt-3">
+                    <dt className="text-[0.82rem] font-semibold text-brand">
+                      Estimated total penalties
+                    </dt>
+                    <dd className="font-display text-[1.25rem] font-semibold text-brand tabular-nums">
+                      {formatKES(totalPenalty)}
+                    </dd>
+                  </div>
+                </dl>
+
+                {totalPenalty > 10000 && (
+                  <a
+                    href={`${WA_BASE}?text=${waPenaltyText}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-fill mt-5 flex items-center justify-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold py-3 rounded-md hover:bg-brand-hover transition-colors"
+                  >
+                    Get penalty waiver help — KES 4,000
+                    <ArrowRight size={13} weight="bold" aria-hidden="true" />
+                  </a>
+                )}
+              </div>
+            </div>
+
+            <p className="mt-3 text-[0.72rem] text-ink-muted leading-relaxed flex items-start gap-1.5">
+              <Info size={12} className="shrink-0 mt-0.5" aria-hidden="true" />
+              KES 10,000 fixed penalty + 5% of tax + 1%/month interest (KRA 2026). Actual amounts may vary.
+            </p>
+          </section>
+        </div>
+
+        {/* ── Tool 3: Am I Required Quiz ───────────────────── */}
+        <section className="mt-14 border-t border-hairline pt-12" aria-labelledby="quiz-heading">
+          <div className="flex items-center gap-2.5 mb-6">
+            <Question size={17} weight="duotone" className="text-brand" aria-hidden="true" />
+            <h2 id="quiz-heading" className="font-display text-[1rem] font-semibold text-ink">
+              Am I Required to Register for VAT in Kenya?
+            </h2>
+          </div>
+
+          <div className="border border-hairline rounded-lg overflow-hidden max-w-2xl">
+            {quizStep === "start" && (
+              <div className="p-7 flex flex-col items-start gap-5">
+                <p className="text-[0.88rem] text-ink-muted leading-relaxed max-w-prose">
+                  Answer 3 quick questions to find out whether VAT registration is mandatory,
+                  recommended, or optional for your Kenyan business.
+                </p>
+                <button
+                  onClick={() => setQuizStep("turnover")}
+                  className="btn-fill inline-flex items-center gap-2 bg-ink text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-canvas-dark transition-colors"
+                >
+                  Start the quiz
+                  <ArrowRight size={14} weight="bold" aria-hidden="true" />
+                </button>
+              </div>
+            )}
+
+            {(quizStep === "turnover" || quizStep === "digital" || quizStep === "income_tax") && (
+              <div className="p-7">
+                <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-3">
+                  {quizStep === "turnover" ? "Question 1 of 3" : quizStep === "digital" ? "Question 2 of 3" : "Question 3 of 3"}
+                </p>
+                <p className="font-display text-[0.95rem] font-semibold text-ink mb-6 leading-snug max-w-prose">
+                  {quizQuestions[quizStep].question}
+                </p>
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => handleQuizAnswer(quizStep, "yes")}
+                    className="btn-fill px-6 py-2.5 rounded-md bg-ink text-canvas text-sm font-semibold hover:bg-canvas-dark transition-colors"
+                  >
+                    Yes
+                  </button>
+                  <button
+                    onClick={() => handleQuizAnswer(quizStep, "no")}
+                    className="px-6 py-2.5 rounded-md border border-hairline text-ink text-sm font-medium hover:border-ink-muted transition-colors"
+                  >
+                    No
+                  </button>
+                </div>
+                <button
+                  onClick={() => setQuizStep("start")}
+                  className="mt-5 text-[0.75rem] text-ink-muted hover:text-ink transition-colors"
+                >
+                  Start over
+                </button>
+              </div>
+            )}
+
+            {(quizStep === "result_required" ||
+              quizStep === "result_optional" ||
+              quizStep === "result_recommended") && (
+              <div className="p-7">
+                <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-3">
+                  Your result
+                </p>
+                <p className={`font-display text-[1.3rem] font-semibold mb-4 ${resultLabels[quizStep].color}`}>
+                  VAT Registration: {resultLabels[quizStep].label}
+                </p>
+                <p className="text-[0.88rem] text-ink-muted leading-relaxed max-w-prose mb-6">
+                  {resultLabels[quizStep].message}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href={`${WA_BASE}?text=Hi%2C%20I%20used%20the%20VAT%20quiz%20and%20got%20${encodeURIComponent(resultLabels[quizStep].label)}.%20Can%20you%20help%20me%3F`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
+                  >
+                    {resultLabels[quizStep].cta}
+                    <ArrowRight size={14} weight="bold" aria-hidden="true" />
+                  </a>
+                  <button
+                    onClick={() => setQuizStep("start")}
+                    className="inline-flex items-center gap-2 border border-hairline text-ink-muted text-sm font-medium px-5 py-3 rounded-md hover:border-ink-muted hover:text-ink transition-colors"
+                  >
+                    Start over
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Bottom CTA */}
+        <div className="mt-16 border-t border-hairline pt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div>
+            <p className="font-display text-[1rem] font-semibold text-ink mb-1">
+              Want us to handle all of this for you?
+            </p>
+            <p className="text-[0.85rem] text-ink-muted">
+              VAT registration from KES 5,000. Monthly filing from KES 3,500/month. Avoid the KES 10,000 penalty.
+            </p>
+          </div>
+          <a
+            href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20get%20started%20with%20VAT%20registration%20or%20filing.`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-fill shrink-0 inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
+          >
+            Get started on WhatsApp
+            <ArrowRight size={14} weight="bold" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}

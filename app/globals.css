@@ -1,0 +1,171 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+/* Lock to light mode — design uses intentional canvas-dark sections, not OS dark mode */
+@custom-variant dark (&:is(.dark *));
+
+/* ─── Font faces ──────────────────────────────────────────── */
+
+@theme inline {
+  --font-sans: 'DM Sans', 'DM Sans Fallback', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Outfit', 'Outfit Fallback', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', 'Fira Mono', monospace;
+
+  /* ── Ink & canvas tokens (Anthropic-inspired restraint) ── */
+  --color-ink:          var(--ink);
+  --color-ink-soft:     var(--ink-soft);
+  --color-ink-muted:    var(--ink-muted);
+  --color-canvas:       var(--canvas);
+  --color-canvas-alt:   var(--canvas-alt);
+  --color-canvas-warm:  var(--canvas-warm);
+  --color-canvas-dark:  var(--canvas-dark);
+
+  /* ── Brand tokens ────────────────────────────────────────── */
+  --color-brand:        var(--brand);
+  --color-brand-hover:  var(--brand-hover);
+  --color-brand-muted:  var(--brand-muted);
+  --color-accent:       var(--accent-kra);
+  --color-hairline:     var(--hairline);
+
+  /* ── Shadcn mapping ─────────────────────────────────────── */
+  --color-background:           var(--background);
+  --color-foreground:           var(--foreground);
+  --color-card:                 var(--card);
+  --color-card-foreground:      var(--card-foreground);
+  --color-popover:              var(--popover);
+  --color-popover-foreground:   var(--popover-foreground);
+  --color-primary:              var(--primary);
+  --color-primary-foreground:   var(--primary-foreground);
+  --color-secondary:            var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted:                var(--muted);
+  --color-muted-foreground:     var(--muted-foreground);
+  --color-destructive:          var(--destructive);
+  --color-border:               var(--border);
+  --color-input:                var(--input);
+  --color-ring:                 var(--ring);
+
+  --radius-sm:  calc(var(--radius) * 0.5);
+  --radius-md:  var(--radius);
+  --radius-lg:  calc(var(--radius) * 1.5);
+  --radius-xl:  calc(var(--radius) * 2);
+  --radius-2xl: calc(var(--radius) * 3);
+}
+
+:root,
+html {
+  color-scheme: light only;
+
+  /* ── Core palette ────────────────────────────────────────── */
+  --ink:         #141311;
+  --ink-soft:    #3c3a36;
+  --ink-muted:   #7a7669;
+  --canvas:      #faf8f3;
+  --canvas-alt:  #f0ede5;
+  --canvas-warm: #e8e3d8;
+  --canvas-dark: #1b2a3b;
+
+  /* ── Brand: KRA-authority red + trust slate ─────────────── */
+  --brand:       #c8372d;
+  --brand-hover: #b02e24;
+  --brand-muted: #f5e9e8;
+  --accent-kra:  #1b2a3b;
+  --hairline:    #dedad2;
+
+  /* ── Shadcn ──────────────────────────────────────────────── */
+  --background:             #faf8f3;
+  --foreground:             #141311;
+  --card:                   #ffffff;
+  --card-foreground:        #141311;
+  --popover:                #ffffff;
+  --popover-foreground:     #141311;
+  --primary:                #1b2a3b;
+  --primary-foreground:     #faf8f3;
+  --secondary:              #f0ede5;
+  --secondary-foreground:   #141311;
+  --muted:                  #f0ede5;
+  --muted-foreground:       #7a7669;
+  --destructive:            #c8372d;
+  --border:                 #dedad2;
+  --input:                  #e8e3d8;
+  --ring:                   #1b2a3b;
+  --radius:                 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-canvas text-ink font-sans;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+/* ── Utility classes ─────────────────────────────────────── */
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  /* Directional hover-fill (taste-skill Rule 5) */
+  .btn-fill {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .btn-fill::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.12);
+    transform: translateX(-101%);
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: -1;
+  }
+  .btn-fill:hover::before {
+    transform: translateX(0);
+  }
+  .btn-fill:active {
+    transform: scale(0.98);
+  }
+
+  /* Skeleton shimmer */
+  .shimmer {
+    background: linear-gradient(90deg, #e8e3d8 0%, #f5f2ea 50%, #e8e3d8 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.6s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* Stagger cascade for lists */
+  .stagger > * {
+    animation: fade-up 0.5s cubic-bezier(0.16,1,0.3,1) both;
+  }
+  .stagger > *:nth-child(1) { animation-delay: 0ms; }
+  .stagger > *:nth-child(2) { animation-delay: 80ms; }
+  .stagger > *:nth-child(3) { animation-delay: 160ms; }
+  .stagger > *:nth-child(4) { animation-delay: 240ms; }
+  .stagger > *:nth-child(5) { animation-delay: 320ms; }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
