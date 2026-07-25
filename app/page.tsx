@@ -544,7 +544,7 @@ export default function HomePage() {
             </h2>
             <Link
               href="/tools"
-              className="inline-flex items-center gap-2 text-[0.85rem] font-medium text-brand hover:text-brand-hover transition-colors"
+              className="inline-flex items-center gap-2 text-[0.85rem] font-medium text-white hover:text-blue-200 transition-colors"
             >
               <Calculator size={14} aria-hidden="true" />
               Open free VAT calculator
