@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Script from "next/script"
-import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info, AlertTriangle } from "@phosphor-icons/react/dist/ssr"
+import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info, } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 import { ArticleGrid } from "@/lib/resources"
 
