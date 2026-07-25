@@ -3,6 +3,8 @@ import Link from "next/link"
 import { ArrowLeft, ArrowRight, CheckCircle, Globe, Buildings, DeviceMobile, IdentificationCard, Users } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
+import { ArticleGrid } from "@/lib/resources"
+
 export const metadata: Metadata = {
   title: "How to Apply for a KRA PIN in Kenya 2026: Online & Offline Guide",
   description:
@@ -340,16 +342,32 @@ export default function KraPinPost() {
         </div>
       </article>
 
-      <div className="mt-10 pt-8 border-t border-hairline flex items-center justify-between flex-wrap gap-4">
-        <Link href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium transition-colors">
-          <ArrowLeft size={14} aria-hidden="true" /> All Resources
-        </Link>
-        <a href="https://wa.me/254721725958?text=I%20need%20help%20with%20KRA%20PIN%20or%20VAT%20registration"
-          target="_blank" rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">
-          Get KRA PIN Help <ArrowRight size={14} weight="bold" aria-hidden="true" />
-        </a>
-      </div>
+              {/* More Guides */}
+        <div className="mt-16 pt-12 border-t border-hairline">
+          <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">More Guides</p>
+          <ArticleGrid currentSlug="how-to-apply-for-kra-pin" />
+        </div>
+
+        {/* CTA */}
+        <div className="mt-10 border border-brand/20 bg-brand-muted rounded-lg p-6 text-center">
+          <p className="font-display text-[1rem] font-semibold text-ink mb-1">Need help with VAT?</p>
+          <p className="text-[0.85rem] text-ink-muted mb-4 max-w-[40ch] mx-auto leading-relaxed">
+            We handle your KRA VAT registration and monthly filing so you never miss a deadline.
+          </p>
+          <a
+            href="https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20VAT"
+            target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
+          >
+            Register for KES 5,000
+            <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
+          </a>
+          <div className="mt-4">
+            <Link href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+              ← All Resources
+            </Link>
+          </div>
+        </div>
 
       <div className="mt-8">
         <NewsletterSignup />

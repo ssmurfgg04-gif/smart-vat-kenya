@@ -183,7 +183,7 @@ export default function HomePage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pt-20 pb-24 lg:pt-28 lg:pb-32 grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-20 items-start">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pt-12 pb-20 lg:pt-16 lg:pb-24 grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-20 items-start">
           <div>
             <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
               Kenya Revenue Authority Registered Services
@@ -663,18 +663,23 @@ export default function HomePage() {
               Questions we get every week on WhatsApp
             </h2>
           </div>
-          <dl className="divide-y divide-hairline">
+          <div className="divide-y divide-hairline">
             {faqSchema.mainEntity.map((q) => (
-              <div key={q.name} className="py-6 first:pt-0">
-                <dt className="font-display text-[0.95rem] font-semibold text-ink mb-2">
-                  {q.name}
-                </dt>
-                <dd className="text-[0.875rem] text-ink-muted leading-relaxed">
-                  {q.acceptedAnswer.text}
-                </dd>
-              </div>
+              <details key={q.name} className="group py-5">
+                <summary className="flex items-start justify-between gap-4 cursor-pointer list-none">
+                  <span className="font-display text-[0.95rem] font-semibold text-ink leading-snug group-open:text-brand transition-colors">
+                    {q.name}
+                  </span>
+                  <svg className="w-4 h-4 shrink-0 mt-1 text-ink-muted group-open:rotate-180 transition-transform" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </summary>
+                <div className="mt-3 pb-1">
+                  <p className="text-[0.875rem] text-ink-muted leading-relaxed">{q.acceptedAnswer.text}</p>
+                </div>
+              </details>
             ))}
-          </dl>
+          </div>
         </div>
       </section>
 

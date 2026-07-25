@@ -3,6 +3,8 @@ import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
+import { ArticleGrid } from "@/lib/resources"
+
 export const metadata: Metadata = {
   title: "eTIMS Compliant Invoice Guide Kenya 2026 | Smart VAT Kenya",
   description:
@@ -537,19 +539,31 @@ export default function ETIMSInvoicingGuidePage() {
           </section>
         </article>
 
-        {/* Footer navigation */}
-        <div className="mt-14 pt-8 border-t border-hairline flex items-center justify-between flex-wrap gap-4">
-          <Link href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium transition-colors">
-            <ArrowLeft size={14} aria-hidden="true" /> All Guides
-          </Link>
+        {/* More Guides */}
+        <div className="mt-16 pt-12 border-t border-hairline">
+          <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">More Guides</p>
+          <ArticleGrid currentSlug="etims-invoicing-guide" />
+        </div>
+
+        {/* CTA */}
+        <div className="mt-10 border border-brand/20 bg-brand-muted rounded-lg p-6 text-center">
+          <p className="font-display text-[1rem] font-semibold text-ink mb-1">Need help with VAT?</p>
+          <p className="text-[0.85rem] text-ink-muted mb-4 max-w-[40ch] mx-auto leading-relaxed">
+            We handle your KRA VAT registration and monthly filing so you never miss a deadline.
+          </p>
           <a
-            href="https://wa.me/254721725958?text=I%20need%20help%20with%20eTIMS%20invoicing%20for%20my%20business"
+            href="https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20VAT"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
-            Get Invoicing Help
-            <ArrowRight size={14} weight="bold" aria-hidden="true" />
+            Register for KES 5,000
+            <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
+          <div className="mt-4">
+            <Link href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+              ← All Resources
+            </Link>
+          </div>
         </div>
       </div>
     </>

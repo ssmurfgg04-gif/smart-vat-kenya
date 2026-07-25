@@ -468,7 +468,7 @@ export default function ResourcesPage() {
           >
             Start here — most searched
           </p>
-          <article className="border border-hairline rounded-lg p-8 lg:p-10 grid lg:grid-cols-[1fr_auto] gap-8 items-end">
+          <article className="border border-hairline rounded-lg p-8 lg:p-10 grid lg:grid-cols-[1fr_auto] gap-8 items-end hover:border-ink/15 hover:shadow-sm transition-all duration-200">
             <div>
               <div className="flex flex-wrap items-center gap-3 mb-4">
                 <span className="font-mono text-[0.62rem] text-brand tracking-widest uppercase">
@@ -529,7 +529,7 @@ export default function ResourcesPage() {
             {rest.map((pillar) => (
               <article
                 key={pillar.slug}
-                className="border border-hairline rounded-lg p-6 flex flex-col"
+                className="border border-hairline rounded-lg p-6 flex flex-col hover:border-ink/15 hover:shadow-sm transition-all duration-200"
               >
                 <div className="flex items-center gap-3 mb-3">
                   <span className="font-mono text-[0.6rem] text-brand tracking-widest uppercase">

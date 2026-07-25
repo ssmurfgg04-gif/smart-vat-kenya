@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
+import { ArticleGrid } from "@/lib/resources"
 
 export const metadata: Metadata = {
   title: "Nil Returns Kenya 2026: How to File Nil Return on iTax + KRA Tax Amnesty Guide",
@@ -631,20 +632,31 @@ export default function NilReturnsTaxAmnestyPage() {
           </div>
         </section>
 
-        {/* Bottom CTA */}
-        <div className="text-center border-t border-hairline pt-10">
-          <p className="text-[0.85rem] text-ink-muted mb-2">
-            Still unsure whether you qualify for the KRA tax amnesty or need help filing nil returns?
+        {/* More Guides */}
+        <div className="mt-16 pt-12 border-t border-hairline">
+          <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">More Guides</p>
+          <ArticleGrid currentSlug="nil-returns-tax-amnesty" />
+        </div>
+
+        {/* CTA */}
+        <div className="mt-10 border border-brand/20 bg-brand-muted rounded-lg p-6 text-center">
+          <p className="font-display text-[1rem] font-semibold text-ink mb-1">Need help with VAT?</p>
+          <p className="text-[0.85rem] text-ink-muted mb-4 max-w-[40ch] mx-auto leading-relaxed">
+            We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href={wa("Hi%2C%20I%20have%20a%20question%20about%20nil%20returns%20and%20tax%20amnesty")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand font-semibold text-[0.9rem] hover:underline inline-flex items-center gap-1"
+            href="https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20VAT"
+            target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
-            Ask us on WhatsApp — we reply in minutes
-            <ArrowRight size={14} weight="bold" aria-hidden="true" />
+            Register for KES 5,000
+            <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
+          <div className="mt-4">
+            <Link href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+              ← All Resources
+            </Link>
+          </div>
         </div>
       </main>
     </>
