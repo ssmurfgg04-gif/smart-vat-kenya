@@ -180,7 +180,7 @@ export default function VatReturnFilingPage() {
                 <div>
                   <p className="font-semibold text-ink text-[0.85rem] mb-1">Every Single Month</p>
                   <p className="text-[0.83rem] text-ink-soft leading-relaxed">
-                    There are 12 filing deadlines per year — one per month. There is no quarterly filing option for standard VAT in Kenya. If you miss even one deadline, KRA imposes a <strong className="text-ink">KES 10,000 penalty</strong> plus 5% of the tax due plus 1% interest per month. See our{" "}
+                    There are 12 filing deadlines per year — one per month. There is no quarterly filing option for standard VAT in Kenya. If you miss even one deadline, KRA imposes a <strong className="text-ink">KES 10,000 penalty</strong> or 5% of the tax due (whichever is higher) plus 1% interest per month. See our{" "}
                     <Link href="/resources/kra-penalty-for-late-vat-filing" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA penalty guide</Link> for details.
                   </p>
                 </div>

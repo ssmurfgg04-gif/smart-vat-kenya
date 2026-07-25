@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-ico
 export const metadata: Metadata = {
   title: "KRA Penalty for Late VAT Filing: How Much is it and How to Apply for a Waiver",
   description:
-    "The KRA penalty for late VAT filing is KES 10,000 plus 5% of tax due plus 1% monthly interest. Learn how to check your penalties on iTax and apply for a KRA penalty waiver.",
+    "The KRA penalty for late VAT filing is KES 10,000 or 5% of tax due (whichever is higher) plus 1% monthly interest. Learn how to check your penalties on iTax and apply for a KRA penalty waiver.",
   keywords: [
     "kra penalty for late vat filing",
     "kra penalty waiver",
@@ -44,7 +44,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "KRA Penalty for Late VAT Filing: How Much is it and How to Apply for a Waiver",
   description:
-    "Complete guide to KRA late VAT filing penalties — the KES 10,000 plus 5% rule, how to check what you owe on iTax, and step-by-step instructions for applying for a KRA penalty waiver.",
+    "Complete guide to KRA late VAT filing penalties — the KES 10,000 or 5% rule, how to check what you owe on iTax, and step-by-step instructions for applying for a KRA penalty waiver.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-01",
@@ -62,7 +62,7 @@ const faqSchema = {
       name: "How much is the KRA penalty for late VAT filing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The KRA penalty for late VAT filing is KES 10,000 fixed penalty plus 5% of the total tax payable. Additionally, KRA charges 1% monthly interest on the unpaid tax amount until it is fully paid. A nil return filed late still attracts the KES 10,000 fixed penalty.",
+        text: "The KRA penalty for late VAT filing is KES 10,000 or 5% of the total tax payable (whichever is higher). Additionally, KRA charges 1% monthly interest on the unpaid tax amount until it is fully paid. A nil return filed late still attracts the KES 10,000 penalty.",
       },
     },
     {

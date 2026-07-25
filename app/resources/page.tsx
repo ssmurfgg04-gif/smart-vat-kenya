@@ -46,7 +46,7 @@ const pillars = [
     label: "KRA Penalties",
     title: "KRA Penalty for Late VAT Filing: How Much is it and How to Apply for a Waiver",
     bluf:
-      "Filing your VAT return after the 20th of the month attracts an automatic KES 10,000 penalty plus 5% of the tax due, plus 1% interest per month. Here is exactly how to calculate your exposure — and what to do if you have already missed a deadline.",
+      "Filing your VAT return after the 20th of the month attracts an automatic penalty of KES 10,000 or 5% of the tax due (whichever is higher), plus 1% interest per month. Here is exactly how to calculate your exposure — and what to do if you have already missed a deadline.",
     readTime: "7 min",
     tags: ["KRA Penalty", "Waiver", "Late Filing"],
     featured: false,
@@ -156,7 +156,7 @@ const pillars = [
     label: "Startups & Tech",
     title: "VAT for Startups and Tech Businesses in Kenya 2026: SaaS, Freelancers & Digital Services",
     bluf:
-      "Your Kenyan tech startup must register for VAT once annual turnover exceeds KES 8 million. SaaS, software, and digital services sold to Kenyan customers are subject to 16% VAT. Exports are zero-rated. You can claim input VAT on laptops, cloud hosting, and software tools with valid eTIMS invoices.",
+      "Your Kenyan tech startup must register for VAT once annual turnover exceeds KES 5 million (proposed rise to KES 8M not yet effective). SaaS, software, and digital services sold to Kenyan customers are subject to 16% VAT. Exports are zero-rated. You can claim input VAT on laptops, cloud hosting, and software tools with valid eTIMS invoices.",
     readTime: "10 min",
     tags: ["Startups", "Tech", "SaaS"],
     featured: false,
@@ -250,19 +250,41 @@ const pillars = [
     featured: false,
   },
   {
-    slug: "kra-vat-filing-deadline-august-2026",
+    slug: "vat-fintech-digital-payments-kenya",
     number: "21",
+    label: "Fintech",
+    title: "VAT on Fintech and Digital Payments in Kenya 2026: M-Pesa, Pesapal, iPay & All PSPs",
+    bluf:
+      "Finance Act 2026 made payment processing, gateway, merchant acquiring, and aggregation services taxable at 16% VAT from 1 July 2026. Guide covering M-Pesa merchant fees, Pesapal, iPay, Flutterwave, Cellulant, Kenswitch, and all digital payment VAT changes. Includes input VAT recovery rules.",
+    readTime: "10 min",
+    tags: ["Fintech", "Digital Payments", "Finance Act 2026"],
+    featured: false,
+  },
+  {
+    slug: "vat-labour-outsourcing-kenya",
+    number: "22",
+    label: "Outsourcing",
+    title: "VAT on Labour Outsourcing and Staff Costs in Kenya 2026: Section 13(5A)",
+    bluf:
+      "Finance Act 2026 introduced Section 13(5A) — outsourced employee salaries, NSSF, SHIF, and other statutory deductions are now disbursements excluded from VAT. Only the service fee is taxable at 16%. Guide for security companies, cleaning firms, EOR providers, recruitment agencies, and HR outsourcing.",
+    readTime: "10 min",
+    tags: ["Outsourcing", "Staffing", "Finance Act 2026"],
+    featured: false,
+  },
+  {
+    slug: "kra-vat-filing-deadline-august-2026",
+    number: "23",
     label: "Deadline",
     title: "KRA VAT Filing Deadline August 2026: Don't Miss the 20th",
     bluf:
-      "The KRA VAT return is due by the 20th of every month. Late filing costs KES 10,000 + 5% of tax due + 1%/month interest. Includes what to file, how to file on iTax, and what to do if you missed the deadline.",
+      "The KRA VAT return is due by the 20th of every month. Late filing costs KES 10,000 or 5% of tax due (whichever is higher) plus 1%/month interest. Includes what to file, how to file on iTax, and what to do if you missed the deadline.",
     readTime: "6 min",
     tags: ["Deadline", "Penalty", "iTax"],
     featured: false,
   },
   {
     slug: "etims-penalty-50000-per-month-kenya",
-    number: "22",
+    number: "24",
     label: "eTIMS Penalty",
     title: "eTIMS Penalty KES 50,000 Per Month: How to Avoid the New Fine",
     bluf:
@@ -274,7 +296,7 @@ const pillars = [
   // Phase 3 — July 2026 new content batch 1
   {
     slug: "vat-for-landlords-kenya",
-    number: "23",
+    number: "25",
     label: "Landlords",
     title: "VAT for Landlords Kenya 2026: Do I Charge VAT on Rental Income?",
     bluf:
@@ -285,7 +307,7 @@ const pillars = [
   },
   {
     slug: "vat-for-restaurants-hospitality",
-    number: "24",
+    number: "26",
     label: "Hospitality",
     title: "VAT for Restaurants & Hospitality in Kenya 2026: Complete Guide",
     bluf:
@@ -296,7 +318,7 @@ const pillars = [
   },
   {
     slug: "vat-for-importers-kenya",
-    number: "25",
+    number: "27",
     label: "Importers",
     title: "VAT for Importers in Kenya 2026: Import VAT, Customs & Compliance",
     bluf:
@@ -307,7 +329,7 @@ const pillars = [
   },
   {
     slug: "kra-vat-audit-process",
-    number: "26",
+    number: "28",
     label: "Audit Guide",
     title: "KRA VAT Audit Process Kenya 2026: What to Expect and How to Prepare",
     bluf:
@@ -318,7 +340,7 @@ const pillars = [
   },
   {
     slug: "how-to-apply-for-kra-pin",
-    number: "27",
+    number: "29",
     label: "KRA PIN",
     title: "How to Apply for a KRA PIN in Kenya 2026: Online & Offline Guide",
     bluf:
@@ -329,7 +351,7 @@ const pillars = [
   },
   {
     slug: "vat-deregistration-kenya",
-    number: "28",
+    number: "30",
     label: "Deregistration",
     title: "VAT Deregistration Kenya 2026: How to Cancel Your VAT Registration",
     bluf:

@@ -65,7 +65,7 @@ export default function VatDeregistrationPost() {
           </p>
           <ul className="space-y-1.5">
             {[
-              "Your taxable turnover falls below KES 5 million per year (or KES 8 million if you registered under the higher voluntary threshold introduced by the Finance Act, 2025).",
+              "Your taxable turnover falls below KES 5 million per year (or KES 8 million if you registered under the higher threshold introduced by the Finance Act 2025 — though this increase has not yet taken effect as of July 2026).",
               "You have permanently ceased to carry on business — this includes closure, insolvency, or retirement.",
               "Your business structure has changed — for example, you converted from a sole proprietorship to a company, or you merged with another entity.",
               "You wish to deregister voluntarily (for example, you are below the threshold and do not expect to exceed it again).",
@@ -302,7 +302,7 @@ export default function VatDeregistrationPost() {
           </p>
           <ul className="space-y-1.5">
             {[
-              "If you deregistered voluntarily because your turnover fell below the threshold, you must re-register as soon as your turnover exceeds KES 5 million (or KES 8 million under the higher threshold).",
+              "If you deregistered voluntarily because your turnover fell below the threshold, you must re-register as soon as your turnover exceeds KES 5 million (or KES 8 million if the proposed higher threshold takes effect).",
               "If you were deregistered involuntarily for non-compliance, KRA may scrutinise your re-registration application more closely.",
               "You will need to apply for a new eTIMS registration and obtain a new QR code.",
               "Your old VAT registration number will not be reinstated — you will receive a new one."

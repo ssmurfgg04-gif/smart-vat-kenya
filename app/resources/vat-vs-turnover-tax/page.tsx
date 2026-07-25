@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, Scales } from "@phos
 export const metadata: Metadata = {
   title: "Turnover Tax vs VAT in Kenya | Which Tax Regime Applies?",
   description:
-    "Confused about Turnover Tax vs VAT in Kenya? Compare KRA turnover tax (1-3% on gross sales, under KES 8M turnover) vs VAT (16% on value-add, over KES 8M threshold). Decision guide for Kenyan SMEs.",
+    "Confused about Turnover Tax vs VAT in Kenya? Compare KRA turnover tax (1-3% on gross sales, under KES 8M turnover) vs VAT (16% on value-add, over KES 5M, with proposed rise to KES 8M). Decision guide for Kenyan SMEs.",
   keywords: [
     "turnover tax vs vat kenya",
     "turnover tax kenya",
@@ -39,7 +39,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Turnover Tax vs VAT in Kenya: Which One Applies to Your Business?",
   description:
-    "Confused about Turnover Tax vs VAT in Kenya? Compare KRA turnover tax (1-3% on gross sales, under KES 8M turnover) vs VAT (16% on value-add, over KES 8M threshold). Decision guide for Kenyan SMEs.",
+    "Confused about Turnover Tax vs VAT in Kenya? Compare KRA turnover tax (1-3% on gross sales, under KES 8M turnover) vs VAT (16% on value-add, over KES 5M, with proposed rise to KES 8M). Decision guide for Kenyan SMEs.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-25",
@@ -57,7 +57,7 @@ const faqSchema = {
       name: "What is the difference between Turnover Tax and VAT in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Turnover Tax (ToT) is a simplified 1-3% tax on gross sales for businesses with annual turnover under KES 8 million. VAT is a 16% consumption tax on value-added applicable to businesses with turnover over KES 8 million or those who voluntarily register. Unlike ToT, VAT allows you to claim input VAT on business purchases and requires monthly eTIMS filings.",
+        text: "Turnover Tax (ToT) is a simplified 1-3% tax on gross sales for businesses with annual turnover under KES 8 million. VAT is a 16% consumption tax — currently mandatory once turnover exceeds KES 5 million (the Finance Act 2025 proposed raising this to KES 8 million, but this has not yet taken effect). Unlike ToT, VAT allows you to claim input VAT on business purchases and requires monthly eTIMS filings.",
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: "At what turnover threshold must I register for VAT in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Under the Finance Act 2025, VAT registration is mandatory once your annual taxable turnover exceeds KES 8 million. You may also voluntarily register for VAT even if your turnover is below this threshold, which can be beneficial if you supply goods to VAT-registered businesses that need to claim input VAT on your invoices.",
+        text: "Under current KRA rules, VAT registration is mandatory once your annual taxable turnover exceeds KES 5 million. The Finance Act 2025 proposed raising this threshold to KES 8 million, but this has not yet taken effect. You may also voluntarily register for VAT even if your turnover is below the threshold, which can be beneficial if you supply goods to VAT-registered businesses that need to claim input VAT on your invoices.",
       },
     },
     {
@@ -97,7 +97,7 @@ const faqSchema = {
       name: "How do I know which tax regime applies to my Kenyan business?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The primary factor is your annual turnover. If your turnover is under KES 8 million, Turnover Tax is the default regime. If it exceeds KES 8 million, VAT registration is mandatory. Secondary factors include whether your customers need VAT invoices, your business expense levels, and your industry. A business with high expenses and B2B customers often benefits more from VAT even below the threshold.",
+        text: "The primary factor is your annual turnover. If your turnover is under KES 8 million, Turnover Tax is the default regime. VAT registration is mandatory once turnover exceeds KES 5 million (the Finance Act 2025 proposed raising this to KES 8 million, but this has not yet taken effect). Secondary factors include whether your customers need VAT invoices, your business expense levels, and your industry. A business with high expenses and B2B customers often benefits more from VAT even below the threshold.",
       },
     },
   ],
@@ -148,7 +148,7 @@ export default function VatVsTurnoverTaxPage() {
         <div className="border-l-[3px] border-brand pl-5 mb-10">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            Kenya has <strong className="text-ink">two main tax regimes</strong> for business income: <strong className="text-ink">Turnover Tax (ToT)</strong> at 1&ndash;3% of gross sales for SMEs with annual turnover under KES 8 million, and <strong className="text-ink">VAT</strong> at 16% on value-added for businesses over the KES 8 million threshold. Your annual turnover is the deciding factor. If you sell mostly to other businesses or have significant expenses, VAT can actually be more favourable even below the threshold.
+            Kenya has <strong className="text-ink">two main tax regimes</strong> for business income: <strong className="text-ink">Turnover Tax (ToT)</strong> at 1&ndash;3% of gross sales for SMEs with annual turnover under KES 8 million, and <strong className="text-ink">VAT</strong> at 16% on value-added for businesses over KES 5 million (the Finance Act 2025 proposed raising this to KES 8 million, but this has not yet taken effect). Your annual turnover is the deciding factor. If you sell mostly to other businesses or have significant expenses, VAT can actually be more favourable even below the threshold.
           </p>
         </div>
 
@@ -192,7 +192,7 @@ export default function VatVsTurnoverTaxPage() {
                   {[
                     { feat: "Rate", tot: "1&ndash;3% of gross sales", vat: "16% of taxable value" },
                     { feat: "Tax Base", tot: "Gross sales (no deductions)", vat: "Value-added (output minus input)" },
-                    { feat: "Annual Threshold", tot: "Under KES 8 million", vat: "Over KES 8 million" },
+                    { feat: "Annual Threshold", tot: "Under KES 8 million", vat: "Over KES 5 million*" },
                     { feat: "Input VAT Claims", tot: "Not allowed", vat: "Claimable on business purchases" },
                     { feat: "eTIMS Requirement", tot: "Recommended but not mandatory", vat: "Mandatory" },
                     { feat: "Filing Frequency", tot: "Monthly (iTax)", vat: "Monthly (iTax), due 20th" },
@@ -247,7 +247,7 @@ export default function VatVsTurnoverTaxPage() {
                 Value Added Tax (VAT) is a <strong className="text-ink">consumption tax</strong> levied on the supply of taxable goods and services in Kenya. The standard rate is <strong className="text-ink">16%</strong>, set under the Value Added Tax Act (Cap. 476). Unlike Turnover Tax, VAT is applied to the <strong className="text-ink">value added</strong> at each stage of production and distribution &mdash; not on total sales.
               </p>
               <p>
-                Under the Finance Act 2025, VAT registration becomes <strong className="text-ink">mandatory</strong> once your annual taxable turnover exceeds <strong className="text-ink">KES 8 million</strong>. You may also register voluntarily if you are below the threshold but want to claim input VAT or issue VAT-compliant invoices for your B2B customers.
+                VAT registration is <strong className="text-ink">mandatory</strong> once your annual taxable turnover exceeds <strong className="text-ink">KES 5 million</strong> (the Finance Act 2025 proposed raising this to KES 8 million, but this has not yet taken effect). You may also register voluntarily if you are below the threshold but want to claim input VAT or issue VAT-compliant invoices for your B2B customers.
               </p>
               <p>
                 Once registered, you must charge 16% VAT on your sales (output VAT), issue eTIMS-compliant tax invoices, and file monthly VAT returns on iTax by the <strong className="text-ink">20th of the following month</strong>. You can simultaneously claim credit for the VAT you paid on your business purchases (input VAT), with the difference remitted to KRA.
@@ -323,7 +323,7 @@ export default function VatVsTurnoverTaxPage() {
               {[
                 {
                   q: "What is your annual turnover?",
-                  a: "Under KES 8 million? ToT is your default. Over KES 8 million? VAT is mandatory. At exactly the threshold or expecting to cross soon? Register for VAT proactively to avoid last-minute compliance issues.",
+                  a: "Under KES 8 million? ToT is your default. Over KES 5 million? VAT registration is mandatory (proposed raise to KES 8 million not yet effective). At exactly the threshold or expecting to cross soon? Register for VAT proactively to avoid last-minute compliance issues.",
                 },
                 {
                   q: "Do you sell to VAT-registered businesses?",
@@ -353,7 +353,7 @@ export default function VatVsTurnoverTaxPage() {
                 {[
                   "Turnover under KES 8M, B2C, low expenses &rarr; Turnover Tax is your simplest option",
                   "Turnover under KES 8M, B2B, high expenses &rarr; Consider voluntary VAT registration",
-                  "Turnover over KES 8M &rarr; VAT registration is mandatory. Get registered now.",
+                  "Turnover over KES 5M &rarr; VAT registration is mandatory (proposed rise to KES 8M not yet effective). Get registered now.",
                   "Not sure? Consult a KRA-registered tax agent &mdash; making the wrong choice can cost you thousands.",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5" dangerouslySetInnerHTML={{ __html: item }} />
@@ -376,7 +376,7 @@ export default function VatVsTurnoverTaxPage() {
                   <p className="font-display text-[0.95rem] font-semibold text-ink mb-2">ToT &rarr; VAT (Moving Up)</p>
                   <ul className="space-y-1.5 text-[0.83rem] text-ink-muted">
                     {[
-                      "Mandatory when you cross the KES 8M threshold",
+                      "Mandatory when you cross the KES 5M threshold (proposed KES 8M not yet effective)",
                       "Must register within 30 days of crossing",
                       "Voluntary registration also permitted",
                       "Once on VAT, minimum 24 months before you can exit",
@@ -461,7 +461,7 @@ export default function VatVsTurnoverTaxPage() {
                 </div>
               </div>
               <p className="text-[0.9rem] text-ink-soft leading-relaxed">
-                We also help businesses <strong className="text-ink">transition from ToT to VAT</strong> when they cross the KES 8 million threshold &mdash; handling the registration, eTIMS setup, and first few returns to ensure a smooth switch without penalty risk.
+                We also help businesses <strong className="text-ink">transition from ToT to VAT</strong> when they cross the VAT threshold (currently KES 5 million, with proposed rise to KES 8 million) &mdash; handling the registration, eTIMS setup, and first few returns to ensure a smooth switch without penalty risk.
               </p>
             </div>
           </section>

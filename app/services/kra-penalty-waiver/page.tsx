@@ -58,7 +58,7 @@ const penalties = [
   { name: "Late filing penalty", amount: "KES 10,000", desc: "Per return filed after the 20th deadline." },
   { name: "Late payment penalty", amount: "5% of tax", desc: "Of the outstanding tax amount, charged immediately." },
   { name: "Late payment interest", amount: "1% per month", desc: "Compounded monthly on overdue VAT." },
-  { name: "Non-registration penalty", amount: "KES 100,000", desc: "For failing to register for VAT when required." },
+  { name: "Non-registration penalty", amount: "KES 100,000", desc: "KES 100,000 or the tax that would have been due (whichever is higher) for failing to register for VAT when required." },
 ]
 
 const steps = [

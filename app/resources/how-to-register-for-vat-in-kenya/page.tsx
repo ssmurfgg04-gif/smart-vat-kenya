@@ -187,7 +187,7 @@ export default function Pillar1Page() {
                   </p>
                   <p className="text-[0.83rem] text-[#8a6500] dark:text-[#ccaa33] leading-relaxed">
                     Failing to register for VAT when your turnover exceeds KES 5 million attracts a penalty of{" "}
-                    <strong>KES 100,000 per month</strong> for every month you remain unregistered. Do not wait.
+                    <strong>KES 100,000</strong> or the tax that would have been due (whichever is higher). Do not wait.
                   </p>
                 </div>
               </div>
@@ -387,7 +387,7 @@ export default function Pillar1Page() {
                 <Warning size={17} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
                 <p className="text-[0.83rem] text-ink-soft leading-relaxed">
                   <strong className="text-ink">Late filing penalty:</strong> Filing even one day after the 20th triggers{" "}
-                  <strong className="text-ink">KES 10,000</strong> plus 5% of the tax due, plus 1% interest per month. A nil return filed late still attracts the KES 10,000 fixed penalty. See our{" "}
+                  <strong className="text-ink">KES 10,000</strong> or 5% of the tax due (whichever is higher), plus 1% interest per month. A nil return filed late still attracts the KES 10,000 penalty. See our{" "}
                   <Link href="/resources/kra-penalty-for-late-vat-filing" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                     full KRA penalty guide
                   </Link>.

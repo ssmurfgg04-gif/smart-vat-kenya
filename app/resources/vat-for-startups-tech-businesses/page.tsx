@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-ico
 export const metadata: Metadata = {
   title: "VAT for Startups and Tech Businesses in Kenya 2026 | Smart VAT Kenya",
   description:
-    "Do startups pay VAT in Kenya? Yes — once your annual turnover exceeds KES 8 million. This guide covers registration triggers for SaaS, software, e-commerce, freelancers, and tech consultancies. Includes eTIMS compliance, input VAT on laptops and cloud services, and penalty avoidance tips for Kenyan tech founders.",
+    "Do startups pay VAT in Kenya? Yes — once your annual turnover exceeds KES 5 million (proposed rise to KES 8M not yet effective). This guide covers registration triggers for SaaS, software, e-commerce, freelancers, and tech consultancies. Includes eTIMS compliance, input VAT on laptops and cloud services, and penalty avoidance tips for Kenyan tech founders.",
   keywords: [
     "vat for startups kenya",
     "tech business vat kenya",
@@ -67,7 +67,7 @@ const faqSchema = {
       name: "Does my Kenyan startup need to register for VAT?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Your startup must register for VAT if your annual taxable turnover exceeds KES 8 million (raised from KES 5 million by the Finance Act 2025). Below that threshold, you can voluntarily register — which lets you claim back input VAT on laptops, cloud services, software subscriptions, and other business costs.",
+        text: "Your startup must register for VAT if your annual taxable turnover exceeds KES 5 million. The Finance Act 2025 proposed raising the threshold to KES 8 million, but this has not yet taken effect. Below that threshold, you can voluntarily register — which lets you claim back input VAT on laptops, cloud services, software subscriptions, and other business costs.",
       },
     },
     {
@@ -159,7 +159,8 @@ export default function VATForStartupsPage() {
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
             Your Kenyan tech startup must register for VAT once annual turnover exceeds{" "}
-            <strong className="text-ink">KES 8 million</strong> (Finance Act 2025). If you sell{" "}
+            <strong className="text-ink">KES 5 million</strong> (Finance Act 2025 proposed raising
+            this to KES 8 million, but this has not yet taken effect). If you sell{" "}
             <strong className="text-ink">SaaS, software, or digital services</strong> to Kenyan
             customers, charge 16% VAT. Exports are <strong className="text-ink">zero-rated</strong> — no VAT charged,
             but you still claim input VAT refunds. You can claim back VAT on{" "}
@@ -195,11 +196,12 @@ export default function VATForStartupsPage() {
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                The short answer: <strong className="text-ink">not until you hit the threshold</strong>. The Finance Act 2025
-                raised the mandatory VAT registration threshold from KES 5 million to{" "}
-                <strong className="text-ink">KES 8 million</strong> in annual taxable turnover. If your
-                startup has been operating for less than 12 months, you estimate your projected
-                turnover — if it will exceed KES 8 million, you must register.
+                The short answer: <strong className="text-ink">not until you hit the threshold</strong>. The current
+                mandatory VAT registration threshold is{" "}
+                <strong className="text-ink">KES 5 million</strong> in annual taxable turnover. The
+                Finance Act 2025 proposed raising this to KES 8 million, but this has not yet taken
+                effect. If your startup has been operating for less than 12 months, you estimate your
+                projected turnover — if it will exceed KES 5 million, you must register.
               </p>
               <p>
                 However, many tech startups choose to <strong className="text-ink">voluntarily register</strong> even
@@ -223,13 +225,13 @@ export default function VATForStartupsPage() {
                       <td className="p-3.5 text-ink-muted">Stay on turnover tax unless you have high expenses</td>
                     </tr>
                     <tr>
-                      <td className="p-3.5 text-ink-muted">KES 5M - 8M</td>
-                      <td className="p-3.5 text-ink-muted">Not required (transition zone)</td>
+                    <td className="p-3.5 text-ink-muted">KES 5M - 8M</td>
+                    <td className="p-3.5 text-ink-muted">Mandatory if over KES 5M; transition zone under proposed raise</td>
                       <td className="p-3.5 font-medium text-ink">Consider voluntary registration if spending {'>'} KES 300K/year on VAT-able purchases</td>
                     </tr>
                     <tr>
-                      <td className="p-3.5 text-ink-muted">Above KES 8M</td>
-                      <td className="p-3.5 text-ink-muted">Mandatory within 30 days</td>
+                    <td className="p-3.5 text-ink-muted">Above KES 8M</td>
+                    <td className="p-3.5 text-ink-muted">Mandatory within 30 days (if proposed raise effective)</td>
                       <td className="p-3.5 font-medium text-ink">Register immediately — late registration risks penalties</td>
                     </tr>
                   </tbody>

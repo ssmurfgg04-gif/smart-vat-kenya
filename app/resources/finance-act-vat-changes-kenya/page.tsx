@@ -229,9 +229,9 @@ export default function FinanceActVatPage() {
               </h2>
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
                 <p>
-                  <strong>Change:</strong> The Finance Act 2025 extended the bad debt relief qualifying period
-                  from 2 years to 3 years. The Finance Act 2026 reverted this back to 3 years (confirming the
-                  2025 position after initial confusion).
+                  <strong>Change:</strong> The Finance Act 2025 reduced the bad debt relief qualifying period
+                  from 3 years to 2 years. The Finance Act 2026 increased this back to 3 years, restoring the
+                  pre-2025 position.
                 </p>
                 <p>
                   <strong>Effective:</strong> 1 July 2026

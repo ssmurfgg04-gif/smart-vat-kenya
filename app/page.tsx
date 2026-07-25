@@ -90,7 +90,7 @@ const faqSchema = {
       name: "What is the penalty for late VAT filing in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "KRA imposes a fixed KES 10,000 penalty for late VAT filing, plus 5% of the tax due (whichever is higher), plus 1% interest per month on unpaid tax. VAT returns must be filed by the 20th of each following month.",
+        text: "KRA imposes a penalty of KES 10,000 or 5% of the tax due (whichever is higher), plus 1% interest per month on unpaid tax. VAT returns must be filed by the 20th of each following month.",
       },
     },
     {
@@ -130,7 +130,7 @@ const faqSchema = {
       name: "What is the penalty for not registering for VAT in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The KRA penalty for failure to register for VAT when required is KES 100,000 per month. This is separate from the KES 10,000 late-filing penalty. If your turnover has reached the KES 5 million threshold (or KES 8 million under Finance Act 2025 amendments), register immediately to avoid accumulating this penalty.",
+        text: "KRA imposes a penalty of KES 100,000 or the tax that would have been due (whichever is higher) for failure to register for VAT when required. This is separate from the KES 10,000 late-filing penalty. If your turnover has reached the KES 5 million threshold, register immediately to avoid this penalty.",
       },
     },
     {
@@ -513,10 +513,9 @@ export default function HomePage() {
             </p>
             <p>
               A business must register for VAT when its annual taxable turnover reaches the
-              mandatory threshold (KES 5 million under the VAT Act; Finance Act 2025 introduced
-              amendments to KES 8 million for certain categories — contact us for the threshold
-              applicable to your business). Failure to register when required attracts a{" "}
-              <strong className="text-canvas font-medium">KES 100,000 per-month penalty</strong>.
+               mandatory threshold (KES 5 million under the VAT Act; the Finance Act 2025
+               proposed raising it to KES 8 million, but this has not yet taken effect). Failure to register when required attracts a{" "}
+               <strong className="text-canvas font-medium">KES 100,000 penalty</strong>.
               Voluntary registration is available below the threshold to claim input VAT credits.
             </p>
             <p>

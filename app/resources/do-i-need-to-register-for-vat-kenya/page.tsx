@@ -73,7 +73,7 @@ const faqSchema = {
       name: "What happens if I don't register for VAT when I exceed KES 5 million?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Failing to register for VAT within 30 days of exceeding KES 5 million attracts a penalty of KES 100,000 per month for every month you remain unregistered. KRA can also backdate your registration and demand VAT on all sales made after you crossed the threshold, plus interest and penalties.",
+        text: "Failing to register for VAT within 30 days of exceeding KES 5 million attracts a penalty of KES 100,000 or the tax that would have been due (whichever is higher). KRA can also backdate your registration and demand VAT on all sales made after you crossed the threshold, plus interest and penalties.",
       },
     },
     {
@@ -191,7 +191,7 @@ export default function DoINeedVATPage() {
                     Don&apos;t Ignore the Threshold
                   </p>
                   <p className="text-[0.83rem] text-[#8a6500] dark:text-[#ccaa33] leading-relaxed">
-                    KRA cross-checks M-PESA statements, bank deposits, and supplier invoices. If they find you crossed KES 5 million without registering, you face <strong>KES 100,000 per month</strong> in penalties plus backdated VAT. It is not worth the risk.
+                    KRA cross-checks M-PESA statements, bank deposits, and supplier invoices. If they find you crossed KES 5 million without registering, you face a <strong>KES 100,000 penalty</strong> or the tax that would have been due (whichever is higher) plus backdated VAT. It is not worth the risk.
                   </p>
                 </div>
               </div>

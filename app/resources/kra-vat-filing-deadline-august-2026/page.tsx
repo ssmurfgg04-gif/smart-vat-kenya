@@ -33,8 +33,8 @@ export default function DeadlinePost() {
         <div className="space-y-5 text-[0.9rem] text-ink-soft leading-[1.75]">
           <p>
             Every month, thousands of Kenyan business owners wake up on the 21st and realise they
-            missed the VAT filing deadline. The penalty hits automatically — KES 10,000 plus 5% of
-            the tax due, plus 1% interest per month. And if you filed a nil return late? Still KES 10,000.
+            missed the VAT filing deadline. The penalty hits automatically — KES 10,000 or 5% of
+            the tax due (whichever is higher), plus 1% interest per month. And if you filed a nil return late? Still KES 10,000.
           </p>
 
           <div className="border border-red-200 bg-red-50 dark:bg-red-950/20 dark:border-red-800/40 rounded-lg p-4 flex items-start gap-3">

@@ -58,7 +58,8 @@ export default function VatForLandlordsPost() {
           <p>
             <strong>Commercial rental income is generally subject to VAT</strong> if the landlord&apos;s total annual
             taxable turnover exceeds the registration threshold. Under the Finance Act 2025 amendments, the threshold
-            is KES 8 million per year (increased from KES 5 million). This covers rent from shops, offices,
+            was proposed to increase to KES 8 million per year, but this has not yet taken effect — the current
+            operational threshold remains KES 5 million. This covers rent from shops, offices,
             warehouses, industrial buildings, and any property let for business purposes.
           </p>
           <p>
@@ -81,7 +82,7 @@ export default function VatForLandlordsPost() {
                   The VAT treatment follows the <em>use</em> of the property, not the owner&apos;s status.
                   A landlord who rents flats to individuals for dwelling purposes is making exempt supplies
                   regardless of how much rent they collect. A landlord who rents shops to traders is making
-                  taxable supplies and must track turnover against the KES 8 million threshold.
+                  taxable supplies and must track turnover against the applicable VAT threshold (currently KES 5 million, with proposed rise to KES 8 million not yet effective).
                 </p>
               </div>
             </div>
@@ -92,13 +93,13 @@ export default function VatForLandlordsPost() {
           </h2>
           <p>
             A landlord must register for VAT if their <strong>taxable turnover</strong> (not total rental income)
-            exceeds KES 8 million in any period of twelve months. Taxable turnover means income from commercial
+            exceeds the VAT threshold (currently KES 5 million, with proposed rise to KES 8 million not yet effective) in any period of twelve months. Taxable turnover means income from commercial
             rent, service charges, parking fees, and any other taxable supplies — but not residential rent.
           </p>
           <p>
             The KRA looks at your actual income over a rolling twelve-month window. If you sign a commercial
             tenant in January for KES 700,000 per month, and your existing commercial tenants total KES 100,000
-            per month, you will cross KES 8 million within ten months. You must register within thirty days of
+            per month, you will cross KES 5 million within about seven months. You must register within thirty days of
             crossing the threshold.
           </p>
 
@@ -107,7 +108,7 @@ export default function VatForLandlordsPost() {
           </h3>
           <p>
             If you run a separate business — a shop, a consultancy, a logistics company — that income counts toward
-            the KES 8 million threshold alongside your commercial rental income. The KRA aggregates all taxable
+            the VAT threshold (currently KES 5 million) alongside your commercial rental income. The KRA aggregates all taxable
             supplies across all your activities under the same PIN. A landlord who owns three shops and also runs
             a hardware store must add both income streams together to determine whether registration is required.
           </p>
@@ -116,7 +117,7 @@ export default function VatForLandlordsPost() {
             Voluntary registration
           </h3>
           <p>
-            A landlord who has not crossed the KES 8 million threshold may still <strong>voluntarily register</strong>
+            A landlord who has not crossed the VAT threshold (currently KES 5 million) may still <strong>voluntarily register</strong>
             for VAT. This is a strategic decision: once registered, you must charge VAT on commercial rent, file
             returns, and comply with eTIMS — but you also unlock the right to claim input VAT on property expenses.
           </p>
@@ -193,7 +194,7 @@ export default function VatForLandlordsPost() {
                   James owns a four-storey building. The ground floor is a shop (KES 200,000/month). The
                   three upper floors are flats (KES 450,000/month total). His total monthly income is
                   KES 650,000 (KES 7.8 million per year). The commercial portion is KES 200,000/month
-                  (KES 2.4 million/year) — below the KES 8 million threshold. He does not need to register.
+                  (KES 2.4 million/year) — below the VAT threshold. He does not need to register.
                   But if he spends KES 1 million on a new roof, he cannot claim the input VAT because he
                   is not registered (and would not want to, since 76% of the expense relates to exempt
                   residential lettings).
@@ -346,7 +347,7 @@ export default function VatForLandlordsPost() {
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">Related Resources</h2>
           <ul className="space-y-2">
             {[
-              ["How to Register for VAT in Kenya", "/resources/how-to-register-for-vat-in-kenya", "Step-by-step VAT registration guide including the KES 8 million threshold"],
+              ["How to Register for VAT in Kenya", "/resources/how-to-register-for-vat-in-kenya", "Step-by-step VAT registration guide including the registration threshold"],
               ["VAT vs Turnover Tax: What&rsquo;s the Difference?", "/resources/vat-vs-turnover-tax", "Understand which tax applies to your rental business"],
               ["Input VAT Deduction Guide", "/resources/input-vat-deduction-guide", "What qualifies for input VAT and how to claim it correctly"],
               ["Finance Act VAT Changes 2025", "/resources/finance-act-vat-changes-kenya", "All VAT amendments including the 90:10 rule deletion"],
