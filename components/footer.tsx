@@ -21,7 +21,7 @@ export function Footer() {
               Smart<span className="text-brand">VAT</span>
               <span className="text-canvas/50 font-normal text-sm ml-1">Kenya</span>
             </Link>
-            <p className="text-[0.85rem] text-canvas/75 leading-relaxed max-w-[30ch] mt-4 mb-6">
+            <p className="text-[0.85rem] text-gray-300 leading-relaxed max-w-[30ch] mt-4 mb-6">
               Professional VAT registration services in Kenya and monthly iTax filing for SMEs.
               Flat-fee pricing. M-PESA accepted. Kenya VAT rate: 16% (2026).
             </p>
@@ -30,14 +30,14 @@ export function Footer() {
                 href={WA_BASE}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 text-[0.82rem] text-canvas/75 hover:text-canvas transition-colors"
+                className="flex items-center gap-2.5 text-[0.82rem] text-gray-300 hover:text-canvas transition-colors"
               >
                 <Phone size={13} aria-hidden="true" />
                 +254 721 725 958
               </a>
               <a
                 href="mailto:info@smartvatkenya.co.ke"
-                className="flex items-center gap-2.5 text-[0.82rem] text-canvas/75 hover:text-canvas transition-colors"
+                className="flex items-center gap-2.5 text-[0.82rem] text-gray-300 hover:text-canvas transition-colors"
               >
                 <EnvelopeSimple size={13} aria-hidden="true" />
                 info@smartvatkenya.co.ke
@@ -65,7 +65,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-[0.85rem] text-canvas/75 hover:text-canvas transition-colors"
+                    className="text-[0.85rem] text-gray-300 hover:text-canvas transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -88,7 +88,7 @@ export function Footer() {
                 "WhatsApp Support",
                 "KES 3,500 flat filing fee",
               ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-[0.82rem] text-canvas/75">
+                <li key={item} className="flex items-start gap-2 text-[0.82rem] text-gray-300">
                   <svg
                     viewBox="0 0 12 12"
                     className="w-3 h-3 shrink-0 mt-[3px] fill-brand"
@@ -113,7 +113,7 @@ export function Footer() {
               href="https://www.kra.go.ke"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline underline-offset-2 hover:text-canvas/75 transition-colors"
+              className="underline underline-offset-2 hover:text-gray-300 transition-colors"
             >
               KRA guidelines
             </a>
@@ -122,7 +122,7 @@ export function Footer() {
               href="https://itax.kra.go.ke"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline underline-offset-2 hover:text-canvas/75 transition-colors"
+              className="underline underline-offset-2 hover:text-gray-300 transition-colors"
             >
               itax.kra.go.ke
             </a>
