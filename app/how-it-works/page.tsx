@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import {
   ArrowRight,
   CheckCircle,
@@ -26,6 +27,45 @@ export const metadata: Metadata = {
     "how long does vat registration take kenya",
   ],
   alternates: { canonical: "https://smartvatkenya.co.ke/how-it-works" },
+}
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "How It Works", item: "https://smartvatkenya.co.ke/how-it-works" },
+  ],
+}
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to Get VAT Registration in Kenya via WhatsApp",
+  description: "Register for KRA VAT or file monthly returns in 3 simple steps — all via WhatsApp. No iTax login required.",
+  step: [
+    {
+      "@type": "HowToStep",
+      position: 1,
+      name: "WhatsApp Us",
+      text: "Send your business name, KRA PIN, and a copy of your national ID over WhatsApp. No forms to fill, no portals to navigate.",
+      url: "https://smartvatkenya.co.ke/how-it-works",
+    },
+    {
+      "@type": "HowToStep",
+      position: 2,
+      name: "We Handle iTax",
+      text: "Our team logs into the KRA iTax portal and processes your VAT registration or monthly return on your behalf. You get WhatsApp updates at every stage.",
+      url: "https://smartvatkenya.co.ke/how-it-works",
+    },
+    {
+      "@type": "HowToStep",
+      position: 3,
+      name: "You Get Peace of Mind",
+      text: "Your VAT PIN or filing receipt is delivered straight to your WhatsApp along with your M-PESA receipt. You stay compliant without lifting a finger.",
+      url: "https://smartvatkenya.co.ke/how-it-works",
+    },
+  ],
 }
 
 const steps = [
@@ -96,6 +136,11 @@ const guarantees = [
 export default function HowItWorksPage() {
   return (
     <div className="bg-canvas min-h-[100dvh]">
+      <Script id="breadcrumb-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <Script id="howto-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-16">
         <div className="max-w-[1400px] mx-auto">

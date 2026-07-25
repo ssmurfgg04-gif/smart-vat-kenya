@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { ArrowRight, Clock } from "@phosphor-icons/react/dist/ssr"
 
 export const metadata: Metadata = {
@@ -84,6 +85,30 @@ const pillars = [
   },
 ]
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources" },
+  ],
+}
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Kenya VAT Knowledge Base",
+  description: "Free, definitive Kenya VAT guides for SMEs. Covers registration, filing, penalties, and calculation.",
+  url: "https://smartvatkenya.co.ke/resources",
+  hasPart: [
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/how-to-register-for-vat-in-kenya", name: "How to Register for VAT in Kenya on iTax (Step-by-Step Guide 2026)" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/kra-penalty-for-late-vat-filing", name: "KRA Penalty for Late VAT Filing" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/how-to-calculate-vat-in-kenya", name: "How to Calculate 16% VAT in Kenya" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/how-to-file-vat-return-on-itax", name: "How to File Your VAT Return on KRA iTax" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/do-i-need-to-register-for-vat-kenya", name: "Do I Need to Register for VAT in Kenya?" },
+  ],
+}
+
 function formatReadTime(t: string) {
   return t
 }
@@ -93,6 +118,11 @@ export default function ResourcesPage() {
 
   return (
     <div className="bg-canvas min-h-[100dvh]">
+      <Script id="breadcrumb-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <Script id="collection-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+
       {/* Page header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-16">
         <div className="max-w-[1400px] mx-auto">

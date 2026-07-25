@@ -31,7 +31,6 @@ Smart VAT Kenya handles KRA VAT compliance end-to-end for small and medium-sized
 - [Free VAT Calculator & Tools](https://smartvatkenya.co.ke/tools) — 16% Kenya VAT calculator, reverse VAT, penalty estimator, and "Am I Required?" quiz
 - [Services & Pricing](https://smartvatkenya.co.ke/services) — Detailed service descriptions with published prices
 - [How It Works](https://smartvatkenya.co.ke/how-it-works) — 3-step WhatsApp process
-- [AI VAT Assistant](https://smartvatkenya.co.ke/ai-assistant) — GPT-powered VAT compliance assistant
 - [Resources & Guides](https://smartvatkenya.co.ke/resources) — Kenya VAT knowledge base for SME owners
 - [How to Register for VAT in Kenya](https://smartvatkenya.co.ke/resources/how-to-register-for-vat-in-kenya) — Step-by-step iTax registration guide 2026
 - [KRA Penalty for Late VAT Filing](https://smartvatkenya.co.ke/resources/kra-penalty-for-late-vat-filing) — Calculate penalties and apply for a waiver

@@ -27,6 +27,16 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources" },
+    { "@type": "ListItem", position: 3, name: "How to File VAT Return on iTax", item: "https://smartvatkenya.co.ke/resources/how-to-file-vat-return-on-itax" },
+  ],
+}
+
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -104,6 +114,8 @@ export default function VatReturnFilingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script id="breadcrumb-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-14">

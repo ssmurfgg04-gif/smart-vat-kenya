@@ -10,7 +10,6 @@ const navLinks = [
   { href: "/services",        label: "Services" },
   { href: "/how-it-works",    label: "How It Works" },
   { href: "/resources",       label: "Resources" },
-  { href: "/ai-assistant",    label: "AI Assistant" },
 ]
 
 const WA_LINK =

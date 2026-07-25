@@ -154,13 +154,21 @@ const comparisons = [
 ]
 
 export default function ServicesPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://smartvatkenya.co.ke/services" },
+    ],
+  }
+
   return (
     <>
-      <Script
-        id="services-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }}
-      />
+      <Script id="services-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
+      <Script id="breadcrumb-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-16">
