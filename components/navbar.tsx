@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/tools",           label: "VAT Calculator" },
   { href: "/services",        label: "Services" },
   { href: "/how-it-works",    label: "How It Works" },
+  { href: "/forms",           label: "Free Forms" },
   { href: "/resources",       label: "Resources" },
 ]
 
