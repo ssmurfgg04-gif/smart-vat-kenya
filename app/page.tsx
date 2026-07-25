@@ -82,7 +82,7 @@ const faqSchema = {
       name: "How much does VAT registration cost in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Smart VAT Kenya charges a flat fee of KES 5,000 for complete VAT registration, including iTax profile update and VAT PIN generation, completed in 1–3 working days. Traditional facilitators charge KES 15,000–30,000 for the same service.",
+        text: "Smart VAT Kenya charges a flat fee of KES 5,000 for complete VAT registration, including iTax profile update and VAT PIN generation, completed in 1–3 working days. Traditional facilitators charge KES 15,000–30,000.",
       },
     },
     {
@@ -98,7 +98,7 @@ const faqSchema = {
       name: "When must a business register for VAT in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A business must register for VAT when its annual taxable turnover reaches or exceeds KES 5 million. Voluntary registration is also possible below this threshold. KRA is expanding mandatory registration — even smaller businesses should register proactively.",
+        text: "A business must register for VAT when its annual taxable turnover reaches or exceeds KES 5 million. Voluntary registration is also possible below this threshold. KRA is expanding mandatory registration thresholds under the Finance Act 2025.",
       },
     },
     {
@@ -106,7 +106,7 @@ const faqSchema = {
       name: "How do I register for VAT online in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "VAT registration is done via the KRA iTax portal at itax.kra.go.ke. The process involves updating your iTax profile, completing Form VAT 1, and uploading supporting documents. Many business owners experience errors and failed attempts. Smart VAT Kenya handles the entire iTax process for you for a flat fee of KES 5,000.",
+        text: "VAT registration is done via the KRA iTax portal at itax.kra.go.ke. The process involves updating your iTax profile, completing Form VAT 1, and uploading supporting documents. Many business owners experience errors. Smart VAT Kenya handles the entire process for KES 5,000.",
       },
     },
     {
@@ -122,7 +122,7 @@ const faqSchema = {
       name: "What is eTIMS and do I need it for VAT registration in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "eTIMS (Electronic Tax Invoice Management System) is KRA's mandatory electronic invoicing system. All businesses in Kenya — VAT-registered or not — must onboard eTIMS and issue electronic tax invoices. From 2026, KRA validates all VAT returns against eTIMS invoice data. Smart VAT Kenya includes eTIMS onboarding guidance with every VAT registration. Failure to use eTIMS-compliant invoices results in denial of your input VAT claims.",
+        text: "eTIMS (Electronic Tax Invoice Management System) is KRA's mandatory electronic invoicing system. All businesses in Kenya — VAT-registered or not — must onboard eTIMS and issue electronic invoices. From 2026, KRA validates all VAT returns against eTIMS invoice data.",
       },
     },
     {
@@ -130,7 +130,7 @@ const faqSchema = {
       name: "What is the penalty for not registering for VAT in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "KRA imposes a penalty of KES 100,000 or the tax that would have been due (whichever is higher) for failure to register for VAT when required. This is separate from the KES 10,000 late-filing penalty. If your turnover has reached the KES 5 million threshold, register immediately to avoid this penalty.",
+        text: "KRA imposes a penalty of KES 100,000 or the tax that would have been due (whichever is higher) for failure to register for VAT when required. This is separate from the KES 10,000 late-filing penalty.",
       },
     },
     {
@@ -138,7 +138,7 @@ const faqSchema = {
       name: "What is the VAT Special Table and why is my input VAT being rejected?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The KRA VAT Special Table is a KRA-maintained list of taxpayers under compliance review. If your supplier is on the Special Table, any input VAT claims involving their invoices are automatically blocked by the iTax system — even if your transactions are legitimate. This is one of the most common causes of unexpected VAT bills in Kenya. Smart VAT Kenya can advise on identifying Special Table issues and pursuing input tax claims through the correct dispute channels.",
+        text: "The KRA VAT Special Table is a KRA-maintained list of taxpayers under compliance review. If your supplier is on the Special Table, any input VAT claims involving their invoices are automatically blocked by iTax. Smart VAT Kenya checks this before registration.",
       },
     },
     {
@@ -146,7 +146,7 @@ const faqSchema = {
       name: "Is the VAT registration threshold in Kenya KES 5 million or KES 8 million?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "As of the Finance Act 2025, the mandatory VAT registration threshold was adjusted. The KES 5 million annual taxable turnover threshold has been the primary reference for most compliance guidance, while the Finance Act 2025 introduced amendments. Contact Smart VAT Kenya for current threshold confirmation relevant to your business. Voluntary registration remains available for businesses below the threshold who want to claim input VAT credits.",
+        text: "As of the Finance Act 2025, the mandatory VAT registration threshold was adjusted. The KES 5 million annual taxable turnover threshold has been the primary reference for most compliant businesses. Certain categories may have different thresholds.",
       },
     },
     {
@@ -154,7 +154,55 @@ const faqSchema = {
       name: "How do I pay KRA VAT after filing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "VAT payment to KRA is made via M-PESA Paybill number 572572. Use your KRA PIN as the account number. Payments must clear before the 20th of the month following the tax period. Smart VAT Kenya sends M-PESA payment guidance with every monthly filing confirmation.",
+        text: "VAT payment to KRA is made via M-PESA Paybill number 572572. Use your KRA PIN as the account number. Payments must clear before the 20th of the month following the tax period. Smart VAT Kenya provides M-PESA payment guidance with every filing.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is it mandatory to register for VAT in Kenya?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "VAT registration is mandatory in Kenya when your annual taxable turnover exceeds KES 5 million. However, you can voluntarily register below this threshold to claim input VAT credits. Failure to register when required attracts a KES 100,000 penalty.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What happens if I don't register for VAT in Kenya?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "If you fail to register for VAT when your turnover exceeds the mandatory threshold, KRA can impose penalties of KES 100,000 or the tax that would have been due (whichever is higher). Additionally, you cannot claim input VAT, and you risk audit, interest charges, and business closure.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I register for VAT voluntarily in Kenya?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. You can voluntarily register for VAT even if your annual turnover is below KES 5 million. This allows you to claim input VAT credits on your purchases, which can improve cash flow. Many small businesses choose voluntary registration for this reason.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does VAT registration take in Kenya?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "VAT registration through Smart VAT Kenya typically takes 1–3 working days from the time you submit your documents via WhatsApp. The KRA iTax portal may take up to 5–7 working days for approval in some cases, but our service is usually faster.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What documents do I need for VAT registration in Kenya?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You need: (1) Your KRA PIN certificate, (2) Copy of your national ID, (3) Business registration documents (CR12/13 or business license), (4) Bank account details, (5) Business address proof. Smart VAT Kenya guides you through exactly what to submit.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I file VAT returns if I have zero sales in Kenya?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. You can file a 'nil return' even if you have zero sales or zero output tax. Nil returns are required to maintain compliance and avoid penalties. Smart VAT Kenya files nil returns as part of monthly filing services.",
       },
     },
   ],
