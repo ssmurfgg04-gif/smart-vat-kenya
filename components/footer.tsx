@@ -18,7 +18,7 @@ export function Footer() {
               className="font-display text-[1.1rem] font-semibold text-canvas tracking-tight mb-4 inline-block hover:text-canvas/80 transition-colors"
               aria-label="Smart VAT Kenya — Home"
             >
-              Smart<span className="text-white">VAT</span>
+              Smart<span className="text-grey=300>VAT</span>
               <span className="text-canvas/50 font-normal text-sm ml-1">Kenya</span>
             </Link>
             <p className="text-[0.85rem] text-gray-300 leading-relaxed max-w-[30ch] mt-4 mb-6">
