@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     "how to register for vat in kenya on itax",
     "kenya vat standard rate 16% 2026",
     "16% vat kenya",
+    "nil returns kenya",
+    "file nil return itax",
+    "tax amnesty kenya 2026",
+    "kra tax amnesty",
+    "kra voluntary disclosure programme",
     "itax vat registration",
     "vat calculator kra kenya",
     "kra vat calculator",
@@ -50,6 +55,12 @@ export const metadata: Metadata = {
     "kra paybill 572572",
     "vat special table kenya",
     "kra special table blocked input vat",
+    "kra auto populated vat return",
+    "vat input tax deduction kenya",
+    "withholding vat kenya 2%",
+    "vat on digital services kenya",
+    "how to claim vat refund kenya",
+    "finance act 2025 kenya vat changes",
   ],
   alternates: { canonical: "https://smartvatkenya.co.ke" },
 }
@@ -665,6 +676,46 @@ export default function HomePage() {
               </div>
             ))}
           </dl>
+        </div>
+      </section>
+
+      {/* ─── DEADLINE COUNTDOWN ─── */}
+      <section className="bg-canvas-alt py-16 px-6 lg:px-10" aria-labelledby="deadline-heading">
+        <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div>
+            <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-3">
+              KRA VAT deadline
+            </p>
+            <h2
+              id="deadline-heading"
+              className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-ink tracking-tight mb-2"
+            >
+              Don't miss the 20th KRA deadline
+            </h2>
+            <p className="text-[0.85rem] text-ink-muted max-w-[42ch] leading-relaxed">
+              Every month, VAT returns are due by the 20th. Miss it and KRA charges KES 10,000 automatically.
+              Get a WhatsApp reminder 3 days before every deadline.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+            <a
+              href={`https://wa.me/254721725958?text=Hi%2C%20I%20want%20VAT%20deadline%20reminders%20on%20WhatsApp`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3.5 rounded-md hover:bg-brand-hover transition-colors whitespace-nowrap"
+            >
+              Get WhatsApp Reminders
+              <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
+            </a>
+            <a
+              href={`https://wa.me/254721725958?text=Hi%2C%20I%20want%20the%20KES%203500%20Monthly%20VAT%20Filing%20service`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-ink-muted hover:text-ink transition-colors whitespace-nowrap"
+            >
+              Let us file for you — KES 3,500/month
+            </a>
+          </div>
         </div>
       </section>
 

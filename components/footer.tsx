@@ -42,6 +42,10 @@ export function Footer() {
                 <EnvelopeSimple size={13} aria-hidden="true" />
                 info@smartvatkenya.co.ke
               </a>
+              <p className="flex items-start gap-2.5 text-[0.75rem] text-canvas/60 leading-snug max-w-[28ch]">
+                <svg viewBox="0 0 12 12" className="w-3 h-3 shrink-0 mt-0.5 fill-canvas/50" aria-hidden="true"><path d="M6 0C3.79 0 2 1.79 2 4c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5C5.17 5.5 4.5 4.83 4.5 4S5.17 2.5 6 2.5 7.5 3.17 7.5 4 6.83 5.5 6 5.5z"/></svg>
+                <span>Pioneer House, Moi Avenue, Nairobi CBD, Kenya</span>
+              </p>
             </div>
           </div>
 

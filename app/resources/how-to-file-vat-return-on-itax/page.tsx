@@ -219,6 +219,37 @@ export default function VatReturnFilingPage() {
             </div>
           </section>
 
+          {/* ELI5 box */}
+          <section className="border border-hairline rounded-lg p-5 bg-canvas-alt mb-12">
+            <p className="font-display text-[0.9rem] font-semibold text-ink mb-2">
+              Explain Like I&apos;m 5: What Happens if I Do Not File a Nil Return?
+            </p>
+            <div className="text-[0.85rem] text-ink-muted leading-relaxed space-y-2">
+              <p>
+                Imagine your phone bill. Even if you made zero calls this month, Safaricom
+                still expects you to pay your line rental. KRA is the same — filing is the
+                &ldquo;line rental&rdquo; of being a VAT-registered business. You report every
+                month, even if you had nothing to report.
+              </p>
+              <p>
+                A <strong className="text-ink">nil return</strong> is just you telling KRA
+                &ldquo;I&apos;m still here, made nothing this month.&rdquo; If you skip it,
+                KRA fines you KES 10,000. That is the same penalty as if you made KES 1 million
+                in sales and did not file. KRA does not care <em>how much</em> you owed — they
+                care that you showed up.
+              </p>
+              <p>
+                If you have missed months of nil returns, do not panic. KRA has a{" "}
+                <strong className="text-ink">tax amnesty programme</strong> (Voluntary
+                Tax Disclosure) that lets you catch up without penalties. See our{" "}
+                <Link href="/resources/nil-returns-tax-amnesty" className="text-brand underline">
+                  nil returns and tax amnesty guide
+                </Link>{" "}
+                for details.
+              </p>
+            </div>
+          </section>
+
           {/* Section 2 — Nil Return */}
           <section id="nil-return" aria-labelledby="nil-h">
             <h2 id="nil-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">

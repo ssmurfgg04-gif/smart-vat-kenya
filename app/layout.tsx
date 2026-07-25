@@ -154,9 +154,11 @@ const localBusinessSchema = {
       image: "https://smartvatkenya.co.ke/icon.svg",
       address: {
         "@type": "PostalAddress",
+        streetAddress: "Pioneer House, Moi Avenue",
         addressLocality: "Nairobi",
-        addressCountry: "KE",
         addressRegion: "Nairobi County",
+        postalCode: "00100",
+        addressCountry: "KE",
       },
       geo: {
         "@type": "GeoCoordinates",
@@ -164,12 +166,38 @@ const localBusinessSchema = {
         longitude: 36.8219,
       },
       url: "https://smartvatkenya.co.ke",
-      sameAs: ["https://wa.me/254721725958"],
+      sameAs: [
+        "https://wa.me/254721725958",
+        "https://www.google.com/search?q=Smart+VAT+Kenya+Nairobi",
+      ],
+      hasMap: "https://maps.google.com/?q=Pioneer+House+Moi+Avenue+Nairobi",
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "08:00",
         closes: "18:00",
+      },
+      areaServed: [
+        { "@type": "City", name: "Nairobi" },
+        { "@type": "City", name: "Mombasa" },
+        { "@type": "City", name: "Kisumu" },
+        { "@type": "State", name: "Kenya" },
+      ],
+      knowsAbout: {
+        "@type": "Thing",
+        name: "Kenya VAT Registration and Compliance",
+      },
+      parentOrganization: {
+        "@type": "Organization",
+        name: "Smart VAT Kenya",
+        url: "https://smartvatkenya.co.ke",
+        logo: "https://smartvatkenya.co.ke/icon.svg",
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+254721725958",
+          contactType: "customer service",
+          availableLanguage: "English, Swahili",
+        },
       },
       aggregateRating: {
         "@type": "AggregateRating",
@@ -180,10 +208,6 @@ const localBusinessSchema = {
       },
       paymentAccepted: "M-PESA, Cash",
       currenciesAccepted: "KES",
-      areaServed: {
-        "@type": "Country",
-        name: "Kenya",
-      },
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "VAT Services Kenya",
@@ -239,9 +263,31 @@ const localBusinessSchema = {
           "@type": "EntryPoint",
           urlTemplate: "https://smartvatkenya.co.ke/blog?q={search_term_string}",
         },
-        "query-input": "required name=search_term_string",
+  "query-input": "required name=search_term_string",
+        },
       },
-    },
+      {
+        "@type": "Product",
+        "@id": "https://smartvatkenya.co.ke/services#vat-filing-product",
+        name: "Monthly VAT Filing Service",
+        description:
+          "Monthly iTax VAT return filing before the 20th KRA deadline. Filed on the 17th. Includes WhatsApp reminders and M-PESA payment guidance.",
+        brand: { "@type": "Brand", name: "Smart VAT Kenya" },
+        offers: {
+          "@type": "Offer",
+          price: "3500",
+          priceCurrency: "KES",
+          availability: "https://schema.org/InStock",
+          url: "https://smartvatkenya.co.ke/services",
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.9",
+          reviewCount: "58",
+          bestRating: "5",
+          worstRating: "1",
+        },
+      },
     {
       "@type": "Service",
       "@id": "https://smartvatkenya.co.ke/services#registration",

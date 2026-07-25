@@ -6,7 +6,7 @@ import { ArrowRight, Clock } from "@phosphor-icons/react/dist/ssr"
 export const metadata: Metadata = {
   title: "Kenya VAT Knowledge Base — Free KRA Guides for SMEs 2026",
   description:
-    "Free, definitive Kenya VAT guides. How to register for VAT on KRA iTax, calculate 16% VAT, file monthly returns, apply for a KRA penalty waiver, and decide if you need to register. Written for Kenyan SMEs.",
+    "Free Kenya VAT knowledge base for SMEs. How to register for VAT on KRA iTax, calculate 16% VAT, file nil returns, apply for the KRA tax amnesty programme, file monthly returns, get a KRA penalty waiver, and decide if you need to register for VAT. Written for Kenyan SMEs.",
   keywords: [
     "how to register for vat in kenya",
     "kra penalty for late vat filing",
@@ -83,6 +83,105 @@ const pillars = [
     tags: ["Voluntary VAT", "SMEs", "Freelancers"],
     featured: false,
   },
+  {
+    slug: "itax-portal-not-working",
+    number: "06",
+    label: "iTax Errors",
+    title: "KRA iTax Portal Not Working? Common iTax Errors and How to Fix Them (2026)",
+    bluf:
+      "Your KRA iTax portal not loading, throwing errors, or refusing to log in? Here are the 10 most common iTax errors in Kenya — login failures, timeouts, browser issues, and how to fix each one. Includes what to do when the portal crashes on deadline day.",
+    readTime: "10 min",
+    tags: ["iTax", "Portal Errors", "Troubleshooting"],
+    featured: false,
+  },
+  {
+    slug: "etims-onboarding-guide",
+    number: "07",
+    label: "eTIMS",
+    title: "eTIMS Kenya Onboarding Guide 2026: How to Register for KRA Electronic Tax Invoicing",
+    bluf:
+      "eTIMS (Electronic Tax Invoice Management System) is KRA's mandatory electronic invoicing system for all businesses in Kenya. Learn how to choose the right solution type, register step-by-step, and avoid the KES 50,000/month non-compliance penalty.",
+    readTime: "11 min",
+    tags: ["eTIMS", "Onboarding", "Compliance"],
+    featured: false,
+  },
+  {
+    slug: "vat-vs-turnover-tax",
+    number: "08",
+    label: "Tax Regimes",
+    title: "Turnover Tax vs VAT in Kenya: Which One Applies to Your Business?",
+    bluf:
+      "Turnover Tax (1-3% on gross sales) vs VAT (16% on value-add): which tax regime fits your Kenyan business? Compare rates, thresholds, compliance burden, and input VAT implications. Includes a decision framework for SMEs.",
+    readTime: "8 min",
+    tags: ["Turnover Tax", "VAT", "Decision Guide"],
+    featured: false,
+  },
+  {
+    slug: "kra-vat-penalties-reference",
+    number: "09",
+    label: "Penalty Reference",
+    title: "KRA VAT Penalties Kenya 2026: Complete Reference Table & Waiver Guide",
+    bluf:
+      "Complete KRA VAT penalties reference: late filing (KES 10,000 or 5%), non-registration (up to KES 100,000), eTIMS non-compliance (KES 50,000/month), late payment (5% + 1%/month). Includes a step-by-step penalty waiver guide and worked examples.",
+    readTime: "9 min",
+    tags: ["Penalties", "Reference", "Waiver"],
+    featured: false,
+  },
+  {
+    slug: "vat-registration-checklist",
+    number: "10",
+    label: "Checklist",
+    title: "VAT Registration Kenya Checklist 2026: Everything You Need Before You Apply",
+    bluf:
+      "Don't start your KRA VAT application without this checklist. From KRA PIN and national ID to bank details, business registration, CR12, and eTIMS setup — know exactly which documents you need before you open the iTax portal.",
+    readTime: "6 min",
+    tags: ["Checklist", "Documents", "Preparation"],
+    featured: false,
+  },
+  {
+    slug: "nil-returns-tax-amnesty",
+    number: "11",
+    label: "Nil Returns",
+    title: "Nil Returns Kenya 2026: How to File on iTax + KRA Tax Amnesty Guide",
+    bluf:
+      "A nil return means you had zero sales and zero purchases in a month — but you still have to file by the 20th or pay KES 10,000. This guide explains how to file a nil VAT return in 5 minutes, what the KRA tax amnesty programme covers, and how to get penalty waivers.",
+    readTime: "8 min",
+    tags: ["Nil Returns", "Tax Amnesty", "Penalty Waiver"],
+    featured: false,
+  },
+  {
+    slug: "vat-for-startups-tech-businesses",
+    number: "12",
+    label: "Startups & Tech",
+    title: "VAT for Startups and Tech Businesses in Kenya 2026: SaaS, Freelancers & Digital Services",
+    bluf:
+      "Your Kenyan tech startup must register for VAT once annual turnover exceeds KES 8 million. SaaS, software, and digital services sold to Kenyan customers are subject to 16% VAT. Exports are zero-rated. You can claim input VAT on laptops, cloud hosting, and software tools with valid eTIMS invoices.",
+    readTime: "10 min",
+    tags: ["Startups", "Tech", "SaaS"],
+    featured: false,
+  },
+  {
+    slug: "vat-special-table-risks",
+    number: "13",
+    label: "Special Table",
+    title: "KRA VAT Special Table: How Flagged Suppliers Are Listed and How to Get Removed",
+    bluf:
+      "The KRA VAT Special Table blocks input VAT claims from flagged suppliers. Filing consecutive nil returns for 6+ months can land you on it. Removal requires 3-6 months of clean compliance. Learn how to check your status, protect your business, and get removed.",
+    readTime: "9 min",
+    tags: ["Special Table", "Compliance", "Risk"],
+    featured: false,
+  },
+  {
+    slug: "etims-invoicing-guide",
+    number: "14",
+    label: "eTIMS Invoicing",
+    title: "eTIMS Compliant Invoice Guide Kenya 2026: Mandatory Fields, QR Codes & Verification",
+    bluf:
+      "An eTIMS-compliant invoice must include 10 mandatory fields: seller PIN, buyer PIN (B2B above KES 10K), QR code, server confirmation code, and more. Invoices outside eTIMS cannot be used for input VAT claims. Scan the QR code with KRA's free app to verify authenticity.",
+    readTime: "8 min",
+    tags: ["eTIMS", "Invoicing", "QR Code"],
+    featured: false,
+  },
 ]
 
 const breadcrumbSchema = {
@@ -106,6 +205,15 @@ const collectionSchema = {
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/how-to-calculate-vat-in-kenya", name: "How to Calculate 16% VAT in Kenya" },
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/how-to-file-vat-return-on-itax", name: "How to File Your VAT Return on KRA iTax" },
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/do-i-need-to-register-for-vat-kenya", name: "Do I Need to Register for VAT in Kenya?" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/itax-portal-not-working", name: "KRA iTax Portal Not Working? Common iTax Errors and Fixes" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/etims-onboarding-guide", name: "eTIMS Kenya Onboarding Guide 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-vs-turnover-tax", name: "Turnover Tax vs VAT in Kenya: Decision Guide" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/kra-vat-penalties-reference", name: "KRA VAT Penalties Kenya 2026: Complete Reference Table" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-registration-checklist", name: "VAT Registration Kenya Checklist 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/nil-returns-tax-amnesty", name: "Nil Returns Kenya 2026: File on iTax + KRA Tax Amnesty Guide" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-for-startups-tech-businesses", name: "VAT for Startups and Tech Businesses in Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-special-table-risks", name: "KRA VAT Special Table: Risks and How to Avoid Being Flagged" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/etims-invoicing-guide", name: "eTIMS Compliant Invoice Guide Kenya 2026" },
   ],
 }
 
@@ -221,7 +329,7 @@ export default function ResourcesPage() {
             id="all-guides-label"
             className="font-mono text-[0.67rem] uppercase tracking-[0.18em] text-ink-muted mb-6"
           >
-            All 5 definitive guides
+            All 14 definitive guides
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">
