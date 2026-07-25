@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title:
     "VAT Registration Services Kenya | KES 5,000 Flat Fee | iTax VAT Filing",
   description:
-    "Professional VAT registration services in Kenya — KES 5,000 flat fee, done in 1–3 working days. Monthly iTax VAT filing from KES 3,500/month. eTIMS-compliant, M-PESA accepted. Free KRA VAT calculator (16% standard rate 2026).",
+    "Professional VAT registration services in Kenya — KES 5,000 flat fee, done in 1–3 working days. Monthly iTax VAT filing from KES 3,500/month. eTIMS-compliant, M-PESA accepted. Free KRA VAT calculator for Kenya 16% standard rate 2026.",
   keywords: [
     "vat registration services kenya",
     "register for vat online kenya",
@@ -347,7 +347,7 @@ export default function HomePage() {
             Why VAT registration and iTax filing is hard for Kenyan SME owners.
           </h2>
           <p className="text-[0.9rem] text-ink-muted max-w-[52ch] mb-16 leading-relaxed">
-            KRA&apos;s portal crashes 2–3 times per week. Facilitators quote KES 15,000–30,000.
+            KRA's portal crashes 2–3 times per week. Facilitators quote KES 15,000–30,000.
             Missing the 20th deadline costs KES 10,000 automatically.
           </p>
 
@@ -679,7 +679,7 @@ export default function HomePage() {
                 key={name}
                 className="bg-canvas rounded-lg border border-hairline p-7 flex flex-col"
               >
-                <div className="flex gap-0.5 mb-4" aria-label="5 out of 5 stars">
+                <div className="flex gap-0.5 mb-4" role="img" aria-label="5 out of 5 stars">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star key={i} size={13} weight="fill" className="text-brand" aria-hidden="true" />
                   ))}

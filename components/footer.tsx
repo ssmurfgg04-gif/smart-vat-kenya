@@ -42,8 +42,8 @@ export function Footer() {
                 <EnvelopeSimple size={13} aria-hidden="true" />
                 info@smartvatkenya.co.ke
               </a>
-              <p className="flex items-start gap-2.5 text-[0.75rem] text-canvas/60 leading-snug max-w-[28ch]">
-                <svg viewBox="0 0 12 12" className="w-3 h-3 shrink-0 mt-0.5 fill-canvas/50" aria-hidden="true"><path d="M6 0C3.79 0 2 1.79 2 4c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5C5.17 5.5 4.5 4.83 4.5 4S5.17 2.5 6 2.5 7.5 3.17 7.5 4 6.83 5.5 6 5.5z"/></svg>
+              <p className="flex items-start gap-2.5 text-[0.75rem] text-gray-400 leading-snug max-w-[28ch]">
+                <svg viewBox="0 0 12 12" className="w-3 h-3 shrink-0 mt-0.5 fill-canvas/50" aria-hidden="true"><path d="M6 0C3.79 0 2 1.79 2 4c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5C5.17 5.5 4.5 6.17 4.5 7s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg>
                 <span>Pioneer House, Moi Avenue, Nairobi CBD, Kenya</span>
               </p>
             </div>
@@ -51,7 +51,7 @@ export function Footer() {
 
           {/* Quick links */}
           <div>
-            <p className="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-canvas/45 mb-5">
+            <p className="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-gray-400 mb-5">
               Pages
             </p>
             <ul className="space-y-3" role="list">
@@ -76,7 +76,7 @@ export function Footer() {
 
           {/* Trust signals */}
           <div>
-            <p className="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-canvas/45 mb-5">
+            <p className="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-gray-400 mb-5">
               Trust
             </p>
             <ul className="space-y-3" role="list">
@@ -104,10 +104,10 @@ export function Footer() {
         </div>
 
         <div className="mt-14 pt-6 border-t border-canvas/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-          <p className="text-[0.75rem] text-canvas/60">
+          <p className="text-[0.75rem] text-gray-400">
             &copy; {year} Smart VAT Kenya. All rights reserved.
           </p>
-          <p className="text-[0.75rem] text-canvas/60">
+          <p className="text-[0.75rem] text-gray-400">
             VAT information based on{" "}
             <a
               href="https://www.kra.go.ke"
