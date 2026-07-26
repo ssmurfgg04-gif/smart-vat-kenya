@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info } from "@phosphor-icons/react/dist/ssr"
@@ -6,14 +7,14 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
-  title: "VAT on Labour Outsourcing and Staff Costs in Kenya 2026 | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "VAT on Labour Outsourcing and Staff Costs in Kenya 2026",
+  absoluteTitle: true,
   description:
     "Finance Act 2026 introduced Section 13(5A) of the VAT Act — outsourced employee salaries and statutory deductions are now disbursements not subject to VAT. Only the service fee is taxable at 16%. Guide for HR firms, security companies, EOR providers, and businesses that outsource staff.",
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/vat-labour-outsourcing-kenya",
-  },
-}
+  path: "/resources/vat-labour-outsourcing-kenya",
+  type: "article",
+})
 
 const articleSchema = {
   "@context": "https://schema.org",

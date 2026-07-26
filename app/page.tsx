@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import {
@@ -14,12 +15,14 @@ import {
   WarningCircle,
   Star,
 } from "@phosphor-icons/react/dist/ssr"
+import { RelatedLinks } from "@/components/related-links"
 
-export const metadata: Metadata = {
-  title:
-    "VAT Registration Services Kenya | KES 5,000 Flat Fee | iTax VAT Filing",
+export const metadata: Metadata = constructMetadata({
+  title: "VAT Registration Services Kenya | KES 5,000 Flat Fee | iTax VAT Filing",
+  absoluteTitle: true,
   description:
     "Professional VAT registration services in Kenya — KES 5,000 flat fee, done in 1–3 working days. Monthly iTax VAT filing from KES 3,500/month. eTIMS-compliant, M-PESA accepted. Free KRA VAT calculator for Kenya 16% standard rate 2026.",
+  path: "/",
   keywords: [
     "vat registration services kenya",
     "register for vat online kenya",
@@ -29,41 +32,8 @@ export const metadata: Metadata = {
     "kenya vat standard rate 16% 2026",
     "16% vat kenya",
     "nil returns kenya",
-    "file nil return itax",
-    "tax amnesty kenya 2026",
-    "kra tax amnesty",
-    "kra voluntary disclosure programme",
-    "itax vat registration",
-    "vat calculator kra kenya",
-    "kra vat calculator",
-    "monthly vat filing kenya",
-    "vat filing deadline kenya 2026",
-    "kra vat filing deadline 20th",
-    "vat registered person kenya",
-    "kes 5 million vat threshold kenya",
-    "kes 8 million vat threshold kenya",
-    "mandatory vat registration kenya",
-    "etims kenya vat",
-    "etims onboarding kenya",
-    "kra penalty waiver",
-    "kra late filing penalty kes 10000",
-    "non registration penalty kra kes 100000",
-    "vat application kenya",
-    "vat number kenya",
-    "output tax input tax kenya",
-    "how much does vat registration cost in kenya",
-    "kra paybill 572572",
-    "vat special table kenya",
-    "kra special table blocked input vat",
-    "kra auto populated vat return",
-    "vat input tax deduction kenya",
-    "withholding vat kenya 2%",
-    "vat on digital services kenya",
-    "how to claim vat refund kenya",
-    "finance act 2025 kenya vat changes",
   ],
-  alternates: { canonical: "https://smartvatkenya.co.ke" },
-}
+})
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -238,9 +208,9 @@ export default function HomePage() {
             </p>
 
             <h1 className="font-display text-[clamp(2.4rem,6vw,4.5rem)] font-semibold leading-[1.05] tracking-tight text-canvas mb-6 text-balance">
-              VAT Registration Services Kenya{" "}
-              <span className="text-brand">done in 3 days,</span>{" "}
-              not 3 weeks.
+              VAT Registration Services Kenya
+              <span className="text-brand">{" done in 3 days,"}</span>
+              {" not 3 weeks."}
             </h1>
 
             <p className="text-[1.05rem] text-canvas/80 leading-relaxed max-w-[52ch] mb-10 text-pretty">
@@ -554,24 +524,48 @@ export default function HomePage() {
           <div className="space-y-5 text-[0.93rem] text-canvas/80 leading-[1.75]">
             <p>
               As per the latest Kenya Revenue Authority (KRA) guidelines, the{" "}
-              <strong className="text-canvas font-medium">Kenya VAT standard rate is 16%</strong>{" "}
+              <Link href="/resources/vat-rates-kenya" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+                Kenya VAT standard rate is 16%
+              </Link>{" "}
               for 2026. This applies to most taxable goods and services supplied in Kenya. Essential
               items including basic foodstuffs, medical supplies, and exports remain{" "}
-              <strong className="text-canvas font-medium">zero-rated (0%)</strong> or exempt.
+              <strong className="text-canvas font-medium">zero-rated (0%)</strong> or exempt — see the
+              full breakdown of{" "}
+              <Link href="/resources/vat-rates-kenya" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+                zero-rated vs exempt supplies in Kenya
+              </Link>
+              .
             </p>
             <p>
               A business must register for VAT when its annual taxable turnover reaches the
                mandatory threshold (KES 5 million under the VAT Act; the Finance Act 2025
                proposed raising it to KES 8 million, but this has not yet taken effect). Failure to register when required attracts a{" "}
-               <strong className="text-canvas font-medium">KES 100,000 penalty</strong>.
-              Voluntary registration is available below the threshold to claim input VAT credits.
+              <Link href="/resources/what-happens-if-i-don-t-register-for-vat" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+                KES 100,000 non-registration penalty
+              </Link>
+              . Voluntary registration is available below the threshold to claim input VAT credits —
+              use our{" "}
+              <Link href="/resources/do-i-need-to-register-for-vat-kenya" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+                guide on whether you need to register for VAT in Kenya
+              </Link>{" "}
+              to check where you stand.
             </p>
             <p>
-              The iTax VAT registration process involves updating your iTax profile, completing Form
-              VAT 1, uploading supporting documentation, and completing{" "}
-              <strong className="text-canvas font-medium">eTIMS onboarding</strong>. From 2026, KRA
-              validates all VAT returns against eTIMS electronic invoice data — businesses without
-              eTIMS-compliant invoices lose their input VAT claims automatically. Smart VAT Kenya
+              The{" "}
+              <Link href="/resources/how-to-register-for-vat-in-kenya" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+                iTax VAT registration process
+              </Link>{" "}
+              involves updating your iTax profile, completing Form VAT 1, uploading supporting
+              documentation, and completing{" "}
+              <Link href="/resources/etims-onboarding-guide" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+                eTIMS onboarding
+              </Link>
+              . From 2026, KRA validates all VAT returns against eTIMS electronic invoice data —
+              businesses without eTIMS-compliant invoices lose their input VAT claims automatically.
+              Our{" "}
+              <Link href="/services/vat-registration" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+                KES 5,000 VAT registration service
+              </Link>{" "}
               includes eTIMS guidance with every registration.
             </p>
             <p>
@@ -580,8 +574,24 @@ export default function HomePage() {
               VAT returns must be filed and payment made by the{" "}
               <strong className="text-canvas font-medium">20th of the following month</strong> via
               KRA Paybill{" "}
-              <strong className="text-canvas font-medium">572572</strong> or the iTax portal.
-              Late filing attracts the higher of KES 10,000 or 5% of tax due, plus 1% monthly interest.
+              <strong className="text-canvas font-medium">572572</strong> or the iTax portal — the{" "}
+              <Link href="/resources/how-to-file-vat-return-on-itax" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+                step-by-step iTax filing guide
+              </Link>{" "}
+              walks through every screen, and the{" "}
+              <Link href="/tools" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+                free 16% VAT calculator
+              </Link>{" "}
+              works out the figures for you.{" "}
+              <Link href="/resources/kra-penalty-for-late-vat-filing" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+                Late filing
+              </Link>{" "}
+              attracts the higher of KES 10,000 or 5% of tax due, plus 1% monthly interest — which is
+              why we file client returns on the 17th under our{" "}
+              <Link href="/services/monthly-vat-filing" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+                monthly VAT filing service
+              </Link>
+              .
             </p>
           </div>
         </div>
@@ -727,6 +737,17 @@ export default function HomePage() {
                 </div>
               </details>
             ))}
+            <div className="pt-8">
+              <RelatedLinks
+                heading="Go deeper"
+                links={[
+                  { href: "/resources/faq", label: "Full Kenya VAT FAQ — 40+ answers", description: "Registration, filing, penalties, rates, eTIMS, refunds and input VAT." },
+                  { href: "/resources/how-to-register-for-vat-in-kenya", label: "How to register for VAT in Kenya on iTax", description: "Every screen of the KRA iTax registration process, step by step." },
+                  { href: "/resources/kra-vat-penalties-reference", label: "KRA VAT penalties reference table", description: "What late filing, late payment, and non-registration actually cost." },
+                  { href: "/services", label: "All services and published prices", description: "Registration, monthly filing, eTIMS onboarding, and penalty waivers." },
+                ]}
+              />
+            </div>
           </div>
         </div>
       </section>

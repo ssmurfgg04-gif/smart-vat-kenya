@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info } from "@phosphor-icons/react/dist/ssr"
@@ -6,12 +7,14 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "VAT Deregistration Kenya 2026: How to Cancel Your VAT Registration",
+  absoluteTitle: true,
   description:
     "Complete guide to VAT deregistration in Kenya. When can you cancel your VAT registration, the KRA process, Form VAT 4, final return requirements, and what happens to input VAT on deregistration.",
-  alternates: { canonical: "https://smartvatkenya.co.ke/resources/vat-deregistration-kenya" },
-}
+  path: "/resources/vat-deregistration-kenya",
+  type: "article",
+})
 
 const articleSchema = {
   "@context": "https://schema.org",

@@ -1,15 +1,18 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowRight, ArrowLeft } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
+import { RelatedLinks } from "@/components/related-links"
 
-export const metadata: Metadata = {
-  title: "Kenya VAT FAQ — 40+ KRA VAT Questions Answered | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "Kenya VAT FAQ — 40+ KRA VAT Questions Answered",
   description:
     "Frequently asked questions about Kenya VAT: registration, filing, penalties, rates, eTIMS, refunds, input VAT, digital services, and more. Answered by KRA-registered VAT agents. Updated 2026.",
-  alternates: { canonical: "https://smartvatkenya.co.ke/resources/faq" },
-}
+  path: "/resources/faq",
+  type: "article",
+})
 
 const faqs = [
   { q: "What is the Kenya VAT standard rate in 2026?", a: "The Kenya VAT standard rate is 16% as per KRA guidelines for 2026. This applies to most taxable goods and services. Essential items including basic foodstuffs, medical supplies, and exports are zero-rated (0%) or exempt." },
@@ -72,6 +75,22 @@ const faqSchema = {
 
 const WA_BASE = "https://wa.me/254721725958"
 
+/** Contextual internal links surfaced under the answer of any matching question. */
+const ANSWER_LINKS: { match: RegExp; href: string; label: string }[] = [
+  { match: /special table/i, href: "/resources/vat-special-table-risks", label: "KRA VAT Special Table risks explained" },
+  { match: /etims/i, href: "/resources/etims-onboarding-guide", label: "eTIMS onboarding guide for Kenyan businesses" },
+  { match: /penalt|late filing|waiver/i, href: "/resources/kra-penalty-for-late-vat-filing", label: "KRA late VAT filing penalties and how to apply for a waiver" },
+  { match: /register|registration|threshold/i, href: "/services/vat-registration", label: "VAT registration service — KES 5,000 flat fee" },
+  { match: /file|filing|return|deadline|paybill/i, href: "/services/monthly-vat-filing", label: "Monthly VAT filing service — filed before the 20th" },
+  { match: /rate|zero-rated|exempt/i, href: "/resources/vat-rates-kenya", label: "Kenya VAT rates: standard, zero-rated and exempt" },
+  { match: /input vat|refund|claim/i, href: "/resources/input-vat-deduction-guide", label: "Input VAT deduction guide" },
+  { match: /calculat|16%/i, href: "/tools", label: "Free Kenya VAT calculator" },
+]
+
+function relatedLink(question: string, answer: string) {
+  return ANSWER_LINKS.find((l) => l.match.test(question) || l.match.test(answer))
+}
+
 export default function FAQPage() {
   return (
     <div className="bg-canvas min-h-[100dvh]">
@@ -89,6 +108,18 @@ export default function FAQPage() {
             Every question we get asked about Kenya VAT, answered in plain language.
             Based on the VAT Act Cap. 476 and current KRA practice. Updated for 2026.
           </p>
+          <div className="mt-8">
+            <RelatedLinks
+              tone="dark"
+              heading="Straight to the answer"
+              links={[
+                { href: "/services/vat-registration", label: "VAT registration in Kenya — KES 5,000", description: "We handle iTax, Form VAT 1, and eTIMS onboarding in 1–3 working days." },
+                { href: "/services/monthly-vat-filing", label: "Monthly VAT filing — KES 3,500/month", description: "Returns filed on the 17th, before the KRA 20th deadline." },
+                { href: "/tools", label: "Free 16% VAT calculator", description: "VAT inclusive/exclusive amounts and KRA penalty estimates." },
+                { href: "/resources/vat-rates-kenya", label: "Kenya VAT rates 2026", description: "Standard, zero-rated, and exempt supplies compared." },
+              ]}
+            />
+          </div>
         </div>
       </div>
 
@@ -110,6 +141,18 @@ export default function FAQPage() {
               </summary>
               <div className="mt-4 pb-2">
                 <p className="text-[0.88rem] text-ink-muted leading-relaxed">{faq.a}</p>
+                {(() => {
+                  const link = relatedLink(faq.q, faq.a)
+                  return link ? (
+                    <Link
+                      href={link.href}
+                      className="inline-flex items-center gap-1.5 mt-3 text-[0.82rem] font-medium text-brand hover:underline underline-offset-4"
+                    >
+                      {link.label}
+                      <ArrowRight size={12} weight="bold" aria-hidden="true" />
+                    </Link>
+                  ) : null
+                })()}
               </div>
             </details>
           ))}

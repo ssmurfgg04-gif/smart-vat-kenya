@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle } from "@phosphor-icons/react/dist/ssr"
@@ -6,12 +7,14 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "eTIMS Penalty KES 50,000 Per Month Kenya: How to Avoid the Fine",
+  absoluteTitle: true,
   description:
     "KRA charges KES 50,000 per month for eTIMS non-compliance — separate from VAT penalties. Learn what triggers it, how to check your status, and how to avoid the fine.",
-  alternates: { canonical: "https://smartvatkenya.co.ke/resources/etims-penalty-50000-per-month-kenya" },
-}
+  path: "/resources/etims-penalty-50000-per-month-kenya",
+  type: "article",
+})
 
 const articleSchema = {
   "@context": "https://schema.org",

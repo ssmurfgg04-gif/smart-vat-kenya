@@ -1,14 +1,17 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
-import { ArrowRight, Clock } from "@phosphor-icons/react/dist/ssr"
+import { ArrowRight, Clock, MagnifyingGlass } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 import { ResourceSearch } from "@/components/resource-search"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "Kenya VAT Knowledge Base — Free KRA Guides for SMEs 2026",
+  absoluteTitle: true,
   description:
     "Free Kenya VAT knowledge base for SMEs. How to register for VAT on KRA iTax, calculate 16% VAT, file nil returns, apply for the KRA tax amnesty programme, file monthly returns, get a KRA penalty waiver, and decide if you need to register for VAT. Written for Kenyan SMEs.",
+  path: "/resources",
   keywords: [
     "how to register for vat in kenya",
     "kra penalty for late vat filing",
@@ -18,14 +21,8 @@ export const metadata: Metadata = {
     "vat registration requirements kenya",
     "kra vat guide kenya 2026",
     "itax vat filing guide kenya",
-    "kra penalty waiver kenya 2026",
-    "zero rated vat kenya guide",
-    "vat calculator kenya 16 percent",
-    "kenya vat knowledge base",
-    "kra tax guide kenyan smes",
   ],
-  alternates: { canonical: "https://smartvatkenya.co.ke/resources" },
-}
+})
 
 // The 5 definitive pillars — titles and descriptions written to exactly match
 // how Kenyans phrase their Google searches.
@@ -439,6 +436,13 @@ export default function ResourcesPage() {
             questions Kenyan business owners type into Google every day. Written by KRA-registered
             VAT agents. Updated for 2026.
           </p>
+          <a
+            href="#search-guides"
+            className="mt-6 inline-flex items-center gap-2 border border-canvas/25 text-canvas text-[0.85rem] font-semibold px-4 py-2.5 rounded-md hover:border-canvas/50 transition-colors"
+          >
+            <MagnifyingGlass size={14} aria-hidden="true" />
+            Search all {pillars.length} guides
+          </a>
         </div>
       </div>
 

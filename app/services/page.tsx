@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import {
@@ -13,11 +14,14 @@ import {
 } from "@phosphor-icons/react/dist/ssr"
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
+import { RelatedLinks } from "@/components/related-links"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "VAT Registration Services Kenya | Pricing | KRA VAT Filing",
+  absoluteTitle: true,
   description:
     "Professional VAT registration services in Kenya from KES 5,000 — includes eTIMS onboarding guidance. Monthly iTax VAT filing KES 3,500/month filed before the 20th. KRA penalty waiver KES 4,000. M-PESA accepted.",
+  path: "/services",
   keywords: [
     "vat registration services kenya",
     "vat registration kenya price",
@@ -27,16 +31,8 @@ export const metadata: Metadata = {
     "etims onboarding kenya",
     "etims vat compliance kenya",
     "kra vat registration cost",
-    "vat filing service nairobi",
-    "kra penalty waiver",
-    "avoid kra vat penalty",
-    "kra late filing penalty kes 10000",
-    "non registration penalty kra",
-    "kra paybill 572572",
-    "vat special table kenya supplier",
   ],
-  alternates: { canonical: "https://smartvatkenya.co.ke/services" },
-}
+})
 
 const offerSchema = {
   "@context": "https://schema.org",
@@ -77,6 +73,43 @@ const offerSchema = {
       },
     },
   ],
+}
+
+const serviceFaqs = [
+  {
+    q: "How much do VAT registration services cost in Kenya?",
+    a: "Smart VAT Kenya charges a flat KES 5,000 for complete KRA VAT registration on iTax, including the iTax profile update, Form VAT 1, PIN generation, and eTIMS onboarding guidance. Monthly VAT filing is KES 3,500 per month and a KRA penalty waiver application is KES 4,000.",
+    href: "/services/vat-registration",
+    linkLabel: "See what the KES 5,000 VAT registration includes",
+  },
+  {
+    q: "How long does KRA VAT registration take?",
+    a: "Most registrations are completed in 1–3 working days once we have your KRA PIN, ID copy, and business details. Delays usually come from iTax profile errors or missing supporting documents, which we fix on your behalf.",
+    href: "/resources/how-to-register-for-vat-in-kenya",
+    linkLabel: "Read the step-by-step iTax VAT registration guide",
+  },
+  {
+    q: "When is the monthly VAT return due in Kenya?",
+    a: "VAT returns and payment are due by the 20th of the month following the tax period. We file client returns on the 17th so there is room to fix iTax errors before the KRA deadline. Late filing costs the higher of KES 10,000 or 5% of the tax due, plus 1% monthly interest.",
+    href: "/services/monthly-vat-filing",
+    linkLabel: "Monthly VAT filing service — KES 3,500/month",
+  },
+  {
+    q: "Do you handle eTIMS onboarding and KRA penalties too?",
+    a: "Yes. eTIMS onboarding guidance is included with every registration, and we also handle standalone eTIMS onboarding and KRA penalty waiver applications for businesses that already have outstanding VAT penalties.",
+    href: "/services/kra-penalty-waiver",
+    linkLabel: "KRA penalty waiver application — KES 4,000",
+  },
+]
+
+const serviceFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: serviceFaqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
 }
 
 const WA_BASE = "https://wa.me/254721725958"
@@ -171,6 +204,8 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <Script id="services-faq-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceFaqSchema) }} />
 
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-16">
@@ -179,8 +214,8 @@ export default function ServicesPage() {
             Services &amp; pricing
           </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
-            VAT Registration Services Kenya.{" "}
-            <span className="text-canvas/70 font-normal">Published prices. No discovery calls.</span>
+            VAT Registration Services Kenya.
+            <span className="text-canvas/70 font-normal">{" Published prices. No discovery calls."}</span>
           </h1>
           <p className="text-[0.95rem] text-canvas/70 max-w-[50ch] leading-relaxed">
             Every service has a fixed price you can see before you even message us.
@@ -366,6 +401,58 @@ export default function ServicesPage() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* Service FAQ */}
+      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="services-faq-heading">
+        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-[360px_1fr] gap-16">
+          <div>
+            <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
+              Pricing questions
+            </p>
+            <h2
+              id="services-faq-heading"
+              className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold tracking-tight text-ink leading-tight text-balance"
+            >
+              What Kenyan businesses ask before they hire us
+            </h2>
+          </div>
+          <div className="divide-y divide-hairline">
+            {serviceFaqs.map((faq) => (
+              <details key={faq.q} className="group py-5">
+                <summary className="flex items-start justify-between gap-4 cursor-pointer list-none">
+                  <span className="font-display text-[0.95rem] font-semibold text-ink leading-snug group-open:text-brand transition-colors">
+                    {faq.q}
+                  </span>
+                  <svg className="w-4 h-4 shrink-0 mt-1 text-ink-muted group-open:rotate-180 transition-transform" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </summary>
+                <div className="mt-3 pb-1">
+                  <p className="text-[0.875rem] text-ink-muted leading-relaxed">{faq.a}</p>
+                  <Link
+                    href={faq.href}
+                    className="inline-flex items-center gap-1.5 mt-3 text-[0.82rem] font-medium text-brand hover:underline underline-offset-4"
+                  >
+                    {faq.linkLabel}
+                    <ArrowRight size={12} weight="bold" aria-hidden="true" />
+                  </Link>
+                </div>
+              </details>
+            ))}
+            <div className="pt-8">
+              <RelatedLinks
+                heading="Related guides"
+                links={[
+                  { href: "/resources/vat-registration-checklist", label: "VAT registration document checklist", description: "Everything KRA asks for before your application goes through." },
+                  { href: "/resources/kra-vat-penalties-reference", label: "KRA VAT penalties reference", description: "Late filing, late payment, non-registration, and eTIMS fines." },
+                  { href: "/resources/etims-onboarding-guide", label: "eTIMS onboarding guide", description: "Which eTIMS option fits your business and how to get compliant." },
+                  { href: "/tools", label: "Free KRA VAT calculator", description: "16% VAT, reverse VAT, and penalty estimates — no sign-up." },
+                ]}
+              />
+            </div>
+          </div>
         </div>
       </section>
 

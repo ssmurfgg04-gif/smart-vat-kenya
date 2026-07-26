@@ -1,14 +1,17 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
-  title: "VAT Rates in Kenya 2026 — Standard (16%), Zero-Rated & Exempt | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "VAT Rates in Kenya 2026 — Standard (16%), Zero-Rated & Exempt",
+  absoluteTitle: true,
   description:
     "Complete guide to Kenya VAT rates 2026. Standard rate 16%, zero-rated supplies (exports, unprocessed foods), and exempt supplies (financial services, rent). Full lists with examples.",
+  path: "/resources/vat-rates-kenya",
   keywords: [
     "vat rates kenya 2026",
     "standard vat rate kenya 16%",
@@ -18,23 +21,9 @@ export const metadata: Metadata = {
     "vat kenya standard rate",
     "zero rated goods kenya vat act",
     "vat exempt list kenya",
-    "kenya vat rates overview",
-    "vat 0% kenya supplies",
-    "vat rate categories kenya",
-    "kenya vat standard rate 16%",
-    "vat exempt vs zero rated kenya",
-    "vat supplies kenya examples",
-    "what goods are zero rated in kenya",
-    "financial services vat kenya exempt",
-    "kenya vat act first schedule zero rated",
-    "kenya vat act second schedule exempt",
-    "vat rates kenya comparison",
-    "difference between zero rated and exempt kenya",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/vat-rates-kenya",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

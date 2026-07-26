@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import {
@@ -17,10 +18,11 @@ import {
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
-export const metadata: Metadata = {
-  title: "VAT Registration Services Kisumu — KES 5,000 | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "VAT Registration Services Kisumu — KES 5,000",
   description:
     "Professional VAT registration services in Kisumu — KES 5,000 flat fee. KRA iTax registration for Kisumu businesses. 1–3 working days. M-PESA accepted. Serving Kisumu CBD, Milimani, Nyawita, and all Kisumu County.",
+  path: "/services/vat-registration-kisumu",
   keywords: [
     "vat registration kisumu",
     "vat registration services kisumu",
@@ -30,15 +32,8 @@ export const metadata: Metadata = {
     "vat registration kisumu cbd",
     "kra itax kisumu",
     "vat registration milimani kisumu",
-    "vat registration nyawita",
-    "vat registration manyatta",
-    "how to register for vat in kisumu",
-    "vat registration kenya cost",
-    "kra vat registration",
-    "vat number kenya kisumu",
   ],
-  alternates: { canonical: "https://smartvatkenya.co.ke/services/vat-registration-kisumu" },
-}
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

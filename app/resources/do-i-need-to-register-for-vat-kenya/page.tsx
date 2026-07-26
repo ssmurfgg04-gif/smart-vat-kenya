@@ -1,14 +1,17 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, XCircle } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "Do I Need to Register for VAT in Kenya? (SME Guide 2026)",
+  absoluteTitle: true,
   description:
     "If your business turnover is KES 5 million or more per year, you must register for VAT in Kenya. Below that threshold, voluntary registration is optional. Learn the pros, cons, and how registration impacts your pricing and customers.",
+  path: "/resources/do-i-need-to-register-for-vat-kenya",
   keywords: [
     "do i need to register for vat kenya",
     "vat registration threshold kenya",
@@ -18,13 +21,9 @@ export const metadata: Metadata = {
     "kes 5 million threshold",
     "vat registration requirements kenya",
     "do small businesses need to register for vat in kenya",
-    "vat agent kenya",
-    "how to register for vat in kenya",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/do-i-need-to-register-for-vat-kenya",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

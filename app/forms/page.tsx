@@ -1,13 +1,16 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { Download, FileText, ArrowUpRight, ChatCircle, SealCheck } from "@phosphor-icons/react/dist/ssr"
 import { KRA_FORMS } from "@/lib/forms"
 
-export const metadata: Metadata = {
-  title: "Download KRA VAT Forms, eTIMS & iTax Manuals Free PDF | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "Download KRA VAT Forms, eTIMS & iTax Manuals Free PDF",
+  absoluteTitle: true,
   description:
     "KRA no longer uses paper forms — everything is on the iTax portal. Download the official VAT and eTIMS guides and manuals, or let our experts handle the portal for you.",
+  path: "/forms",
   keywords: [
     "kra vat forms download",
     "kra vat guides pdf",
@@ -16,8 +19,7 @@ export const metadata: Metadata = {
     "kra vat return guide",
     "free kra forms kenya",
   ],
-  alternates: { canonical: "https://smartvatkenya.co.ke/forms" },
-}
+})
 
 const WA_LINK =
   "https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20the%20iTax%20portal%20or%20eTIMS."

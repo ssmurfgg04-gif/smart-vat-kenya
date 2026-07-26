@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info } from "@phosphor-icons/react/dist/ssr"
@@ -6,14 +7,13 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
-  title: "VAT on Fintech and Digital Payments in Kenya 2026 | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "VAT on Fintech and Digital Payments in Kenya 2026",
   description:
     "Finance Act 2026 made payment processing, gateway, and merchant acquisition services taxable at 16% VAT from 1 July 2026. Guide covering M-Pesa merchant fees, Pesapal, iPay, Flutterwave, and all digital payment VAT changes.",
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/vat-fintech-digital-payments-kenya",
-  },
-}
+  path: "/resources/vat-fintech-digital-payments-kenya",
+  type: "article",
+})
 
 const articleSchema = {
   "@context": "https://schema.org",

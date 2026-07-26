@@ -1,14 +1,17 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "KRA VAT Penalties Kenya 2026 | Complete Penalty Table | Late Filing, Non-Registration",
+  absoluteTitle: true,
   description:
     "Complete KRA VAT penalties reference for Kenya 2026. Late filing: KES 10,000 or 5%. Non-registration: up to KES 100,000. eTIMS non-compliance: KES 50,000/month. Late payment: 5% + 1%/month interest. Waiver guide included.",
+  path: "/resources/kra-vat-penalties-reference",
   keywords: [
     "kra vat penalties kenya 2026",
     "kra vat penalty table",
@@ -18,18 +21,9 @@ export const metadata: Metadata = {
     "kra penalty for late filing vat kes 10000",
     "kra understatement penalty vat",
     "vat penalty waiver kenya",
-    "kra penalty remission application",
-    "withholding vat penalty kra",
-    "kra etims penalty kes 500000",
-    "blocked input vat kenya",
-    "kra penalty waiver itax",
-    "smart vat kenya penalties",
-    "vat penalties under section 38 vat act kenya",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/kra-vat-penalties-reference",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

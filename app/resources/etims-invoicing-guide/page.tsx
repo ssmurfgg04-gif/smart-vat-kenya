@@ -1,14 +1,16 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
-  title: "eTIMS Compliant Invoice Guide Kenya 2026 | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "eTIMS Compliant Invoice Guide Kenya 2026",
   description:
     "Complete guide to eTIMS-compliant invoicing in Kenya. Learn the mandatory invoice fields, QR codes, buyer KRA PIN requirements, B2B vs B2C invoicing rules, how to verify an eTIMS invoice, and what to do when your supplier does not issue eTIMS invoices.",
+  path: "/resources/etims-invoicing-guide",
   keywords: [
     "etims compliant invoice kenya",
     "etims invoice requirements kenya",
@@ -18,23 +20,9 @@ export const metadata: Metadata = {
     "buyer kra pin on invoice kenya",
     "etims b2b invoice kenya",
     "etims b2c invoice kenya",
-    "etims invoice without kra pin",
-    "buyer initiated invoicing etims",
-    "verify etims invoice qr code",
-    "etims invoice format kenya",
-    "what must appear on etims invoice",
-    "etims invoice example kenya",
-    "kra electronic invoice requirements",
-    "etims invoice for non vat registered",
-    "how to get etims invoice from supplier",
-    "etims invoice rejected by kra",
-    "input vat proof etims invoice",
-    "etims invoice number format kenya",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/etims-invoicing-guide",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

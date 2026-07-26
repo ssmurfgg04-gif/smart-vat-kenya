@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import {
@@ -18,10 +19,11 @@ import {
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
-export const metadata: Metadata = {
-  title: "Monthly VAT Filing Kenya — KES 3,500/month | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "Monthly VAT Filing Kenya — KES 3,500/month",
   description:
     "Monthly iTax VAT return filing in Kenya — KES 3,500 per month. Filed before the 20th every month. Avoid the KES 10,000 KRA late-filing penalty. M-PESA accepted. WhatsApp confirmations.",
+  path: "/services/monthly-vat-filing",
   keywords: [
     "monthly vat filing kenya",
     "itax vat filing service",
@@ -31,10 +33,8 @@ export const metadata: Metadata = {
     "file vat return kenya",
     "vat filing service nairobi",
     "monthly vat return kenya",
-    "vat compliance kenya",
   ],
-  alternates: { canonical: "https://smartvatkenya.co.ke/services/monthly-vat-filing" },
-}
+})
 
 const WA_BASE = "https://wa.me/254721725958"
 const WA_TEXT = "Hi%2C%20I%20want%20the%20KES%203500%20Monthly%20VAT%20Filing%20service"

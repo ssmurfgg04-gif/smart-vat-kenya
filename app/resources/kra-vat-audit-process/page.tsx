@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info } from "@phosphor-icons/react/dist/ssr"
@@ -6,12 +7,14 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "KRA VAT Audit Process Kenya 2026: What to Expect and How to Prepare",
+  absoluteTitle: true,
   description:
     "What happens during a KRA VAT audit in Kenya? Notice, document requests, site visits, assessment, objection, and appeal. How to prepare your records and avoid adverse findings. Complete guide for registered VAT persons.",
-  alternates: { canonical: "https://smartvatkenya.co.ke/resources/kra-vat-audit-process" },
-}
+  path: "/resources/kra-vat-audit-process",
+  type: "article",
+})
 
 const articleSchema = {
   "@context": "https://schema.org",

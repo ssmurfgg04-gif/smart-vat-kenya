@@ -1,13 +1,16 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "Nil Returns Kenya 2026: How to File Nil Return on iTax + KRA Tax Amnesty Guide",
+  absoluteTitle: true,
   description:
     "How to file a nil VAT return on KRA iTax in 5 minutes. Learn why nil returns protect you from KES 10,000 penalties, how the KRA tax amnesty / voluntary disclosure programme works, and how to get penalty waivers for late filing.",
+  path: "/resources/nil-returns-tax-amnesty",
   keywords: [
     "nil returns kenya",
     "file nil return itax",
@@ -17,23 +20,9 @@ export const metadata: Metadata = {
     "kra voluntary disclosure programme",
     "nil vat return itax kenya",
     "kra penalty waiver nil return",
-    "how to file nil return kenya",
-    "nil return meaning kenya",
-    "what is a nil return kenya",
-    "kra nil return penalty",
-    "nil returns explained simply kenya",
-    "kra amnesty programme requirements",
-    "kra penalty remission kenya",
-    "file nil return kra 2026",
-    "nil vat return explained like im 5",
-    "kra penalty waiver itax nil return",
-    "kenya tax amnesty 2026",
-    "what happens if i dont file nil return kenya",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/nil-returns-tax-amnesty",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

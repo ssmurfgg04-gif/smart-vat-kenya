@@ -1,14 +1,16 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, Prohibit } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
-  title: "Input VAT Deduction Kenya Guide 2026 | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "Input VAT Deduction Kenya Guide 2026",
   description:
     "Complete guide to input VAT deduction in Kenya. Learn what qualifies as input VAT, the 6-month claiming window, prohibited claims, how apportionment works for mixed supplies, and what documents you need to support your claim.",
+  path: "/resources/input-vat-deduction-guide",
   keywords: [
     "input vat deduction kenya",
     "how to claim input vat kenya",
@@ -18,23 +20,9 @@ export const metadata: Metadata = {
     "input vat 6 month rule kenya",
     "input vat prohibited claims kenya",
     "input vat apportionment kenya",
-    "input vat on imports kenya",
-    "input vat documents required kenya",
-    "vat input tax claim conditions kenya",
-    "etims input vat claim kenya",
-    "input vat on passenger cars kenya",
-    "input vat on entertainment kenya",
-    "input vat carry forward kenya",
-    "kra input tax deduction conditions",
-    "can i claim input vat without etims invoice",
-    "input vat on software purchases kenya",
-    "vat input tax on laptop kenya",
-    "input vat on business expenses kenya",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/input-vat-deduction-guide",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

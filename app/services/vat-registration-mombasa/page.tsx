@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import {
@@ -17,14 +18,19 @@ import {
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
-export const metadata: Metadata = {
-  title: "VAT Registration Services Mombasa — KES 5,000 | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "VAT Registration Services Mombasa — KES 5,000",
   description:
     "Professional VAT registration services in Mombasa — KES 5,000 flat fee. KRA iTax registration for Mombasa businesses. 1–3 working days. M-PESA accepted. Serving Mombasa CBD, Nyali, Bamburi, Changamwe, and all Mombasa County.",
-  keywords:
-    "vat registration mombasa, vat registration services mombasa, kra vat registration mombasa, register for vat mombasa, vat registration kenya coast",
-  alternates: { canonical: "https://smartvatkenya.co.ke/services/vat-registration-mombasa" },
-}
+  path: "/services/vat-registration-mombasa",
+  keywords: [
+    "vat registration mombasa",
+    "vat registration services mombasa",
+    "kra vat registration mombasa",
+    "register for vat mombasa",
+    "vat registration kenya coast",
+  ],
+})
 
 const WA_BASE = "https://wa.me/254721725958"
 const WA_TEXT = "Hi%2C%20I%20need%20VAT%20registration%20in%20Mombasa"

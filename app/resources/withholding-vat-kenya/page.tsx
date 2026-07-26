@@ -1,14 +1,16 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
-  title: "Withholding VAT Kenya Guide 2026 | 2% Rate | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "Withholding VAT Kenya Guide 2026 | 2% Rate",
   description:
     "Complete guide to withholding VAT in Kenya. Learn how the 2% withholding VAT works, which businesses are appointed as agents, how withholding VAT credits affect your VAT return, and how to claim a refund of excess withholding VAT.",
+  path: "/resources/withholding-vat-kenya",
   keywords: [
     "withholding vat kenya",
     "withholding vat kenya 2%",
@@ -18,23 +20,9 @@ export const metadata: Metadata = {
     "how does withholding vat work in kenya",
     "withholding vat kenya appointed agents",
     "vat withholding by large companies kenya",
-    "kra withholding vat on supplies",
-    "withholding vat credit note kenya",
-    "withholding vat vs normal vat kenya",
-    "who deducts withholding vat kenya",
-    "withholding vat payable 20th kenya",
-    "withholding vat on goods kenya",
-    "kra withholding vat on payments",
-    "excess withholding vat refund kenya",
-    "withholding vat invoice requirements kenya",
-    "how to claim withholding vat kenya",
-    "withholding vat on government contracts kenya",
-    "kra withholding vat due date",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/withholding-vat-kenya",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

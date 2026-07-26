@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import {
@@ -12,10 +13,12 @@ import {
   CurrencyDollar,
 } from "@phosphor-icons/react/dist/ssr"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "How Smart VAT Kenya Works — 3 Steps to VAT Registration via WhatsApp",
+  absoluteTitle: true,
   description:
     "Get your KRA VAT registration or monthly iTax filing handled in 3 steps — WhatsApp us your documents, we handle the portal and eTIMS onboarding, you receive your VAT PIN. No iTax login required.",
+  path: "/how-it-works",
   keywords: [
     "how to register for vat online kenya",
     "vat registration process kenya",
@@ -26,8 +29,7 @@ export const metadata: Metadata = {
     "what documents needed for vat registration kenya",
     "how long does vat registration take kenya",
   ],
-  alternates: { canonical: "https://smartvatkenya.co.ke/how-it-works" },
-}
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

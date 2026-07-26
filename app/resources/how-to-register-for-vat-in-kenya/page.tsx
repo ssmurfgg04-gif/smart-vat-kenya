@@ -1,14 +1,17 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "How to Register for VAT in Kenya on iTax (Step-by-Step 2026)",
+  absoluteTitle: true,
   description:
     "To register for VAT in Kenya, your business must have annual taxable turnover above KES 5 million. Apply on the KRA iTax portal using your KRA PIN, national ID, and bank details. Takes 1–3 working days. Full step-by-step guide.",
+  path: "/resources/how-to-register-for-vat-in-kenya",
   keywords: [
     "how to register for vat in kenya",
     "vat registration requirements kenya",
@@ -18,13 +21,9 @@ export const metadata: Metadata = {
     "how long does vat registration take kenya",
     "how much does vat registration cost in kenya",
     "kes 5 million vat threshold kenya",
-    "kra pin for vat",
-    "voluntary vat registration kenya",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/how-to-register-for-vat-in-kenya",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

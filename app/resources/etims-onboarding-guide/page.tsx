@@ -1,14 +1,17 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "eTIMS Kenya Onboarding Guide 2026 | KRA Electronic Tax Invoicing",
+  absoluteTitle: true,
   description:
     "Complete eTIMS Kenya onboarding guide 2026. Learn how to register for KRA eTIMS, choose between eTIMS Lite, Client, Trader, or POS Integration, and avoid the KES 50,000/month penalty.",
+  path: "/resources/etims-onboarding-guide",
   keywords: [
     "etims kenya",
     "kra etims registration",
@@ -18,16 +21,9 @@ export const metadata: Metadata = {
     "etims client software",
     "kra etims penalty",
     "how to register for etims kenya",
-    "etims trader kenya",
-    "vscu oscu kenya",
-    "buyer initiated invoicing etims",
-    "finance act 2023 etims",
-    "tax invoice requirements kenya",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/etims-onboarding-guide",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

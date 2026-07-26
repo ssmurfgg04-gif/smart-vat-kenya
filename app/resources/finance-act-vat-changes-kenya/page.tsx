@@ -1,14 +1,16 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
-  title: "Finance Act 2025 & 2026 VAT Changes Kenya | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "Finance Act 2025 & 2026 VAT Changes Kenya",
   description:
     "Complete summary of VAT changes introduced by the Finance Act 2025 and Finance Act 2026 in Kenya. Covers the KES 8M threshold adjustment, reduced refund window, fintech VAT reclassification, bad debt relief changes, and more.",
+  path: "/resources/finance-act-vat-changes-kenya",
   keywords: [
     "finance act 2025 kenya vat changes",
     "finance act 2026 kenya vat changes",
@@ -18,23 +20,9 @@ export const metadata: Metadata = {
     "finance act 2025 vat kenya summary",
     "finance act 2026 vat kenya summary",
     "input vat apportionment 90:10 rule removed",
-    "vat on payment processing kenya",
-    "bad debt relief vat kenya 3 years",
-    "vat invoice requirements finance act 2025",
-    "vat exempt supplies kdf kenya",
-    "vat on digital broadcasting kenya",
-    "vat changes kenya 2025 2026",
-    "finance act kenya vat zero rating",
-    "vat exemption manufacturing capital goods kenya",
-    "finance act 2025 vat input tax",
-    "vat treatment labour outsourcing kenya",
-    "finance bill 2025 kenya vat",
-    "finance bill 2026 kenya vat",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/finance-act-vat-changes-kenya",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

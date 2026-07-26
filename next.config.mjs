@@ -39,6 +39,25 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: "/_next/static/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        // HTML: served instantly from the CDN, revalidated in the background.
+        source: "/((?!_next/|api/|.*\\.(?:ico|png|svg|webp|avif|woff2)$).*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800",
+          },
+        ],
+      },
     ]
   },
 }
