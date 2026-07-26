@@ -6,11 +6,11 @@ import { useState } from "react"
 import { List, X } from "@phosphor-icons/react/dist/ssr"
 
 const navLinks = [
-  { href: "/tools",           label: "VAT Calculator" },
-  { href: "/services",        label: "Services" },
-  { href: "/how-it-works",    label: "How It Works" },
-  { href: "/forms",           label: "Free Forms" },
-  { href: "/resources",       label: "Resources" },
+  { href: "/tools",        label: "VAT Calculator" },
+  { href: "/services",     label: "Services" },
+  { href: "/how-it-works", label: "How It Works" },
+  { href: "/forms",        label: "Free Forms" },
+  { href: "/resources",    label: "Resources" },
 ]
 
 const WA_LINK =
@@ -21,23 +21,23 @@ export function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40 bg-canvas/90 backdrop-blur-md border-b border-hairline">
+    <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-gray-200">
       <nav
-        className="max-w-[1400px] mx-auto px-6 lg:px-10 flex items-center justify-between h-[60px]"
+        className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between h-[60px]"
         aria-label="Main navigation"
       >
         {/* Wordmark */}
         <Link
           href="/"
-          className="font-display text-[1.15rem] font-semibold tracking-tight text-ink hover:text-brand transition-colors"
+          className="font-display text-[1.15rem] font-semibold tracking-tight text-gray-900 hover:text-emerald-600 transition-colors"
           aria-label="Smart VAT Kenya — Home"
         >
           Smart<span className="text-gray-900">VAT</span>
-          <span className="text-ink-muted font-normal text-sm ml-1">Kenya</span>
+          <span className="text-gray-500 font-normal text-sm ml-1">Kenya</span>
         </Link>
 
-        {/* Desktop links */}
-        <ul className="hidden lg:flex items-center gap-7" role="list">
+        {/* Desktop links - Changed lg:flex to md:flex and updated text color tokens */}
+        <ul className="hidden md:flex items-center gap-7" role="list">
           {navLinks.map((link) => {
             const active = pathname === link.href || pathname.startsWith(link.href + "/")
             return (
@@ -48,8 +48,8 @@ export function Navbar() {
                   aria-current={active ? "page" : undefined}
                   className={`text-sm font-medium transition-colors ${
                     active
-                      ? "text-ink border-b border-ink pb-0.5"
-                      : "text-ink-muted hover:text-ink"
+                      ? "text-gray-900 border-b-2 border-gray-900 pb-0.5 font-semibold"
+                      : "text-gray-600 hover:text-gray-900"
                   }`}
                 >
                   {link.label}
@@ -60,12 +60,12 @@ export function Navbar() {
         </ul>
 
         {/* Primary CTA */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4">
           <a
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-4 py-2 rounded-md transition-colors hover:bg-brand-hover"
+            className="btn-fill inline-flex items-center gap-2 bg-emerald-600 text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors hover:bg-emerald-700"
           >
             Get Started
           </a>
@@ -74,7 +74,7 @@ export function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="lg:hidden text-ink p-2 -mr-2 rounded-md hover:bg-canvas-alt transition-colors"
+          className="md:hidden text-gray-900 p-2 -mr-2 rounded-md hover:bg-gray-100 transition-colors"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           aria-controls="mobile-nav"
@@ -89,7 +89,7 @@ export function Navbar() {
 
       {/* Mobile drawer */}
       {open && (
-        <div id="mobile-nav" className="lg:hidden border-t border-hairline bg-canvas px-6 py-5 space-y-1">
+        <div id="mobile-nav" className="md:hidden border-t border-gray-200 bg-white px-6 py-5 space-y-1">
           {navLinks.map((link) => {
             const active = pathname === link.href || pathname.startsWith(link.href + "/")
             return (
@@ -98,8 +98,8 @@ export function Navbar() {
                 href={link.href}
                 onClick={() => setOpen(false)}
                 aria-current={active ? "page" : undefined}
-                className={`block py-2.5 text-sm font-medium border-b border-hairline last:border-0 transition-colors ${
-                  active ? "text-ink" : "text-ink-muted hover:text-ink"
+                className={`block py-2.5 text-sm font-medium border-b border-gray-100 last:border-0 transition-colors ${
+                  active ? "text-gray-900 font-semibold" : "text-gray-600 hover:text-gray-900"
                 }`}
               >
                 {link.label}
@@ -110,7 +110,7 @@ export function Navbar() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-fill block mt-4 text-center bg-brand text-canvas text-sm font-semibold px-4 py-3 rounded-md"
+            className="btn-fill block mt-4 text-center bg-emerald-600 text-white text-sm font-semibold px-4 py-3 rounded-md"
           >
             Get Started on WhatsApp
           </a>
