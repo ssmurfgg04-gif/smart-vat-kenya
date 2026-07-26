@@ -121,6 +121,24 @@ const faqSchema = {
 }
 
 const WA_BASE = "https://wa.me/254721725958"
+const WA_TEXT = "Hi%2C%20I%20need%20VAT%20registration%20in%20Kisumu"
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://smartvatkenya.co.ke/services/vat-registration-kisumu#service",
+  name: "VAT Registration Services Kisumu",
+  description:
+    "Professional KRA VAT registration in Kisumu — KES 5,000 flat fee, done in 1–3 working days. iTax VAT Form 1, PIN generation, and eTIMS guidance included. Fully remote via WhatsApp. M-PESA accepted.",
+  provider: { "@type": "Organization", name: "Smart VAT Kenya" },
+  areaServed: { "@type": "City", name: "Kisumu" },
+  offers: {
+    "@type": "Offer",
+    price: "5000",
+    priceCurrency: "KES",
+    availability: "https://schema.org/InStock",
+  },
+}
 
 const inclusions = [
   "iTax profile update",
@@ -230,6 +248,8 @@ export default function VATRegistrationKisumuPage() {
     <>
       <Script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <Script id="service-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Script id="local-business-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <Script id="faq-schema" type="application/ld+json"
@@ -248,14 +268,28 @@ export default function VATRegistrationKisumuPage() {
             Professional KRA VAT registration for Kisumu businesses at a flat fee.
             Done in 1–3 working days. M-PESA accepted.
           </p>
-          <div className="flex items-start gap-3 mb-8 p-4 rounded-lg border border-canvas/15 bg-canvas/5 max-w-[50ch]">
+          <div className="flex items-start gap-3 mb-4 p-4 rounded-lg border border-canvas/15 bg-canvas/5 max-w-[50ch]">
             <MapPin size={16} weight="duotone" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
             <p className="text-[0.83rem] text-canvas/65 leading-relaxed">
               We serve all Western Kenya businesses remotely via WhatsApp. No office visit needed.
             </p>
           </div>
+          <div className="flex flex-wrap gap-2 mb-6" role="list" aria-label="Trust signals">
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <CheckCircle size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              M-PESA accepted
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <CheckCircle size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              No hidden costs
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <SealCheck size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              Registered KRA agent
+            </span>
+          </div>
           <a
-            href={`${WA_BASE}?text=Hi%2C%20I%20need%20VAT%20registration%20in%20Kisumu`}
+            href={`${WA_BASE}?text=${WA_TEXT}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3 rounded-md hover:bg-brand-hover transition-colors"
@@ -410,6 +444,29 @@ export default function VATRegistrationKisumuPage() {
         </div>
       </section>
 
+      {/* Mid-page CTA */}
+      <section className="bg-brand-muted px-6 lg:px-10 py-12">
+        <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <p className="font-display text-[1.1rem] font-semibold text-ink">
+              KES 5,000 — VAT registration for Kisumu
+            </p>
+            <p className="text-[0.85rem] text-ink-muted mt-1">
+              Fully remote via WhatsApp. No travel needed. Done in 1–3 working days.
+            </p>
+          </div>
+          <a
+            href={`${WA_BASE}?text=${WA_TEXT}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
+          >
+            Get started on WhatsApp
+            <ArrowRight size={14} weight="bold" aria-hidden="true" />
+          </a>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <Testimonials />
 
@@ -454,7 +511,7 @@ export default function VATRegistrationKisumuPage() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a
-              href={`${WA_BASE}?text=Hi%2C%20I%20need%20VAT%20registration%20in%20Kisumu`}
+              href={`${WA_BASE}?text=${WA_TEXT}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"

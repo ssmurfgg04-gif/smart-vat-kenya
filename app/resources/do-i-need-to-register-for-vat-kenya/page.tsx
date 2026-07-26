@@ -149,8 +149,9 @@ export default function DoINeedVATPage() {
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
             You must register for VAT in Kenya if your annual taxable turnover reaches or exceeds{" "}
-            <strong className="text-ink">KES 5 million</strong>. If your turnover is below that, registration is voluntary — but it can still benefit you. This guide covers the{" "}
-            <strong className="text-ink">KES 5 million threshold rule</strong>, voluntary registration, how VAT changes your pricing, and how to avoid scam agents when you{" "}
+            <strong className="text-ink">KES 5 million</strong>. If your turnover is below that, registration is voluntary — but it can still benefit you.             This guide covers the{" "}
+            <strong className="text-ink">KES 5 million threshold rule</strong>, voluntary registration,{" "}
+            <Link href="/resources/vat-vs-turnover-tax" className="text-brand underline underline-offset-2 hover:text-brand-hover">turnover tax (ToT)</Link>, how VAT changes your pricing, and how to avoid scam agents when you{" "}
             <strong className="text-ink">hire someone to handle your KRA PIN for VAT</strong>.
           </p>
         </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
@@ -12,9 +13,25 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://smartvatkenya.co.ke/resources/vat-deregistration-kenya" },
 }
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "VAT Deregistration Kenya 2026: How to Cancel Your VAT Registration",
+  description:
+    "Complete guide to VAT deregistration in Kenya. When can you cancel your VAT registration, the KRA process, Form VAT 4, final return requirements, and what happens to input VAT on deregistration.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-26",
+  dateModified: "2026-07-26",
+  url: "https://smartvatkenya.co.ke/resources/vat-deregistration-kenya",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/vat-deregistration-kenya",
+}
+
 export default function VatDeregistrationPost() {
   return (
     <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
+      <Script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Link href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources
       </Link>
@@ -98,6 +115,11 @@ export default function VatDeregistrationPost() {
             </div>
           </div>
 
+          <p>
+            If you are unsure whether you should remain registered, see our{" "}
+            <Link href="/resources/do-i-need-to-register-for-vat-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">guide on whether you need to register for VAT</Link>{" "}
+            to review the threshold rules before applying for cancellation.
+          </p>
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             The VAT Deregistration Process
           </h2>
@@ -320,7 +342,9 @@ export default function VatDeregistrationPost() {
             is the right choice. Re-registering is straightforward, but the administrative burden of the
             registration-deregistration-re-registration cycle can be significant. Some businesses choose
             to remain registered even when their turnover dips below the threshold, especially if they
-            expect to exceed it again soon.
+            expect to exceed it again soon. For a step-by-step guide on the original registration process,
+            see our{" "}
+            <Link href="/resources/how-to-register-for-vat-in-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT registration guide</Link>.
           </p>
 
           <div className="border border-brand/25 bg-brand-muted rounded-lg p-5 mt-8">

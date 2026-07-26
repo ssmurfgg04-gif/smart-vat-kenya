@@ -162,6 +162,16 @@ const faqs = [
   },
 ]
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
+}
+
 export default function ETIMSOnboardingPage() {
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -195,6 +205,8 @@ export default function ETIMSOnboardingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Script id="etims-breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <Script id="etims-faq-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-16">
@@ -211,6 +223,20 @@ export default function ETIMSOnboardingPage() {
             right platform — mobile app, web portal, or ERP integration — and make sure every invoice you
             issue passes KRA compliance. No portal confusion. No missed deadlines.
           </p>
+          <div className="flex flex-wrap gap-2 mb-6" role="list" aria-label="Trust signals">
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <CheckCircle size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              M-PESA accepted
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <CheckCircle size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              No hidden costs
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <SealCheck size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              Registered KRA agent
+            </span>
+          </div>
           <a
             href={`${WA_BASE}?text=${WA_TEXT}`}
             target="_blank"
@@ -357,6 +383,29 @@ export default function ETIMSOnboardingPage() {
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+
+      {/* Mid-page CTA */}
+      <section className="bg-brand-muted px-6 lg:px-10 py-12">
+        <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <p className="font-display text-[1.1rem] font-semibold text-ink">
+              KES 3,000 — get eTIMS compliant today
+            </p>
+            <p className="text-[0.85rem] text-ink-muted mt-1">
+              Avoid the KES 50,000/month penalty. We handle everything. M-PESA accepted.
+            </p>
+          </div>
+          <a
+            href={`${WA_BASE}?text=${WA_TEXT}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
+          >
+            Get started on WhatsApp
+            <ArrowRight size={14} weight="bold" aria-hidden="true" />
+          </a>
         </div>
       </section>
 

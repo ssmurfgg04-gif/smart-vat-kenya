@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Calculator, Info, WarningCircle, Question, CheckCircle, Wrench, ClipboardText } from "@phosphor-icons/react/dist/ssr"
+import { ArrowRight, Calculator, Info, WarningCircle, Question, Wrench, ClipboardText, CurrencyCircleDollar, Scales, ListChecks, HandCoins } from "@phosphor-icons/react/dist/ssr"
 
 const WA_BASE = "https://wa.me/254721725958"
 
@@ -12,17 +12,13 @@ function formatKES(n: number) {
   return "KES " + n.toLocaleString("en-KE", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 }
 
-// ── Penalty Waiver ─────────────────────────────────────────
-
-const waiverReasons = [
-  { value: "system", label: "iTax system error / portal down" },
-  { value: "forgot", label: "Missed the deadline (overlooked)" },
-  { value: "illness", label: "Illness or medical emergency" },
-  { value: "business", label: "Business closure / travel" },
-  { value: "new", label: "Recently registered, did not know process" },
-  { value: "nil", label: "Filed nil, thought no penalty applied" },
-  { value: "agent", label: "Accountant/agent filed late" },
-  { value: "first", label: "First time late, never penalised before" },
+const TAX_REGIMES = [
+  { value: "vat", label: "VAT", penaltyDesc: "KES 10,000 or 5% of tax due (whichever higher)", penaltyRate: 0.05, minPenalty: 10000 },
+  { value: "paye", label: "PAYE", penaltyDesc: "KES 10,000 or 25% of tax due (whichever higher)", penaltyRate: 0.25, minPenalty: 10000 },
+  { value: "income-individual", label: "Individual Income Tax", penaltyDesc: "KES 2,000 or 5% of tax due (whichever higher)", penaltyRate: 0.05, minPenalty: 2000 },
+  { value: "income-company", label: "Company Income Tax (CIT)", penaltyDesc: "KES 20,000 or 5% of tax due (whichever higher)", penaltyRate: 0.05, minPenalty: 20000 },
+  { value: "wht", label: "Withholding Tax (WHT)", penaltyDesc: "10% of tax due (capped at KES 1,000,000)", penaltyRate: 0.10, minPenalty: 0, maxPenalty: 1000000 },
+  { value: "tot", label: "Turnover Tax (TOT)", penaltyDesc: "KES 2,000 or 5% of tax due (whichever higher)", penaltyRate: 0.05, minPenalty: 2000 },
 ]
 
 // ── iTax Errors ────────────────────────────────────────────
@@ -146,22 +142,23 @@ export default function ToolsPage() {
   const net = direction === "add" ? base : base / 1.16
   const gross = direction === "add" ? base + vatAmount : base
 
-  // ── Penalty Waiver Wizard ─────────────────────────────────
-  const [taxDue, setTaxDue] = useState("")
-  const [monthsLate, setMonthsLate] = useState("1")
-  const [waiverReason, setWaiverReason] = useState("system")
-  const [wizStep, setWizStep] = useState<"calculate" | "reason" | "result">("calculate")
+  // ── KRA Penalty Calculator ────────────────────────────────
+  const [penTaxType, setPenTaxType] = useState("vat")
+  const [penTaxDue, setPenTaxDue] = useState("")
+  const [penMonths, setPenMonths] = useState("1")
+  const [penShowAmnesty, setPenShowAmnesty] = useState(false)
 
-  const taxDueNum = parseFloat(taxDue.replace(/,/g, "")) || 0
-  const months = parseInt(monthsLate, 10) || 1
-  const fixedPenalty = 10000
-  const lateFee = Math.max(taxDueNum * 0.05, 0)
-  const interest = taxDueNum * 0.01 * months
-  const totalPenalty = fixedPenalty + lateFee + interest
+  const penDue = parseFloat(penTaxDue.replace(/,/g, "")) || 0
+  const penM = parseInt(penMonths, 10) || 1
+  const regime = TAX_REGIMES.find((r) => r.value === penTaxType)!
+  const lateFiling = regime.maxPenalty
+    ? Math.min(penDue * regime.penaltyRate, regime.maxPenalty)
+    : Math.max(penDue * regime.penaltyRate, regime.minPenalty)
+  const interest = penDue * 0.01 * penM
+  const totalPenalty = lateFiling + interest
 
-  const reasonLabel = waiverReasons.find((r) => r.value === waiverReason)?.label || ""
-  const waPenaltyText = encodeURIComponent(
-    `Hi, I have KRA VAT penalties of approx KES ${Math.round(totalPenalty).toLocaleString()}. I need help with a penalty waiver. Reason: ${reasonLabel}. Tax due: KES ${taxDueNum.toLocaleString()}, ${months} month(s) late.`
+  const penWaText = encodeURIComponent(
+    `Hi, I have KRA ${regime.label} penalties of approx KES ${Math.round(totalPenalty).toLocaleString()}. Principal: KES ${Math.round(penDue).toLocaleString()}, ${penM} month(s) late. Need help with a penalty waiver.`
   )
 
   // ── iTax Error Diagnosis ──────────────────────────────────
@@ -210,11 +207,11 @@ export default function ToolsPage() {
             Free tools — no sign-up required
           </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
-            Kenya VAT Calculator, Penalty Waiver Wizard &amp; iTax Error Guide
+            Free Kenya Tax Tools — Calculators, Checklists &amp; Guides
           </h1>
           <p className="text-[0.95rem] text-canvas/70 max-w-[60ch] leading-relaxed">
-            Kenya VAT standard rate 16% (2026). Calculate VAT, estimate penalties with waiver guidance,
-            diagnose iTax portal errors, and check if your business must register for VAT.
+            VAT calculator, PAYE salary calculator, KRA penalty calculator for all 6 tax regimes, amnesty savings
+            calculator, withholding tax calculator, eTIMS checklist, and more — all free, no sign-up required.
           </p>
         </div>
       </div>
@@ -315,153 +312,119 @@ export default function ToolsPage() {
             </p>
           </section>
 
-          {/* ── Tool 2: Penalty Waiver Wizard ──────────────── */}
+          {/* ── Tool 2: KRA Penalty Calculator ────────────── */}
           <section aria-labelledby="penalty-heading">
             <div className="flex items-center gap-2.5 mb-6">
               <WarningCircle size={17} weight="duotone" className="text-brand" aria-hidden="true" />
               <h2 id="penalty-heading" className="font-display text-[1rem] font-semibold text-ink">
-                KRA Penalty Waiver Wizard
+                KRA Penalty Calculator — All 6 Tax Regimes
               </h2>
             </div>
 
             <div className="border border-hairline rounded-lg overflow-hidden divide-y divide-hairline">
-              {wizStep === "calculate" && (
-                <>
-                  <div className="p-5">
-                    <label htmlFor="taxdue" className="block text-[0.78rem] font-medium text-ink-muted mb-2">
-                      VAT liability for the period (KES)
-                    </label>
-                    <input
-                      id="taxdue"
-                      type="text"
-                      inputMode="decimal"
-                      placeholder="80,000"
-                      value={taxDue}
-                      onChange={(e) => setTaxDue(e.target.value)}
-                      className="w-full font-display text-[1.6rem] font-semibold text-ink bg-transparent focus:outline-none placeholder:text-ink-muted/30 placeholder:font-normal placeholder:text-xl"
-                    />
+
+              <div className="p-5">
+                <label htmlFor="pen-tax-type" className="block text-[0.78rem] font-medium text-ink-muted mb-2">
+                  Tax Type
+                </label>
+                <select
+                  id="pen-tax-type"
+                  value={penTaxType}
+                  onChange={(e) => setPenTaxType(e.target.value)}
+                  className="w-full text-[0.95rem] text-ink bg-transparent border border-hairline rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-brand"
+                >
+                  {TAX_REGIMES.map((t) => (
+                    <option key={t.value} value={t.value}>{t.label}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="p-5">
+                <label htmlFor="pen-taxdue" className="block text-[0.78rem] font-medium text-ink-muted mb-2">
+                  {regime.label} — principal tax due (KES)
+                </label>
+                <input
+                  id="pen-taxdue"
+                  type="text"
+                  inputMode="decimal"
+                  placeholder="80,000"
+                  value={penTaxDue}
+                  onChange={(e) => setPenTaxDue(e.target.value)}
+                  className="w-full font-display text-[1.6rem] font-semibold text-ink bg-transparent focus:outline-none placeholder:text-ink-muted/30 placeholder:font-normal placeholder:text-xl"
+                />
+              </div>
+              <div className="p-5">
+                <label htmlFor="pen-months" className="flex items-baseline justify-between text-[0.78rem] font-medium text-ink-muted mb-3">
+                  <span>Months overdue</span>
+                  <span className="font-display text-[1rem] font-semibold text-ink tabular-nums">{penM}</span>
+                </label>
+                <input id="pen-months" type="range" min="1" max="60" value={penMonths} onChange={(e) => setPenMonths(e.target.value)} className="w-full accent-brand" />
+                <div className="flex justify-between text-[0.7rem] text-ink-muted mt-1.5"><span>1 month</span><span>60 months</span></div>
+              </div>
+              <div className="p-5 bg-canvas-alt">
+                <dl className="space-y-3">
+                  <div className="flex items-baseline justify-between">
+                    <dt className="text-[0.78rem] text-ink-muted">Late-filing penalty<br /><span className="text-[0.65rem]">{regime.penaltyDesc}</span></dt>
+                    <dd className="font-mono text-[0.88rem] text-ink tabular-nums">{formatKES(lateFiling)}</dd>
                   </div>
-                  <div className="p-5">
-                    <label htmlFor="months" className="flex items-baseline justify-between text-[0.78rem] font-medium text-ink-muted mb-3">
-                      <span>Months overdue</span>
-                      <span className="font-display text-[1rem] font-semibold text-ink tabular-nums">{months}</span>
-                    </label>
-                    <input id="months" type="range" min="1" max="24" value={monthsLate} onChange={(e) => setMonthsLate(e.target.value)} className="w-full accent-brand" />
-                    <div className="flex justify-between text-[0.7rem] text-ink-muted mt-1.5"><span>1 month</span><span>24 months</span></div>
+                  <div className="flex items-baseline justify-between">
+                    <dt className="text-[0.78rem] text-ink-muted">Interest (1%/month &times; {penM})</dt>
+                    <dd className="font-mono text-[0.88rem] text-ink tabular-nums">{formatKES(interest)}</dd>
                   </div>
-                  <div className="p-5 bg-canvas-alt">
-                    <dl className="space-y-3">
-                      <div className="flex items-baseline justify-between">
-                        <dt className="text-[0.78rem] text-ink-muted">Fixed late-filing penalty</dt>
-                        <dd className="font-mono text-[0.88rem] text-ink tabular-nums">{formatKES(fixedPenalty)}</dd>
+                  <div className="flex items-baseline justify-between border-t border-hairline pt-3">
+                    <dt className="text-[0.82rem] font-semibold text-brand">Estimated total penalties</dt>
+                    <dd className="font-display text-[1.25rem] font-semibold text-brand tabular-nums">{formatKES(totalPenalty)}</dd>
+                  </div>
+                </dl>
+
+                {penDue > 0 && (
+                  <div className="mt-4">
+                    <label className="flex items-center gap-3 px-3 py-2.5 rounded-md border border-hairline cursor-pointer hover:border-amber-300 transition-colors">
+                      <input
+                        type="checkbox"
+                        checked={penShowAmnesty}
+                        onChange={() => setPenShowAmnesty(!penShowAmnesty)}
+                        className="accent-amber-600"
+                      />
+                      <div>
+                        <p className="text-[0.8rem] font-medium text-ink">Show amnesty savings</p>
+                        <p className="text-[0.7rem] text-ink-muted">Amnesty waives 100% of penalties + interest (pre-2026 debt)</p>
                       </div>
-                      <div className="flex items-baseline justify-between">
-                        <dt className="text-[0.78rem] text-ink-muted">5% of tax due</dt>
-                        <dd className="font-mono text-[0.88rem] text-ink tabular-nums">{formatKES(lateFee)}</dd>
+                    </label>
+                    {penShowAmnesty && (
+                      <div className="mt-3 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4 space-y-2">
+                        <div className="flex items-baseline justify-between">
+                          <dt className="text-[0.8rem] text-amber-700 dark:text-amber-400">Savings under amnesty</dt>
+                          <dd className="font-display text-[1.1rem] font-bold text-amber-700 dark:text-amber-400 tabular-nums">
+                            + {formatKES(totalPenalty)}
+                          </dd>
+                        </div>
+                        <p className="text-[0.72rem] text-amber-600 dark:text-amber-500">
+                          Pay principal only (KES {Math.round(penDue).toLocaleString()}) before Dec 31, 2026.
+                          <a href="/tools/amnesty-calculator" className="ml-1 underline underline-offset-2 hover:text-amber-700">Full amnesty calculator &rarr;</a>
+                        </p>
                       </div>
-                      <div className="flex items-baseline justify-between">
-                        <dt className="text-[0.78rem] text-ink-muted">Interest (1%/month &times; {months})</dt>
-                        <dd className="font-mono text-[0.88rem] text-ink tabular-nums">{formatKES(interest)}</dd>
-                      </div>
-                      <div className="flex items-baseline justify-between border-t border-hairline pt-3">
-                        <dt className="text-[0.82rem] font-semibold text-brand">Estimated total penalties</dt>
-                        <dd className="font-display text-[1.25rem] font-semibold text-brand tabular-nums">{formatKES(totalPenalty)}</dd>
-                      </div>
-                    </dl>
-                    {totalPenalty > 10000 && (
-                      <button
-                        onClick={() => setWizStep("reason")}
-                        className="btn-fill mt-5 w-full flex items-center justify-center gap-2 bg-ink text-canvas text-[0.82rem] font-semibold py-3 rounded-md hover:bg-canvas-dark transition-colors"
-                      >
-                        Next: Tell us why
-                        <ArrowRight size={13} weight="bold" aria-hidden="true" />
-                      </button>
                     )}
                   </div>
-                </>
-              )}
+                )}
 
-              {wizStep === "reason" && (
-                <>
-                  <div className="p-5">
-                    <p className="text-[0.78rem] font-medium text-ink-muted mb-2">Why was the return filed late?</p>
-                    <p className="text-[0.85rem] text-ink-soft mb-4">KRA considers your reason when reviewing waiver applications. Pick the closest option.</p>
-                    <div className="space-y-2">
-                      {waiverReasons.map((r) => (
-                        <label
-                          key={r.value}
-                          className={`flex items-center gap-3 px-3 py-2.5 rounded-md border text-[0.85rem] cursor-pointer transition-colors ${
-                            waiverReason === r.value ? "border-ink bg-ink/5 text-ink font-medium" : "border-hairline text-ink-muted hover:border-ink-muted"
-                          }`}
-                        >
-                          <input
-                            type="radio"
-                            name="waiverReason"
-                            value={r.value}
-                            checked={waiverReason === r.value}
-                            onChange={(e) => setWaiverReason(e.target.value)}
-                            className="accent-brand"
-                          />
-                          {r.label}
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="p-5 bg-canvas-alt flex flex-col gap-3">
-                    <button
-                      onClick={() => setWizStep("result")}
-                      className="btn-fill w-full flex items-center justify-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold py-3 rounded-md hover:bg-brand-hover transition-colors"
-                    >
-                      Generate waiver request
-                      <ArrowRight size={13} weight="bold" aria-hidden="true" />
-                    </button>
-                    <button
-                      onClick={() => setWizStep("calculate")}
-                      className="text-[0.75rem] text-ink-muted hover:text-ink transition-colors text-center"
-                    >
-                      Back to calculation
-                    </button>
-                  </div>
-                </>
-              )}
-
-              {wizStep === "result" && (
-                <div className="p-5 bg-canvas-alt">
-                  <div className="flex items-start gap-2.5 mb-4">
-                    <CheckCircle size={18} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
-                    <div>
-                      <p className="text-[0.88rem] font-semibold text-ink mb-1">Your waiver summary</p>
-                      <p className="text-[0.78rem] text-ink-muted">Review your details below, then message us on WhatsApp to proceed.</p>
-                    </div>
-                  </div>
-                  <div className="bg-canvas border border-hairline rounded-lg p-4 space-y-2 text-[0.8rem] mb-4">
-                    <div className="flex justify-between"><span className="text-ink-muted">Total penalty</span><span className="font-semibold text-ink tabular-nums">{formatKES(totalPenalty)}</span></div>
-                    <div className="flex justify-between"><span className="text-ink-muted">Tax due</span><span className="text-ink tabular-nums">{formatKES(taxDueNum)}</span></div>
-                    <div className="flex justify-between"><span className="text-ink-muted">Months late</span><span className="text-ink tabular-nums">{months}</span></div>
-                    <div className="flex justify-between"><span className="text-ink-muted">Reason</span><span className="text-ink text-right max-w-[200px]">{reasonLabel}</span></div>
-                  </div>
+                {penDue > 0 && (
                   <a
-                    href={`${WA_BASE}?text=${waPenaltyText}`}
+                    href={`${WA_BASE}?text=${penWaText}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-fill w-full flex items-center justify-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold py-3 rounded-md hover:bg-brand-hover transition-colors"
+                    className="btn-fill mt-5 w-full flex items-center justify-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold py-3 rounded-md hover:bg-brand-hover transition-colors"
                   >
-                    Send to WhatsApp — KES 4,000
+                    Need help with a waiver or amnesty? Chat with us.
                     <ArrowRight size={13} weight="bold" aria-hidden="true" />
                   </a>
-                  <button
-                    onClick={() => { setWizStep("calculate"); setTaxDue(""); setMonthsLate("1"); }}
-                    className="mt-3 w-full text-[0.72rem] text-ink-muted hover:text-ink transition-colors text-center"
-                  >
-                    Start over
-                  </button>
-                </div>
-              )}
+                )}
+              </div>
             </div>
 
             <p className="mt-3 text-[0.72rem] text-ink-muted leading-relaxed flex items-start gap-1.5">
               <Info size={12} className="shrink-0 mt-0.5" aria-hidden="true" />
-              KES 10,000 fixed penalty + 5% of tax + 1%/month interest (KRA 2026). KRA considers each waiver on its merits.
+              Late-filing penalties differ by tax regime. Interest is 1%/month on principal for all regimes (KRA 2026). For pre-2026 debt, the tax amnesty waives all penalties and interest.
             </p>
           </section>
         </div>
@@ -582,6 +545,48 @@ export default function ToolsPage() {
                 </div>
               </div>
             )}
+          </div>
+        </section>
+
+        {/* ── Advanced Tools ──────────────────────────────── */}
+        <section className="mt-14 border-t border-hairline pt-12" aria-labelledby="advanced-heading">
+          <div className="flex items-center gap-2.5 mb-6">
+            <Calculator size={17} weight="duotone" className="text-brand" aria-hidden="true" />
+            <h2 id="advanced-heading" className="font-display text-[1rem] font-semibold text-ink">
+              More Free KRA Tax Tools
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
+            <a href="/tools/paye-calculator" className="border border-hairline rounded-lg p-4 group hover:border-ink/15 hover:shadow-sm transition-all flex flex-col gap-1.5">
+              <CurrencyCircleDollar size={18} weight="duotone" className="text-brand" aria-hidden="true" />
+              <p className="text-[0.85rem] font-semibold text-ink group-hover:text-brand transition-colors">PAYE / Salary Calculator</p>
+              <p className="text-[0.75rem] text-ink-muted">Gross to net — NSSF, SHIF, Housing Levy, and PAYE tax bands</p>
+            </a>
+            <a href="/tools/vat-vs-tot" className="border border-hairline rounded-lg p-4 group hover:border-ink/15 hover:shadow-sm transition-all flex flex-col gap-1.5">
+              <Scales size={18} weight="duotone" className="text-brand" aria-hidden="true" />
+              <p className="text-[0.85rem] font-semibold text-ink group-hover:text-brand transition-colors">VAT vs Turnover Tax Comparator</p>
+              <p className="text-[0.75rem] text-ink-muted">Compare effective tax burden and choose the right regime</p>
+            </a>
+            <a href="/tools/etims-checklist" className="border border-hairline rounded-lg p-4 group hover:border-ink/15 hover:shadow-sm transition-all flex flex-col gap-1.5">
+              <ListChecks size={18} weight="duotone" className="text-brand" aria-hidden="true" />
+              <p className="text-[0.85rem] font-semibold text-ink group-hover:text-brand transition-colors">eTIMS Compliance Checklist</p>
+              <p className="text-[0.75rem] text-ink-muted">Score your readiness for KRA eTIMS audits</p>
+            </a>
+            <a href="/tools/withholding-tax" className="border border-hairline rounded-lg p-4 group hover:border-ink/15 hover:shadow-sm transition-all flex flex-col gap-1.5">
+              <HandCoins size={18} weight="duotone" className="text-brand" aria-hidden="true" />
+              <p className="text-[0.85rem] font-semibold text-ink group-hover:text-brand transition-colors">Withholding Tax Calculator</p>
+              <p className="text-[0.75rem] text-ink-muted">Calculate correct WHT on contractor, landlord & supplier payments</p>
+            </a>
+            <a href="/tools/etims-penalty-calculator" className="border border-hairline rounded-lg p-4 group hover:border-ink/15 hover:shadow-sm transition-all flex flex-col gap-1.5">
+              <WarningCircle size={18} weight="duotone" className="text-brand" aria-hidden="true" />
+              <p className="text-[0.85rem] font-semibold text-ink group-hover:text-brand transition-colors">eTIMS Penalty Calculator</p>
+              <p className="text-[0.75rem] text-ink-muted">KES 50,000–500,000/mo in eTIMS non-compliance penalties</p>
+            </a>
+            <a href="/tools/amnesty-calculator" className="border border-hairline rounded-lg p-4 group hover:border-ink/15 hover:shadow-sm transition-all flex flex-col gap-1.5">
+              <WarningCircle size={18} weight="duotone" className="text-amber-600" aria-hidden="true" />
+              <p className="text-[0.85rem] font-semibold text-ink group-hover:text-amber-600 transition-colors">Tax Amnesty Savings Calculator <span className="text-[0.65rem] uppercase tracking-wider bg-amber-100 dark:bg-amber-900/60 text-amber-700 dark:text-amber-300 px-1.5 py-0.5 rounded ml-1">Deadline Dec 31</span></p>
+              <p className="text-[0.75rem] text-ink-muted">See how much you save under KRA&apos;s 2026 amnesty programme</p>
+            </a>
           </div>
         </section>
 

@@ -17,6 +17,7 @@ const articles: Resource[] = [
   { slug: "nil-returns-tax-amnesty", title: "Nil Returns Kenya 2026: File on iTax + Tax Amnesty" },
   { slug: "vat-for-startups-tech-businesses", title: "VAT for Startups and Tech Businesses in Kenya" },
   { slug: "vat-special-table-risks", title: "KRA VAT Special Table: Risks and How to Get Removed" },
+  { slug: "vat-rates-kenya", title: "VAT Rates in Kenya 2026 — Standard, Zero-Rated & Exempt" },
   { slug: "etims-invoicing-guide", title: "eTIMS Compliant Invoice Guide Kenya 2026" },
   { slug: "vat-auto-populated-return", title: "KRA Auto-Populated VAT Return Guide" },
   { slug: "input-vat-deduction-guide", title: "Input VAT Deduction Kenya 2026" },
@@ -58,7 +59,7 @@ export function ArticleGrid({ currentSlug }: { currentSlug?: string }) {
           <p className="text-[0.85rem] font-medium text-ink group-hover:text-brand transition-colors leading-snug">
             {a.title}
           </p>
-          <p className="text-[0.72rem] text-ink-muted/60 font-mono uppercase tracking-wider mt-2">Read Guide</p>
+          <p className="text-[0.72rem] text-ink-muted/75 font-mono uppercase tracking-wider mt-2">Read Guide</p>
         </a>
       ))}
     </div>

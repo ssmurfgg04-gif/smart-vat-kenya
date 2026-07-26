@@ -183,7 +183,7 @@ export default function VATRegistrationChecklistPage() {
                   </div>
                 </div>
                 <div className="border-t border-hairline pt-3 mt-1">
-                  <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/60 mb-1.5">Tips</p>
+                  <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/80 mb-1.5">Tips</p>
                   <ul className="space-y-1">
                     {["Ensure your KRA PIN is active and not deactivated.", "Your PIN certificate must match your current business name exactly.", "If you have changed your business name, update your PIN first on iTax."].map((tip) => (
                       <li key={tip} className="flex items-start gap-2 text-[0.82rem] text-ink-soft">
@@ -204,7 +204,7 @@ export default function VATRegistrationChecklistPage() {
                   </div>
                 </div>
                 <div className="border-t border-hairline pt-3 mt-1">
-                  <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/60 mb-1.5">Requirements</p>
+                  <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/80 mb-1.5">Requirements</p>
                   <ul className="space-y-1">
                     {["Both sides of the ID must be scanned and merged into one PDF.", "Passports: ensure the bio-data page and signature page are included.", "IDs must be valid — expired IDs will be rejected immediately.", "File size must be under 1MB per upload."].map((r) => (
                       <li key={r} className="flex items-start gap-2 text-[0.82rem] text-ink-soft">
@@ -225,7 +225,7 @@ export default function VATRegistrationChecklistPage() {
                   </div>
                 </div>
                 <div className="border-t border-hairline pt-3 mt-1">
-                  <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/60 mb-1.5">Tips</p>
+                  <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/80 mb-1.5">Tips</p>
                   <ul className="space-y-1">
                     {["Download the latest copy from e-Citizen — older PDFs may have expired.", "The business name on the certificate must match your KRA PIN name exactly.", "If your business is a branch of a foreign company, include the foreign registration cert too."].map((tip) => (
                       <li key={tip} className="flex items-start gap-2 text-[0.82rem] text-ink-soft">
@@ -246,7 +246,7 @@ export default function VATRegistrationChecklistPage() {
                   </div>
                 </div>
                 <div className="border-t border-hairline pt-3 mt-1">
-                  <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/60 mb-1.5">Tips</p>
+                  <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/80 mb-1.5">Tips</p>
                   <ul className="space-y-1">
                     {["Download your CR12 from e-Citizen (Business Registration Service).", "A CR12 older than 90 days will be rejected — get a fresh copy.", "Ensure all current directors are listed. KRA cross-checks against your registration cert.", "Sole proprietors and partnerships skip this — submit IDs instead."].map((tip) => (
                       <li key={tip} className="flex items-start gap-2 text-[0.82rem] text-ink-soft">
@@ -267,7 +267,7 @@ export default function VATRegistrationChecklistPage() {
                   </div>
                 </div>
                 <div className="border-t border-hairline pt-3 mt-1">
-                  <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/60 mb-1.5">Tips</p>
+                  <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/80 mb-1.5">Tips</p>
                   <ul className="space-y-1">
                     {["The deed must be signed and dated by all partners.", "Include the partnership registration certificate if available.", "If the deed is not in English, provide a certified translation."].map((tip) => (
                       <li key={tip} className="flex items-start gap-2 text-[0.82rem] text-ink-soft">
@@ -288,7 +288,7 @@ export default function VATRegistrationChecklistPage() {
                   </div>
                 </div>
                 <div className="border-t border-hairline pt-3 mt-1">
-                  <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/60 mb-1.5">Requirements</p>
+                  <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/80 mb-1.5">Requirements</p>
                   <ul className="space-y-1">
                     {["Provide: Bank name, branch, account number, and account name.", "The account name must match the business name or a director's name.", "A recent bank statement (last 3 months) is preferred as proof.", "Mobile money accounts (M-PESA business till) are not accepted as primary bank details."].map((r) => (
                       <li key={r} className="flex items-start gap-2 text-[0.82rem] text-ink-soft">
@@ -348,7 +348,7 @@ export default function VATRegistrationChecklistPage() {
                     </div>
                   </div>
                   <div className="border-t border-hairline pt-3 mt-1">
-                    <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/60 mb-1.5">Tips</p>
+                    <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/80 mb-1.5">Tips</p>
                     <ul className="space-y-1">
                       {section.tips.map((tip) => (
                         <li key={tip} className="flex items-start gap-2 text-[0.82rem] text-ink-soft">
@@ -376,8 +376,8 @@ export default function VATRegistrationChecklistPage() {
               {[
                 {
                   icon: <Gear size={18} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />,
-                  title: "eTIMS Onboarding Confirmation",
-                  body: "Register for eTIMS (Electronic Tax Invoice Management System) within 30 days of VAT approval. KRA will send you login credentials. Once onboarded, all your invoices must be generated through eTIMS or an integrated system.",
+title: "eTIMS Onboarding Confirmation",
+                   body: <>Register for{" "}<Link href="/resources/etims-onboarding-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS (Electronic Tax Invoice Management System)</Link>{" "}within 30 days of VAT approval. KRA will send you login credentials. Once onboarded, all your invoices must be generated through eTIMS or an integrated system.</>,
                 },
                 {
                   icon: <Gear size={18} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />,
@@ -386,13 +386,13 @@ export default function VATRegistrationChecklistPage() {
                 },
                 {
                   icon: <Gear size={18} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />,
-                  title: "Monthly Filing Calendar Setup",
-                  body: "VAT returns are due on or before the 20th of every month. Set up reminders in your calendar, accounting software, or with your agent. Late filing costs KES 10,000 per month plus 2% interest on any unpaid VAT.",
+title: "Monthly Filing Calendar Setup",
+                   body: <>VAT returns are due on or before the 20th of every month. See our{" "}<Link href="/resources/how-to-file-vat-return-on-itax" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT return filing guide</Link>{" "}for step-by-step instructions. Set up reminders in your calendar, accounting software, or with your agent. Late filing costs KES 10,000 per month plus 2% interest on any unpaid VAT.</>,
                 },
                 {
                   icon: <Gear size={18} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />,
-                  title: "KRA Paybill 572572 — VAT Payment Guidance",
-                  body: "All VAT payments to KRA are made via M-PESA Paybill 572572 (business number) or through bank transfer to KRA's collection account. Your account number on Paybill 572572 is your KRA PIN followed by the payment type code. For VAT, the format is: PIN000V (e.g., P0123456789V). Payments reflect on iTax within minutes.",
+                   title: "KRA Paybill 572572 — VAT Payment Guidance",
+                   body: <>All VAT payments to KRA are made via M-PESA Paybill 572572 (business number) or through bank transfer to KRA's collection account. See the{" "}<Link href="/resources/how-to-file-vat-return-on-itax#payment" className="text-brand underline underline-offset-2 hover:text-brand-hover">payment section in our filing guide</Link>{" "}for the exact M-PESA steps. Your account number on Paybill 572572 is your KRA PIN followed by the payment type code. For VAT, the format is: PIN000V (e.g., P0123456789V). Payments reflect on iTax within minutes.</>,
                 },
               ].map((step) => (
                 <div key={step.title} className="border border-hairline rounded-lg p-5 bg-canvas-alt">
@@ -414,7 +414,7 @@ export default function VATRegistrationChecklistPage() {
                   Don&apos;t Forget eTIMS
                 </p>
                 <p className="text-[0.83rem] text-[#8a6500] dark:text-[#ccaa33] leading-relaxed">
-                  KRA has been aggressively enforcing eTIMS compliance in 2026. Businesses that issue manual invoices after the 30-day eTIMS window face penalties of up to KES 100,000. Complete your eTIMS onboarding as soon as your VAT PIN is approved — not on the last day.
+                  KRA has been aggressively enforcing eTIMS compliance in 2026. Businesses that issue manual invoices after the 30-day eTIMS window face penalties of up to KES 100,000. See the{" "}<Link href="/resources/etims-penalty-50000-per-month-kenya" className="underline underline-offset-2 hover:text-[#ccaa33]">eTIMS penalty guide</Link>{" "}for full details. Complete your eTIMS onboarding as soon as your VAT PIN is approved — not on the last day.
                 </p>
               </div>
             </div>

@@ -87,14 +87,31 @@ const faqs = [
   },
 ]
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
+}
+
 export default function MonthlyVatFilingPage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": "https://smartvatkenya.co.ke/services/monthly-vat-filing#service",
     name: "Monthly VAT Filing Kenya",
     description:
       "Monthly iTax VAT return filing before the 20th KRA deadline. KES 3,500 per month. Avoids KES 10,000 late penalty.",
-    offers: { "@type": "Offer", price: "3500", priceCurrency: "KES" },
+    provider: { "@type": "Organization", name: "Smart VAT Kenya" },
+    offers: {
+      "@type": "Offer",
+      price: "3500",
+      priceCurrency: "KES",
+      availability: "https://schema.org/InStock",
+    },
   }
 
   const breadcrumbSchema = {
@@ -118,6 +135,8 @@ export default function MonthlyVatFilingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <Script id="faq-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-16">
@@ -129,11 +148,29 @@ export default function MonthlyVatFilingPage() {
             Monthly VAT Filing Kenya.{" "}
             <span className="text-canvas/70 font-normal">KES 3,500/mo. Filed before the 20th.</span>
           </h1>
-          <p className="text-[0.95rem] text-canvas/70 max-w-[50ch] leading-relaxed mb-8">
+          <p className="text-[0.95rem] text-canvas/70 max-w-[50ch] leading-relaxed mb-6">
             We file your iTax VAT return on the 17th every month — well before the KRA deadline.
             No more rushing, no more KES 10,000 late penalties. Just send us your invoices and
             we handle the rest.
           </p>
+          <div className="flex flex-wrap gap-2 mb-6" role="list" aria-label="Trust signals">
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <CheckCircle size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              M-PESA accepted
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <CheckCircle size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              No lock-in, cancel anytime
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <CalendarBlank size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              Deadline: 20th of each month
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <SealCheck size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              Registered KRA agent
+            </span>
+          </div>
           <a
             href={`${WA_BASE}?text=${WA_TEXT}`}
             target="_blank"
@@ -218,6 +255,29 @@ export default function MonthlyVatFilingPage() {
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+
+      {/* Mid-page CTA */}
+      <section className="bg-brand-muted px-6 lg:px-10 py-12">
+        <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <p className="font-display text-[1.1rem] font-semibold text-ink">
+              KES 3,500/month — filed before the 20th
+            </p>
+            <p className="text-[0.85rem] text-ink-muted mt-1">
+              No lock-in. Cancel anytime. We file on the 17th so you never miss the deadline.
+            </p>
+          </div>
+          <a
+            href={`${WA_BASE}?text=${WA_TEXT}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
+          >
+            Get started on WhatsApp
+            <ArrowRight size={14} weight="bold" aria-hidden="true" />
+          </a>
         </div>
       </section>
 

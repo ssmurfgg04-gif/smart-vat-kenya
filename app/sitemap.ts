@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'vat-for-startups-tech-businesses',
     'vat-labour-outsourcing-kenya',
     'vat-refund-guide-kenya',
+    'vat-rates-kenya',
     'vat-registration-checklist',
     'vat-special-table-risks',
     'vat-vs-turnover-tax',
@@ -83,5 +84,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     ...resourceUrls,
+    {
+      url: `${baseUrl}/tools/paye-calculator`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/tools/vat-vs-tot`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/tools/etims-checklist`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/tools/withholding-tax`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/tools/amnesty-calculator`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/tools/etims-penalty-calculator`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
   ]
 }

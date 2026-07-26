@@ -3,6 +3,7 @@ import Link from "next/link"
 import Script from "next/script"
 import { ArrowRight, Clock } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
+import { ResourceSearch } from "@/components/resource-search"
 
 export const metadata: Metadata = {
   title: "Kenya VAT Knowledge Base — Free KRA Guides for SMEs 2026",
@@ -516,61 +517,15 @@ export default function ResourcesPage() {
           </article>
         </section>
 
-        {/* 4-pillar grid */}
+        {/* Searchable grid */}
         <section aria-labelledby="all-guides-label">
           <p
             id="all-guides-label"
             className="font-mono text-[0.67rem] uppercase tracking-[0.18em] text-ink-muted mb-6"
           >
-            All 28 resources
+            All {rest.length + 1} resources
           </p>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">
-            {rest.map((pillar) => (
-              <article
-                key={pillar.slug}
-                className="border border-hairline rounded-lg p-6 flex flex-col hover:border-ink/15 hover:shadow-sm transition-all duration-200"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="font-mono text-[0.6rem] text-brand tracking-widest uppercase">
-                    Guide {pillar.number}
-                  </span>
-                  {pillar.tags.slice(0, 1).map((tag) => (
-                    <span
-                      key={tag}
-                      className="font-mono text-[0.58rem] uppercase tracking-widest bg-ink/5 text-ink-muted px-2 py-0.5 rounded-sm"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <h3 className="font-display text-[0.95rem] font-semibold text-ink leading-snug mb-3 flex-1 text-balance">
-                  <Link
-                    href={`/resources/${pillar.slug}`}
-                    className="hover:text-brand transition-colors"
-                  >
-                    {pillar.title}
-                  </Link>
-                </h3>
-                <p className="text-[0.8rem] text-ink-muted leading-relaxed mb-5 line-clamp-3">
-                  {pillar.bluf}
-                </p>
-                <div className="mt-auto flex items-center justify-between">
-                  <span className="flex items-center gap-1.5 text-[0.72rem] text-ink-muted">
-                    <Clock size={11} aria-hidden="true" />
-                    {formatReadTime(pillar.readTime)} read
-                  </span>
-                  <Link
-                    href={`/resources/${pillar.slug}`}
-                    className="inline-flex items-center gap-1.5 text-[0.78rem] font-semibold text-brand hover:text-brand-hover transition-colors"
-                  >
-                    Read the guide
-                    <ArrowRight size={12} weight="bold" aria-hidden="true" />
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
+          <ResourceSearch pillars={rest} />
         </section>
 
         {/* Newsletter + WhatsApp CTA */}

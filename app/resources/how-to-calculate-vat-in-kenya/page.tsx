@@ -368,7 +368,7 @@ export default function HowToCalculateVATPage() {
                   </div>
                 </div>
               </div>
-              <p className="text-[0.75rem] text-ink-muted/60 mt-4 text-center">
+              <p className="text-[0.75rem] text-ink-muted mt-4 text-center">
                 Results update instantly. This tool is for estimation only. Use our{" "}
                 <Link href="/tools" className="text-brand underline underline-offset-2 hover:text-brand-hover">full VAT tool suite</Link> for returns, invoices, and iTax reconciliation.
               </p>

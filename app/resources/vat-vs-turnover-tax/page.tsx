@@ -249,7 +249,9 @@ export default function VatVsTurnoverTaxPage() {
                 Value Added Tax (VAT) is a <strong className="text-ink">consumption tax</strong> levied on the supply of taxable goods and services in Kenya. The standard rate is <strong className="text-ink">16%</strong>, set under the Value Added Tax Act (Cap. 476). Unlike Turnover Tax, VAT is applied to the <strong className="text-ink">value added</strong> at each stage of production and distribution &mdash; not on total sales.
               </p>
               <p>
-                VAT registration is <strong className="text-ink">mandatory</strong> once your annual taxable turnover exceeds <strong className="text-ink">KES 5 million</strong> (the Finance Act 2025 proposed raising this to KES 8 million, but this has not yet taken effect). You may also register voluntarily if you are below the threshold but want to claim input VAT or issue VAT-compliant invoices for your B2B customers.
+                <Link href="/resources/how-to-register-for-vat-in-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT registration</Link> is <strong className="text-ink">mandatory</strong> once your annual taxable turnover exceeds <strong className="text-ink">KES 5 million</strong> (the Finance Act 2025 proposed raising this to KES 8 million, but this has not yet taken effect). You may also{" "}
+                <Link href="/resources/do-i-need-to-register-for-vat-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">register for VAT voluntarily</Link>{" "}
+                if you are below the threshold but want to claim input VAT or issue VAT-compliant invoices for your B2B customers.
               </p>
               <p>
                 Once registered, you must charge 16% VAT on your sales (output VAT), issue eTIMS-compliant tax invoices, and file monthly VAT returns on iTax by the <strong className="text-ink">20th of the following month</strong>. You can simultaneously claim credit for the VAT you paid on your business purchases (input VAT), with the difference remitted to KRA.

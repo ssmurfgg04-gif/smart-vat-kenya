@@ -45,6 +45,7 @@ export function Navbar() {
                 <Link
                   href={link.href}
                   prefetch={true}
+                  aria-current={active ? "page" : undefined}
                   className={`text-sm font-medium transition-colors ${
                     active
                       ? "text-ink border-b border-ink pb-0.5"
@@ -96,6 +97,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
+                aria-current={active ? "page" : undefined}
                 className={`block py-2.5 text-sm font-medium border-b border-hairline last:border-0 transition-colors ${
                   active ? "text-ink" : "text-ink-muted hover:text-ink"
                 }`}

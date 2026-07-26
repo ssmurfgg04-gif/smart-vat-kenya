@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
@@ -12,9 +13,25 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://smartvatkenya.co.ke/resources/kra-vat-audit-process" },
 }
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "KRA VAT Audit Process Kenya 2026: What to Expect and How to Prepare",
+  description:
+    "What happens during a KRA VAT audit in Kenya? Notice, document requests, site visits, assessment, objection, and appeal. How to prepare your records and avoid adverse findings. Complete guide for registered VAT persons.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-26",
+  dateModified: "2026-07-26",
+  url: "https://smartvatkenya.co.ke/resources/kra-vat-audit-process",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/kra-vat-audit-process",
+}
+
 export default function KraVatAuditProcessPage() {
   return (
     <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
+      <Script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Link href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources
       </Link>
@@ -70,16 +87,16 @@ export default function KraVatAuditProcessPage() {
           <p className="font-semibold text-ink mt-4">Common audit triggers include:</p>
           <ul className="space-y-2 mt-2">
             {[
-              { trigger: "Nil returns for 6 or more consecutive months", detail: "Filing nil returns while you are clearly operating raises immediate flags. KRA assumes you are making sales but not declaring them. If your business has genuinely had no activity, consider applying for VAT cancellation rather than filing indefinite nil returns." },
-              { trigger: "Input VAT claims far exceeding output VAT", detail: "If you regularly claim more input VAT than you collect in output VAT, KRA will question whether your purchases are genuine business expenses. A consistent credit position, especially without zero-rated supplies, invites a desk audit." },
-              { trigger: "Large or frequent VAT refund claims", detail: "Any refund application over KES 500,000 typically triggers a pre-refund audit. KRA wants to verify the claim before releasing cash. Even smaller refunds can trigger an audit if they are frequent or the pattern is unusual." },
-              { trigger: "Inconsistencies between eTIMS data and returns", detail: "eTIMS transmits every invoice you issue to KRA in real time. When your VAT return figures do not match the eTIMS data KRA already holds, the system automatically flags you. This is the most common trigger in 2026." },
-              { trigger: "Supplier on the Special Table", detail: "If you claim input VAT from a supplier on KRA's Special Table (suspected of issuing fake invoices), your claim may be disallowed and your entire return flagged for audit. The burden falls on you to prove the supply was genuine." },
-              { trigger: "Industry-wide audits", detail: "KRA periodically runs sector-wide audit programmes. Recent targets include construction, hospitality, transport, and digital services. If your industry is on KRA's list, expect a notice regardless of your individual compliance history." },
-              { trigger: "Random selection", detail: "KRA also selects a percentage of taxpayers randomly each year. Even if you have no red flags, you can still be selected. This is why ongoing preparedness matters." },
-              { trigger: "Tip-offs or third-party information", detail: "KRA receives intelligence from competitors, disgruntled employees, and other government agencies. Information from the KRA whistleblower programme can initiate an audit with no prior warning." },
-            ].map(({ trigger, detail }) => (
-              <li key={trigger} className="flex gap-3">
+              { key: "nil-returns", trigger: "Nil returns for 6 or more consecutive months", detail: "Filing nil returns while you are clearly operating raises immediate flags. KRA assumes you are making sales but not declaring them. If your business has genuinely had no activity, consider applying for VAT cancellation rather than filing indefinite nil returns." },
+              { key: "input-vat-claims", trigger: "Input VAT claims far exceeding output VAT", detail: "If you regularly claim more input VAT than you collect in output VAT, KRA will question whether your purchases are genuine business expenses. A consistent credit position, especially without zero-rated supplies, invites a desk audit." },
+              { key: "refund-claims", trigger: "Large or frequent VAT refund claims", detail: "Any refund application over KES 500,000 typically triggers a pre-refund audit. KRA wants to verify the claim before releasing cash. Even smaller refunds can trigger an audit if they are frequent or the pattern is unusual." },
+              { key: "etims-inconsistencies", trigger: "Inconsistencies between eTIMS data and returns", detail: "eTIMS transmits every invoice you issue to KRA in real time. When your VAT return figures do not match the eTIMS data KRA already holds, the system automatically flags you. This is the most common trigger in 2026." },
+              { key: "special-table", trigger: <><Link href="/resources/vat-special-table-risks" className="text-brand underline underline-offset-2 hover:text-brand-hover">Supplier on the Special Table</Link></>, detail: "If you claim input VAT from a supplier on KRA's Special Table (suspected of issuing fake invoices), your claim may be disallowed and your entire return flagged for audit. The burden falls on you to prove the supply was genuine." },
+              { key: "industry-audits", trigger: "Industry-wide audits", detail: "KRA periodically runs sector-wide audit programmes. Recent targets include construction, hospitality, transport, and digital services. If your industry is on KRA's list, expect a notice regardless of your individual compliance history." },
+              { key: "random-selection", trigger: "Random selection", detail: "KRA also selects a percentage of taxpayers randomly each year. Even if you have no red flags, you can still be selected. This is why ongoing preparedness matters." },
+              { key: "tip-offs", trigger: "Tip-offs or third-party information", detail: "KRA receives intelligence from competitors, disgruntled employees, and other government agencies. Information from the KRA whistleblower programme can initiate an audit with no prior warning." },
+            ].map(({ key, trigger, detail }) => (
+              <li key={key} className="flex gap-3">
                 <Warning size={14} className="text-amber-600 shrink-0 mt-1" />
                 <div>
                   <strong className="text-ink">{trigger}:</strong>{" "}
@@ -178,7 +195,7 @@ export default function KraVatAuditProcessPage() {
               { finding: "Disallowed input VAT", prevalence: "Very common", explanation: "KRA disallows input VAT where the supplier's eTIMS invoice was not transmitted, the supplier was on the Special Table, or the purchase was not wholly for business use. The disallowed amount is added back as tax due, plus penalties." },
               { finding: "Missing eTIMS invoices", prevalence: "Very common", explanation: "If you issued invoices outside eTIMS — even for cash sales — KRA treats those as undeclared sales. The eTIMS penalty of KES 50,000 per month may also apply separately." },
               { finding: "Incorrect apportionment", prevalence: "Common", explanation: "Businesses with mixed supplies (taxable and exempt) that failed to apportion input VAT correctly. Since the Finance Act 2025 removed the 90:10 rule, many businesses that previously claimed full input VAT now owe substantial adjustments." },
-              { finding: "Late filing penalties", prevalence: "Common", explanation: "KRA reviews whether all returns were filed on time. Late-filed returns attract a penalty of KES 10,000 per return (KES 20,000 for large taxpayers). Interest of 2% per month also applies on any unpaid tax." },
+              { finding: "Late filing penalties", prevalence: "Common", explanation: <>KRA reviews whether all returns were filed on time. Late-filed returns attract a penalty of KES 10,000 per return (KES 20,000 for large taxpayers). For a complete breakdown of all VAT-related penalties, see our{" "}<Link href="/resources/kra-vat-penalties-reference" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA VAT penalties reference</Link>. Interest of 2% per month also applies on any unpaid tax.</> },
               { finding: "Transfer pricing adjustments", prevalence: "Less common (large businesses)", explanation: "For related-party transactions, KRA may adjust prices to arm's length, resulting in additional output VAT or disallowed input VAT. This typically affects medium and large businesses." },
             ].map(({ finding, prevalence, explanation }) => (
               <div key={finding} className="border border-hairline rounded-lg p-4">

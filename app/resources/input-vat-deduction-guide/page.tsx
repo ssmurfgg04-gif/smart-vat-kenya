@@ -178,16 +178,17 @@ export default function InputVatPage() {
                 7 Conditions for Claiming Input VAT
               </h2>
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
-                <p>You must satisfy all of these conditions for KRA to allow your input VAT claim:</p>
+                <p>You must satisfy all of these conditions for KRA to allow your input VAT claim. For an overview tailored to early-stage and tech companies, see our{" "}
+                  <Link href="/resources/vat-for-startups-tech-businesses" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT guide for startups and tech businesses</Link>.</p>
                 <div className="space-y-3">
                   {[
                     { num: 1, condition: "You must be VAT-registered", detail: "Only businesses with active VAT registration can claim input VAT. If you are not registered, the VAT you pay on purchases is a cost, not a reclaimable tax." },
                     { num: 2, condition: "The purchase must be for business use", detail: "Personal purchases and non-business expenses do not qualify. If you use an item partly for business and partly personally, only the business-use portion is claimable." },
                     { num: 3, condition: "The purchase must be used for taxable supplies", detail: "If you make only exempt supplies (e.g., basic food items, medical services), you cannot claim input VAT. For mixed supplies (both taxable and exempt), you need apportionment." },
-                    { num: 4, condition: "You must have a valid eTIMS invoice", detail: "The invoice must be generated through eTIMS, contain your KRA PIN, and have been transmitted to KRA by the supplier. Manual invoices, receipts, or supplier statements are not acceptable." },
+                    { num: 4, condition: "You must have a valid eTIMS invoice", detail: <>The invoice must be generated through eTIMS, contain your KRA PIN, and have been transmitted to KRA by the supplier. See our{" "}<Link href="/resources/etims-invoicing-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS invoicing guide</Link>{" "}for required invoice fields. Manual invoices, receipts, or supplier statements are not acceptable.</> },
                     { num: 5, condition: "Your KRA PIN must appear on the invoice", detail: "If the supplier captured your PIN incorrectly or omitted it, the invoice will not appear in your auto-populated purchases CSV. You cannot claim input VAT on that invoice." },
                     { num: 6, condition: "The supplier must have declared the sale", detail: "The supplier must have included the invoice in their own VAT return. If they did not file or omitted your invoice, KRA will not allow your input VAT claim." },
-                    { num: 7, condition: "Claim within 6 months", detail: "The deduction must be claimed within 6 months after the end of the tax period of the supply or importation. After that, the claim window closes permanently." },
+                    { num: 7, condition: "Claim within 6 months", detail: <>The deduction must be claimed within 6 months after the end of the tax period of the supply or importation. After that, the claim window closes permanently. See our{" "}<Link href="/resources/how-to-file-vat-return-on-itax" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT return filing guide</Link>{" "}for how to enter input VAT in your monthly return.</> },
                   ].map(({ num, condition, detail }) => (
                     <div key={num} className="flex gap-3">
                       <span className="bg-brand/10 text-brand rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">{num}</span>
@@ -207,7 +208,9 @@ export default function InputVatPage() {
                 Prohibited Input VAT Claims
               </h2>
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
-                <p>KRA specifically prohibits input VAT deduction on these categories:</p>
+                <p>KRA specifically prohibits input VAT deduction on these categories. Additionally, if a supplier appears on KRA's{" "}
+                  <Link href="/resources/vat-special-table-risks" className="text-brand underline underline-offset-2 hover:text-brand-hover">Special Table</Link>{" "}
+                  of high-risk taxpayers, any input VAT claimed from that supplier may be disallowed on audit.</p>
                 <div className="space-y-3">
                   {[
                     { category: "Passenger vehicles", detail: "Input VAT on passenger cars (saloon cars, SUVs, station wagons) is not deductible unless you are in the business of selling or hiring vehicles. Utility vehicles like pick-ups and delivery vans used solely for business may qualify." },

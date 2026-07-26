@@ -11,6 +11,8 @@ import {
   CurrencyDollar,
   SealCheck,
 } from "@phosphor-icons/react/dist/ssr"
+import { Testimonials } from "@/components/testimonials"
+import { NewsletterSignup } from "@/components/newsletter-signup"
 
 export const metadata: Metadata = {
   title: "VAT Registration Services Kenya | Pricing | KRA VAT Filing",
@@ -184,6 +186,20 @@ export default function ServicesPage() {
             Every service has a fixed price you can see before you even message us.
             No quoting. No negotiation. No surprises.
           </p>
+          <div className="flex flex-wrap gap-2 mt-6" role="list" aria-label="Trust signals">
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <CheckCircle size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              M-PESA accepted
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <CheckCircle size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              No hidden costs
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <SealCheck size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              Registered KRA agent
+            </span>
+          </div>
         </div>
       </div>
 
@@ -353,6 +369,13 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="bg-canvas-alt px-6 lg:px-10 py-16">
+        <div className="max-w-[1400px] mx-auto">
+          <Testimonials />
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-canvas px-6 lg:px-10 py-16">
         <div className="max-w-[1400px] mx-auto border-t border-hairline pt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
@@ -381,6 +404,13 @@ export default function ServicesPage() {
               How it works
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="bg-canvas-alt px-6 lg:px-10 py-16">
+        <div className="max-w-[1400px] mx-auto">
+          <NewsletterSignup />
         </div>
       </section>
     </>

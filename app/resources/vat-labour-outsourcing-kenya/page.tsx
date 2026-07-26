@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
@@ -12,6 +13,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://smartvatkenya.co.ke/resources/vat-labour-outsourcing-kenya",
   },
+}
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "VAT on Labour Outsourcing and Staff Costs in Kenya 2026",
+  description:
+    "Finance Act 2026 introduced Section 13(5A) of the VAT Act — outsourced employee salaries and statutory deductions are now disbursements not subject to VAT. Only the service fee is taxable at 16%. Guide for HR firms, security companies, EOR providers, and businesses that outsource staff.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-25",
+  dateModified: "2026-07-25",
+  url: "https://smartvatkenya.co.ke/resources/vat-labour-outsourcing-kenya",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/vat-labour-outsourcing-kenya",
 }
 
 const faqs = [
@@ -37,9 +52,23 @@ const faqs = [
   },
 ]
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+}
+
 export default function VatLabourOutsourcingPage() {
   return (
     <>
+      <Script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <Script id="faq-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
         <Link href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Resources
@@ -61,10 +90,10 @@ export default function VatLabourOutsourcingPage() {
 
         <div className="space-y-5 text-[0.9rem] text-ink-soft leading-[1.75]">
           <p>
-            The Finance Act 2026 introduced <strong className="text-ink">Section 13(5A)</strong> into the VAT Act, one of the most welcome changes for Kenya&apos;s outsourcing and staffing industry. From <strong className="text-ink">1 July 2026</strong>, employee costs — salaries, wages, NSSF, SHIF, NITA, housing levy — paid through outsourcing providers are deemed <strong className="text-ink">disbursements</strong> and excluded from the taxable value. Only the service fee or management margin attracts 16% VAT.
+            The <Link href="/resources/finance-act-vat-changes-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026</Link> introduced <strong className="text-ink">Section 13(5A)</strong> into the VAT Act, one of the most welcome changes for Kenya&apos;s outsourcing and staffing industry. From <strong className="text-ink">1 July 2026</strong>, employee costs — salaries, wages, NSSF, SHIF, NITA, housing levy — paid through outsourcing providers are deemed <strong className="text-ink">disbursements</strong> and excluded from the taxable value. Only the service fee or management margin attracts 16% VAT.
           </p>
           <p>
-            This guide explains the change, which sectors benefit, how to restructure contracts, and what it means for your input VAT recovery.
+            This guide explains the change, which sectors benefit, how to restructure contracts, and what it means for your <Link href="/resources/input-vat-deduction-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">input VAT recovery</Link>.
           </p>
 
           <div className="border border-amber-200 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-800/40 rounded-lg p-4 flex items-start gap-3">
@@ -232,9 +261,14 @@ export default function VatLabourOutsourcingPage() {
           </p>
 
           {/* Section 5 — Input VAT */}
-          <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
-            Input VAT Implications
-          </h2>
+          <p>
+            If your clients are appointed withholding VAT agents, see our{" "}
+            <Link href="/resources/withholding-vat-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">withholding VAT guide</Link>{" "}
+            for how the 2% deduction interacts with outsourced staff invoices.
+          </p>
+            <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
+              Input VAT Implications
+            </h2>
           <div className="overflow-x-auto">
             <table className="w-full text-[0.83rem] border-collapse">
               <thead>
@@ -268,7 +302,7 @@ export default function VatLabourOutsourcingPage() {
               <strong className="text-ink">Review and restructure contracts</strong> — Service Level Agreements must clearly distinguish the service fee from salary disbursements. Vague contracts risk reclassification by KRA.
             </li>
             <li className="text-ink-soft">
-              <strong className="text-ink">Update invoicing</strong> — Invoices must itemise employee costs (as disbursements) separately from the service fee. Use eTIMS-compliant invoices.
+              <strong className="text-ink">Update invoicing</strong> — Invoices must itemise employee costs (as disbursements) separately from the service fee. Use <Link href="/resources/etims-invoicing-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS-compliant invoices</Link>.
             </li>
             <li className="text-ink-soft">
               <strong className="text-ink">Classify correctly</strong> — Service contracts (e.g., a consultancy delivering a project) remain fully taxable. Only genuine labour outsourcing contracts qualify for the disbursement treatment.

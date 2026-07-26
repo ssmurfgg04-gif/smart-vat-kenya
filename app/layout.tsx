@@ -396,10 +396,80 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="en-KE" href="https://smartvatkenya.co.ke" />
         <link rel="alternate" hrefLang="x-default" href="https://smartvatkenya.co.ke" />
 
-        {/* DNS prefetch for external resources */}
+        {/* Preconnect to critical third-party origins */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="dns-prefetch" href="//wa.me" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-        <link rel="preconnect" href="https://wa.me" />
+
+        {/* Speculation Rules — instant prefetch on hover for key pages */}
+        <script type="speculationrules">
+          {JSON.stringify({
+            prefetch: [
+              {
+                source: "list",
+                url: [
+                  "/tools",
+                  "/resources",
+                  "/services",
+                  "/resources/how-to-register-for-vat-in-kenya",
+                  "/resources/kra-penalty-for-late-vat-filing",
+                  "/resources/how-to-calculate-vat-in-kenya",
+                ],
+                requires: ["anonymous-client-ip-when-cross-origin"],
+              },
+            ],
+          })}
+        </script>
+
+        {/* Critical CSS inlined for instant hero rendering — main CSS loads in parallel */}
+        <style>{`
+          .bg-canvas-dark { background-color: #1b2a3b; }
+          .bg-canvas { background-color: #faf8f3; }
+          .text-canvas { color: #faf8f3; }
+          .text-canvas\\/80 { color: rgba(250, 248, 243, 0.8); }
+          .text-canvas\\/65 { color: rgba(250, 248, 243, 0.65); }
+          .text-canvas\\/70 { color: rgba(250, 248, 243, 0.7); }
+          .text-canvas\\/60 { color: rgba(250, 248, 243, 0.6); }
+          .text-brand { color: #c8372d; }
+          .text-ink { color: #141311; }
+          .border-canvas\\/25 { border-color: rgba(250, 248, 243, 0.25); }
+          .border-canvas\\/15 { border-color: rgba(250, 248, 243, 0.15); }
+          .font-semibold { font-weight: 600; }
+          .font-mono { font-family: ui-monospace, SF Mono, Cascadia Code, Fira Mono, monospace; }
+          .tracking-tight { letter-spacing: -0.025em; }
+          .text-balance { text-wrap: balance; }
+          .text-pretty { text-wrap: pretty; }
+          .overflow-hidden { overflow: hidden; }
+          .relative { position: relative; }
+          .absolute { position: absolute; }
+          .inset-0 { inset: 0; }
+          .pointer-events-none { pointer-events: none; }
+          .z-0 { z-index: 0; }
+          .z-10 { z-index: 10; }
+          .z-50 { z-index: 50; }
+          .max-w-\\[52ch\\] { max-width: 52ch; }
+          .max-w-\\[1400px\\] { max-width: 1400px; }
+          .mx-auto { margin-inline: auto; }
+          .px-6 { padding-inline: 1.5rem; }
+          .pt-12 { padding-top: 3rem; }
+          .pb-20 { padding-bottom: 5rem; }
+          .gap-12 { gap: 3rem; }
+          .items-start { align-items: flex-start; }
+          .leading-\\[1\\.05\\] { line-height: 1.05; }
+          .leading-relaxed { line-height: 1.625; }
+          .mb-6 { margin-bottom: 1.5rem; }
+          .mb-10 { margin-bottom: 2.5rem; }
+          .hidden { display: none; }
+          .self-start { align-self: flex-start; }
+          @media (min-width: 1024px) {
+            .lg\\:block { display: block; }
+            .lg\\:grid-cols-\\[1fr_420px\\] { grid-template-columns: 1fr 420px; }
+            .lg\\:gap-20 { gap: 5rem; }
+            .lg\\:px-10 { padding-inline: 2.5rem; }
+            .lg\\:pt-16 { padding-top: 4rem; }
+            .lg\\:pb-24 { padding-bottom: 6rem; }
+          }
+        `}</style>
         
         <Script
           id="local-business-schema"

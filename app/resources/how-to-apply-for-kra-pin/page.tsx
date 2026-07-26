@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Globe, Buildings, DeviceMobile, IdentificationCard, Users } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
@@ -12,9 +13,25 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://smartvatkenya.co.ke/resources/how-to-apply-for-kra-pin" },
 }
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "How to Apply for a KRA PIN in Kenya 2026: Online & Offline Guide",
+  description:
+    "Step-by-step guide to applying for a KRA PIN in Kenya. Apply online via iTax, at Huduma Centre, or through the KRA mobile app. Documents required, processing time, and how to check your PIN status.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-26",
+  dateModified: "2026-07-26",
+  url: "https://smartvatkenya.co.ke/resources/how-to-apply-for-kra-pin",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/how-to-apply-for-kra-pin",
+}
+
 export default function KraPinPost() {
   return (
     <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
+      <Script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Link href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources
       </Link>
@@ -275,6 +292,11 @@ export default function KraPinPost() {
             <strong> Non-Individual</strong> during registration and choose your business structure
             from the drop-down menu. The CR12 document is the most common requirement — it lists
             your company directors, shareholders, and registered address.
+          </p>
+          <p>
+            Once your KRA PIN is issued, the next step is{" "}
+            <Link href="/resources/how-to-register-for-vat-in-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT registration</Link>{" "}
+            if your annual turnover exceeds KES 5 million or you supply VAT-registered customers.
           </p>
 
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">KRA PIN for Non-Residents</h2>

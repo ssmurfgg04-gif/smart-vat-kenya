@@ -280,11 +280,25 @@ export default function VATRegistrationMombasaPage() {
               No need to visit an office. Send your documents over WhatsApp and we handle everything on KRA iTax.
             </p>
           </div>
-          <p className="text-[0.95rem] text-canvas/70 max-w-[50ch] leading-relaxed mb-8">
+          <p className="text-[0.95rem] text-canvas/70 max-w-[50ch] leading-relaxed mb-6">
             Professional KRA VAT registration at a flat fee — fully remote, M-PESA accepted, 
             and delivered to your phone in 1–3 working days. Serving Mombasa CBD, Nyali, 
             Bamburi, Changamwe, and the entire Coast.
           </p>
+          <div className="flex flex-wrap gap-2 mb-6" role="list" aria-label="Trust signals">
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <CheckCircle size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              M-PESA accepted
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <CheckCircle size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              No hidden costs
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <SealCheck size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              Registered KRA agent
+            </span>
+          </div>
           <a
             href={`${WA_BASE}?text=${WA_TEXT}`}
             target="_blank"
@@ -431,6 +445,29 @@ export default function VATRegistrationMombasaPage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Mid-page CTA */}
+      <section className="bg-brand-muted px-6 lg:px-10 py-12">
+        <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <p className="font-display text-[1.1rem] font-semibold text-ink">
+              KES 5,000 — VAT registration for Mombasa
+            </p>
+            <p className="text-[0.85rem] text-ink-muted mt-1">
+              Fully remote via WhatsApp. No office visit needed. Done in 1–3 working days.
+            </p>
+          </div>
+          <a
+            href={`${WA_BASE}?text=${WA_TEXT}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
+          >
+            Get started on WhatsApp
+            <ArrowRight size={14} weight="bold" aria-hidden="true" />
+          </a>
         </div>
       </section>
 

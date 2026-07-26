@@ -5,7 +5,7 @@ import { Download, FileText, ArrowUpRight, ChatCircle, SealCheck } from "@phosph
 import { KRA_FORMS } from "@/lib/forms"
 
 export const metadata: Metadata = {
-  title: "Official KRA VAT Guides & iTax Manuals — Free PDF Downloads",
+  title: "Download KRA VAT Forms, eTIMS & iTax Manuals Free PDF | Smart VAT Kenya",
   description:
     "KRA no longer uses paper forms — everything is on the iTax portal. Download the official VAT and eTIMS guides and manuals, or let our experts handle the portal for you.",
   keywords: [

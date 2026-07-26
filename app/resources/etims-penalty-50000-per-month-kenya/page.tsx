@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
@@ -12,9 +13,25 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://smartvatkenya.co.ke/resources/etims-penalty-50000-per-month-kenya" },
 }
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "eTIMS Penalty KES 50,000 Per Month in Kenya: How to Avoid the Fine",
+  description:
+    "KRA charges KES 50,000 per month for eTIMS non-compliance — separate from VAT penalties. Learn what triggers it, how to check your status, and how to avoid the fine.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-25",
+  dateModified: "2026-07-25",
+  url: "https://smartvatkenya.co.ke/resources/etims-penalty-50000-per-month-kenya",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/etims-penalty-50000-per-month-kenya",
+}
+
 export default function EtimsPenaltyPost() {
   return (
     <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
+      <Script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Link href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources
       </Link>

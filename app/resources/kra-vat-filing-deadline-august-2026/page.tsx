@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
@@ -12,9 +13,25 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://smartvatkenya.co.ke/resources/kra-vat-filing-deadline-august-2026" },
 }
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "KRA VAT Filing Deadline August 2026: Don't Miss the 20th",
+  description:
+    "The KRA VAT return is due by the 20th of every month. Late filing costs KES 10,000 + 5% of tax due + 1%/month interest. Here is exactly what to file, how to avoid penalties, and what to do if you missed the deadline.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-25",
+  dateModified: "2026-07-25",
+  url: "https://smartvatkenya.co.ke/resources/kra-vat-filing-deadline-august-2026",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/kra-vat-filing-deadline-august-2026",
+}
+
 export default function DeadlinePost() {
   return (
     <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
+      <Script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Link href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources
       </Link>
@@ -70,7 +87,11 @@ export default function DeadlinePost() {
             Skipping it costs KES 10,000.
           </p>
 
-          <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">How to File on iTax</h2>
+          <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">How to <Link href="/resources/how-to-file-vat-return-on-itax" className="text-brand underline underline-offset-2 hover:text-brand-hover">File on iTax</Link></h2>
+          <p>
+            For a complete walkthrough with screenshots, see our{" "}
+            <Link href="/resources/how-to-file-vat-return-on-itax" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT return filing guide</Link>.
+          </p>
           <ol className="space-y-2">
             {[
               "Log in to itax.kra.go.ke with your KRA PIN and password.",
@@ -120,7 +141,8 @@ export default function DeadlinePost() {
 
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">Already Missed a Deadline?</h2>
           <p>
-            You can apply for a KRA penalty waiver. The process requires a written application
+            You can apply for a KRA{" "}
+            <Link href="/resources/nil-returns-tax-amnesty" className="text-brand underline underline-offset-2 hover:text-brand-hover">penalty waiver</Link>. The process requires a written application
             explaining the cause of non-compliance, and KRA may waive the penalties if you
             demonstrate reasonable cause. We handle this for KES 4,000 per application.
           </p>

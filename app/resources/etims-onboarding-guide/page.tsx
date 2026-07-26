@@ -320,9 +320,9 @@ export default function ETIMSOnboardingPage() {
             </div>
             <div className="mt-7 border border-hairline rounded-lg p-5 bg-canvas-alt">
               <p className="font-semibold text-ink text-[0.88rem] mb-2">Not sure which one you need?</p>
-              <p className="text-[0.84rem] text-ink-soft leading-relaxed mb-3">
-                Most small businesses should start with eTIMS Lite because it is free and requires no installation. If you outgrow it, KRA allows you to upgrade to eTIMS Client or VSCU later. Smart VAT Kenya can help you choose the right solution and complete the registration.
-              </p>
+                <p className="text-[0.84rem] text-ink-soft leading-relaxed mb-3">
+                  Most small businesses should start with eTIMS Lite because it is free and requires no installation. If you outgrow it, KRA allows you to upgrade to eTIMS Client or VSCU later. See our{" "}<Link href="/resources/etims-invoicing-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">invoicing guide</Link>{" "}for mandatory invoice fields and QR code verification. Smart VAT Kenya can help you choose the right solution and complete the registration.
+                </p>
               <a
                 href="https://wa.me/254721725958?text=I%20need%20help%20choosing%20the%20right%20eTIMS%20solution%20for%20my%20business"
                 target="_blank" rel="noopener noreferrer"
@@ -499,6 +499,10 @@ export default function ETIMSOnboardingPage() {
                   <strong className="text-ink">Input VAT claims blocked:</strong> Even if you are VAT-registered and file your returns on time, if your purchases are from suppliers who are not using eTIMS, you cannot claim input VAT on those purchases. This creates a cascading compliance pressure through the entire supply chain. See our{" "}
                   <Link href="/resources/how-to-register-for-vat-in-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                     VAT registration guide
+                  </Link>{" "}
+                  and our{" "}
+                  <Link href="/resources/etims-penalty-50000-per-month-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                    eTIMS penalty guide
                   </Link>{" "}
                   for details.
                 </p>

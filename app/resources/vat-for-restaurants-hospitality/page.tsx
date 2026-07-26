@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info, ForkKnife } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
@@ -12,9 +13,61 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://smartvatkenya.co.ke/resources/vat-for-restaurants-hospitality" },
 }
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "VAT for Restaurants & Hospitality in Kenya 2026: Complete Guide",
+  description:
+    "Complete VAT guide for Kenyan restaurants, hotels, and hospitality businesses. Standard rate 16%, eTIMS invoicing for food service, input VAT on supplies, and KRA compliance requirements.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-26",
+  dateModified: "2026-07-26",
+  url: "https://smartvatkenya.co.ke/resources/vat-for-restaurants-hospitality",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/vat-for-restaurants-hospitality",
+}
+
+const faqs = [
+  {
+    q: "Do small food kiosks and takeaways have to charge VAT?",
+    a: "Only if their annual turnover exceeds KES 5 million. If you run a small kiosk or takeaway below this threshold, you are not required to register for VAT or charge it to customers. However, you also cannot claim input VAT on your ingredients or supplies.",
+  },
+  {
+    q: "Can I claim input VAT on food ingredients bought from the market?",
+    a: "Only if you buy from a VAT-registered supplier who issues an eTIMS-compliant invoice. Purchases from unregistered farmers or informal traders carry no VAT and cannot be claimed. Whenever possible, source from registered wholesalers.",
+  },
+  {
+    q: "Is the service charge on a restaurant bill subject to VAT?",
+    a: "Yes — if the service charge is compulsory (mandatory for all customers or groups above a certain size), it forms part of the taxable value and VAT at 16% must be collected on it. Only genuinely voluntary tips given directly to staff are exempt from VAT.",
+  },
+  {
+    q: "Do delivery platforms like Uber Eats charge VAT?",
+    a: "Yes. If you are VAT-registered, your sales through delivery platforms are subject to VAT at 16%. The delivery fee charged to the customer is also part of the taxable supply. The platform's commission to you is a separate supply on which you can claim input VAT if the platform issues an eTIMS invoice.",
+  },
+  {
+    q: "What happens if I do not register for eTIMS as a restaurant?",
+    a: "KRA will impose a penalty of KES 50,000 per month for each month you are non-compliant. This is separate from and in addition to late VAT filing penalties. KRA has been actively auditing the hospitality sector for eTIMS compliance since 2025.",
+  },
+]
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+}
+
 export default function VatForRestaurantsHospitality() {
   return (
-    <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
+    <>
+      <Script id="faq-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
+      <Script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Link href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources
       </Link>
@@ -59,7 +112,7 @@ export default function VatForRestaurantsHospitality() {
           </h3>
           <p>
             As of 2026, any business whose annual taxable turnover exceeds or is expected to exceed
-            <strong> KES 5 million</strong> must register for VAT. This includes revenue from:
+            <strong> KES 5 million</strong> must <Link href="/resources/do-i-need-to-register-for-vat-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">register for VAT</Link>. This includes revenue from:
           </p>
           <ul className="space-y-1.5">
             {[
@@ -169,8 +222,7 @@ export default function VatForRestaurantsHospitality() {
             eTIMS for Restaurants: Mandatory Electronic Invoicing
           </h2>
           <p>
-            Every VAT-registered restaurant and hospitality business in Kenya must issue eTIMS-compliant
-            invoices for every sale — including cash sales, card payments, and mobile money transactions.
+            Every VAT-registered restaurant and hospitality business in Kenya must issue <Link href="/resources/etims-invoicing-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS-compliant invoices</Link> for every sale — including cash sales, card payments, and mobile money transactions.
             This is one of the most significant compliance requirements introduced in recent years, and
             non-compliance attracts a penalty of <strong>KES 50,000 per month</strong>.
           </p>
@@ -203,6 +255,10 @@ export default function VatForRestaurantsHospitality() {
             invoices manually. However, for high-volume restaurants, manual entry on every table bill is
             impractical and error-prone.
           </p>
+          <p>
+            For a step-by-step guide to setting up and activating your eTIMS account, see our{" "}
+            <Link href="/resources/etims-onboarding-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS onboarding guide</Link>.
+          </p>
           <h3 className="font-display text-[1rem] font-semibold text-ink mt-6 mb-2">
             eTIMS for Takeaway and Delivery Orders
           </h3>
@@ -217,8 +273,7 @@ export default function VatForRestaurantsHospitality() {
             Input VAT Claims for Hospitality Businesses
           </h2>
           <p>
-            One of the primary benefits of VAT registration is the ability to reclaim input VAT on
-            purchases directly attributable to your taxable supplies. For restaurants and hotels, this
+            One of the primary benefits of VAT registration is the ability to reclaim <Link href="/resources/input-vat-deduction-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">input VAT on purchases</Link> directly attributable to your taxable supplies. For restaurants and hotels, this
             can represent a significant recovery — often offsetting 60-80% of the output VAT collected.
           </p>
           <h3 className="font-display text-[1rem] font-semibold text-ink mt-6 mb-2">
@@ -381,28 +436,7 @@ export default function VatForRestaurantsHospitality() {
 
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">Frequently Asked Questions</h2>
           <div className="space-y-4">
-            {[
-              {
-                q: "Do small food kiosks and takeaways have to charge VAT?",
-                a: "Only if their annual turnover exceeds KES 5 million. If you run a small kiosk or takeaway below this threshold, you are not required to register for VAT or charge it to customers. However, you also cannot claim input VAT on your ingredients or supplies.",
-              },
-              {
-                q: "Can I claim input VAT on food ingredients bought from the market?",
-                a: "Only if you buy from a VAT-registered supplier who issues an eTIMS-compliant invoice. Purchases from unregistered farmers or informal traders carry no VAT and cannot be claimed. Whenever possible, source from registered wholesalers.",
-              },
-              {
-                q: "Is the service charge on a restaurant bill subject to VAT?",
-                a: "Yes — if the service charge is compulsory (mandatory for all customers or groups above a certain size), it forms part of the taxable value and VAT at 16% must be collected on it. Only genuinely voluntary tips given directly to staff are exempt from VAT.",
-              },
-              {
-                q: "Do delivery platforms like Uber Eats charge VAT?",
-                a: "Yes. If you are VAT-registered, your sales through delivery platforms are subject to VAT at 16%. The delivery fee charged to the customer is also part of the taxable supply. The platform's commission to you is a separate supply on which you can claim input VAT if the platform issues an eTIMS invoice.",
-              },
-              {
-                q: "What happens if I do not register for eTIMS as a restaurant?",
-                a: "KRA will impose a penalty of KES 50,000 per month for each month you are non-compliant. This is separate from and in addition to late VAT filing penalties. KRA has been actively auditing the hospitality sector for eTIMS compliance since 2025.",
-              },
-            ].map(({ q, a }) => (
+            {faqs.map(({ q, a }) => (
               <div key={q}>
                 <p className="font-semibold text-ink text-[0.9rem]">{q}</p>
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">{a}</p>
@@ -459,5 +493,6 @@ export default function VatForRestaurantsHospitality() {
         <NewsletterSignup />
       </div>
     </div>
+    </>
   )
 }

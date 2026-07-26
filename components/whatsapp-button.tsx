@@ -5,7 +5,7 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Ask about VAT registration on WhatsApp — +254 721 725 958"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5b] text-white font-semibold text-sm px-4 py-3 rounded-full shadow-lg transition-colors active:scale-[0.98]"
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#128C7E] hover:bg-[#0e6d5c] text-white font-semibold text-sm px-4 py-3 rounded-full shadow-lg transition-colors active:scale-[0.98]"
     >
       {/* WhatsApp logo SVG */}
       <svg

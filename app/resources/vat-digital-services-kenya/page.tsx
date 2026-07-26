@@ -299,7 +299,10 @@ export default function DigitalServicesPage() {
               </h2>
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
                 <p>
-                  If you run a Kenyan business selling digital services, here is what compliance looks like:
+                  If you run a Kenyan business selling digital services, here is what compliance looks like.
+                  For fintech-specific rules covering digital payments, merchant acquiring, and settlement services,
+                  see our{" "}
+                  <Link href="/resources/vat-fintech-digital-payments-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT for fintech and digital payments guide</Link>.
                 </p>
                 <ol className="space-y-3 list-decimal list-inside">
                   <li className="text-ink-soft">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
@@ -12,9 +13,25 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://smartvatkenya.co.ke/resources/vat-for-importers-kenya" },
 }
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "VAT for Importers in Kenya 2026: Import VAT, Customs & Compliance",
+  description:
+    "Complete guide to VAT on imports into Kenya. How import VAT (16%) is charged at customs, SIMA system, M-PESA and bank payments at entry points, claiming input VAT on imports, and eTIMS for importers.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-26",
+  dateModified: "2026-07-26",
+  url: "https://smartvatkenya.co.ke/resources/vat-for-importers-kenya",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/vat-for-importers-kenya",
+}
+
 export default function VatForImportersKenyaPost() {
   return (
     <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
+      <Script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Link href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources
       </Link>
@@ -87,7 +104,9 @@ export default function VatForImportersKenyaPost() {
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">Calculating Import VAT: Step-by-Step</h2>
           <p>
             Import VAT is calculated on the <strong>cumulative</strong> value of the goods after adding customs
-            duty and other statutory levies. The formula is:
+            duty and other statutory levies. For a general overview of how VAT is computed, see our{" "}
+            <Link href="/resources/how-to-calculate-vat-in-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">how to calculate VAT in Kenya guide</Link>.
+            The formula is:
           </p>
           <div className="bg-ink/5 dark:bg-canvas-muted rounded-lg p-4 font-mono text-[0.85rem]">
             <p className="mb-1"><strong>Import VAT = 16% × (CIF Value + Import Duty + IDF + RDL + Other Levies)</strong></p>
@@ -199,7 +218,8 @@ export default function VatForImportersKenyaPost() {
 
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">Claiming Input VAT on Imports</h2>
           <p>
-            The import VAT you pay at customs is recoverable as input VAT — provided you meet the
+            The import VAT you pay at customs is recoverable as{" "}
+            <Link href="/resources/input-vat-deduction-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">input VAT</Link> — provided you meet the
             conditions under Section 17 of the VAT Act, 2013.
           </p>
           <h3 className="font-display text-[1rem] font-semibold text-ink mt-5 mb-2">Conditions for Deduction</h3>

@@ -58,7 +58,7 @@ export function NewsletterSignup() {
           Subscribe
         </button>
       </div>
-      <p className="text-[0.72rem] text-ink-muted/60 mt-2">No spam. Unsubscribe anytime.</p>
+      <p className="text-[0.72rem] text-ink-muted/80 mt-2">No spam. Unsubscribe anytime.</p>
     </form>
   )
 }

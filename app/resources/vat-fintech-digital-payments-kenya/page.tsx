@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
@@ -12,6 +13,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://smartvatkenya.co.ke/resources/vat-fintech-digital-payments-kenya",
   },
+}
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "VAT on Fintech and Digital Payments in Kenya 2026",
+  description:
+    "Finance Act 2026 made payment processing, gateway, and merchant acquisition services taxable at 16% VAT from 1 July 2026. Guide covering M-Pesa merchant fees, Pesapal, iPay, Flutterwave, and all digital payment VAT changes.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-25",
+  dateModified: "2026-07-25",
+  url: "https://smartvatkenya.co.ke/resources/vat-fintech-digital-payments-kenya",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/vat-fintech-digital-payments-kenya",
 }
 
 const faqs = [
@@ -37,9 +52,23 @@ const faqs = [
   },
 ]
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+}
+
 export default function VatFintechPage() {
   return (
     <>
+      <Script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <Script id="faq-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
         <Link href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Resources
@@ -61,10 +90,14 @@ export default function VatFintechPage() {
 
         <div className="space-y-5 text-[0.9rem] text-ink-soft leading-[1.75]">
           <p>
-            The Finance Act 2026 made one of the most significant changes to Kenya&apos;s VAT landscape in years: digital payment processing, gateway, merchant acquiring, settlement, and aggregation services are now subject to <strong className="text-ink">16% VAT</strong> effective <strong className="text-ink">1 July 2026</strong>. If your business uses M-Pesa till numbers, Pesapal, iPay, Flutterwave, or any payment gateway, the fees you pay just got 16% more expensive — and the compliance landscape has shifted.
+            The <Link href="/resources/finance-act-vat-changes-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026</Link> made one of the most significant changes to Kenya&apos;s VAT landscape in years: digital payment processing, gateway, merchant acquiring, settlement, and aggregation services are now subject to <strong className="text-ink">16% VAT</strong> effective <strong className="text-ink">1 July 2026</strong>. If your business uses M-Pesa till numbers, Pesapal, iPay, Flutterwave, or any payment gateway, the fees you pay just got 16% more expensive — and the compliance landscape has shifted.
           </p>
           <p>
             This guide explains exactly what changed, which services are affected, what remains exempt, and how to handle input VAT recovery on payment processing fees.
+          </p>
+          <p>
+            For a broader overview of how VAT applies to software, streaming, and other online offerings, see our{" "}
+            <Link href="/resources/vat-digital-services-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT on digital services guide</Link>.
           </p>
 
           <div className="border border-amber-200 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-800/40 rounded-lg p-4 flex items-start gap-3">
@@ -283,7 +316,7 @@ export default function VatFintechPage() {
               <strong className="text-ink">Reassess VAT treatment</strong> — Review all commissions, transaction fees, and merchant discount rates to determine which are now taxable at 16%. Get professional advice if uncertain.
             </li>
             <li className="text-ink-soft">
-              <strong className="text-ink">Register for VAT</strong> if not already registered. The standard KES 5 million threshold applies for domestic PSPs. Non-resident digital suppliers must register regardless of turnover.
+              <Link href="/resources/do-i-need-to-register-for-vat-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover"><strong className="text-ink">Register for VAT</strong></Link> if not already registered. The standard KES 5 million threshold applies for domestic PSPs. Non-resident digital suppliers must register regardless of turnover.
             </li>
             <li className="text-ink-soft">
               <strong className="text-ink">Update billing systems</strong> — Configure invoicing to charge and collect 16% VAT on affected services. All invoices must be eTIMS-compliant.
@@ -292,7 +325,7 @@ export default function VatFintechPage() {
               <strong className="text-ink">Review contracts</strong> — Determine whether VAT will be absorbed, passed to merchants, or passed to end-consumers. Update your terms and conditions accordingly.
             </li>
             <li className="text-ink-soft">
-              <strong className="text-ink">File monthly VAT returns</strong> via iTax by the 20th of each following month. Late filing attracts a penalty of KES 10,000 or 5% of the tax due (whichever is higher) plus 1% monthly interest.
+              <Link href="/resources/how-to-file-vat-return-on-itax" className="text-brand underline underline-offset-2 hover:text-brand-hover"><strong className="text-ink">File monthly VAT returns</strong></Link> via iTax by the 20th of each following month. Late filing attracts a penalty of KES 10,000 or 5% of the tax due (whichever is higher) plus 1% monthly interest.
             </li>
             <li className="text-ink-soft">
               <strong className="text-ink">Onboard eTIMS</strong> — All VAT-registered persons must use the electronic tax invoice management system. See our <Link href="/resources/etims-onboarding-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS onboarding guide</Link>.

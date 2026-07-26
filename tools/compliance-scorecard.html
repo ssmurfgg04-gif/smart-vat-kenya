@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eTIMS Compliance Scorecard — KRA Tax Health Check (Free Quiz) | Smart VAT Kenya</title>
+<meta name="description" content="Take our 8-question eTIMS compliance quiz to get your KRA tax health score (A-F). Identify compliance gaps before KRA does. Free, no login required.">
+<meta name="keywords" content="KRA compliance check, eTIMS compliance score, tax health check Kenya, KRA compliance scorecard, VAT compliance Kenya">
+<link rel="canonical" href="https://smartvatkenya.com/tools/compliance-scorecard.html">
+<meta property="og:title" content="eTIMS Compliance Scorecard — Free KRA Tax Health Check">
+<meta property="og:description" content="8-question quiz that scores your KRA compliance from A to F. Identify gaps and fix them before KRA does.">
+<script type="application/ld+json">{
+  "@context":"https://schema.org","@type":"WebApplication",
+  "name":"eTIMS Compliance Scorecard","url":"https://smartvatkenya.com/tools/compliance-scorecard.html",
+  "applicationCategory":"TaxTool","operatingSystem":"All","browserRequirements":"JavaScript",
+  "description":"Free 8-question KRA compliance quiz that scores your tax health from A to F."
+}</script>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <a href="/" class="logo"><span class="logo-icon">⟁</span> Smart<span>VAT</span> Kenya</a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/resources">Resources</a>
+      <a href="/services">Services</a>
+      <a href="/forms">Forms</a>
+      <a href="/tools/vat-review.html">Free Review</a>
+    </nav>
+  </div>
+</header>
+
+<div class="tool-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Home</a> <span>›</span> <span>Compliance Scorecard</span></div>
+    <h1>📊 eTIMS Compliance Scorecard</h1>
+    <p>Answer 8 quick questions to get your KRA compliance score from A to F. Know where you stand before KRA comes knocking.</p>
+  </div>
+</div>
+
+<div class="tool-body">
+  <div class="container">
+    <div class="card">
+      <div class="progress" id="scoreProgress">
+        <div class="progress-step active"></div>
+        <div class="progress-step"></div>
+        <div class="progress-step"></div>
+        <div class="progress-step"></div>
+        <div class="progress-step"></div>
+        <div class="progress-step"></div>
+        <div class="progress-step"></div>
+        <div class="progress-step"></div>
+      </div>
+      <div class="text-sm text-muted mb-2" id="stepCounter">Step 1 of 8</div>
+
+      <form id="scorecardForm">
+        <div class="quiz-step">
+          <div class="form-group">
+            <label>1. Are you registered for eTIMS?</label>
+            <div class="radio-group">
+              <label class="radio-option"><input type="radio" name="etims" value="yes" required><span><label>Yes — I have active eTIMS</label></span></label>
+              <label class="radio-option"><input type="radio" name="etims" value="no"><span><label>No — not yet registered</label></span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-step hidden">
+          <div class="form-group">
+            <label>2. How do you file your VAT returns?</label>
+            <div class="radio-group">
+              <label class="radio-option"><input type="radio" name="returns" value="on_time" required><span><label>On time every month</label></span></label>
+              <label class="radio-option"><input type="radio" name="returns" value="late"><span><label>Sometimes late</label></span></label>
+              <label class="radio-option"><input type="radio" name="returns" value="missed"><span><label>I've missed some filings</label></span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-step hidden">
+          <div class="form-group">
+            <label>3. Do you reconcile your eTIMS invoices against your VAT return before filing?</label>
+            <div class="radio-group">
+              <label class="radio-option"><input type="radio" name="invoices" value="yes" required><span><label>Yes — every month</label></span></label>
+              <label class="radio-option"><input type="radio" name="invoices" value="no"><span><label>No — I rely on KRA's pre-filled data</label></span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-step hidden">
+          <div class="form-group">
+            <label>4. Do you cross-check supplier eTIMS invoices before claiming input VAT?</label>
+            <div class="radio-group">
+              <label class="radio-option"><input type="radio" name="recon" value="yes" required><span><label>Yes — I verify each one</label></span></label>
+              <label class="radio-option"><input type="radio" name="recon" value="sometimes"><span><label>Sometimes</label></span></label>
+              <label class="radio-option"><input type="radio" name="recon" value="no"><span><label>No — I trust the system</label></span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-step hidden">
+          <div class="form-group">
+            <label>5. Do you have a valid Tax Compliance Certificate (TCC)?</label>
+            <div class="radio-group">
+              <label class="radio-option"><input type="radio" name="tcc" value="yes" required><span><label>Yes — current and valid</label></span></label>
+              <label class="radio-option"><input type="radio" name="tcc" value="expired"><span><label>Expired</label></span></label>
+              <label class="radio-option"><input type="radio" name="tcc" value="no"><span><label>I don't have one</label></span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-step hidden">
+          <div class="form-group">
+            <label>6. Do you have any outstanding KRA penalties or interest?</label>
+            <div class="radio-group">
+              <label class="radio-option"><input type="radio" name="penalties" value="no" required><span><label>No — I'm clean</label></span></label>
+              <label class="radio-option"><input type="radio" name="penalties" value="yes"><span><label>Yes — there are penalties</label></span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-step hidden">
+          <div class="form-group">
+            <label>7. Have you ever been audited by KRA?</label>
+            <div class="radio-group">
+              <label class="radio-option"><input type="radio" name="audit" value="no" required><span><label>No — never</label></span></label>
+              <label class="radio-option"><input type="radio" name="audit" value="once"><span><label>Yes — resolved cleanly</label></span></label>
+              <label class="radio-option"><input type="radio" name="audit" value="current"><span><label>Yes — currently under audit</label></span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-step hidden">
+          <div class="form-group">
+            <label>8. Do you use a tax agent or accountant to manage your KRA compliance?</label>
+            <div class="radio-group">
+              <label class="radio-option"><input type="radio" name="agent" value="yes" required><span><label>Yes — I have professional help</label></span></label>
+              <label class="radio-option"><input type="radio" name="agent" value="no"><span><label>No — I do it myself</label></span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2 mt-2">
+          <button type="button" class="btn btn-outline prev-btn hidden" id="prevBtn">← Back</button>
+          <button type="button" class="btn btn-primary" id="nextBtn" style="flex:1;justify-content:center;">Next →</button>
+        </div>
+      </form>
+      <div id="scorecardResult" class="mt-3"></div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>Smart VAT Kenya — Helping SMEs navigate KRA compliance. Not affiliated with KRA.</p>
+    <p class="mt-1"><a href="/">Home</a> • <a href="/resources">Resources</a> • <a href="/services">Services</a> • <a href="/forms">Free Forms</a> • <a href="/tools/amnesty-checker.html">Amnesty</a> • <a href="/tools/vat-review.html">Free Review</a></p>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="leadModal">
+  <div class="modal">
+    <button class="modal-close">✕</button>
+    <h2>📊 Get Your Full Compliance Report</h2>
+    <p>Enter your details to receive a detailed compliance report with personalised fix steps.</p>
+    <div class="benefits">
+      <li>Personalised compliance improvement plan</li>
+      <li>eTIMS checklist</li>
+      <li>Free compliance consultation offer</li>
+    </div>
+    <form id="leadForm">
+      <div class="form-group"><input type="text" class="form-input" name="name" placeholder="Your name" required></div>
+      <div class="form-group"><input type="email" class="form-input" name="email" placeholder="Email address" required></div>
+      <div class="form-group"><input type="tel" class="form-input" name="phone" placeholder="Phone (WhatsApp)" required></div>
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send My Report →</button>
+    </form>
+  </div>
+</div>
+
+<script src="/js/tools.js"></script>
+</body>
+</html>

@@ -154,13 +154,25 @@ const faqs = [
   },
 ]
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
+}
+
 export default function VATRegistrationPage() {
   return (
     <>
-      <Script id="breadcrumb-schema" type="application/ld+json"
+        <Script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Script id="service-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <Script id="faq-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-16">
@@ -171,10 +183,24 @@ export default function VATRegistrationPage() {
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
             VAT Registration Kenya — KES 5,000
           </h1>
-          <p className="text-[0.95rem] text-canvas/70 max-w-[50ch] leading-relaxed mb-8">
+          <p className="text-[0.95rem] text-canvas/70 max-w-[50ch] leading-relaxed mb-6">
             Professional KRA VAT registration at a flat fee. No hidden costs, no surprises.
             Done in 1–3 working days. M-PESA accepted.
           </p>
+          <div className="flex flex-wrap gap-2 mb-6" role="list" aria-label="Trust signals">
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <CheckCircle size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              M-PESA accepted
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <CheckCircle size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              No hidden costs
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+              <SealCheck size={12} weight="fill" className="text-brand" aria-hidden="true" />
+              Registered KRA agent
+            </span>
+          </div>
           <a
             href={`${WA_BASE}?text=Hi%2C%20I%20want%20the%20KES%205000%20VAT%20Registration%20service`}
             target="_blank"
@@ -300,6 +326,29 @@ export default function VATRegistrationPage() {
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+
+      {/* Mid-page CTA */}
+      <section className="bg-brand-muted px-6 lg:px-10 py-12">
+        <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <p className="font-display text-[1.1rem] font-semibold text-ink">
+              KES 5,000 — Register for VAT today
+            </p>
+            <p className="text-[0.85rem] text-ink-muted mt-1">
+              Done in 1–3 working days. No hidden fees. M-PESA accepted.
+            </p>
+          </div>
+          <a
+            href={`${WA_BASE}?text=Hi%2C%20I%20want%20the%20KES%205000%20VAT%20Registration%20service`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
+          >
+            Get started on WhatsApp
+            <ArrowRight size={14} weight="bold" aria-hidden="true" />
+          </a>
         </div>
       </section>
 

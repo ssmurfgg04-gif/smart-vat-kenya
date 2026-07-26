@@ -157,7 +157,7 @@ export default function Pillar1Page() {
               {toc.map((item, i) => (
                 <li key={item.id}>
                   <a href={`#${item.id}`} className="flex items-center gap-3 text-[0.85rem] text-ink-muted hover:text-brand transition-colors">
-                    <span className="font-mono text-[0.63rem] text-ink-muted/40 w-5 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="font-mono text-[0.63rem] text-ink-muted/70 w-5 shrink-0">{String(i + 1).padStart(2, "0")}</span>
                     {item.label}
                   </a>
                 </li>

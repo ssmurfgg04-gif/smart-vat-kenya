@@ -149,6 +149,16 @@ export default function WithholdingVatPage() {
               <h2 id="how-it-works-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 How Withholding VAT Works
               </h2>
+              <p>
+                When you file your monthly VAT return, your purchases are{" "}
+                <Link href="/resources/vat-auto-populated-return" className="text-brand underline underline-offset-2 hover:text-brand-hover">auto-populated</Link>{" "}
+                from eTIMS data. The withholding VAT credits you declare must match the certificates your customers issue.
+              </p>
+              <p>
+                Late remittance or non-compliance attracts significant{" "}
+                <Link href="/resources/kra-vat-penalties-reference" className="text-brand underline underline-offset-2 hover:text-brand-hover">penalties</Link>{" "}
+                — including a 5% late-remittance penalty plus 1% monthly interest.
+              </p>
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
                 <p>
                   Withholding VAT shifts the responsibility for remitting VAT from the supplier to the buyer

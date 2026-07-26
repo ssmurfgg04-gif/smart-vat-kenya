@@ -215,7 +215,8 @@ export default function FinanceActVatPage() {
                   <strong>Effective:</strong> 1 July 2026
                 </p>
                 <p>
-                  <strong>Impact:</strong> This is a significant change for Kenya's fintech sector. Payment
+                  <strong>Impact:</strong> This is a significant change for Kenya's{" "}
+                  <Link href="/resources/vat-fintech-digital-payments-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">fintech sector</Link>. Payment
                   service providers, mobile money aggregators, and payment gateway operators must now charge
                   16% VAT on their fees. Businesses using these services will see increased costs. If you
                   are a fintech company, update your pricing and invoicing immediately. If you use payment
@@ -312,14 +313,14 @@ export default function FinanceActVatPage() {
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
                 <div className="space-y-3">
                   {[
-                    { change: "Invoice requirements tightened", detail: "All registered persons must now issue a tax invoice at the time of supply, regardless of whether the supply is taxable or not. Previously, invoices were only required for taxable supplies. This affects exempt suppliers who now need invoicing systems." },
-                    { change: "Labour outsourcing costs excluded from taxable value", detail: "Where a supplier provides labour, outsourcing, or employee placement services, employee-related costs (salaries, wages, statutory deductions) are deemed disbursements on behalf of the client and excluded from the taxable value of the supply. This reduces the VAT burden on outsourced labour." },
-                    { change: "Digital broadcasting added to taxable digital services", detail: "Internet, radio, or television broadcasting services provided by non-residents are now explicitly included in the scope of taxable digital services." },
-                    { change: "Mosquito repellent exempted from VAT", detail: "Mosquito repellent products were reclassified from 16% VAT to exempt, effective 1 July 2025." },
-                    { change: "Tea and coffee packaging materials zero-rated", detail: "Packaging materials for tea and coffee are now zero-rated (0%), allowing suppliers to claim input VAT and apply for refunds." },
-                    { change: "Manufacturing capital goods exemption extended", detail: "The VAT exemption on capital goods for the manufacturing sector, granted before 27 December 2024, was extended to apply until 27 December 2025." },
-                  ].map(({ change, detail }) => (
-                    <div key={change} className="border border-hairline rounded-lg p-4">
+                    { key: "invoice-reqs", change: "Invoice requirements tightened", detail: "All registered persons must now issue a tax invoice at the time of supply, regardless of whether the supply is taxable or not. Previously, invoices were only required for taxable supplies. This affects exempt suppliers who now need invoicing systems." },
+                    { key: "labour-outsourcing", change: <><Link href="/resources/vat-labour-outsourcing-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">Labour outsourcing</Link> costs excluded from taxable value</>, detail: "Where a supplier provides labour, outsourcing, or employee placement services, employee-related costs (salaries, wages, statutory deductions) are deemed disbursements on behalf of the client and excluded from the taxable value of the supply. This reduces the VAT burden on outsourced labour." },
+                    { key: "digital-services", change: <>Digital broadcasting added to taxable <Link href="/resources/vat-digital-services-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">digital services</Link></>, detail: "Internet, radio, or television broadcasting services provided by non-residents are now explicitly included in the scope of taxable digital services." },
+                    { key: "mosquito-repellent", change: "Mosquito repellent exempted from VAT", detail: "Mosquito repellent products were reclassified from 16% VAT to exempt, effective 1 July 2025." },
+                    { key: "tea-coffee-packaging", change: "Tea and coffee packaging materials zero-rated", detail: "Packaging materials for tea and coffee are now zero-rated (0%), allowing suppliers to claim input VAT and apply for refunds." },
+                    { key: "manufacturing-capital", change: "Manufacturing capital goods exemption extended", detail: "The VAT exemption on capital goods for the manufacturing sector, granted before 27 December 2024, was extended to apply until 27 December 2025." },
+                  ].map(({ key, change, detail }) => (
+                    <div key={key} className="border border-hairline rounded-lg p-4">
                       <p className="font-semibold text-ink text-[0.88rem] mb-1">{change}</p>
                       <p className="text-[0.83rem] text-ink-muted leading-relaxed">{detail}</p>
                     </div>

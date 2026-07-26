@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { ArrowLeft, ArrowRight, Building, House, Warning, CheckCircle } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
@@ -12,9 +13,25 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://smartvatkenya.co.ke/resources/vat-for-landlords-kenya" },
 }
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "VAT for Landlords Kenya 2026: Do I Charge VAT on Rental Income?",
+  description:
+    "Do landlords charge VAT on rental income in Kenya? Guide to VAT on commercial and residential property rental, KRA requirements, eTIMS for landlords, and input VAT claims on property expenses.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-26",
+  dateModified: "2026-07-26",
+  url: "https://smartvatkenya.co.ke/resources/vat-for-landlords-kenya",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/vat-for-landlords-kenya",
+}
+
 export default function VatForLandlordsPost() {
   return (
     <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
+      <Script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Link href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources
       </Link>
@@ -94,7 +111,7 @@ export default function VatForLandlordsPost() {
             When Must a Landlord Register for VAT?
           </h2>
           <p>
-            A landlord must register for VAT if their <strong>taxable turnover</strong> (not total rental income)
+            A landlord must <Link href="/resources/do-i-need-to-register-for-vat-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">register for VAT</Link> if their <strong>taxable turnover</strong> (not total rental income)
             exceeds the VAT threshold (currently KES 5 million, with proposed rise to KES 8 million not yet effective) in any period of twelve months. Taxable turnover means income from commercial
             rent, service charges, parking fees, and any other taxable supplies — but not residential rent.
           </p>
@@ -260,8 +277,8 @@ export default function VatForLandlordsPost() {
             Can I Claim Input VAT on Property Expenses?
           </h2>
           <p>
-            A VAT-registered landlord letting commercial property can claim input VAT on expenses incurred
-            <em> wholly and exclusively </em> for the taxable (commercial) part of the rental business. The
+            A VAT-registered landlord letting commercial property can claim <Link href="/resources/input-vat-deduction-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">input VAT on expenses</Link> incurred
+             <em> wholly and exclusively </em> for the taxable (commercial) part of the rental business. The
             key principle is that input VAT is recoverable only to the extent that the goods or services are
             used to make taxable supplies.
           </p>
