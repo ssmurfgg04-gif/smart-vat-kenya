@@ -33,34 +33,36 @@ export function ResourceSearch({ pillars }: { pillars: Pillar[] }) {
 
   return (
     <div>
-      <div className="relative mb-10">
-        <MagnifyingGlass
-          size={16}
-          className="absolute left-4 top-1/2 -translate-y-1/2 text-ink-muted/70 pointer-events-none"
-          aria-hidden="true"
-        />
-        <input
-          ref={inputRef}
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search all guides…"
-          aria-label="Search resources"
-          className="w-full pl-10 pr-10 py-3.5 text-[0.95rem] border border-hairline rounded-lg bg-canvas text-ink placeholder:text-ink-muted/40 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-all"
-          autoComplete="off"
-        />
-        {query && (
-          <button
-            onClick={() => {
-              setQuery("")
-              inputRef.current?.focus()
-            }}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-ink-muted/50 hover:text-ink-muted transition-colors p-1"
-            aria-label="Clear search"
-          >
-            <XCircle size={18} aria-hidden="true" />
-          </button>
-        )}
+      <div id="search-guides" className="sticky top-[60px] z-30 -mx-1 px-1 py-3 mb-7 bg-canvas scroll-mt-[60px]">
+        <div className="relative">
+          <MagnifyingGlass
+            size={16}
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-ink-muted/70 pointer-events-none"
+            aria-hidden="true"
+          />
+          <input
+            ref={inputRef}
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search all guides…"
+            aria-label="Search resources"
+            className="w-full pl-10 pr-10 py-3.5 text-[0.95rem] border border-hairline rounded-lg bg-canvas text-ink placeholder:text-ink-muted/40 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-all"
+            autoComplete="off"
+          />
+          {query && (
+            <button
+              onClick={() => {
+                setQuery("")
+                inputRef.current?.focus()
+              }}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-ink-muted/50 hover:text-ink-muted transition-colors p-1"
+              aria-label="Clear search"
+            >
+              <XCircle size={18} aria-hidden="true" />
+            </button>
+          )}
+        </div>
       </div>
 
       {filtered.length === 0 ? (

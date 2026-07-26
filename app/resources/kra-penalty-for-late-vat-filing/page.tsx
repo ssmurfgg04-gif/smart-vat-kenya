@@ -1,14 +1,17 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "KRA Penalty for Late VAT Filing: How Much is it and How to Apply for a Waiver",
+  absoluteTitle: true,
   description:
     "The KRA penalty for late VAT filing is KES 10,000 or 5% of tax due (whichever is higher) plus 1% monthly interest. Learn how to check your penalties on iTax and apply for a KRA penalty waiver.",
+  path: "/resources/kra-penalty-for-late-vat-filing",
   keywords: [
     "kra penalty for late vat filing",
     "kra penalty waiver",
@@ -18,18 +21,9 @@ export const metadata: Metadata = {
     "kra penalty waiver letter sample",
     "kra 5% penalty plus 1% interest",
     "kra penalty waiver how to apply",
-    "late vat filing kenya penalty",
-    "kra penalty waiver reasons",
-    "can kra blacklist you for unpaid penalties",
-    "kra penalty waiver status",
-    "kra penalty appeal letter",
-    "kra penalty waiver for first time",
-    "smart vat kenya penalty waiver",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/kra-penalty-for-late-vat-filing",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

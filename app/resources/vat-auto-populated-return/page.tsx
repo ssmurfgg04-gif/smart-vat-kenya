@@ -1,14 +1,16 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
-  title: "KRA Auto-Populated VAT Return Guide 2026 | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "KRA Auto-Populated VAT Return Guide 2026",
   description:
     "Complete guide to KRA's auto-populated VAT return in Kenya. Learn how pre-filled returns work, what to check before filing, how to add missing invoices, what to do about duplicate entries, and how the system affects your monthly filing process.",
+  path: "/resources/vat-auto-populated-return",
   keywords: [
     "kra auto populated vat return",
     "auto populated vat return kenya",
@@ -18,23 +20,9 @@ export const metadata: Metadata = {
     "kra simplified vat return",
     "missing invoices auto populated vat return",
     "duplicate invoices auto populated vat return",
-    "kra vat return pre populated",
-    "how to add missing purchases vat return kenya",
-    "kra auto populated vat return guide",
-    "vat auto populated return 2026",
-    "kra vat return problems",
-    "vat return sales not appearing kenya",
-    "how to confirm auto populated vat return",
-    "kra vat return purchase csv",
-    "what if my supplier did not transmit invoice",
-    "can i adjust auto populated vat return",
-    "kra vat return line item entry",
-    "kra vat return lump sum sales",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/vat-auto-populated-return",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

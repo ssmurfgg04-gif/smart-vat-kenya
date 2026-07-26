@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import {
@@ -24,10 +25,11 @@ import {
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
-export const metadata: Metadata = {
-  title: "eTIMS Onboarding Kenya — KES 3,000 | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "eTIMS Onboarding Kenya — KES 3,000",
   description:
     "KRA eTIMS registration and onboarding in Kenya — KES 3,000. Choose the right solution type (mobile app, web portal, or ERP integration), get registered, and start issuing eTIMS-compliant invoices. Avoid the KES 50,000/month penalty.",
+  path: "/services/etims-onboarding",
   keywords: [
     "etims kenya",
     "etims registration kenya",
@@ -37,11 +39,8 @@ export const metadata: Metadata = {
     "etims mobile app",
     "etims web portal",
     "etims erp integration",
-    "kra etims registration",
-    "etims kenya 2026",
   ],
-  alternates: { canonical: "https://smartvatkenya.co.ke/services/etims-onboarding" },
-}
+})
 
 const WA_BASE = "https://wa.me/254721725958"
 const WA_TEXT = "Hi%2C%20I%20need%20help%20with%20eTIMS%20onboarding"

@@ -1,14 +1,17 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "KRA VAT Special Table Kenya 2026: Risks of Flagged Suppliers and Consecutive Nil Returns",
+  absoluteTitle: true,
   description:
     "The KRA VAT Special Table lists suppliers flagged for non-compliance. If your supplier is on the list, your input VAT claims are automatically rejected by iTax. Filing consecutive nil returns can also trigger Special Table flagging. Learn how the Special Table works, why you might get added, and what to do if you or your supplier is listed.",
+  path: "/resources/vat-special-table-risks",
   keywords: [
     "kra vat special table kenya",
     "vat special table kenya 2026",
@@ -18,23 +21,9 @@ export const metadata: Metadata = {
     "how to get off vat special table kenya",
     "kra special table suppliers kenya",
     "vat special table removal kenya",
-    "kra supplier blacklist vat",
-    "input vat claim rejected itax",
-    "how to check vat special table kenya",
-    "nil return flagging kenya",
-    "kra compliance check vat kenya",
-    "supplier on vat special table what to do",
-    "vat special table meaning kenya",
-    "kra vat audit flagged supplier",
-    "kra vat special table risk",
-    "buyer initiated invoicing special table",
-    "vat special table kenya 2025 2026",
-    "kra vat compliance check suppliers",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/vat-special-table-risks",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

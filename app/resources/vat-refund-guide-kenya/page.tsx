@@ -1,14 +1,16 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
-  title: "VAT Refund Guide Kenya 2026 | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "VAT Refund Guide Kenya 2026",
   description:
     "Complete guide to claiming VAT refunds in Kenya. Learn how to apply through iTax, the 12-month deadline, required documents, common reasons for rejection, and how to speed up your refund. Updated for the Finance Act 2025 changes.",
+  path: "/resources/vat-refund-guide-kenya",
   keywords: [
     "vat refund kenya",
     "how to claim vat refund in kenya",
@@ -18,23 +20,9 @@ export const metadata: Metadata = {
     "vat refund timeline kenya",
     "vat refund rejected kra",
     "vat refund documents kenya",
-    "vat refund for zero rated supplies kenya",
-    "kra vat refund 12 months",
-    "vat refund status check kenya",
-    "vat refund audit kra",
-    "vat refund for exporters kenya",
-    "how long does vat refund take kenya",
-    "vat refund application form kenya",
-    "kra vat refund online application",
-    "vat refund stuck kenya",
-    "vat refund rejected reasons kenya",
-    "finance act 2025 vat refund",
-    "vat refund bad debts kenya",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/vat-refund-guide-kenya",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

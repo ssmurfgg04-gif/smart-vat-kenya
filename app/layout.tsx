@@ -34,69 +34,12 @@ export const metadata: Metadata = {
   description:
     "Professional VAT registration services in Kenya — KES 5,000 flat fee, done in 1–3 working days. Monthly iTax VAT filing from KES 3,500/month. KRA-compliant, eTIMS-ready, M-PESA accepted. Free KRA VAT calculator for Kenya 16% standard rate 2026.",
   keywords: [
-    // Core service terms
-    "vat registration services kenya",
-    "register for vat online kenya",
     "vat registration kenya",
     "kra vat registration",
-    "how to register for vat in kenya",
-    "how much does vat registration cost in kenya",
-    // Calculator & rate terms
+    "itax vat filing",
     "kra vat calculator",
-    "vat calculator kra kenya",
-    "16% vat calculator kenya",
-    "kenya vat standard rate 16% 2026",
-    "reverse vat calculator kenya",
-    // Filing & compliance
-    "monthly vat filing kenya",
-    "itax vat registration",
-    "itax vat filing service",
-    "vat return kenya",
-    "vat filing deadline kenya 2026",
-    "kra vat filing deadline 20th",
-    // Threshold & obligation
-    "vat registered person kenya",
-    "kes 5 million threshold vat kenya",
-    "kes 8 million vat threshold kenya finance act 2025",
-    "mandatory vat registration kenya",
-    "voluntary vat registration kenya",
-    "non-registration penalty kra kes 100000",
-    // eTIMS
     "etims kenya",
-    "etims vat kenya",
-    "etims onboarding kenya",
-    "electronic tax invoice kenya",
-    "etims compliance kenya 2026",
-    // Pain points (competitor gaps from research)
-    "kra special table vat kenya",
-    "vat special table blocked input tax kenya",
-    "kra portal errors itax",
-    "itax system down kenya",
-    "kra penalty waiver",
-    "avoid kra vat penalty",
-    "kra late filing penalty kes 10000",
-    "non registration penalty kes 100000",
-    // Output/input tax
-    "output tax input tax kenya",
-    "withholding vat kenya",
-    "vat compliance kenya",
-    "vat number kenya",
-    "vat application kenya",
-    "etims invoice kenya",
-    // Long-tail
-    "how to register for vat in kenya on itax",
-    "what is the vat rate in kenya 2026",
-    "when must a business register for vat kenya",
-    "vat registration threshold kenya 2026",
-    "kra vat registration threshold",
-    "kenya vat exempt zero rated goods",
-    "kra paybill 572572 vat payment",
-    // People Also Ask optimization
-    "is it mandatory to register for vat in kenya",
-    "what happens if i don't register for vat in kenya",
-    "vat registration requirements kenya 2026",
-    "can i register for vat voluntarily in kenya",
-    "how long does vat registration take in kenya",
+    "monthly vat filing kenya",
   ],
   authors: [{ name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" }],
   creator: "Smart VAT Kenya",
@@ -341,44 +284,7 @@ const localBusinessSchema = {
         validFrom: "2026-01-01",
       },
     },
-  ,
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the VAT registration threshold in Kenya 2026?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "As of 2026, the mandatory VAT registration threshold in Kenya is an annual turnover of KES 5,000,000. Businesses can also register voluntarily."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the penalty for late VAT filing in Kenya?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Late filing of a VAT return attracts a penalty of KES 10,000 or 5% of the tax due, whichever is higher, plus interest on the unpaid amount."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does VAT registration cost in Kenya?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "While KRA registration itself is free, professional assistance to handle the entire iTax process and ensure compliance typically costs a flat fee of KES 5,000."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the VAT Special Table in Kenya?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The VAT Special Table is a KRA compliance measure that blocks input VAT claims from suppliers who are non-compliant or flagged, protecting your business from unexpected tax liabilities."
-          }
-        }
-      ]
-    }],
+  ],
 }
 
 export default function RootLayout({
@@ -398,7 +304,7 @@ export default function RootLayout({
 
         {/* Preconnect to critical third-party origins */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//wa.me" />
 
         {/* Speculation Rules — instant prefetch on hover for key pages */}
@@ -421,7 +327,11 @@ export default function RootLayout({
           })}
         </script>
 
-        {/* Critical CSS inlined for instant hero rendering — main CSS loads in parallel */}
+        {/*
+          Critical CSS inlined for instant hero rendering — main CSS loads in parallel.
+          Keep display utilities out of here: these rules are unlayered and would beat
+          every responsive utility from the Tailwind sheet (e.g. `hidden md:flex`).
+        */}
         <style>{`
           .bg-canvas-dark { background-color: #1b2a3b; }
           .bg-canvas { background-color: #faf8f3; }
@@ -459,10 +369,8 @@ export default function RootLayout({
           .leading-relaxed { line-height: 1.625; }
           .mb-6 { margin-bottom: 1.5rem; }
           .mb-10 { margin-bottom: 2.5rem; }
-          .hidden { display: none; }
           .self-start { align-self: flex-start; }
           @media (min-width: 1024px) {
-            .lg\\:block { display: block; }
             .lg\\:grid-cols-\\[1fr_420px\\] { grid-template-columns: 1fr 420px; }
             .lg\\:gap-20 { gap: 5rem; }
             .lg\\:px-10 { padding-inline: 2.5rem; }

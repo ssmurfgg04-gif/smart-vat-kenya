@@ -1,14 +1,17 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, Scales } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "Turnover Tax vs VAT in Kenya | Which Tax Regime Applies?",
+  absoluteTitle: true,
   description:
     "Confused about Turnover Tax vs VAT in Kenya? Compare KRA turnover tax (1-3% on gross sales, under KES 8M turnover) vs VAT (16% on value-add, over KES 5M, with proposed rise to KES 8M). Decision guide for Kenyan SMEs.",
+  path: "/resources/vat-vs-turnover-tax",
   keywords: [
     "turnover tax vs vat kenya",
     "turnover tax kenya",
@@ -18,13 +21,9 @@ export const metadata: Metadata = {
     "vat threshold kenya",
     "which tax regime kenya",
     "kenya SME tax guide",
-    "turnover tax registration kenya",
-    "vat registration kenya 2026",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/vat-vs-turnover-tax",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

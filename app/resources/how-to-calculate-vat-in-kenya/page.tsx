@@ -1,14 +1,17 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, Calculator } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "How to Calculate 16% VAT in Kenya (Plus Free KRA Calculator)",
+  absoluteTitle: true,
   description:
     "The Kenya VAT rate is 16%. Learn how to calculate VAT inclusive and exclusive prices, understand zero-rated vs exempt goods, and use our free KRA VAT calculator for 2026.",
+  path: "/resources/how-to-calculate-vat-in-kenya",
   keywords: [
     "how to calculate vat in kenya",
     "vat calculator kenya",
@@ -18,13 +21,9 @@ export const metadata: Metadata = {
     "kenya vat formula",
     "vat calculation formula kenya",
     "mpesa vat calculation",
-    "zero-rated vs exempt goods kenya",
-    "vat exclusive price kenya",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/how-to-calculate-vat-in-kenya",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info } from "@phosphor-icons/react/dist/ssr"
@@ -6,12 +7,14 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "VAT for Importers in Kenya 2026: Import VAT, Customs & Compliance",
+  absoluteTitle: true,
   description:
     "Complete guide to VAT on imports into Kenya. How import VAT (16%) is charged at customs, SIMA system, M-PESA and bank payments at entry points, claiming input VAT on imports, and eTIMS for importers.",
-  alternates: { canonical: "https://smartvatkenya.co.ke/resources/vat-for-importers-kenya" },
-}
+  path: "/resources/vat-for-importers-kenya",
+  type: "article",
+})
 
 const articleSchema = {
   "@context": "https://schema.org",

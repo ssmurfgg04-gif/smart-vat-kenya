@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle } from "@phosphor-icons/react/dist/ssr"
@@ -6,12 +7,14 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "KRA VAT Filing Deadline August 2026: Don't Miss the 20th",
+  absoluteTitle: true,
   description:
     "The KRA VAT return is due by the 20th of every month. Late filing costs KES 10,000 + 5% of tax due + 1%/month interest. Here is exactly what to file, how to avoid penalties, and what to do if you missed the deadline.",
-  alternates: { canonical: "https://smartvatkenya.co.ke/resources/kra-vat-filing-deadline-august-2026" },
-}
+  path: "/resources/kra-vat-filing-deadline-august-2026",
+  type: "article",
+})
 
 const articleSchema = {
   "@context": "https://schema.org",

@@ -1,14 +1,16 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
-  title: "VAT for Startups and Tech Businesses in Kenya 2026 | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "VAT for Startups and Tech Businesses in Kenya 2026",
   description:
     "Do startups pay VAT in Kenya? Yes — once your annual turnover exceeds KES 5 million (proposed rise to KES 8M not yet effective). This guide covers registration triggers for SaaS, software, e-commerce, freelancers, and tech consultancies. Includes eTIMS compliance, input VAT on laptops and cloud services, and penalty avoidance tips for Kenyan tech founders.",
+  path: "/resources/vat-for-startups-tech-businesses",
   keywords: [
     "vat for startups kenya",
     "tech business vat kenya",
@@ -18,23 +20,9 @@ export const metadata: Metadata = {
     "ecommerce vat kenya",
     "freelancer vat kenya",
     "kenyan tech founder taxes",
-    "itax for startups kenya",
-    "kra vat software companies",
-    "digital services vat kenya",
-    "input vat laptop kenya startup",
-    "cloud services vat kenya",
-    "vat registration for startups kenya",
-    "tech entrepreneur tax kenya",
-    "vat for app developers kenya",
-    "kenya vat digital marketplace",
-    "startup tax compliance kenya",
-    "kra pin for tech business kenya",
-    "etims software developer kenya",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/vat-for-startups-tech-businesses",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

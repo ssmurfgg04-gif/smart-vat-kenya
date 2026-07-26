@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, Building, House, Warning, CheckCircle } from "@phosphor-icons/react/dist/ssr"
@@ -6,12 +7,14 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "VAT for Landlords Kenya 2026: Do I Charge VAT on Rental Income?",
+  absoluteTitle: true,
   description:
     "Do landlords charge VAT on rental income in Kenya? Guide to VAT on commercial and residential property rental, KRA requirements, eTIMS for landlords, and input VAT claims on property expenses.",
-  alternates: { canonical: "https://smartvatkenya.co.ke/resources/vat-for-landlords-kenya" },
-}
+  path: "/resources/vat-for-landlords-kenya",
+  type: "article",
+})
 
 const articleSchema = {
   "@context": "https://schema.org",

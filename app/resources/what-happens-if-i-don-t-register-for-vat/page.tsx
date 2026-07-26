@@ -1,14 +1,17 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info, } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "What Happens If I Don't Register for VAT in Kenya? Consequences & Penalties 2026",
+  absoluteTitle: true,
   description:
     "What happens if you don't register for VAT in Kenya when required? KRA penalties of KES 100,000+, audit risk, business closure, input VAT loss. Complete breakdown of non-registration consequences and how to avoid them.",
+  path: "/resources/what-happens-if-i-don-t-register-for-vat",
   keywords: [
     "what happens if i don't register for vat in kenya",
     "non-registration penalty kra kenya",
@@ -18,13 +21,9 @@ export const metadata: Metadata = {
     "vat registration requirements kenya",
     "mandatory vat registration kenya",
     "what happens if you don't file vat return kenya",
-    "kra audit non-registered business",
-    "vat registration mandatory threshold kenya",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/what-happens-if-i-don-t-register-for-vat",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

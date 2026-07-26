@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import {
@@ -15,10 +16,11 @@ import {
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
-export const metadata: Metadata = {
-  title: "KRA Penalty Waiver Kenya — KES 4,000 per Application | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "KRA Penalty Waiver Kenya — KES 4,000 per Application",
   description:
     "Professional KRA VAT penalty waiver application in Kenya — KES 4,000 per application. We draft and submit your KRA penalty waiver request. Late filing penalties, non-registration penalties, and more.",
+  path: "/services/kra-penalty-waiver",
   keywords: [
     "kra penalty waiver",
     "kra penalty waiver kenya",
@@ -28,10 +30,8 @@ export const metadata: Metadata = {
     "kra waiver letter",
     "kra penalty kes 10000",
     "non registration penalty kra",
-    "kra penalty waiver process",
   ],
-  alternates: { canonical: "https://smartvatkenya.co.ke/services/kra-penalty-waiver" },
-}
+})
 
 const serviceSchema = {
   "@context": "https://schema.org",

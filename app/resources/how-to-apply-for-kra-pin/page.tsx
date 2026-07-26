@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Globe, Buildings, DeviceMobile, IdentificationCard, Users } from "@phosphor-icons/react/dist/ssr"
@@ -6,12 +7,14 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "How to Apply for a KRA PIN in Kenya 2026: Online & Offline Guide",
+  absoluteTitle: true,
   description:
     "Step-by-step guide to applying for a KRA PIN in Kenya. Apply online via iTax, at Huduma Centre, or through the KRA mobile app. Documents required, processing time, and how to check your PIN status.",
-  alternates: { canonical: "https://smartvatkenya.co.ke/resources/how-to-apply-for-kra-pin" },
-}
+  path: "/resources/how-to-apply-for-kra-pin",
+  type: "article",
+})
 
 const articleSchema = {
   "@context": "https://schema.org",

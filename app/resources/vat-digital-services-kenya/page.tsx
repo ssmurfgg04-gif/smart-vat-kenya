@@ -1,14 +1,16 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
-  title: "VAT on Digital Services in Kenya 2026 Guide | Smart VAT Kenya",
+export const metadata: Metadata = constructMetadata({
+  title: "VAT on Digital Services in Kenya 2026 Guide",
   description:
     "Complete guide to VAT on digital services in Kenya. Learn who must register, the KES 5 million threshold for resident businesses, the no-threshold rule for non-residents, what counts as a digital service, and how to comply with eTIMS for digital transactions.",
+  path: "/resources/vat-digital-services-kenya",
   keywords: [
     "vat on digital services kenya",
     "digital service tax kenya vat",
@@ -18,23 +20,9 @@ export const metadata: Metadata = {
     "vat on software kenya",
     "vat on digital products kenya",
     "digital services vat kenya threshold",
-    "non resident digital supplier kenya vat",
-    "vat on online services kenya",
-    "ketims vat digital services",
-    "vat on streaming kenya",
-    "vat on e learning kenya",
-    "digital services tax vs vat kenya",
-    "foreign company vat kenya",
-    "non resident vat compliance kenya",
-    "vat on app sales kenya",
-    "digital marketplace supply regulations kenya",
-    "vat on online advertising kenya",
-    "vat on subscription services kenya",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/vat-digital-services-kenya",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

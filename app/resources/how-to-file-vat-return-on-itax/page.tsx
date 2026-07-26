@@ -1,14 +1,17 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "How to File VAT Return on iTax Kenya – Step-by-Step Guide 2026",
+  absoluteTitle: true,
   description:
     "File your VAT return on KRA iTax by the 20th of every month. Step-by-step guide for nil returns and normal returns, plus what to do when the iTax portal crashes. Pay VAT via M-PESA Paybill 572572.",
+  path: "/resources/how-to-file-vat-return-on-itax",
   keywords: [
     "how to file vat return on itax",
     "vat return filing kenya",
@@ -18,16 +21,9 @@ export const metadata: Metadata = {
     "pay vat via mpesa paybill 572572",
     "itax portal crash workaround",
     "kra vat return system error fix",
-    "how to file vat online kenya",
-    "vat return guide kenya 2026",
-    "monthly vat return kenya",
-    "kra itax not working today",
-    "nil vat return itax kenya",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/how-to-file-vat-return-on-itax",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

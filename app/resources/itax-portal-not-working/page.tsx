@@ -1,14 +1,17 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "KRA iTax Portal Not Working? Common iTax Errors and Fixes 2026",
+  absoluteTitle: true,
   description:
     "Your KRA iTax portal is not working? Here are the 10 most common iTax errors in Kenya — login failures, system timeouts, browser issues, and how to fix each one. Includes what to do when the portal crashes on deadline day.",
+  path: "/resources/itax-portal-not-working",
   keywords: [
     "kra itax portal not working",
     "kra itax login problems",
@@ -18,18 +21,9 @@ export const metadata: Metadata = {
     "itax page not loading error 500",
     "itax otp not received",
     "itax forgot password reset",
-    "itax return validation failed",
-    "itax browser compatibility",
-    "itax system downtime today",
-    "kra itax portal keeps logging out",
-    "kra itax portal not working on deadline",
-    "itax error 500 fix",
-    "smart vat kenya itax help",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/itax-portal-not-working",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

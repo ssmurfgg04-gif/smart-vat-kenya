@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info, ForkKnife } from "@phosphor-icons/react/dist/ssr"
@@ -6,12 +7,14 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "VAT for Restaurants & Hospitality in Kenya 2026: Complete Guide",
+  absoluteTitle: true,
   description:
     "Complete VAT guide for Kenyan restaurants, hotels, and hospitality businesses. Standard rate 16%, eTIMS invoicing for food service, input VAT on supplies, and KRA compliance requirements.",
-  alternates: { canonical: "https://smartvatkenya.co.ke/resources/vat-for-restaurants-hospitality" },
-}
+  path: "/resources/vat-for-restaurants-hospitality",
+  type: "article",
+})
 
 const articleSchema = {
   "@context": "https://schema.org",

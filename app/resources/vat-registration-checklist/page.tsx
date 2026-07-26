@@ -1,14 +1,17 @@
 import type { Metadata } from "next"
+import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
 import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, FileText, Bank, Buildings, Users, Gear } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "VAT Registration Kenya Checklist 2026 | Documents Needed for KRA VAT Registration",
+  absoluteTitle: true,
   description:
     "Complete document checklist for KRA VAT registration in Kenya 2026. Everything you need: KRA PIN, ID, bank details, business registration, eTIMS requirements. Free printable checklist.",
+  path: "/resources/vat-registration-checklist",
   keywords: [
     "vat registration kenya checklist",
     "documents needed for vat registration kenya",
@@ -18,15 +21,9 @@ export const metadata: Metadata = {
     "vat registration business documents kenya",
     "etims requirements kenya",
     "cr12 for vat registration",
-    "vat registration rejected kenya",
-    "how to register for vat kra kenya documents",
-    "vat agent kenya checklist",
-    "smart vat kenya",
   ],
-  alternates: {
-    canonical: "https://smartvatkenya.co.ke/resources/vat-registration-checklist",
-  },
-}
+  type: "article",
+})
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
