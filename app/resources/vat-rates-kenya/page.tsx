@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
@@ -131,11 +130,11 @@ const faqSchema = {
 export default function VatRatesKenyaPage() {
   return (
     <>
-      <Script id="breadcrumb-schema" type="application/ld+json"
+      <script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="article-schema" type="application/ld+json"
+      <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <Script id="faq-schema" type="application/ld+json"
+      <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="max-w-[880px] mx-auto px-6 lg:px-10 py-12">
@@ -156,6 +155,10 @@ export default function VatRatesKenyaPage() {
               can mean overpaying tax or facing KRA penalties. This guide covers each rate with full lists and
               practical examples.
             </p>
+            <div className="flex items-center gap-4 text-[0.75rem] text-ink-muted">
+              <time dateTime="2026-07-26">26 July 2026</time>
+              <span>Smart VAT Kenya</span>
+            </div>
           </header>
 
           <div className="space-y-10">
@@ -178,6 +181,37 @@ export default function VatRatesKenyaPage() {
                   result in KRA audit adjustments, penalties, and interest. If in doubt, you can consult
                   KRA for a private ruling, or seek professional advice.
                 </p>
+
+                {/* Comparison table */}
+                <div className="border border-hairline rounded-lg overflow-hidden my-6">
+                  <table className="w-full text-left text-[0.85rem]">
+                    <thead>
+                      <tr className="border-b border-hairline bg-canvas-alt">
+                        <th className="px-4 py-3 font-semibold text-ink w-[18%]">Feature</th>
+                        <th className="px-4 py-3 font-semibold text-ink w-[27%]">Standard Rated (16%)</th>
+                        <th className="px-4 py-3 font-semibold text-ink w-[27%]">Zero-Rated (0%)</th>
+                        <th className="px-4 py-3 font-semibold text-ink w-[28%]">Exempt</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-hairline">
+                      {[
+                        { feature: "VAT charged to customer", standard: "Yes — 16% added to price", zero: "Yes — but at 0%", exempt: "No VAT charged" },
+                        { feature: "Tax invoice required", standard: "Yes", zero: "Yes", exempt: "No" },
+                        { feature: "Include in VAT return", standard: "Yes — as output VAT", zero: "Yes — as zero-rated supply", exempt: "No" },
+                        { feature: "Input VAT recovery", standard: "Yes — can claim back", zero: "Yes — can claim and get refunds", exempt: "No — input VAT is a cost" },
+                        { feature: "Impact on profit", standard: "VAT is collected from customer", zero: "VAT refunds improve margin", exempt: "Input VAT erodes margin" },
+                        { feature: "Common examples", standard: "Electronics, vehicles, hotel stays, professional fees", zero: "Exports, unprocessed food, medicines, books", exempt: "Residential rent, financial services, insurance, education" },
+                      ].map(({ feature, standard, zero, exempt }) => (
+                        <tr key={feature} className="hover:bg-canvas-alt/50 transition-colors">
+                          <td className="px-4 py-3 font-medium text-ink">{feature}</td>
+                          <td className="px-4 py-3 text-ink-soft">{standard}</td>
+                          <td className="px-4 py-3 text-ink-soft">{zero}</td>
+                          <td className="px-4 py-3 text-ink-soft">{exempt}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
                 <div className="border border-brand/25 bg-brand-muted rounded-lg p-4 flex items-start gap-3">
                   <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
                   <div className="text-[0.83rem] text-ink-soft leading-relaxed">

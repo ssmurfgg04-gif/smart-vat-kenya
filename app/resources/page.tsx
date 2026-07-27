@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowRight, Clock, MagnifyingGlass } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 import { ResourceSearch } from "@/components/resource-search"
@@ -358,6 +357,127 @@ const pillars = [
     tags: ["Deregistration", "VAT Cancellation", "Exit"],
     featured: false,
   },
+  {
+    slug: "kra-tax-amnesty-2026",
+    number: "31",
+    label: "Tax Amnesty",
+    title: "KRA Tax Amnesty 2026: Full Guide to Penalty Waivers and Voluntary Disclosure",
+    bluf:
+      "KRA's tax amnesty programme lets taxpayers apply for penalty and interest waivers on overdue taxes. Filing continues to be open. Covers eligibility, how to apply on iTax, what happens if you don't apply, and how to get professional help with your application.",
+    readTime: "9 min",
+    tags: ["Tax Amnesty", "Penalty Waiver", "Voluntary Disclosure"],
+    featured: false,
+  },
+  {
+    slug: "tax-compliance-certificate-kenya",
+    number: "32",
+    label: "TCC",
+    title: "Tax Compliance Certificate Kenya 2026: How to Get Your KRA TCC",
+    bluf:
+      "A Tax Compliance Certificate (TCC) confirms you have filed all returns and paid all taxes due. Apply for free on iTax. Valid for 12 months. Requires eTIMS compliance for businesses. Covers requirements, step-by-step application, and common rejection reasons.",
+    readTime: "8 min",
+    tags: ["TCC", "Tax Clearance", "Compliance"],
+    featured: false,
+  },
+  {
+    slug: "what-happens-if-i-don-t-register-for-vat",
+    number: "33",
+    label: "Non-Registration",
+    title: "What Happens If I Don't Register for VAT in Kenya? Penalties KES 100,000+",
+    bluf:
+      "KRA charges up to KES 100,000 for VAT non-registration plus audit risk and backdated assessments. This guide covers every consequence, how KRA detects non-compliance, and what to do if you've already exceeded the threshold.",
+    readTime: "7 min",
+    tags: ["Non-Registration", "Penalties", "Risk"],
+    featured: false,
+  },
+  {
+    slug: "vat-rates-kenya",
+    number: "34",
+    label: "VAT Rates",
+    title: "VAT Rates in Kenya 2026 — Standard (16%), Zero-Rated & Exempt Guide",
+    bluf:
+      "Kenya has three VAT categories: 16% standard rate, 0% zero-rated (exports, unprocessed foods), and exempt (financial services, rent, raw land). Full lists from the VAT Act with practical examples for each rate.",
+    readTime: "9 min",
+    tags: ["VAT Rates", "Zero-Rated", "Exempt"],
+    featured: false,
+  },
+  {
+    slug: "faq",
+    number: "35",
+    label: "FAQ",
+    title: "Kenya VAT FAQ — 40+ KRA VAT Questions Answered",
+    bluf:
+      "Frequently asked questions about Kenya VAT: registration, filing, penalties, rates, eTIMS, refunds, input VAT, digital services, and more. Answered by KRA-registered VAT agents.",
+    readTime: "8 min",
+    tags: ["FAQ", "Quick Answers", "Reference"],
+    featured: false,
+  },
+  {
+    slug: "vat-for-ngos-kenya",
+    number: "36",
+    label: "NGOs",
+    title: "VAT for NGOs in Kenya 2026 — Exemptions, Refunds & Compliance Guide",
+    bluf:
+      "NGO VAT guide: which goods and services are VAT-exempt for charitable organisations, how to claim input VAT refunds, import duty exemptions, and common compliance mistakes to avoid.",
+    readTime: "9 min",
+    tags: ["NGOs", "Exemptions", "Non-Profit"],
+    featured: false,
+  },
+  {
+    slug: "kra-pin-not-working",
+    number: "37",
+    label: "KRA PIN Issues",
+    title: "KRA PIN Not Working? Why Your KRA PIN Application Is Stuck & How to Fix It 2026",
+    bluf:
+      "Your KRA PIN application or activation is not working? Common issues: PIN already exists, KRA PIN not found on iTax, verification not arriving, Huduma Centre errors, document rejection, deactivated PINs.",
+    readTime: "10 min",
+    tags: ["KRA PIN", "Troubleshooting", "iTax"],
+    featured: false,
+  },
+  {
+    slug: "etims-invoice-rejected",
+    number: "38",
+    label: "eTIMS Errors",
+    title: "eTIMS Invoice Rejected? Why KRA Rejects Your e-Invoice & How to Fix It 2026",
+    bluf:
+      "Your eTIMS invoice was rejected? Reasons why KRA rejects e-invoices: wrong ITAX or DIGITAL signature, control unit errors, duplicate serial numbers, customer PIN validation failures, HS code errors, and the cancel-and-reissue workflow.",
+    readTime: "10 min",
+    tags: ["eTIMS", "Invoice Errors", "Troubleshooting"],
+    featured: false,
+  },
+  {
+    slug: "vat-for-construction-real-estate-kenya",
+    number: "39",
+    label: "Construction",
+    title: "VAT for Construction & Real Estate Kenya 2026 — Commercial Property, Contractors",
+    bluf:
+      "VAT rules for construction and real estate in Kenya. Court of Appeal 2025 ruling on commercial property sales, withholding VAT on construction services (2%/6%), mixed-use apportionment, and subcontractor obligations.",
+    readTime: "10 min",
+    tags: ["Construction", "Real Estate", "Property"],
+    featured: false,
+  },
+  {
+    slug: "vat-return-filing-checklist",
+    number: "40",
+    label: "Filing Checklist",
+    title: "VAT Return Filing Checklist Kenya 2026 — Monthly Filing Guide",
+    bluf:
+      "Step-by-step checklist for filing your monthly VAT return on KRA iTax. What documents to prepare, common errors to avoid, data validation checks before submitting, and post-filing confirmation steps to stay compliant.",
+    readTime: "10 min",
+    tags: ["Checklist", "Filing", "iTax"],
+    featured: false,
+  },
+  {
+    slug: "etims-compliance-checklist",
+    number: "41",
+    label: "eTIMS Compliance",
+    title: "eTIMS Compliance Checklist Kenya 2026 — Daily, Monthly & Annual Obligations",
+    bluf:
+      "Complete eTIMS compliance checklist for VAT-registered businesses in Kenya. Daily invoicing requirements, monthly data submission, stock reconciliation, device maintenance, and annual audit-readiness obligations.",
+    readTime: "10 min",
+    tags: ["eTIMS", "Compliance", "Checklist"],
+    featured: false,
+  },
 ]
 
 const breadcrumbSchema = {
@@ -405,6 +525,18 @@ const collectionSchema = {
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/kra-vat-audit-process", name: "KRA VAT Audit Process Kenya 2026" },
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/how-to-apply-for-kra-pin", name: "How to Apply for a KRA PIN Kenya" },
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-deregistration-kenya", name: "VAT Deregistration Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/kra-tax-amnesty-2026", name: "KRA Tax Amnesty 2026: Full Guide to Penalty Waivers" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/tax-compliance-certificate-kenya", name: "Tax Compliance Certificate Kenya 2026: How to Get Your KRA TCC" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/what-happens-if-i-don-t-register-for-vat", name: "What Happens If I Don't Register for VAT in Kenya?" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-rates-kenya", name: "VAT Rates in Kenya 2026 — Standard (16%), Zero-Rated & Exempt" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-fintech-digital-payments-kenya", name: "VAT on Fintech and Digital Payments Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-labour-outsourcing-kenya", name: "VAT on Labour Outsourcing Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-for-ngos-kenya", name: "VAT for NGOs in Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/kra-pin-not-working", name: "KRA PIN Not Working? Troubleshooting Guide 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/etims-invoice-rejected", name: "eTIMS Invoice Rejected? Fixes & Rejection Codes" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-for-construction-real-estate-kenya", name: "VAT for Construction & Real Estate Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-return-filing-checklist", name: "VAT Return Filing Checklist Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/etims-compliance-checklist", name: "eTIMS Compliance Checklist Kenya 2026" },
   ],
 }
 
@@ -417,9 +549,9 @@ export default function ResourcesPage() {
 
   return (
     <div className="bg-canvas min-h-[100dvh]">
-      <Script id="breadcrumb-schema" type="application/ld+json"
+      <script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="collection-schema" type="application/ld+json"
+      <script id="collection-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
 
       {/* Page header */}

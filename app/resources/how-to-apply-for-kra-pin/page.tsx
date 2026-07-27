@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Globe, Buildings, DeviceMobile, IdentificationCard, Users } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
@@ -30,10 +29,22 @@ const articleSchema = {
   mainEntityOfPage: "https://smartvatkenya.co.ke/resources/how-to-apply-for-kra-pin",
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources" },
+    { "@type": "ListItem", position: 3, name: "How to Apply for a KRA PIN in Kenya", item: "https://smartvatkenya.co.ke/resources/how-to-apply-for-kra-pin" },
+  ],
+}
+
 export default function KraPinPost() {
   return (
     <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
-      <Script id="article-schema" type="application/ld+json"
+      <script id="breadcrumb-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Link href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources

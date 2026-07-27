@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import {
   ArrowRight,
   Calculator,
@@ -183,7 +182,7 @@ const WA_BASE = "https://wa.me/254721725958"
 export default function HomePage() {
   return (
     <>
-      <Script
+      <script
         id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

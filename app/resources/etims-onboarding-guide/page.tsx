@@ -1,10 +1,11 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
+import { Flowchart, ETIMSSolutionFlow, ETIMSOnboardingFlow } from "@/components/flowcharts"
+import { Accordion } from "@/components/accordion"
 
 export const metadata: Metadata = constructMetadata({
   title: "eTIMS Kenya Onboarding Guide 2026 | KRA Electronic Tax Invoicing",
@@ -126,11 +127,11 @@ const toc = [
 export default function ETIMSOnboardingPage() {
   return (
     <>
-      <Script id="article-schema" type="application/ld+json"
+      <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <Script id="faq-schema" type="application/ld+json"
+      <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json"
+      <script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Header */}
@@ -272,6 +273,9 @@ export default function ETIMSOnboardingPage() {
           </section>
 
           {/* Section 4 — eTIMS Solution Types */}
+          <Flowchart caption="eTIMS solution selector — find the right option for your business">
+            <ETIMSSolutionFlow />
+          </Flowchart>
           <section id="solution-types" aria-labelledby="solution-types-h">
             <h2 id="solution-types-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               eTIMS Solution Types Explained
@@ -329,6 +333,10 @@ export default function ETIMSOnboardingPage() {
               </a>
             </div>
           </section>
+
+          <Flowchart caption="eTIMS onboarding process — 4 stages from registration to first invoice">
+            <ETIMSOnboardingFlow />
+          </Flowchart>
 
           {/* Section 5 — Step-by-Step Onboarding */}
           <section id="step-by-step" aria-labelledby="step-by-step-h">
@@ -500,10 +508,163 @@ export default function ETIMSOnboardingPage() {
                   <Link href="/resources/etims-penalty-50000-per-month-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                     eTIMS penalty guide
                   </Link>{" "}
-                  for details.
+                  for details. Also note that eTIMS compliance is now a requirement for getting a{" "}
+                  <Link href="/resources/tax-compliance-certificate-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">KRA Tax Compliance Certificate (TCC)</Link>.
                 </p>
               </div>
             </div>
+          </section>
+
+          {/* KRA Official Resources */}
+          <section aria-labelledby="kra-resources-h" className="not-prose">
+            <h2 id="kra-resources-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
+              KRA eTIMS Official Resources
+            </h2>
+            <p className="text-[0.9rem] text-ink-soft leading-relaxed mb-5">
+              KRA publishes detailed guides for each eTIMS solution. These are the official PDFs — we have summarised
+              the key takeaways for each below. Click to expand and download the full guide.
+            </p>
+            <Accordion
+              title="eTIMS GUIDES &amp; MANUALS"
+              items={[
+                {
+                  summary: (
+                    <span><strong className="text-ink">eTIMS Application Procedure</strong> <span className="text-ink-muted font-normal">— 8 pages</span></span>
+                  ),
+                  content: (
+                    <div className="text-[0.83rem] text-ink-muted space-y-2 leading-relaxed">
+                      <p>Complete walk-through of the eTIMS onboarding process from start to finish:</p>
+                      <ul className="space-y-1.5 pl-4">
+                        <li className="list-disc">Signing up on the eTIMS portal at <code className="text-[0.75rem] bg-canvas-alt px-1 py-0.5 rounded">etims.kra.go.ke</code></li>
+                        <li className="list-disc">Submitting your application with business details and KRA PIN</li>
+                        <li className="list-disc">KRA officer review and approval process</li>
+                        <li className="list-disc">Activating your account and setting up your profile</li>
+                      </ul>
+                      <p className="pt-2">
+                        <a href="/forms/kra-etims-onboarding-procedure-guide.pdf" target="_blank" rel="noopener noreferrer"
+                          className="text-brand font-medium hover:underline inline-flex items-center gap-1">
+                          Download PDF <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 0v8M2 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        </a>
+                      </p>
+                    </div>
+                  ),
+                },
+                {
+                  summary: (
+                    <span><strong className="text-ink">eTIMS Online Portal User Guide</strong> <span className="text-ink-muted font-normal">— 11 pages</span></span>
+                  ),
+                  content: (
+                    <div className="text-[0.83rem] text-ink-muted space-y-2 leading-relaxed">
+                      <p>Detailed guide for businesses using the eTIMS Online Portal (service-only suppliers):</p>
+                      <ul className="space-y-1.5 pl-4">
+                        <li className="list-disc">Logging in for the first time and resetting your password</li>
+                        <li className="list-disc">Classifying your inventory items by product type and tax rate</li>
+                        <li className="list-disc">Raising single and bulk invoices with the correct mandatory fields</li>
+                        <li className="list-disc">Printing invoices with QR codes and emailing them to customers</li>
+                      </ul>
+                      <p className="pt-2">
+                        <a href="/forms/kra-etims-online-portal-guide.pdf" target="_blank" rel="noopener noreferrer"
+                          className="text-brand font-medium hover:underline inline-flex items-center gap-1">
+                          Download PDF <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 0v8M2 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        </a>
+                      </p>
+                    </div>
+                  ),
+                },
+                {
+                  summary: (
+                    <span><strong className="text-ink">eTIMS Lite (VAT) User Guide</strong> <span className="text-ink-muted font-normal">— 29 pages</span></span>
+                  ),
+                  content: (
+                    <div className="text-[0.83rem] text-ink-muted space-y-2 leading-relaxed">
+                      <p>Comprehensive guide for small taxpayers using eTIMS Lite from a phone or browser:</p>
+                      <ul className="space-y-1.5 pl-4">
+                        <li className="list-disc">How eTIMS Lite differs from the full eTIMS Client application</li>
+                        <li className="list-disc">Issue invoices, credit notes, and receipts from any device</li>
+                        <li className="list-disc">Managing your product catalogue and customer list</li>
+                        <li className="list-disc">Generating sales reports for your own record-keeping</li>
+                      </ul>
+                      <p className="pt-2">
+                        <a href="/forms/kra-etims-lite-vat-guide.pdf" target="_blank" rel="noopener noreferrer"
+                          className="text-brand font-medium hover:underline inline-flex items-center gap-1">
+                          Download PDF <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 0v8M2 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        </a>
+                      </p>
+                    </div>
+                  ),
+                },
+                {
+                  summary: (
+                    <span><strong className="text-ink">OSCU / VSCU Sign-Up Guide</strong> <span className="text-ink-muted font-normal">— 13 pages</span></span>
+                  ),
+                  content: (
+                    <div className="text-[0.83rem] text-ink-muted space-y-2 leading-relaxed">
+                      <p>For businesses integrating eTIMS with existing POS or ERP systems:</p>
+                      <ul className="space-y-1.5 pl-4">
+                        <li className="list-disc">Step-by-step sign-up for Online Sales Control Unit (OSCU) and Virtual Sales Control Unit (VSCU)</li>
+                        <li className="list-disc">API integration requirements and SDK documentation</li>
+                        <li className="list-disc">Testing and certification process before going live</li>
+                        <li className="list-disc">Penalties for operating an uncertified system: KES 500,000 per month</li>
+                      </ul>
+                      <p className="pt-2">
+                        <a href="/forms/kra-etims-oscu-vscu-guide.pdf" target="_blank" rel="noopener noreferrer"
+                          className="text-brand font-medium hover:underline inline-flex items-center gap-1">
+                          Download PDF <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 0v8M2 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        </a>
+                      </p>
+                    </div>
+                  ),
+                },
+                {
+                  summary: (
+                    <span><strong className="text-ink">eTIMS PayPoint Guides</strong> <span className="text-ink-muted font-normal">— Windows (34pp) + Android (30pp)</span></span>
+                  ),
+                  content: (
+                    <div className="text-[0.83rem] text-ink-muted space-y-2 leading-relaxed">
+                      <p>Full installation and usage manuals for the eTIMS PayPoint application:</p>
+                      <ul className="space-y-1.5 pl-4">
+                        <li className="list-disc">Installing eTIMS PayPoint on Windows POS terminals and Android phones</li>
+                        <li className="list-disc">Configuring taxes, printers, and receipt templates</li>
+                        <li className="list-disc">Daily sales reconciliation and Z-report generation</li>
+                        <li className="list-disc">Offline mode — invoices are queued and synced when connectivity returns</li>
+                      </ul>
+                      <div className="flex gap-4 pt-2">
+                        <a href="/forms/kra-etims-paypoint-windows-guide.pdf" target="_blank" rel="noopener noreferrer"
+                          className="text-brand text-[0.8rem] font-medium hover:underline inline-flex items-center gap-1">
+                          Windows PDF <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 0v8M2 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        </a>
+                        <a href="/forms/kra-etims-paypoint-android-guide.pdf" target="_blank" rel="noopener noreferrer"
+                          className="text-brand text-[0.8rem] font-medium hover:underline inline-flex items-center gap-1">
+                          Android PDF <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 0v8M2 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  ),
+                },
+                {
+                  summary: (
+                    <span><strong className="text-ink">eTIMS Onboarding Guidelines</strong> <span className="text-ink-muted font-normal">— 4 pages</span></span>
+                  ),
+                  content: (
+                    <div className="text-[0.83rem] text-ink-muted space-y-2 leading-relaxed">
+                      <p>Quick-reference eligibility guide for every eTIMS solution type:</p>
+                      <ul className="space-y-1.5 pl-4">
+                        <li className="list-disc">eTIMS Lite: free web-based, for businesses with fewer than 50 invoices per month</li>
+                        <li className="list-disc">eTIMS Client: desktop application for medium-volume businesses</li>
+                        <li className="list-disc">eTIMS Online Portal: for service-only suppliers</li>
+                        <li className="list-disc">VSCU / OSCU: API integration for businesses with existing POS/ERP</li>
+                      </ul>
+                      <p className="pt-2">
+                        <a href="/forms/kra-etims-onboarding-guidelines.pdf" target="_blank" rel="noopener noreferrer"
+                          className="text-brand font-medium hover:underline inline-flex items-center gap-1">
+                          Download PDF <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 0v8M2 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        </a>
+                      </p>
+                    </div>
+                  ),
+                },
+              ]}
+            />
           </section>
 
           {/* FAQ */}

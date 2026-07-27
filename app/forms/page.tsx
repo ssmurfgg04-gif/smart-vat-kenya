@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import { Download, FileText, ArrowUpRight, ChatCircle, SealCheck } from "@phosphor-icons/react/dist/ssr"
 import { KRA_FORMS } from "@/lib/forms"
 
@@ -56,9 +55,9 @@ export default function FormsPage() {
 
   return (
     <>
-      <Script id="breadcrumb-schema" type="application/ld+json"
+      <script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="forms-itemlist-schema" type="application/ld+json"
+      <script id="forms-itemlist-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
       {/* Header */}

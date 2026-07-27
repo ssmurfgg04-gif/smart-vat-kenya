@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, Prohibit } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
@@ -106,11 +105,11 @@ const faqSchema = {
 export default function InputVatPage() {
   return (
     <>
-      <Script id="breadcrumb-schema" type="application/ld+json"
+      <script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="article-schema" type="application/ld+json"
+      <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <Script id="faq-schema" type="application/ld+json"
+      <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="max-w-[880px] mx-auto px-6 lg:px-10 py-12">
@@ -129,6 +128,10 @@ export default function InputVatPage() {
               Get it right and you reduce your monthly VAT bill. Get it wrong and you lose the deduction entirely —
               or face penalties. This guide covers everything from eligibility to the 6-month deadline.
             </p>
+            <div className="flex items-center gap-4 text-[0.75rem] text-ink-muted">
+              <time dateTime="2026-07-25">25 July 2026</time>
+              <span>Smart VAT Kenya</span>
+            </div>
           </header>
 
           <div className="space-y-10">

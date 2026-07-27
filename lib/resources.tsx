@@ -35,6 +35,7 @@ const articles: Resource[] = [
   { slug: "kra-vat-audit-process", title: "KRA VAT Audit Process Kenya 2026" },
   { slug: "how-to-apply-for-kra-pin", title: "How to Apply for a KRA PIN in Kenya" },
   { slug: "vat-deregistration-kenya", title: "VAT Deregistration Kenya 2026" },
+  { slug: "vat-for-ngos-kenya", title: "VAT for NGOs in Kenya 2026" },
 ]
 
 export function getPrevNext(slug: string) {

@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, FileText, Bank, Buildings, Users, Gear } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
@@ -107,11 +106,11 @@ const toc = [
 export default function VATRegistrationChecklistPage() {
   return (
     <>
-      <Script id="article-schema" type="application/ld+json"
+      <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <Script id="faq-schema" type="application/ld+json"
+      <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json"
+      <script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Header */}
@@ -412,6 +411,17 @@ title: "Monthly Filing Calendar Setup",
                 </p>
                 <p className="text-[0.83rem] text-[#8a6500] dark:text-[#ccaa33] leading-relaxed">
                   KRA has been aggressively enforcing eTIMS compliance in 2026. Businesses that issue manual invoices after the 30-day eTIMS window face penalties of up to KES 100,000. See the{" "}<Link href="/resources/etims-penalty-50000-per-month-kenya" className="underline underline-offset-2 hover:text-[#ccaa33]">eTIMS penalty guide</Link>{" "}for full details. Complete your eTIMS onboarding as soon as your VAT PIN is approved — not on the last day.
+                </p>
+              </div>
+            </div>
+            <div className="mt-4 border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
+              <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
+              <div>
+                <p className="font-semibold text-ink text-[0.85rem] mb-1">Also: You Will Need a Tax Compliance Certificate (TCC)</p>
+                <p className="text-[0.83rem] text-ink-muted leading-relaxed">
+                  Once you are VAT-registered and compliant, you may need a{" "}
+                  <Link href="/resources/tax-compliance-certificate-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">KRA Tax Compliance Certificate</Link>{" "}
+                  for tenders, licences, and contracts. eTIMS compliance is now a requirement for TCC issuance.
                 </p>
               </div>
             </div>

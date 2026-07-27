@@ -5,6 +5,29 @@ import { CheckCircle, Circle, ArrowRight } from "@phosphor-icons/react"
 
 const WA_BASE = "https://wa.me/254721725958"
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://smartvatkenya.co.ke/tools" },
+    { "@type": "ListItem", position: 3, name: "eTIMS Compliance Checklist", item: "https://smartvatkenya.co.ke/tools/etims-checklist" },
+  ],
+}
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "eTIMS Compliance Checklist — Is Your Business Ready for KRA Audits?",
+  description: "KRA is aggressively enforcing eTIMS compliance. Use this checklist to assess your readiness before the next audit visit.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-27",
+  dateModified: "2026-07-27",
+  url: "https://smartvatkenya.co.ke/tools/etims-checklist",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/tools/etims-checklist",
+}
+
 const CHECKLIST = [
   { id: "device", label: "eTIMS device (ECD) installed and activated", help: "KRA-issued or approved sales recording device" },
   { id: "stock", label: "Stock/inventory uploaded to eTIMS portal", help: "All items must be registered with descriptions and prices" },
@@ -31,6 +54,10 @@ export default function eTIMSChecklistPage() {
 
   return (
     <div className="bg-canvas min-h-[100dvh]">
+      <script id="breadcrumb-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <div className="bg-canvas-dark px-6 lg:px-10 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
@@ -43,6 +70,7 @@ export default function eTIMSChecklistPage() {
             KRA is aggressively enforcing eTIMS compliance. Use this checklist to assess your readiness before
             the next audit visit. Tick off what you have done and get a score.
           </p>
+          <p className="text-[0.78rem] text-canvas/50 mt-4">Smart VAT Kenya &mdash; Updated July 2026</p>
         </div>
       </div>
 
@@ -111,7 +139,31 @@ export default function eTIMSChecklistPage() {
           </div>
         </section>
 
-        <div className="mt-12 border-t border-hairline pt-8 text-[0.7rem] text-ink-muted leading-relaxed">
+        <section className="mt-12 space-y-4">
+          <h2 className="font-display text-[1.1rem] font-semibold text-ink">Why Each Item Matters in a KRA Audit</h2>
+          <p className="text-[0.85rem] text-ink-muted leading-relaxed">
+            KRA compliance visits follow a structured checklist of their own. They verify that your eTIMS device
+            is physically installed and transmitting data, cross-check your stock register against eTIMS records,
+            and inspect a sample of issued invoices for continuity. The most common findings during 2026 audits
+            include missing stock uploads (items 2 and 9), staff who cannot operate the device (item 8), and
+            gaps in the invoice sequence (item 3). Each unchecked item on this list represents a potential
+            penalty of KES 50,000 per month of non-compliance.
+          </p>
+          <p className="text-[0.85rem] text-ink-muted leading-relaxed">
+            A score below 70% indicates significant audit risk. Businesses scoring below 40% have faced
+            immediate suspension orders during KRA field visits.
+          </p>
+          <div className="flex flex-wrap gap-3 pt-2">
+            <a href="/resources/etims-compliance-checklist" className="inline-flex items-center gap-1.5 text-[0.82rem] font-medium text-brand hover:underline underline-offset-4">
+              Full eTIMS compliance guide <ArrowRight size={12} weight="bold" />
+            </a>
+            <a href="/resources/etims-onboarding-guide" className="inline-flex items-center gap-1.5 text-[0.82rem] font-medium text-brand hover:underline underline-offset-4">
+              eTIMS onboarding walkthrough <ArrowRight size={12} weight="bold" />
+            </a>
+          </div>
+        </section>
+
+        <div className="mt-8 border-t border-hairline pt-8 text-[0.7rem] text-ink-muted leading-relaxed">
           <p>
             Disclaimer: This checklist covers common eTIMS compliance requirements but is not exhaustive.
             KRA compliance requirements vary by business type, sector, and turnover. This tool does not constitute

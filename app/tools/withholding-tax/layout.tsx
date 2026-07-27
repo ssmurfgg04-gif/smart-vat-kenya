@@ -4,17 +4,32 @@ import { constructMetadata } from "@/lib/seo"
 export const metadata: Metadata = constructMetadata({
   title: "Withholding Tax (WHT) Calculator Kenya 2026",
   description:
-    "Calculate the correct KRA withholding tax on payments to contractors, consultants, landlords, and suppliers in Kenya, and avoid penalties on wrong WHT deductions.",
+    "Free Kenya withholding tax calculator. Calculate WHT on management fees, professional services, dividends, interest, royalties, and rental income at current KRA rates.",
   path: "/tools/withholding-tax",
-  keywords: [
-    "withholding tax calculator kenya",
-    "wht rates kenya 2026",
-    "kra withholding tax",
-    "withholding vat kenya 2%",
-    "wht on consultancy kenya",
-  ],
+  keywords: ["withholding tax calculator kenya", "wht calculator kenya", "kra withholding tax rates", "withholding tax kenya 2026"],
 })
 
 export default function ToolLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      <script
+        id="wht-software-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Withholding Tax Calculator Kenya 2026",
+            applicationCategory: "FinanceApplication",
+            operatingSystem: "Any",
+            description:
+              "Free Kenya withholding tax calculator. Calculate WHT on management fees, professional services, dividends, interest, royalties, and rental income.",
+            offers: { "@type": "Offer", price: "0", priceCurrency: "KES" },
+            url: "https://smartvatkenya.co.ke/tools/withholding-tax",
+          }),
+        }}
+      />
+      {children}
+    </>
+  )
 }

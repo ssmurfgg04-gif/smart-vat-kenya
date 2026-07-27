@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowRight, ArrowLeft } from "@phosphor-icons/react/dist/ssr"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 import { RelatedLinks } from "@/components/related-links"
@@ -73,6 +72,16 @@ const faqSchema = {
   })),
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources" },
+    { "@type": "ListItem", position: 3, name: "FAQ", item: "https://smartvatkenya.co.ke/resources/faq" },
+  ],
+}
+
 const WA_BASE = "https://wa.me/254721725958"
 
 /** Contextual internal links surfaced under the answer of any matching question. */
@@ -94,7 +103,9 @@ function relatedLink(question: string, answer: string) {
 export default function FAQPage() {
   return (
     <div className="bg-canvas min-h-[100dvh]">
-      <Script id="faq-schema" type="application/ld+json"
+      <script id="breadcrumb-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}

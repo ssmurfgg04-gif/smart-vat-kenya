@@ -3,7 +3,6 @@ import { DM_Sans, Outfit } from "next/font/google"
 import "./globals.css"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import Script from "next/script"
 import dynamic from "next/dynamic"
 
 const WhatsAppButton = dynamic(() => import("@/components/whatsapp-button").then(m => m.WhatsAppButton))
@@ -379,14 +378,18 @@ export default function RootLayout({
           }
         `}</style>
         
-        <Script
+        <script
           id="local-business-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-          strategy="afterInteractive"
         />
       </head>
       <body className="antialiased font-sans text-ink bg-canvas">
+        <noscript>
+          <div className="bg-amber-50 dark:bg-amber-950/40 border-b border-amber-200 dark:border-amber-800 px-4 py-2.5 text-center text-[0.78rem] text-amber-800 dark:text-amber-300 leading-snug">
+            Smart VAT Kenya uses JavaScript for interactive tools (VAT calculator, penalty estimator) and search. For the best experience, please enable JavaScript in your browser.
+          </div>
+        </noscript>
         <Navbar />
         <main>{children}</main>
         <Footer />

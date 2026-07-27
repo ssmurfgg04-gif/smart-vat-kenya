@@ -5,6 +5,29 @@ import { WarningCircle, Info, ArrowRight } from "@phosphor-icons/react"
 
 const WA_BASE = "https://wa.me/254721725958"
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://smartvatkenya.co.ke/tools" },
+    { "@type": "ListItem", position: 3, name: "eTIMS Penalty Calculator", item: "https://smartvatkenya.co.ke/tools/etims-penalty-calculator" },
+  ],
+}
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "eTIMS Penalty Calculator — What Will Non-Compliance Cost You?",
+  description: "KRA imposes stiff monthly penalties for eTIMS non-compliance. Calculate your potential liability and learn how to avoid KES 500,000/month fines.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-27",
+  dateModified: "2026-07-27",
+  url: "https://smartvatkenya.co.ke/tools/etims-penalty-calculator",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/tools/etims-penalty-calculator",
+}
+
 function formatKES(n: number) {
   return "KES " + n.toLocaleString("en-KE", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 }
@@ -34,6 +57,10 @@ export default function ETIMSPenaltyCalculatorPage() {
 
   return (
     <div className="bg-canvas min-h-[100dvh]">
+      <script id="breadcrumb-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <div className="bg-[#1a2639] px-6 lg:px-10 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-amber-400/80 mb-4">
@@ -47,6 +74,7 @@ export default function ETIMSPenaltyCalculatorPage() {
             non-compliance to KES 500,000 for system integration failure. Add late VAT filing penalties
             and interest, and the numbers add up fast.
           </p>
+          <p className="text-[0.78rem] text-canvas/50 mt-4">Smart VAT Kenya &mdash; Updated July 2026</p>
         </div>
       </div>
 
@@ -200,7 +228,30 @@ export default function ETIMSPenaltyCalculatorPage() {
           </div>
         </section>
 
-        <div className="mt-12 border-t border-hairline pt-8 text-[0.7rem] text-ink-muted leading-relaxed">
+        <section className="mt-12 space-y-4">
+          <h2 className="font-display text-[1.1rem] font-semibold text-ink">How to Avoid eTIMS Penalties</h2>
+          <p className="text-[0.85rem] text-ink-muted leading-relaxed">
+            The best way to avoid eTIMS penalties is to onboard within 30 days of VAT registration and maintain
+            daily compliance. Most penalties result from delayed onboarding (the KES 500,000/month integration
+            penalty applies if your POS or ERP system is not linked to eTIMS), failure to train staff, and
+            gaps in the invoice sequence that KRA flags during reconciliation.
+          </p>
+          <p className="text-[0.85rem] text-ink-muted leading-relaxed">
+            If you already have outstanding penalties, the KRA tax amnesty programme may apply — penalties on
+            pre-2026 tax debts are eligible for 100% waiver if you pay the principal by December 31, 2026.
+            Post-2025 penalties are not covered and must be settled or separately appealed.
+          </p>
+          <div className="flex flex-wrap gap-3 pt-2">
+            <a href="/resources/etims-compliance-checklist" className="inline-flex items-center gap-1.5 text-[0.82rem] font-medium text-brand hover:underline underline-offset-4">
+              Full eTIMS compliance guide <ArrowRight size={12} weight="bold" />
+            </a>
+            <a href="/resources/etims-penalty-50000-per-month-kenya" className="inline-flex items-center gap-1.5 text-[0.82rem] font-medium text-brand hover:underline underline-offset-4">
+              eTIMS penalty reference <ArrowRight size={12} weight="bold" />
+            </a>
+          </div>
+        </section>
+
+        <div className="mt-8 border-t border-hairline pt-8 text-[0.7rem] text-ink-muted leading-relaxed">
           <p>
             Disclaimer: This calculator provides estimates based on the Tax Procedures Act and KRA eTIMS regulations.
             Actual penalties depend on the specific nature of non-compliance, KRA discretion, and any penalty waiver

@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import {
   ArrowRight,
   CheckCircle,
@@ -18,6 +17,7 @@ import {
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
+export const dynamic = "force-static"
 export const metadata: Metadata = constructMetadata({
   title: "VAT Registration Services Mombasa — KES 5,000",
   description:
@@ -189,6 +189,12 @@ const whyUs = [
   { Icon: MapPin, title: "Serving the entire Coast", desc: "From Mombasa CBD to Ukunda, Kilifi to Malindi — we serve every business on the Kenyan Coast remotely." },
 ]
 
+const mombasaBusinessTypes = [
+  { emoji: "🚢", title: "Importers & Exporters", desc: "Mombasa is Kenya's gateway for international trade. If you import or export goods, VAT registration is mandatory — and eTIMS compliance is required for customs clearance." },
+  { emoji: "🏨", title: "Hotels & Tourism", desc: "From Diani to Malindi, hospitality businesses charging 16% VAT must be registered. Input VAT claims on supplies, utilities, and renovations help reduce your tax bill." },
+  { emoji: "📦", title: "Logistics & Shipping", desc: "Freight forwarding, clearing & forwarding, and transport companies need VAT registration to issue compliant invoices and claim input VAT on fuel, maintenance, and port charges." },
+]
+
 const steps = [
   {
     number: "01",
@@ -261,13 +267,13 @@ const faqs = [
 export default function VATRegistrationMombasaPage() {
   return (
     <>
-      <Script id="breadcrumb-schema" type="application/ld+json"
+      <script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="local-business-schema" type="application/ld+json"
+      <script id="local-business-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <Script id="service-schema" type="application/ld+json"
+      <script id="service-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <Script id="faq-schema" type="application/ld+json"
+      <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
@@ -405,6 +411,36 @@ export default function VATRegistrationMombasaPage() {
           </div>
           <p className="mt-6 text-[0.8rem] text-ink-muted">
             Also serving Ukunda, Diani, Kwale, Kilifi, Malindi, Watamu, and the entire Kenyan Coast.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Mombasa businesses need VAT */}
+      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="mombasa-biz-heading">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
+            Mombasa business types
+          </p>
+          <h2 id="mombasa-biz-heading" className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-4 text-balance">
+            Why Mombasa businesses need VAT registration.
+          </h2>
+          <p className="text-[0.9rem] text-ink-muted leading-relaxed max-w-[55ch] mb-10">
+            Mombasa's economy is driven by the port, tourism, and logistics. Here is how VAT
+            registration applies to common Coast-based businesses — and how we help.
+          </p>
+          <div className="grid md:grid-cols-3 gap-5">
+            {mombasaBusinessTypes.map(({ emoji, title, desc }) => (
+              <article key={title} className="border border-hairline rounded-lg p-6 bg-canvas-alt">
+                <span className="text-2xl block mb-3" aria-hidden="true">{emoji}</span>
+                <h3 className="font-display text-[0.95rem] font-semibold text-ink mb-2">{title}</h3>
+                <p className="text-[0.83rem] text-ink-muted leading-relaxed">{desc}</p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-6 text-[0.82rem] text-ink-muted leading-relaxed">
+            <strong className="text-ink font-medium">KRA Southern Region office:</strong> KRA has a regional office near the
+            Port of Mombasa. While you never need to visit it in person, we are familiar with Mombasa-specific
+            KRA compliance requirements for port-related businesses.
           </p>
         </div>
       </section>

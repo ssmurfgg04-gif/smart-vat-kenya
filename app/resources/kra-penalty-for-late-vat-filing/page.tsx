@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
@@ -108,11 +107,11 @@ const toc = [
 export default function KRAPenaltyPage() {
   return (
     <>
-      <Script id="article-schema" type="application/ld+json"
+      <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <Script id="faq-schema" type="application/ld+json"
+      <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json"
+      <script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Header */}
@@ -350,6 +349,14 @@ export default function KRAPenaltyPage() {
                 ))}
               </ul>
             </div>
+            <div className="mt-6 border border-brand/25 bg-brand-muted rounded-lg p-4 flex items-start gap-3">
+              <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
+              <p className="text-[0.83rem] leading-relaxed">
+                <strong className="text-ink">Need to clear multiple penalties?</strong> KRA's tax amnesty programme lets you voluntarily disclose unpaid taxes and get 100% of penalties and interest waived. See our{" "}
+                <Link href="/resources/kra-tax-amnesty-2026" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">KRA Tax Amnesty 2026 guide</Link>{" "}
+                for eligibility and application steps.
+              </p>
+            </div>
           </section>
 
           {/* Section 4 — Can KRA Blacklist You for Unpaid Penalties? */}
@@ -371,7 +378,7 @@ export default function KRAPenaltyPage() {
                   {
                     icon: Warning,
                     title: "No Tax Compliance Certificate (TCC)",
-                    desc: "Unpaid penalties block you from getting a valid Tax Compliance Certificate. Without a TCC, you cannot bid for government tenders, access certain county business permits, or clear goods through customs. Many private companies also require a valid TCC before signing contracts.",
+                    desc: 'Unpaid penalties block you from getting a valid <a href="/resources/tax-compliance-certificate-kenya" class="underline underline-offset-2 font-medium text-brand">Tax Compliance Certificate</a>. Without a TCC, you cannot bid for government tenders, access certain county business permits, or clear goods through customs. Many private companies also require a valid TCC before signing contracts.',
                   },
                   {
                     icon: Warning,
@@ -383,7 +390,7 @@ export default function KRAPenaltyPage() {
                     <Icon size={17} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
                     <div>
                       <p className="font-semibold text-ink text-[0.88rem]">{title}</p>
-                      <p className="text-[0.83rem] text-ink-muted mt-0.5 leading-relaxed">{desc}</p>
+                      <p className="text-[0.83rem] text-ink-muted mt-0.5 leading-relaxed" dangerouslySetInnerHTML={{ __html: desc }} />
                     </div>
                   </div>
                 ))}

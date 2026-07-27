@@ -5,6 +5,29 @@ import { Clock, ArrowRight, Info } from "@phosphor-icons/react"
 
 const WA_BASE = "https://wa.me/254721725958"
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://smartvatkenya.co.ke/tools" },
+    { "@type": "ListItem", position: 3, name: "Amnesty Savings Calculator", item: "https://smartvatkenya.co.ke/tools/amnesty-calculator" },
+  ],
+}
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "KRA Tax Amnesty Savings Calculator — How Much Could You Save?",
+  description: "Calculate how much you could save under the KRA tax amnesty. Waives 100% of penalties and interest on pre-2026 tax debt. Updated for 2026.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-27",
+  dateModified: "2026-07-27",
+  url: "https://smartvatkenya.co.ke/tools/amnesty-calculator",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/tools/amnesty-calculator",
+}
+
 const AMNESTY_DEADLINE = new Date("2026-12-31T23:59:59+03:00")
 
 function formatKES(n: number) {
@@ -84,6 +107,10 @@ export default function AmnestyCalculatorPage() {
 
   return (
     <div className="bg-canvas min-h-[100dvh]">
+      <script id="breadcrumb-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <div className="bg-[#1a2639] px-6 lg:px-10 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-amber-400/80 mb-4">
@@ -96,6 +123,7 @@ export default function AmnestyCalculatorPage() {
             The KRA tax amnesty waives 100% of penalties, interest, and fines on pre-2026 tax debts.
             Find out how much you could save before the December 31, 2026 deadline.
           </p>
+          <p className="text-[0.78rem] text-canvas/50 mt-4">Smart VAT Kenya &mdash; Updated July 2026</p>
         </div>
       </div>
 
@@ -257,7 +285,31 @@ export default function AmnestyCalculatorPage() {
           </div>
         </section>
 
-        <div className="mt-12 border-t border-hairline pt-8 text-[0.7rem] text-ink-muted leading-relaxed">
+        {/* Educational content */}
+        <section className="mt-12 space-y-6">
+          <h2 className="font-display text-[1.1rem] font-semibold text-ink">How the Amnesty Savings Calculation Works</h2>
+          <p className="text-[0.85rem] text-ink-muted leading-relaxed">
+            The calculator estimates your total tax liability <strong>with</strong> and <strong>without</strong> the amnesty.
+            Without amnesty, you pay the principal tax plus late-filing penalties (calculated per tax type: a flat minimum or 5–25% of tax),
+            plus interest accrued at 1% per month on the unpaid principal.
+            With the amnesty, only the principal tax is due — 100% of penalties and interest are waived.
+          </p>
+          <p className="text-[0.85rem] text-ink-muted leading-relaxed">
+            The savings shown represent the total penalties and interest that would be forgiven if you pay the principal by December 31, 2026.
+            Different tax types have different penalty structures: VAT attracts a minimum of KES 10,000 or 5% of tax,
+            while PAYE carries a stiffer 25% penalty rate.
+          </p>
+          <div className="flex flex-wrap gap-3 pt-2">
+            <a href="/resources/kra-tax-amnesty-2026" className="inline-flex items-center gap-1.5 text-[0.82rem] font-medium text-brand hover:underline underline-offset-4">
+              Full amnesty guide <ArrowRight size={12} weight="bold" />
+            </a>
+            <a href="/resources/nil-returns-tax-amnesty" className="inline-flex items-center gap-1.5 text-[0.82rem] font-medium text-brand hover:underline underline-offset-4">
+              Nil returns and penalty waivers <ArrowRight size={12} weight="bold" />
+            </a>
+          </div>
+        </section>
+
+        <div className="mt-8 border-t border-hairline pt-8 text-[0.7rem] text-ink-muted leading-relaxed">
           <p>
             Disclaimer: This calculator provides estimates based on the Finance Act 2026 amnesty provisions (Section 37E, Tax Procedures Act).
             Actual savings depend on your specific tax ledger, whether penalties are from pre-2026 periods, and KRA verification.

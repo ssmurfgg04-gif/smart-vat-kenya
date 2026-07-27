@@ -5,6 +5,29 @@ import { ArrowsLeftRight, ArrowRight } from "@phosphor-icons/react"
 
 const WA_BASE = "https://wa.me/254721725958"
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://smartvatkenya.co.ke/tools" },
+    { "@type": "ListItem", position: 3, name: "VAT vs TOT", item: "https://smartvatkenya.co.ke/tools/vat-vs-tot" },
+  ],
+}
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "VAT vs Turnover Tax (TOT) — Which is Right for Your Business?",
+  description: "Compare your effective tax burden under VAT and Turnover Tax regimes based on your annual turnover. Updated for 2026.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-27",
+  dateModified: "2026-07-27",
+  url: "https://smartvatkenya.co.ke/tools/vat-vs-tot",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/tools/vat-vs-tot",
+}
+
 function formatKES(n: number) {
   return "KES " + n.toLocaleString("en-KE", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 }
@@ -31,6 +54,10 @@ export default function VATvsTOTPage() {
 
   return (
     <div className="bg-canvas min-h-[100dvh]">
+      <script id="breadcrumb-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <div className="bg-canvas-dark px-6 lg:px-10 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
@@ -43,6 +70,7 @@ export default function VATvsTOTPage() {
             Compare your effective tax burden under VAT and Turnover Tax regimes based on your annual turnover.
             Choose the regime that saves you the most.
           </p>
+          <p className="text-[0.78rem] text-canvas/50 mt-4">Smart VAT Kenya &mdash; Updated July 2026</p>
         </div>
       </div>
 
@@ -154,7 +182,30 @@ export default function VATvsTOTPage() {
           </div>
         </section>
 
-        <div className="mt-12 border-t border-hairline pt-8 text-[0.7rem] text-ink-muted leading-relaxed">
+        <section className="mt-12 space-y-4">
+          <h2 className="font-display text-[1.1rem] font-semibold text-ink">When to Choose VAT vs TOT</h2>
+          <p className="text-[0.85rem] text-ink-muted leading-relaxed">
+            If your turnover is below KES 5 million, you can choose between VAT (voluntary registration)
+            and TOT. VAT may be cheaper if you have significant VAT-able expenses (80%+ input ratio),
+            because you can claim the input VAT back. TOT at 3% of gross turnover is simpler —
+            no monthly filing, no input claims, no eTIMS — but you cannot reclaim any VAT on purchases.
+          </p>
+          <p className="text-[0.85rem] text-ink-muted leading-relaxed">
+            Above KES 5 million turnover, VAT registration is mandatory. However, you may still be
+            eligible for TOT as your income tax regime if your turnover is between KES 1M and KES 50M.
+            Businesses below KES 1M turnover pay no turnover tax at all.
+          </p>
+          <div className="flex flex-wrap gap-3 pt-2">
+            <a href="/resources/vat-vs-turnover-tax" className="inline-flex items-center gap-1.5 text-[0.82rem] font-medium text-brand hover:underline underline-offset-4">
+              Detailed VAT vs TOT guide <ArrowRight size={12} weight="bold" />
+            </a>
+            <a href="/services/vat-registration" className="inline-flex items-center gap-1.5 text-[0.82rem] font-medium text-brand hover:underline underline-offset-4">
+              VAT registration service <ArrowRight size={12} weight="bold" />
+            </a>
+          </div>
+        </section>
+
+        <div className="mt-8 border-t border-hairline pt-8 text-[0.7rem] text-ink-muted leading-relaxed">
           <p>
             Disclaimer: This comparison is for informational purposes and shows estimated effective tax costs.
             It assumes 80% of turnover goes to VAT-able expenses with full input credit. Actual input credit and

@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
@@ -108,11 +107,11 @@ const toc = [
 export default function VatReturnFilingPage() {
   return (
     <>
-      <Script id="article-schema" type="application/ld+json"
+      <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <Script id="faq-schema" type="application/ld+json"
+      <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json"
+      <script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Header */}
@@ -473,6 +472,14 @@ export default function VatReturnFilingPage() {
               </p>
             </div>
           </section>
+
+          <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
+            <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
+            <p className="text-[0.83rem] text-ink-muted leading-relaxed">
+              <strong className="text-ink">Need the official KRA guide?</strong> Download the complete iTax VAT return filing manual and other KRA guides from our{" "}
+              <Link href="/forms" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">KRA forms &amp; manuals page</Link>.
+            </p>
+          </div>
 
           {/* FAQ */}
           <section id="faq" aria-labelledby="faq-h">

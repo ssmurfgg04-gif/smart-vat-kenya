@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import {
   ArrowRight,
   CheckCircle,
@@ -25,6 +24,7 @@ import {
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
+export const dynamic = "force-static"
 export const metadata: Metadata = constructMetadata({
   title: "eTIMS Onboarding Kenya — KES 3,000",
   description:
@@ -200,11 +200,11 @@ export default function ETIMSOnboardingPage() {
 
   return (
     <>
-      <Script id="etims-service-schema" type="application/ld+json"
+      <script id="etims-service-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <Script id="etims-breadcrumb-schema" type="application/ld+json"
+      <script id="etims-breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="etims-faq-schema" type="application/ld+json"
+      <script id="etims-faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}

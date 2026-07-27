@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import {
   ArrowRight,
   CheckCircle,
@@ -16,6 +15,7 @@ import {
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
+export const dynamic = "force-static"
 export const metadata: Metadata = constructMetadata({
   title: "KRA Penalty Waiver Kenya — KES 4,000 per Application",
   description:
@@ -129,11 +129,11 @@ export default function KRAPenaltyWaiverPage() {
 
   return (
     <>
-      <Script id="service-schema" type="application/ld+json"
+      <script id="service-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json"
+      <script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="faq-schema" type="application/ld+json"
+      <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* ── Header ──────────────────────────────────────────── */}

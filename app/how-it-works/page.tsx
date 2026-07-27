@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import {
   ArrowRight,
   CheckCircle,
@@ -138,9 +137,9 @@ const guarantees = [
 export default function HowItWorksPage() {
   return (
     <div className="bg-canvas min-h-[100dvh]">
-      <Script id="breadcrumb-schema" type="application/ld+json"
+      <script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="howto-schema" type="application/ld+json"
+      <script id="howto-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       {/* Header */}

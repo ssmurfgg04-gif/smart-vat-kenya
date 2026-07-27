@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import {
   ArrowRight,
   CheckCircle,
@@ -18,6 +17,7 @@ import {
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
+export const dynamic = "force-static"
 export const metadata: Metadata = constructMetadata({
   title: "VAT Registration Services Kisumu — KES 5,000",
   description:
@@ -211,6 +211,12 @@ const steps = [
   },
 ]
 
+const kisumuBusinessTypes = [
+  { emoji: "🐟", title: "Fish Processing & Lake Victoria Trade", desc: "Kisumu's fish processing and lake transport businesses must charge VAT on taxable supplies. Input VAT claims on boats, cooling equipment, and packaging materials can significantly reduce net VAT payable." },
+  { emoji: "🌾", title: "Agriculture & Agro-Processing", desc: "Agricultural produce is generally exempt from VAT, but processed and packaged products attract 16% VAT. Milling, drying, and packaging operations in Kisumu County must be VAT-registered." },
+  { emoji: "🛂", title: "Cross-Border Trade (Uganda & Tanzania)", desc: "Kisumu's proximity to the Busia and Isebania border crossings means many businesses trade across East Africa. Exports of goods are zero-rated — you charge 0% VAT and claim input VAT refunds." },
+]
+
 const faqs = [
   {
     q: "Do I need to travel to Nairobi for VAT registration?",
@@ -241,13 +247,13 @@ const faqs = [
 export default function VATRegistrationKisumuPage() {
   return (
     <>
-      <Script id="breadcrumb-schema" type="application/ld+json"
+      <script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="service-schema" type="application/ld+json"
+      <script id="service-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <Script id="local-business-schema" type="application/ld+json"
+      <script id="local-business-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <Script id="faq-schema" type="application/ld+json"
+      <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
@@ -391,6 +397,37 @@ export default function VATRegistrationKisumuPage() {
               </span>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Why Kisumu businesses need VAT */}
+      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="kisumu-biz-heading">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
+            Kisumu business landscape
+          </p>
+          <h2 id="kisumu-biz-heading" className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-4 text-balance">
+            Why Kisumu businesses need VAT registration.
+          </h2>
+          <p className="text-[0.9rem] text-ink-muted leading-relaxed max-w-[55ch] mb-10">
+            Kisumu is the commercial hub of Western Kenya. From Lake Victoria fish processing
+            to cross-border trade with Uganda and Tanzania, here is how VAT applies to common
+            Kisumu-based businesses.
+          </p>
+          <div className="grid md:grid-cols-3 gap-5">
+            {kisumuBusinessTypes.map(({ emoji, title, desc }) => (
+              <article key={title} className="border border-hairline rounded-lg p-6 bg-canvas-alt">
+                <span className="text-2xl block mb-3" aria-hidden="true">{emoji}</span>
+                <h3 className="font-display text-[0.95rem] font-semibold text-ink mb-2">{title}</h3>
+                <p className="text-[0.83rem] text-ink-muted leading-relaxed">{desc}</p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-6 text-[0.82rem] text-ink-muted leading-relaxed">
+            <strong className="text-ink font-medium">KRA Lake Region office:</strong> KRA has a regional office
+            in Kisumu serving Western Kenya. While your VAT registration is handled entirely online,
+            we understand the compliance landscape for Kisumu and Lake Region businesses.
+          </p>
         </div>
       </section>
 

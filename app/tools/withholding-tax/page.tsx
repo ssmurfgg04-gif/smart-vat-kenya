@@ -5,6 +5,29 @@ import { Calculator, ArrowRight } from "@phosphor-icons/react"
 
 const WA_BASE = "https://wa.me/254721725958"
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://smartvatkenya.co.ke/tools" },
+    { "@type": "ListItem", position: 3, name: "Withholding Tax Calculator", item: "https://smartvatkenya.co.ke/tools/withholding-tax" },
+  ],
+}
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Withholding Tax (WHT) Calculator — Know What to Deduct",
+  description: "Calculate the correct withholding tax on payments to contractors, consultants, landlords, and suppliers. Avoid KRA penalties on incorrect WHT deductions.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-27",
+  dateModified: "2026-07-27",
+  url: "https://smartvatkenya.co.ke/tools/withholding-tax",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/tools/withholding-tax",
+}
+
 function formatKES(n: number) {
   return "KES " + n.toLocaleString("en-KE", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 }
@@ -39,6 +62,10 @@ export default function WHTPage() {
 
   return (
     <div className="bg-canvas min-h-[100dvh]">
+      <script id="breadcrumb-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <div className="bg-canvas-dark px-6 lg:px-10 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
@@ -51,6 +78,7 @@ export default function WHTPage() {
             Calculate the correct withholding tax on payments to contractors, consultants, landlords, and suppliers.
             Avoid KRA penalties on incorrect WHT deductions.
           </p>
+          <p className="text-[0.78rem] text-canvas/50 mt-4">Smart VAT Kenya &mdash; Updated July 2026</p>
         </div>
       </div>
 
@@ -185,7 +213,29 @@ export default function WHTPage() {
           </details>
         </section>
 
-        <div className="mt-12 border-t border-hairline pt-8 text-[0.7rem] text-ink-muted leading-relaxed">
+        <section className="mt-12 space-y-4">
+          <h2 className="font-display text-[1.1rem] font-semibold text-ink">When Withholding Tax Applies</h2>
+          <p className="text-[0.85rem] text-ink-muted leading-relaxed">
+            WHT must be deducted on payments to resident payees for management fees, royalties, dividends,
+            interest, commercial rent, supplier payments, and commissions whenever the payment exceeds the
+            applicable threshold (KES 24,000 for most categories, KES 50,000 for goods supply). The deducted
+            amount must be remitted to KRA within 5 working days after the deduction.
+          </p>
+          <p className="text-[0.85rem] text-ink-muted leading-relaxed">
+            Non-resident payees face different rates (typically 5–20% depending on double taxation treaties)
+            and the thresholds do not apply — WHT is deducted from the first shilling. The most common mistake
+            businesses make is treating supplier payments for goods as WHT-exempt when the supplier is below
+            the VAT threshold. All payments above KES 50,000 for goods supplied by a resident contractor
+            attract 3% WHT.
+          </p>
+          <div className="flex flex-wrap gap-3 pt-2">
+            <a href="/resources/withholding-vat-kenya" className="inline-flex items-center gap-1.5 text-[0.82rem] font-medium text-brand hover:underline underline-offset-4">
+              Withholding VAT guide <ArrowRight size={12} weight="bold" />
+            </a>
+          </div>
+        </section>
+
+        <div className="mt-8 border-t border-hairline pt-8 text-[0.7rem] text-ink-muted leading-relaxed">
           <p>
             Disclaimer: This calculator is based on standard KRA WHT rates for resident payees. Non-resident rates differ
             (typically 5–20% depending on the treaty). Always verify with the KRA iTax portal or consult a registered

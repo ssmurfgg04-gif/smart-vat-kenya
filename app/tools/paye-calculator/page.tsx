@@ -5,6 +5,29 @@ import { Calculator, Info, ArrowRight } from "@phosphor-icons/react"
 
 const WA_BASE = "https://wa.me/254721725958"
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://smartvatkenya.co.ke/tools" },
+    { "@type": "ListItem", position: 3, name: "PAYE Calculator", item: "https://smartvatkenya.co.ke/tools/paye-calculator" },
+  ],
+}
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Kenya PAYE Calculator 2026 — Net Salary After Tax",
+  description: "Calculate your monthly PAYE, NSSF, SHIF, Housing Levy, and take-home pay using current KRA tax bands. Updated for 2026.",
+  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  datePublished: "2026-07-27",
+  dateModified: "2026-07-27",
+  url: "https://smartvatkenya.co.ke/tools/paye-calculator",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/tools/paye-calculator",
+}
+
 function formatKES(n: number) {
   return "KES " + n.toLocaleString("en-KE", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 }
@@ -49,6 +72,10 @@ export default function PAYECalculatorPage() {
 
   return (
     <div className="bg-canvas min-h-[100dvh]">
+      <script id="breadcrumb-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="article-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <div className="bg-canvas-dark px-6 lg:px-10 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
@@ -60,6 +87,7 @@ export default function PAYECalculatorPage() {
           <p className="text-[0.95rem] text-canvas/70 max-w-[60ch] leading-relaxed">
             Calculate your monthly PAYE, NSSF, SHIF, Housing Levy, and take-home pay using current KRA tax bands. Updated for 2026.
           </p>
+          <p className="text-[0.78rem] text-canvas/50 mt-4">Smart VAT Kenya &mdash; Updated July 2026</p>
         </div>
       </div>
 
@@ -149,7 +177,27 @@ export default function PAYECalculatorPage() {
           </details>
         </section>
 
-        <div className="mt-12 border-t border-hairline pt-8 text-[0.7rem] text-ink-muted leading-relaxed">
+        <section className="mt-12 space-y-4">
+          <h2 className="font-display text-[1.1rem] font-semibold text-ink">Understanding Your PAYE Deductions</h2>
+          <p className="text-[0.85rem] text-ink-muted leading-relaxed">
+            PAYE (Pay As You Earn) is calculated on your taxable income after deducting NSSF, SHIF, and Housing Levy.
+            The 2026 tax bands are: 10% on the first KES 24,000, 25% on KES 24,001–32,333, 30% on KES 32,334–500,000,
+            32.5% on KES 500,001–800,000, and 35% on income above KES 800,000. A personal relief of KES 2,400/month
+            is subtracted from the gross tax.
+          </p>
+          <p className="text-[0.85rem] text-ink-muted leading-relaxed">
+            NSSF is calculated at 6% of pensionable pay up to a maximum of KES 4,320/month (Tier I + Tier II).
+            SHIF (the new healthcare levy) is 2.75% of gross salary with a minimum of KES 300. The Affordable
+            Housing Levy is 1.5% of gross salary. Employers match NSSF and Housing Levy contributions.
+          </p>
+          <div className="flex flex-wrap gap-3 pt-2">
+            <a href="/services/monthly-vat-filing" className="inline-flex items-center gap-1.5 text-[0.82rem] font-medium text-brand hover:underline underline-offset-4">
+              Monthly PAYE filing service <ArrowRight size={12} weight="bold" />
+            </a>
+          </div>
+        </section>
+
+        <div className="mt-8 border-t border-hairline pt-8 text-[0.7rem] text-ink-muted leading-relaxed">
           <p>
             Disclaimer: This calculator provides estimates based on current KRA guidelines (2026 tax bands, NSSF rates, SHIF 2.75%, Housing Levy 1.5%).
             Actual deductions may vary based on employer-specific pension schemes, insurance relief, mortgage interest, or other allowable deductions.

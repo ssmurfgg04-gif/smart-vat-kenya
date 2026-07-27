@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 import { ArticleGrid } from "@/lib/resources"
 
@@ -125,17 +124,17 @@ const wa = (t: string) => `${WA_BASE}${encodeURIComponent(t)}`
 export default function NilReturnsTaxAmnestyPage() {
   return (
     <>
-      <Script
+      <script
         id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Script
+      <script
         id="article-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Script
+      <script
         id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -163,7 +162,11 @@ export default function NilReturnsTaxAmnestyPage() {
             Nil returns are the most misunderstood part of Kenya VAT compliance. File them wrong
             and you pay KES 10,000 per month. File them right and KRA never bothers you.
             This guide covers both the how and the what-if-you-already-missed-the-deadline.
-          </p>
+            </p>
+            <div className="flex items-center gap-4 text-[0.75rem] text-ink-muted">
+              <time dateTime="2026-07-25">25 July 2026</time>
+              <span>Smart VAT Kenya</span>
+            </div>
         </header>
 
         {/* ELI5 box */}
@@ -427,6 +430,10 @@ export default function NilReturnsTaxAmnestyPage() {
                 and KRA waives the KES 52,000 in penalties and interest.
               </p>
             </div>
+            <p className="mt-4 text-[0.85rem] text-ink-muted leading-relaxed">
+              For a complete breakdown of eligibility, deadlines, and what happens after you apply, see our{" "}
+              <Link href="/resources/kra-tax-amnesty-2026" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">dedicated KRA Tax Amnesty 2026 guide</Link>.
+            </p>
           </div>
         </section>
 

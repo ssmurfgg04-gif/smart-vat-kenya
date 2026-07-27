@@ -34,6 +34,8 @@ const resources = [
   'vat-special-table-risks',
   'vat-vs-turnover-tax',
   'what-happens-if-i-don-t-register-for-vat',
+  'kra-tax-amnesty-2026',
+  'tax-compliance-certificate-kenya',
   'withholding-vat-kenya',
 ]
 

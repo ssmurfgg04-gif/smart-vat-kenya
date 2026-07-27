@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
 import { constructMetadata } from "@/lib/seo"
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
+import { Flowchart, VATRegistrationFlow } from "@/components/flowcharts"
 
 export const metadata: Metadata = constructMetadata({
   title: "How to Register for VAT in Kenya on iTax (Step-by-Step 2026)",
@@ -109,11 +109,11 @@ const toc = [
 export default function Pillar1Page() {
   return (
     <>
-      <Script id="article-schema" type="application/ld+json"
+      <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <Script id="faq-schema" type="application/ld+json"
+      <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json"
+      <script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Header */}
@@ -147,6 +147,10 @@ export default function Pillar1Page() {
             <strong className="text-ink">KES 5,000</strong>.
           </p>
         </div>
+
+        <Flowchart caption="VAT registration decision flowchart — from turnover check to PIN issued">
+          <VATRegistrationFlow />
+        </Flowchart>
 
         {/* Table of contents */}
         <nav aria-label="Table of contents" className="mb-12">
@@ -392,6 +396,13 @@ export default function Pillar1Page() {
                   <Link href="/resources/kra-penalty-for-late-vat-filing" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                     full KRA penalty guide
                   </Link>.
+                </p>
+              </div>
+              <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
+                <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
+                <p className="text-[0.83rem] text-ink-muted leading-relaxed">
+                  <strong className="text-ink">Download the official guides:</strong> Get the complete KRA VAT registration guide, iTax manuals, and eTIMS PDFs from our{" "}
+                  <Link href="/forms" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">KRA forms &amp; manuals page</Link>.
                 </p>
               </div>
             </div>

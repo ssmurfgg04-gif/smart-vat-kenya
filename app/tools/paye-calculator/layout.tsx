@@ -16,5 +16,26 @@ export const metadata: Metadata = constructMetadata({
 })
 
 export default function ToolLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      <script
+        id="paye-software-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Kenya PAYE Calculator 2026",
+            applicationCategory: "FinanceApplication",
+            operatingSystem: "Any",
+            description:
+              "Free Kenya PAYE calculator for 2026. Calculates monthly PAYE, NSSF, SHIF, Housing Levy, and net take-home pay using current KRA tax bands and reliefs.",
+            offers: { "@type": "Offer", price: "0", priceCurrency: "KES" },
+            url: "https://smartvatkenya.co.ke/tools/paye-calculator",
+          }),
+        }}
+      />
+      {children}
+    </>
+  )
 }
