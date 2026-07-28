@@ -36,6 +36,9 @@ const articles: Resource[] = [
   { slug: "how-to-apply-for-kra-pin", title: "How to Apply for a KRA PIN in Kenya" },
   { slug: "vat-deregistration-kenya", title: "VAT Deregistration Kenya 2026" },
   { slug: "vat-for-ngos-kenya", title: "VAT for NGOs in Kenya 2026" },
+  { slug: "kra-status-code-500-itax-errors", title: "KRA Status Code 500 iTax Errors" },
+  { slug: "small-taxpayer-regime-kenya", title: "Small Taxpayer Regime Kenya" },
+  { slug: "etims-down-offline-invoicing", title: "KRA eTIMS Down? Offline Invoicing Guide" },
 ]
 
 export function getPrevNext(slug: string) {

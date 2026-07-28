@@ -37,6 +37,15 @@ const resources = [
   'kra-tax-amnesty-2026',
   'tax-compliance-certificate-kenya',
   'withholding-vat-kenya',
+  'vat-for-ngos-kenya',
+  'kra-pin-not-working',
+  'etims-invoice-rejected',
+  'vat-for-construction-real-estate-kenya',
+  'vat-return-filing-checklist',
+  'etims-compliance-checklist',
+  'kra-status-code-500-itax-errors',
+  'small-taxpayer-regime-kenya',
+  'etims-down-offline-invoicing',
 ]
 
 const services = [

@@ -478,6 +478,39 @@ const pillars = [
     tags: ["eTIMS", "Compliance", "Checklist"],
     featured: false,
   },
+  {
+    slug: "kra-status-code-500-itax-errors",
+    number: "42",
+    label: "iTax Error 500",
+    title: "KRA Status Code 500 iTax Errors — Causes and Fixes (July 2026 Outage)",
+    bluf:
+      "KRA iTax Error 500 means the portal server is down or overloaded. Here is why it happens during Kenya's tax season, how to check if it is a KRA outage vs your connection, and what to do when you get a blank white page on deadline day.",
+    readTime: "8 min",
+    tags: ["iTax", "Error 500", "Troubleshooting"],
+    featured: false,
+  },
+  {
+    slug: "small-taxpayer-regime-kenya",
+    number: "43",
+    label: "Small Taxpayer",
+    title: "Small Taxpayer Regime Kenya — VAT Thresholds & Simplified Compliance 2026",
+    bluf:
+      "Kenya's small taxpayer regime covers businesses under KES 5 million turnover. Turnover Tax (1-3%) vs VAT (16%), eTIMS obligations for all businesses regardless of size, and whether voluntary VAT registration makes sense for your small business.",
+    readTime: "9 min",
+    tags: ["Small Taxpayer", "Turnover Tax", "Decision Guide"],
+    featured: false,
+  },
+  {
+    slug: "etims-down-offline-invoicing",
+    number: "44",
+    label: "eTIMS Down",
+    title: "KRA eTIMS Down? How to Invoice Offline and Sync When the Portal Is Not Working",
+    bluf:
+      "KRA eTIMS goes down regularly. eTIMS Client users can invoice offline with automatic sync. eTIMS Lite users cannot. Here is what to do during an outage, how to sync offline invoices, and how to avoid penalties.",
+    readTime: "8 min",
+    tags: ["eTIMS", "Offline", "Invoicing"],
+    featured: false,
+  },
 ]
 
 const breadcrumbSchema = {
@@ -537,6 +570,9 @@ const collectionSchema = {
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-for-construction-real-estate-kenya", name: "VAT for Construction & Real Estate Kenya 2026" },
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/vat-return-filing-checklist", name: "VAT Return Filing Checklist Kenya 2026" },
     { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/etims-compliance-checklist", name: "eTIMS Compliance Checklist Kenya 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/kra-status-code-500-itax-errors", name: "KRA Status Code 500 iTax Errors — Causes and Fixes 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/small-taxpayer-regime-kenya", name: "Small Taxpayer Regime Kenya — VAT Thresholds 2026" },
+    { "@type": "Article", url: "https://smartvatkenya.co.ke/resources/etims-down-offline-invoicing", name: "KRA eTIMS Down? How to Invoice Offline and Sync 2026" },
   ],
 }
 

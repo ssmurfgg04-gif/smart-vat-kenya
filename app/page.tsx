@@ -316,7 +316,11 @@ export default function HomePage() {
             Why VAT registration and iTax filing is hard for Kenyan SME owners.
           </h2>
           <p className="text-[0.9rem] text-ink-muted max-w-[52ch] mb-16 leading-relaxed">
-            KRA's portal crashes 2–3 times per week. Facilitators quote KES 15,000–30,000.
+            KRA's{" "}
+            <Link href="/resources/itax-portal-not-working" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+              portal crashes 2–3 times per week
+            </Link>
+            . Facilitators quote KES 15,000–30,000.
             Missing the 20th deadline costs KES 10,000 automatically.
           </p>
 

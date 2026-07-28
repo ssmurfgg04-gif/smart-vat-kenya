@@ -351,6 +351,7 @@ export default function ETIMSOnboardingPage() {
                 {
                   step: 1,
                   title: "Log in to itax.kra.go.ke",
+                  title: "Log in to itax.kra.go.ke",
                   detail: "Use your KRA PIN and password. If you do not have a KRA PIN, register for one first at the iTax portal under 'New PIN Registration'.",
                 },
                 {
@@ -394,6 +395,12 @@ export default function ETIMSOnboardingPage() {
                   <div>
                     <p className="font-semibold text-ink text-[0.9rem]">{title}</p>
                     <p className="text-[0.83rem] text-ink-muted mt-0.5 leading-relaxed">{detail}</p>
+                    {step === 1 && (
+                      <p className="text-[0.78rem] text-ink-muted mt-2 leading-relaxed">
+                        Portal not loading? See our{" "}
+                        <Link href="/resources/itax-portal-not-working" className="text-brand underline underline-offset-2 hover:text-brand-hover">iTax troubleshooting guide</Link>.
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}

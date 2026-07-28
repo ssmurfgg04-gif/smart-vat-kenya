@@ -142,7 +142,10 @@ export default function ITaxPortalNotWorkingPage() {
           <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
             KRA iTax Portal Not Working? Here's What to Do
           </h1>
-          <p className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; KRA-registered VAT agents &mdash; Updated July 2026</p>
+          <div className="flex flex-wrap items-center gap-3 mt-4">
+            <span className="font-mono text-[0.62rem] uppercase tracking-widest bg-brand/20 text-brand px-2.5 py-1 rounded-sm">Last updated: July 25, 2026</span>
+            <span className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; KRA-registered VAT agents</span>
+          </div>
         </div>
       </div>
 
@@ -324,6 +327,12 @@ export default function ITaxPortalNotWorkingPage() {
                   <strong className="text-ink">Pro tip:</strong> Always take a screenshot when you encounter an Error 500 or a blank page, especially if it is close to the 20th deadline. You can use this screenshot as evidence if KRA later tries to impose a late filing penalty. Save it with the date and time visible.
                 </p>
               </div>
+              <p>
+                For a dedicated guide to iTax Error 500 — including how to distinguish an outage from a local issue, expected recovery times, and what to do on deadline day — see our{" "}
+                <Link href="/resources/kra-status-code-500-itax-errors" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                  KRA Status Code 500 guide
+                </Link>.
+              </p>
             </div>
           </section>
 
