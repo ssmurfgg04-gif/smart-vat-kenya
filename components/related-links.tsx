@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr"
 
 export type RelatedLink = {
@@ -29,13 +28,13 @@ export function RelatedLinks({
       <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
         {links.map((link) => (
           <li key={link.href + link.label}>
-            <Link
+            <a
               href={link.href}
               className={`inline-flex items-center gap-1.5 text-[0.9rem] font-medium ${labelClass} hover:text-brand transition-colors`}
             >
               {link.label}
               <ArrowRight size={13} weight="bold" aria-hidden="true" />
-            </Link>
+            </a>
             {link.description ? (
               <p className={`text-[0.8rem] ${bodyClass} leading-relaxed mt-1`}>{link.description}</p>
             ) : null}

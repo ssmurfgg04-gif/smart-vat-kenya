@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useMemo, useRef } from "react"
-import Link from "next/link"
 import { ArrowRight, Clock, MagnifyingGlass, XCircle } from "@phosphor-icons/react/dist/ssr"
 
 interface Pillar {
@@ -99,12 +98,12 @@ export function ResourceSearch({ pillars }: { pillars: Pillar[] }) {
                 ))}
               </div>
               <h3 className="font-display text-[0.95rem] font-semibold text-ink leading-snug mb-3 flex-1 text-balance">
-                <Link
+                <a
                   href={`/resources/${pillar.slug}`}
                   className="hover:text-brand transition-colors"
                 >
                   {pillar.title}
-                </Link>
+                </a>
               </h3>
               <p className="text-[0.8rem] text-ink-muted leading-relaxed mb-5 line-clamp-3">
                 {pillar.bluf}
@@ -114,13 +113,13 @@ export function ResourceSearch({ pillars }: { pillars: Pillar[] }) {
                   <Clock size={11} aria-hidden="true" />
                   {pillar.readTime} read
                 </span>
-                <Link
+                <a
                   href={`/resources/${pillar.slug}`}
                   className="inline-flex items-center gap-1.5 text-[0.78rem] font-semibold text-brand hover:text-brand-hover transition-colors"
                 >
                   Read the guide
                   <ArrowRight size={12} weight="bold" aria-hidden="true" />
-                </Link>
+                </a>
               </div>
             </article>
           ))}

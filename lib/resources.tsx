@@ -39,6 +39,19 @@ const articles: Resource[] = [
   { slug: "kra-status-code-500-itax-errors", title: "KRA Status Code 500 iTax Errors" },
   { slug: "small-taxpayer-regime-kenya", title: "Small Taxpayer Regime Kenya" },
   { slug: "etims-down-offline-invoicing", title: "KRA eTIMS Down? Offline Invoicing Guide" },
+  { slug: "kra-tax-amnesty-2026", title: "KRA Tax Amnesty 2026 — Full Guide" },
+  { slug: "etims-compliance-checklist", title: "eTIMS Compliance Checklist Kenya 2026" },
+  { slug: "etims-invoice-rejected", title: "KRA eTIMS Invoice Rejected? Here's Why" },
+  { slug: "vat-return-filing-checklist", title: "VAT Return Filing Checklist Kenya 2026" },
+  { slug: "tax-compliance-certificate-kenya", title: "Tax Compliance Certificate (TCC) Kenya Guide" },
+  { slug: "kra-pin-not-working", title: "KRA PIN Not Working? Fixes and Solutions" },
+  { slug: "what-happens-if-i-don-t-register-for-vat", title: "What Happens If You Don't Register for VAT in Kenya?" },
+  { slug: "vat-for-construction-real-estate-kenya", title: "VAT for Construction & Real Estate Kenya" },
+  { slug: "faq", title: "KRA VAT FAQ — All Your Questions Answered" },
+  { slug: "etims-mandate-guide", title: "eTIMS Mandate Kenya 2026 — Complete Compliance Guide" },
+  { slug: "icms-export-guide", title: "iCMS Export Guide: VAT for Kenyan Exporters" },
+  { slug: "vat-threshold-kenya", title: "VAT Threshold Kenya 2026: KES 5M or 8M?" },
+  { slug: "vat-bad-debt-refund-kenya", title: "VAT Bad Debt Relief Kenya 2026" },
 ]
 
 export function getPrevNext(slug: string) {

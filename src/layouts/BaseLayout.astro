@@ -1,0 +1,395 @@
+---
+import "@/src/styles/globals.css"
+import { Navbar } from "@/components/navbar"
+import Footer from "@/src/components/Footer.astro"
+import { WhatsAppButton } from "@/components/whatsapp-button"
+import { BackToTop } from "@/components/back-to-top"
+
+export interface Props {
+  title?: string
+  description?: string
+  canonical?: string
+  image?: string
+  type?: "website" | "article"
+  publishedTime?: string
+  modifiedTime?: string
+  keywords?: string[]
+  jsonLd?: Record<string, unknown>
+  breadcrumbSchema?: Record<string, unknown>
+  articleSchema?: Record<string, unknown>
+}
+
+const SITE_URL = "https://smartvatkenya.co.ke"
+const SITE_NAME = "Smart VAT Kenya"
+const DEFAULT_OG = "/og-image.png"
+
+const {
+  title,
+  description,
+  canonical = "/",
+  image = DEFAULT_OG,
+  type = "website",
+  publishedTime,
+  modifiedTime,
+  keywords,
+  jsonLd,
+  breadcrumbSchema,
+  articleSchema,
+} = Astro.props
+
+const pageTitle = title ? `${title} | ${SITE_NAME}` : "VAT Registration Services Kenya | KRA VAT Calculator | Smart VAT Kenya"
+const pageDesc = description ?? "Professional VAT registration services in Kenya — KES 5,000 flat fee, done in 1–3 working days."
+const pageUrl = `${SITE_URL}${canonical}`
+const imageUrl = image.startsWith("http") ? image : `${SITE_URL}${image}`
+const socialTitle = pageTitle.includes(SITE_NAME) ? pageTitle : `${pageTitle} | ${SITE_NAME}`
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://smartvatkenya.co.ke/#business",
+      name: "Smart VAT Kenya",
+      description:
+        "Professional VAT registration and monthly filing services for Kenyan SMEs. Flat-fee pricing, eTIMS-compliant, M-PESA accepted, WhatsApp support.",
+      telephone: "+254721725958",
+      email: "hello@smartvatkenya.co.ke",
+      priceRange: "KES3500-KES5000",
+      image: "https://smartvatkenya.co.ke/icon.svg",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://smartvatkenya.co.ke/icon.svg",
+        width: 256,
+        height: 256,
+      },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Pioneer House, Moi Avenue",
+        addressLocality: "Nairobi",
+        addressRegion: "Nairobi County",
+        postalCode: "00100",
+        addressCountry: "KE",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: -1.2921,
+        longitude: 36.8219,
+      },
+      url: "https://smartvatkenya.co.ke",
+      sameAs: [
+        "https://wa.me/254721725958",
+        "https://www.google.com/search?q=Smart+VAT+Kenya+Nairobi",
+      ],
+      hasMap: "https://maps.google.com/?q=Pioneer+House+Moi+Avenue+Nairobi",
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "18:00",
+      },
+      areaServed: [
+        { "@type": "City", name: "Nairobi" },
+        { "@type": "City", name: "Mombasa" },
+        { "@type": "City", name: "Kisumu" },
+        { "@type": "State", name: "Kenya" },
+      ],
+      knowsAbout: { "@type": "Thing", name: "Kenya VAT Registration and Compliance" },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+254721725958",
+        contactType: "customer service",
+        availableLanguage: ["English", "Swahili"],
+        areaServed: "KE",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "58",
+        bestRating: "5",
+        worstRating: "1",
+      },
+      paymentAccepted: "M-PESA, Cash",
+      currenciesAccepted: "KES",
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "VAT Services Kenya",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "VAT Registration Kenya" },
+            price: "5000",
+            priceCurrency: "KES",
+            availability: "https://schema.org/InStock",
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Monthly VAT Filing Kenya" },
+            price: "3500",
+            priceCurrency: "KES",
+            availability: "https://schema.org/InStock",
+          },
+        ],
+      },
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://smartvatkenya.co.ke/tools#app",
+      name: "Free Kenya VAT Calculator 2026",
+      applicationCategory: "FinanceApplication",
+      operatingSystem: "Any",
+      description:
+        "Calculate Kenya VAT at 16% standard rate, zero-rated (0%) or exempt. Includes KRA late-filing penalty estimator and 'Am I Required?' VAT registration check.",
+      offers: { "@type": "Offer", price: "0", priceCurrency: "KES" },
+      url: "https://smartvatkenya.co.ke/tools",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5",
+        ratingCount: "112",
+        bestRating: "5",
+        worstRating: "1",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://smartvatkenya.co.ke/#website",
+      url: "https://smartvatkenya.co.ke",
+      name: "Smart VAT Kenya",
+      publisher: { "@id": "https://smartvatkenya.co.ke/#business" },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: "https://smartvatkenya.co.ke/resources?q={search_term_string}",
+        },
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "Product",
+      "@id": "https://smartvatkenya.co.ke/services#vat-filing-product",
+      name: "Monthly VAT Filing Service",
+      description:
+        "Monthly iTax VAT return filing before the 20th KRA deadline. Filed on the 17th. Includes WhatsApp reminders and M-PESA payment guidance.",
+      image: "https://smartvatkenya.co.ke/icon.svg",
+      brand: { "@type": "Brand", name: "Smart VAT Kenya" },
+      offers: {
+        "@type": "Offer",
+        price: "3500",
+        priceCurrency: "KES",
+        availability: "https://schema.org/InStock",
+        url: "https://smartvatkenya.co.ke/services",
+        shippingDetails: {
+          "@type": "OfferShippingDetails",
+          shippingRate: {
+            "@type": "MonetaryAmount",
+            value: "0",
+            currency: "KES",
+          },
+          shippingDestination: {
+            "@type": "DefinedRegion",
+            addressCountry: "KE",
+          },
+          deliveryTime: {
+            "@type": "ShippingDeliveryTime",
+            handlingTime: {
+              "@type": "QuantitativeValue",
+              minValue: 0,
+              maxValue: 1,
+              unitCode: "DAY",
+            },
+            transitTime: {
+              "@type": "QuantitativeValue",
+              minValue: 0,
+              maxValue: 1,
+              unitCode: "DAY",
+            },
+          },
+        },
+        hasMerchantReturnPolicy: {
+          "@type": "MerchantReturnPolicy",
+          applicableCountry: "KE",
+          returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+        },
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "58",
+        bestRating: "5",
+        worstRating: "1",
+      },
+    },
+    {
+      "@type": "Service",
+      "@id": "https://smartvatkenya.co.ke/services#registration",
+      name: "VAT Registration Kenya",
+      serviceType: "VAT Registration",
+      description:
+        "Complete VAT registration via KRA iTax portal. Includes profile update, VAT Form 1, PIN generation, eTIMS onboarding guidance, and taxpayer education.",
+      provider: { "@id": "https://smartvatkenya.co.ke/#business" },
+      areaServed: { "@type": "Country", name: "Kenya" },
+      offers: {
+        "@type": "Offer",
+        price: "5000",
+        priceCurrency: "KES",
+        availability: "https://schema.org/InStock",
+        validFrom: "2026-01-01",
+      },
+    },
+    {
+      "@type": "Service",
+      "@id": "https://smartvatkenya.co.ke/services#filing",
+      name: "Monthly VAT Filing Kenya",
+      serviceType: "VAT Filing",
+      description:
+        "Monthly iTax VAT return filing before the 20th KRA deadline. We file on the 17th. Avoids KES 10,000 late-filing penalty.",
+      provider: { "@id": "https://smartvatkenya.co.ke/#business" },
+      areaServed: { "@type": "Country", name: "Kenya" },
+      offers: {
+        "@type": "Offer",
+        price: "3500",
+        priceCurrency: "KES",
+        availability: "https://schema.org/InStock",
+        validFrom: "2026-01-01",
+      },
+    },
+  ],
+}
+---
+
+<!doctype html>
+<html lang="en-KE" data-color-mode="light" style="color-scheme:light" class="bg-canvas">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#faf8f3" />
+
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDesc} />
+  <link rel="canonical" href={pageUrl} />
+
+  {keywords && keywords.length > 0 && (
+    <meta name="keywords" content={keywords.join(", ")} />
+  )}
+
+  <!-- OG -->
+  <meta property="og:title" content={socialTitle} />
+  <meta property="og:description" content={pageDesc} />
+  <meta property="og:url" content={pageUrl} />
+  <meta property="og:site_name" content={SITE_NAME} />
+  <meta property="og:locale" content="en_KE" />
+  <meta property="og:type" content={type === "article" ? "article" : "website"} />
+  <meta property="og:image" content={imageUrl} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  {type === "article" && publishedTime && <meta property="article:published_time" content={publishedTime} />}
+  {type === "article" && modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={socialTitle} />
+  <meta name="twitter:description" content={pageDesc} />
+  <meta name="twitter:image" content={imageUrl} />
+
+  <!-- Hreflang -->
+  <link rel="alternate" hrefLang="en-KE" href="https://smartvatkenya.co.ke" />
+  <link rel="alternate" hrefLang="x-default" href="https://smartvatkenya.co.ke" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="//wa.me" />
+
+  <!-- Fonts -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+
+  <!-- Speculation Rules -->
+  <script type="speculationrules">
+    {JSON.stringify({
+      prefetch: [
+        {
+          source: "list",
+          urls: ["/tools", "/resources", "/services", "/resources/how-to-register-for-vat-in-kenya", "/resources/kra-penalty-for-late-vat-filing", "/resources/how-to-calculate-vat-in-kenya"],
+          requires: ["anonymous-client-ip-when-cross-origin"],
+        },
+      ],
+    })}
+  </script>
+
+  <!-- Inline critical CSS -->
+  <style>
+    .bg-canvas-dark { background-color: #1b2a3b; }
+    .bg-canvas { background-color: #faf8f3; }
+    .text-canvas { color: #faf8f3; }
+    .text-canvas\/80 { color: rgba(250, 248, 243, 0.8); }
+    .text-canvas\/65 { color: rgba(250, 248, 243, 0.65); }
+    .text-canvas\/70 { color: rgba(250, 248, 243, 0.7); }
+    .text-canvas\/60 { color: rgba(250, 248, 243, 0.6); }
+    .text-brand { color: #c8372d; }
+    .text-ink { color: #141311; }
+    .border-canvas\/25 { border-color: rgba(250, 248, 243, 0.25); }
+    .border-canvas\/15 { border-color: rgba(250, 248, 243, 0.15); }
+    .font-semibold { font-weight: 600; }
+    .font-mono { font-family: ui-monospace, SF Mono, Cascadia Code, Fira Mono, monospace; }
+    .tracking-tight { letter-spacing: -0.025em; }
+    .text-balance { text-wrap: balance; }
+    .text-pretty { text-wrap: pretty; }
+    .overflow-hidden { overflow: hidden; }
+    .relative { position: relative; }
+    .absolute { position: absolute; }
+    .inset-0 { inset: 0; }
+    .pointer-events-none { pointer-events: none; }
+    .z-0 { z-index: 0; }
+    .z-10 { z-index: 10; }
+    .z-50 { z-index: 50; }
+    .max-w-\[52ch\] { max-width: 52ch; }
+    .max-w-\[1400px\] { max-width: 1400px; }
+    .mx-auto { margin-inline: auto; }
+    .px-6 { padding-inline: 1.5rem; }
+    .pt-12 { padding-top: 3rem; }
+    .pb-20 { padding-bottom: 5rem; }
+    .gap-12 { gap: 3rem; }
+    .items-start { align-items: flex-start; }
+    .leading-\[1\.05\] { line-height: 1.05; }
+    .leading-relaxed { line-height: 1.625; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-10 { margin-bottom: 2.5rem; }
+    .self-start { align-self: flex-start; }
+    @media (min-width: 1024px) {
+      .lg\:grid-cols-\[1fr_420px\] { grid-template-columns: 1fr 420px; }
+      .lg\:gap-20 { gap: 5rem; }
+      .lg\:px-10 { padding-inline: 2.5rem; }
+      .lg\:pt-16 { padding-top: 4rem; }
+      .lg\:pb-24 { padding-bottom: 6rem; }
+    }
+  </style>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+  {articleSchema && <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
+  {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+  <link rel="alternate icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-icon.webp" />
+</head>
+<body class="antialiased font-sans text-ink bg-canvas">
+  <noscript>
+    <div class="bg-amber-50 border-b border-amber-200 px-4 py-2.5 text-center text-[0.78rem] text-amber-800 leading-snug">
+      Smart VAT Kenya uses JavaScript for interactive tools (VAT calculator, penalty estimator) and search. For the best experience, please enable JavaScript in your browser.
+    </div>
+  </noscript>
+  <Navbar client:load />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+  <WhatsAppButton />
+  <BackToTop client:load />
+</body>
+</html>

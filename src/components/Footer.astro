@@ -1,0 +1,80 @@
+---
+const WA_BASE = "https://wa.me/254721725958"
+const year = new Date().getFullYear()
+const quickLinks = [
+  { href: "/tools",        label: "Free VAT Calculator" },
+  { href: "/services",     label: "Services & Pricing" },
+  { href: "/how-it-works", label: "How It Works" },
+  { href: "/forms",        label: "Free Forms" },
+  { href: "/resources",    label: "Resources" },
+  { href: "/resources/faq", label: "VAT FAQ" },
+]
+const trustItems = [
+  "KRA iTax Registered Agents",
+  "100% iTax Compliant",
+  "M-PESA Receipts Provided",
+  "No Hidden Fees",
+  "WhatsApp Support",
+  "KES 3,500 flat filing fee",
+]
+---
+<footer class="bg-canvas-dark border-t border-canvas/10">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] gap-12">
+      <div>
+        <a href="/" class="font-display text-[1.1rem] font-semibold text-canvas tracking-tight mb-4 inline-block hover:text-canvas/80 transition-colors" aria-label="Smart VAT Kenya — Home">
+          Smart<span class="text-gray-300">VAT</span>
+          <span class="text-canvas/50 font-normal text-sm ml-1">Kenya</span>
+        </a>
+        <p class="text-[0.85rem] text-gray-300 leading-relaxed max-w-[30ch] mt-4 mb-6">
+          Professional VAT registration services in Kenya and monthly iTax filing for SMEs.
+          Flat-fee pricing. M-PESA accepted. Kenya VAT rate: 16% (2026).
+        </p>
+        <div class="space-y-2.5">
+          <a href={WA_BASE} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 text-[0.82rem] text-gray-300 hover:text-canvas transition-colors">
+            <svg viewBox="0 0 13 13" class="w-3 h-3 shrink-0 fill-current" aria-hidden="true"><path d="M11.8 1.2C10.5-.1 8.8-.1 7.5 1L6 2.5C5.7 2.8 5.5 3.2 5.5 3.5c0 .3.2.7.5 1l-.2.2C5.5 5 5 5.2 4.5 5.5c-.5.3-1 .7-1.5 1.2l-.2.2c-.3-.3-.7-.5-1-.5s-.7.2-1 .5L.2 8.5c-1.3 1.3-1.3 3 0 4.3.6.6 1.5 1 2.5 1 .5 0 1-.1 1.5-.3 2.5-.8 5.5-2.8 7.5-5.8s2.3-5.2 1.5-6.5z"/></svg>
+            +254 721 725 958
+          </a>
+          <a href="mailto:info@smartvatkenya.co.ke" class="flex items-center gap-2.5 text-[0.82rem] text-gray-300 hover:text-canvas transition-colors">
+            <svg viewBox="0 0 13 13" class="w-3 h-3 shrink-0 fill-current" aria-hidden="true"><path d="M12 2H1c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V3c0-.6-.4-1-1-1zm-1 2.5v5.5H2V4.5l4.5 2.5L11 4.5z"/></svg>
+            info@smartvatkenya.co.ke
+          </a>
+          <p class="flex items-start gap-2.5 text-[0.75rem] text-gray-400 leading-snug max-w-[28ch]">
+            <svg viewBox="0 0 12 12" class="w-3 h-3 shrink-0 mt-0.5 fill-canvas/50" aria-hidden="true"><path d="M6 0C3.79 0 2 1.79 2 4c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5C5.17 5.5 4.5 6.17 4.5 7s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg>
+            <span>Pioneer House, Moi Avenue, Nairobi CBD, Kenya</span>
+          </p>
+        </div>
+      </div>
+      <div>
+        <p class="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-gray-400 mb-5">Pages</p>
+        <ul class="space-y-3" role="list">
+          {quickLinks.map((link) => (
+            <li>
+              <a href={link.href} class="text-[0.85rem] text-gray-300 hover:text-canvas transition-colors">{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <p class="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-gray-400 mb-5">Trust</p>
+        <ul class="space-y-3" role="list">
+          {trustItems.map((item) => (
+            <li class="flex items-start gap-2 text-[0.82rem] text-gray-300">
+              <svg viewBox="0 0 12 12" class="w-3 h-3 shrink-0 mt-[3px] fill-brand" aria-hidden="true"><path d="M10.28 2.28L4.75 7.81 1.72 4.78 0.5 6l4.25 4.25 6.75-6.75z"/></svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+    <div class="mt-14 pt-6 border-t border-canvas/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <p class="text-[0.75rem] text-gray-400">&copy; {year} Smart VAT Kenya. All rights reserved.</p>
+      <p class="text-[0.75rem] text-gray-400">
+        VAT information based on{" "}
+        <a href="https://www.kra.go.ke" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-gray-300 transition-colors">KRA guidelines</a>
+        . Official portal:{" "}
+        <a href="https://itax.kra.go.ke" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-gray-300 transition-colors">itax.kra.go.ke</a>
+      </p>
+    </div>
+  </div>
+</footer>

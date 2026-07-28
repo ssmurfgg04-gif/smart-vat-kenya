@@ -1,0 +1,21 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+import { resourceComponents, resourceMeta } from "@/src/components/resources/map"
+
+export async function getStaticPaths() {
+  const slugs = Object.keys(resourceComponents)
+  return slugs.map((slug) => ({ params: { slug } }))
+}
+
+const { slug } = Astro.params
+const Component = slug ? resourceComponents[slug] : undefined
+const meta = slug ? resourceMeta[slug] : undefined
+---
+
+<BaseLayout
+  title={meta?.title}
+  description={meta?.description}
+  canonical={meta?.canonical}
+>
+  {Component && <Component />}
+</BaseLayout>
