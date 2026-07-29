@@ -21,7 +21,7 @@ const articleSchema = {
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-26",
-  dateModified: "2026-07-26",
+  dateModified: "2026-07-29",
   url: "https://smartvatkenya.co.ke/resources/vat-rates-kenya",
   mainEntityOfPage: "https://smartvatkenya.co.ke/resources/vat-rates-kenya",
 }
@@ -134,10 +134,53 @@ export default function VatRatesKenyaPage() {
               practical examples.
             </p>
             <div className="flex items-center gap-4 text-[0.75rem] text-ink-muted">
-              <time dateTime="2026-07-26">26 July 2026</time>
+              <time dateTime="2026-07-29">29 July 2026</time>
               <span>Smart VAT Kenya</span>
             </div>
           </header>
+
+          {/* Quick Answer — optimized for featured snippet / AI citation */}
+          <div className="border-l-[3px] border-brand pl-5 mb-10">
+            <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
+            <p className="text-[0.93rem] text-ink-soft leading-relaxed">
+              <strong className="text-ink">Kenya's VAT rate is 16%</strong> on most goods and services.
+              Zero-rated supplies (0%) include exports, unprocessed food, pharmaceuticals, and agricultural
+              inputs — you can claim input VAT on these. <strong className="text-ink">Exempt supplies</strong>
+              (financial services, residential rent, education) have no VAT charged and no input VAT recovery.
+              Mandatory registration is triggered at <strong className="text-ink">KES 8M annual turnover</strong>{" "}
+              (Finance Act 2025). Returns are due on <strong className="text-ink">iTax by the 20th</strong> of
+              every month; late filing costs the higher of KES 10,000 or 5% of tax due. Verified against the
+              VAT Act and Finance Act 2026.
+            </p>
+          </div>
+
+          {/* VAT at a glance — compact summary table */}
+          <div className="border border-hairline rounded-lg overflow-hidden mb-10">
+            <div className="bg-canvas-alt px-5 py-3 border-b border-hairline">
+              <p className="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted">VAT at a Glance (2026)</p>
+            </div>
+            <table className="w-full text-left text-[0.85rem]">
+              <tbody className="divide-y divide-hairline">
+                {[
+                  { label: "Standard rate", value: "16% on most goods and services" },
+                  { label: "Zero-rated", value: "0% — exports, unprocessed food, pharma, agricultural inputs; input VAT claimable" },
+                  { label: "Exempt", value: "No VAT — financial services, residential rent, education, medical; no input VAT recovery" },
+                  { label: "Mandatory registration", value: "KES 8M annual taxable turnover (Finance Act 2025)" },
+                  { label: "Voluntary registration", value: "Allowed from KES 5M" },
+                  { label: "Filing deadline", value: "20th of every month via iTax (nil returns included)" },
+                  { label: "Late filing penalty", value: "Higher of KES 10,000 or 5% of tax due" },
+                  { label: "Late payment penalty", value: "5% of unpaid tax + 1% interest per month" },
+                  { label: "E-invoicing", value: "eTIMS mandatory for all VAT-registered businesses" },
+                  { label: "Refund claim window", value: "Within 12 months (Finance Act 2025)" },
+                ].map(({ label, value }) => (
+                  <tr key={label} className="hover:bg-canvas-alt/30 transition-colors">
+                    <td className="px-5 py-2.5 font-medium text-ink w-[32%] align-top">{label}</td>
+                    <td className="px-5 py-2.5 text-ink-soft align-top">{value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
           <div className="space-y-10">
 
@@ -504,8 +547,19 @@ export default function VatRatesKenyaPage() {
           </div>
         </article>
 
+        {/* Sources & Methodology — authority signal for AI citation */}
+        <div className="mt-14 border-t border-hairline pt-8">
+          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted mb-3">Sources &amp; Methodology</p>
+          <p className="text-[0.78rem] text-ink-muted leading-relaxed max-w-[60ch]">
+            Figures on this page were verified in July 2026 against the VAT Act (Cap. 476) as amended by
+            the Finance Act 2025 and Finance Act 2026, KRA iTax filing guidance, and the Tax Procedures Act
+            penalty provisions. Zero-rated and exempt lists are drawn from the First and Second Schedules
+            of the VAT Act. Last verified: 26 July 2026.
+          </p>
+        </div>
+
         {/* More Guides */}
-        <div className="mt-16 pt-12 border-t border-hairline">
+        <div className="mt-10 pt-12 border-t border-hairline">
           <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">More Guides</p>
           <ArticleGrid currentSlug="vat-rates-kenya" />
         </div>

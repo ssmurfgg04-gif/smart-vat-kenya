@@ -188,8 +188,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/input-vat-deduction-guide",
   },
   "itax-portal-not-working": {
-    title: "KRA iTax Down? Fix Portal Errors & Status Code 500 (2026)",
-    description: "KRA iTax portal not working? Fix common errors like status code 500, OTP not received, login failures, browser issues, and timeout problems. Updated fixes for 2026.",
+    title: "KRA iTax Down? Current Status & Portal Fix Guide (2026)",
+    description: "Is KRA iTax down right now? Check current portal status, fix common errors (status code 500, OTP not received, login failed), and learn workarounds when iTax is unavailable.",
     canonical: "/resources/itax-portal-not-working",
   },
   "kra-penalty-for-late-vat-filing": {
@@ -263,8 +263,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/vat-digital-services-kenya",
   },
   "vat-fintech-digital-payments-kenya": {
-    title: "VAT on Fintech & Digital Payments Kenya 2026 Guide",
-    description: "How VAT applies to fintech and digital payment services in Kenya: mobile money, payment processing fees, transaction commissions, and KRA compliance requirements.",
+    title: "VAT on Fintech & Digital Payments Kenya 2026 — Mobile Money, Fees & Compliance",
+    description: "How VAT applies to fintech in Kenya: 16% on mobile money (M-Pesa) fees, payment processing commissions, merchant charges, and KRA compliance for digital payment providers.",
     canonical: "/resources/vat-fintech-digital-payments-kenya",
   },
   "vat-for-construction-real-estate-kenya": {
@@ -303,8 +303,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/vat-labour-outsourcing-kenya",
   },
   "vat-rates-kenya": {
-    title: "VAT Rates in Kenya 2026 — 16% Standard, Zero-Rated & Exempt",
-    description: "Complete guide to VAT rates in Kenya 2026: standard 16%, zero-rated supplies (exports, food), exempt supplies (financial services, insurance), and what each means for your business.",
+    title: "VAT Rates in Kenya 2026 — 16%, Zero-Rated & Exempt List (Calculator)",
+    description: "Complete guide to Kenya's VAT rates for 2026: 16% standard rate, zero-rated supplies (food, exports, medicine, agricultural inputs), exempt services (insurance, financial, education). Free VAT calculator.",
     canonical: "/resources/vat-rates-kenya",
   },
   "vat-threshold-kenya": {
@@ -334,7 +334,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "vat-vs-turnover-tax": {
     title: "Turnover Tax vs VAT in Kenya — Which Applies to You 2026",
-    description: "Turnover tax (3%) vs VAT (16%) — which one applies to your business? Thresholds, rates, compliance burden, and how to switch between regimes under KRA rules.",
+    description: "Turnover tax (3% of gross sales, no deductions) vs VAT (16%, input deductible) — which regime applies to your Kenyan business? Threshold comparison, compliance burden, and switching rules.",
     canonical: "/resources/vat-vs-turnover-tax",
   },
   "what-happens-if-i-don-t-register-for-vat": {
