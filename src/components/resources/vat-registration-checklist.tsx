@@ -94,7 +94,7 @@ export default function VATRegistrationChecklistPage() {
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-14">
         <div className="max-w-3xl mx-auto">
-          <a href="/resources" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
+          <a href="/resources/" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <div className="flex flex-wrap gap-2 mb-5">
@@ -351,7 +351,7 @@ export default function VATRegistrationChecklistPage() {
                 {
                   icon: <Gear size={18} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />,
 title: "eTIMS Onboarding Confirmation",
-                   body: <>Register for{" "}<a href="/resources/etims-onboarding-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS (Electronic Tax Invoice Management System)</a>{" "}within 30 days of VAT approval. KRA will send you login credentials. Once onboarded, all your invoices must be generated through eTIMS or an integrated system.</>,
+                   body: <>Register for{" "}<a href="/resources/etims-onboarding-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS (Electronic Tax Invoice Management System)</a>{" "}within 30 days of VAT approval. KRA will send you login credentials. Once onboarded, all your invoices must be generated through eTIMS or an integrated system.</>,
                 },
                 {
                   icon: <Gear size={18} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />,
@@ -361,12 +361,12 @@ title: "eTIMS Onboarding Confirmation",
                 {
                   icon: <Gear size={18} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />,
 title: "Monthly Filing Calendar Setup",
-                   body: <>VAT returns are due on or before the 20th of every month. See our{" "}<a href="/resources/how-to-file-vat-return-on-itax" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT return filing guide</a>{" "}for step-by-step instructions. Set up reminders in your calendar, accounting software, or with your agent. Late filing costs KES 10,000 per month plus 2% interest on any unpaid VAT.</>,
+                   body: <>VAT returns are due on or before the 20th of every month. See our{" "}<a href="/resources/how-to-file-vat-return-on-itax/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT return filing guide</a>{" "}for step-by-step instructions. Set up reminders in your calendar, accounting software, or with your agent. Late filing costs KES 10,000 per month plus 2% interest on any unpaid VAT.</>,
                 },
                 {
                   icon: <Gear size={18} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />,
                    title: "KRA Paybill 572572 — VAT Payment Guidance",
-                   body: <>All VAT payments to KRA are made via M-PESA Paybill 572572 (business number) or through bank transfer to KRA's collection account. See the{" "}<a href="/resources/how-to-file-vat-return-on-itax#payment" className="text-brand underline underline-offset-2 hover:text-brand-hover">payment section in our filing guide</a>{" "}for the exact M-PESA steps. Your account number on Paybill 572572 is your KRA PIN followed by the payment type code. For VAT, the format is: PIN000V (e.g., P0123456789V). Payments reflect on iTax within minutes.</>,
+                   body: <>All VAT payments to KRA are made via M-PESA Paybill 572572 (business number) or through bank transfer to KRA's collection account. See the{" "}<a href="/resources/how-to-file-vat-return-on-itax/#payment" className="text-brand underline underline-offset-2 hover:text-brand-hover">payment section in our filing guide</a>{" "}for the exact M-PESA steps. Your account number on Paybill 572572 is your KRA PIN followed by the payment type code. For VAT, the format is: PIN000V (e.g., P0123456789V). Payments reflect on iTax within minutes.</>,
                 },
               ].map((step) => (
                 <div key={step.title} className="border border-hairline rounded-lg p-5 bg-canvas-alt">
@@ -388,7 +388,7 @@ title: "Monthly Filing Calendar Setup",
                   Don&apos;t Forget eTIMS
                 </p>
                 <p className="text-[0.83rem] text-[#8a6500] dark:text-[#ccaa33] leading-relaxed">
-                  KRA has been aggressively enforcing eTIMS compliance in 2026. Businesses that issue manual invoices after the 30-day eTIMS window face penalties of up to KES 100,000. See the{" "}<a href="/resources/etims-penalty-50000-per-month-kenya" className="underline underline-offset-2 hover:text-[#ccaa33]">eTIMS penalty guide</a>{" "}for full details. Complete your eTIMS onboarding as soon as your VAT PIN is approved — not on the last day.
+                  KRA has been aggressively enforcing eTIMS compliance in 2026. Businesses that issue manual invoices after the 30-day eTIMS window face penalties of up to KES 100,000. See the{" "}<a href="/resources/etims-penalty-50000-per-month-kenya/" className="underline underline-offset-2 hover:text-[#ccaa33]">eTIMS penalty guide</a>{" "}for full details. Complete your eTIMS onboarding as soon as your VAT PIN is approved — not on the last day.
                 </p>
               </div>
             </div>
@@ -398,7 +398,7 @@ title: "Monthly Filing Calendar Setup",
                 <p className="font-semibold text-ink text-[0.85rem] mb-1">Also: You Will Need a Tax Compliance Certificate (TCC)</p>
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
                   Once you are VAT-registered and compliant, you may need a{" "}
-                  <a href="/resources/tax-compliance-certificate-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">KRA Tax Compliance Certificate</a>{" "}
+                  <a href="/resources/tax-compliance-certificate-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">KRA Tax Compliance Certificate</a>{" "}
                   for tenders, licences, and contracts. eTIMS compliance is now a requirement for TCC issuance.
                 </p>
               </div>
@@ -537,7 +537,7 @@ title: "Monthly Filing Calendar Setup",
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

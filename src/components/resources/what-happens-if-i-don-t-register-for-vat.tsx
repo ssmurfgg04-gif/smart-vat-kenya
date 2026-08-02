@@ -88,7 +88,7 @@ export default function WhatHappensIfIDontRegisterForVAT() {
       />
 
       <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
-        <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+        <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Resources
         </a>
 

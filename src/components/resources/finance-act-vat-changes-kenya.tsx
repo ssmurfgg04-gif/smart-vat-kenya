@@ -92,7 +92,7 @@ export default function FinanceActVatPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="max-w-[880px] mx-auto px-6 lg:px-10 py-12">
-        <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+        <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Guides
         </a>
 
@@ -186,7 +186,7 @@ export default function FinanceActVatPage() {
                 </p>
                 <p>
                   <strong>Impact:</strong> This is a significant change for Kenya's{" "}
-                  <a href="/resources/vat-fintech-digital-payments-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">fintech sector</a>. Payment
+                  <a href="/resources/vat-fintech-digital-payments-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">fintech sector</a>. Payment
                   service providers, mobile money aggregators, and payment gateway operators must now charge
                   16% VAT on their fees. Businesses using these services will see increased costs. If you
                   are a fintech company, update your pricing and invoicing immediately. If you use payment
@@ -242,7 +242,7 @@ export default function FinanceActVatPage() {
                   <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
                   <p className="text-[0.83rem] text-ink-soft leading-relaxed">
                     <strong className="text-ink">Need help with apportionment?</strong> See our{" "}
-                    <a href="/resources/input-vat-deduction-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                    <a href="/resources/input-vat-deduction-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                       Input VAT Deduction Guide
                     </a>{" "}
                     for the full apportionment formula and worked examples.
@@ -284,8 +284,8 @@ export default function FinanceActVatPage() {
                 <div className="space-y-3">
                   {[
                     { key: "invoice-reqs", change: "Invoice requirements tightened", detail: "All registered persons must now issue a tax invoice at the time of supply, regardless of whether the supply is taxable or not. Previously, invoices were only required for taxable supplies. This affects exempt suppliers who now need invoicing systems." },
-                    { key: "labour-outsourcing", change: <><a href="/resources/vat-labour-outsourcing-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">Labour outsourcing</a> costs excluded from taxable value</>, detail: "Where a supplier provides labour, outsourcing, or employee placement services, employee-related costs (salaries, wages, statutory deductions) are deemed disbursements on behalf of the client and excluded from the taxable value of the supply. This reduces the VAT burden on outsourced labour." },
-                    { key: "digital-services", change: <>Digital broadcasting added to taxable <a href="/resources/vat-digital-services-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">digital services</a></>, detail: "Internet, radio, or television broadcasting services provided by non-residents are now explicitly included in the scope of taxable digital services." },
+                    { key: "labour-outsourcing", change: <><a href="/resources/vat-labour-outsourcing-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Labour outsourcing</a> costs excluded from taxable value</>, detail: "Where a supplier provides labour, outsourcing, or employee placement services, employee-related costs (salaries, wages, statutory deductions) are deemed disbursements on behalf of the client and excluded from the taxable value of the supply. This reduces the VAT burden on outsourced labour." },
+                    { key: "digital-services", change: <>Digital broadcasting added to taxable <a href="/resources/vat-digital-services-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">digital services</a></>, detail: "Internet, radio, or television broadcasting services provided by non-residents are now explicitly included in the scope of taxable digital services." },
                     { key: "mosquito-repellent", change: "Mosquito repellent exempted from VAT", detail: "Mosquito repellent products were reclassified from 16% VAT to exempt, effective 1 July 2025." },
                     { key: "tea-coffee-packaging", change: "Tea and coffee packaging materials zero-rated", detail: "Packaging materials for tea and coffee are now zero-rated (0%), allowing suppliers to claim input VAT and apply for refunds." },
                     { key: "manufacturing-capital", change: "Manufacturing capital goods exemption extended", detail: "The VAT exemption on capital goods for the manufacturing sector, granted before 27 December 2024, was extended to apply until 27 December 2025." },
@@ -361,7 +361,7 @@ export default function FinanceActVatPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

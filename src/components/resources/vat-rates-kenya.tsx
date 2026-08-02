@@ -116,7 +116,7 @@ export default function VatRatesKenyaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="max-w-[880px] mx-auto px-6 lg:px-10 py-12">
-        <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+        <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Guides
         </a>
 
@@ -237,7 +237,7 @@ export default function VatRatesKenyaPage() {
                   <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
                   <div className="text-[0.83rem] text-ink-soft leading-relaxed">
                     <p><strong className="text-ink">Not sure if you need to register?</strong> See our{" "}
-                      <a href="/resources/do-i-need-to-register-for-vat-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                      <a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                         VAT registration guide
                       </a>{" "}
                       for the KES 5 million threshold, voluntary registration, and registration requirements
@@ -413,7 +413,7 @@ export default function VatRatesKenyaPage() {
                     taxable and exempt supplies (mixed supplies), you must apportion input VAT. The 90:10 rule
                     was removed by the Finance Act 2025 — you can no longer claim full input VAT even if exempt
                     supplies are under 10% of turnover. See our{" "}
-                    <a href="/resources/input-vat-deduction-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                    <a href="/resources/input-vat-deduction-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                       Input VAT Deduction Guide
                     </a>{" "}
                     for the apportionment formula.
@@ -473,12 +473,12 @@ export default function VatRatesKenyaPage() {
 
                 <div className="grid sm:grid-cols-2 gap-3 mt-4">
                   {[
-                    { href: "/resources/vat-for-restaurants-hospitality", label: "Restaurants & Hospitality", desc: "Meals, drinks, accommodation, event catering — which items are 16% vs zero-rated?" },
-                    { href: "/resources/vat-fintech-digital-payments-kenya", label: "Fintech & Digital Payments", desc: "Payment processing, merchant fees, mobile money — now 16% VAT under Finance Act 2026" },
-                    { href: "/resources/vat-for-importers-kenya", label: "Importers", desc: "Import VAT at 16%, customs valuation, duty + VAT calculation, and deferment options" },
-                    { href: "/resources/vat-for-landlords-kenya", label: "Landlords & Property", desc: "Residential rent (exempt) vs commercial rent (16%), input VAT on construction and maintenance" },
-                    { href: "/resources/vat-digital-services-kenya", label: "Digital Services", desc: "E-books, streaming, software downloads, SaaS, online advertising, digital broadcasting" },
-                    { href: "/resources/vat-labour-outsourcing-kenya", label: "Labour Outsourcing", desc: "Staff placement, temp labour — employee costs are disbursements, not subject to VAT" },
+                    { href: "/resources/vat-for-restaurants-hospitality/", label: "Restaurants & Hospitality", desc: "Meals, drinks, accommodation, event catering — which items are 16% vs zero-rated?" },
+                    { href: "/resources/vat-fintech-digital-payments-kenya/", label: "Fintech & Digital Payments", desc: "Payment processing, merchant fees, mobile money — now 16% VAT under Finance Act 2026" },
+                    { href: "/resources/vat-for-importers-kenya/", label: "Importers", desc: "Import VAT at 16%, customs valuation, duty + VAT calculation, and deferment options" },
+                    { href: "/resources/vat-for-landlords-kenya/", label: "Landlords & Property", desc: "Residential rent (exempt) vs commercial rent (16%), input VAT on construction and maintenance" },
+                    { href: "/resources/vat-digital-services-kenya/", label: "Digital Services", desc: "E-books, streaming, software downloads, SaaS, online advertising, digital broadcasting" },
+                    { href: "/resources/vat-labour-outsourcing-kenya/", label: "Labour Outsourcing", desc: "Staff placement, temp labour — employee costs are disbursements, not subject to VAT" },
                   ].map(({ href, label, desc }) => (
                     <a key={href} href={href}
                       className="group border border-hairline rounded-lg p-4 hover:border-ink/15 hover:shadow-sm transition-all no-underline">
@@ -521,7 +521,7 @@ export default function VatRatesKenyaPage() {
                   <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
                   <p className="text-[0.83rem] text-ink-soft leading-relaxed">
                     <strong className="text-ink">Need to calculate VAT?</strong> See our{" "}
-                    <a href="/resources/how-to-calculate-vat-in-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                    <a href="/resources/how-to-calculate-vat-in-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                       How to Calculate VAT in Kenya
                     </a>{" "}
                     guide for worked examples of VAT exclusive, inclusive, and input/output VAT calculations.
@@ -579,7 +579,7 @@ export default function VatRatesKenyaPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

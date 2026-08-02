@@ -34,7 +34,7 @@ export default function VatDeregistrationPost() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+      <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources
       </a>
 
@@ -119,7 +119,7 @@ export default function VatDeregistrationPost() {
 
           <p>
             If you are unsure whether you should remain registered, see our{" "}
-            <a href="/resources/do-i-need-to-register-for-vat-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">guide on whether you need to register for VAT</a>{" "}
+            <a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">guide on whether you need to register for VAT</a>{" "}
             to review the threshold rules before applying for cancellation.
           </p>
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
@@ -346,7 +346,7 @@ export default function VatDeregistrationPost() {
             to remain registered even when their turnover dips below the threshold, especially if they
             expect to exceed it again soon. For a step-by-step guide on the original registration process,
             see our{" "}
-            <a href="/resources/how-to-register-for-vat-in-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT registration guide</a>.
+            <a href="/resources/how-to-register-for-vat-in-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT registration guide</a>.
           </p>
 
           <div className="border border-brand/25 bg-brand-muted rounded-lg p-5 mt-8">
@@ -367,9 +367,9 @@ export default function VatDeregistrationPost() {
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">Related Resources</h2>
           <ul className="space-y-2">
             {[
-              ["How to Register for VAT in Kenya", "/resources/how-to-register-for-vat-in-kenya", "Step-by-step iTax registration guide"],
-              ["Do I Need to Register for VAT in Kenya?", "/resources/do-i-need-to-register-for-vat-kenya", "Threshold analysis, voluntary registration, and penalties for non-registration"],
-              ["KRA VAT Penalties Reference", "/resources/kra-vat-penalties-reference", "Complete penalty table including late-filing, late-payment, and eTIMS penalties"],
+              ["How to Register for VAT in Kenya", "/resources/how-to-register-for-vat-in-kenya/", "Step-by-step iTax registration guide"],
+              ["Do I Need to Register for VAT in Kenya?", "/resources/do-i-need-to-register-for-vat-kenya/", "Threshold analysis, voluntary registration, and penalties for non-registration"],
+              ["KRA VAT Penalties Reference", "/resources/kra-vat-penalties-reference/", "Complete penalty table including late-filing, late-payment, and eTIMS penalties"],
             ].map(([title, slug, desc]) => (
               <li key={slug}>
                 <a href={slug} className="text-brand underline underline-offset-2 hover:text-brand-hover">
@@ -403,7 +403,7 @@ export default function VatDeregistrationPost() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

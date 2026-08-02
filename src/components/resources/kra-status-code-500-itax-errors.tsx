@@ -97,7 +97,7 @@ export default function KraStatusCode500Page() {
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-14">
         <div className="max-w-3xl mx-auto">
-          <a href="/resources" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
+          <a href="/resources/" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <div className="flex flex-wrap gap-2 mb-5">
@@ -158,7 +158,7 @@ export default function KraStatusCode500Page() {
               </p>
               <p>
                 There is a difference between Error 500 and other iTax errors. A login failure or "Invalid PIN" is something you can debug on your end (see our{" "}
-                <a href="/resources/itax-portal-not-working" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                <a href="/resources/itax-portal-not-working/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   complete iTax troubleshooting guide
                 </a>
                 ). But Error 500 means the server is failing — you cannot fix it from your side by clearing your cache or resetting your password.
@@ -344,7 +344,7 @@ export default function KraStatusCode500Page() {
               </div>
               <p>
                 For other iTax errors like login failures, OTP delays, and browser issues, see our{" "}
-                <a href="/resources/itax-portal-not-working" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                <a href="/resources/itax-portal-not-working/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   complete iTax troubleshooting guide
                 </a>.
               </p>
@@ -476,7 +476,7 @@ export default function KraStatusCode500Page() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

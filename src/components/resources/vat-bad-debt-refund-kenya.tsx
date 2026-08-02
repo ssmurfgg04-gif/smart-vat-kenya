@@ -91,7 +91,7 @@ export default function VatBadDebtRefundKenya() {
       <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
-        <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+        <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Resources
         </a>
 
@@ -154,9 +154,9 @@ export default function VatBadDebtRefundKenya() {
 
             <h2>Related Resources</h2>
             <ul>
-              <li><a href="/resources/vat-refund-guide-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Refund Guide Kenya</a> — General VAT refund process and documentation</li>
-              <li><a href="/resources/finance-act-vat-changes-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026 VAT Changes</a> — All VAT-related changes including bad debt relief timeline</li>
-              <li><a href="/services/monthly-vat-filing" className="text-brand underline underline-offset-2 hover:text-brand-hover">Monthly VAT Filing Service (KES 3,500/month)</a> — We handle returns, refund claims, and compliance</li>
+              <li><a href="/resources/vat-refund-guide-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Refund Guide Kenya</a> — General VAT refund process and documentation</li>
+              <li><a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026 VAT Changes</a> — All VAT-related changes including bad debt relief timeline</li>
+              <li><a href="/services/monthly-vat-filing/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Monthly VAT Filing Service (KES 3,500/month)</a> — We handle returns, refund claims, and compliance</li>
             </ul>
           </div>
         </article>
@@ -186,7 +186,7 @@ export default function VatBadDebtRefundKenya() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="/services/monthly-vat-filing"
+              href="/services/monthly-vat-filing/"
               className="inline-flex items-center justify-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
             >
               Monthly VAT Filing &mdash; KES 3,500/month

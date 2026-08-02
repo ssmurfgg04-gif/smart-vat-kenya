@@ -34,7 +34,7 @@ export default function KraVatAuditProcessPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+      <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources
       </a>
 
@@ -93,7 +93,7 @@ export default function KraVatAuditProcessPage() {
               { key: "input-vat-claims", trigger: "Input VAT claims far exceeding output VAT", detail: "If you regularly claim more input VAT than you collect in output VAT, KRA will question whether your purchases are genuine business expenses. A consistent credit position, especially without zero-rated supplies, invites a desk audit." },
               { key: "refund-claims", trigger: "Large or frequent VAT refund claims", detail: "Any refund application over KES 500,000 typically triggers a pre-refund audit. KRA wants to verify the claim before releasing cash. Even smaller refunds can trigger an audit if they are frequent or the pattern is unusual." },
               { key: "etims-inconsistencies", trigger: "Inconsistencies between eTIMS data and returns", detail: "eTIMS transmits every invoice you issue to KRA in real time. When your VAT return figures do not match the eTIMS data KRA already holds, the system automatically flags you. This is the most common trigger in 2026." },
-              { key: "special-table", trigger: <><a href="/resources/vat-special-table-risks" className="text-brand underline underline-offset-2 hover:text-brand-hover">Supplier on the Special Table</a></>, detail: "If you claim input VAT from a supplier on KRA's Special Table (suspected of issuing fake invoices), your claim may be disallowed and your entire return flagged for audit. The burden falls on you to prove the supply was genuine." },
+              { key: "special-table", trigger: <><a href="/resources/vat-special-table-risks/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Supplier on the Special Table</a></>, detail: "If you claim input VAT from a supplier on KRA's Special Table (suspected of issuing fake invoices), your claim may be disallowed and your entire return flagged for audit. The burden falls on you to prove the supply was genuine." },
               { key: "industry-audits", trigger: "Industry-wide audits", detail: "KRA periodically runs sector-wide audit programmes. Recent targets include construction, hospitality, transport, and digital services. If your industry is on KRA's list, expect a notice regardless of your individual compliance history." },
               { key: "random-selection", trigger: "Random selection", detail: "KRA also selects a percentage of taxpayers randomly each year. Even if you have no red flags, you can still be selected. This is why ongoing preparedness matters." },
               { key: "tip-offs", trigger: "Tip-offs or third-party information", detail: "KRA receives intelligence from competitors, disgruntled employees, and other government agencies. Information from the KRA whistleblower programme can initiate an audit with no prior warning." },
@@ -197,7 +197,7 @@ export default function KraVatAuditProcessPage() {
               { finding: "Disallowed input VAT", prevalence: "Very common", explanation: "KRA disallows input VAT where the supplier's eTIMS invoice was not transmitted, the supplier was on the Special Table, or the purchase was not wholly for business use. The disallowed amount is added back as tax due, plus penalties." },
               { finding: "Missing eTIMS invoices", prevalence: "Very common", explanation: "If you issued invoices outside eTIMS — even for cash sales — KRA treats those as undeclared sales. The eTIMS penalty of KES 50,000 per month may also apply separately." },
               { finding: "Incorrect apportionment", prevalence: "Common", explanation: "Businesses with mixed supplies (taxable and exempt) that failed to apportion input VAT correctly. Since the Finance Act 2025 removed the 90:10 rule, many businesses that previously claimed full input VAT now owe substantial adjustments." },
-              { finding: "Late filing penalties", prevalence: "Common", explanation: <>KRA reviews whether all returns were filed on time. Late-filed returns attract a penalty of KES 10,000 per return (KES 20,000 for large taxpayers). For a complete breakdown of all VAT-related penalties, see our{" "}<a href="/resources/kra-vat-penalties-reference" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA VAT penalties reference</a>. Interest of 2% per month also applies on any unpaid tax.</> },
+              { finding: "Late filing penalties", prevalence: "Common", explanation: <>KRA reviews whether all returns were filed on time. Late-filed returns attract a penalty of KES 10,000 per return (KES 20,000 for large taxpayers). For a complete breakdown of all VAT-related penalties, see our{" "}<a href="/resources/kra-vat-penalties-reference/" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA VAT penalties reference</a>. Interest of 2% per month also applies on any unpaid tax.</> },
               { finding: "Transfer pricing adjustments", prevalence: "Less common (large businesses)", explanation: "For related-party transactions, KRA may adjust prices to arm's length, resulting in additional output VAT or disallowed input VAT. This typically affects medium and large businesses." },
             ].map(({ finding, prevalence, explanation }) => (
               <div key={finding} className="border border-hairline rounded-lg p-4">
@@ -286,9 +286,9 @@ export default function KraVatAuditProcessPage() {
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">Related Resources</h2>
           <ul className="space-y-2">
             {[
-              ["Input VAT Deduction Guide", "/resources/input-vat-deduction-guide", "How to claim and document input VAT correctly to avoid audit findings"],
-              ["VAT Special Table Risks", "/resources/vat-special-table-risks", "Why suppliers on the Special Table trigger input VAT disallowance and audit flags"],
-              ["KRA VAT Penalties Reference", "/resources/kra-vat-penalties-reference", "Complete penalty table including audit-related penalties"],
+              ["Input VAT Deduction Guide", "/resources/input-vat-deduction-guide/", "How to claim and document input VAT correctly to avoid audit findings"],
+              ["VAT Special Table Risks", "/resources/vat-special-table-risks/", "Why suppliers on the Special Table trigger input VAT disallowance and audit flags"],
+              ["KRA VAT Penalties Reference", "/resources/kra-vat-penalties-reference/", "Complete penalty table including audit-related penalties"],
             ].map(([title, slug, desc]) => (
               <li key={slug}>
                 <a href={slug} className="text-brand underline underline-offset-2 hover:text-brand-hover">
@@ -322,7 +322,7 @@ export default function KraVatAuditProcessPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

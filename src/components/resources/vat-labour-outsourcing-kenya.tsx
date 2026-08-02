@@ -70,7 +70,7 @@ export default function VatLabourOutsourcingPage() {
       <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
-        <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+        <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Resources
         </a>
 
@@ -90,10 +90,10 @@ export default function VatLabourOutsourcingPage() {
 
         <div className="space-y-5 text-[0.9rem] text-ink-soft leading-[1.75]">
           <p>
-            The <a href="/resources/finance-act-vat-changes-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026</a> introduced <strong className="text-ink">Section 13(5A)</strong> into the VAT Act, one of the most welcome changes for Kenya&apos;s outsourcing and staffing industry. From <strong className="text-ink">1 July 2026</strong>, employee costs — salaries, wages, NSSF, SHIF, NITA, housing levy — paid through outsourcing providers are deemed <strong className="text-ink">disbursements</strong> and excluded from the taxable value. Only the service fee or management margin attracts 16% VAT.
+            The <a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026</a> introduced <strong className="text-ink">Section 13(5A)</strong> into the VAT Act, one of the most welcome changes for Kenya&apos;s outsourcing and staffing industry. From <strong className="text-ink">1 July 2026</strong>, employee costs — salaries, wages, NSSF, SHIF, NITA, housing levy — paid through outsourcing providers are deemed <strong className="text-ink">disbursements</strong> and excluded from the taxable value. Only the service fee or management margin attracts 16% VAT.
           </p>
           <p>
-            This guide explains the change, which sectors benefit, how to restructure contracts, and what it means for your <a href="/resources/input-vat-deduction-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">input VAT recovery</a>.
+            This guide explains the change, which sectors benefit, how to restructure contracts, and what it means for your <a href="/resources/input-vat-deduction-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">input VAT recovery</a>.
           </p>
 
           <div className="border border-amber-200 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-800/40 rounded-lg p-4 flex items-start gap-3">
@@ -263,7 +263,7 @@ export default function VatLabourOutsourcingPage() {
           {/* Section 5 — Input VAT */}
           <p>
             If your clients are appointed withholding VAT agents, see our{" "}
-            <a href="/resources/withholding-vat-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">withholding VAT guide</a>{" "}
+            <a href="/resources/withholding-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">withholding VAT guide</a>{" "}
             for how the 2% deduction interacts with outsourced staff invoices.
           </p>
             <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
@@ -302,7 +302,7 @@ export default function VatLabourOutsourcingPage() {
               <strong className="text-ink">Review and restructure contracts</strong> — Service Level Agreements must clearly distinguish the service fee from salary disbursements. Vague contracts risk reclassification by KRA.
             </li>
             <li className="text-ink-soft">
-              <strong className="text-ink">Update invoicing</strong> — Invoices must itemise employee costs (as disbursements) separately from the service fee. Use <a href="/resources/etims-invoicing-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS-compliant invoices</a>.
+              <strong className="text-ink">Update invoicing</strong> — Invoices must itemise employee costs (as disbursements) separately from the service fee. Use <a href="/resources/etims-invoicing-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS-compliant invoices</a>.
             </li>
             <li className="text-ink-soft">
               <strong className="text-ink">Classify correctly</strong> — Service contracts (e.g., a consultancy delivering a project) remain fully taxable. Only genuine labour outsourcing contracts qualify for the disbursement treatment.
@@ -314,7 +314,7 @@ export default function VatLabourOutsourcingPage() {
               <strong className="text-ink">No retrospective application</strong> — If you have a pre-July 2026 VAT dispute with KRA, it remains governed by the old law and court rulings. Seek professional advice.
             </li>
             <li className="text-ink-soft">
-              <strong className="text-ink">File monthly VAT returns</strong> via iTax by the 20th of each following month. See our <a href="/resources/how-to-file-vat-return-on-itax" className="text-brand underline underline-offset-2 hover:text-brand-hover">filing guide</a>.
+              <strong className="text-ink">File monthly VAT returns</strong> via iTax by the 20th of each following month. See our <a href="/resources/how-to-file-vat-return-on-itax/" className="text-brand underline underline-offset-2 hover:text-brand-hover">filing guide</a>.
             </li>
           </ol>
 
@@ -352,10 +352,10 @@ export default function VatLabourOutsourcingPage() {
           </h2>
           <ul className="space-y-2">
             {[
-              ["Finance Act 2025 and 2026 VAT Changes in Kenya", "/resources/finance-act-vat-changes-kenya", "Complete summary of all VAT changes from both Finance Acts"],
-              ["How to File VAT Return on iTax", "/resources/how-to-file-vat-return-on-itax", "Step-by-step guide to filing your monthly VAT return"],
-              ["KRA VAT Penalties Reference", "/resources/kra-vat-penalties-reference", "Complete guide to VAT penalties and waiver process"],
-              ["VAT for Startups and Tech Businesses", "/resources/vat-for-startups-tech-businesses", "VAT guide for tech companies including outsourced developer costs"],
+              ["Finance Act 2025 and 2026 VAT Changes in Kenya", "/resources/finance-act-vat-changes-kenya/", "Complete summary of all VAT changes from both Finance Acts"],
+              ["How to File VAT Return on iTax", "/resources/how-to-file-vat-return-on-itax/", "Step-by-step guide to filing your monthly VAT return"],
+              ["KRA VAT Penalties Reference", "/resources/kra-vat-penalties-reference/", "Complete guide to VAT penalties and waiver process"],
+              ["VAT for Startups and Tech Businesses", "/resources/vat-for-startups-tech-businesses/", "VAT guide for tech companies including outsourced developer costs"],
             ].map(([title, slug, desc]) => (
               <li key={slug}>
                 <a href={slug} className="text-brand underline underline-offset-2 hover:text-brand-hover">
@@ -393,7 +393,7 @@ export default function VatLabourOutsourcingPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

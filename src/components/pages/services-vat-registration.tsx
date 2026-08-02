@@ -383,7 +383,7 @@ export default function VATRegistrationPage() {
               <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
             <a
-              href="/services"
+              href="/services/"
               className="inline-flex items-center gap-2 border border-canvas/25 text-canvas/70 hover:text-canvas hover:border-canvas/50 text-sm font-medium px-5 py-3 rounded-md transition-colors"
             >
               View all services

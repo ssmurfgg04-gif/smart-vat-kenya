@@ -75,7 +75,7 @@ export function ArticleGrid({ currentSlug }: { currentSlug?: string }) {
       {items.map((a) => (
         <a
           key={a.slug}
-          href={`/resources/${a.slug}`}
+          href={`/resources/${a.slug}/`}
           className="group border border-hairline rounded-lg p-4 hover:border-ink/15 hover:shadow-sm transition-all no-underline"
         >
           <p className="text-[0.85rem] font-medium text-ink group-hover:text-brand transition-colors leading-snug">

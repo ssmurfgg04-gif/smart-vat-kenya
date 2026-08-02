@@ -97,7 +97,7 @@ export default function Pillar1Page() {
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-14">
         <div className="max-w-3xl mx-auto">
-          <a href="/resources" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
+          <a href="/resources/" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <div className="flex flex-wrap gap-2 mb-5">
@@ -371,7 +371,7 @@ export default function Pillar1Page() {
                 <p className="text-[0.83rem] text-ink-soft leading-relaxed">
                   <strong className="text-ink">Late filing penalty:</strong> Filing even one day after the 20th triggers{" "}
                   <strong className="text-ink">KES 10,000</strong> or 5% of the tax due (whichever is higher), plus 1% interest per month. A nil return filed late still attracts the KES 10,000 penalty. See our{" "}
-                  <a href="/resources/kra-penalty-for-late-vat-filing" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                  <a href="/resources/kra-penalty-for-late-vat-filing/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                     full KRA penalty guide
                   </a>.
                 </p>
@@ -380,7 +380,7 @@ export default function Pillar1Page() {
                 <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
                   <strong className="text-ink">Download the official guides:</strong> Get the complete KRA VAT registration guide, iTax manuals, and eTIMS PDFs from our{" "}
-                  <a href="/forms" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">KRA forms &amp; manuals page</a>.
+                  <a href="/forms/" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">KRA forms &amp; manuals page</a>.
                 </p>
               </div>
             </div>
@@ -423,7 +423,7 @@ export default function Pillar1Page() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

@@ -105,7 +105,7 @@ export default function VatVsTurnoverTaxPage() {
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-14">
         <div className="max-w-3xl mx-auto">
-          <a href="/resources" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
+          <a href="/resources/" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <div className="flex flex-wrap gap-2 mb-5">
@@ -225,8 +225,8 @@ export default function VatVsTurnoverTaxPage() {
                 Value Added Tax (VAT) is a <strong className="text-ink">consumption tax</strong> levied on the supply of taxable goods and services in Kenya. The standard rate is <strong className="text-ink">16%</strong>, set under the Value Added Tax Act (Cap. 476). Unlike Turnover Tax, VAT is applied to the <strong className="text-ink">value added</strong> at each stage of production and distribution &mdash; not on total sales.
               </p>
               <p>
-                <a href="/resources/how-to-register-for-vat-in-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT registration</a> is <strong className="text-ink">mandatory</strong> once your annual taxable turnover exceeds <strong className="text-ink">KES 5 million</strong> (the Finance Act 2025 proposed raising this to KES 8 million, but this has not yet taken effect). You may also{" "}
-                <a href="/resources/do-i-need-to-register-for-vat-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">register for VAT voluntarily</a>{" "}
+                <a href="/resources/how-to-register-for-vat-in-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT registration</a> is <strong className="text-ink">mandatory</strong> once your annual taxable turnover exceeds <strong className="text-ink">KES 5 million</strong> (the Finance Act 2025 proposed raising this to KES 8 million, but this has not yet taken effect). You may also{" "}
+                <a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">register for VAT voluntarily</a>{" "}
                 if you are below the threshold but want to claim input VAT or issue VAT-compliant invoices for your B2B customers.
               </p>
               <p>
@@ -472,7 +472,7 @@ export default function VatVsTurnoverTaxPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="/tools"
+                href="/tools/"
                 className="inline-flex items-center justify-center gap-2 bg-brand text-canvas font-semibold text-sm px-6 py-3 rounded-md hover:bg-brand-hover transition-colors"
               >
                 Explore Our Tax Tools
@@ -513,7 +513,7 @@ export default function VatVsTurnoverTaxPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

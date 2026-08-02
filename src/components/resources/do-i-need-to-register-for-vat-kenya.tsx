@@ -103,7 +103,7 @@ export default function DoINeedVATPage() {
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-14">
         <div className="max-w-3xl mx-auto">
-          <a href="/resources" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
+          <a href="/resources/" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <div className="flex flex-wrap gap-2 mb-5">
@@ -127,7 +127,7 @@ export default function DoINeedVATPage() {
             You must register for VAT in Kenya if your annual taxable turnover reaches or exceeds{" "}
             <strong className="text-ink">KES 5 million</strong>. If your turnover is below that, registration is voluntary — but it can still benefit you.             This guide covers the{" "}
             <strong className="text-ink">KES 5 million threshold rule</strong>, voluntary registration,{" "}
-            <a href="/resources/vat-vs-turnover-tax" className="text-brand underline underline-offset-2 hover:text-brand-hover">turnover tax (ToT)</a>, how VAT changes your pricing, and how to avoid scam agents when you{" "}
+            <a href="/resources/vat-vs-turnover-tax/" className="text-brand underline underline-offset-2 hover:text-brand-hover">turnover tax (ToT)</a>, how VAT changes your pricing, and how to avoid scam agents when you{" "}
             <strong className="text-ink">hire someone to handle your KRA PIN for VAT</strong>.
           </p>
         </div>
@@ -377,7 +377,7 @@ export default function DoINeedVATPage() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
-                  href="/tools"
+                  href="/tools/"
                   className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-6 py-3 rounded-md hover:bg-brand-hover transition-colors"
                 >
                   Take the Free Quiz
@@ -431,7 +431,7 @@ export default function DoINeedVATPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

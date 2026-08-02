@@ -105,7 +105,7 @@ export default function ETIMSInvoicingGuidePage() {
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-14">
         <div className="max-w-3xl mx-auto">
-          <a href="/resources" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
+          <a href="/resources/" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <div className="flex flex-wrap gap-2 mb-5">
@@ -184,7 +184,7 @@ export default function ETIMSInvoicingGuidePage() {
               </div>
               <p>
                 See our{" "}
-                <a href="/resources/etims-onboarding-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                <a href="/resources/etims-onboarding-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   full eTIMS onboarding guide
                 </a>{" "}
                 for instructions on registering for and setting up each eTIMS solution type.
@@ -427,7 +427,7 @@ export default function ETIMSInvoicingGuidePage() {
               </div>
               <p>
                 See our{" "}
-                <a href="/resources/vat-special-table-risks" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                <a href="/resources/vat-special-table-risks/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   VAT Special Table guide
                 </a>{" "}
                 for more on the risks of buying from non-compliant suppliers.
@@ -490,7 +490,7 @@ export default function ETIMSInvoicingGuidePage() {
                 <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
                   <strong className="text-ink">Download the official PDFs:</strong> Get the complete eTIMS user guides, onboarding manuals, and KRA invoicing references from our{" "}
-                  <a href="/forms" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">KRA forms &amp; manuals page</a>.
+                  <a href="/forms/" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">KRA forms &amp; manuals page</a>.
                 </p>
               </div>
             </div>
@@ -533,7 +533,7 @@ export default function ETIMSInvoicingGuidePage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

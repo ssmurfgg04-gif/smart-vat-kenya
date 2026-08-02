@@ -121,7 +121,7 @@ export default function NilReturnsTaxAmnestyPage() {
       <main className="max-w-[860px] mx-auto px-6 lg:px-10 py-16 lg:py-20">
         {/* Back link */}
         <a
-          href="/resources"
+          href="/resources/"
           className="inline-flex items-center gap-1.5 text-[0.8rem] text-ink-muted hover:text-ink transition-colors mb-10"
         >
           <ArrowLeft size={14} aria-hidden="true" />
@@ -265,7 +265,7 @@ export default function NilReturnsTaxAmnestyPage() {
               {
                 step: 1,
                 title: "Go to itax.kra.go.ke and log in",
-                detail: 'Enter your KRA PIN and password. If the login page shows "System Error" or hangs, use a different browser (Chrome works best) or try Incognito Mode. The portal is notoriously unreliable — see our <a href="/resources/itax-portal-not-working" className="text-brand underline">iTax portal troubleshooting guide</a> if you get stuck.',
+                detail: 'Enter your KRA PIN and password. If the login page shows "System Error" or hangs, use a different browser (Chrome works best) or try Incognito Mode. The portal is notoriously unreliable — see our <a href="/resources/itax-portal-not-working/" className="text-brand underline">iTax portal troubleshooting guide</a> if you get stuck.',
               },
               {
                 step: 2,
@@ -410,7 +410,7 @@ export default function NilReturnsTaxAmnestyPage() {
             </div>
             <p className="mt-4 text-[0.85rem] text-ink-muted leading-relaxed">
               For a complete breakdown of eligibility, deadlines, and what happens after you apply, see our{" "}
-              <a href="/resources/kra-tax-amnesty-2026" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">dedicated KRA Tax Amnesty 2026 guide</a>.
+              <a href="/resources/kra-tax-amnesty-2026/" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">dedicated KRA Tax Amnesty 2026 guide</a>.
             </p>
           </div>
         </section>
@@ -627,7 +627,7 @@ export default function NilReturnsTaxAmnestyPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

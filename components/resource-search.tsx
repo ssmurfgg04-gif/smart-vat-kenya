@@ -99,7 +99,7 @@ export function ResourceSearch({ pillars }: { pillars: Pillar[] }) {
               </div>
               <h3 className="font-display text-[0.95rem] font-semibold text-ink leading-snug mb-3 flex-1 text-balance">
                 <a
-                  href={`/resources/${pillar.slug}`}
+                  href={`/resources/${pillar.slug}/`}
                   className="hover:text-brand transition-colors"
                 >
                   {pillar.title}
@@ -114,7 +114,7 @@ export function ResourceSearch({ pillars }: { pillars: Pillar[] }) {
                   {pillar.readTime} read
                 </span>
                 <a
-                  href={`/resources/${pillar.slug}`}
+                  href={`/resources/${pillar.slug}/`}
                   className="inline-flex items-center gap-1.5 text-[0.78rem] font-semibold text-brand hover:text-brand-hover transition-colors"
                 >
                   Read the guide

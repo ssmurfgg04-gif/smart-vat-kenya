@@ -105,7 +105,7 @@ export default function EtimsMandateGuide() {
       <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
-        <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+        <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Resources
         </a>
 
@@ -171,7 +171,7 @@ export default function EtimsMandateGuide() {
             <div className="bg-brand/5 border border-brand/15 rounded-lg p-5 my-8 not-prose">
               <div className="flex items-start gap-3 mb-3">
                 <Info size={18} className="text-brand shrink-0 mt-0.5" weight="fill" />
-                <p className="text-sm font-semibold text-ink">Need help onboarding? We handle eTIMS setup as part of our <a href="/services/vat-registration" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT registration service (KES 5,000)</a> — includes PIN generation, eTIMS onboarding guidance, and taxpayer education.</p>
+                <p className="text-sm font-semibold text-ink">Need help onboarding? We handle eTIMS setup as part of our <a href="/services/vat-registration/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT registration service (KES 5,000)</a> — includes PIN generation, eTIMS onboarding guidance, and taxpayer education.</p>
               </div>
             </div>
 
@@ -296,13 +296,13 @@ export default function EtimsMandateGuide() {
 
             <h2>Related Resources</h2>
             <ul>
-              <li><a href="/resources/etims-onboarding-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">Complete eTIMS Onboarding Guide</a> — Step-by-step account setup, device registration, and first invoice</li>
-              <li><a href="/resources/etims-invoicing-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Invoicing Guide</a> — How to issue, cancel, and correct invoices</li>
-              <li><a href="/resources/etims-compliance-checklist" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Compliance Checklist</a> — Daily, monthly, and annual obligations</li>
-              <li><a href="/resources/etims-penalty-50000-per-month-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Penalties Guide</a> — Full breakdown of KRA's penalty structure</li>
-              <li><a href="/resources/finance-act-vat-changes-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026 VAT Changes</a> — All VAT-related changes including eTIMS enforcement</li>
-              <li><a href="/services/etims-onboarding" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Onboarding Service</a> — We set up eTIMS for you</li>
-              <li><a href="/services/monthly-vat-filing" className="text-brand underline underline-offset-2 hover:text-brand-hover">Monthly VAT Filing Service</a> — We file your returns and reconcile against eTIMS data</li>
+              <li><a href="/resources/etims-onboarding-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Complete eTIMS Onboarding Guide</a> — Step-by-step account setup, device registration, and first invoice</li>
+              <li><a href="/resources/etims-invoicing-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Invoicing Guide</a> — How to issue, cancel, and correct invoices</li>
+              <li><a href="/resources/etims-compliance-checklist/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Compliance Checklist</a> — Daily, monthly, and annual obligations</li>
+              <li><a href="/resources/etims-penalty-50000-per-month-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Penalties Guide</a> — Full breakdown of KRA's penalty structure</li>
+              <li><a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026 VAT Changes</a> — All VAT-related changes including eTIMS enforcement</li>
+              <li><a href="/services/etims-onboarding/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Onboarding Service</a> — We set up eTIMS for you</li>
+              <li><a href="/services/monthly-vat-filing/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Monthly VAT Filing Service</a> — We file your returns and reconcile against eTIMS data</li>
             </ul>
           </div>
         </article>
@@ -332,13 +332,13 @@ export default function EtimsMandateGuide() {
             We handle the full eTIMS compliance lifecycle — onboarding, daily invoicing guidance, monthly stock reports, and return filing. Our flat-fee services cover every aspect of the mandate.
           </p>
           <ul className="space-y-2 text-sm text-ink-muted mb-5">
-            <li className="flex items-start gap-2">— <a href="/services/vat-registration" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Registration + eTIMS Onboarding (KES 5,000)</a></li>
-            <li className="flex items-start gap-2">— <a href="/services/monthly-vat-filing" className="text-brand underline underline-offset-2 hover:text-brand-hover">Monthly VAT Filing with eTIMS Reconciliation (KES 3,500/month)</a></li>
-            <li className="flex items-start gap-2">— <a href="/services/etims-onboarding" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Setup and Configuration (KES 3,500)</a></li>
+            <li className="flex items-start gap-2">— <a href="/services/vat-registration/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Registration + eTIMS Onboarding (KES 5,000)</a></li>
+            <li className="flex items-start gap-2">— <a href="/services/monthly-vat-filing/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Monthly VAT Filing with eTIMS Reconciliation (KES 3,500/month)</a></li>
+            <li className="flex items-start gap-2">— <a href="/services/etims-onboarding/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Setup and Configuration (KES 3,500)</a></li>
           </ul>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="/services/etims-onboarding"
+              href="/services/etims-onboarding/"
               className="inline-flex items-center justify-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
             >
               Get eTIMS Compliant Today

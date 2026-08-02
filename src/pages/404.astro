@@ -1,0 +1,62 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+---
+
+<BaseLayout
+  title="Page Not Found (404)"
+  description="That page could not be found on Smart VAT Kenya. Head back home or browse our Kenya VAT guides, calculator, and services."
+  canonical="/404.html"
+>
+  <meta name="robots" content="noindex" slot="head" />
+  <section class="mx-auto max-w-[1400px] px-6 pt-16 pb-24">
+    <div class="max-w-[640px]">
+      <p class="font-mono text-sm text-brand mb-4">404 · Page not found</p>
+      <h1 class="font-sans text-4xl lg:text-5xl font-bold tracking-tight text-ink mb-6">
+        That page has been wiped from the books.
+      </h1>
+      <p class="text-lg text-ink/70 leading-relaxed mb-8">
+        The link may be old, the page may have moved, or the URL was typed wrong.
+        Let&apos;s get you back to filing on time.
+      </p>
+      <div class="flex flex-wrap gap-4 mb-12">
+        <a
+          href="/"
+          class="inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+        >
+          Back to Home
+        </a>
+        <a
+          href="/resources/"
+          class="inline-flex items-center justify-center rounded-lg border border-ink/15 px-6 py-3 text-sm font-semibold text-ink transition hover:border-brand hover:text-brand"
+        >
+          Browse VAT Guides
+        </a>
+      </div>
+      <div class="border-t border-ink/10 pt-8">
+        <p class="text-sm font-semibold text-ink mb-3">Popular guides</p>
+        <ul class="space-y-2">
+          <li>
+            <a href="/resources/how-to-register-for-vat-in-kenya/" class="text-sm text-ink/70 hover:text-brand">
+              How to Register for VAT in Kenya
+            </a>
+          </li>
+          <li>
+            <a href="/resources/how-to-calculate-vat-in-kenya/" class="text-sm text-ink/70 hover:text-brand">
+              How to Calculate 16% VAT in Kenya
+            </a>
+          </li>
+          <li>
+            <a href="/resources/kra-vat-filing-deadline-august-2026/" class="text-sm text-ink/70 hover:text-brand">
+              KRA VAT Filing Deadline
+            </a>
+          </li>
+          <li>
+            <a href="/services/" class="text-sm text-ink/70 hover:text-brand">
+              Services &amp; Pricing
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

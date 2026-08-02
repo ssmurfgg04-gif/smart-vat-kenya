@@ -34,7 +34,7 @@ export default function KraPinPost() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+      <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources
       </a>
 
@@ -134,7 +134,7 @@ export default function KraPinPost() {
             <p className="text-ink-muted">
               If the iTax portal is slow or unresponsive — which is common during peak hours
               (8 AM to 12 PM) — try applying late in the evening or over the weekend. See our
-              <a href="/resources/itax-portal-not-working" className="text-brand underline underline-offset-2 mx-1">
+              <a href="/resources/itax-portal-not-working/" className="text-brand underline underline-offset-2 mx-1">
                 iTax troubleshooting guide
               </a>
               if you run into errors.
@@ -297,7 +297,7 @@ export default function KraPinPost() {
           </p>
           <p>
             Once your KRA PIN is issued, the next step is{" "}
-            <a href="/resources/how-to-register-for-vat-in-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT registration</a>{" "}
+            <a href="/resources/how-to-register-for-vat-in-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT registration</a>{" "}
             if your annual turnover exceeds KES 5 million or you supply VAT-registered customers.
           </p>
 
@@ -351,9 +351,9 @@ export default function KraPinPost() {
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">Related Resources</h2>
           <ul className="space-y-2">
             {[
-              ["How to Register for VAT in Kenya", "/resources/how-to-register-for-vat-in-kenya", "Step-by-step VAT registration guide on iTax"],
-              ["KRA iTax Portal Not Working?", "/resources/itax-portal-not-working", "Common iTax errors and how to fix them"],
-              ["eTIMS Onboarding Guide 2026", "/resources/etims-onboarding-guide", "Step-by-step registration guide for all three eTIMS solution types"],
+              ["How to Register for VAT in Kenya", "/resources/how-to-register-for-vat-in-kenya/", "Step-by-step VAT registration guide on iTax"],
+              ["KRA iTax Portal Not Working?", "/resources/itax-portal-not-working/", "Common iTax errors and how to fix them"],
+              ["eTIMS Onboarding Guide 2026", "/resources/etims-onboarding-guide/", "Step-by-step registration guide for all three eTIMS solution types"],
             ].map(([title, slug, desc]) => (
               <li key={slug}>
                 <a href={slug} className="text-brand underline underline-offset-2 hover:text-brand-hover">
@@ -387,7 +387,7 @@ export default function KraPinPost() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

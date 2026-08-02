@@ -103,7 +103,7 @@ export default function ETIMSDownPage() {
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-14">
         <div className="max-w-3xl mx-auto">
-          <a href="/resources" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
+          <a href="/resources/" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <div className="flex flex-wrap gap-2 mb-5">
@@ -193,11 +193,11 @@ export default function ETIMSDownPage() {
               </div>
               <p>
                 For iTax portal issues specifically (as opposed to eTIMS), see our{" "}
-                <a href="/resources/kra-status-code-500-itax-errors" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                <a href="/resources/kra-status-code-500-itax-errors/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   Error 500 troubleshooting guide
                 </a>{" "}
                 and{" "}
-                <a href="/resources/itax-portal-not-working" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                <a href="/resources/itax-portal-not-working/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   general iTax troubleshooting guide
                 </a>.
               </p>
@@ -298,7 +298,7 @@ export default function ETIMSDownPage() {
                 ))}
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
                   See our{" "}
-                  <a href="/resources/etims-onboarding-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                  <a href="/resources/etims-onboarding-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                     eTIMS onboarding guide
                   </a>{" "}
                   for step-by-step upgrade instructions.
@@ -463,7 +463,7 @@ export default function ETIMSDownPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

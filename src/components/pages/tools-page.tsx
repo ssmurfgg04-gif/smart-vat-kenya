@@ -254,12 +254,12 @@ export default function ToolsPage() {
           <div className="flex items-center gap-2.5 mb-6"><Calculator size={17} weight="duotone" className="text-brand" aria-hidden="true" /><h2 id="advanced-heading" className="font-display text-[1rem] font-semibold text-ink">More Free KRA Tax Tools</h2></div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
             {[
-              { href: "/resources/vat-rates-kenya", icon: CurrencyCircleDollar, label: "VAT Rates & Calculator Guide", desc: "Standard 16%, zero-rated, exempt — rates and how to apply them" },
-              { href: "/resources/vat-vs-turnover-tax", icon: Scales, label: "VAT vs Turnover Tax", desc: "Decision guide for choosing the right tax regime" },
-              { href: "/resources/etims-compliance-checklist", icon: ListChecks, label: "eTIMS Compliance Checklist", desc: "Daily, monthly, and annual eTIMS obligations" },
-              { href: "/resources/withholding-vat-kenya", icon: HandCoins, label: "Withholding Tax Guide", desc: "2% withholding VAT — how it works for agents and suppliers" },
-              { href: "/resources/etims-penalty-50000-per-month-kenya", icon: WarningCircle, label: "eTIMS Penalty Guide", desc: "KES 50,000/month and up to KES 100,000 per instance" },
-              { href: "/resources/kra-tax-amnesty-2026", icon: WarningCircle, label: "Tax Amnesty Savings Guide", desc: "How to save 100% on penalties and interest before Dec 31", badge: "Deadline Dec 31" },
+              { href: "/resources/vat-rates-kenya/", icon: CurrencyCircleDollar, label: "VAT Rates & Calculator Guide", desc: "Standard 16%, zero-rated, exempt — rates and how to apply them" },
+              { href: "/resources/vat-vs-turnover-tax/", icon: Scales, label: "VAT vs Turnover Tax", desc: "Decision guide for choosing the right tax regime" },
+              { href: "/resources/etims-compliance-checklist/", icon: ListChecks, label: "eTIMS Compliance Checklist", desc: "Daily, monthly, and annual eTIMS obligations" },
+              { href: "/resources/withholding-vat-kenya/", icon: HandCoins, label: "Withholding Tax Guide", desc: "2% withholding VAT — how it works for agents and suppliers" },
+              { href: "/resources/etims-penalty-50000-per-month-kenya/", icon: WarningCircle, label: "eTIMS Penalty Guide", desc: "KES 50,000/month and up to KES 100,000 per instance" },
+              { href: "/resources/kra-tax-amnesty-2026/", icon: WarningCircle, label: "Tax Amnesty Savings Guide", desc: "How to save 100% on penalties and interest before Dec 31", badge: "Deadline Dec 31" },
             ].map((t) => (
               <a key={t.href} href={t.href} className="border border-hairline rounded-lg p-4 group hover:border-ink/15 hover:shadow-sm transition-all flex flex-col gap-1.5">
                 <t.icon size={18} weight="duotone" className="text-brand" aria-hidden="true" />
@@ -275,20 +275,20 @@ export default function ToolsPage() {
           <div className="flex items-center gap-2.5 mb-6"><ClipboardText size={17} weight="duotone" className="text-brand" aria-hidden="true" /><h2 id="resources-heading" className="font-display text-[1rem] font-semibold text-ink">Need More Help? Read Our Free KRA VAT Guides</h2></div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { href: "/resources/how-to-register-for-vat-in-kenya", label: "How to Register for VAT in Kenya" },
-              { href: "/resources/kra-penalty-for-late-vat-filing", label: "KRA Penalty for Late VAT Filing" },
-              { href: "/resources/how-to-calculate-vat-in-kenya", label: "How to Calculate 16% VAT in Kenya" },
-              { href: "/resources/how-to-file-vat-return-on-itax", label: "How to File VAT Return on iTax" },
-              { href: "/resources/do-i-need-to-register-for-vat-kenya", label: "Do I Need to Register for VAT?" },
-              { href: "/resources/itax-portal-not-working", label: "iTax Errors — Diagnosis + Fixes" },
-              { href: "/resources/etims-onboarding-guide", label: "eTIMS Onboarding Guide 2026" },
-              { href: "/resources/vat-vs-turnover-tax", label: "VAT vs Turnover Tax Decision Guide" },
-              { href: "/resources/kra-vat-penalties-reference", label: "KRA VAT Penalties Reference Table" },
-              { href: "/resources/vat-registration-checklist", label: "VAT Registration Checklist" },
-              { href: "/resources/nil-returns-tax-amnesty", label: "Nil Returns & Tax Amnesty Guide" },
-              { href: "/resources/vat-for-startups-tech-businesses", label: "VAT for Startups & Tech" },
-              { href: "/resources/vat-special-table-risks", label: "KRA VAT Special Table Risks" },
-              { href: "/resources/etims-invoicing-guide", label: "eTIMS Compliant Invoice Guide" },
+              { href: "/resources/how-to-register-for-vat-in-kenya/", label: "How to Register for VAT in Kenya" },
+              { href: "/resources/kra-penalty-for-late-vat-filing/", label: "KRA Penalty for Late VAT Filing" },
+              { href: "/resources/how-to-calculate-vat-in-kenya/", label: "How to Calculate 16% VAT in Kenya" },
+              { href: "/resources/how-to-file-vat-return-on-itax/", label: "How to File VAT Return on iTax" },
+              { href: "/resources/do-i-need-to-register-for-vat-kenya/", label: "Do I Need to Register for VAT?" },
+              { href: "/resources/itax-portal-not-working/", label: "iTax Errors — Diagnosis + Fixes" },
+              { href: "/resources/etims-onboarding-guide/", label: "eTIMS Onboarding Guide 2026" },
+              { href: "/resources/vat-vs-turnover-tax/", label: "VAT vs Turnover Tax Decision Guide" },
+              { href: "/resources/kra-vat-penalties-reference/", label: "KRA VAT Penalties Reference Table" },
+              { href: "/resources/vat-registration-checklist/", label: "VAT Registration Checklist" },
+              { href: "/resources/nil-returns-tax-amnesty/", label: "Nil Returns & Tax Amnesty Guide" },
+              { href: "/resources/vat-for-startups-tech-businesses/", label: "VAT for Startups & Tech" },
+              { href: "/resources/vat-special-table-risks/", label: "KRA VAT Special Table Risks" },
+              { href: "/resources/etims-invoicing-guide/", label: "eTIMS Compliant Invoice Guide" },
             ].map((r) => (
               <a key={r.href} href={r.href} className="border border-hairline rounded-lg p-4 text-[0.82rem] text-ink-muted hover:text-ink hover:border-ink-muted transition-colors">{r.label} <ArrowRight size={11} weight="bold" className="inline ml-1" aria-hidden="true" /></a>
             ))}

@@ -34,7 +34,7 @@ export default function VatForImportersKenyaPost() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+      <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources
       </a>
 
@@ -107,7 +107,7 @@ export default function VatForImportersKenyaPost() {
           <p>
             Import VAT is calculated on the <strong>cumulative</strong> value of the goods after adding customs
             duty and other statutory levies. For a general overview of how VAT is computed, see our{" "}
-            <a href="/resources/how-to-calculate-vat-in-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">how to calculate VAT in Kenya guide</a>.
+            <a href="/resources/how-to-calculate-vat-in-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">how to calculate VAT in Kenya guide</a>.
             The formula is:
           </p>
           <div className="bg-ink/5 dark:bg-canvas-muted rounded-lg p-4 font-mono text-[0.85rem]">
@@ -221,7 +221,7 @@ export default function VatForImportersKenyaPost() {
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">Claiming Input VAT on Imports</h2>
           <p>
             The import VAT you pay at customs is recoverable as{" "}
-            <a href="/resources/input-vat-deduction-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">input VAT</a> — provided you meet the
+            <a href="/resources/input-vat-deduction-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">input VAT</a> — provided you meet the
             conditions under Section 17 of the VAT Act, 2013.
           </p>
           <h3 className="font-display text-[1rem] font-semibold text-ink mt-5 mb-2">Conditions for Deduction</h3>
@@ -373,10 +373,10 @@ export default function VatForImportersKenyaPost() {
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">Related Resources</h2>
           <ul className="space-y-2">
             {[
-              ["Input VAT Deduction Guide", "/resources/input-vat-deduction-guide", "How to properly claim input VAT including import VAT, conditions, and apportionment"],
-              ["How to Register for VAT in Kenya", "/resources/how-to-register-for-vat-in-kenya", "Step-by-step VAT registration process — required if you import goods regularly"],
-              ["eTIMS Invoicing Guide", "/resources/etims-invoicing-guide", "Mandatory invoice fields, QR codes, B2B vs B2C rules, and stock tracking"],
-              ["eTIMS Onboarding Guide 2026", "/resources/etims-onboarding-guide", "How to register and set up eTIMS for your business"],
+              ["Input VAT Deduction Guide", "/resources/input-vat-deduction-guide/", "How to properly claim input VAT including import VAT, conditions, and apportionment"],
+              ["How to Register for VAT in Kenya", "/resources/how-to-register-for-vat-in-kenya/", "Step-by-step VAT registration process — required if you import goods regularly"],
+              ["eTIMS Invoicing Guide", "/resources/etims-invoicing-guide/", "Mandatory invoice fields, QR codes, B2B vs B2C rules, and stock tracking"],
+              ["eTIMS Onboarding Guide 2026", "/resources/etims-onboarding-guide/", "How to register and set up eTIMS for your business"],
             ].map(([title, slug, desc]) => (
               <li key={slug}>
                 <a href={slug} className="text-brand underline underline-offset-2 hover:text-brand-hover">
@@ -410,7 +410,7 @@ export default function VatForImportersKenyaPost() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

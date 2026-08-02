@@ -91,7 +91,7 @@ export default function IcmsExportGuide() {
       <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
-        <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+        <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Resources
         </a>
 
@@ -135,9 +135,9 @@ export default function IcmsExportGuide() {
 
             <h2>Related Resources</h2>
             <ul>
-              <li><a href="/resources/finance-act-vat-changes-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026 VAT Changes</a> — All VAT changes including the new mandatory export declaration regime effective 1 September 2026 for importers</li>
-              <li><a href="/resources/vat-auto-populated-return" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Auto-Populated Return Guide</a> — How KRA's automated return system works across eTIMS, iCMS, and iTax</li>
-              <li><a href="/services/monthly-vat-filing" className="text-brand underline underline-offset-2 hover:text-brand-hover">Monthly VAT Filing Service (KES 3,500/month)</a> — We handle your return filing including iCMS data reconciliation</li>
+              <li><a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026 VAT Changes</a> — All VAT changes including the new mandatory export declaration regime effective 1 September 2026 for importers</li>
+              <li><a href="/resources/vat-auto-populated-return/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Auto-Populated Return Guide</a> — How KRA's automated return system works across eTIMS, iCMS, and iTax</li>
+              <li><a href="/services/monthly-vat-filing/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Monthly VAT Filing Service (KES 3,500/month)</a> — We handle your return filing including iCMS data reconciliation</li>
             </ul>
           </div>
         </article>
@@ -167,7 +167,7 @@ export default function IcmsExportGuide() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="/services/monthly-vat-filing"
+              href="/services/monthly-vat-filing/"
               className="inline-flex items-center justify-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
             >
               Monthly VAT Filing — KES 3,500/month

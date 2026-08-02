@@ -103,7 +103,7 @@ export default function ETIMSAccountLockedPage() {
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-14">
         <div className="max-w-3xl mx-auto">
-          <a href="/resources" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
+          <a href="/resources/" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <div className="flex flex-wrap gap-2 mb-5">
@@ -343,11 +343,11 @@ export default function ETIMSAccountLockedPage() {
                     If you cannot invoice or file because of a lockout, screenshot every error, note the time,
                     and contact KRA immediately. If you miss the deadline, apply for a penalty waiver with the
                     evidence. Read the{" "}
-                    <a href="/resources/kra-penalty-for-late-vat-filing" className="underline underline-offset-2 hover:opacity-80">
+                    <a href="/resources/kra-penalty-for-late-vat-filing/" className="underline underline-offset-2 hover:opacity-80">
                       late filing penalty guide
                     </a>{" "}
                     and{" "}
-                    <a href="/resources/etims-penalty-50000-per-month-kenya" className="underline underline-offset-2 hover:opacity-80">
+                    <a href="/resources/etims-penalty-50000-per-month-kenya/" className="underline underline-offset-2 hover:opacity-80">
                       eTIMS penalty guide
                     </a>.
                   </p>
@@ -457,7 +457,7 @@ export default function ETIMSAccountLockedPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

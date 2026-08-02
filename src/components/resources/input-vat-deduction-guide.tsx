@@ -92,7 +92,7 @@ export default function InputVatPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="max-w-[880px] mx-auto px-6 lg:px-10 py-12">
-        <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+        <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Guides
         </a>
 
@@ -149,16 +149,16 @@ export default function InputVatPage() {
               </h2>
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
                 <p>You must satisfy all of these conditions for KRA to allow your input VAT claim. For an overview tailored to early-stage and tech companies, see our{" "}
-                  <a href="/resources/vat-for-startups-tech-businesses" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT guide for startups and tech businesses</a>.</p>
+                  <a href="/resources/vat-for-startups-tech-businesses/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT guide for startups and tech businesses</a>.</p>
                 <div className="space-y-3">
                   {[
                     { num: 1, condition: "You must be VAT-registered", detail: "Only businesses with active VAT registration can claim input VAT. If you are not registered, the VAT you pay on purchases is a cost, not a reclaimable tax." },
                     { num: 2, condition: "The purchase must be for business use", detail: "Personal purchases and non-business expenses do not qualify. If you use an item partly for business and partly personally, only the business-use portion is claimable." },
                     { num: 3, condition: "The purchase must be used for taxable supplies", detail: "If you make only exempt supplies (e.g., basic food items, medical services), you cannot claim input VAT. For mixed supplies (both taxable and exempt), you need apportionment." },
-                    { num: 4, condition: "You must have a valid eTIMS invoice", detail: <>The invoice must be generated through eTIMS, contain your KRA PIN, and have been transmitted to KRA by the supplier. See our{" "}<a href="/resources/etims-invoicing-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS invoicing guide</a>{" "}for required invoice fields. Manual invoices, receipts, or supplier statements are not acceptable.</> },
+                    { num: 4, condition: "You must have a valid eTIMS invoice", detail: <>The invoice must be generated through eTIMS, contain your KRA PIN, and have been transmitted to KRA by the supplier. See our{" "}<a href="/resources/etims-invoicing-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS invoicing guide</a>{" "}for required invoice fields. Manual invoices, receipts, or supplier statements are not acceptable.</> },
                     { num: 5, condition: "Your KRA PIN must appear on the invoice", detail: "If the supplier captured your PIN incorrectly or omitted it, the invoice will not appear in your auto-populated purchases CSV. You cannot claim input VAT on that invoice." },
                     { num: 6, condition: "The supplier must have declared the sale", detail: "The supplier must have included the invoice in their own VAT return. If they did not file or omitted your invoice, KRA will not allow your input VAT claim." },
-                    { num: 7, condition: "Claim within 6 months", detail: <>The deduction must be claimed within 6 months after the end of the tax period of the supply or importation. After that, the claim window closes permanently. See our{" "}<a href="/resources/how-to-file-vat-return-on-itax" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT return filing guide</a>{" "}for how to enter input VAT in your monthly return.</> },
+                    { num: 7, condition: "Claim within 6 months", detail: <>The deduction must be claimed within 6 months after the end of the tax period of the supply or importation. After that, the claim window closes permanently. See our{" "}<a href="/resources/how-to-file-vat-return-on-itax/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT return filing guide</a>{" "}for how to enter input VAT in your monthly return.</> },
                   ].map(({ num, condition, detail }) => (
                     <div key={num} className="flex gap-3">
                       <span className="bg-brand/10 text-brand rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">{num}</span>
@@ -179,7 +179,7 @@ export default function InputVatPage() {
               </h2>
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
                 <p>KRA specifically prohibits input VAT deduction on these categories. Additionally, if a supplier appears on KRA's{" "}
-                  <a href="/resources/vat-special-table-risks" className="text-brand underline underline-offset-2 hover:text-brand-hover">Special Table</a>{" "}
+                  <a href="/resources/vat-special-table-risks/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Special Table</a>{" "}
                   of high-risk taxpayers, any input VAT claimed from that supplier may be disallowed on audit.</p>
                 <div className="space-y-3">
                   {[
@@ -296,7 +296,7 @@ export default function InputVatPage() {
                   </div>
                 </div>
                 <p>
-                  See our <a href="/resources/vat-refund-guide-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Refund Guide</a> for the full step-by-step refund process.
+                  See our <a href="/resources/vat-refund-guide-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Refund Guide</a> for the full step-by-step refund process.
                 </p>
               </div>
             </section>
@@ -339,7 +339,7 @@ export default function InputVatPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

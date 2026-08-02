@@ -92,7 +92,7 @@ export default function DigitalServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="max-w-[880px] mx-auto px-6 lg:px-10 py-12">
-        <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+        <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Guides
         </a>
 
@@ -272,19 +272,19 @@ export default function DigitalServicesPage() {
                   If you run a Kenyan business selling digital services, here is what compliance looks like.
                   For fintech-specific rules covering digital payments, merchant acquiring, and settlement services,
                   see our{" "}
-                  <a href="/resources/vat-fintech-digital-payments-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT for fintech and digital payments guide</a>.
+                  <a href="/resources/vat-fintech-digital-payments-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT for fintech and digital payments guide</a>.
                 </p>
                 <ol className="space-y-3 list-decimal list-inside">
                   <li className="text-ink-soft">
                     <strong className="text-ink">Register for VAT</strong> once your turnover exceeds KES 5 million,
                     or voluntarily if you want to claim input VAT on your costs. See our{" "}
-                    <a href="/resources/how-to-register-for-vat-in-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Registration Guide</a>.
+                    <a href="/resources/how-to-register-for-vat-in-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Registration Guide</a>.
                   </li>
                   <li className="text-ink-soft">
                     <strong className="text-ink">Set up eTIMS</strong> for invoicing. Even though you sell digital
                     services, you must issue eTIMS-compliant invoices to your VAT-registered customers. Use eTIMS
                     Lite or API integration if you have a billing system. See our{" "}
-                    <a href="/resources/etims-onboarding-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Onboarding Guide</a>.
+                    <a href="/resources/etims-onboarding-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Onboarding Guide</a>.
                   </li>
                   <li className="text-ink-soft">
                     <strong className="text-ink">Charge VAT correctly</strong> on all sales to Kenyan customers.
@@ -357,7 +357,7 @@ export default function DigitalServicesPage() {
                 </ul>
                 <p>
                   For a full guide on input VAT conditions and prohibited claims, see our{" "}
-                  <a href="/resources/input-vat-deduction-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">Input VAT Deduction Guide</a>.
+                  <a href="/resources/input-vat-deduction-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Input VAT Deduction Guide</a>.
                 </p>
               </div>
             </section>
@@ -400,7 +400,7 @@ export default function DigitalServicesPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

@@ -26,7 +26,8 @@ const DEFAULT_OG = "/og-image.png"
 const {
   title,
   description,
-  canonical = "/",
+  canonical: canonicalProp,
+  path,
   image = DEFAULT_OG,
   type = "website",
   publishedTime,
@@ -37,6 +38,7 @@ const {
   articleSchema,
 } = Astro.props
 
+const canonical = canonicalProp ?? path ?? "/"
 const pageTitle = title ? `${title} | ${SITE_NAME}` : "VAT Registration Services Kenya | KRA VAT Calculator | Smart VAT Kenya"
 const pageDesc = description ?? "Professional VAT registration services in Kenya — KES 5,000 flat fee, done in 1–3 working days."
 const pageUrl = `${SITE_URL}${canonical}`
@@ -319,6 +321,8 @@ const localBusinessSchema = {
   {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
   {articleSchema && <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
   {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+
+  <slot name="head" />
 
   <!-- Icons -->
   <link rel="icon" type="image/svg+xml" href="/icon.svg" />

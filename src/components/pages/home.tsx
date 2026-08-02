@@ -208,7 +208,7 @@ export default function HomePage() {
                 <ArrowRight size={16} weight="bold" aria-hidden="true" />
               </a>
               <a
-                href="/tools"
+                href="/tools/"
                 className="inline-flex items-center justify-center gap-2 border border-canvas/25 text-canvas/80 hover:text-canvas hover:border-canvas/50 font-medium px-6 py-3.5 rounded-md text-sm transition-colors"
               >
                 <Calculator size={16} aria-hidden="true" />
@@ -296,7 +296,7 @@ export default function HomePage() {
           </h2>
           <p className="text-[0.9rem] text-ink-muted max-w-[52ch] mb-16 leading-relaxed">
             KRA's{" "}
-            <a href="/resources/itax-portal-not-working" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+            <a href="/resources/itax-portal-not-working/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
               portal crashes 2–3 times per week
             </a>
             . Facilitators quote KES 15,000–30,000.
@@ -495,7 +495,7 @@ export default function HomePage() {
               Kenya VAT Standard Rate 16%: what every registered business must know
             </h2>
             <a
-              href="/tools"
+              href="/tools/"
               className="inline-flex items-center gap-2 text-[0.85rem] font-medium text-white hover:text-blue-200 transition-colors"
             >
               <Calculator size={14} aria-hidden="true" />
@@ -506,14 +506,14 @@ export default function HomePage() {
           <div className="space-y-5 text-[0.93rem] text-canvas/80 leading-[1.75]">
             <p>
               As per the latest Kenya Revenue Authority (KRA) guidelines, the{" "}
-              <a href="/resources/vat-rates-kenya" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+              <a href="/resources/vat-rates-kenya/" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 Kenya VAT standard rate is 16%
               </a>{" "}
               for 2026. This applies to most taxable goods and services supplied in Kenya. Essential
               items including basic foodstuffs, medical supplies, and exports remain{" "}
               <strong className="text-canvas font-medium">zero-rated (0%)</strong> or exempt — see the
               full breakdown of{" "}
-              <a href="/resources/vat-rates-kenya" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+              <a href="/resources/vat-rates-kenya/" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 zero-rated vs exempt supplies in Kenya
               </a>
               .
@@ -522,30 +522,30 @@ export default function HomePage() {
               A business must register for VAT when its annual taxable turnover reaches the
                mandatory threshold (KES 5 million under the VAT Act; the Finance Act 2025
                proposed raising it to KES 8 million, but this has not yet taken effect). Failure to register when required attracts a{" "}
-              <a href="/resources/what-happens-if-i-don-t-register-for-vat" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+              <a href="/resources/what-happens-if-i-don-t-register-for-vat/" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 KES 100,000 non-registration penalty
               </a>
               . Voluntary registration is available below the threshold to claim input VAT credits —
               use our{" "}
-              <a href="/resources/do-i-need-to-register-for-vat-kenya" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+              <a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 guide on whether you need to register for VAT in Kenya
               </a>{" "}
               to check where you stand.
             </p>
             <p>
               The{" "}
-              <a href="/resources/how-to-register-for-vat-in-kenya" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+              <a href="/resources/how-to-register-for-vat-in-kenya/" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 iTax VAT registration process
               </a>{" "}
               involves updating your iTax profile, completing Form VAT 1, uploading supporting
               documentation, and completing{" "}
-              <a href="/resources/etims-onboarding-guide" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+              <a href="/resources/etims-onboarding-guide/" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 eTIMS onboarding
               </a>
               . From 2026, KRA validates all VAT returns against eTIMS electronic invoice data —
               businesses without eTIMS-compliant invoices lose their input VAT claims automatically.
               Our{" "}
-              <a href="/services/vat-registration" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+              <a href="/services/vat-registration/" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 KES 5,000 VAT registration service
               </a>{" "}
               includes eTIMS guidance with every registration.
@@ -557,20 +557,20 @@ export default function HomePage() {
               <strong className="text-canvas font-medium">20th of the following month</strong> via
               KRA Paybill{" "}
               <strong className="text-canvas font-medium">572572</strong> or the iTax portal — the{" "}
-              <a href="/resources/how-to-file-vat-return-on-itax" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+              <a href="/resources/how-to-file-vat-return-on-itax/" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 step-by-step iTax filing guide
               </a>{" "}
               walks through every screen, and the{" "}
-              <a href="/tools" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+              <a href="/tools/" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 free 16% VAT calculator
               </a>{" "}
               works out the figures for you.{" "}
-              <a href="/resources/kra-penalty-for-late-vat-filing" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+              <a href="/resources/kra-penalty-for-late-vat-filing/" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 Late filing
               </a>{" "}
               attracts the higher of KES 10,000 or 5% of tax due, plus 1% monthly interest — which is
               why we file client returns on the 17th under our{" "}
-              <a href="/services/monthly-vat-filing" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
+              <a href="/services/monthly-vat-filing/" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 monthly VAT filing service
               </a>
               .
@@ -630,7 +630,7 @@ export default function HomePage() {
               <strong className="text-ink">1–3 working days.</strong>
             </p>
             <a
-              href="/how-it-works"
+              href="/how-it-works/"
               className="inline-flex items-center gap-1.5 text-[0.85rem] font-medium text-ink hover:text-brand transition-colors"
             >
               Full process details
@@ -723,10 +723,10 @@ export default function HomePage() {
               <RelatedLinks
                 heading="Go deeper"
                 links={[
-                  { href: "/resources/faq", label: "Full Kenya VAT FAQ — 40+ answers", description: "Registration, filing, penalties, rates, eTIMS, refunds and input VAT." },
-                  { href: "/resources/how-to-register-for-vat-in-kenya", label: "How to register for VAT in Kenya on iTax", description: "Every screen of the KRA iTax registration process, step by step." },
-                  { href: "/resources/kra-vat-penalties-reference", label: "KRA VAT penalties reference table", description: "What late filing, late payment, and non-registration actually cost." },
-                  { href: "/services", label: "All services and published prices", description: "Registration, monthly filing, eTIMS onboarding, and penalty waivers." },
+                  { href: "/resources/faq/", label: "Full Kenya VAT FAQ — 40+ answers", description: "Registration, filing, penalties, rates, eTIMS, refunds and input VAT." },
+                  { href: "/resources/how-to-register-for-vat-in-kenya/", label: "How to register for VAT in Kenya on iTax", description: "Every screen of the KRA iTax registration process, step by step." },
+                  { href: "/resources/kra-vat-penalties-reference/", label: "KRA VAT penalties reference table", description: "What late filing, late payment, and non-registration actually cost." },
+                  { href: "/services/", label: "All services and published prices", description: "Registration, monthly filing, eTIMS onboarding, and penalty waivers." },
                 ]}
               />
             </div>
@@ -797,7 +797,7 @@ export default function HomePage() {
               <ArrowRight size={15} weight="bold" aria-hidden="true" />
             </a>
             <a
-              href="/services"
+              href="/services/"
               className="inline-flex items-center justify-center gap-2 border border-canvas/25 text-canvas/70 hover:text-canvas hover:border-canvas/50 font-medium px-6 py-3.5 rounded-md text-sm transition-colors"
             >
               View all services

@@ -146,8 +146,8 @@ export default function FormsPage() {
               </a>
               . The guides above are the official KRA documents that walk you through each of those
               steps. Need someone to do it for you?{" "}
-              <a href="/contact" className="text-brand font-medium hover:underline">
-                Talk to us
+              <a href="https://wa.me/254721725958" target="_blank" rel="noopener noreferrer" className="text-brand font-medium hover:underline">
+                Talk to us on WhatsApp
               </a>
               .
             </p>

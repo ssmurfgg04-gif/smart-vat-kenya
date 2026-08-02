@@ -95,7 +95,7 @@ export default function HowToCalculateVATPage() {
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-14">
         <div className="max-w-3xl mx-auto">
-          <a href="/resources" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
+          <a href="/resources/" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <div className="flex flex-wrap gap-2 mb-5">
@@ -346,7 +346,7 @@ export default function HowToCalculateVATPage() {
               </div>
               <p className="text-[0.75rem] text-ink-muted mt-4 text-center">
                 Results update instantly. This tool is for estimation only. Use our{" "}
-                <a href="/tools" className="text-brand underline underline-offset-2 hover:text-brand-hover">full VAT tool suite</a> for returns, invoices, and iTax reconciliation.
+                <a href="/tools/" className="text-brand underline underline-offset-2 hover:text-brand-hover">full VAT tool suite</a> for returns, invoices, and iTax reconciliation.
               </p>
             </div>
           </section>
@@ -418,7 +418,7 @@ export default function HowToCalculateVATPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="/tools"
+                href="/tools/"
                 className="inline-flex items-center justify-center gap-2 bg-brand text-canvas font-semibold text-sm px-6 py-3 rounded-md hover:bg-brand-hover transition-colors"
               >
                 Try Our Free VAT Tools
@@ -459,7 +459,7 @@ export default function HowToCalculateVATPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

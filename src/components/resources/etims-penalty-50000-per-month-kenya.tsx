@@ -34,7 +34,7 @@ export default function EtimsPenaltyPost() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+      <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources
       </a>
 
@@ -138,9 +138,9 @@ export default function EtimsPenaltyPost() {
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">Related Resources</h2>
           <ul className="space-y-2">
             {[
-              ["eTIMS Onboarding Guide 2026", "/resources/etims-onboarding-guide", "Step-by-step registration guide for all three eTIMS solution types"],
-              ["eTIMS Compliant Invoicing Guide", "/resources/etims-invoicing-guide", "Mandatory fields, QR codes, B2B vs B2C rules, and verification"],
-              ["KRA VAT Penalties Reference", "/resources/kra-vat-penalties-reference", "Complete penalty table including eTIMS penalties"],
+              ["eTIMS Onboarding Guide 2026", "/resources/etims-onboarding-guide/", "Step-by-step registration guide for all three eTIMS solution types"],
+              ["eTIMS Compliant Invoicing Guide", "/resources/etims-invoicing-guide/", "Mandatory fields, QR codes, B2B vs B2C rules, and verification"],
+              ["KRA VAT Penalties Reference", "/resources/kra-vat-penalties-reference/", "Complete penalty table including eTIMS penalties"],
             ].map(([title, slug, desc]) => (
               <li key={slug}>
                 <a href={slug} className="text-brand underline underline-offset-2 hover:text-brand-hover">
@@ -174,7 +174,7 @@ export default function EtimsPenaltyPost() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

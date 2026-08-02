@@ -115,7 +115,7 @@ export default function ETIMSOnboardingPage() {
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-14">
         <div className="max-w-3xl mx-auto">
-          <a href="/resources" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
+          <a href="/resources/" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <div className="flex flex-wrap gap-2 mb-5">
@@ -299,7 +299,7 @@ export default function ETIMSOnboardingPage() {
             <div className="mt-7 border border-hairline rounded-lg p-5 bg-canvas-alt">
               <p className="font-semibold text-ink text-[0.88rem] mb-2">Not sure which one you need?</p>
                 <p className="text-[0.84rem] text-ink-soft leading-relaxed mb-3">
-                  Most small businesses should start with eTIMS Lite because it is free and requires no installation. If you outgrow it, KRA allows you to upgrade to eTIMS Client or VSCU later. See our{" "}<a href="/resources/etims-invoicing-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">invoicing guide</a>{" "}for mandatory invoice fields and QR code verification. Smart VAT Kenya can help you choose the right solution and complete the registration.
+                  Most small businesses should start with eTIMS Lite because it is free and requires no installation. If you outgrow it, KRA allows you to upgrade to eTIMS Client or VSCU later. See our{" "}<a href="/resources/etims-invoicing-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">invoicing guide</a>{" "}for mandatory invoice fields and QR code verification. Smart VAT Kenya can help you choose the right solution and complete the registration.
                 </p>
               <a
                 href="https://wa.me/254721725958?text=I%20need%20help%20choosing%20the%20right%20eTIMS%20solution%20for%20my%20business"
@@ -376,7 +376,7 @@ export default function ETIMSOnboardingPage() {
                     {step === 1 && (
                       <p className="text-[0.78rem] text-ink-muted mt-2 leading-relaxed">
                         Portal not loading? See our{" "}
-                        <a href="/resources/itax-portal-not-working" className="text-brand underline underline-offset-2 hover:text-brand-hover">iTax troubleshooting guide</a>.
+                        <a href="/resources/itax-portal-not-working/" className="text-brand underline underline-offset-2 hover:text-brand-hover">iTax troubleshooting guide</a>.
                       </p>
                     )}
                   </div>
@@ -486,15 +486,15 @@ export default function ETIMSOnboardingPage() {
                 <Warning size={17} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
                 <p className="text-[0.83rem] text-ink-soft leading-relaxed">
                   <strong className="text-ink">Input VAT claims blocked:</strong> Even if you are VAT-registered and file your returns on time, if your purchases are from suppliers who are not using eTIMS, you cannot claim input VAT on those purchases. This creates a cascading compliance pressure through the entire supply chain. See our{" "}
-                  <a href="/resources/how-to-register-for-vat-in-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                  <a href="/resources/how-to-register-for-vat-in-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                     VAT registration guide
                   </a>{" "}
                   and our{" "}
-                  <a href="/resources/etims-penalty-50000-per-month-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                  <a href="/resources/etims-penalty-50000-per-month-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                     eTIMS penalty guide
                   </a>{" "}
                   for details. Also note that eTIMS compliance is now a requirement for getting a{" "}
-                  <a href="/resources/tax-compliance-certificate-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">KRA Tax Compliance Certificate (TCC)</a>.
+                  <a href="/resources/tax-compliance-certificate-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">KRA Tax Compliance Certificate (TCC)</a>.
                 </p>
               </div>
             </div>
@@ -689,7 +689,7 @@ export default function ETIMSOnboardingPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

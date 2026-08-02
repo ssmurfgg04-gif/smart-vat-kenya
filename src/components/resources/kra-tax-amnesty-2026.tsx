@@ -86,7 +86,7 @@ export default function KRATaxAmnesty2026() {
       <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
-        <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+        <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Resources
         </a>
 
@@ -179,7 +179,7 @@ export default function KRATaxAmnesty2026() {
                     Without a clean ledger, the system cannot generate a <strong>Payment Registration Number (PRN)</strong> for the amnesty — you're stuck in a loop where KRA says you owe, but your records show you paid.
                   </p>
                   <p className="text-sm text-amber-800 leading-relaxed">
-                    KRA has acknowledged these allocation errors and is resolving iTax-related issues through August 2026. If you're stuck, you need to <strong>reconcile your iTax ledger against your bank statements and payment receipts</strong> — then lodge a correction request with KRA. Our <a href="/services/kra-penalty-waiver" className="text-amber-900 font-semibold underline underline-offset-2 hover:text-amber-950">Penalty Waiver service (KES 4,000)</a> includes ledger reconciliation, error identification, and the full amnesty application — we handle the PRN bug for you.
+                    KRA has acknowledged these allocation errors and is resolving iTax-related issues through August 2026. If you're stuck, you need to <strong>reconcile your iTax ledger against your bank statements and payment receipts</strong> — then lodge a correction request with KRA. Our <a href="/services/kra-penalty-waiver/" className="text-amber-900 font-semibold underline underline-offset-2 hover:text-amber-950">Penalty Waiver service (KES 4,000)</a> includes ledger reconciliation, error identification, and the full amnesty application — we handle the PRN bug for you.
                   </p>
                 </div>
               </div>
@@ -206,7 +206,7 @@ export default function KRATaxAmnesty2026() {
             <h2>Why This Matters for Your Business</h2>
             <p>Beyond the direct reduction in liabilities, clearing historical tax penalties has real operational benefits:</p>
             <ul>
-              <li><strong><a href="/resources/tax-compliance-certificate-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">Tax Compliance Certificate</a>:</strong> KRA now requires a clean ledger before issuing a TCC. Resolving old debt unlocks access to government tenders, work permits, and business licences</li>
+              <li><strong><a href="/resources/tax-compliance-certificate-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Tax Compliance Certificate</a>:</strong> KRA now requires a clean ledger before issuing a TCC. Resolving old debt unlocks access to government tenders, work permits, and business licences</li>
               <li><strong>Avoid enforcement:</strong> Unresolved tax debt can lead to agency notices, bank account freezes, and property attachment. The amnesty is a genuine opportunity to avoid escalation</li>
               <li><strong>Clean financial reporting:</strong> Unresolved liabilities distort your financial statements and make it harder to forecast cash flow or secure financing</li>
             </ul>
@@ -246,7 +246,7 @@ export default function KRATaxAmnesty2026() {
           </ul>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="/services/kra-penalty-waiver"
+              href="/services/kra-penalty-waiver/"
               className="inline-flex items-center justify-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
             >
               Learn More &mdash; KES 4,000

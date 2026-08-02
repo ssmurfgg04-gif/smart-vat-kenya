@@ -95,7 +95,7 @@ export default function VatReturnFilingPage() {
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-14">
         <div className="max-w-3xl mx-auto">
-          <a href="/resources" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
+          <a href="/resources/" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <div className="flex flex-wrap gap-2 mb-5">
@@ -156,7 +156,7 @@ export default function VatReturnFilingPage() {
                   <p className="font-semibold text-ink text-[0.85rem] mb-1">Every Single Month</p>
                   <p className="text-[0.83rem] text-ink-soft leading-relaxed">
                     There are 12 filing deadlines per year — one per month. There is no quarterly filing option for standard VAT in Kenya. If you miss even one deadline, KRA imposes a <strong className="text-ink">KES 10,000 penalty</strong> or 5% of the tax due (whichever is higher) plus 1% interest per month. See our{" "}
-                    <a href="/resources/kra-penalty-for-late-vat-filing" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA penalty guide</a> for details.
+                    <a href="/resources/kra-penalty-for-late-vat-filing/" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA penalty guide</a> for details.
                   </p>
                 </div>
               </div>
@@ -217,7 +217,7 @@ export default function VatReturnFilingPage() {
                 If you have missed months of nil returns, do not panic. KRA has a{" "}
                 <strong className="text-ink">tax amnesty programme</strong> (Voluntary
                 Tax Disclosure) that lets you catch up without penalties. See our{" "}
-                <a href="/resources/nil-returns-tax-amnesty" className="text-brand underline">
+                <a href="/resources/nil-returns-tax-amnesty/" className="text-brand underline">
                   nil returns and tax amnesty guide
                 </a>{" "}
                 for details.
@@ -455,7 +455,7 @@ export default function VatReturnFilingPage() {
             <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
             <p className="text-[0.83rem] text-ink-muted leading-relaxed">
               <strong className="text-ink">Need the official KRA guide?</strong> Download the complete iTax VAT return filing manual and other KRA guides from our{" "}
-              <a href="/forms" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">KRA forms &amp; manuals page</a>.
+              <a href="/forms/" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">KRA forms &amp; manuals page</a>.
             </p>
           </div>
 
@@ -496,7 +496,7 @@ export default function VatReturnFilingPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

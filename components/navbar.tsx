@@ -4,11 +4,11 @@ import { useState, useEffect } from "react"
 import { List, X } from "@phosphor-icons/react/dist/ssr"
 
 const navLinks = [
-  { href: "/tools",        label: "VAT Calculator" },
-  { href: "/services",     label: "Services" },
-  { href: "/how-it-works", label: "How It Works" },
-  { href: "/forms",        label: "Free Forms" },
-  { href: "/resources",    label: "Resources" },
+  { href: "/tools/",        label: "VAT Calculator" },
+  { href: "/services/",     label: "Services" },
+  { href: "/how-it-works/", label: "How It Works" },
+  { href: "/forms/",        label: "Free Forms" },
+  { href: "/resources/",    label: "Resources" },
 ]
 
 const WA_LINK =

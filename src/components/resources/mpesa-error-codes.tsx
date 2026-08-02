@@ -120,7 +120,7 @@ export default function MpesaErrorCodesPage() {
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-14">
         <div className="max-w-3xl mx-auto">
-          <a href="/resources" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
+          <a href="/resources/" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <div className="flex flex-wrap gap-2 mb-5">
@@ -320,7 +320,7 @@ export default function MpesaErrorCodesPage() {
               </div>
               <p>
                 Related:{" "}
-                <a href="/resources/safaricom-not-working" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                <a href="/resources/safaricom-not-working/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   Safaricom not working — status &amp; fixes
                 </a>{" "}
                 for network-level outages.
@@ -380,11 +380,11 @@ export default function MpesaErrorCodesPage() {
               </div>
               <p>
                 Related:{" "}
-                <a href="/resources/kra-penalty-for-late-vat-filing" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                <a href="/resources/kra-penalty-for-late-vat-filing/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   KRA penalty for late VAT filing &amp; waiver
                 </a>{" "}
                 and{" "}
-                <a href="/resources/kra-vat-filing-deadline-august-2026" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                <a href="/resources/kra-vat-filing-deadline-august-2026/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   August 2026 filing deadline
                 </a>.
               </p>
@@ -438,7 +438,7 @@ export default function MpesaErrorCodesPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

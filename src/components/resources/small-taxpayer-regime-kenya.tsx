@@ -104,7 +104,7 @@ export default function SmallTaxpayerRegimePage() {
       {/* Header */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-14">
         <div className="max-w-3xl mx-auto">
-          <a href="/resources" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
+          <a href="/resources/" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <div className="flex flex-wrap gap-2 mb-5">
@@ -170,7 +170,7 @@ export default function SmallTaxpayerRegimePage() {
                 <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
                   <strong className="text-ink">Important update:</strong> The Finance Act 2025 proposed raising the VAT registration threshold from KES 5 million to KES 8 million. As of July 2026, this change has not yet taken effect. The KES 5 million threshold remains the law. See our{" "}
-                  <a href="/resources/finance-act-vat-changes-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                  <a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                     Finance Act changes guide
                   </a>{" "}
                   for the latest status.
@@ -218,7 +218,7 @@ export default function SmallTaxpayerRegimePage() {
               </div>
               <p>
                 For a more detailed comparison, see our dedicated{" "}
-                <a href="/resources/vat-vs-turnover-tax" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                <a href="/resources/vat-vs-turnover-tax/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   Turnover Tax vs VAT guide
                 </a>.
               </p>
@@ -319,11 +319,11 @@ export default function SmallTaxpayerRegimePage() {
               </div>
               <p>
                 See our{" "}
-                <a href="/resources/etims-onboarding-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                <a href="/resources/etims-onboarding-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   eTIMS onboarding guide
                 </a>{" "}
                 for step-by-step registration instructions, and our{" "}
-                <a href="/resources/etims-penalty-50000-per-month-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                <a href="/resources/etims-penalty-50000-per-month-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   eTIMS penalty guide
                 </a>{" "}
                 for compliance details.
@@ -374,7 +374,7 @@ export default function SmallTaxpayerRegimePage() {
               </div>
               <p>
                 For a deeper look at whether voluntary registration makes sense for your specific business, read our{" "}
-                <a href="/resources/do-i-need-to-register-for-vat-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                <a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   guide on whether you need to register for VAT
                 </a>.
               </p>
@@ -469,7 +469,7 @@ export default function SmallTaxpayerRegimePage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

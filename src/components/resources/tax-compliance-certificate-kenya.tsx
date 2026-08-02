@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     q: "Can I get a TCC if I have outstanding tax debt?",
-    a: 'Not immediately. Before a TCC can be issued, you must either settle all outstanding tax liabilities or have an approved payment plan in place with KRA. KRA\'s tax amnesty programme can help — it waives penalties and interest on voluntarily disclosed debt, leaving only the principal tax to pay. See our <a href="/resources/kra-tax-amnesty-2026" class="underline underline-offset-2 font-medium text-brand">KRA Tax Amnesty 2026 guide</a> for how this works. Once resolved, you can proceed with the self-service TCC application on iTax.',
+    a: 'Not immediately. Before a TCC can be issued, you must either settle all outstanding tax liabilities or have an approved payment plan in place with KRA. KRA\'s tax amnesty programme can help — it waives penalties and interest on voluntarily disclosed debt, leaving only the principal tax to pay. See our <a href="/resources/kra-tax-amnesty-2026/" class="underline underline-offset-2 font-medium text-brand">KRA Tax Amnesty 2026 guide</a> for how this works. Once resolved, you can proceed with the self-service TCC application on iTax.',
   },
   {
     q: "What documents do I need to apply for a TCC?",
@@ -82,7 +82,7 @@ export default function TaxComplianceCertificateKenya() {
       <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
-        <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+        <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Resources
         </a>
 
@@ -136,7 +136,7 @@ export default function TaxComplianceCertificateKenya() {
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 my-6">
               <p className="text-sm font-semibold text-blue-900 mb-1">Important: eTIMS Requirement</p>
               <p className="text-sm text-blue-800 leading-relaxed">
-                Since October 2025, KRA has required businesses to be registered on eTIMS before a TCC can be issued. This applies to all companies, sole proprietors, partnerships, and individuals earning business income. If you are not yet eTIMS compliant, your TCC application will be delayed or rejected. <a href="/resources/etims-onboarding-guide" className="text-blue-700 font-medium hover:underline">Learn how to register for eTIMS →</a>
+                Since October 2025, KRA has required businesses to be registered on eTIMS before a TCC can be issued. This applies to all companies, sole proprietors, partnerships, and individuals earning business income. If you are not yet eTIMS compliant, your TCC application will be delayed or rejected. <a href="/resources/etims-onboarding-guide/" className="text-blue-700 font-medium hover:underline">Learn how to register for eTIMS →</a>
               </p>
             </div>
 
@@ -173,7 +173,7 @@ export default function TaxComplianceCertificateKenya() {
               <li>Full VAT registration and compliance services</li>
             </ul>
             <p>
-              <a href="/services/vat-registration" className="text-brand font-medium hover:underline inline-flex items-center gap-1">
+              <a href="/services/vat-registration/" className="text-brand font-medium hover:underline inline-flex items-center gap-1">
                 Start with VAT registration — the first step to full compliance <ArrowRight size={14} aria-hidden="true" />
               </a>
             </p>

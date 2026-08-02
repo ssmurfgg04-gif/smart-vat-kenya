@@ -34,7 +34,7 @@ export default function VatForLandlordsPost() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+      <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources
       </a>
 
@@ -113,7 +113,7 @@ export default function VatForLandlordsPost() {
             When Must a Landlord Register for VAT?
           </h2>
           <p>
-            A landlord must <a href="/resources/do-i-need-to-register-for-vat-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">register for VAT</a> if their <strong>taxable turnover</strong> (not total rental income)
+            A landlord must <a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">register for VAT</a> if their <strong>taxable turnover</strong> (not total rental income)
             exceeds the VAT threshold (currently KES 5 million, with proposed rise to KES 8 million not yet effective) in any period of twelve months. Taxable turnover means income from commercial
             rent, service charges, parking fees, and any other taxable supplies — but not residential rent.
           </p>
@@ -279,7 +279,7 @@ export default function VatForLandlordsPost() {
             Can I Claim Input VAT on Property Expenses?
           </h2>
           <p>
-            A VAT-registered landlord letting commercial property can claim <a href="/resources/input-vat-deduction-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">input VAT on expenses</a> incurred
+            A VAT-registered landlord letting commercial property can claim <a href="/resources/input-vat-deduction-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">input VAT on expenses</a> incurred
              <em> wholly and exclusively </em> for the taxable (commercial) part of the rental business. The
             key principle is that input VAT is recoverable only to the extent that the goods or services are
             used to make taxable supplies.
@@ -368,10 +368,10 @@ export default function VatForLandlordsPost() {
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">Related Resources</h2>
           <ul className="space-y-2">
             {[
-              ["How to Register for VAT in Kenya", "/resources/how-to-register-for-vat-in-kenya", "Step-by-step VAT registration guide including the registration threshold"],
-              ["VAT vs Turnover Tax: What&rsquo;s the Difference?", "/resources/vat-vs-turnover-tax", "Understand which tax applies to your rental business"],
-              ["Input VAT Deduction Guide", "/resources/input-vat-deduction-guide", "What qualifies for input VAT and how to claim it correctly"],
-              ["Finance Act VAT Changes 2025", "/resources/finance-act-vat-changes-kenya", "All VAT amendments including the 90:10 rule deletion"],
+              ["How to Register for VAT in Kenya", "/resources/how-to-register-for-vat-in-kenya/", "Step-by-step VAT registration guide including the registration threshold"],
+              ["VAT vs Turnover Tax: What&rsquo;s the Difference?", "/resources/vat-vs-turnover-tax/", "Understand which tax applies to your rental business"],
+              ["Input VAT Deduction Guide", "/resources/input-vat-deduction-guide/", "What qualifies for input VAT and how to claim it correctly"],
+              ["Finance Act VAT Changes 2025", "/resources/finance-act-vat-changes-kenya/", "All VAT amendments including the 90:10 rule deletion"],
             ].map(([title, slug, desc]) => (
               <li key={slug}>
                 <a href={slug} className="text-brand underline underline-offset-2 hover:text-brand-hover">
@@ -405,7 +405,7 @@ export default function VatForLandlordsPost() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

@@ -310,7 +310,7 @@ export default function MonthlyVatFilingPage() {
               <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
             <a
-              href="/services"
+              href="/services/"
               className="inline-flex items-center gap-2 border border-hairline text-ink-muted hover:text-ink hover:border-ink-muted text-sm font-medium px-5 py-3 rounded-md transition-colors"
             >
               View all services

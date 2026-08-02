@@ -115,7 +115,7 @@ export default function VatThresholdKenya() {
       <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
-        <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+        <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Resources
         </a>
 
@@ -212,17 +212,17 @@ export default function VatThresholdKenya() {
               <li><strong>File monthly VAT returns</strong> by the 20th of each month</li>
             </ol>
             <p>
-              <a href="/services/vat-registration" className="text-brand underline underline-offset-2 hover:text-brand-hover">We handle the full registration process for KES 5,000</a> — including iTax application, PIN generation, and eTIMS onboarding guidance.
+              <a href="/services/vat-registration/" className="text-brand underline underline-offset-2 hover:text-brand-hover">We handle the full registration process for KES 5,000</a> — including iTax application, PIN generation, and eTIMS onboarding guidance.
             </p>
 
             <h2>Related Resources</h2>
             <ul>
-              <li><a href="/resources/how-to-register-for-vat-in-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">How to Register for VAT in Kenya</a> — Step-by-step registration guide</li>
-              <li><a href="/resources/do-i-need-to-register-for-vat-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">Do I Need to Register for VAT?</a> — Decision guide for SMEs</li>
-              <li><a href="/resources/vat-vs-turnover-tax" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT vs Turnover Tax</a> — Comparison for small businesses</li>
-              <li><a href="/resources/small-taxpayer-regime-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">Small Taxpayer Regime Guide</a> — 8% turnover-inclusive option</li>
-              <li><a href="/resources/finance-act-vat-changes-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026 VAT Changes</a> — All VAT changes including threshold updates</li>
-              <li><a href="/services/vat-registration" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Registration Service (KES 5,000)</a> — We register you in 1&ndash;3 working days</li>
+              <li><a href="/resources/how-to-register-for-vat-in-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">How to Register for VAT in Kenya</a> — Step-by-step registration guide</li>
+              <li><a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Do I Need to Register for VAT?</a> — Decision guide for SMEs</li>
+              <li><a href="/resources/vat-vs-turnover-tax/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT vs Turnover Tax</a> — Comparison for small businesses</li>
+              <li><a href="/resources/small-taxpayer-regime-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Small Taxpayer Regime Guide</a> — 8% turnover-inclusive option</li>
+              <li><a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026 VAT Changes</a> — All VAT changes including threshold updates</li>
+              <li><a href="/services/vat-registration/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Registration Service (KES 5,000)</a> — We register you in 1&ndash;3 working days</li>
             </ul>
           </div>
         </article>
@@ -252,7 +252,7 @@ export default function VatThresholdKenya() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="/services/vat-registration"
+              href="/services/vat-registration/"
               className="inline-flex items-center justify-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
             >
               Register for VAT &mdash; KES 5,000

@@ -70,7 +70,7 @@ export default function VatForRestaurantsHospitality() {
       <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
       <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+      <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
         <ArrowLeft size={14} aria-hidden="true" /> All Resources
       </a>
 
@@ -114,7 +114,7 @@ export default function VatForRestaurantsHospitality() {
           </h3>
           <p>
             As of 2026, any business whose annual taxable turnover exceeds or is expected to exceed
-            <strong> KES 5 million</strong> must <a href="/resources/do-i-need-to-register-for-vat-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">register for VAT</a>. This includes revenue from:
+            <strong> KES 5 million</strong> must <a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">register for VAT</a>. This includes revenue from:
           </p>
           <ul className="space-y-1.5">
             {[
@@ -224,7 +224,7 @@ export default function VatForRestaurantsHospitality() {
             eTIMS for Restaurants: Mandatory Electronic Invoicing
           </h2>
           <p>
-            Every VAT-registered restaurant and hospitality business in Kenya must issue <a href="/resources/etims-invoicing-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS-compliant invoices</a> for every sale — including cash sales, card payments, and mobile money transactions.
+            Every VAT-registered restaurant and hospitality business in Kenya must issue <a href="/resources/etims-invoicing-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS-compliant invoices</a> for every sale — including cash sales, card payments, and mobile money transactions.
             This is one of the most significant compliance requirements introduced in recent years, and
             non-compliance attracts a penalty of <strong>KES 50,000 per month</strong>.
           </p>
@@ -259,7 +259,7 @@ export default function VatForRestaurantsHospitality() {
           </p>
           <p>
             For a step-by-step guide to setting up and activating your eTIMS account, see our{" "}
-            <a href="/resources/etims-onboarding-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS onboarding guide</a>.
+            <a href="/resources/etims-onboarding-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS onboarding guide</a>.
           </p>
           <h3 className="font-display text-[1rem] font-semibold text-ink mt-6 mb-2">
             eTIMS for Takeaway and Delivery Orders
@@ -275,7 +275,7 @@ export default function VatForRestaurantsHospitality() {
             Input VAT Claims for Hospitality Businesses
           </h2>
           <p>
-            One of the primary benefits of VAT registration is the ability to reclaim <a href="/resources/input-vat-deduction-guide" className="text-brand underline underline-offset-2 hover:text-brand-hover">input VAT on purchases</a> directly attributable to your taxable supplies. For restaurants and hotels, this
+            One of the primary benefits of VAT registration is the ability to reclaim <a href="/resources/input-vat-deduction-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">input VAT on purchases</a> directly attributable to your taxable supplies. For restaurants and hotels, this
             can represent a significant recovery — often offsetting 60-80% of the output VAT collected.
           </p>
           <h3 className="font-display text-[1rem] font-semibold text-ink mt-6 mb-2">
@@ -449,9 +449,9 @@ export default function VatForRestaurantsHospitality() {
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">Related Resources</h2>
           <ul className="space-y-2">
             {[
-              ["eTIMS Compliant Invoicing Guide", "/resources/etims-invoicing-guide", "Mandatory fields, QR codes, B2B vs B2C rules, and verification"],
-              ["How to File a VAT Return on iTax", "/resources/how-to-file-vat-return-on-itax", "Step-by-step monthly filing guide"],
-              ["VAT Registration Checklist", "/resources/vat-registration-checklist", "Everything you need to register for VAT in Kenya"],
+              ["eTIMS Compliant Invoicing Guide", "/resources/etims-invoicing-guide/", "Mandatory fields, QR codes, B2B vs B2C rules, and verification"],
+              ["How to File a VAT Return on iTax", "/resources/how-to-file-vat-return-on-itax/", "Step-by-step monthly filing guide"],
+              ["VAT Registration Checklist", "/resources/vat-registration-checklist/", "Everything you need to register for VAT in Kenya"],
             ].map(([title, slug, desc]) => (
               <li key={slug}>
                 <a href={slug} className="text-brand underline underline-offset-2 hover:text-brand-hover">
@@ -485,7 +485,7 @@ export default function VatForRestaurantsHospitality() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

@@ -92,7 +92,7 @@ export default function WithholdingVatPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="max-w-[880px] mx-auto px-6 lg:px-10 py-12">
-        <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
+        <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Guides
         </a>
 
@@ -121,12 +121,12 @@ export default function WithholdingVatPage() {
               </h2>
               <p>
                 When you file your monthly VAT return, your purchases are{" "}
-                <a href="/resources/vat-auto-populated-return" className="text-brand underline underline-offset-2 hover:text-brand-hover">auto-populated</a>{" "}
+                <a href="/resources/vat-auto-populated-return/" className="text-brand underline underline-offset-2 hover:text-brand-hover">auto-populated</a>{" "}
                 from eTIMS data. The withholding VAT credits you declare must match the certificates your customers issue.
               </p>
               <p>
                 Late remittance or non-compliance attracts significant{" "}
-                <a href="/resources/kra-vat-penalties-reference" className="text-brand underline underline-offset-2 hover:text-brand-hover">penalties</a>{" "}
+                <a href="/resources/kra-vat-penalties-reference/" className="text-brand underline underline-offset-2 hover:text-brand-hover">penalties</a>{" "}
                 — including a 5% late-remittance penalty plus 1% monthly interest.
               </p>
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
@@ -268,7 +268,7 @@ export default function WithholdingVatPage() {
                   </li>
                 </ul>
                 <p>
-                  See our <a href="/resources/vat-refund-guide-kenya" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Refund Guide</a> for the full process.
+                  See our <a href="/resources/vat-refund-guide-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Refund Guide</a> for the full process.
                 </p>
               </div>
             </section>
@@ -337,7 +337,7 @@ export default function WithholdingVatPage() {
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
-            <a href="/resources" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
+            <a href="/resources/" className="text-[0.82rem] text-ink-muted hover:text-brand transition-colors underline underline-offset-2">
               ← All Resources
             </a>
           </div>

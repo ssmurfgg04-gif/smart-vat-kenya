@@ -57,25 +57,25 @@ const serviceFaqs = [
   {
     q: "How much do VAT registration services cost in Kenya?",
     a: "Smart VAT Kenya charges a flat KES 5,000 for complete KRA VAT registration on iTax, including the iTax profile update, Form VAT 1, PIN generation, and eTIMS onboarding guidance. Monthly VAT filing is KES 3,500 per month and a KRA penalty waiver application is KES 4,000.",
-    href: "/services/vat-registration",
+    href: "/services/vat-registration/",
     linkLabel: "See what the KES 5,000 VAT registration includes",
   },
   {
     q: "How long does KRA VAT registration take?",
     a: "Most registrations are completed in 1–3 working days once we have your KRA PIN, ID copy, and business details. Delays usually come from iTax profile errors or missing supporting documents, which we fix on your behalf.",
-    href: "/resources/how-to-register-for-vat-in-kenya",
+    href: "/resources/how-to-register-for-vat-in-kenya/",
     linkLabel: "Read the step-by-step iTax VAT registration guide",
   },
   {
     q: "When is the monthly VAT return due in Kenya?",
     a: "VAT returns and payment are due by the 20th of the month following the tax period. We file client returns on the 17th so there is room to fix iTax errors before the KRA deadline. Late filing costs the higher of KES 10,000 or 5% of the tax due, plus 1% monthly interest.",
-    href: "/services/monthly-vat-filing",
+    href: "/services/monthly-vat-filing/",
     linkLabel: "Monthly VAT filing service — KES 3,500/month",
   },
   {
     q: "Do you handle eTIMS onboarding and KRA penalties too?",
     a: "Yes. eTIMS onboarding guidance is included with every registration, and we also handle standalone eTIMS onboarding and KRA penalty waiver applications for businesses that already have outstanding VAT penalties.",
-    href: "/services/kra-penalty-waiver",
+    href: "/services/kra-penalty-waiver/",
     linkLabel: "KRA penalty waiver application — KES 4,000",
   },
 ]
@@ -423,10 +423,10 @@ export default function ServicesPage() {
               <RelatedLinks
                 heading="Related guides"
                 links={[
-                  { href: "/resources/vat-registration-checklist", label: "VAT registration document checklist", description: "Everything KRA asks for before your application goes through." },
-                  { href: "/resources/kra-vat-penalties-reference", label: "KRA VAT penalties reference", description: "Late filing, late payment, non-registration, and eTIMS fines." },
-                  { href: "/resources/etims-onboarding-guide", label: "eTIMS onboarding guide", description: "Which eTIMS option fits your business and how to get compliant." },
-                  { href: "/tools", label: "Free KRA VAT calculator", description: "16% VAT, reverse VAT, and penalty estimates — no sign-up." },
+                  { href: "/resources/vat-registration-checklist/", label: "VAT registration document checklist", description: "Everything KRA asks for before your application goes through." },
+                  { href: "/resources/kra-vat-penalties-reference/", label: "KRA VAT penalties reference", description: "Late filing, late payment, non-registration, and eTIMS fines." },
+                  { href: "/resources/etims-onboarding-guide/", label: "eTIMS onboarding guide", description: "Which eTIMS option fits your business and how to get compliant." },
+                  { href: "/tools/", label: "Free KRA VAT calculator", description: "16% VAT, reverse VAT, and penalty estimates — no sign-up." },
                 ]}
               />
             </div>
@@ -463,7 +463,7 @@ export default function ServicesPage() {
               <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
             <a
-              href="/how-it-works"
+              href="/how-it-works/"
               className="inline-flex items-center gap-2 border border-hairline text-ink-muted hover:text-ink hover:border-ink-muted text-sm font-medium px-5 py-3 rounded-md transition-colors"
             >
               How it works

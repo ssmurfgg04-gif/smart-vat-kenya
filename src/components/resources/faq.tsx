@@ -75,14 +75,14 @@ const WA_BASE = "https://wa.me/254721725958"
 
 /** Contextual internal links surfaced under the answer of any matching question. */
 const ANSWER_LINKS: { match: RegExp; href: string; label: string }[] = [
-  { match: /special table/i, href: "/resources/vat-special-table-risks", label: "KRA VAT Special Table risks explained" },
-  { match: /etims/i, href: "/resources/etims-onboarding-guide", label: "eTIMS onboarding guide for Kenyan businesses" },
-  { match: /penalt|late filing|waiver/i, href: "/resources/kra-penalty-for-late-vat-filing", label: "KRA late VAT filing penalties and how to apply for a waiver" },
-  { match: /register|registration|threshold/i, href: "/services/vat-registration", label: "VAT registration service — KES 5,000 flat fee" },
-  { match: /file|filing|return|deadline|paybill/i, href: "/services/monthly-vat-filing", label: "Monthly VAT filing service — filed before the 20th" },
-  { match: /rate|zero-rated|exempt/i, href: "/resources/vat-rates-kenya", label: "Kenya VAT rates: standard, zero-rated and exempt" },
-  { match: /input vat|refund|claim/i, href: "/resources/input-vat-deduction-guide", label: "Input VAT deduction guide" },
-  { match: /calculat|16%/i, href: "/tools", label: "Free Kenya VAT calculator" },
+  { match: /special table/i, href: "/resources/vat-special-table-risks/", label: "KRA VAT Special Table risks explained" },
+  { match: /etims/i, href: "/resources/etims-onboarding-guide/", label: "eTIMS onboarding guide for Kenyan businesses" },
+  { match: /penalt|late filing|waiver/i, href: "/resources/kra-penalty-for-late-vat-filing/", label: "KRA late VAT filing penalties and how to apply for a waiver" },
+  { match: /register|registration|threshold/i, href: "/services/vat-registration/", label: "VAT registration service — KES 5,000 flat fee" },
+  { match: /file|filing|return|deadline|paybill/i, href: "/services/monthly-vat-filing/", label: "Monthly VAT filing service — filed before the 20th" },
+  { match: /rate|zero-rated|exempt/i, href: "/resources/vat-rates-kenya/", label: "Kenya VAT rates: standard, zero-rated and exempt" },
+  { match: /input vat|refund|claim/i, href: "/resources/input-vat-deduction-guide/", label: "Input VAT deduction guide" },
+  { match: /calculat|16%/i, href: "/tools/", label: "Free Kenya VAT calculator" },
 ]
 
 function relatedLink(question: string, answer: string) {
@@ -113,10 +113,10 @@ export default function FAQPage() {
               tone="dark"
               heading="Straight to the answer"
               links={[
-                { href: "/services/vat-registration", label: "VAT registration in Kenya — KES 5,000", description: "We handle iTax, Form VAT 1, and eTIMS onboarding in 1–3 working days." },
-                { href: "/services/monthly-vat-filing", label: "Monthly VAT filing — KES 3,500/month", description: "Returns filed on the 17th, before the KRA 20th deadline." },
-                { href: "/tools", label: "Free 16% VAT calculator", description: "VAT inclusive/exclusive amounts and KRA penalty estimates." },
-                { href: "/resources/vat-rates-kenya", label: "Kenya VAT rates 2026", description: "Standard, zero-rated, and exempt supplies compared." },
+                { href: "/services/vat-registration/", label: "VAT registration in Kenya — KES 5,000", description: "We handle iTax, Form VAT 1, and eTIMS onboarding in 1–3 working days." },
+                { href: "/services/monthly-vat-filing/", label: "Monthly VAT filing — KES 3,500/month", description: "Returns filed on the 17th, before the KRA 20th deadline." },
+                { href: "/tools/", label: "Free 16% VAT calculator", description: "VAT inclusive/exclusive amounts and KRA penalty estimates." },
+                { href: "/resources/vat-rates-kenya/", label: "Kenya VAT rates 2026", description: "Standard, zero-rated, and exempt supplies compared." },
               ]}
             />
           </div>
@@ -176,7 +176,7 @@ export default function FAQPage() {
         </div>
 
         <div className="mt-8 flex items-center justify-between flex-wrap gap-4">
-          <a href="/resources" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium transition-colors">
+          <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> All Resources
           </a>
         </div>
