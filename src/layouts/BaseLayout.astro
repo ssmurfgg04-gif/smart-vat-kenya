@@ -101,13 +101,6 @@ const localBusinessSchema = {
         availableLanguage: ["English", "Swahili"],
         areaServed: "KE",
       },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: "58",
-        bestRating: "5",
-        worstRating: "1",
-      },
       paymentAccepted: "M-PESA, Cash",
       currenciesAccepted: "KES",
       hasOfferCatalog: {
@@ -141,13 +134,6 @@ const localBusinessSchema = {
         "Calculate Kenya VAT at 16% standard rate, zero-rated (0%) or exempt. Includes KRA late-filing penalty estimator and 'Am I Required?' VAT registration check.",
       offers: { "@type": "Offer", price: "0", priceCurrency: "KES" },
       url: "https://smartvatkenya.co.ke/tools",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "5",
-        ratingCount: "112",
-        bestRating: "5",
-        worstRating: "1",
-      },
     },
     {
       "@type": "WebSite",
@@ -178,45 +164,6 @@ const localBusinessSchema = {
         priceCurrency: "KES",
         availability: "https://schema.org/InStock",
         url: "https://smartvatkenya.co.ke/services",
-        shippingDetails: {
-          "@type": "OfferShippingDetails",
-          shippingRate: {
-            "@type": "MonetaryAmount",
-            value: "0",
-            currency: "KES",
-          },
-          shippingDestination: {
-            "@type": "DefinedRegion",
-            addressCountry: "KE",
-          },
-          deliveryTime: {
-            "@type": "ShippingDeliveryTime",
-            handlingTime: {
-              "@type": "QuantitativeValue",
-              minValue: 0,
-              maxValue: 1,
-              unitCode: "DAY",
-            },
-            transitTime: {
-              "@type": "QuantitativeValue",
-              minValue: 0,
-              maxValue: 1,
-              unitCode: "DAY",
-            },
-          },
-        },
-        hasMerchantReturnPolicy: {
-          "@type": "MerchantReturnPolicy",
-          applicableCountry: "KE",
-          returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
-        },
-      },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: "58",
-        bestRating: "5",
-        worstRating: "1",
       },
     },
     {
