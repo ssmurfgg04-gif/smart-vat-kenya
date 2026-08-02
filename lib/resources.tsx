@@ -52,6 +52,11 @@ const articles: Resource[] = [
   { slug: "icms-export-guide", title: "iCMS Export Guide: VAT for Kenyan Exporters" },
   { slug: "vat-threshold-kenya", title: "VAT Threshold Kenya 2026: KES 5M or 8M?" },
   { slug: "vat-bad-debt-refund-kenya", title: "VAT Bad Debt Relief Kenya 2026" },
+  { slug: "etims-account-locked", title: "eTIMS Account Locked? 7-Day Rule & How to Unlock" },
+  { slug: "etims-pending-sync", title: "eTIMS Pending Sync — Why Invoices Don't Upload & Fixes" },
+  { slug: "safaricom-not-working", title: "Safaricom Not Working? Status, M-Pesa Fixes & Workarounds" },
+  { slug: "kplc-blackout-etims-compliance", title: "KPLC Blackout? Keep Your eTIMS & VAT Compliance Intact" },
+  { slug: "mpesa-error-codes", title: "M-Pesa Error Codes 2026 — MR101, MR105 & Fixes" },
 ]
 
 export function getPrevNext(slug: string) {

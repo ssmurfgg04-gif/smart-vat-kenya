@@ -55,12 +55,6 @@ const localBusinessSchema = {
     addressCountry: "KE",
   },
   priceRange: "KES 5,000",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    ratingCount: "87",
-    bestRating: "5",
-  },
   sameAs: ["https://wa.me/254721725958"],
 }
 
