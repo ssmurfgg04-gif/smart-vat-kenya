@@ -3,6 +3,7 @@
   publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "18"
+  # Astro 7 requires Node >= 22.12.0 (older pinned 18 caused builds to fail)
+  NODE_VERSION = "22"
 
 # redeploy-trigger: 2026-08-04T14:28:00Z - Force Netlify to rebuild main with latest changes
