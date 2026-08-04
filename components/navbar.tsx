@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { List, X } from "@phosphor-icons/react/dist/ssr"
+import { List, X, Sun, Moon } from "@phosphor-icons/react/dist/ssr"
 
 const navLinks = [
   { href: "/tools/",        label: "VAT Calculator" },
@@ -17,24 +17,40 @@ const WA_LINK =
 export function Navbar() {
   const [pathname, setPathname] = useState("/")
   const [open, setOpen] = useState(false)
+  const [theme, setTheme] = useState<"light" | "dark">("light")
 
   useEffect(() => {
     setPathname(window.location.pathname)
+    // Check initial theme
+    const isDark = document.documentElement.classList.contains("dark")
+    setTheme(isDark ? "dark" : "light")
   }, [])
 
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light"
+    setTheme(newTheme)
+    localStorage.setItem("theme", newTheme)
+    document.documentElement.classList.toggle("dark", newTheme === "dark")
+    // Update theme-color meta tag
+    const metaTheme = document.querySelector('meta[name="theme-color"]')
+    if (metaTheme) {
+      metaTheme.setAttribute("content", newTheme === "dark" ? "#0f1419" : "#faf8f3")
+    }
+  }
+
   return (
-    <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-gray-200">
+    <header className="sticky top-0 z-40 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
       <nav
         className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between h-[60px]"
         aria-label="Main navigation"
       >
         <a
           href="/"
-          className="font-display text-[1.15rem] font-semibold tracking-tight text-gray-900 hover:text-emerald-600 transition-colors"
+          className="font-display text-[1.15rem] font-semibold tracking-tight text-gray-900 dark:text-gray-100 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
           aria-label="Smart VAT Kenya — Home"
         >
-          Smart<span className="text-gray-900">VAT</span>
-          <span className="text-gray-500 font-normal text-sm ml-1">Kenya</span>
+          Smart<span className="text-gray-900 dark:text-gray-100">VAT</span>
+          <span className="text-gray-500 dark:text-gray-400 font-normal text-sm ml-1">Kenya</span>
         </a>
 
         <ul className="hidden md:flex items-center gap-7" role="list">
@@ -47,8 +63,8 @@ export function Navbar() {
                   aria-current={active ? "page" : undefined}
                   className={`text-sm font-medium transition-colors ${
                     active
-                      ? "text-gray-900 border-b-2 border-gray-900 pb-0.5 font-semibold"
-                      : "text-gray-600 hover:text-gray-900"
+                      ? "text-gray-900 dark:text-gray-100 border-b-2 border-gray-900 dark:border-gray-100 pb-0.5 font-semibold"
+                      : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
                   }`}
                 >
                   {link.label}
@@ -58,7 +74,20 @@ export function Navbar() {
           })}
         </ul>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-3">
+          {/* Theme Toggle */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+          >
+            {theme === "light" ? (
+              <Moon size={20} className="text-gray-600" aria-hidden="true" />
+            ) : (
+              <Sun size={20} className="text-gray-400" aria-hidden="true" />
+            )}
+          </button>
+
           <a
             href={WA_LINK}
             target="_blank"
@@ -71,7 +100,7 @@ export function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-gray-900 p-2 -mr-2 rounded-md hover:bg-gray-100 transition-colors"
+          className="md:hidden text-gray-900 dark:text-gray-100 p-2 -mr-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           aria-controls="mobile-nav"
@@ -85,7 +114,7 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div id="mobile-nav" className="md:hidden border-t border-gray-200 bg-white px-6 py-5 space-y-1">
+        <div id="mobile-nav" className="md:hidden border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-6 py-5 space-y-1">
           {navLinks.map((link) => {
             const active = pathname === link.href || pathname.startsWith(link.href + "/")
             return (
@@ -94,14 +123,33 @@ export function Navbar() {
                 href={link.href}
                 onClick={() => setOpen(false)}
                 aria-current={active ? "page" : undefined}
-                className={`block py-2.5 text-sm font-medium border-b border-gray-100 last:border-0 transition-colors ${
-                  active ? "text-gray-900 font-semibold" : "text-gray-600 hover:text-gray-900"
+                className={`block py-2.5 text-sm font-medium border-b border-gray-100 dark:border-gray-800 last:border-0 transition-colors ${
+                  active ? "text-gray-900 dark:text-gray-100 font-semibold" : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
                 }`}
               >
                 {link.label}
               </a>
             )
           })}
+          
+          {/* Mobile theme toggle */}
+          <button
+            onClick={toggleTheme}
+            className="flex items-center gap-3 w-full py-2.5 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors border-b border-gray-100 dark:border-gray-800"
+          >
+            {theme === "light" ? (
+              <>
+                <Moon size={18} aria-hidden="true" />
+                <span>Dark mode</span>
+              </>
+            ) : (
+              <>
+                <Sun size={18} aria-hidden="true" />
+                <span>Light mode</span>
+              </>
+            )}
+          </button>
+          
           <a
             href={WA_LINK}
             target="_blank"

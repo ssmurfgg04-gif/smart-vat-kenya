@@ -208,12 +208,24 @@ const localBusinessSchema = {
 ---
 
 <!doctype html>
-<html lang="en-KE" data-color-mode="light" style="color-scheme:light" class="bg-canvas">
+<html lang="en-KE" data-color-mode="light" class="bg-background">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light" />
+  <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#faf8f3" />
+  
+  <!-- Prevent flash of wrong theme -->
+  <script is:inline>
+    (function() {
+      const stored = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (stored === 'dark' || (!stored && prefersDark)) {
+        document.documentElement.classList.add('dark');
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0f1419');
+      }
+    })();
+  </script>
 
   <title>{pageTitle}</title>
   <meta name="description" content={pageDesc} />

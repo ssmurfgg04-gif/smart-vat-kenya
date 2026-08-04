@@ -1,7 +1,64 @@
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
-import { StatusBanner } from "@/components/status-banner"
+import { FAQSection } from "@/components/faq-section"
+
+const WHATSAPP_NUMBER = "254721725958"
+
+const StatusBanner = ({ lastUpdated = "August 4, 2026", status = "unknown" }: { lastUpdated?: string; status?: "operational" | "disrupted" | "unknown" }) => {
+  const configs = {
+    operational: {
+      borderClass: "border-emerald-500",
+      bgClass: "bg-emerald-50",
+      textClass: "text-emerald-900",
+      subtextClass: "text-emerald-700",
+      buttonClass: "bg-emerald-600 hover:bg-emerald-700",
+      label: "eTIMS appears operational",
+      message: "eTIMS is working normally at our last check.",
+    },
+    disrupted: {
+      borderClass: "border-orange-500",
+      bgClass: "bg-orange-50",
+      textClass: "text-orange-900",
+      subtextClass: "text-orange-700",
+      buttonClass: "bg-orange-600 hover:bg-orange-700",
+      label: "eTIMS may be experiencing issues",
+      message: "Check the steps below for offline invoicing while KRA resolves the issue.",
+    },
+    unknown: {
+      borderClass: "border-amber-500",
+      bgClass: "bg-amber-50",
+      textClass: "text-amber-900",
+      subtextClass: "text-amber-700",
+      buttonClass: "bg-amber-600 hover:bg-amber-700",
+      label: "eTIMS status unconfirmed",
+      message: "Check KRA's official channels or contact us for real-time status.",
+    },
+  }
+  const config = configs[status]
+  return (
+    <div className={`border-l-4 ${config.borderClass} ${config.bgClass} p-4 rounded-r-lg mb-8`} role="status" aria-live="polite">
+      <div className="flex items-start gap-3">
+        <Info size={18} weight="fill" className={`shrink-0 mt-0.5 ${config.textClass}`} aria-hidden="true" />
+        <div className="flex-1">
+          <p className={`font-semibold ${config.textClass} text-[0.9rem]`}>
+            {config.label}: {config.message}
+          </p>
+          <p className={`text-sm ${config.subtextClass} mt-1`}>Last checked: {lastUpdated}</p>
+          <a
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20right%20now`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-flex items-center gap-2 ${config.buttonClass} text-white font-semibold py-2 px-4 rounded text-sm mt-3 transition-colors`}
+          >
+            WhatsApp us for help now
+            <ArrowRight size={14} weight="bold" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -434,19 +491,7 @@ export default function ETIMSDownPage() {
           </section>
 
           {/* FAQ */}
-          <section id="faq" aria-labelledby="faq-h">
-            <h2 id="faq-h" className="font-display text-[1.4rem] font-semibold text-ink mb-6 tracking-tight">
-              Frequently Asked Questions
-            </h2>
-            <dl className="divide-y divide-hairline">
-              {faqSchema.mainEntity.map((q) => (
-                <div key={q.name} className="py-5 first:pt-0">
-                  <dt className="font-display text-[0.95rem] font-semibold text-ink mb-2">{q.name}</dt>
-                  <dd className="text-[0.85rem] text-ink-muted leading-relaxed">{q.acceptedAnswer.text}</dd>
-                </div>
-              ))}
-            </dl>
-          </section>
+          <FAQSection faqSchema={faqSchema} />
         </article>
 
         {/* More Guides */}
