@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
+import { StatusBanner } from "@/components/status-banner"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -122,6 +123,12 @@ export default function ETIMSPendingSyncPage() {
       </div>
 
       <div className="max-w-3xl mx-auto px-6 py-14">
+        {/* eTIMS Status Banner */}
+        <StatusBanner 
+          lastUpdated="August 4, 2026" 
+          status="unknown"
+          whatsappNumber="254721725958"
+        />
 
         {/* Quick Answer / BLUF */}
         <div className="border-l-[3px] border-brand pl-5 mb-10">

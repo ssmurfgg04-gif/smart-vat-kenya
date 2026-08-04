@@ -153,13 +153,14 @@ const localBusinessSchema = {
       },
     },
     {
-      "@type": "Product",
-      "@id": "https://smartvatkenya.co.ke/services#vat-filing-product",
+      "@type": "Service",
+      "@id": "https://smartvatkenya.co.ke/services#vat-filing-service",
       name: "Monthly VAT Filing Service",
       description:
-        "Monthly iTax VAT return filing before the 20th KRA deadline. Filed on the 17th. Includes WhatsApp reminders and M-PESA payment guidance.",
-      image: "https://smartvatkenya.co.ke/icon.svg",
-      brand: { "@type": "Brand", name: "Smart VAT Kenya" },
+        "Monthly iTax VAT return filing before the 20th KRA deadline. We file on the 17th. Includes WhatsApp reminders and M-PESA payment guidance.",
+      provider: { "@id": "https://smartvatkenya.co.ke/#business" },
+      areaServed: { "@type": "Country", name: "Kenya" },
+      serviceType: "VAT Filing",
       offers: {
         "@type": "Offer",
         price: "3500",
@@ -251,9 +252,12 @@ const localBusinessSchema = {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="//wa.me" />
 
-  <!-- Fonts -->
+  <!-- Fonts — optimized loading with fallback for no-JS and better mobile experience -->
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" />
+  </noscript>
 
   <!-- Speculation Rules -->
   <script type="speculationrules">
