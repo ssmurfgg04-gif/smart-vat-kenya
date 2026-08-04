@@ -60,7 +60,7 @@ html {
   /* ── Core palette ───────────────────────────────────────── */
   --ink:         #141311;
   --ink-soft:    #3c3a36;
-  --ink-muted:   #6b6759;
+  --ink-muted:   #5d5a4e;
   --canvas:      #faf8f3;
   --canvas-alt:  #f0ede5;
   --canvas-warm: #e8e3d8;
@@ -85,7 +85,7 @@ html {
   --secondary:              #f0ede5;
   --secondary-foreground:   #141311;
   --muted:                  #f0ede5;
-  --muted-foreground:       #6b6759;
+  --muted-foreground:       #5d5a4e;
   --destructive:            #c8372d;
   --border:                 #dedad2;
   --input:                  #e8e3d8;
