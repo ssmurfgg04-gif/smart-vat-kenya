@@ -4,3 +4,5 @@
 
 [build.environment]
   NODE_VERSION = "18"
+
+# redeploy-trigger: 2026-08-04T14:28:00Z - Force Netlify to rebuild main with latest changes
