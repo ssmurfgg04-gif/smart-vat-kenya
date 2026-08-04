@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
+import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -490,19 +491,7 @@ export default function VATForStartupsPage() {
           </section>
 
           {/* FAQ */}
-          <section id="faq" aria-labelledby="faq-h">
-            <h2 id="faq-h" className="font-display text-[1.4rem] font-semibold text-ink mb-6 tracking-tight">
-              Frequently Asked Questions
-            </h2>
-            <dl className="divide-y divide-hairline">
-              {faqSchema.mainEntity.map((q) => (
-                <div key={q.name} className="py-5 first:pt-0">
-                  <dt className="font-display text-[0.95rem] font-semibold text-ink mb-2">{q.name}</dt>
-                  <dd className="text-[0.85rem] text-ink-muted leading-relaxed">{q.acceptedAnswer.text}</dd>
-                </div>
-              ))}
-            </dl>
-          </section>
+          <FAQSection faqSchema={faqSchema} />
         </article>
 
         {/* More Guides */}
