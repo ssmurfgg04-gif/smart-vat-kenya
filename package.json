@@ -23,7 +23,7 @@
     "shadcn": "^4.8.0"
   },
   "devDependencies": {
-    "@types,node": "^24",
+    "@types/node": "^24",
     "tailwindcss": "^4.3.3",
     "typescript": "5.7.3"
   },
