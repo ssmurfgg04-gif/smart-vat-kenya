@@ -2,6 +2,10 @@
   "name": "my-project",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "npm@9",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -19,7 +23,7 @@
     "shadcn": "^4.8.0"
   },
   "devDependencies": {
-    "@types/node": "^24",
+    "@types,node": "^24",
     "tailwindcss": "^4.3.3",
     "typescript": "5.7.3"
   },
