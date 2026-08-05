@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ArrowRight, Calculator, Info, WarningCircle, Question, Wrench, ClipboardText, CurrencyCircleDollar, Scales, ListChecks, HandCoins } from "@phosphor-icons/react/dist/ssr"
+import { EtimsPenaltyCalculator } from "@/src/components/pages/etims-penalty-calculator"
 
 const WA_BASE = "https://wa.me/254721725958"
 
@@ -90,7 +91,7 @@ export default function ToolsPage() {
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">Free tools — no sign-up required</p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">Free Kenya Tax Tools — Calculators, Checklists &amp; Guides</h1>
-          <p className="text-[0.95rem] text-canvas/70 max-w-[60ch] leading-relaxed">VAT calculator, PAYE salary calculator, KRA penalty calculator for all 6 tax regimes, amnesty savings calculator, withholding tax calculator, eTIMS checklist, and more — all free, no sign-up required.</p>
+          <p className="text-[0.95rem] text-canvas/70 max-w-[60ch] leading-relaxed">VAT calculator, PAYE salary calculator, KRA penalty calculator for all 6 tax regimes, eTIMS penalty calculator, amnesty savings calculator, withholding tax calculator, eTIMS checklist, and more — all free, no sign-up required.</p>
         </div>
       </div>
 
@@ -213,6 +214,11 @@ export default function ToolsPage() {
             )}
           </div>
         </section>
+
+        {/* eTIMS Penalty Calculator */}
+        <div className="mt-14 border-t border-hairline pt-12">
+          <EtimsPenaltyCalculator />
+        </div>
 
         {/* Am I Required Quiz */}
         <section className="mt-14 border-t border-hairline pt-12" aria-labelledby="quiz-heading">

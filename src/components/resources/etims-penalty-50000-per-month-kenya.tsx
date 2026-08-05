@@ -133,6 +133,10 @@ export default function EtimsPenaltyPost() {
               className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-4 py-2.5 rounded-md hover:bg-brand-hover transition-colors">
               Ask Us on WhatsApp <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
+            <a href="/tools/etims-penalty-calculator/"
+              className="mt-3 inline-flex items-center gap-2 border border-brand/40 text-brand text-sm font-semibold px-4 py-2.5 rounded-md hover:bg-brand-muted transition-colors">
+              Calculate your exposure <ArrowRight size={14} weight="bold" aria-hidden="true" />
+            </a>
           </div>
 
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">Related Resources</h2>

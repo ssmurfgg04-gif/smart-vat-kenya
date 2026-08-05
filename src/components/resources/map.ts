@@ -133,8 +133,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/etims-compliance-checklist/",
   },
   "etims-down-offline-invoicing": {
-    title: "KRA eTIMS Down? Invoice Offline Now — Sync Guide 2026",
-    description: "When eTIMS goes down, you can still invoice. Learn how to issue offline invoices, sync when the portal recovers, and avoid KRA penalties.",
+    title: "KRA eTIMS Down? Invoice Offline Now — Avoid the 7-Day Lockout",
+    description: "KRA eTIMS down or offline? Keep issuing invoices now, sync when the portal recovers, and avoid the 7-day device lockout and KES 50,000/month compliance fines.",
     canonical: "/resources/etims-down-offline-invoicing/",
   },
   "etims-invoice-rejected": {

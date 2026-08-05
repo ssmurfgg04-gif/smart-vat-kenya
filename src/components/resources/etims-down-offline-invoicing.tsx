@@ -73,9 +73,9 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "KRA eTIMS Down? How to Invoice Offline and Sync When the Portal Is Not Working (Kenya 2026)",
+  headline: "KRA eTIMS Down? Invoice Offline Now and Sync When It Recovers",
   description:
-    "When KRA eTIMS goes down — which happens regularly during peak periods — businesses still need to issue invoices. This guide covers eTIMS Client offline mode, what to do if eTIMS Lite is down, how to sync offline invoices, and how KRA handles penalties during system outages.",
+    "KRA eTIMS down or offline? Keep issuing invoices in offline mode, sync when the portal recovers, and avoid the 7-day device lockout and KES 50,000/month compliance fines.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-25",
@@ -170,7 +170,7 @@ export default function ETIMSDownPage() {
             ))}
           </div>
           <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
-            KRA eTIMS Down? How to Invoice Offline and Sync When the Portal Is Not Working
+            KRA eTIMS Down? Invoice Offline Now and Sync When It Recovers
           </h1>
           <div className="flex flex-wrap items-center gap-3 mt-4">
             <span className="font-mono text-[0.62rem] uppercase tracking-widest bg-brand/20 text-brand px-2.5 py-1 rounded-sm">Last updated: July 25, 2026</span>

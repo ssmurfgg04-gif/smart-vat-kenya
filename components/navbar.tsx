@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { List, X, Sun, Moon } from "@phosphor-icons/react/dist/ssr"
+import { SiteSearch } from "./site-search"
 
 const navLinks = [
   { href: "/tools/",        label: "VAT Calculator" },
@@ -75,6 +76,9 @@ export function Navbar() {
         </ul>
 
         <div className="hidden md:flex items-center gap-3">
+          {/* Site search */}
+          <SiteSearch />
+
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
@@ -149,6 +153,11 @@ export function Navbar() {
               </>
             )}
           </button>
+
+          {/* Mobile site search */}
+          <div className="border-b border-gray-100 dark:border-gray-800 py-2.5">
+            <SiteSearch />
+          </div>
           
           <a
             href={WA_LINK}

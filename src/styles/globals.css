@@ -1,17 +1,17 @@
-@import 'tailwindcss';
+﻿@import 'tailwindcss';
 @import 'shadcn/tailwind.css';
 
 /* Dark mode using class-based approach */
 @custom-variant dark (&:is(.dark *));
 
-/* ─── Font faces ──────────────────────────────────────────── */
+/* â”€â”€â”€ Font faces â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 @theme inline {
   --font-sans: 'DM Sans', 'DM Sans Fallback', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Outfit', 'Outfit Fallback', ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', 'Fira Mono', monospace;
 
-  /* ── Ink & canvas tokens (Anthropic-inspired restraint) ── */
+  /* â”€â”€ Ink & canvas tokens (Anthropic-inspired restraint) â”€â”€ */
   --color-ink:          var(--ink);
   --color-ink-soft:     var(--ink-soft);
   --color-ink-muted:    var(--ink-muted);
@@ -20,14 +20,14 @@
   --color-canvas-warm:  var(--canvas-warm);
   --color-canvas-dark:  var(--canvas-dark);
 
-  /* ── Brand tokens ───────────────────────────────────────── */
+  /* â”€â”€ Brand tokens â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --color-brand:        var(--brand);
   --color-brand-hover:  var(--brand-hover);
   --color-brand-muted:  var(--brand-muted);
   --color-accent:       var(--accent-kra);
   --color-hairline:     var(--hairline);
 
-  /* ── Shadcn mapping ─────────────────────────────────────── */
+  /* â”€â”€ Shadcn mapping â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --color-background:           var(--background);
   --color-foreground:           var(--foreground);
   --color-card:                 var(--card);
@@ -52,12 +52,12 @@
   --radius-2xl: calc(var(--radius) * 3);
 }
 
-/* ── Light mode (default) ───────────────────────────────── */
+/* â”€â”€ Light mode (default) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 :root,
 html {
   color-scheme: light dark;
 
-  /* ── Core palette ───────────────────────────────────────── */
+  /* â”€â”€ Core palette â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --ink:         #141311;
   --ink-soft:    #3c3a36;
   --ink-muted:   #5d5a4e;
@@ -66,14 +66,14 @@ html {
   --canvas-warm: #e8e3d8;
   --canvas-dark: #1b2a3b;
 
-  /* ── Brand: KRA-authority red + trust slate ─────────────── */
+  /* â”€â”€ Brand: KRA-authority red + trust slate â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --brand:       #c8372d;
   --brand-hover: #b02e24;
   --brand-muted: #f5e9e8;
   --accent-kra:  #1b2a3b;
   --hairline:    #dedad2;
 
-  /* ── Shadcn light ─────────────────────────────────────────── */
+  /* â”€â”€ Shadcn light â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --background:             #faf8f3;
   --foreground:             #141311;
   --card:                   #ffffff;
@@ -93,10 +93,10 @@ html {
   --radius:                 0.5rem;
 }
 
-/* ── Dark mode ───────────────────────────────────────────── */
+/* â”€â”€ Dark mode â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .dark,
 html.dark {
-  /* ── Core palette - darker values for dark mode ─────────── */
+  /* â”€â”€ Core palette - darker values for dark mode â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --ink:         #e8e4dc;
   --ink-soft:    #c9c4ba;
   --ink-muted:   #9e9990;
@@ -105,14 +105,14 @@ html.dark {
   --canvas-warm: #242d3a;
   --canvas-dark: #0f1419;
 
-  /* ── Brand - slightly brighter for dark mode visibility ── */
+  /* â”€â”€ Brand - slightly brighter for dark mode visibility â”€â”€ */
   --brand:       #e64545;
   --brand-hover: #ef5a5a;
   --brand-muted: #3d1f1f;
   --accent-kra:  #2a4a6b;
   --hairline:    #2d3748;
 
-  /* ── Shadcn dark ─────────────────────────────────────────── */
+  /* â”€â”€ Shadcn dark â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --background:             #0f1419;
   --foreground:             #e8e4dc;
   --card:                   #1a2332;
@@ -152,7 +152,7 @@ html.dark {
   }
 }
 
-/* ── Utility classes ─────────────────────────────────────── */
+/* â”€â”€ Utility classes â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @layer utilities {
   .font-display {
     font-family: var(--font-display);

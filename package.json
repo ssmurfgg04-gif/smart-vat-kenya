@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && pagefind --site dist --output-subdir _pagefind",
     "preview": "astro preview",
     "lint": "eslint ."
   },
@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@types/node": "^24",
+    "pagefind": "^1.5.2",
     "tailwindcss": "^4.3.3",
     "typescript": "5.7.3"
   },
