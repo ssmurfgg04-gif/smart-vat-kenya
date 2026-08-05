@@ -38,7 +38,7 @@ const faqSchema = {
       name: "Why is my KRA fine so high?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "KRA bills are almost never a single charge. A seemingly huge fine is usually the original tax (if any) plus late-filing penalties plus 1% monthly interest that has compounded over many months. A company that misses seven months of VAT returns at KES 10,000 per month lands on exactly KES 70,000 in penalties alone.",
+        text: "KRA bills are almost never a single charge. A seemingly huge fine is usually the original tax (if any) plus late-filing penalties plus monthly interest (commonly cited around 1%, compounding) that has grown over many months. A company that misses seven months of VAT nil returns at KES 10,000 per month lands on exactly KES 70,000 in penalties alone.",
       },
     },
     {
@@ -201,7 +201,7 @@ export default function KraFine70000() {
                   },
                   {
                     title: "Interest on unpaid amounts",
-                    desc: "Unpaid tax typically accrues interest of roughly 1% per month, compounding. Left for a year that turns a KES 100,000 debt into roughly KES 124,000 in interest alone.",
+                    desc: "Interest is commonly cited at around 1% per month, compounding — though some sources quote up to 2%. Because figures genuinely differ across sources, don&apos;t rely on a rule of thumb: read the exact rate KRA applied in your iTax ledger.",
                   },
                 ].map(({ title, desc }) => (
                   <div key={title} className="flex items-start gap-3">
@@ -218,9 +218,9 @@ export default function KraFine70000() {
                   <p className="font-semibold text-ink text-[0.85rem]">A realistic example that hits KES 70,000</p>
                 </div>
                 <div className="p-4 space-y-2 text-[0.85rem]">
-                  <p className="text-ink">A company misses <strong>7 months</strong> of VAT nil returns.</p>
+                  <p className="text-ink">A company misses <strong>7 months</strong> of VAT <em>nil</em> returns.</p>
                   <p className="text-ink-soft">7 months × KES 10,000/month = <strong className="text-ink">KES 70,000</strong> in late-filing penalties.</p>
-                  <p className="text-ink-soft">No interest and no principal needed — just the missed filings. If tax was actually owed on top, it grows further.</p>
+                  <p className="text-ink-soft">No interest and no principal needed — just the missed filings. The KES 10,000/month is the widely-cited flat penalty for a late nil VAT return; months where VAT was actually due instead follow the 5%-of-tax-or-KES-10,000 rule, which can be higher.</p>
                 </div>
               </div>
               <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
