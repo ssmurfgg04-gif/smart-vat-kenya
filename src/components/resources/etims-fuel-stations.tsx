@@ -151,6 +151,29 @@ export default function EtimsFuelStations() {
         </div>
 
         <article className="prose prose-gray max-w-none">
+          <section aria-labelledby="news-h">
+            <h2 id="news-h">Why This Is In the News Right Now</h2>
+            <p>
+              This isn&apos;t an abstract compliance rule — it&apos;s a live enforcement story. In February 2026 a
+              motorist publicly complained that a petrol station on <strong>Thika Road</strong> refused to issue an
+              eTIMS receipt. The <strong>Petroleum Outlets Association of Kenya (POAK)</strong> — the umbrella body for
+              roughly 3,100–6,000 independent fuel outlets, most of the country&apos;s retail market — responded by
+              publicly urging its members to comply, and told motorists that enforcement will only work if customers
+              keep demanding eTIMS receipts.
+            </p>
+            <p>
+              KRA has said it has onboarded more than <strong>500 fuel stations</strong> onto the eTIMS fuel module —
+              around <strong>16% of outlets nationwide</strong> as of early 2026. That figure is the headline number
+              behind the search spike: the vast majority of stations still aren&apos;t connected, enforcement is being
+              stepped up, and both consumers and station owners are trying to figure out what happens next.
+            </p>
+            <p className="text-sm text-ink-muted italic">
+              Timeline: June 2024 rollout start · 30 June 2025 original mandate · 25 November 2025 KRA fresh reminder ·
+              31 December 2025 enforcement deadline · January 2026 enforcement begins · Feb 2026 POAK public push
+              (Thika Road receipt complaint).
+            </p>
+          </section>
+
           <section aria-labelledby="mandate-h">
             <h2 id="mandate-h">The eTIMS Fuel Station Mandate, in One Paragraph</h2>
             <p>

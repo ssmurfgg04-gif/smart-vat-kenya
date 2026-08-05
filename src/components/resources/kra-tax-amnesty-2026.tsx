@@ -121,7 +121,7 @@ export default function KRATaxAmnesty2026() {
               The <strong>KRA tax amnesty 2026</strong>, introduced under the <strong>Finance Act, 2026</strong>, is a time-limited programme that waives <strong>100% of penalties, interest, and fines</strong> on qualifying tax liabilities accumulated up to <strong>31 December 2025</strong>. It took effect on <strong>1 July 2026</strong> and closes on <strong>31 December 2026</strong>.
             </p>
             <p>
-              This is the third amnesty cycle from KRA. The previous two cycles collectively recovered over <strong>KES 80.9 billion</strong> in principal tax payments while bringing hundreds of thousands of taxpayers back into compliance. In the current cycle KRA has already waived <strong>KES 170 billion</strong> in fines as of early August 2026 — and KRA has confirmed that filing outstanding returns (including nil returns) <strong>automatically triggers the waiver</strong> of penalties and interest, with qualifying cases processed in weekly iTax batches. The 2026 programme is expected to be the final broad-based amnesty for the foreseeable future.
+              This is the third amnesty cycle from KRA. The previous two cycles collectively recovered over <strong>KES 80.9 billion</strong> in principal tax payments while bringing hundreds of thousands of taxpayers back into compliance. In the current cycle KRA has already waived <strong>KES 170 billion</strong> in fines as of early August 2026, according to reporting on the programme&apos;s progress — and KRA has confirmed that filing outstanding returns (including nil returns) <strong>automatically triggers the waiver</strong> of penalties and interest, with qualifying cases processed in weekly iTax batches. The 2026 programme is expected to be the final broad-based amnesty for the foreseeable future.
             </p>
 
             <h2>Which Taxes Are Covered?</h2>
@@ -138,8 +138,8 @@ export default function KRATaxAmnesty2026() {
             </ul>
             <p><strong>Important:</strong> Only penalties, interest, and fines on pre-2026 debt are waived. The principal tax must still be paid. Any tax liability arising on or after 1 January 2026 falls entirely outside the amnesty.</p>
 
-            <h2>Who Qualifies for the Amnesty?</h2>
-            <p className="mb-4">Five scenarios cover every taxpayer. Find yours below.</p>
+            <h2 id="am-i-eligible">Am I Eligible for the Amnesty?</h2>
+            <p className="mb-4">Five scenarios cover every taxpayer. Find yours below — then scroll for exactly what to do.</p>
             <div className="border border-hairline rounded-lg overflow-hidden not-prose">
               <table className="w-full text-[0.83rem]">
                 <thead>
@@ -166,6 +166,13 @@ export default function KRATaxAmnesty2026() {
                 </tbody>
               </table>
             </div>
+            <p className="text-sm text-ink-muted italic mt-3">
+              Staring at a specific figure in iTax? See{" "}
+              <a href="/resources/kra-fine-70000/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                Got a KRA fine around KES 70,000? You may only owe the principal
+              </a>{" "}
+              for how to read your bill and route it through the amnesty.
+            </p>
 
             <div className="bg-amber-50 border border-amber-200 rounded-lg p-5 mb-8 not-prose">
               <div className="flex items-start gap-3">

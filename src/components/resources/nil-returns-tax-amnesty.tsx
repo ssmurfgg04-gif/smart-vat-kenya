@@ -329,8 +329,8 @@ export default function NilReturnsTaxAmnestyPage() {
             <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
               <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
               <p className="text-[0.83rem] leading-relaxed">
-                <strong className="text-ink">New in 2026 — "No Obligation" PIN status:</strong> KRA introduced PINs with
-                a <em>No Obligation</em> status for specific categories of taxpayers (notably students and the unemployed),
+                <strong className="text-ink">New in 2026 — "No Obligation" PIN status:</strong> as of mid-2026 KRA
+                introduced PINs with a <em>No Obligation</em> status for specific categories of taxpayers (notably students and the unemployed),
                 ending the mandatory annual nil return for PINs that qualify. If your PIN shows a No Obligation obligation
                 in iTax, you may no longer need to file each year. Check <strong className="text-ink">iTax → Taxpayer Dashboard →
                 Obligations</strong> to see your current status — and confirm with KRA before assuming you&apos;re exempt.
@@ -357,6 +357,13 @@ export default function NilReturnsTaxAmnestyPage() {
               This is not a rumour or a loophole. It is a formal KRA programme under the Tax
               Procedures Act. It exists because KRA would rather get the principal tax than
               chase penalties from taxpayers who cannot or will not pay the full amount.
+            </p>
+            <p>
+              If you&apos;ve just been hit with a large-looking bill, read{" "}
+              <a href="/resources/kra-fine-70000/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                Got a KRA fine around KES 70,000? You may only owe the principal
+              </a>{" "}
+              — it walks through how to read your iTax figure and confirm whether the amnesty wipes most of it.
             </p>
 
             <h3 className="font-display text-[1.1rem] font-semibold text-ink mt-6 mb-3">

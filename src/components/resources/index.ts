@@ -17,6 +17,7 @@ export { default as KPLCBlackoutEtimsCompliance } from "./kplc-blackout-etims-co
 export { default as HowToCalculateVatInKenya } from "./how-to-calculate-vat-in-kenya"
 export { default as HowToFileVatReturnOnItax } from "./how-to-file-vat-return-on-itax"
 export { default as HowToRegisterForVatInKenya } from "./how-to-register-for-vat-in-kenya"
+export { default as KraFine70000 } from "./kra-fine-70000"
 export { default as InputVatDeductionGuide } from "./input-vat-deduction-guide"
 export { default as ItaxPortalNotWorking } from "./itax-portal-not-working"
 export { default as KraPenaltyForLateVatFiling } from "./kra-penalty-for-late-vat-filing"

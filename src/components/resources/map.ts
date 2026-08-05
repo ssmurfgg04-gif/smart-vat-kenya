@@ -21,6 +21,7 @@ import {
   ItaxPortalNotWorking,
   KPLCBlackoutEtimsCompliance,
   KraPenaltyForLateVatFiling,
+  KraFine70000,
   KraPinNotWorking,
   KraStatusCode500ItaxErrors,
   KraTaxAmnesty2026,
@@ -83,6 +84,7 @@ export const resourceComponents: Record<string, React.ComponentType> = {
   "input-vat-deduction-guide": InputVatDeductionGuide,
   "itax-portal-not-working": ItaxPortalNotWorking,
   "kplc-blackout-etims-compliance": KPLCBlackoutEtimsCompliance,
+  "kra-fine-70000": KraFine70000,
   "kra-penalty-for-late-vat-filing": KraPenaltyForLateVatFiling,
   "kra-pin-not-working": KraPinNotWorking,
   "kra-status-code-500-itax-errors": KraStatusCode500ItaxErrors,
@@ -223,6 +225,11 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     title: "KPLC Blackout? Keep Your eTIMS & VAT Compliance Intact 2026",
     description: "A power cut doesn't pause your KRA obligations. Invoice offline, pay via M-Pesa on your phone, and protect yourself from the 7-day eTIMS lockout.",
     canonical: "/resources/kplc-blackout-etims-compliance/",
+  },
+  "kra-fine-70000": {
+    title: "Got a KRA Fine Around KES 70,000? You May Only Owe the Principal",
+    description: "A KES 70,000 KRA bill is usually late-filing penalties piling up, not tax you own. Check whether the 2026 tax amnesty wipes most of it before you pay a shilling.",
+    canonical: "/resources/kra-fine-70000/",
   },
   "kra-penalty-for-late-vat-filing": {
     title: "KRA Penalty for Late VAT Filing — Waive It Fast 2026",
