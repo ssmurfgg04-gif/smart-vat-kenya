@@ -90,7 +90,7 @@ export default function TaxComplianceCertificateKenya() {
           <header className="mb-8">
             <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Compliance Guide</p>
             <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.4rem)] font-semibold text-ink tracking-tight leading-tight mb-3 text-balance">
-              Tax Compliance Certificate Kenya 2026: How to Get Your KRA TCC
+              TCC Certificate Kenya 2026: How to Get Your KRA Tax Compliance Certificate Fast
             </h1>
             <p className="text-[0.9rem] text-ink-muted leading-relaxed">
               <time dateTime="2026-07-27">27 July 2026</time> &middot; Updated for enhanced TCC requirements
@@ -156,8 +156,8 @@ export default function TaxComplianceCertificateKenya() {
 
             <h2>Common Reasons for TCC Rejection</h2>
             <ul>
-              <li><strong>Missing tax returns</strong> — One or more returns have not been filed. File them immediately and re-apply</li>
-              <li><strong>Unpaid tax balances</strong> — Outstanding principal tax needs to be settled or covered by an approved payment plan</li>
+              <li><strong>Missing tax returns</strong> — One or more returns have not been filed. File them immediately and re-apply. This includes <strong>nil returns</strong>: an unfiled nil return from a year with zero income still blocks your TCC. See our <a href="/resources/nil-returns-tax-amnesty/" className="text-brand underline underline-offset-2 hover:text-brand-hover">nil returns guide</a> if you have missing years</li>
+              <li><strong>Unpaid tax balances</strong> — Outstanding principal tax needs to be settled or covered by an approved payment plan. If the balance is old (pre-2026) debt with penalties and interest on top, the <a href="/resources/kra-tax-amnesty-2026/" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA tax amnesty 2026</a> can waive those penalties — you pay the principal and clear the ledger before re-applying</li>
               <li><strong>eTIMS non-compliance</strong> — Your business is not registered on eTIMS. Register first, then apply</li>
               <li><strong>VAT special table issues</strong> — If you are on the VAT special table, your status must be compliant</li>
               <li><strong>Incorrect taxpayer details</strong> — Your KRA PIN or business registration details may need updating</li>

@@ -121,7 +121,7 @@ export default function KRATaxAmnesty2026() {
               The <strong>KRA tax amnesty 2026</strong>, introduced under the <strong>Finance Act, 2026</strong>, is a time-limited programme that waives <strong>100% of penalties, interest, and fines</strong> on qualifying tax liabilities accumulated up to <strong>31 December 2025</strong>. It took effect on <strong>1 July 2026</strong> and closes on <strong>31 December 2026</strong>.
             </p>
             <p>
-              This is the third amnesty cycle from KRA. The previous two cycles collectively recovered over <strong>KES 80.9 billion</strong> in principal tax payments while bringing hundreds of thousands of taxpayers back into compliance. The 2026 programme is expected to be the final broad-based amnesty for the foreseeable future.
+              This is the third amnesty cycle from KRA. The previous two cycles collectively recovered over <strong>KES 80.9 billion</strong> in principal tax payments while bringing hundreds of thousands of taxpayers back into compliance. In the current cycle KRA has already waived <strong>KES 170 billion</strong> in fines as of early August 2026 — and KRA has confirmed that filing outstanding returns (including nil returns) <strong>automatically triggers the waiver</strong> of penalties and interest, with qualifying cases processed in weekly iTax batches. The 2026 programme is expected to be the final broad-based amnesty for the foreseeable future.
             </p>
 
             <h2>Which Taxes Are Covered?</h2>

@@ -2,6 +2,7 @@ export { default as DoINeedToRegisterForVatKenya } from "./do-i-need-to-register
 export { default as EtimsAccountLocked } from "./etims-account-locked"
 export { default as EtimsComplianceChecklist } from "./etims-compliance-checklist"
 export { default as EtimsDownOfflineInvoicing } from "./etims-down-offline-invoicing"
+export { default as EtimsFuelStations } from "./etims-fuel-stations"
 export { default as EtimsMandateGuide } from "./etims-mandate-guide"
 export { default as EtimsInvoiceRejected } from "./etims-invoice-rejected"
 export { default as EtimsInvoicingGuide } from "./etims-invoicing-guide"

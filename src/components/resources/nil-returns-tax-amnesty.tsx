@@ -134,7 +134,7 @@ export default function NilReturnsTaxAmnestyPage() {
             Guide &middot; 8 min read
           </p>
           <h1 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-semibold tracking-tight text-ink leading-tight mb-4 text-balance">
-            How to File Nil Returns on KRA iTax — and Take Advantage of the Tax Amnesty Programme
+            How to File Nil Returns on KRA iTax (2026) — and Take Advantage of the Tax Amnesty Programme
           </h1>
           <p className="text-[0.92rem] text-ink-muted leading-relaxed max-w-[58ch]">
             Nil returns are the most misunderstood part of Kenya VAT compliance. File them wrong
@@ -308,7 +308,39 @@ export default function NilReturnsTaxAmnestyPage() {
           </div>
         </section>
 
-        {/* Section 4 — tax amnesty */}
+        {/* Section 4 — income tax nil returns (students, unemployed) */}
+        <section className="mb-16" aria-labelledby="income-nil-h">
+          <h2 id="income-nil-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
+            Income Tax Nil Returns: Students, the Unemployed &amp; Dormant PINs
+          </h2>
+          <div className="text-[0.9rem] text-ink-muted leading-relaxed space-y-4">
+            <p>
+              Most Kenyans searching "how to file nil returns" are <strong className="text-ink">individuals</strong> —
+              students with a KRA PIN, the unemployed, and people whose PIN was issued for a transaction but who earned
+              nothing. If that&apos;s you, you file an <strong className="text-ink">annual income tax nil return</strong>,
+              not a monthly VAT return.
+            </p>
+            <ul className="list-disc pl-6 space-y-1.5">
+              <li><strong className="text-ink">Deadline:</strong> 30 June each year, for the previous year of income (the 2025 return was due 30 June 2026)</li>
+              <li><strong className="text-ink">Penalty:</strong> KES 2,000 for individuals who file late — even for nil returns. Unfiled returns also block your <a href="/resources/tax-compliance-certificate-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Tax Compliance Certificate (TCC)</a></li>
+              <li><strong className="text-ink">Where:</strong> itax.kra.go.ke → Returns → File Nil Return → Income Tax – Resident Individual → submit, then download the acknowledgement receipt</li>
+              <li><strong className="text-ink">Don&apos;t file nil if you actually earned income:</strong> employees, freelancers, landlords, and businesses with any income must file a normal return. Habitual nil filing while earning is a compliance red flag that can trigger a KRA query</li>
+            </ul>
+            <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
+              <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
+              <p className="text-[0.83rem] leading-relaxed">
+                <strong className="text-ink">New in 2026 — "No Obligation" PIN status:</strong> KRA introduced PINs with
+                a <em>No Obligation</em> status for specific categories of taxpayers (notably students and the unemployed),
+                ending the mandatory annual nil return for PINs that qualify. If your PIN shows a No Obligation obligation
+                in iTax, you may no longer need to file each year. Check <strong className="text-ink">iTax → Taxpayer Dashboard →
+                Obligations</strong> to see your current status — and confirm with KRA before assuming you&apos;re exempt.
+                Everyone else must still file their nil return annually.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 4b — tax amnesty */}
         <section className="mb-16" aria-labelledby="amnesty-h">
           <h2 id="amnesty-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             KRA Tax Amnesty Programme 2026: Clean Up Past Non-Compliance Without Paying Penalties

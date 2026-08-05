@@ -3,6 +3,7 @@ import {
   EtimsAccountLocked,
   EtimsComplianceChecklist,
   EtimsDownOfflineInvoicing,
+  EtimsFuelStations,
   EtimsInvoiceRejected,
   EtimsInvoicingGuide,
   EtimsMandateGuide,
@@ -65,6 +66,7 @@ export const resourceComponents: Record<string, React.ComponentType> = {
   "etims-account-locked": EtimsAccountLocked,
   "etims-compliance-checklist": EtimsComplianceChecklist,
   "etims-down-offline-invoicing": EtimsDownOfflineInvoicing,
+  "etims-fuel-stations": EtimsFuelStations,
   "etims-invoice-rejected": EtimsInvoiceRejected,
   "etims-mandate-guide": EtimsMandateGuide,
   "etims-invoicing-guide": EtimsInvoicingGuide,
@@ -136,6 +138,11 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     title: "KRA eTIMS Down? Invoice Offline Now — Avoid the 7-Day Lockout",
     description: "KRA eTIMS down or offline? Keep issuing invoices now, sync when the portal recovers, and avoid the 7-day device lockout and KES 50,000/month compliance fines.",
     canonical: "/resources/etims-down-offline-invoicing/",
+  },
+  "etims-fuel-stations": {
+    title: "Petrol Station Refusing an eTIMS Receipt? Here's Why and What to Do",
+    description: "KRA made eTIMS mandatory for all fuel stations by June 30, 2025 — most independents still aren't compliant. What to do when a station won't issue an eTIMS receipt, and what it costs station owners who keep delaying.",
+    canonical: "/resources/etims-fuel-stations/",
   },
   "etims-invoice-rejected": {
     title: "eTIMS Invoice Rejected? Fix It Fast (Kenya 2026)",
@@ -259,7 +266,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "nil-returns-tax-amnesty": {
     title: "How to File Nil Returns on KRA iTax (2026) + Amnesty Guide",
-    description: "Step-by-step guide to filing nil VAT returns on KRA iTax, how they interact with the 2026 tax amnesty, and common mistakes that trigger KRA queries.",
+    description: "Step-by-step guide to filing nil returns on KRA iTax 2026 — monthly VAT nil returns and annual income tax nil returns for students and the unemployed (plus the new No Obligation PIN). Includes how the 2026 tax amnesty wipes late-filing penalties.",
     canonical: "/resources/nil-returns-tax-amnesty/",
   },
   "safaricom-not-working": {
@@ -273,8 +280,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/small-taxpayer-regime-kenya/",
   },
   "tax-compliance-certificate-kenya": {
-    title: "Get Your Tax Compliance Certificate (TCC) Fast — Kenya 2026",
-    description: "How to get your KRA Tax Compliance Certificate (TCC) online via iTax: requirements, processing time, common errors, and why your TCC may be rejected.",
+    title: "TCC Certificate Kenya 2026: Get Your KRA Tax Compliance Certificate Fast",
+    description: "How to get your KRA Tax Compliance Certificate (TCC) fast via iTax: requirements, eTIMS rules, nil return blocks, amnesty for old debt, validity, and common rejection reasons.",
     canonical: "/resources/tax-compliance-certificate-kenya/",
   },
   "vat-auto-populated-return": {
