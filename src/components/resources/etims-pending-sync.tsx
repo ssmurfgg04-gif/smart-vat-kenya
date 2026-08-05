@@ -66,14 +66,14 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources" },
-    { "@type": "ListItem", position: 3, name: "eTIMS Pending Sync — How to Fix", item: "https://smartvatkenya.co.ke/resources/etims-pending-sync" },
+    { "@type": "ListItem", position: 3, name: "Pending eTIMS Sync — How to Fix", item: "https://smartvatkenya.co.ke/resources/etims-pending-sync" },
   ],
 }
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "eTIMS Pending Sync in Kenya — Why Invoices Are Stuck and How to Fix It (2026)",
+  headline: "Pending eTIMS Sync in Kenya — Why Invoices Are Stuck and How to Fix It (2026)",
   description:
     "Your eTIMS invoices are stuck on 'Pending Sync'. Learn what Pending Sync means, why invoices stay stuck on eTIMS Client, how long KRA sync takes, and the exact steps to force a successful sync before the deadline.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -169,9 +169,9 @@ export default function ETIMSPendingSyncPage() {
               <span key={t} className="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/60 px-2.5 py-1 rounded-sm">{t}</span>
             ))}
           </div>
-          <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
-            eTIMS Pending Sync — Why Invoices Are Stuck &amp; How to Fix It
-          </h1>
+<h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
+            Pending eTIMS Sync — Why Invoices Are Stuck & How to Fix It
+            </h1>
           <div className="flex flex-wrap items-center gap-3 mt-4">
             <span className="font-mono text-[0.62rem] uppercase tracking-widest bg-brand/20 text-brand px-2.5 py-1 rounded-sm">Last updated: August 2, 2026</span>
             <span className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; KRA-registered VAT agents</span>
@@ -191,7 +191,7 @@ export default function ETIMSPendingSyncPage() {
         <div className="border-l-[3px] border-brand pl-5 mb-10">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            Invoices showing <strong className="text-ink">&ldquo;Pending Sync&rdquo;</strong> on eTIMS Client were created locally but have not been confirmed by KRA &mdash; they only become fully valid once the sync completes and a <strong className="text-ink">server confirmation code</strong> is assigned. To fix a stuck sync: connect to a stable internet connection, click <strong className="text-ink">Sync</strong>, and check the <strong className="text-ink">device certificate is active</strong>. The critical rule is the <strong className="text-ink">7-day lockout</strong> &mdash; if eTIMS Client cannot sync for more than 7 consecutive days, KRA locks the device and you must be reactivated. Never let pending invoices accumulate past that window.
+            A <strong className="text-ink">pending etims sync</strong> means invoices created on eTIMS Client were saved locally but have not been confirmed by KRA &mdash; they only become fully valid once the sync completes and a <strong className="text-ink">server confirmation code</strong> is assigned. To fix a stuck sync: connect to a stable internet connection, click <strong className="text-ink">Sync</strong>, and check the <strong className="text-ink">device certificate is active</strong>. The critical rule is the <strong className="text-ink">7-day lockout</strong> &mdash; if eTIMS Client cannot sync for more than 7 consecutive days, KRA locks the device and you must be reactivated. Never let pending invoices accumulate past that window.
           </p>
         </div>
 
@@ -477,7 +477,7 @@ export default function ETIMSPendingSyncPage() {
         </div>
 
         {/* More Guides */}
-        <div className="mt-10 pt-12 border-t border-hairline">
+        <div className="mt-16 pt-12 border-t border-hairline">
           <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">More Guides</p>
           <ArticleGrid currentSlug="etims-pending-sync" />
         </div>

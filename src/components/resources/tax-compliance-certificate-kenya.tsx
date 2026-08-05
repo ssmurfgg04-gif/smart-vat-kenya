@@ -9,14 +9,14 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources" },
-    { "@type": "ListItem", position: 3, name: "Tax Compliance Certificate Kenya", item: "https://smartvatkenya.co.ke/resources/tax-compliance-certificate-kenya" },
+    { "@type": "ListItem", position: 3, name: "KRA Tax Compliance Certificate (KRA Clearance Certificate)", item: "https://smartvatkenya.co.ke/resources/tax-compliance-certificate-kenya" },
   ],
 }
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Tax Compliance Certificate Kenya 2026: How to Get Your KRA TCC",
+  headline: "KRA Tax Compliance Certificate Kenya 2026: How to Get Your TCC (KRA Clearance Certificate)",
   description:
     "Step-by-step guide to applying for a KRA Tax Compliance Certificate (TCC) in Kenya. Requirements, iTax process, eTIMS compliance rules, validity period, and common mistakes to avoid.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -90,7 +90,7 @@ export default function TaxComplianceCertificateKenya() {
           <header className="mb-8">
             <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Compliance Guide</p>
             <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.4rem)] font-semibold text-ink tracking-tight leading-tight mb-3 text-balance">
-              TCC Certificate Kenya 2026: How to Get Your KRA Tax Compliance Certificate Fast
+              KRA Tax Compliance Certificate Kenya 2026: How to Get Your TCC (KRA Clearance Certificate)
             </h1>
             <p className="text-[0.9rem] text-ink-muted leading-relaxed">
               <time dateTime="2026-07-27">27 July 2026</time> &middot; Updated for enhanced TCC requirements

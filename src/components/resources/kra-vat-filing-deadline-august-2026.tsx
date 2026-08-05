@@ -6,7 +6,7 @@ import { ArticleGrid } from "@/lib/resources"
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "KRA VAT Filing Deadline Kenya: August 2026 — Don't Miss the 20th",
+  headline: "VAT Deadline Kenya: August 2026 — Don't Miss the 20th",
   description:
     "The KRA VAT return is due by the 20th of every month. Late filing costs KES 10,000 + 5% of tax due + 1%/month interest. Here is exactly what to file, how to avoid penalties, and what to do if you missed the deadline.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -23,7 +23,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources" },
-    { "@type": "ListItem", position: 3, name: "KRA VAT Filing Deadline August 2026", item: "https://smartvatkenya.co.ke/resources/kra-vat-filing-deadline-august-2026" },
+    { "@type": "ListItem", position: 3, name: "VAT Deadline Kenya — August 2026", item: "https://smartvatkenya.co.ke/resources/kra-vat-filing-deadline-august-2026" },
   ],
 }
 
@@ -42,7 +42,7 @@ export default function DeadlinePost() {
         <header className="mb-8">
           <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Deadline Reminder</p>
           <h1 className="font-display text-[clamp(1.5rem,3vw,2rem)] font-semibold text-ink tracking-tight leading-tight mb-4 text-balance">
-            KRA VAT Filing Deadline Kenya: August 2026 — Don&apos;t Miss the 20th
+            VAT Deadline Kenya: August 2026 — Don&apos;t Miss the 20th
           </h1>
           <div className="flex items-center gap-4 text-[0.75rem] text-ink-muted">
             <time dateTime="2026-07-25">25 July 2026</time>
@@ -62,6 +62,15 @@ export default function DeadlinePost() {
             <strong> zero-rated supplies</strong> — must file a monthly return by the 20th of the following month,
             even in months with no sales (a nil return). The KES 5 million turnover threshold is what triggers
             registration in the first place; once you&apos;re registered, the 20th is non-negotiable.
+          </p>
+          <p>
+            The <strong>Kenya Revenue Authority (KRA)</strong> requires all registered persons to declare both
+            <strong>taxable</strong> and <strong>exempt supplies</strong> in each return. If you operate in the
+            <strong>digital marketplace</strong>, the <strong>Finance Act 2026</strong> brought non-resident digital
+            services into the VAT net, meaning foreign providers must also comply. Every return generates an
+            <strong>electronic tax invoice</strong> (eTIMS) confirmation code once synced, serving as proof of
+            filing. Late filing triggers a penalty of <strong>KES 10,000</strong> or <strong>5% of the tax due</strong>
+            (whichever is higher), plus <strong>1% monthly interest</strong> on any unpaid amount.
           </p>
 
           <div className="border border-red-200 bg-red-50 dark:bg-red-950/20 dark:border-red-800/40 rounded-lg p-4 flex items-start gap-3">
