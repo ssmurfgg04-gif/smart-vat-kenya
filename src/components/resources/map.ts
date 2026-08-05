@@ -257,8 +257,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/kra-vat-audit-process/",
   },
   "kra-vat-filing-deadline-august-2026": {
-    title: "KRA VAT Filing Deadline August 2026 — File Before the 20th",
-    description: "KRA VAT return for July 2026 is due August 20, 2026. Late filing triggers a 5% penalty plus 1% monthly interest. File on time with our step-by-step guide.",
+    title: "KRA VAT Filing Deadline Kenya — August 2026 (File Before the 20th)",
+    description: "KRA VAT return for July 2026 is due August 20, 2026. Under the VAT Act 2013 every VAT-registered business (KES 5M threshold) must file by the 20th — late filing triggers a 5% penalty plus 1% monthly interest. File on time with our step-by-step guide.",
     canonical: "/resources/kra-vat-filing-deadline-august-2026/",
   },
   "kra-vat-penalties-reference": {
@@ -272,8 +272,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/mpesa-error-codes/",
   },
   "nil-returns-tax-amnesty": {
-    title: "How to File Nil Returns on KRA iTax (2026) + Amnesty Guide",
-    description: "Step-by-step guide to filing nil returns on KRA iTax 2026 — monthly VAT nil returns and annual income tax nil returns for students and the unemployed (plus the new No Obligation PIN). Includes how the 2026 tax amnesty wipes late-filing penalties.",
+    title: "How to File VAT Nil Returns on KRA iTax Kenya (2026) + Amnesty Guide",
+    description: "Step-by-step guide to filing VAT nil returns on KRA iTax Kenya 2026 — monthly VAT nil returns and annual income tax nil returns for students and the unemployed (plus the new No Obligation PIN). Includes how the 2026 tax amnesty wipes late-filing penalties.",
     canonical: "/resources/nil-returns-tax-amnesty/",
   },
   "safaricom-not-working": {

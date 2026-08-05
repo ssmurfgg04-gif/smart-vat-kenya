@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "How to File Nil Returns on KRA iTax Kenya 2026 — Plus the Tax Amnesty Programme Explained",
+  headline: "How to File VAT Nil Returns on KRA iTax Kenya 2026 — Plus the Tax Amnesty Programme Explained",
   description:
     "Complete guide to filing nil VAT returns on KRA iTax and understanding the KRA tax amnesty / voluntary disclosure programme. File in 5 minutes, avoid KES 10,000 penalties, and learn how penalty waivers work.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -134,7 +134,7 @@ export default function NilReturnsTaxAmnestyPage() {
             Guide &middot; 8 min read
           </p>
           <h1 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-semibold tracking-tight text-ink leading-tight mb-4 text-balance">
-            How to File Nil Returns on KRA iTax (2026) — and Take Advantage of the Tax Amnesty Programme
+            How to File VAT Nil Returns on KRA iTax Kenya (2026) — and Take Advantage of the Tax Amnesty Programme
           </h1>
           <p className="text-[0.92rem] text-ink-muted leading-relaxed max-w-[58ch]">
             Nil returns are the most misunderstood part of Kenya VAT compliance. File them wrong

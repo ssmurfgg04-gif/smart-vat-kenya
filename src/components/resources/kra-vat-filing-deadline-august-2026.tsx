@@ -6,7 +6,7 @@ import { ArticleGrid } from "@/lib/resources"
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "KRA VAT Filing Deadline August 2026: Don't Miss the 20th",
+  headline: "KRA VAT Filing Deadline Kenya: August 2026 — Don't Miss the 20th",
   description:
     "The KRA VAT return is due by the 20th of every month. Late filing costs KES 10,000 + 5% of tax due + 1%/month interest. Here is exactly what to file, how to avoid penalties, and what to do if you missed the deadline.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -42,7 +42,7 @@ export default function DeadlinePost() {
         <header className="mb-8">
           <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Deadline Reminder</p>
           <h1 className="font-display text-[clamp(1.5rem,3vw,2rem)] font-semibold text-ink tracking-tight leading-tight mb-4 text-balance">
-            KRA VAT Filing Deadline August 2026: Don&apos;t Miss the 20th
+            KRA VAT Filing Deadline Kenya: August 2026 — Don&apos;t Miss the 20th
           </h1>
           <div className="flex items-center gap-4 text-[0.75rem] text-ink-muted">
             <time dateTime="2026-07-25">25 July 2026</time>
@@ -56,6 +56,12 @@ export default function DeadlinePost() {
             Every month, thousands of Kenyan business owners wake up on the 21st and realise they
             missed the VAT filing deadline. The penalty hits automatically — KES 10,000 or 5% of
             the tax due (whichever is higher), plus 1% interest per month. And if you filed a nil return late? Still KES 10,000.
+          </p>
+          <p>
+            Under the <strong>VAT Act 2013</strong>, every VAT-registered business — including those making
+            <strong> zero-rated supplies</strong> — must file a monthly return by the 20th of the following month,
+            even in months with no sales (a nil return). The KES 5 million turnover threshold is what triggers
+            registration in the first place; once you&apos;re registered, the 20th is non-negotiable.
           </p>
 
           <div className="border border-red-200 bg-red-50 dark:bg-red-950/20 dark:border-red-800/40 rounded-lg p-4 flex items-start gap-3">
