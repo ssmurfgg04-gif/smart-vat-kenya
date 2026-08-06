@@ -15,4 +15,5 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
+Sitemap: https://smartvatkenya.co.ke/sitemap.xml
 Sitemap: https://smartvatkenya.co.ke/sitemap-index.xml

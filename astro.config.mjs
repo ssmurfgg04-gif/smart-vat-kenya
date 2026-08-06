@@ -7,7 +7,13 @@ import tailwindcss from "@tailwindcss/vite"
 export default defineConfig({
   site: "https://smartvatkenya.co.ke",
   trailingSlash: "always",
-  integrations: [react(), mdx(), sitemap()],
+  integrations: [
+    react(),
+    mdx(),
+    sitemap({
+      filter: (page) => !page.includes("/blog/"),
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },

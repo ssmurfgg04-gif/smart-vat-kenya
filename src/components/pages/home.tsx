@@ -10,6 +10,9 @@ import {
   ShieldCheck,
   WarningCircle,
   Star,
+  Briefcase,
+  TrendUp,
+  Sparkle,
 } from "@phosphor-icons/react/dist/ssr"
 import { RelatedLinks } from "@/components/related-links"
 
@@ -191,10 +194,14 @@ export default function HomePage() {
               {" not 3 weeks."}
             </h1>
 
-            <p className="text-[1.05rem] text-canvas/80 leading-relaxed max-w-[52ch] mb-10 text-pretty">
-              Kenyan SMEs lose KES 10,000 per late iTax filing. We handle your complete
+            <p className="text-[1.05rem] text-canvas/80 leading-relaxed max-w-[52ch] mb-3 text-pretty">
+              Kenyan SMEs lose KES 10,000 per late iTax filing. You're not the first to feel lost on KRA —
+              <strong className="text-canvas"> tax was never your job</strong>. We handle your complete
               KRA VAT process — registration and monthly filing — for a flat fee you know
               upfront. No surprises. No portal errors.
+            </p>
+            <p className="font-display text-[1.05rem] font-semibold text-canvas mb-10">
+              Kenya's WhatsApp tax agent — send your PIN, done in 3 days.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
@@ -227,6 +234,14 @@ export default function HomePage() {
                   {label}
                 </div>
               ))}
+            </div>
+
+            <div className="mt-6 flex items-start gap-2.5 text-[0.8rem] text-canvas/65 max-w-[52ch] leading-relaxed">
+              <ShieldCheck size={15} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
+              <p>
+                <strong className="text-canvas">Your KRA PIN is used for your filings only.</strong>{" "}
+                Never shared, never re-used. You receive an official M-PESA receipt for every payment.
+              </p>
             </div>
           </div>
 
@@ -352,6 +367,111 @@ export default function HomePage() {
                   <p className="text-[0.9rem] text-ink-soft leading-relaxed">{fix}</p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── DIY VS YOU ─── */}
+      <section className="bg-canvas-alt py-24 px-6 lg:px-10">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
+            Free isn't free
+          </p>
+          <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-tight text-ink mb-6 text-balance">
+            Doing it yourself on iTax is free. It's also three weeks, fourteen portal errors, and one penalty.
+          </h2>
+          <p className="text-[0.9rem] text-ink-muted max-w-[52ch] mb-16 leading-relaxed">
+            The real enemy isn't accountants who charge KES 15,000–30,000. It's the <em>free</em> path that
+            quietly costs more in your time, your sanity, and KES 10,000 penalties.
+          </p>
+
+          <div className="grid lg:grid-cols-2 gap-5">
+            <div className="bg-canvas rounded-lg border border-hairline p-8">
+              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-4">Doing it yourself</p>
+              <div className="space-y-4">
+                {[
+                  { label: "Time spent on the portal", value: "3 weeks, off-and-on", cost: "Hours you don't have" },
+                  { label: "Errors encountered", value: "14+ portal errors", cost: "KRA Status Code 500, timeouts" },
+                  { label: "Deadline risk", value: "KES 10,000 penalty", cost: "Automatic, non-negotiable" },
+                  { label: "Input VAT protection", value: "Often missed", cost: "Lost money back" },
+                ].map((r) => (
+                  <div key={r.label} className="flex items-start justify-between gap-4 border-b border-hairline last:border-0 pb-4 last:pb-0">
+                    <div>
+                      <p className="text-[0.88rem] font-semibold text-ink">{r.label}</p>
+                      <p className="text-[0.76rem] text-ink-muted">{r.cost}</p>
+                    </div>
+                    <p className="text-[0.85rem] text-ink text-right font-medium">{r.value}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6 text-[0.82rem] text-brand font-medium">Total: at least KES 10,000 + weeks of your time.</p>
+            </div>
+
+            <div className="bg-canvas-dark rounded-lg p-8">
+              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-canvas/60 mb-4">With Smart VAT Kenya</p>
+              <div className="space-y-4">
+                {[
+                  { label: "Your time", value: "One WhatsApp message", cost: "We do the rest" },
+                  { label: "Errors encountered", value: "Zero", cost: "We navigate iTax for you" },
+                  { label: "Deadline risk", value: "Filed on the 17th", cost: "Never the 20th, never late" },
+                  { label: "Input tax protection", value: "eTIMS-ready day one", cost: "Special Table checks included" },
+                ].map((r) => (
+                  <div key={r.label} className="flex items-start justify-between gap-4 border-b border-canvas/15 last:border-0 pb-4 last:pb-0">
+                    <div>
+                      <p className="text-[0.88rem] font-semibold text-canvas">{r.label}</p>
+                      <p className="text-[0.76rem] text-canvas/55">{r.cost}</p>
+                    </div>
+                    <p className="text-[0.85rem] text-brand text-right font-semibold">{r.value}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6 text-[0.82rem] text-canvas/85 font-medium">KES 5,000 flat. You get your PIN in 1–3 days.</p>
+            </div>
+          </div>
+
+          {/* Vs AI */}
+          <div className="mt-10 border border-hairline rounded-lg p-6 flex flex-col sm:flex-row items-start gap-6">
+            <Sparkle size={24} weight="duotone" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
+            <div>
+              <p className="font-display text-[1.05rem] font-semibold text-ink mb-1">
+                What about just asking ChatGPT?
+              </p>
+              <p className="text-[0.9rem] text-ink-muted leading-relaxed">
+                A chatbot can draft a form. It can't log into iTax, navigate the eTIMS check, or file before
+                the 20th — and it won't be accountable if KRA levies a penalty. We do all of it, and we answer
+                for it. That's the difference between advice and a done deal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── VAT UNLOCKS ─── */}
+      <section className="bg-canvas-dark py-24 px-6 lg:px-10">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
+            The upside
+          </p>
+          <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
+            A VAT number isn't a cost. It's your licence to grow.
+          </h2>
+          <p className="text-[0.9rem] text-canvas/70 max-w-[52ch] mb-16 leading-relaxed">
+            Registration is the door. Filling unlocks what most small businesses never hear about — the upside
+            that makes VAT worth it.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              { Icon: Briefcase, title: "Win tenders & contracts", body: "Government and corporate clients require a valid VAT number and tax compliance certificate. Without it, you cannot bid." },
+              { Icon: CheckCircle, title: "Sell to big buyers", body: "Corporate clients and importers want eTIMS-compliant VAT invoices. A VAT number makes your business credible." },
+              { Icon: CurrencyDollar, title: "Claim input VAT back", body: "Money back on the VAT you pay on purchases — cash flow most unregistered businesses simply lose." },
+              { Icon: TrendUp, title: "Import & grow", body: "Importing stock, expanding capacity, and qualifying for refunds all open up once you're VAT-registered." },
+            ].map(({ Icon, title, body }) => (
+              <article key={title} className="bg-canvas/[0.06] border border-canvas/15 rounded-lg p-7">
+                <Icon size={26} weight="duotone" className="text-brand mb-5" aria-hidden="true" />
+                <h3 className="font-display text-[1.02rem] font-semibold text-canvas mb-2">{title}</h3>
+                <p className="text-[0.83rem] text-canvas/70 leading-relaxed">{body}</p>
+              </article>
             ))}
           </div>
         </div>
