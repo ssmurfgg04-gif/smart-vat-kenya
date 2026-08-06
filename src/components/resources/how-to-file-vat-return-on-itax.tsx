@@ -8,7 +8,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
-    { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources" },
+    { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
     { "@type": "ListItem", position: 3, name: "How to File VAT Return on iTax", item: "https://smartvatkenya.co.ke/resources/how-to-file-vat-return-on-itax" },
   ],
 }

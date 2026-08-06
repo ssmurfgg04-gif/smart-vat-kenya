@@ -150,7 +150,7 @@ export default function TaxAmnesty2026Page() {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
-      { "@type": "ListItem", position: 2, name: "Tax Amnesty 2026", item: "https://smartvatkenya.co.ke/tax-amnesty-2026" },
+      { "@type": "ListItem", position: 2, name: "Tax Amnesty 2026", item: "https://smartvatkenya.co.ke/tax-amnesty-2026/" },
     ],
   }
 

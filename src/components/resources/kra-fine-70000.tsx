@@ -10,7 +10,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
-    { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources" },
+    { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
     { "@type": "ListItem", position: 3, name: "KRA Fine of KES 70,000 — You May Only Owe the Principal", item: "https://smartvatkenya.co.ke/resources/kra-fine-70000" },
   ],
 }

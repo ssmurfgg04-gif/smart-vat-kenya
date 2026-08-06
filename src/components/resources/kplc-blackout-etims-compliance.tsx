@@ -8,7 +8,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
-    { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources" },
+    { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
     { "@type": "ListItem", position: 3, name: "KPLC Blackout — eTIMS & VAT Compliance", item: "https://smartvatkenya.co.ke/resources/kplc-blackout-etims-compliance" },
   ],
 }

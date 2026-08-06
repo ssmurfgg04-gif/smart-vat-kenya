@@ -65,7 +65,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
-    { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources" },
+    { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
     { "@type": "ListItem", position: 3, name: "eTIMS Down — Offline Invoicing Guide", item: "https://smartvatkenya.co.ke/resources/etims-down-offline-invoicing" },
   ],
 }

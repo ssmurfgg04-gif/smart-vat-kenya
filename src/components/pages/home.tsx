@@ -252,8 +252,6 @@ export default function HomePage() {
               </p>
             </div>
           </div>
->>>>>>> 1cf81ab (feat(engine): KRA GavaConnect client + eTIMS OSCU/VSCU + tax amnesty 2026 pages)
-          </div>
 
           {/* Stats card */}
           <aside
