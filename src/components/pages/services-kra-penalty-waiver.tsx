@@ -15,21 +15,22 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "KRA Penalty Waiver Application",
+  name: "KRA Tax Amnesty Cleanup 2026",
   description:
-    "Professional drafting and submission of KRA penalty waiver requests for outstanding VAT penalties in Kenya.",
+    "Free iTax ledger check to identify which 2026 KRA tax amnesty path you qualify for, filing outstanding returns to unlock automatic penalty waivers, and structuring payment plans for pre-2026 principal.",
   provider: { "@type": "Organization", name: "Smart VAT Kenya" },
-  offers: { "@type": "Offer", price: "4000", priceCurrency: "KES" },
+  areaServed: { "@type": "Country", name: "Kenya" },
+  priceRange: "Free check — cleanup at a flat fee",
 }
 
 const WA_BASE = "https://wa.me/254721725958"
-const WA_TEXT = "Hi%2C%20I%20need%20help%20with%20a%20KRA%20Penalty%20Waiver%20application"
+const WA_TEXT = "Hi%2C%20I%20want%20a%20FREE%20KRA%20Tax%20Amnesty%20ledger%20check"
 
 const included = [
-  { label: "Penalty waiver letter drafted" },
-  { label: "KRA portal submission" },
-  { label: "WhatsApp status updates" },
-  { label: "Expert guidance throughout" },
+  { label: "Free iTax ledger check" },
+  { label: "Your amnesty path identified" },
+  { label: "Outstanding returns filed" },
+  { label: "Payment plan structured" },
   { label: "No success-fee extras" },
 ]
 
@@ -43,45 +44,45 @@ const penalties = [
 const steps = [
   {
     num: "01",
-    title: "Tell us about your penalties",
-    desc: "Send us the details of your penalty notices via WhatsApp — we will confirm what we need within minutes.",
+    title: "Send us your KRA PIN",
+    desc: "Message us your PIN and any penalty notices you have — we confirm what we need within minutes.",
   },
   {
     num: "02",
-    title: "We draft and submit the waiver",
-    desc: "Our team prepares your penalty waiver letter and submits it through the KRA iTax portal. You get a confirmation once filed.",
+    title: "Get your free readout",
+    desc: "We check your iTax ledger and tell you which of the three amnesty paths you're on, with your rough penalty balance.",
   },
   {
     num: "03",
-    title: "KRA reviews — you get the result",
-    desc: "KRA processes your waiver request. We track the status and update you until a final decision is communicated.",
+    title: "We file and confirm",
+    desc: "Authorize us to file outstanding returns and structure a payment plan. We confirm every waiver in writing before 31 December 2026.",
   },
 ]
 
 const faqs = [
   {
-    q: "What is the success rate for KRA penalty waivers?",
-    a: "KRA does consider waiver requests, especially if you have a reasonable explanation (first-time offence, system issues, illness, etc.). While we cannot guarantee approval, our waiver letters are professionally drafted to give you the best possible chance. Many of our clients have received full or partial waivers.",
+    q: "Do I need to apply for the KRA tax amnesty?",
+    a: "Not always. If you fully paid your principal by 31 December 2025, the waiver is automatic — no application. If you only have late-filing penalties and no principal, the waiver is also automatic once all outstanding returns are filed. That is why we recommend a free ledger check before filing anything.",
   },
   {
-    q: "How long does the KRA penalty waiver process take?",
-    a: "KRA typically processes waiver requests within 2–4 weeks. We will track the status on the iTax portal and update you via WhatsApp as soon as there is any movement.",
+    q: "What is the KRA Tax Amnesty 2026?",
+    a: "The Finance Act 2026 amnesty waives 100% of penalties, interest and fines on liabilities accrued up to 31 December 2025. The window runs from 1 July to 31 December 2026. It does not forgive principal — that part must still be paid.",
   },
   {
     q: "What documents do I need to provide?",
-    a: "You will need your KRA PIN, details of the penalty notice / assessment you received, and a brief explanation of why the penalty occurred (late filing, late registration, etc.). We will guide you on exactly what to send.",
+    a: "You will need your KRA PIN, any penalty notices or assessments you received, and a brief note on whether the principal was paid by the end of 2025. We will guide you on exactly what to send.",
   },
   {
-    q: "Can KRA penalties be waived entirely?",
-    a: "KRA has discretion to waive penalties and interest under Section 84 of the VAT Act, 2013. Full or partial waivers are possible depending on the circumstances. Even if a full waiver is not granted, professional representation often results in reduced amounts or extended payment terms.",
+    q: "What is excluded from the amnesty?",
+    a: "Anything that arose on or after 1 January 2026 is not covered. Active tax disputes are also excluded — those should be settled via Alternative Dispute Resolution first. And the principal itself is never forgiven; it must be cleared before the window closes.",
   },
   {
-    q: "Do I need to pay the fee upfront?",
-    a: "Yes, the KES 4,000 service fee is paid before we begin work. This covers drafting the waiver letter and submitting it on the iTax portal. Payment is via M-PESA and you will receive a receipt.",
+    q: "What does the free ledger check cost?",
+    a: "It is free. We review your outstanding returns and tell you which of the three amnesty paths you qualify for. If you need outstanding returns filed or a payment plan structured, that is charged at a flat published fee.",
   },
   {
-    q: "What happens if my waiver is rejected?",
-    a: "If KRA rejects the waiver, we can review the decision and advise on next steps — which may include a formal objection. Note that our KES 4,000 fee covers the initial application; formal objections are charged separately.",
+    q: "What happens if I owe principal and cannot pay in full?",
+    a: "We structure a payment plan with KRA on iTax and make sure it is fully cleared before 31 December 2026, so the penalties and interest drop off. We will review the exact position with you after the free check.",
   },
 ]
 
@@ -102,7 +103,7 @@ export default function KRAPenaltyWaiverPage() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
       { "@type": "ListItem", position: 2, name: "Services", item: "https://smartvatkenya.co.ke/services" },
-      { "@type": "ListItem", position: 3, name: "KRA Penalty Waiver", item: "https://smartvatkenya.co.ke/services/kra-penalty-waiver" },
+      { "@type": "ListItem", position: 3, name: "Tax Amnesty Cleanup", item: "https://smartvatkenya.co.ke/services/kra-penalty-waiver" },
     ],
   }
 
@@ -119,15 +120,16 @@ export default function KRAPenaltyWaiverPage() {
       <div className="bg-canvas-dark px-6 lg:px-10 py-16 lg:py-20">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
-            Penalty waiver service
+            KRA Tax Amnesty 2026
           </p>
           <h1 className="font-display text-[clamp(2rem,4.5vw,3.2rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
-            KRA Penalty Waiver —{" "}
-            <span className="text-canvas/80 font-normal">KES 4,000</span>
+            Tax Amnesty Cleanup —{" "}
+            <span className="text-canvas/80 font-normal">free ledger check</span>
           </h1>
           <p className="text-[0.95rem] text-canvas/70 max-w-[52ch] leading-relaxed mb-6">
-            Outstanding KRA VAT penalties? We draft and submit your penalty waiver application
-            through the iTax portal. One fixed price. No success-fee extras.
+            Old KRA penalties? We tell you which of the three amnesty paths you&apos;re on, file the
+            outstanding returns that unlock the waiver, and structure the payment plan if you owe
+            principal. Window closes 31 December 2026.
           </p>
           <div className="flex flex-wrap gap-2 mb-6" role="list" aria-label="Trust signals">
             <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
@@ -150,8 +152,16 @@ export default function KRAPenaltyWaiverPage() {
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             <WhatsappLogo size={16} weight="fill" aria-hidden="true" />
-            Start your waiver application
+            Start your free ledger check
           </a>
+          <p className="mt-4 text-[0.82rem] text-canvas/70 max-w-[52ch] leading-relaxed">
+            New — KRA&apos;s 2026 Tax Amnesty can waive 100% of penalties and interest on debt
+            accrued up to 2025, automatically in many cases.{" "}
+            <a href="/tax-amnesty-2026/" className="underline underline-offset-2 hover:text-canvas transition-colors">
+              See if you qualify for the free amnesty ledger check
+            </a>
+            .
+          </p>
         </div>
       </div>
 
@@ -164,7 +174,7 @@ export default function KRAPenaltyWaiverPage() {
             </div>
             <div>
               <h2 className="font-display text-[1.05rem] font-semibold text-ink mb-3">
-                KRA penalties add up fast — here is what you could be facing
+                What you could be facing without the amnesty
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {penalties.map((p) => (
@@ -178,8 +188,9 @@ export default function KRAPenaltyWaiverPage() {
                 ))}
               </div>
               <p className="text-[0.82rem] text-ink-muted mt-4 leading-relaxed">
-                These penalties accrue automatically in the KRA iTax system. A professionally
-                drafted waiver application is often the fastest way to reduce or eliminate them.
+                These penalties and interest accrue automatically in the KRA iTax system. If your
+                debt accrued before 2026, the amnesty can wipe them out in full — the faster you
+                act, the less you pay.
               </p>
             </div>
           </div>
@@ -193,10 +204,10 @@ export default function KRAPenaltyWaiverPage() {
             What&apos;s included
           </p>
           <h2 id="included-heading" className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-4 text-balance">
-            Everything in the KES 4,000 penalty waiver service.
+            What the free check covers.
           </h2>
           <p className="text-[0.9rem] text-ink-muted max-w-[48ch] leading-relaxed mb-10">
-            No tiers. No upsells. One flat fee covers the full application process.
+            Free to check. Flat fee only if you need us to file or structure a plan. No success-fee extras.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {included.map((item) => (
@@ -216,7 +227,7 @@ export default function KRAPenaltyWaiverPage() {
             How it works
           </p>
           <h2 id="how-heading" className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-canvas tracking-tight mb-12 text-balance">
-            Three steps to your KRA penalty waiver.
+            Three steps to your tax amnesty cleanup.
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {steps.map((step) => (
@@ -234,35 +245,36 @@ export default function KRAPenaltyWaiverPage() {
       <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="penalties-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
-            Penalties we handle
+            What we can clean up
           </p>
           <h2 id="penalties-heading" className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-4 text-balance">
-            Types of KRA VAT penalties we handle.
+            Old penalties the amnesty can wipe out.
           </h2>
           <p className="text-[0.9rem] text-ink-muted max-w-[52ch] leading-relaxed mb-10">
-            If KRA has issued a penalty notice for any of the following, we can help with a waiver application.
+            If you have any of the following on your iTax ledger from before 2026, the amnesty can
+            waive them in full — we&apos;ll confirm your exact position with the free check.
           </p>
           <div className="grid sm:grid-cols-2 gap-5">
             {[
               {
                 icon: Warning,
                 title: "Late filing penalties",
-                desc: "Filed your VAT return after the 20th? KRA charges KES 10,000 per late return. We can apply for a waiver if you have a valid reason.",
+                desc: "Filed a VAT return after the 20th? KRA charges KES 10,000 per late return. If the debt accrued before 2026, the amnesty can waive it once returns are filed.",
               },
               {
                 icon: FileText,
                 title: "Non-registration penalties",
-                desc: "Did not register for VAT when you crossed the KES 5 million threshold? The penalty can reach KES 100,000. A waiver application may reduce or eliminate this.",
+                desc: "Did not register for VAT when you crossed the KES 5 million threshold? The penalty can reach KES 100,000 — waivable under the amnesty for pre-2026 debt.",
               },
               {
                 icon: SealCheck,
                 title: "eTIMS non-compliance penalties",
-                desc: "Failure to integrate with eTIMS or issue e-invoices can attract penalties. We can draft a waiver addressing your compliance efforts.",
+                desc: "Failure to integrate with eTIMS or issue e-invoices can attract penalties. The amnesty covers pre-2026 obligations before you get your eTIMS house in order.",
               },
               {
                 icon: Clock,
-                title: "Late payment interest",
-                desc: "Unpaid VAT accrues interest at 1% per month compounded. A waiver application can sometimes stop further interest accumulation.",
+                title: "Late payment interest & fines",
+                desc: "Unpaid VAT accrues interest at 1% per month compounded. Pre-2026 interest and fines are waived once principal is cleared by 31 December 2026.",
               },
             ].map((p) => (
               <div key={p.title} className="bg-canvas-alt border border-hairline rounded-lg p-6 flex items-start gap-4">
@@ -284,10 +296,10 @@ export default function KRAPenaltyWaiverPage() {
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.1rem] font-semibold text-ink">
-              KES 4,000 — start your penalty waiver today
+              Free check — clean up before 31 December 2026
             </p>
             <p className="text-[0.85rem] text-ink-muted mt-1">
-              Fixed price. No success-fee extras. M-PESA accepted.
+              Free ledger check. Flat fee for any cleanup. M-PESA accepted.
             </p>
           </div>
           <a
@@ -296,7 +308,7 @@ export default function KRAPenaltyWaiverPage() {
             rel="noopener noreferrer"
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
           >
-            Get started on WhatsApp
+            Get my free ledger check
             <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>
         </div>
@@ -312,7 +324,7 @@ export default function KRAPenaltyWaiverPage() {
             Frequently asked questions
           </p>
           <h2 id="faq-heading" className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-10 text-balance">
-            Common questions about KRA penalty waivers.
+            Common questions about the 2026 tax amnesty.
           </h2>
           <div className="space-y-4">
             {faqs.map((faq) => (
@@ -334,10 +346,11 @@ export default function KRAPenaltyWaiverPage() {
       <section className="bg-canvas-dark px-6 lg:px-10 py-16">
         <div className="max-w-[1400px] mx-auto text-center">
           <h2 className="font-display text-[clamp(1.5rem,3vw,2.2rem)] font-semibold text-canvas tracking-tight mb-4 text-balance">
-            Ready to clear your KRA penalties?
+            Ready to clear your KRA penalties before the deadline?
           </h2>
           <p className="text-[0.93rem] text-canvas/65 max-w-[44ch] mx-auto leading-relaxed mb-8">
-            Send us a WhatsApp message and we will start your penalty waiver application.
+            Send us a WhatsApp message and we will start your free ledger check — the window closes
+            on 31 December 2026.
           </p>
           <a
             href={`${WA_BASE}?text=${WA_TEXT}`}
@@ -346,11 +359,11 @@ export default function KRAPenaltyWaiverPage() {
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3.5 rounded-md hover:bg-brand-hover transition-colors"
           >
             <WhatsappLogo size={16} weight="fill" aria-hidden="true" />
-            Start your waiver application
+            Get my free ledger check
             <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>
           <p className="text-[0.75rem] text-canvas/45 mt-5">
-            KES 4,000 flat fee. No success-fee extras. M-PESA accepted.
+            Free check. Flat fee for any cleanup. M-PESA accepted.
           </p>
         </div>
       </section>

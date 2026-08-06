@@ -5,6 +5,7 @@ export interface Resource {
 
 const articles: Resource[] = [
   { slug: "how-to-register-for-vat-in-kenya", title: "How to Register for VAT in Kenya on iTax" },
+  { slug: "cetis-kenya-2027", title: "CETIS Kenya 2027: Pre-Clearance e-Invoicing Explained" },
   { slug: "kra-penalty-for-late-vat-filing", title: "KRA Penalty for Late VAT Filing" },
   { slug: "how-to-calculate-vat-in-kenya", title: "How to Calculate 16% VAT in Kenya" },
   { slug: "how-to-file-vat-return-on-itax", title: "How to File Your VAT Return on KRA iTax" },

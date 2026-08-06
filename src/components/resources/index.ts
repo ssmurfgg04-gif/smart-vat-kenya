@@ -1,4 +1,5 @@
 export { default as DoINeedToRegisterForVatKenya } from "./do-i-need-to-register-for-vat-kenya"
+export { default as CetisKenya2027 } from "./cetis-kenya-2027"
 export { default as EtimsAccountLocked } from "./etims-account-locked"
 export { default as EtimsComplianceChecklist } from "./etims-compliance-checklist"
 export { default as EtimsDownOfflineInvoicing } from "./etims-down-offline-invoicing"

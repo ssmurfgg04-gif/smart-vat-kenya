@@ -5,11 +5,12 @@ import { List, X, Sun, Moon } from "@phosphor-icons/react/dist/ssr"
 import { SiteSearch } from "./site-search"
 
 const navLinks = [
-  { href: "/tools/",        label: "VAT Calculator" },
-  { href: "/services/",     label: "Services" },
-  { href: "/how-it-works/", label: "How It Works" },
-  { href: "/resources/",    label: "Resources" },
-  { href: "/about/",        label: "About" },
+  { href: "/tax-amnesty-2026/", label: "Tax Amnesty", urgent: true },
+  { href: "/tools/",            label: "VAT Calculator" },
+  { href: "/services/",         label: "Services" },
+  { href: "/how-it-works/",     label: "How It Works" },
+  { href: "/resources/",        label: "Resources" },
+  { href: "/about/",            label: "About" },
 ]
 
 const WA_LINK =
@@ -68,7 +69,17 @@ export function Navbar() {
                       : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
                   }`}
                 >
-                  {link.label}
+                  {link.urgent ? (
+                    <span className="text-brand inline-flex items-center gap-1.5">
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-60" />
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-brand" />
+                      </span>
+                      {link.label}
+                    </span>
+                  ) : (
+                    link.label
+                  )}
                 </a>
               </li>
             )
@@ -131,7 +142,17 @@ export function Navbar() {
                   active ? "text-gray-900 dark:text-gray-100 font-semibold" : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
                 }`}
               >
-                {link.label}
+                {link.urgent ? (
+                  <span className="text-brand inline-flex items-center gap-2">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-60" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-brand" />
+                    </span>
+                    {link.label}
+                  </span>
+                ) : (
+                  link.label
+                )}
               </a>
             )
           })}

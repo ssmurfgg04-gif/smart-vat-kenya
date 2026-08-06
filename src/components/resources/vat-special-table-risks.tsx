@@ -537,7 +537,14 @@ export default function VATSpecialTablePage() {
 
         {/* More Guides */}
         <div className="mt-16 pt-12 border-t border-hairline">
-          <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">More Guides</p>
+          <p className="font-display text-[1.1rem] font-semibold text-ink mb-3">More Guides</p>
+          <div className="mb-6">
+            <p className="text-[0.83rem] text-ink-muted leading-relaxed">
+              Looking further ahead?{" "}
+              <a href="/resources/cetis-kenya-2027/" className="text-brand underline underline-offset-2 hover:text-brand-hover">CETIS Kenya 2027</a>{" "}
+              (KRA&apos;s pre-clearance e-invoicing system, in procurement for 2027&ndash;28) will make supplier-PIN validation automatic before an invoice reaches a buyer — the fix for supplier-caused Special Table blocks starts today.
+            </p>
+          </div>
           <ArticleGrid currentSlug="vat-special-table-risks" />
         </div>
 

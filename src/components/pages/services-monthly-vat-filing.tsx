@@ -46,7 +46,7 @@ const comparisons = [
 const faqs = [
   {
     q: "What if I miss the 20th?",
-    a: "We never miss it. We file on the 17th, three full working days before the KRA deadline. In the unlikely event we slip, we cover the KES 10,000 penalty out of our own pocket.",
+    a: "We never miss it. We file on the 17th, three full working days before the KRA deadline — that buffer is our process, not a hope. If KRA rejects a return for any reason, we fix it and resubmit at no extra cost. That's a process we control, which is a better promise than paying a fine after the fact.",
   },
   {
     q: "Can I cancel anytime?",

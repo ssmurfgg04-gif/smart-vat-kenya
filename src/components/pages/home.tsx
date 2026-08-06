@@ -187,7 +187,6 @@ export default function HomePage() {
             <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
               Kenya Revenue Authority Registered Services
             </p>
-
             <h1 className="font-display text-[clamp(2.4rem,6vw,4.5rem)] font-semibold leading-[1.05] tracking-tight text-canvas mb-6 text-balance">
               VAT Registration Services Kenya
               <span className="text-brand">{" done in 3 days,"}</span>
@@ -243,6 +242,17 @@ export default function HomePage() {
                 Never shared, never re-used. You receive an official M-PESA receipt for every payment.
               </p>
             </div>
+
+            <div className="mt-6 border border-brand/30 bg-brand/10 rounded-lg px-5 py-4 max-w-[52ch]">
+              <p className="text-[0.82rem] text-canvas leading-relaxed">
+                <strong className="text-canvas">The 17th Guarantee:</strong> every return is filed
+                on the 17th — three working days before KRA's deadline. If KRA ever rejects a
+                return you've sent us, we fix it and resubmit at no extra cost. Every return is
+                reviewed by a person before it goes out.
+              </p>
+            </div>
+          </div>
+>>>>>>> 1cf81ab (feat(engine): KRA GavaConnect client + eTIMS OSCU/VSCU + tax amnesty 2026 pages)
           </div>
 
           {/* Stats card */}
@@ -260,7 +270,7 @@ export default function HomePage() {
                 { value: "KES 3,500", label: "Monthly iTax filing" },
                 { value: "1–3 days", label: "Average turnaround" },
                 { value: "16%", label: "Kenya VAT standard rate 2026" },
-                { value: "20th", label: "Monthly KRA deadline, never missed" },
+                { value: "17th", label: "We file, not the 20th — never late" },
               ].map(({ value, label }) => (
                 <div
                   key={label}
@@ -574,26 +584,25 @@ export default function HomePage() {
               </a>
             </article>
 
-            {/* Card 3 — Penalty Waiver */}
+            {/* Card 3 — Amnesty Cleanup */}
             <article className="bg-canvas rounded-lg border border-hairline p-8 flex flex-col lg:self-start">
-              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-4">
-                Per application
+              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-brand mb-4">
+                Ends 31 Dec 2026
               </p>
-              <h3 className="font-display text-lg font-semibold text-ink mb-1">KRA Penalty Waiver</h3>
+              <h3 className="font-display text-lg font-semibold text-ink mb-1">Tax Amnesty Cleanup</h3>
               <p className="text-[0.85rem] text-ink-muted mb-5 leading-relaxed">
-                Outstanding KRA penalties? We draft and submit your waiver application.
+                Free iTax ledger check. We tell you which amnesty path you&apos;re on, file the
+                returns that unlock the waiver, and structure the payment plan if you owe principal.
               </p>
               <p className="font-display text-[2rem] font-semibold text-ink leading-none mb-1 tabular-nums">
-                KES 4,000
+                Free check
               </p>
-              <p className="text-[0.78rem] text-ink-muted mb-7">per application</p>
+              <p className="text-[0.78rem] text-ink-muted mb-7">cleanup at a flat fee</p>
               <a
-                href={`${WA_BASE}?text=I%20need%20help%20with%20a%20KRA%20Penalty%20Waiver`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-fill block text-center border border-ink text-ink text-sm font-semibold py-3 rounded-md transition-colors hover:bg-ink hover:text-canvas"
+                href="/tax-amnesty-2026/"
+                className="btn-fill block text-center bg-brand text-canvas text-sm font-semibold py-3 rounded-md transition-colors hover:bg-brand-hover"
               >
-                Request Help
+                Get the free check
               </a>
             </article>
           </div>
@@ -846,10 +855,50 @@ export default function HomePage() {
                   { href: "/resources/faq/", label: "Full Kenya VAT FAQ — 40+ answers", description: "Registration, filing, penalties, rates, eTIMS, refunds and input VAT." },
                   { href: "/resources/how-to-register-for-vat-in-kenya/", label: "How to register for VAT in Kenya on iTax", description: "Every screen of the KRA iTax registration process, step by step." },
                   { href: "/resources/kra-vat-penalties-reference/", label: "KRA VAT penalties reference table", description: "What late filing, late payment, and non-registration actually cost." },
+                  { href: "/tax-amnesty-2026/", label: "KRA Tax Amnesty 2026 — free ledger check", description: "Three paths, two automatic. Find out before the 31 Dec 2026 window closes." },
                   { href: "/services/", label: "All services and published prices", description: "Registration, monthly filing, eTIMS onboarding, and penalty waivers." },
                 ]}
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── AMNESTY BAND ─── */}
+      <section className="bg-brand-muted py-16 px-6 lg:px-10" aria-labelledby="amnesty-heading">
+        <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div>
+            <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-brand mb-3">
+              KRA Tax Amnesty 2026
+            </p>
+            <h2
+              id="amnesty-heading"
+              className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-ink tracking-tight mb-2"
+            >
+              KRA is wiping out old penalties — until 31 December 2026
+            </h2>
+            <p className="text-[0.85rem] text-ink-muted max-w-[48ch] leading-relaxed">
+              A 100% waiver on pre-2026 penalties, interest and fines. Many businesses qualify
+              automatically — others just need outstanding returns filed. Get a free iTax ledger
+              check and find out which path you&apos;re on.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+            <a
+              href="/tax-amnesty-2026/"
+              className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3.5 rounded-md hover:bg-brand-hover transition-colors whitespace-nowrap"
+            >
+              Free amnesty ledger check
+              <ArrowRight size={14} weight="bold" aria-hidden="true" />
+            </a>
+            <a
+              href={`${WA_BASE}?text=Hi%2C%20I%20want%20a%20FREE%20KRA%20Tax%20Amnesty%20ledger%20check`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-ink-muted hover:text-ink transition-colors whitespace-nowrap"
+            >
+              Check on WhatsApp instead
+            </a>
           </div>
         </div>
       </section>

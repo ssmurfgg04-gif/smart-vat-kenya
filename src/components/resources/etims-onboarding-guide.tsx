@@ -659,7 +659,14 @@ export default function ETIMSOnboardingPage() {
 
         {/* More Guides */}
         <div className="mt-16 pt-12 border-t border-hairline">
-          <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">More Guides</p>
+          <p className="font-display text-[1.1rem] font-semibold text-ink mb-3">More Guides</p>
+          <div className="mb-6">
+            <p className="text-[0.83rem] text-ink-muted leading-relaxed">
+              Looking further ahead?{" "}
+              <a href="/resources/cetis-kenya-2027/" className="text-brand underline underline-offset-2 hover:text-brand-hover">CETIS Kenya 2027</a>{" "}
+              is KRA&apos;s planned pre-clearance e-invoicing system (in procurement for 2027&ndash;28) — get the current eTIMS base right first, and you skip the scramble when it lands.
+            </p>
+          </div>
           <ArticleGrid currentSlug="etims-onboarding-guide" />
         </div>
 

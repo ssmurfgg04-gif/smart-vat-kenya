@@ -1,0 +1,17 @@
+{
+  "name": "@smartvat/gavaconnect",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SmartVAT OS — KRA GavaConnect + eTIMS OSCU/VSCU client. Portal APIs, pluggable filing adapter, credential + cache + redaction layer.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test dist/__tests__/"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

@@ -1,5 +1,6 @@
 import {
   DoINeedToRegisterForVatKenya,
+  CetisKenya2027,
   EtimsAccountLocked,
   EtimsComplianceChecklist,
   EtimsDownOfflineInvoicing,
@@ -64,6 +65,7 @@ export interface ResourceMeta {
 
 export const resourceComponents: Record<string, React.ComponentType> = {
   "do-i-need-to-register-for-vat-kenya": DoINeedToRegisterForVatKenya,
+  "cetis-kenya-2027": CetisKenya2027,
   "etims-account-locked": EtimsAccountLocked,
   "etims-compliance-checklist": EtimsComplianceChecklist,
   "etims-down-offline-invoicing": EtimsDownOfflineInvoicing,
@@ -125,6 +127,11 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     title: "Do I Need to Register for VAT Kenya? Threshold & Rules 2026",
     description: "Unsure if your business needs VAT registration? Learn the KES 5M threshold, penalties for late registration, and how to check your obligation.",
     canonical: "/resources/do-i-need-to-register-for-vat-kenya/",
+  },
+  "cetis-kenya-2027": {
+    title: "CETIS Kenya 2027: KRA's Pre-Clearance e-Invoicing — What to Do Now",
+    description: "KRA's Comprehensive Electronic Tax Invoicing System (CETIS) is in procurement for 2027–28. Every invoice validated and signed by KRA before it reaches the buyer. What it means, Uganda's EFRIS lessons, and how to prepare.",
+    canonical: "/resources/cetis-kenya-2027/",
   },
   "etims-account-locked": {
     title: "eTIMS Account Locked? Unlock It Now (Kenya 2026)",
