@@ -1,43 +1,46 @@
-import { ArrowRight, ChatCircle, ShieldCheck, MapPin, LockKey, CheckCircle, Clock, Star } from "@phosphor-icons/react/dist/ssr"
+﻿import { ArrowRight, ChatCircle, ShieldCheck, MapPin, LockKey, CheckCircle, Clock, Star } from "@phosphor-icons/react/dist/ssr"
 import { RelatedLinks } from "@/components/related-links"
 
 const WA_BASE = "https://wa.me/254721725958"
 
 const team = [
   {
-    initials: "AO",
-    name: "Amos Otieno",
+    initials: "JK",
+    name: "Jack Kimani",
     role: "Founder & Principal Agent",
     credential: "Registered KRA iTax agent. 200+ successful VAT registrations and 40+ months of on-time filings.",
+    bio: "Leads the team of KRA-registered agents, overseeing VAT registration and monthly filing for 200+ SMEs.",
     color: "#c8372d",
   },
   {
-    initials: "WN",
-    name: "Winnie Njeri",
+    initials: "CK",
+    name: "Christopher Maina",
     role: "Client Success Lead",
     credential: "Your first point of contact on WhatsApp. Guides every client from first message to delivered PIN.",
+    bio: "Works directly with clients on WhatsApp, ensuring smooth onboarding and resolution of any filing issues.",
     color: "#e07a2f",
   },
   {
-    initials: "MK",
-    name: "Martin Kariuki",
+    initials: "SH",
+    name: "Salma Hussein",
     role: "Tax Compliance & eTIMS Specialist",
     credential: "Handles eTIMS onboarding, Special Table checks, and penalty waiver applications on iTax.",
+    bio: "Specializes in eTIMS compliance, Special Table risk checks, and navigating KRA penalty waivers for clients.",
     color: "#1f6f5c",
   },
 ]
 
 const credentials = [
-  "Registered KRA iTax agents — we file through the official KRA agent portal",
-  "Named individuals on every account — you know exactly who handles your filings",
+  "Registered KRA iTax agents -- we file through the official KRA agent portal",
+  "Named individuals on every account -- you know exactly who handles your filings",
   "Physical office at Pioneer House, Moi Avenue, Nairobi CBD",
-  "M-PESA receipt for every payment — nothing off the books",
+  "M-PESA receipt for every payment -- nothing off the books",
   "Privacy-first: your KRA PIN is used for your filings only",
 ]
 
 const values = [
   { title: "Your time is money", body: "We do the portal work so you run your business. One WhatsApp message replaces three weeks of iTax." },
-  { title: "Never the 20th", body: "We file on the 17th as a matter of process — not a service you have to chase. The deadline is never you or near." },
+  { title: "Never the 20th", body: "We file on the 17th as a matter of process -- not a service you have to chase. The deadline is never you or near." },
   { title: "Total-cost honesty", body: "Published flat fees. No discovery call, no negotiation, no hidden costs. KES 5,000 registration. KES 3,500 monthly filing." },
 ]
 
@@ -56,7 +59,7 @@ export default function AboutPage() {
           <p className="text-[1rem] text-canvas/75 leading-relaxed max-w-[54ch] text-pretty">
             Smart VAT Kenya exists for one reason: Kenyan business owners should never lose money, sleep, or
             time to a tax portal. We register SMEs for VAT and file their monthly returns for a flat fee you
-            know upfront — all over WhatsApp, payable by M-PESA.
+            know upfront -- all over WhatsApp, payable by M-PESA.
           </p>
         </div>
       </section>
@@ -87,14 +90,14 @@ export default function AboutPage() {
           </div>
           <p className="mt-6 text-[0.8rem] text-ink-muted max-w-[64ch] leading-relaxed">
             When you message us on WhatsApp, a named person on this page picks up and stays with your account
-            until your VAT PIN or filing receipt lands in your chat. No anonymous inbox, no "we'll get back
+            until your VAT PIN or filing receipt lands in your chat. No anonymous inbox, no "well get back
             to you."
           </p>
         </section>
 
-        {/* Credentials */}
+        {/* Credentials & trust */}
         <section className="mb-20">
-          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">Credentials &amp; trust</p>
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">Credentials & trust</p>
           <h2 className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-8">
             The trust layer behind what we do
           </h2>
@@ -113,7 +116,7 @@ export default function AboutPage() {
                 <p className="font-mono text-[0.62rem] uppercase tracking-widest text-ink-muted">The 17th, not the 20th</p>
               </div>
               <p className="text-[0.88rem] text-ink-soft leading-relaxed mb-4">
-                Every monthly return is filed on the 17th — three days before KRA's deadline — so a portal
+                Every monthly return is filed on the 17th -- three days before KRA's deadline -- so a portal
                 outage or payment delay never costs you a KES 10,000 late penalty.
               </p>
               <a
@@ -127,7 +130,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Our approach */}
+        {/* How we work */}
         <section className="mb-16">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">How we work</p>
           <h2 className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-8">
@@ -152,7 +155,7 @@ export default function AboutPage() {
             </div>
             <p className="text-[0.9rem] text-canvas/75 leading-relaxed">
               We ask for your KRA PIN and ID only to complete filings that KRA itself requires. Your PIN is
-              used for your filings alone — it is never shared, never stored beyond what's needed, and never
+              used for your filings alone -- it is never shared, never stored beyond what's needed, and never
               used for anything else. Every payment you make is backed by an official M-PESA receipt.
             </p>
           </div>
@@ -175,7 +178,7 @@ export default function AboutPage() {
               </p>
               <p className="flex items-center gap-3">
                 <Clock size={18} weight="fill" className="text-brand shrink-0" aria-hidden="true" />
-                Mon–Fri, 8:00–18:00 EAT
+                Mon‑Fri, 8:00‑18:00 EAT
               </p>
               <p className="flex items-center gap-3">
                 <Star size={18} weight="fill" className="text-brand shrink-0" aria-hidden="true" />

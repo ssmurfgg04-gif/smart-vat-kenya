@@ -180,9 +180,14 @@ html.dark {
     transform: scale(0.98);
   }
 
-  /* Dark mode hover-fill adjustment */
+  /* â”€â”€ Dark mode hover-fill adjustment â”€â”€ */
   .dark .btn-fill::before {
     background: rgba(255,255,255,0.08);
+  }
+
+  /* Dark panels keep their light text even though the base canvas flips dark */
+  .dark .bg-canvas-dark {
+    --canvas: #e8e4dc;
   }
 
   /* Skeleton shimmer */

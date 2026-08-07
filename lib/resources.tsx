@@ -69,8 +69,21 @@ export function getPrevNext(slug: string) {
   }
 }
 
-export function ArticleGrid({ currentSlug }: { currentSlug?: string }) {
-  const items = currentSlug ? articles.filter((a) => a.slug !== currentSlug) : articles
+export function ArticleGrid({ currentSlug, limit = 6 }: { currentSlug?: string; limit?: number }) {
+  const idx = articles.findIndex((a) => a.slug === currentSlug)
+  let related = articles
+  if (idx !== -1) {
+    const before = articles.slice(0, idx).reverse()
+    const after = articles.slice(idx + 1)
+    const interleaved: Resource[] = []
+    const max = Math.max(before.length, after.length)
+    for (let i = 0; i < max; i++) {
+      if (after[i]) interleaved.push(after[i])
+      if (before[i]) interleaved.push(before[i])
+    }
+    related = interleaved
+  }
+  const items = related.slice(0, limit)
   return (
     <div className="grid sm:grid-cols-2 gap-3">
       {items.map((a) => (

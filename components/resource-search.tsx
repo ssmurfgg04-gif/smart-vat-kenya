@@ -86,7 +86,7 @@ export function ResourceSearch({ pillars }: { pillars: Pillar[] }) {
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="font-mono text-[0.6rem] text-brand tracking-widest uppercase">
-                  Guide {pillar.number}
+                  {pillar.number === "Special Edition" ? "Special Edition" : `Guide ${pillar.number}`}
                 </span>
                 {pillar.tags.slice(0, 1).map((tag) => (
                   <span

@@ -194,14 +194,26 @@ export default function HomePage() {
             </h1>
 
             <p className="text-[1.05rem] text-canvas/80 leading-relaxed max-w-[52ch] mb-3 text-pretty">
-              Kenyan SMEs lose KES 10,000 per late iTax filing. You're not the first to feel lost on KRA —
-              <strong className="text-canvas"> tax was never your job</strong>. We handle your complete
-              KRA VAT process — registration and monthly filing — for a flat fee you know
-              upfront. No surprises. No portal errors.
+              What does missing one iTax deadline actually cost you?
+              Kenyan SMEs lose KES 10,000 the moment — and the next month
+              it&apos;s another KES 10,000, on top of fees you were never shown. It isn&apos;t
+              that you slipped up: KRA was never built to be your job.
+              <strong className="text-canvas"> That&apos;s ours instead.</strong> We file your
+              registration and monthly returns for a flat fee you know upfront.
+              No surprises. No portal errors.
             </p>
-            <p className="font-display text-[1.05rem] font-semibold text-canvas mb-10">
+            <p className="font-display text-[1.05rem] font-semibold text-canvas mb-6">
               Kenya's WhatsApp tax agent — send your PIN, done in 3 days.
             </p>
+
+            <div className="mb-8 border border-brand/40 bg-brand/15 rounded-lg px-5 py-4 max-w-[52ch]">
+              <p className="text-[0.82rem] text-canvas leading-relaxed">
+                <strong className="text-canvas">The 17th Guarantee:</strong> every return is filed
+                on the 17th — three working days before KRA's deadline. If KRA ever rejects a
+                return you've sent us, we fix it and resubmit at no extra cost. Every return is
+                reviewed by a person before it goes out.
+              </p>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
@@ -240,15 +252,6 @@ export default function HomePage() {
               <p>
                 <strong className="text-canvas">Your KRA PIN is used for your filings only.</strong>{" "}
                 Never shared, never re-used. You receive an official M-PESA receipt for every payment.
-              </p>
-            </div>
-
-            <div className="mt-6 border border-brand/30 bg-brand/10 rounded-lg px-5 py-4 max-w-[52ch]">
-              <p className="text-[0.82rem] text-canvas leading-relaxed">
-                <strong className="text-canvas">The 17th Guarantee:</strong> every return is filed
-                on the 17th — three working days before KRA's deadline. If KRA ever rejects a
-                return you've sent us, we fix it and resubmit at no extra cost. Every return is
-                reviewed by a person before it goes out.
               </p>
             </div>
           </div>
