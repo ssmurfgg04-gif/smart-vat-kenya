@@ -92,3 +92,28 @@ export function dueWithin(
   void base
   return periods
 }
+
+/**
+ * Periods whose *target* (17th) falls within the next `days` — the lead-up window
+ * the reminder scheduler cares about. Also includes periods whose target has just
+ * passed (`graceDays` back) so recently-filed returns can be confirmed. Scoped on
+ * the target date rather than the due date so a lead nudge fires well before the
+ * 20th.
+ */
+export function targetWindow(
+  days: number,
+  config: DeadlineConfig = {},
+  graceDays = 4,
+): ObligationPeriod[] {
+  const now = (config.now ?? (() => new Date()))()
+  const periods: ObligationPeriod[] = []
+  for (let y = now.getUTCFullYear() - 1; y <= now.getUTCFullYear() + 1; y++) {
+    for (let m = 1; m <= 12; m++) {
+      const period = `${y}-${String(m).padStart(2, "0")}`
+      const plan = planPeriod(period, config)
+      const diff = Math.round((new Date(plan.targetDate + "T00:00:00Z").getTime() - now.getTime()) / 86_400_000)
+      if (diff >= -graceDays && diff <= days) periods.push(plan)
+    }
+  }
+  return periods
+}

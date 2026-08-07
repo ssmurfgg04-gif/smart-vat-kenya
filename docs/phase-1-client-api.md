@@ -22,10 +22,16 @@ the tests use.
 | `exposure.ts`   | `screenSuppliers` (Special Table port, blocked input VAT), `diagnoseAmnesty` (3-path), `assessRefund`. |
 | `benchmarks.ts` | 7-sector input-VAT midpoint + band (`compareToBenchmark`). |
 | `intel.ts`      | KRA-rules KB, lexical `retrieve`, `LlmPort` (offline fallback), `TaxAssistant`, golden `evaluateRetrieval`. |
+| `vat.ts`        | Finance Act 2025/2026 VAT calculator: `vatOf`/`addVat`/`removeVat`, registrationStatus (8M mandatory / 5M voluntary), late-filing penalty, late-payment penalty + 1%/mo interest, 12-month refund window. |
 | `filing.ts`     | `createFilingService` — orchestrates the gavaconnect providers over the deadline engine. |
 | `gavawiring.ts` | Deployment wiring: translate an `ObligationPeriod` into concrete KRA NIL/TOT input over a live `GavaClient`. |
 | `client.ts`     | Per-client shell: `ask`, `due`/`runFiling`, `notify`, `pay`, `recordPayment`. |
 | `whatsapp.ts`, `mpesa.ts` | Messenger + M-PESA STK push ports with in-memory test impls. |
+| `payments.ts`   | `PaymentGateway` port, in-memory + Paystack impls (KES→cents 100x handled), M-PESA adapter; keep payment gateway wiring last. |
+| `webhooks.ts`   | Constant-time HMAC webhook verification shared by Paystack (SHA-512) and tax.ke/ProTax (SHA-256, optional `sha256=` prefix). |
+| `taxke.ts`      | tax.ke eTIMS aggregator client: `generateInvoice`, `status`, signed webhook verify — compliant invoices without running an OSCU/VSCU unit. |
+| `dojah.ts`      | Dojah Kenya KRA lookup (`GET /api/v1/ke/kyc/kra`, raw AppKey header) for PIN confirm + obligation labels. |
+| `pin.ts`        | `isKraPinFormat` (`^[A|P][0-9]{9}[A-Za-z]$`) + `createPinValidator` (live `pinByPin` Active check) — gate before issuing a B2B eTIMS invoice. |
 
 ### Composition root — `SmartVatOs`
 ```ts
@@ -110,12 +116,37 @@ await client.runFiling()              // returns per-period outcomes
 
 ```sh
 cd engine/os
-npm test        # builds TS to dist/, runs node --test (48 cases)
+npm test        # builds TS to dist/, runs node --test (103 cases)
+cd ../gavaconnect
+npm test        # builds TS, runs node --test (26 cases)
 ```
 Tests cover the deadline buffer, health weighting/levels/flags, exposure,
 amnesty 3-path + refund status, benchmarks, retrieval + golden recall over the
 expanded KB, the filing orchestrator (ok + rejection), the gaca wiring
-(NIL/TOT input translation), WhatsApp + M-PESA ports, and the client shell.
+(NIL/TOT input translation), WhatsApp + M-PESA ports, the client shell, and the
+new VAT calculator, webhook verification, tax.ke/Dojah/pin integrations, and
+Paystack payments.
+
+---
+
+## 6. Payments + webhooks (wired last)
+
+Payment gateways are the last thing to wire into the client shell. The ports are
+ready and tested:
+
+```ts
+import { createPaystackGateway, createInMemoryPaymentGateway, mpesaToPaymentGateway } from "@smartvat/os"
+const paystack = createPaystackGateway({ secretKey: process.env.PAYSTACK_SECRET! })
+await paystack.initiate({ amount: 1160, accountReference: "c1-2026-08", description: "sub", email: "a@b.co" })
+// Paystack amounts are KES cents; initiate does the 100x conversion, verify maps cents back.
+```
+
+Webhook signatures verify constant-time and never throw:
+```ts
+import { verifyPaystackWebhook, verifyTaxKeWebhook, PAYSTACK_WEBHOOK, signWebhookPayload } from "@smartvat/os"
+verifyPaystackWebhook(secret, headers, rawBody)   // SHA-512, x-paystack-signature
+verifyTaxKeWebhook(secret, headers, rawBody)       // SHA-256, X-TaxKe-Signature (sha256= prefix)
+```
 
 ---
 
@@ -131,7 +162,10 @@ lands the API and nothing else in the engine changes.
 
 ## 7. Golden dataset & recall guard
 
-`intel.ts` ships `GOLDEN_SET` — 12 curated query→expected-rule pairs — used by
+`intel.ts` ships `GOLDEN_SET` — 25 curated query→expected-rule pairs — used by
 `evaluateRetrieval` so the KB can grow without silently regressing retrieval.
 Add a rule *and* a golden assertion together; the test suite fails if any golden
-query stops surfacing its expected rule.
+query stops surfacing its expected rule. The KB tracks Finance Act 2025/2026
+(8M registration threshold, 12-month refund window, digital-payments VAT,
+WHT expansion) and 2026 KRA initiatives (iCMS export pre-fill, income/expense
+validation engine, reverse invoicing).

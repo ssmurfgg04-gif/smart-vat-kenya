@@ -67,7 +67,7 @@ test("evaluateRetrieval reports recall over a golden set", () => {
 
 test("the expanded KB contains the new rules", () => {
   const ids = DEFAULT_RULES.map((r) => r.id)
-  for (const id of ["vat-return-cycle", "etims-import", "vat-rate-changes", "interest-rate", "penalty-upper-limit", "vat-deregistration"]) {
+  for (const id of ["vat-return-cycle", "etims-import", "vat-rate-changes", "interest-rate", "penalty-upper-limit", "vat-deregistration", "vat-registration-threshold", "vat-refund-window", "non-registration-penalty"]) {
     assert.ok(ids.includes(id), `missing ${id}`)
   }
 })

@@ -102,6 +102,22 @@ test("EtimsClient initOsdcInfo persists cmcKey", async () => {
   }
 })
 
+test("EtimsClient treats alternative success spell-codes as success", async () => {
+  for (const code of ["0", "00", "0000", "001"]) {
+    const s = kraStub({
+      "/selectInitOsdcInfo": () => ({ resultCd: code, resultMsg: "OK", cmcKey: "00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff" }),
+    })
+    const host = await listen(s)
+    try {
+      const e = new EtimsClient(cfg(host))
+      const r = await e.initOsdcInfo()
+      assert.equal(r.resultCd, code)
+    } finally {
+      s.close()
+    }
+  }
+})
+
 test("EtimsClient decodes non-success resultCd into typed error", async () => {
   const s = kraStub({
     "/selectInitOsdcInfo": () => ({ resultCd: "901", resultMsg: "invalid device" }),

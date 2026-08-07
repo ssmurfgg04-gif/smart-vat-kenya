@@ -4,6 +4,7 @@ import { decryptSecret, encryptSecret, signAndEncryptOscuPayload } from "./crypt
 import { DuplicateError, EtimsResultError } from "./errors.js"
 import {
   EtimsConfig,
+  ETIMS_SUCCESS_CODES,
   InitOsdcResponse,
   SaveSalesResponse,
   SalesTransaction,
@@ -98,7 +99,7 @@ export class EtimsClient {
   }
 
   private throwIfNotSuccess(res: { resultCd: string; resultMsg: string }): void {
-    if (res.resultCd !== "000") {
+    if (!ETIMS_SUCCESS_CODES.has(res.resultCd)) {
       if (res.resultCd === "994") throw new DuplicateError(res.resultMsg)
       throw new EtimsResultError(res.resultCd, res.resultMsg)
     }

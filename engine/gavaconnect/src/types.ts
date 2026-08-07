@@ -205,6 +205,15 @@ export const ETIMS_RESULT_CODES: Record<string, string> = {
   E04: "branch or device not found",
 }
 
+/**
+ * eTIMS returns differing success spell-codes across hosts/environments
+ * ("0", "00", "000", "0000", "001"). Treat any of these as success rather than
+ * trusting a single canonical string (reference: kra-etims-sdk result codes).
+ */
+export const ETIMS_SUCCESS_CODES: ReadonlySet<string> = new Set([
+  "", "0", "00", "000", "0000", "001",
+])
+
 export interface EtimsHosts {
   sandbox: string
   production: string
