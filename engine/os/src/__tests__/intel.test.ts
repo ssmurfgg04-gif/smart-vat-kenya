@@ -6,6 +6,7 @@ import {
   TaxAssistant,
   evaluateRetrieval,
   DEFAULT_RULES,
+  GOLDEN_SET,
 } from "../intel.js"
 import { LlmAnswer, LlmPort, Rule } from "../intel.js"
 import { GoldenItem } from "../intel.js"
@@ -62,4 +63,22 @@ test("evaluateRetrieval reports recall over a golden set", () => {
   assert.equal(report.recallAtK, 1)
   assert.equal(report.precision, 1)
   assert.equal(report.failures.length, 0)
+})
+
+test("the expanded KB contains the new rules", () => {
+  const ids = DEFAULT_RULES.map((r) => r.id)
+  for (const id of ["vat-return-cycle", "etims-import", "vat-rate-changes", "interest-rate", "penalty-upper-limit", "vat-deregistration"]) {
+    assert.ok(ids.includes(id), `missing ${id}`)
+  }
+})
+
+test("the full golden set achieves high recall over the expanded KB", () => {
+  const report = evaluateRetrieval(GOLDEN_SET, buildKnowledgeBase(), 4)
+  // Every golden query must surface at least one expected rule.
+  assert.equal(report.failures.length, 0)
+})
+
+test("retrieve surfaces vat-rate-changes for the vat rate query", () => {
+  const got = retrieve("what is the standard vat rate", buildKnowledgeBase(), 3)
+  assert.ok(got.some((r) => r.id === "vat-rate-changes"))
 })

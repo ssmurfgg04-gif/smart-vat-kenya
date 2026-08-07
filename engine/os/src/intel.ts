@@ -79,6 +79,48 @@ export const DEFAULT_RULES: Rule[] = [
     body: "A valid Tax Compliance Certificate gates tenders and big-buyer contracts. It is revoked if the taxpayer misses filings or obligations.",
     source: "KRA TCC",
   },
+  {
+    id: "vat-rate-changes",
+    title: "VAT rates in Kenya",
+    keywords: ["vat", "rate", "16%", "standard", "exempt", "zero-rated", "output"],
+    body: "Kenya's standard VAT rate is 16%. Certain supplies are zero-rated (e.g. exports, essential foodstuffs) or exempt (e.g. residential rent, medical). Correct classification drives output-VAT and refund eligibility.",
+    source: "VAT Act 2013",
+  },
+{
+    id: "vat-return-cycle",
+    title: "VAT return cycle",
+    keywords: ["return", "20th", "every month", "cycle", "nil return", "monthly"],
+    body: "VAT returns are filed monthly by the 20th of the following month, including nil returns. Failure to file a nil return still attracts penalties.",
+    source: "KRA VAT return guidelines",
+  },
+  {
+    id: "etims-import",
+    title: "eTIMS transactions and import",
+    keywords: ["import", "etims", "transfer", "reconcile", "transaction", "purchases"],
+    body: "Purchases of goods/services imported or received by a business must be recorded in eTIMS and reconciled against input VAT. Physical and electronic invoices must match iTax records.",
+    source: "KRA eTIMS guide",
+  },
+  {
+    id: "interest-rate",
+    title: "Monthly interest on unpaid VAT",
+    keywords: ["interest", "1%", "monthly", "unpaid", "rate", "prompt"],
+    body: "Unpaid VAT accrues 1% monthly interest from the date it is due until settled, on top of any penalty. 2% applies to the first month for certain arrears filings.",
+    source: "TPA 2015",
+  },
+  {
+    id: "penalty-upper-limit",
+    title: "Penalty caps",
+    keywords: ["penalty", "cap", "maximum", "5%", "limit", "thousand", "penalties"],
+    body: "Late-filing penalty is the higher of KES 10,000 or 5% of tax due. Understatement attracts up to 20% of the understated tax, capped at KES 2,000,000 in certain cases.",
+    source: "TPA 2015",
+  },
+  {
+    id: "vat-deregistration",
+    title: "VAT deregistration",
+    keywords: ["deregister", "cancel", "registration", "no longer", "deactivate", "close"],
+    body: "A business may apply to deregister for VAT when turnover stays below the threshold for a sustained period, or when the business closes. Deregistration requires final winding-up compliance.",
+    source: "VAT Act 2013",
+  },
 ]
 
 export function buildKnowledgeBase(extra: Rule[] = []): Rule[] {
@@ -188,3 +230,19 @@ export function evaluateRetrieval(items: GoldenItem[], kb: Rule[], topK = 3): Ev
     failures,
   }
 }
+
+/** Curated golden set used to guard retrieval quality as the KB grows. */
+export const GOLDEN_SET: GoldenItem[] = [
+  { query: "how much is the late vat filing penalty", expected: ["late-vat-filing-penalty"] },
+  { query: "what interest do I owe on unpaid vat", expected: ["interest-rate"] },
+  { query: "amnesty 2026 penalty waiver", expected: ["amnesty-2026"] },
+  { query: "supplier on the special table blocks my input vat", expected: ["special-table"] },
+  { query: "do I need etims as a small business", expected: ["etims-mandate"] },
+  { query: "when must I submit my vat return", expected: ["vat-return-cycle"] },
+  { query: "standard vat rate in kenya 16%", expected: ["vat-rate-changes"] },
+  { query: "my tcc is expired and i have tenders", expected: ["tcc"] },
+  { query: "can I deregister for vat now", expected: ["vat-deregistration"] },
+  { query: "what is the maximum penalty I could face", expected: ["penalty-upper-limit", "late-vat-filing-penalty"] },
+  { query: "recover input vat from imported purchases", expected: ["etims-import", "input-vat-time-limit"] },
+  { query: "how long can I claim input vat", expected: ["input-vat-time-limit"] },
+]
