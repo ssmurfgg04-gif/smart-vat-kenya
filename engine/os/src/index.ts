@@ -18,6 +18,7 @@ export * from "./filing.js"
 export * from "./whatsapp.js"
 export * from "./mpesa.js"
 export * from "./client.js"
+export * from "./gavawiring.js"
 
 import { DeadlineConfig, planPeriod, dueWithin } from "./deadlines.js"
 import { computeHealth, HealthInput } from "./health.js"
