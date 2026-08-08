@@ -10,9 +10,7 @@ export default defineConfig({
   integrations: [
     react(),
     mdx(),
-    sitemap({
-      filter: (page) => !page.includes("/blog/"),
-    }),
+    sitemap(),
   ],
   vite: {
     plugins: [tailwindcss()],

@@ -82,7 +82,7 @@ const faqSchema = {
       name: "What is the penalty for not registering for VAT in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "KRA imposes a penalty of KES 100,000 or the tax that would have been due (whichever is higher) for failure to register for VAT when required. This is separate from the KES 10,000 late-filing penalty.",
+        text: "KRA imposes a penalty of KES 100,000 per month (Tax Procedures Act, s.95) for failure to register for VAT when required. This is separate from the KES 10,000 late-filing penalty.",
       },
     },
     {
@@ -98,7 +98,7 @@ const faqSchema = {
       name: "Is the VAT registration threshold in Kenya KES 5 million or KES 8 million?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "As of the Finance Act 2025, the mandatory VAT registration threshold was adjusted. The KES 5 million annual taxable turnover threshold has been the primary reference for most compliant businesses. Certain categories may have different thresholds.",
+        text: "KES 5 million remains the current operational threshold. The Finance Act 2025 proposed raising it to KES 8 million, but this has not yet taken effect as of August 2026. See our explainer: /resources/kra-portal-vs-service/ for the full breakdown.",
       },
     },
     {
@@ -171,7 +171,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* ─── HERO ─── */}
+{/* ─── HERO ─── */}
       <section className="bg-canvas-dark overflow-hidden relative">
         <div
           className="absolute inset-0 pointer-events-none z-0 opacity-[0.04]"
@@ -188,19 +188,15 @@ export default function HomePage() {
               Kenya Revenue Authority Registered Services
             </p>
             <h1 className="font-display text-[clamp(2.4rem,6vw,4.5rem)] font-semibold leading-[1.05] tracking-tight text-canvas mb-6 text-balance">
-              VAT Registration Services Kenya
-              <span className="text-brand">{" done in 3 days,"}</span>
-              {" not 3 weeks."}
+              The letter said <span className="text-brand">"KES 10,000 penalty"</span> in bold.
+              He hadn't missed the money. He'd missed the 20th.
             </h1>
 
             <p className="text-[1.05rem] text-canvas/80 leading-relaxed max-w-[52ch] mb-3 text-pretty">
-              What does missing one iTax deadline actually cost you?
-              Kenyan SMEs lose KES 10,000 the moment — and the next month
-              it&apos;s another KES 10,000, on top of fees you were never shown. It isn&apos;t
-              that you slipped up: KRA was never built to be your job.
-              <strong className="text-canvas"> That&apos;s ours instead.</strong> We file your
-              registration and monthly returns for a flat fee you know upfront.
-              No surprises. No portal errors.
+              The iTax portal froze at 11:47pm. His accountant's phone was off.
+              KRA doesn't care about either. He's a Smart VAT Kenya client now —
+              because we file on the 17th, not the 20th.
+              VAT registration, KES 5,000 flat, done in 1–3 working days. You never touch iTax.
             </p>
 
             <div className="mb-8 border border-brand/40 bg-brand/15 rounded-lg px-5 py-4 max-w-[52ch]">
@@ -212,7 +208,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 mb-8">
               <a
                 href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20register%20for%20VAT`}
                 target="_blank"
@@ -244,7 +240,7 @@ export default function HomePage() {
               ))}
             </div>
 
-<div className="mt-6 flex items-start gap-2.5 text-[0.8rem] text-canvas/65 max-w-[52ch] leading-relaxed">
+            <div className="mt-6 flex items-start gap-2.5 text-[0.8rem] text-canvas/65 max-w-[52ch] leading-relaxed">
               <ShieldCheck size={15} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
               <p>
                 <strong className="text-canvas">Your KRA PIN is used for your filings only.</strong>{" "}
@@ -252,7 +248,6 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-
         </section>
 
         {/* ─── TRUST BAND ─── */}
@@ -276,7 +271,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── PROBLEM ─── */}
+      </section>
+
+        {/* ─── SHAME BLOCK ─── */}
+        <section className="bg-canvas py-12 px-6 lg:px-10">
+          <div className="max-w-[1400px] mx-auto text-center">
+            <p className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-ink tracking-tight mb-2">
+              You're not behind. KRA's portal was never built for you.
+            </p>
+            <p className="text-[0.9rem] text-ink-muted max-w-[48ch] mx-auto leading-relaxed">
+              It was built for KRA. The crashes, the OTP failures, the 11:47pm timeout — that's the system 
+              telling you it wasn't built for you. We handle registration, eTIMS and monthly filing 
+              for KES 5,000 + KES 3,500/month. M-PESA accepted. Replies in minutes on WhatsApp.
+            </p>
+          </div>
+        </section>
+
+        {/* ─── STATUS BLOCK ─── */}
+        <section className="bg-canvas-alt py-12 px-6 lg:px-10">
+          <div className="max-w-[1400px] mx-auto text-center">
+            <p className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-ink tracking-tight mb-2">
+              The tender said "attach a Tax Compliance Certificate."
+            </p>
+            <p className="text-[0.9rem] text-ink-muted max-w-[48ch] mx-auto leading-relaxed">
+              That's when the VAT number stopped being optional. TCCs require a clean VAT record, 
+              and clean records require eTIMS + on-time filing. Get registered in 1–3 working days, 
+              filed by the 17th, and never wonder what KRA sees again.
+            </p>
+          </div>
+        </section>
+
+        {/* ─── PROBLEM ─── */}
       <section className="bg-canvas py-24 px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">

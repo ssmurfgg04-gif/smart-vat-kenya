@@ -41,7 +41,7 @@ const localBusinessSchema = {
     "Remote VAT registration services for Mombasa businesses. KES 5,000 flat fee. WhatsApp-based service covering Mombasa CBD, Nyali, Bamburi, Changamwe, and all Mombasa County.",
   url: "https://smartvatkenya.co.ke/services/vat-registration-mombasa",
   telephone: "+254721725958",
-  email: "hello@smartvatkenya.co.ke",
+  email: "info@smartvatkenya.co.ke",
   areaServed: [
     { "@type": "City", name: "Mombasa" },
     { "@type": "City", name: "Nyali" },

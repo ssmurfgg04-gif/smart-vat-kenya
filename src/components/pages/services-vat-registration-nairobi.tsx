@@ -37,7 +37,7 @@ const localBusinessSchema = {
     "Professional VAT registration services in Nairobi — KES 5,000 flat fee. KRA iTax registration, eTIMS guidance, and monthly VAT filing.",
   url: "https://smartvatkenya.co.ke/services/vat-registration-nairobi",
   telephone: "+254721725958",
-  email: "hello@smartvatkenya.co.ke",
+  email: "info@smartvatkenya.co.ke",
   areaServed: [
     "Nairobi CBD",
     "Westlands",

@@ -1,100 +1,45 @@
 # Smart VAT Kenya
 
-> Professional VAT registration services and monthly iTax filing for Kenyan SMEs. Flat-fee pricing, M-PESA accepted, WhatsApp support. Based in Nairobi, Kenya.
+> Professional VAT registration and monthly iTax filing for Kenyan SMEs. 
+> Flat fees, M-PESA accepted, WhatsApp support. Based in Nairobi, Kenya.
 
 ## What We Do
 
-Smart VAT Kenya handles KRA VAT compliance end-to-end for small and medium-sized Kenyan businesses:
+- **VAT Registration** — KES 5,000 flat fee, completed in 1–3 working days via the KRA iTax portal (we handle the portal; you never touch it).
+- **Monthly VAT Filing** — KES 3,500/month, filed on the 17th (before the 20th KRA deadline).
+- **KRA Penalty Waiver Applications** — KES 4,000 per application, drafted and submitted to KRA on your behalf.
+- **Free Tools** — Kenya VAT Calculator, Penalty Waiver Wizard, iTax Error Diagnosis, VAT Registration Quiz.
 
-- **VAT Registration** — KES 5,000 flat fee, completed in 1–3 working days via the KRA iTax portal (itax.kra.go.ke)
-- **Monthly VAT Filing** — KES 3,500/month, filed before the 20th KRA deadline (we file on the 17th)
-- **KRA Penalty Waiver** — KES 4,000 per application, drafted and submitted to KRA on your behalf
-- **Free Tools** — Kenya VAT Calculator, Penalty Waiver Wizard, iTax Error Diagnosis, and VAT Registration Quiz
+## Kenya VAT Facts (verified 2026-08-08 against KRA guidance and the Tax Procedures Act)
 
-## Key Facts About Kenya VAT (2026)
+- Standard rate: 16% (VAT Act, Cap. 476).
+- Mandatory registration threshold: KES 5,000,000 annual taxable turnover — KRA official guidance applies KES 5M (verified 2026-08-08); an increase to KES 8M has been reported via Finance Act 2025 commentary. See our explainer: /resources/kra-portal-vs-service/
+- Voluntary registration: from KES 5 million.
+- Filing deadline: 20th of the following month (nil returns included).
+- Late filing penalty: higher of KES 10,000 or 5% of tax due, plus 1% monthly interest.
+- Late payment penalty: 5% of unpaid tax plus 1% monthly interest.
+- Non-registration penalty: KES 100,000 per month (TPA s.95).
+- eTIMS non-compliance: 2x tax due, with Finance Act 2026 minimums of KES 100,000 (companies) / KES 10,000 (individuals).
+- eTIMS integration failure: up to KES 100,000 per month, capped at KES 1,000,000 (TPA s.59A(5)).
+- Zero-rated (0%): exports, basic foodstuffs, medical equipment, water.
+- Exempt: financial services, insurance, education.
+- VAT refund claims: within 12 months.
+- eTIMS is mandatory for all VAT-registered businesses; since January 2026 KRA validates returns against eTIMS data.
 
-- Kenya VAT standard rate: **16%** (VAT Act, Cap. 476)
-- Mandatory registration threshold: **KES 8 million** annual taxable turnover (Finance Act 2025 raised from KES 5 million)
-- Voluntary registration: allowed from KES 5 million
-- Non-registration penalty: **KES 100,000 per month** (or tax due whichever higher)
-- Monthly filing deadline: **20th of the following month** (nil returns included)
-- Late-filing penalty: **KES 10,000 fixed** + 5% of tax due + 1% monthly interest (whichever is higher)
-- Late payment penalty: **5% of unpaid tax** + 1% interest per month
-- eTIMS non-compliance / e-invoice failure: **higher of 5% of tax due, KES 100,000 (companies), or KES 10,000 (individuals)** (TPA s.86, since FA2026; previously 2x tax due)
-- eTIMS integration failure: **up to KES 100,000 per month** (TPA s.59A(5), turnover above KES 5 million)
-- Zero-rated supplies (0%): exports, basic foodstuffs, medical equipment, water
-- Exempt supplies: financial services, education, residential property rental
-- VAT returns filed via: **KRA iTax portal** (itax.kra.go.ke)
-- VAT remittance: **M-PESA Paybill 572572** (KRA PIN as account number)
-- eTIMS: All businesses must onboard eTIMS and issue electronic tax invoices. From 2026, KRA validates income and expenses against eTIMS data — non-compliant invoices = denied deductions
-- VAT refund window: **12 months** (reduced from 24 by Finance Act 2025)
-- VAT Special Table: KRA-maintained list of flagged suppliers. Input VAT claims from Special Table suppliers are automatically rejected by iTax
+## Services (pricing as of 2026-08-08)
 
-## Pages
-
-- [Free KRA Tax Tools — VAT, Penalty & eTIMS Calculators](https://smartvatkenya.co.ke/tools/) — VAT calculator, KRA penalty estimator for all 6 tax regimes, eTIMS penalty calculator, amnesty savings calculator, iTax error diagnosis, and the VAT registration quiz.
-- [eTIMS Penalty Calculator Kenya 2026](https://smartvatkenya.co.ke/tools/etims-penalty-calculator/) — Estimate your KRA exposure: e-invoice penalties (TPA s.86: 5%, KES 100,000 company / KES 10,000 individual), integration failure (up to KES 100,000/month, s.59A(5)), and late-filing penalties (KES 10,000 or 5% + 1%/month).
-- [Do I Need to Register for VAT Kenya? Threshold & Rules 2026](https://smartvatkenya.co.ke/resources/do-i-need-to-register-for-vat-kenya) — Unsure if your business needs VAT registration? Learn the KES 5M threshold, penalties for late registration, and how to check your obligation.
-- [eTIMS Account Locked? Unlock It Now (Kenya 2026)](https://smartvatkenya.co.ke/resources/etims-account-locked) — Your eTIMS device is locked after 7 days without syncing. Learn why KRA locks accounts, how to unlock via Device Management, and avoid future lockouts.
-- [eTIMS Compliance Checklist Kenya 2026 — Daily & Monthly](https://smartvatkenya.co.ke/resources/etims-compliance-checklist) — KRA eTIMS compliance checklist covering daily sales uploads, device maintenance, invoice issuance, and stock reconciliation. Audit-ready in 10 minutes.
-- [KRA eTIMS Down? Invoice Offline Now — Sync Guide 2026](https://smartvatkenya.co.ke/resources/etims-down-offline-invoicing) — When eTIMS goes down, you can still invoice. Learn how to issue offline invoices, sync when the portal recovers, and avoid KRA penalties.
-- [Petrol Station Refusing an eTIMS Receipt? Here's Why and What to Do](https://smartvatkenya.co.ke/resources/etims-fuel-stations) — KRA made eTIMS mandatory for fuel stations by June 30, 2025; most independents still aren't compliant. What to do when a station won't issue an eTIMS receipt, and what it costs station owners who keep delaying.
-- [eTIMS Invoice Rejected? Fix It Fast (Kenya 2026)](https://smartvatkenya.co.ke/resources/etims-invoice-rejected) — Your eTIMS invoice was rejected by KRA — here's why and exactly how to fix common errors like invalid PIN, duplicate invoice, and stock mismatch.
-- [eTIMS Mandate Kenya 2026: Who Must Comply & When](https://smartvatkenya.co.ke/resources/etims-mandate-guide) — Complete guide to the KRA eTIMS mandate: which businesses must register, compliance deadlines, penalties for non-compliance, and how to onboard.
-- [eTIMS Compliant Invoice Guide Kenya 2026](https://smartvatkenya.co.ke/resources/etims-invoicing-guide) — How to issue a KRA-compliant eTIMS invoice with required fields, QR code, tax rates, and common formatting mistakes that trigger rejections.
-- [eTIMS Onboarding Guide Kenya 2026: Register Step by Step](https://smartvatkenya.co.ke/resources/etims-onboarding-guide) — Step-by-step eTIMS registration guide for Kenyan businesses. How to get your ECD device, upload stock, and start issuing compliant invoices.
-- [eTIMS Pending Sync? Fix It Before the 7-Day Lockout](https://smartvatkenya.co.ke/resources/etims-pending-sync) — eTIMS stuck on 'pending sync'? Learn why invoices don't upload to KRA, how to force a manual sync, and how to avoid the 7-day device lockout.
-- [eTIMS Penalty KES 50,000/Month — Avoid It Now 2026](https://smartvatkenya.co.ke/resources/etims-penalty-50000-per-month-kenya) — KRA charges KES 50,000/month for eTIMS non-compliance. Learn what triggers the penalty, how to appeal, and how to avoid it entirely.
-- [KRA VAT FAQ — Common Questions Answered 2026](https://smartvatkenya.co.ke/resources/faq) — Frequently asked questions about KRA VAT registration, eTIMS, filing deadlines, penalties, refunds, and amnesty. Updated for 2026.
-- [Finance Act 2025 & 2026 VAT Changes Kenya Explained](https://smartvatkenya.co.ke/resources/finance-act-vat-changes-kenya) — All VAT changes from the Finance Act 2025 and 2026: digital services tax, withholding VAT, amnesty provisions, and what they mean for your business.
-- [How to Apply for a KRA PIN in Kenya 2026 (Online Guide)](https://smartvatkenya.co.ke/resources/how-to-apply-for-kra-pin) — Step-by-step guide to applying for a KRA PIN online via iTax. Covers individual and business registration, required documents, and troubleshooting.
-- [iCMS Export Guide 2026: VAT for Kenyan Exporters](https://smartvatkenya.co.ke/resources/icms-export-guide) — Complete iCMS export declaration guide for Kenyan businesses. Learn VAT implications, zero-rating requirements, documentation, and KRA compliance.
-- [How to Calculate 16% VAT in Kenya (Calculator & Formula)](https://smartvatkenya.co.ke/resources/how-to-calculate-vat-in-kenya) — Learn how to calculate 16% VAT in Kenya — including VAT exclusive, inclusive, and reverse calculations. Free formula guide with KES examples.
-- [How to File VAT Return on KRA iTax (Step-by-Step 2026)](https://smartvatkenya.co.ke/resources/how-to-file-vat-return-on-itax) — Step-by-step guide to filing your monthly VAT return on KRA iTax. Covers auto-populated returns, common errors, and what to do when the portal is down.
-- [How to Register for VAT in Kenya on iTax (2026 Guide)](https://smartvatkenya.co.ke/resources/how-to-register-for-vat-in-kenya) — Complete step-by-step guide to registering for VAT in Kenya via iTax. Documents needed, timeline, KES 5M threshold, and what happens after registration.
-- [Input VAT Deduction Kenya 2026 — What Can You Claim?](https://smartvatkenya.co.ke/resources/input-vat-deduction-guide) — Complete guide to input VAT deductions in Kenya. Learn which expenses qualify, what documents KRA requires, and common pitfalls that trigger audit flags.
-- [KRA iTax Down? Fix It Now — Status & Workarounds (2026)](https://smartvatkenya.co.ke/resources/itax-portal-not-working) — Is KRA iTax down? Check current portal status, fix common errors (status code 500, OTP not received, login failed), and workarounds for outages.
-- [KPLC Blackout? Keep Your eTIMS & VAT Compliance Intact 2026](https://smartvatkenya.co.ke/resources/kplc-blackout-etims-compliance) — A power cut doesn't pause your KRA obligations. Invoice offline, pay via M-Pesa on your phone, and protect yourself from the 7-day eTIMS lockout.
-- [Got a KRA Fine Around KES 70,000? You May Only Owe the Principal](https://smartvatkenya.co.ke/resources/kra-fine-70000) — A large KRA bill is usually late-filing penalties, not tax you own. Check whether the 2026 tax amnesty wipes most of it before paying, and how to route debt by period.
-- [KRA Penalty for Late VAT Filing — Waive It Fast 2026](https://smartvatkenya.co.ke/resources/kra-penalty-for-late-vat-filing) — KRA charges 5% late filing penalty + 1% monthly interest on overdue VAT. Learn how much you owe and how to apply for a penalty waiver or amnesty.
-- [KRA PIN Not Working? Fix It Now (Kenya 2026)](https://smartvatkenya.co.ke/resources/kra-pin-not-working) — Your KRA PIN application is stuck or not working? Common causes include ID number mismatches, system errors, and processing delays. Step-by-step fixes.
-- [KRA Status Code 500 — Fix iTax Errors & Portal Crashes Fast](https://smartvatkenya.co.ke/resources/kra-status-code-500-itax-errors) — KRA status code 500 means the iTax server is down or timing out. Here's what causes it, how to fix it, and workarounds when the portal is unavailable.
-- [KRA Tax Amnesty 2026 — Waive Penalties Now (Dec 31)](https://smartvatkenya.co.ke/resources/kra-tax-amnesty-2026) — Complete guide to the KRA tax amnesty 2026. Waives 100% of penalties and interest on pre-2026 tax debt. Eligibility, how to apply, deadline December 31.
-- [KRA VAT Audit Process 2026 — What to Expect & Prepare](https://smartvatkenya.co.ke/resources/kra-vat-audit-process) — What happens during a KRA VAT audit? From notification to final assessment. Learn your rights, required documents, and how to survive with minimal penalties.
-- [KRA VAT Filing Deadline August 2026 — File Before the 20th](https://smartvatkenya.co.ke/resources/kra-vat-filing-deadline-august-2026) — KRA VAT return for July 2026 is due August 20, 2026. Late filing triggers a 5% penalty plus 1% monthly interest. File on time with our step-by-step guide.
-- [KRA VAT Penalties 2026 — Complete Reference Table](https://smartvatkenya.co.ke/resources/kra-vat-penalties-reference) — KRA VAT penalties reference table for 2026: late filing (5%), late payment (1%/month), eTIMS non-compliance (KES 50K/mo), and waiver eligibility.
-- [M-Pesa Error Codes 2026 — Fix MR101, MR105 Fast](https://smartvatkenya.co.ke/resources/mpesa-error-codes) — M-Pesa error codes explained: MR101, MR102, MR105, MR110, 'transaction failed', and PIN-locked. What each means, how to fix it, and paying KRA VAT.
-- [How to File Nil Returns on KRA iTax (2026) + Amnesty Guide](https://smartvatkenya.co.ke/resources/nil-returns-tax-amnesty) — Step-by-step guide to filing nil VAT returns on KRA iTax, how they interact with the 2026 tax amnesty, and common mistakes that trigger KRA queries.
-- [Safaricom Not Working? Fix It Now — Status & M-Pesa Workarounds](https://smartvatkenya.co.ke/resources/safaricom-not-working) — Safaricom network or M-Pesa down? Check the current outage status, how downtime affects M-Pesa payments and KRA VAT remittance, and what to do.
-- [Small Taxpayer Regime Kenya 2026 — VAT & TOT Guide](https://smartvatkenya.co.ke/resources/small-taxpayer-regime-kenya) — Kenya's small taxpayer regime explained: turnover tax vs VAT, registration thresholds, simplified rules, and which regime suits your business.
-- [TCC Certificate Kenya 2026: Get Your KRA Tax Compliance Certificate Fast](https://smartvatkenya.co.ke/resources/tax-compliance-certificate-kenya) — How to get your KRA Tax Compliance Certificate (TCC) fast via iTax: requirements, eTIMS rules, nil return blocks, amnesty for old debt, validity, and common rejection reasons.
-- [KRA Auto-Populated VAT Return 2026 — What to Check](https://smartvatkenya.co.ke/resources/vat-auto-populated-return) — KRA auto-populates VAT returns with eTIMS sales data. Learn what's included, how to verify accuracy, correct errors, and avoid penalties for mismatched figures.
-- [VAT Bad Debt Relief Kenya 2026 — Refund on Unpaid Invoices](https://smartvatkenya.co.ke/resources/vat-bad-debt-refund-kenya) — Claim VAT back on unpaid invoices under Kenya's bad debt relief rules: eligibility, time limits, how to apply, and what happens if the customer later pays.
-- [VAT Deregistration Kenya 2026 — Cancel on iTax](https://smartvatkenya.co.ke/resources/vat-deregistration-kenya) — How to cancel your VAT registration in Kenya. When you can deregister, how to apply on iTax, what happens to your eTIMS device, and outstanding returns.
-- [VAT on Digital Services in Kenya 2026 — Complete Guide](https://smartvatkenya.co.ke/resources/vat-digital-services-kenya) — VAT on digital services in Kenya covers SaaS, e-books, streaming, and courses. Learn who must register, the 16% rate, and compliance for foreign providers.
-- [VAT on Fintech & Digital Payments Kenya 2026](https://smartvatkenya.co.ke/resources/vat-fintech-digital-payments-kenya) — How VAT applies to fintech in Kenya: 16% on mobile money (M-Pesa) fees, payment commissions, merchant charges, and KRA compliance for digital payments.
-- [VAT for Construction & Real Estate Kenya 2026](https://smartvatkenya.co.ke/resources/vat-for-construction-real-estate-kenya) — VAT for construction and real estate in Kenya: reverse VAT on imported services, mixed-use apportionment, contractor obligations, and recent court rulings.
-- [VAT for Importers in Kenya 2026 — Import VAT Guide](https://smartvatkenya.co.ke/resources/vat-for-importers-kenya) — Complete guide to import VAT in Kenya: rates, customs clearance, VAT deferment, what to do if you overpay, and compliance requirements for regular importers.
-- [VAT for Landlords Kenya 2026 — Do I Charge VAT on Rent?](https://smartvatkenya.co.ke/resources/vat-for-landlords-kenya) — Do landlords charge VAT on rental income in Kenya? Learn when commercial rent exceeds the KES 5M threshold, VAT exemptions, and registration requirements.
-- [VAT for NGOs in Kenya 2026 — Exemptions & Compliance](https://smartvatkenya.co.ke/resources/vat-for-ngos-kenya) — VAT rules for NGOs and charities in Kenya: which supplies are exempt, how to claim refunds, compliance obligations, and mistakes that trigger KRA audits.
-- [VAT for Restaurants & Hospitality in Kenya 2026 Guide](https://smartvatkenya.co.ke/resources/vat-for-restaurants-hospitality) — VAT rules for restaurants, hotels, and hospitality businesses in Kenya. Rates for food vs alcohol, eTIMS requirements, and input VAT on perishable supplies.
-- [VAT for Startups & Tech Businesses Kenya 2026](https://smartvatkenya.co.ke/resources/vat-for-startups-tech-businesses) — VAT compliance guide for Kenyan startups and tech businesses: registration thresholds, digital services tax, input VAT on software, and early mistakes.
-- [VAT on Labour Outsourcing & Staff Costs Kenya 2026](https://smartvatkenya.co.ke/resources/vat-labour-outsourcing-kenya) — VAT on labour outsourcing and staff costs in Kenya: the distinction between supply of staff vs supply of services, with KRA guidance and tribunal cases.
-- [VAT Rates in Kenya 2026 — 16%, Zero-Rated & Exempt](https://smartvatkenya.co.ke/resources/vat-rates-kenya) — Kenya's VAT rates for 2026: 16% standard, zero-rated supplies (food, exports, medicine, agricultural inputs), exempt services (insurance, financial, education).
-- [VAT Threshold Kenya 2026 — KES 5M or 8M?](https://smartvatkenya.co.ke/resources/vat-threshold-kenya) — Kenya's VAT registration threshold is KES 5 million annual turnover. Learn who must register, the voluntary threshold debate, and late-registration penalties.
-- [VAT Refund Guide Kenya 2026 — How to Claim Your Money](https://smartvatkenya.co.ke/resources/vat-refund-guide-kenya) — How to claim a VAT refund from KRA. Amended return vs refund application, processing time, required documents, and common reasons for refund rejection.
-- [VAT Registration Checklist Kenya 2026 — Documents Needed](https://smartvatkenya.co.ke/resources/vat-registration-checklist) — Complete VAT registration checklist for Kenya: required documents, business details, tax agent appointment letter, and common application mistakes to avoid.
-- [VAT Return Filing Checklist Kenya 2026 — Monthly Guide](https://smartvatkenya.co.ke/resources/vat-return-filing-checklist) — Monthly VAT return filing checklist: sales data, input VAT documents, eTIMS reconciliation, common errors, and what to check before submitting on iTax.
-- [KRA VAT Special Table — Risks & How to Avoid Being Flagged](https://smartvatkenya.co.ke/resources/vat-special-table-risks) — The KRA VAT Special Table fast-tracks your refund but increases audit risk. Learn how it works, common triggers that get you flagged, and how to stay compliant.
-- [Turnover Tax vs VAT in Kenya — Which Applies to You 2026](https://smartvatkenya.co.ke/resources/vat-vs-turnover-tax) — Turnover tax (3% of gross sales) vs VAT (16%, input deductible) — which applies to your business? Thresholds, compliance burden, and switching rules.
-- [What Happens If I Don't Register for VAT in Kenya? 2026](https://smartvatkenya.co.ke/resources/what-happens-if-i-don-t-register-for-vat) — Penalties for failing to register for VAT in Kenya: backdated tax assessments, 5% late filing penalties, 1% monthly interest, and potential KRA prosecution.
-- [Withholding VAT Kenya 2026 — Complete Guide](https://smartvatkenya.co.ke/resources/withholding-vat-kenya) — Withholding VAT in Kenya requires buyers to deduct 2% VAT at source on certain supplies. Learn who must withhold, how to remit, and how suppliers claim credit.
-
+- VAT Registration — KES 5,000 flat
+- Monthly VAT Filing — KES 3,500/month
+- Penalty Waiver Application — KES 4,000
+- eTIMS onboarding guidance — included with registration
 
 ## Contact
-
 
 - WhatsApp: +254 721 725 958 (https://wa.me/254721725958)
 - Email: info@smartvatkenya.co.ke
 - Office: Pioneer House, Moi Avenue, Nairobi CBD, Kenya
-- Operating hours: Monday–Friday 08:00–18:00 EAT
+- Hours: Mon–Fri 08:00–18:00 EAT
+
+## Key Pages
+
+[Keep existing resource list — regenerate descriptions from FACTS where they mention thresholds/penalties]
