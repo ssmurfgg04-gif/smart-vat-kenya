@@ -16,7 +16,7 @@
 } from "@phosphor-icons/react/dist/ssr"
 import { RelatedLinks } from "@/components/related-links"
 import React from "react"
-import { FACTS } from "@/lib/vat-facts"
+import { FACTS } from "@/src/lib/vat-facts"
 
 const faqSchema = {
   "@context": "https://schema.org",
