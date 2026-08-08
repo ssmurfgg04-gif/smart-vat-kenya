@@ -253,6 +253,8 @@ export default function HomePage() {
             </div>
           </div>
 
+        </section>
+
         {/* ─── TRUST BAND ─── */}
       <section className="bg-canvas-alt border-y border-hairline py-5 px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-4">
