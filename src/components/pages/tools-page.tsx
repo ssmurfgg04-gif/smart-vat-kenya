@@ -264,7 +264,7 @@ export default function ToolsPage() {
               { href: "/resources/vat-vs-turnover-tax/", icon: Scales, label: "VAT vs Turnover Tax", desc: "Decision guide for choosing the right tax regime" },
               { href: "/resources/etims-compliance-checklist/", icon: ListChecks, label: "eTIMS Compliance Checklist", desc: "Daily, monthly, and annual eTIMS obligations" },
               { href: "/resources/withholding-vat-kenya/", icon: HandCoins, label: "Withholding Tax Guide", desc: "2% withholding VAT — how it works for agents and suppliers" },
-              { href: "/resources/etims-penalty-50000-per-month-kenya/", icon: WarningCircle, label: "eTIMS Penalty Guide", desc: "Higher of KES 1M or 10% of tax per non-compliant invoice (LN 64/2024)" },
+              { href: "/resources/etims-penalty-50000-per-month-kenya/", icon: WarningCircle, label: "eTIMS Penalty Guide", desc: "What TPA s.86 and s.59A(5) actually provide" },
               { href: "/resources/kra-tax-amnesty-2026/", icon: WarningCircle, label: "Tax Amnesty Savings Guide", desc: "How to save 100% on penalties and interest before Dec 31", badge: "Deadline Dec 31" },
             ].map((t) => (
               <a key={t.href} href={t.href} className="border border-hairline rounded-lg p-4 group hover:border-ink/15 hover:shadow-sm transition-all flex flex-col gap-1.5">

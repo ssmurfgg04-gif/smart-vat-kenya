@@ -201,9 +201,9 @@ export const DEFAULT_RULES: Rule[] = [
   {
     id: "etims-invoice-penalty",
     title: "eTIMS non-compliance penalties",
-    keywords: ["etims", "penalty", "invoice", "non-compliance", "1 million", "500,000", "s.86", "regulation", "integrate", "device"],
-    body: "Failing to issue a compliant electronic tax invoice attracts the higher of KES 1,000,000 or 10% of the tax involved per transaction (Tax Procedures (Electronic Tax Invoice) Regulations, LN 64/2024), and failure to keep/issue the required invoices is also exposed to TPA s.86 (higher of KES 100,000 or 2x the tax). A business notified to integrate its data-management system with KRA's electronic system that fails to comply is liable to a penalty of KES 500,000 per month. These are on top of VAT late-filing/late-payment penalties.",
-    source: "TPA 2015 (s.86) / TPA (ETI) Regulations LN 64/2024",
+    keywords: ["etims", "penalty", "invoice", "non-compliance", "s.86", "s.59A", "regulation", "integrate", "device", "5%", "tax due"],
+    body: "A person carrying on business must issue electronic tax invoices through the eTIMS system (TPA s.23A; Tax Procedures (Electronic Tax Invoice) Regulations, LN 64/2024, reg 12 refers breaches to s.86). For failing to issue an electronic tax invoice, file a return electronically or pay tax electronically, the penalty under TPA s.86 as amended by the Finance Act 2026 (effective 1 July 2026) is the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals - applied after the Commissioner issues a notice and considers whether the failure was beyond the taxpayer's control and whether reasonable steps to comply were taken. From 1 September 2023 to 30 June 2026 the s.86 penalty was two times the tax due (Finance Act 2023). Separately, a business with turnover above KES 5 million that the Commissioner has notified to integrate its system with KRA's data management and reporting system (TPA s.59A(1A)) and that fails to comply is liable, on conviction, to a penalty not exceeding KES 100,000 for every month or part thereof (TPA s.59A(5)). Figures circulating such as KES 500,000 per month or KES 1 million or 10% of the tax were proposals in the 2023/2024 bills and were never enacted. These penalties are on top of late-filing and late-payment penalties.",
+    source: "TPA 2015 (s.86, s.59A) / Finance Act 2026 / Finance Act 2023 / LN 64/2024",
   },
   {
     id: "etims-mandate-all-businesses",

@@ -102,7 +102,7 @@ export default function VatDeregistrationPost() {
           <p>
             Crucially, KRA must approve your deregistration application. You cannot simply stop filing
             returns and assume your registration has lapsed — if you do, you will continue accruing
-            late-filing penalties and the eTIMS non-compliance exposure (higher of KES 1,000,000 or 10% of the tax per non-compliant invoice, LN 64/2024).
+            late-filing penalties and the eTIMS non-compliance exposure (TPA s.86: the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals).
           </p>
 
           <div className="border border-amber-200 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-800/40 rounded-lg p-4 flex items-start gap-3">

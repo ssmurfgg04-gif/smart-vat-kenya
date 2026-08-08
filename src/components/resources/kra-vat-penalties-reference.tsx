@@ -18,7 +18,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "KRA VAT Penalties Kenya 2026: The Complete Reference Table",
   description:
-    "Complete KRA VAT penalties reference for Kenya 2026. Late filing: KES 10,000 or 5%. Non-registration: up to KES 100,000. eTIMS: higher of KES 1M or 10% per non-compliant invoice (LN 64/2024). Late payment: 5% + 1%/month interest.",
+    "Complete KRA VAT penalties reference for Kenya 2026. Late filing: KES 10,000 or 5%. Non-registration: up to KES 100,000. eTIMS e-invoice failure: higher of 5% of tax due, KES 100,000 (companies), or KES 10,000 (individuals) (TPA s.86). Integration failure: up to KES 100,000/month (s.59A(5)). Late payment: 5% + 1%/month interest.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-01-15",
@@ -52,7 +52,7 @@ const faqSchema = {
       name: "What is the KRA eTIMS penalty for non-compliance?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "KRA imposes eTIMS penalties on several bases. Issuing a non-compliant electronic tax invoice attracts the higher of KES 1,000,000 or 10% of the tax involved in the transaction per invoice (Tax Procedures (Electronic Tax Invoice) Regulations, LN 64/2024). Failure to keep or issue the required invoices is also exposed to TPA s.86, the higher of KES 100,000 or twice the tax. A business notified to integrate its data-management system with KRA's electronic system that fails to comply pays KES 500,000 per month. A KES 50,000-per-month figure circulates in some business guidance but is not a standalone statutory penalty under the ETI Regulations.",
+        text: "KRA imposes eTIMS penalties on several bases. Since the Finance Act 2026 (in force 1 July 2026), failing to issue compliant electronic tax invoices or to file/pay electronically attracts the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals under TPA s.86 (before then, two times the tax due applied per the Finance Act 2023). The Tax Procedures (Electronic Tax Invoice) Regulations, LN 64/2024, refer breaches to s.86. Separately, a notified business with turnover above KES 5 million that fails to integrate its data-management system faces up to KES 100,000 per month under TPA s.59A(5). Figures like KES 500,000 per month or KES 1M/10% per invoice circulate in some guidance but are not enacted law. A KES 50,000-per-month figure is also not a standalone penalty under the ETI Regulations.",
       },
     },
     {
@@ -126,21 +126,15 @@ const penaltyRows = [
     interest: "1% per month on unpaid tax",
   },
   {
-    type: "eTIMS non-compliant invoice",
-    law: "LN 64/2024",
-    penalty: "Higher of KES 1,000,000 or 10% of the tax involved per non-compliant invoice",
+    type: "eTIMS non-compliant invoice / electronic filing & payment",
+    law: "TPA s.86 (as amended by Finance Act 2026, in force 1 July 2026) / LN 64/2024",
+    penalty: "Higher of 5% of the tax due, KES 100,000 (companies) or KES 10,000 (individuals). Before 1 July 2026: two times the tax due (Finance Act 2023).",
     interest: "Not applicable",
   },
   {
-    type: "Failure to issue/keep eTIMS invoices",
-    law: "TPA s.86",
-    penalty: "Higher of KES 100,000 or twice (2x) the tax",
-    interest: "Not applicable",
-  },
-  {
-    type: "eTIMS system integration failure",
-    law: "TPA s.25(12)",
-    penalty: "KES 500,000 per month after written notice to integrate",
+    type: "eTIMS system integration failure (after written notice, turnover above KES 5m)",
+    law: "TPA s.59A(5)",
+    penalty: "Not exceeding KES 100,000 for every month or part thereof that the failure continues",
     interest: "Not applicable",
   },
   {
@@ -192,7 +186,7 @@ export default function KRAPenaltiesReferencePage() {
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">At a Glance</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
             KRA imposes <strong className="text-ink">nine distinct categories</strong> of VAT penalties ranging from{" "}
-            <strong className="text-ink">KES 10,000</strong> fixed fines to <strong className="text-ink">KES 500,000 per month</strong> for eTIMS integration failures. Late filing, late payment, non-registration, evasion, eTIMS non-compliance, blocked input VAT, and withholding agent defaults are all penalised at different rates. Most penalties carry <strong className="text-ink">1% monthly interest</strong> and can be <strong className="text-ink">waived</strong> through a formal application on iTax. This guide lists every penalty, explains how they stack, and shows you how to get help.
+            <strong className="text-ink">KES 10,000</strong> fixed fines to <strong className="text-ink">KES 100,000 per month</strong> for eTIMS integration failures (TPA s.59A(5)) and up to <strong className="text-ink">KES 100,000</strong> or <strong className="text-ink">5% of the tax due</strong> for e-invoicing failures (TPA s.86). Late filing, late payment, non-registration, evasion, eTIMS non-compliance, blocked input VAT, and withholding agent defaults are all penalised at different rates. Most penalties carry <strong className="text-ink">1% monthly interest</strong> and can be <strong className="text-ink">waived</strong> through a formal application on iTax. This guide lists every penalty, explains how they stack, and shows you how to get help.
           </p>
         </div>
 
@@ -270,7 +264,7 @@ export default function KRAPenaltiesReferencePage() {
                   eTIMS penalties are actively enforced
                 </p>
                 <p className="text-[0.83rem] text-[#8a6500] dark:text-[#ccaa33] leading-relaxed">
-                  KRA has been conducting physical and virtual compliance audits specifically targeting eTIMS usage. The KES 500,000 per month integration penalty is not theoretical — KRA has issued these assessments to businesses that failed to integrate their point-of-sale or accounting systems within the required timeline. Ensure your system is connected to eTIMS and that every taxable supply generates an eTIMS invoice.
+                  KRA has been conducting physical and virtual compliance audits specifically targeting eTIMS usage. The e-invoicing penalty (up to KES 100,000 or 5% of the tax due for companies, under TPA s.86) and the up-to-KES 100,000-per-month integration penalty (TPA s.59A(5)) are not theoretical — KRA has issued these assessments to businesses that failed to integrate their point-of-sale or accounting systems within the required timeline. Ensure your system is connected to eTIMS and that every taxable supply generates an eTIMS invoice.
                 </p>
               </div>
             </div>
@@ -293,10 +287,10 @@ export default function KRAPenaltiesReferencePage() {
                     "Late filing penalty: KES 10,000 per month x 3 months = KES 30,000 (higher than 5% of KES 120,000 which would be KES 6,000 per month).",
                     "Late payment penalty: 5% of KES 120,000 = KES 6,000 (one-time charge on the unpaid amount).",
                     "Late payment interest: 1% per month on KES 120,000 = KES 1,200 per month x 3 months = KES 3,600.",
-                    "eTIMS invoice non-compliance: higher of KES 1,000,000 or 10% of KES 120,000 = KES 1,000,000 per affected invoice. If ABC issued 100 invoices without eTIMS, this escalates fast — even one drives the total above anything recoverable by way of modest monthly charges.",
-                    "Total penalties and interest (before eTIMS invoice exposure): KES 30,000 + KES 6,000 + KES 3,600 = KES 39,600.",
-                    "If a single invoice was issued outside eTIMS, the LN 64/2024 penalty alone is KES 1,000,000 (higher of 1M or 10% of the KES 120,000 tax involved).",
-                    "Total KRA liability after three months with one non-compliant invoice: KES 360,000 VAT + KES 39,600 late-filing/late-payment + KES 1,000,000 = KES 1,399,600.",
+                    "eTIMS invoice non-compliance (a company): TPA s.86 penalty is the higher of 5% of the tax due or KES 100,000 = KES 100,000 per failure (5% of KES 120,000 is only KES 6,000).",
+                    "Total penalties and interest (before eTIMS exposure): KES 30,000 + KES 6,000 + KES 3,600 = KES 39,600.",
+                    "If a single invoice was issued outside eTIMS, the s.86 penalty for a company is KES 100,000 (higher of 5% of the KES 120,000 tax due or the KES 100,000 corporate floor).",
+                    "Total KRA liability after three months with one non-compliant invoice: KES 360,000 VAT + KES 39,600 late-filing/late-payment + KES 100,000 = KES 499,600.",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <CheckCircle size={15} weight="fill" className="text-brand shrink-0 mt-1" aria-hidden="true" />
@@ -307,13 +301,13 @@ export default function KRAPenaltiesReferencePage() {
               </div>
               <p>
                 In this example, the core late-filing, late-payment, and interest amounts are
-                <strong className="text-ink">KES 39,600</strong> for three months of non-filing. The
-                step change comes from a single eTIMS invoice issued outside the system: the
-                LN 64/2024 penalty (higher of <strong className="text-ink">KES 1,000,000 or 10% of the
-                tax per invoice</strong>) multiplies the bill by more than two and a half. This is why{" "}
+                <strong className="text-ink">KES 39,600</strong> for three months of non-filing. A single
+                eTIMS invoice issued outside the system adds a
+                TPA s.86 penalty of <strong className="text-ink">KES 100,000</strong> for a company
+                (the higher of 5% of the tax due or the KES 100,000 corporate floor). This is why{" "}
                 <strong className="text-ink">proactive compliance</strong> and <strong className="text-ink">early resolution</strong>{" "}
-                are critical. The moment an eTIMS invoice is missed, the exposure is no longer a monthly
-                charge — it is a per-invoice six-figure sum.
+                are critical. The moment an eTIMS invoice is missed, the exposure jumps by a fixed
+                corporate-floor sum — not a small monthly charge.
               </p>
               <p>
                 If ABC Traders had filed on time, paid on time, and issued every invoice through eTIMS, their
@@ -422,7 +416,7 @@ export default function KRAPenaltiesReferencePage() {
                   },
                   {
                     title: "Register for eTIMS and integrate your system",
-                    desc: "KRA requires all VAT-registered businesses to use eTIMS. Register immediately if you have not done so. Integrate your POS or accounting software so every invoice carries an eTIMS control number. The most expensive eTIMS exposure is the LN 64/2024 penalty — the higher of KES 1,000,000 or 10% of the tax — applied per non-compliant invoice.",
+                    desc: "KRA requires all VAT-registered businesses to use eTIMS. Register immediately if you have not done so. Integrate your POS or accounting software so every invoice carries an eTIMS control number. The most expensive eTIMS exposure is the TPA s.86 penalty — the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals).",
                   },
                   {
                     title: "Register for VAT as soon as you exceed KES 5 million turnover",

@@ -9,11 +9,11 @@ function formatKES(n: number) {
   return "KES " + Math.round(n).toLocaleString("en-KE")
 }
 
-const ETIMS_FINE_PER_MONTH = 500000
+const ETIMS_FINE_PER_MONTH = 100000
 const LATE_FILING_FLAT = 10000
 const LATE_FILING_RATE = 0.05
 const INTEREST_RATE = 0.01
-const INVOICE_FINE = 1000000
+const INVOICE_FINE = 100000
 
 export function EtimsPenaltyCalculator() {
   const [monthsNonCompliant, setMonthsNonCompliant] = useState("0")
@@ -32,7 +32,6 @@ export function EtimsPenaltyCalculator() {
   const interest = vat * INTEREST_RATE * mLate
   const invoicePenalties = inv * INVOICE_FINE
   const total = etimsNonCompliance + lateFiling + interest + invoicePenalties
-
   const hasAny = mNon > 0 || mLate > 0 || inv > 0 || vat > 0
   const waText = encodeURIComponent(
     `Hi, I used the eTIMS penalty calculator and my estimated exposure is approx ${formatKES(total)}. I need help getting my eTIMS compliance in order.`,
@@ -54,7 +53,7 @@ export function EtimsPenaltyCalculator() {
       <div className="border border-hairline rounded-lg overflow-hidden divide-y divide-hairline">
         <div className="p-5">
           <label htmlFor="etims-months" className={`${labelCls} flex items-baseline justify-between`}>
-            <span>Months your system was not integrated after a KRA notice (TPA s.25(12))</span>
+            <span>Months your system was not integrated after a KRA notice (TPA s.59A(5))</span>
             <span className="font-display text-[1rem] font-semibold text-ink tabular-nums">{mNon}</span>
           </label>
           <input
@@ -68,7 +67,7 @@ export function EtimsPenaltyCalculator() {
           />
           <div className="flex justify-between text-[0.7rem] text-ink-muted mt-1.5">
             <span>0 months</span>
-            <span>KES 500,000 / month</span>
+            <span>up to KES 100,000 / month</span>
             <span>12 months</span>
           </div>
         </div>
@@ -124,7 +123,7 @@ export function EtimsPenaltyCalculator() {
           />
           <div className="flex justify-between text-[0.7rem] text-ink-muted mt-1.5">
             <span>0 invoices</span>
-            <span>KES 1,000,000 / invoice (or 10% of the tax, whichever is higher)</span>
+            <span>up to KES 100,000 (or 5% of the tax, higher) per failure</span>
             <span>20</span>
           </div>
         </div>
@@ -140,8 +139,8 @@ export function EtimsPenaltyCalculator() {
               <dl className="space-y-3">
                 <div className="flex items-baseline justify-between">
                   <dt className="text-[0.78rem] text-ink-muted">
-                    System non-integration (TPA s.25(12))
-                    <span className="block text-[0.65rem]">{mNon} month(s) &times; KES 500,000</span>
+                    System non-integration (TPA s.59A(5))
+                    <span className="block text-[0.65rem]">{mNon} month(s) &times; up to KES 100,000</span>
                   </dt>
                   <dd className="font-mono text-[0.88rem] text-ink tabular-nums">{formatKES(etimsNonCompliance)}</dd>
                 </div>
@@ -163,8 +162,8 @@ export function EtimsPenaltyCalculator() {
                 </div>
                 <div className="flex items-baseline justify-between">
                   <dt className="text-[0.78rem] text-ink-muted">
-                    Non-compliant invoices
-                    <span className="block text-[0.65rem]">{inv} invoice(s) &times; KES 1,000,000 (or 10% of the tax involved — whichever is higher)</span>
+                    Non-compliant invoices (TPA s.86)
+                    <span className="block text-[0.65rem]">{inv} failure(s) &times; up to KES 100,000 (or 5% of the tax involved — whichever is higher)</span>
                   </dt>
                   <dd className="font-mono text-[0.88rem] text-ink tabular-nums">{formatKES(invoicePenalties)}</dd>
                 </div>
@@ -223,7 +222,7 @@ export function EtimsPenaltyCalculator() {
 
       <p className="mt-3 text-[0.72rem] text-ink-muted leading-relaxed flex items-start gap-1.5">
         <Info size={12} className="shrink-0 mt-0.5" aria-hidden="true" />
-        Indicative estimates based on the 2026 legal footing: KES 500,000/month for failing to integrate a data-management system after a written KRA notice (TPA s.25(12)); KES 1,000,000 or 10% of the tax — whichever is higher — per non-compliant electronic tax invoice (Tax Procedures (Electronic Tax Invoice) Regulations, LN 64/2024); and KES 10,000 or 5% of tax due (whichever higher) plus 1% monthly interest for late filing. TPA s.86 also exposes failures to the higher of KES 100,000 or twice the tax. KRA may assess additional amounts; this is not tax advice.
+        Indicative estimates on the current legal footing: up to KES 100,000 per month for failing to integrate a data-management system after a written KRA notice (TPA s.59A(5), applies to taxpayers with turnover above KES 5m); for e-invoice failures, the higher of 5% of the tax due or KES 100,000 for companies (KES 10,000 for individuals) (TPA s.86, as amended by Finance Act 2026, effective 1 July 2026); and the higher of KES 10,000 or 5% of tax due, plus 1% monthly interest, for late filing. Before 1 July 2026 the s.86 penalty was twice the tax due. This is indicative, not tax advice.
       </p>
     </section>
   )

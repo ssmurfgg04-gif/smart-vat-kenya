@@ -20,8 +20,8 @@ Smart VAT Kenya handles KRA VAT compliance end-to-end for small and medium-sized
 - Monthly filing deadline: **20th of the following month** (nil returns included)
 - Late-filing penalty: **KES 10,000 fixed** + 5% of tax due + 1% monthly interest (whichever is higher)
 - Late payment penalty: **5% of unpaid tax** + 1% interest per month
-- eTIMS non-compliance: **KES 50,000 per month** (separate from VAT penalties)
-- eTIMS system integration failure: **KES 500,000 per month**
+- eTIMS non-compliance / e-invoice failure: **higher of 5% of tax due, KES 100,000 (companies), or KES 10,000 (individuals)** (TPA s.86, since FA2026; previously 2x tax due)
+- eTIMS integration failure: **up to KES 100,000 per month** (TPA s.59A(5), turnover above KES 5 million)
 - Zero-rated supplies (0%): exports, basic foodstuffs, medical equipment, water
 - Exempt supplies: financial services, education, residential property rental
 - VAT returns filed via: **KRA iTax portal** (itax.kra.go.ke)
@@ -33,7 +33,7 @@ Smart VAT Kenya handles KRA VAT compliance end-to-end for small and medium-sized
 ## Pages
 
 - [Free KRA Tax Tools — VAT, Penalty & eTIMS Calculators](https://smartvatkenya.co.ke/tools/) — VAT calculator, KRA penalty estimator for all 6 tax regimes, eTIMS penalty calculator, amnesty savings calculator, iTax error diagnosis, and the VAT registration quiz.
-- [eTIMS Penalty Calculator Kenya 2026](https://smartvatkenya.co.ke/tools/etims-penalty-calculator/) — Estimate your KRA exposure: KES 50,000/month for eTIMS non-compliance, late-filing penalties (KES 10,000 or 5% + 1%/month), and KES 100,000 per non-compliant invoice.
+- [eTIMS Penalty Calculator Kenya 2026](https://smartvatkenya.co.ke/tools/etims-penalty-calculator/) — Estimate your KRA exposure: e-invoice penalties (TPA s.86: 5%, KES 100,000 company / KES 10,000 individual), integration failure (up to KES 100,000/month, s.59A(5)), and late-filing penalties (KES 10,000 or 5% + 1%/month).
 - [Do I Need to Register for VAT Kenya? Threshold & Rules 2026](https://smartvatkenya.co.ke/resources/do-i-need-to-register-for-vat-kenya) — Unsure if your business needs VAT registration? Learn the KES 5M threshold, penalties for late registration, and how to check your obligation.
 - [eTIMS Account Locked? Unlock It Now (Kenya 2026)](https://smartvatkenya.co.ke/resources/etims-account-locked) — Your eTIMS device is locked after 7 days without syncing. Learn why KRA locks accounts, how to unlock via Device Management, and avoid future lockouts.
 - [eTIMS Compliance Checklist Kenya 2026 — Daily & Monthly](https://smartvatkenya.co.ke/resources/etims-compliance-checklist) — KRA eTIMS compliance checklist covering daily sales uploads, device maintenance, invoice issuance, and stock reconciliation. Audit-ready in 10 minutes.

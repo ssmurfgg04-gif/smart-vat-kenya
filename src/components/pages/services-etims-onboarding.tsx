@@ -108,7 +108,7 @@ const comparisons = [
 const faqs = [
   {
     q: "What is eTIMS and why do I need it?",
-    a: "eTIMS (Electronic Tax Invoice Management System) is KRA's mandatory system for issuing electronic tax invoices in Kenya. If you are registered for VAT, you must issue eTIMS-compliant invoices for every sale to a registered person. A non-compliant invoice attracts the higher of KES 1,000,000 or 10% of the tax (LN 64/2024) — separate from any VAT penalties.",
+    a: "eTIMS (Electronic Tax Invoice Management System) is KRA's mandatory system for issuing electronic tax invoices in Kenya. If you are registered for VAT, you must issue eTIMS-compliant invoices for every sale to a registered person. A non-compliant invoice attracts the TPA s.86 penalty — since 1 July 2026, the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals) — separate from any VAT penalties.",
   },
   {
     q: "Can I use the eTIMS mobile app for free?",
@@ -132,7 +132,7 @@ const faqs = [
   },
   {
     q: "Are the eTIMS penalties really enforced?",
-    a: "Yes. KRA has been actively enforcing eTIMS compliance since 2024. The legal bases are the Tax Procedures (Electronic Tax Invoice) Regulations (LN 64/2024) — the higher of KES 1,000,000 or 10% of the tax per non-compliant invoice — and the Tax Procedures Act, s.25(12) (KES 500,000 per month for failing to integrate a data-management system after written notice). These are distinct from late-filing or late-payment penalties. We have seen businesses receive these assessments firsthand — do not ignore eTIMS compliance.",
+    a: "Yes. KRA has been actively enforcing eTIMS compliance since 2024. The legal bases are the Tax Procedures Act — TPA s.86 (since the Finance Act 2026, the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals, for e-invoice failure) and TPA s.59A(5) (up to KES 100,000 per month for failing to integrate a data-management system after written notice, for turnover above KES 5 million). These are distinct from late-filing or late-payment penalties. We have seen businesses receive these assessments firsthand — do not ignore eTIMS compliance.",
   },
   {
     q: "Do I need a smartphone to use eTIMS?",
@@ -232,7 +232,7 @@ export default function ETIMSOnboardingPage() {
         <div className="max-w-[1400px] mx-auto flex items-start gap-3">
           <WarningCircle size={18} weight="fill" className="text-red-500 shrink-0 mt-0.5" aria-hidden="true" />
           <p className="text-[0.85rem] text-red-800 leading-relaxed">
-            <strong className="font-semibold">Higher of KES 1,000,000 or 10% of the tax</strong> per non-compliant eTIMS invoice (LN 64/2024), and <strong className="font-semibold">KES 500,000 per month</strong> for system non-integration after a written notice — separate from VAT penalties. KRA has been actively enforcing this since 2024.
+            <strong className="font-semibold">TPA s.86</strong> e-invoice failure penalties (higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals, since 1 July 2026), and <strong className="font-semibold">up to KES 100,000 per month</strong> for system non-integration after a written notice (TPA s.59A(5)) — separate from VAT penalties. KRA has been actively enforcing this since 2024.
           </p>
         </div>
       </div>

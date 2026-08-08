@@ -41,11 +41,11 @@ const faqs = [
   },
   {
     q: "What happens if I do not onboard eTIMS within 30 days of VAT registration?",
-    a: "The penalties with clear legal footing sit in the Tax Procedures (Electronic Tax Invoice) Regulations (LN 64/2024) and the TPA: issuing a non-compliant electronic tax invoice costs the higher of KES 1,000,000 or 10% of the tax involved per invoice (LN 64/2024); failing to keep or issue the required invoices is exposed to TPA s.86 (higher of KES 100,000 or twice the tax); and failing to integrate a data-management system after written notice costs KES 500,000 per month. Some guidance quotes a KES 50,000-per-month figure, but that is not a standalone statutory penalty under the ETI Regulations — budget for the per-invoice exposure, which is far larger.",
+    a: "The penalties with clear legal footing sit in the Tax Procedures Act: issuing a non-compliant electronic tax invoice is exposed to TPA s.86 — since the Finance Act 2026 (in force 1 July 2026) the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals), and before that two times the tax due (the ETI Regulations LN 64/2024 refer breaches to s.86); and failing to integrate a data-management system after written notice costs up to KES 100,000 per month (TPA s.59A(5), for taxpayers with turnover above KES 5 million). Figures like KES 1,000,000 or 10% of the tax per invoice, KES 50,000 per month, or KES 500,000 per month circulate in some guidance but are not standalone statutory penalties under the enacted law.",
   },
   {
     q: "What is the penalty for issuing a non-eTIMS invoice?",
-    a: "Issuing an invoice that fails to comply with eTIMS requirements attracts the higher of KES 1,000,000 or 10% of the tax involved per invoice under the Tax Procedures (Electronic Tax Invoice) Regulations, LN 64/2024. It is also exposed to TPA s.86 (higher of KES 100,000 or twice the tax). This applies to handwritten receipts, parallel invoicing, or any attempt to bypass the eTIMS system — and KRA denies input VAT on any purchase not backed by a compliant eTIMS invoice.",
+    a: "Issuing an invoice that fails to comply with eTIMS requirements exposes you to TPA s.86 — since the Finance Act 2026 (in force 1 July 2026) the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals); before that, two times the tax due. This applies to handwritten receipts, parallel invoicing, or any attempt to bypass the eTIMS system — and KRA denies input VAT on any purchase not backed by a compliant eTIMS invoice.",
   },
   {
     q: "Can I claim input VAT on a purchase if the supplier did not use eTIMS?",
@@ -152,7 +152,7 @@ export default function EtimsMandateGuide() {
               <li><strong>Small taxpayer regime:</strong> Businesses on turnover tax still need eTIMS for invoicing</li>
             </ul>
             <p>
-              <strong>Onboarding:</strong> once you are required to operate eTIMS (VAT-registered or otherwise in scope), onboard without delay. Issuing a non-compliant invoice attracts the higher of KES 1,000,000 or 10% of the tax per invoice under the ETI Regulations (LN 64/2024), plus TPA s.86 exposure.
+              <strong>Onboarding:</strong> once you are required to operate eTIMS (VAT-registered or otherwise in scope), onboard without delay. Issuing a non-compliant invoice attracts the TPA s.86 penalty — the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals) since 1 July 2026 (previously two times the tax due).
             </p>
 
             <h2>eTIMS Onboarding: What You Need to Do</h2>
@@ -218,9 +218,8 @@ export default function EtimsMandateGuide() {
             <h2>Penalties and Enforcement in 2026</h2>
             <p>eTIMS penalties rest on two legal foundations — the Tax Procedures (Electronic Tax Invoice) Regulations (LN 64/2024) and the Tax Procedures Act. Structure:</p>
             <ul>
-              <li><strong>Higher of KES 1,000,000 or 10% of the tax involved</strong> per non-compliant electronic tax invoice (LN 64/2024) — applied to handwritten, non-eTIMS, or parallel invoicing, and to invoices with missing fields</li>
-              <li><strong>Higher of KES 100,000 or twice the tax</strong> for failing to keep or issue the required invoices (TPA s.86)</li>
-              <li><strong>KES 500,000 per month</strong> for failing to integrate a data-management system with KRA's electronic system once notified (TPA s.25(12))</li>
+              <li><strong>Higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals)</strong> per e-invoice failure (TPA s.86, since Finance Act 2026 / 1 July 2026; previously two times the tax due) — applied to handwritten, non-eTIMS, or parallel invoicing, and to invoices with missing fields</li>
+              <li><strong>Up to KES 100,000 per month</strong> for failing to integrate a data-management system with KRA's electronic system once notified (TPA s.59A(5), for taxpayers with turnover above KES 5 million)</li>
               <li><strong>Input VAT denial:</strong> Indirect penalty — non-eTIMS purchases result in denied input VAT, increasing your net VAT payable</li>
               <li><strong>Stock report non-compliance:</strong> Late or missing stock reports can trigger an audit and penalties</li>
             </ul>

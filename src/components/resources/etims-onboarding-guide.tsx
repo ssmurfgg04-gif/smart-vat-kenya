@@ -54,7 +54,7 @@ const faqSchema = {
       name: "What is the penalty for not registering for eTIMS in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The eTIMS penalties with clear legal footing are: higher of KES 1,000,000 or 10% of the tax involved per non-compliant invoice (Tax Procedures (Electronic Tax Invoice) Regulations, LN 64/2024); higher of KES 100,000 or twice the tax for failing to keep or issue the required invoices (TPA s.86); and KES 500,000 per month for failing to integrate a data-management system once notified (TPA s.25(12)). Additionally, input VAT claims are blocked for invoices not transmitted through eTIMS. A KES 50,000-per-month figure circulates in some guidance but is not a standalone statutory penalty under the ETI Regulations.",
+        text: "The eTIMS penalties with clear legal footing are: since the Finance Act 2026 (in force 1 July 2026), the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals) for failing to issue compliant electronic tax invoices or to file/pay electronically (TPA s.86; previously two times the tax due); and up to KES 100,000 per month for failing to integrate a data-management system once notified (TPA s.59A(5), for taxpayers with turnover above KES 5 million). Additionally, input VAT claims are blocked for invoices not transmitted through eTIMS. Figures like KES 1,000,000 or 10% of the tax per invoice, KES 500,000 per month, or KES 50,000 per month circulate in some guidance but are not standalone statutory penalties under the enacted law.",
       },
     },
     {
@@ -78,7 +78,7 @@ const faqSchema = {
       name: "Can I integrate eTIMS with my existing POS system?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. KRA provides the Virtual Sales Control Unit (VSCU) and Online Sales Control Unit (OSCU) API for businesses with existing POS or ERP systems. Your software developer integrates the KRA eTIMS SDK into your system so that every sale automatically generates an eTIMS-compliant invoice. If integration fails or you operate without it after the deadline, the penalty is KES 500,000 per month.",
+        text: "Yes. KRA provides the Virtual Sales Control Unit (VSCU) and Online Sales Control Unit (OSCU) API for businesses with existing POS or ERP systems. Your software developer integrates the KRA eTIMS SDK into your system so that every sale automatically generates an eTIMS-compliant invoice. If integration fails or you operate without it after the deadline, you face up to KES 100,000 per month under TPA s.59A(5) (for turnover above KES 5 million, on conviction) plus the TPA s.86 e-invoice penalties.",
       },
     },
     {
@@ -142,7 +142,7 @@ export default function ETIMSOnboardingPage() {
             <strong className="text-ink">eTIMS Lite</strong> (free, web-based), <strong className="text-ink">eTIMS Client</strong> (desktop app),{" "}
             <strong className="text-ink">eTIMS Trader</strong> (importers), or <strong className="text-ink">VSCU/OSCU</strong> (POS integration). Registration is done on the{" "}
             <strong className="text-ink">KRA iTax portal</strong>, and failing to issue compliant invoices attracts penalties under the
-            ETI Regulations (higher of <strong className="text-ink">KES 1,000,000 or 10% of the tax per invoice</strong>) and TPA s.86.
+            ETI Regulations (which refer breaches to TPA s.86 — the higher of <strong className="text-ink">5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals)</strong> since 1 July 2026) and TPA s.86.
           </p>
         </div>
 
@@ -458,9 +458,9 @@ export default function ETIMSOnboardingPage() {
                   </thead>
                   <tbody className="divide-y divide-hairline">
                     {[
-                      { off: "Non-compliant eTIMS invoice issued (incl. unregistered / outside-system sales)", cost: "Higher of KES 1,000,000 or 10% of tax per invoice (LN 64/2024)" },
-                      { off: "Failure to keep or issue required invoices", cost: "Higher of KES 100,000 or 2x tax (TPA s.86)" },
-                      { off: "System integration not completed after written notice", cost: "KES 500,000 per month (TPA s.25(12))" },
+                      { off: "Non-compliant eTIMS invoice issued (incl. unregistered / outside-system sales)", cost: "Higher of 5% of tax due, KES 100,000 (companies) or KES 10,000 (individuals) (TPA s.86)" },
+                      { off: "Failure to keep or issue required invoices", cost: "Higher of 5% of tax due, KES 100,000 (companies) or KES 10,000 (individuals) (TPA s.86)" },
+                      { off: "System integration not completed after written notice", cost: "Up to KES 100,000 per month (TPA s.59A(5))" },
                       { off: "Issuing invoices outside eTIMS", cost: "Input VAT blocked + audit adjustment" },
                       { off: "Non-compliance found on audit", cost: "50% surcharge on additional assessment" },
                       { off: "Incorrect or incomplete invoice fields", cost: "KES 10,000 per invoice" },
@@ -591,7 +591,7 @@ export default function ETIMSOnboardingPage() {
                         <li className="list-disc">Step-by-step sign-up for Online Sales Control Unit (OSCU) and Virtual Sales Control Unit (VSCU)</li>
                         <li className="list-disc">API integration requirements and SDK documentation</li>
                         <li className="list-disc">Testing and certification process before going live</li>
-                        <li className="list-disc">Penalties for operating an uncertified system: KES 500,000 per month</li>
+                        <li className="list-disc">Penalties for operating without integration after notice: up to KES 100,000 per month (TPA s.59A(5))</li>
                       </ul>
                       <p className="pt-2">
                         <a href="/forms/kra-etims-oscu-vscu-guide.pdf" target="_blank" rel="noopener noreferrer"

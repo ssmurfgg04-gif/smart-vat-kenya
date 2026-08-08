@@ -145,7 +145,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "etims-down-offline-invoicing": {
     title: "KRA eTIMS Down? Invoice Offline Now — Avoid the 7-Day Lockout",
-    description: "KRA eTIMS down or offline? Keep issuing invoices now, sync when the portal recovers, and avoid the 7-day device lockout and eTIMS penalties (higher of KES 1M or 10% of tax per invoice).",
+    description: "KRA eTIMS down or offline? Keep issuing invoices now, sync when the portal recovers, and avoid the 7-day device lockout and eTIMS penalties (TPA s.86: higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals).",
     canonical: "/resources/etims-down-offline-invoicing/",
   },
   "etims-fuel-stations": {
@@ -179,8 +179,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/etims-pending-sync/",
   },
   "etims-penalty-50000-per-month-kenya": {
-    title: "eTIMS Penalties Kenya — 1M or 10% Per Invoice, LN 64/2024",
-    description: "eTIMS penalties broken down by legal basis: higher of KES 1M or 10% of tax per non-compliant invoice (LN 64/2024), TPA s.86, and KES 500,000/month for non-integration. Clarifies where the 50k figure comes from.",
+    title: "eTIMS Penalties Kenya — What the Law Actually Provides",
+    description: "eTIMS penalties broken down by legal basis: TPA s.86 (higher of 5% of tax due, KES 100,000 for companies, KES 10,000 for individuals) and TPA s.59A(5) (up to KES 100,000/month for integration failure). Explains why figures like KES 1M/10% or KES 500,000/month are not enacted law.",
     canonical: "/resources/etims-penalty-50000-per-month-kenya/",
   },
   "faq": {

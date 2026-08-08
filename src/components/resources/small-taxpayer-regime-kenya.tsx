@@ -52,7 +52,7 @@ const faqSchema = {
       name: "If I am a small taxpayer, do I still need eTIMS?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The Finance Act 2023 amended the Tax Procedures Act to require ALL persons engaged in business to use eTIMS, regardless of turnover. This means even if you pay turnover tax and are not VAT-registered, you must issue eTIMS-compliant invoices. Small businesses should use eTIMS Lite, which is free and accessed through a web browser. Issuing a non-compliant invoice attracts the higher of KES 1,000,000 or 10% of the tax per invoice under the ETI Regulations (LN 64/2024), and non-integration after notice costs KES 500,000 per month.",
+        text: "Yes. The Finance Act 2023 amended the Tax Procedures Act to require ALL persons engaged in business to use eTIMS, regardless of turnover. This means even if you pay turnover tax and are not VAT-registered, you must issue eTIMS-compliant invoices. Small businesses should use eTIMS Lite, which is free and accessed through a web browser. Issuing a non-compliant invoice attracts the TPA s.86 penalty — since 1 July 2026, the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals) — and non-integration after notice costs up to KES 100,000 per month (TPA s.59A(5), turnover above KES 5 million).",
       },
     },
     {
@@ -302,7 +302,7 @@ export default function SmallTaxpayerRegimePage() {
                   },
                   {
                     title: "Penalty for non-compliance",
-                    desc: "Issuing invoices outside eTIMS exposes you to the higher of KES 1,000,000 or 10% of the tax per invoice (LN 64/2024) plus TPA s.86 exposure, even if you are on turnover tax. KRA has been conducting compliance checks since January 2026.",
+                    desc: "Issuing invoices outside eTIMS exposes you to the TPA s.86 penalty — the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals) — even if you are on turnover tax. KRA has been conducting compliance checks since January 2026.",
                   },
                   {
                     title: "Your customers may insist on eTIMS invoices",
