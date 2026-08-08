@@ -1,4 +1,4 @@
-/**
+﻿/**
  * SmartVAT OS — 2026 return-rematch (validation) module.
  *
  * Since January 2026 KRA's Income & Expense Validation Engine cross-checks

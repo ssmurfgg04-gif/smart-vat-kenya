@@ -1,4 +1,4 @@
-/**
+﻿/**
  * SmartVAT OS — shared domain types.
  *
  * The OS sits on top of the gavaconnect KRA client and adds the layers that

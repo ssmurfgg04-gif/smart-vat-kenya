@@ -1,4 +1,4 @@
-# Phase 3 — B2B2B Licensing Sprint
+﻿# Phase 3 — B2B2B Licensing Sprint
 
 _Date: 2026-08-08 · Status: plan ready_
 

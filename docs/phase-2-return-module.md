@@ -1,4 +1,4 @@
-# Phase 2 — Return Validity Module (RVM) & Validation Engine
+﻿# Phase 2 — Return Validity Module (RVM) & Validation Engine
 
 _Date: 2026-08-08 · Status: engine shipped + content pivot_
 

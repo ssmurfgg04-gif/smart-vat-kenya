@@ -1,4 +1,4 @@
-# KRA / Kenya Tax Filing — Competitor Scan (2026)
+﻿# KRA / Kenya Tax Filing — Competitor Scan (2026)
 
 _Date: 2026-08-08_
 

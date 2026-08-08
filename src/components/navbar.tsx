@@ -1,4 +1,4 @@
-import { Sun, Moon, Menu, X } from "@phosphor-icons/react/dist/ssr"
+﻿import { Sun, Moon, Menu, X } from "@phosphor-icons/react/dist/ssr"
 import { useEffect, useState } from "react"
 
 export function Navbar() {

@@ -1,4 +1,4 @@
-# Phase 0 — Acceptance Status
+﻿# Phase 0 — Acceptance Status
 
 _Date: 2026-08-08 · Based on `docs/phase-0-engine-spec.md` criteria_
 

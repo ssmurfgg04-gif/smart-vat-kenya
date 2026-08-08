@@ -1,4 +1,4 @@
-/**
+﻿/**
  * SmartVAT OS intelligence layer: a KRA-rules knowledge base, lexical retrieval,
  * a pluggable LLM port, and a golden-dataset eval harness that scores retrieval
  * against expected rule ids.
