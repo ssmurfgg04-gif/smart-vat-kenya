@@ -20,6 +20,8 @@ import {
   VatInputGuide,
   KraPortalVsService,
   VatDeadlineReminders,
+  KraHealthCheck,
+  VatThresholdExplainer,
   HowToCalculateVatInKenya,
   HowToFileVatReturnOnItax,
   HowToRegisterForVatInKenya,

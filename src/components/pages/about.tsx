@@ -31,16 +31,16 @@ const team = [
 ]
 
 const credentials = [
-  "Registered KRA iTax agents -- we file through the official KRA agent portal",
-  "Named individuals on every account -- you know exactly who handles your filings",
+  "Registered KRA iTax agents — we file through the official KRA agent portal",
+  "Named individuals on every account — you know exactly who handles your filings",
   "Physical office at Pioneer House, Moi Avenue, Nairobi CBD",
-  "M-PESA receipt for every payment -- nothing off the books",
+  "M-PESA receipt for every payment — nothing off the books",
   "Privacy-first: your KRA PIN is used for your filings only",
 ]
 
 const values = [
   { title: "Your time is money", body: "We do the portal work so you run your business. One WhatsApp message replaces three weeks of iTax." },
-  { title: "Never the 20th", body: "We file on the 17th as a matter of process -- not a service you have to chase. The deadline is never you or near." },
+  { title: "Never the 20th", body: "We file on the 17th as a matter of process — not a service you have to chase. The deadline is never you or near." },
   { title: "Total-cost honesty", body: "Published flat fees. No discovery call, no negotiation, no hidden costs. KES 5,000 registration. KES 3,500 monthly filing." },
 ]
 
@@ -54,17 +54,37 @@ export default function AboutPage() {
             About Smart VAT Kenya
           </p>
           <h1 className="font-display text-[clamp(2rem,4.5vw,3.4rem)] font-semibold leading-tight tracking-tight text-canvas mb-6 text-balance">
-            Named people. Verified agents. One flat fee.
+            The first client who paid us wasn't registering for VAT. She was registering to stop lying awake at 3am.
           </h1>
           <p className="text-[1rem] text-canvas/75 leading-relaxed max-w-[54ch] text-pretty">
-            Smart VAT Kenya exists for one reason: Kenyan business owners should never lose money, sleep, or
-            time to a tax portal. We register SMEs for VAT and file their monthly returns for a flat fee you
-            know upfront -- all over WhatsApp, payable by M-PESA.
+            She had a letter from KRA in her bag and zero idea what a 'Special Table' was. 
+            Her accountant was unreachable. That night on Moi Avenue, Smart VAT Kenya was born.
           </p>
         </div>
       </section>
 
       <div className="max-w-6xl mx-auto px-6 lg:px-10 py-16">
+
+        {/* Founder Story Arc */}
+        <section className="mb-20">
+          <div className="border-l-[3px] border-brand pl-6 max-w-3xl mb-12">
+            <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-brand mb-2">Why Smart VAT Exists</p>
+            <h2 className="font-display text-[1.8rem] font-semibold text-ink mb-4">
+              We watched business owners close their shops at 4pm on the 20th just to queue at Times Tower.
+            </h2>
+            <div className="space-y-4 text-[0.95rem] text-ink-soft leading-relaxed">
+              <p>
+                In Nairobi, the 20th of every month has a specific sound: the frantic clicking of refresh buttons on the iTax login page, the hum of cyber cafe generators, and the quiet panic of entrepreneurs realizing their accountant has ghosted them.
+              </p>
+              <p>
+                We spent years watching smart, hardworking business owners treat KRA like an unavoidable tax on their sanity. We saw KES 10,000 penalties levied automatically because the portal froze at 11:47pm. We saw suppliers lose input VAT because their vendors got swept onto unverified lists.
+              </p>
+              <p>
+                So we built the antidote: an agency that operates with software precision, transparent flat pricing, and zero portal friction. You message us on WhatsApp. We handle the rest.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Who we are */}
         <section className="mb-20">
@@ -88,11 +108,6 @@ export default function AboutPage() {
               </article>
             ))}
           </div>
-          <p className="mt-6 text-[0.8rem] text-ink-muted max-w-[64ch] leading-relaxed">
-            When you message us on WhatsApp, a named person on this page picks up and stays with your account
-            until your VAT PIN or filing receipt lands in your chat. No anonymous inbox, no "well get back
-            to you."
-          </p>
         </section>
 
         {/* Credentials & trust */}
@@ -113,10 +128,10 @@ export default function AboutPage() {
             <aside className="bg-canvas-alt border border-hairline rounded-lg p-6 self-start">
               <div className="flex items-center gap-2.5 mb-4">
                 <ShieldCheck size={20} weight="fill" className="text-brand" aria-hidden="true" />
-                <p className="font-mono text-[0.62rem] uppercase tracking-widest text-ink-muted">The 17th, not the 20th</p>
+                <p className="font-mono text-[0.62rem] uppercase tracking-widest text-ink-muted">The 17th Guarantee</p>
               </div>
               <p className="text-[0.88rem] text-ink-soft leading-relaxed mb-4">
-                Every monthly return is filed on the 17th -- three days before KRA's deadline -- so a portal
+                Every monthly return is filed on the 17th — three days before KRA's deadline — so a portal
                 outage or payment delay never costs you a KES 10,000 late penalty.
               </p>
               <a
@@ -147,7 +162,7 @@ export default function AboutPage() {
         </section>
 
         {/* Privacy promise */}
-        <section className="bg-canvas-dark rounded-xl p-8 mb-16">
+        <section className="bg-canvas-dark rounded-xl p-8 mb-16 text-canvas">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
               <LockKey size={22} weight="duotone" className="text-brand" aria-hidden="true" />
@@ -155,7 +170,7 @@ export default function AboutPage() {
             </div>
             <p className="text-[0.9rem] text-canvas/75 leading-relaxed">
               We ask for your KRA PIN and ID only to complete filings that KRA itself requires. Your PIN is
-              used for your filings alone -- it is never shared, never stored beyond what's needed, and never
+              used for your filings alone — it is never shared, never stored beyond what's needed, and never
               used for anything else. Every payment you make is backed by an official M-PESA receipt.
             </p>
           </div>
