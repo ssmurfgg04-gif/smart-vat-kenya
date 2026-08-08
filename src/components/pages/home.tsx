@@ -188,15 +188,16 @@ export default function HomePage() {
               Kenya Revenue Authority Registered Services
             </p>
             <h1 className="font-display text-[clamp(2.4rem,6vw,4.5rem)] font-semibold leading-[1.05] tracking-tight text-canvas mb-6 text-balance">
-              The letter said <span className="text-brand">"KES 10,000 penalty"</span> in bold.
-              He hadn't missed the money. He'd missed the 20th.
+              Our first client didn't ask for a VAT number.
+              <span className="text-brand">{" He had a broken eTIMS device"}</span>
+              {" and a KRA freeze."}
             </h1>
 
             <p className="text-[1.05rem] text-canvas/80 leading-relaxed max-w-[52ch] mb-3 text-pretty">
-              The iTax portal froze at 11:47pm. His accountant's phone was off.
-              KRA doesn't care about either. He's a Smart VAT Kenya client now —
-              because we file on the 17th, not the 20th.
-              VAT registration, KES 5,000 flat, done in 1–3 working days. You never touch iTax.
+              He ran a hardware shop — one counter, one cousin, and an eTIMS machine that kept rejecting invoices. 
+              KRA's system claimed tax on sales he’d already accounted for. His "IT guy" had stopped answering. 
+              His money was locked inside hardware he couldn't negotiate with. 
+              <strong className="text-canvas"> That was our first sale.</strong> We've been the people who make the machine stop shouting ever since.
             </p>
 
             <div className="mb-8 border border-brand/40 bg-brand/15 rounded-lg px-5 py-4 max-w-[52ch]">
