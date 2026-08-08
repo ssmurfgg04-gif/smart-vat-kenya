@@ -1,7 +1,7 @@
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
-import { FACTS } from "@/lib/vat-facts"
+import { FACTS } from "@/src/lib/vat-facts"
 
 const WA_BASE = "https://wa.me/254721725958"
 
