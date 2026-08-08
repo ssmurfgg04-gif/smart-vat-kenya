@@ -9,8 +9,7 @@ export function Navbar() {
   useEffect(() => {
     setMounted(true)
     const stored = localStorage.getItem("theme")
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-    const initialDark = stored === "dark" || (!stored && prefersDark)
+    const initialDark = stored === "dark"
     setIsDark(initialDark)
     if (initialDark) {
       document.documentElement.classList.add("dark")

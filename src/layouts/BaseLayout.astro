@@ -220,10 +220,10 @@ const localBusinessSchema = {
   <script is:inline>
     (function() {
       const stored = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (stored === 'dark' || (!stored && prefersDark)) {
+      if (stored === 'dark') {
         document.documentElement.classList.add('dark');
-        document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d1218');
+        const metaTheme = document.querySelector('meta[name="theme-color"]');
+        if (metaTheme) metaTheme.setAttribute('content', '#0d1218');
       }
     })();
   </script>
