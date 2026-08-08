@@ -423,4 +423,54 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     description: "Withholding VAT in Kenya requires buyers to deduct 2% VAT at source on certain supplies. Learn who must withhold, how to remit, and how suppliers claim credit.",
     canonical: "/resources/withholding-vat-kenya/",
   },
+  "kra-pin-registration-foreigners": {
+    title: "KRA PIN Registration for Foreigners in Kenya (2026 Guide)",
+    description: "Complete guide for non-citizens and expatriates on how to get a KRA PIN in Kenya. Requirements, passport upload, work permits, and online iTax steps.",
+    canonical: "/resources/kra-pin-registration-foreigners/",
+  },
+  "how-to-register-kra-pin-individual": {
+    title: "How to Register a KRA PIN for Individuals in Kenya (2026)",
+    description: "Step-by-step guide to registering an individual KRA PIN online via iTax. Requirements, ID card upload, and activation.",
+    canonical: "/resources/how-to-register-kra-pin-individual/",
+  },
+  "how-to-create-kra-pin": {
+    title: "How to Create a KRA PIN Online in Kenya (2026 Guide)",
+    description: "Complete guide on creating a new KRA PIN on iTax. Step-by-step instructions for citizens, businesses, and taxpayers.",
+    canonical: "/resources/how-to-create-kra-pin/",
+  },
+  "vat-input-guide": {
+    title: "VAT Input Tax in Kenya: Complete Claim & eTIMS Guide (2026)",
+    description: "Learn how input VAT works in Kenya, eTIMS invoice requirements, buyer PIN matching, and the 6-month claim window under current KRA rules.",
+    canonical: "/resources/vat-input-guide/",
+  },
+  "kra-portal-vs-service": {
+    title: "Register for VAT Yourself on iTax or Pay KES 5,000? The Honest Math",
+    description: "An honest comparison of DIY VAT registration on KRA iTax vs hiring Smart VAT Kenya. Portal crashes, 14+ error codes, time cost, and penalty risk.",
+    canonical: "/resources/kra-portal-vs-service/",
+  },
+  "vat-deadline-reminders": {
+    title: "Free KRA VAT Deadline Reminders on WhatsApp",
+    description: "Never miss the 20th KRA VAT filing deadline again. Get automated WhatsApp reminders on the 17th of every month. Free service by Smart VAT Kenya.",
+    canonical: "/resources/vat-deadline-reminders/",
+  },
+  "vat-2027-auto-filled-returns": {
+    title: "VAT 2027: KRA Pre-Filled Returns Are Coming — Prepare Now",
+    description: "KRA's transition to pre-filled (auto-populated) VAT returns starting January 2027. How eTIMS data and iCMS customs integration will assemble your return automatically.",
+    canonical: "/resources/vat-2027-auto-filled-returns/",
+  },
+  "etims-penalties-2026": {
+    title: "eTIMS Penalties 2026 — Exact Figures From the Law",
+    description: "A definitive legal breakdown of KRA eTIMS penalties under Tax Procedures Act s.86 (as amended by Finance Act 2026) and s.59A(5). Separating statutory law from internet myths.",
+    canonical: "/resources/etims-penalties-2026/",
+  },
+  "vat-refund-audit-defense": {
+    title: "VAT Refund & Audit Defense in Kenya — How to Win",
+    description: "Navigate KRA VAT audits, survive the Special Table / Tax Alerts review, and recover excess input VAT within the 12-month refund window under Finance Act rules.",
+    canonical: "/resources/vat-refund-audit-defense/",
+  },
+  "vat-for-freelancers-creators": {
+    title: "VAT for Freelancers & Creators in Kenya 2026",
+    description: "Do digital creators, freelance developers, and remote consultants in Kenya need a KRA PIN and VAT registration? Threshold rules, digital services, and eTIMS compliance.",
+    canonical: "/resources/vat-for-freelancers-creators/",
+  },
 }
