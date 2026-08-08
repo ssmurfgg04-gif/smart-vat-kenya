@@ -42,4 +42,18 @@
 
 ## Key Pages
 
-[Keep existing resource list — regenerate descriptions from FACTS where they mention thresholds/penalties]
+- [Free KRA Tax Tools — VAT, Penalty & eTIMS Calculators](https://smartvatkenya.co.ke/tools/)
+- [Register for VAT Yourself on iTax or Pay KES 5,000? The Honest Math](https://smartvatkenya.co.ke/resources/kra-portal-vs-service/)
+- [Free KRA Status & Ledger Health Check](https://smartvatkenya.co.ke/resources/kra-health-check/)
+- [VAT Threshold Kenya 2026 — KES 5M or 8M? The Real Answer](https://smartvatkenya.co.ke/resources/vat-threshold-explainer/)
+- [Free KRA VAT Deadline Reminders on WhatsApp](https://smartvatkenya.co.ke/resources/vat-deadline-reminders/)
+- [Smart VAT Partner Program (Wholesale Channel)](https://smartvatkenya.co.ke/partners/)
+- [CETIS Kenya 2027: Pre-Clearance e-Invoicing Explained](https://smartvatkenya.co.ke/resources/cetis-kenya-2027/)
+- [VAT 2027: KRA Pre-Filled Returns Are Coming](https://smartvatkenya.co.ke/resources/vat-2027-auto-filled-returns/)
+- [eTIMS Penalties 2026 — Exact Figures From the Law](https://smartvatkenya.co.ke/resources/etims-penalties-2026/)
+- [KRA PIN Registration for Foreigners in Kenya](https://smartvatkenya.co.ke/resources/kra-pin-registration-foreigners/)
+- [How to Register a KRA PIN for Individuals in Kenya](https://smartvatkenya.co.ke/resources/how-to-register-kra-pin-individual/)
+- [How to Create a KRA PIN Online in Kenya](https://smartvatkenya.co.ke/resources/how-to-create-kra-pin/)
+- [VAT Input Tax in Kenya: Complete Claim & eTIMS Guide](https://smartvatkenya.co.ke/resources/vat-input-guide/)
+- [KRA VAT FAQ — Common Questions Answered 2026](https://smartvatkenya.co.ke/resources/faq/)
+- [KRA Tax Amnesty 2026: 100% Penalty Waiver](https://smartvatkenya.co.ke/resources/kra-tax-amnesty-2026/)
