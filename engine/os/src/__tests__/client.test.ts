@@ -6,6 +6,7 @@ import { createInMemoryGateway, StkReceiptLog } from "../mpesa.js"
 import { TaxAssistant } from "../intel.js"
 import { createFilingService } from "../filing.js"
 import { FilingProvider } from "@smartvat/gavaconnect"
+import { ValidationInput } from "../validation.js"
 
 function makeClient(overrides: { runDays?: number } = {}) {
   const store: WaTranscriptMin[] = []
@@ -63,4 +64,39 @@ test("client.runFiling runs the batch and reports outcomes", async () => {
   const outcomes = await clientHandle.runFiling()
   assert.ok(outcomes.length >= 1)
   assert.ok(outcomes.every((o) => o.ok === true))
+})
+
+test("client.preflight runs the validation engine and returns clean for matching figures", async () => {
+  const { clientHandle } = makeClient()
+  const result = await clientHandle.preflight({
+    declaredSales: 1_000_000,
+    etimsSales: 1_020_000,
+    declaredExpenses: 600_000,
+    etimsSupportedPurchases: 600_000,
+  } satisfies ValidationInput)
+  assert.equal(result.status, "clean")
+})
+
+test("client.preflight flags under-reported sales as attention", async () => {
+  const { clientHandle } = makeClient()
+  const result = await clientHandle.preflight({
+    declaredSales: 900_000,
+    etimsSales: 1_000_000,
+    declaredExpenses: 600_000,
+    etimsSupportedPurchases: 600_000,
+  } satisfies ValidationInput)
+  assert.equal(result.status, "attention")
+  assert.ok(result.issues.some((i: { code: string }) => i.code === "SALES_UNDER_REPORTED"))
+})
+
+test("client.preflight flags unsupported expenses as broken", async () => {
+  const { clientHandle } = makeClient()
+  const result = await clientHandle.preflight({
+    declaredSales: 1_000_000,
+    etimsSales: 1_000_000,
+    declaredExpenses: 800_000,
+    etimsSupportedPurchases: 300_000,
+  } satisfies ValidationInput)
+  assert.equal(result.status, "broken")
+  assert.ok(result.issues.some((i: { code: string }) => i.code === "EXPENSES_UNSUPPORTED"))
 })

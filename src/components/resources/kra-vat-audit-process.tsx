@@ -304,6 +304,18 @@ export default function KraVatAuditProcessPage() {
               {/* More Guides */}
         <div className="mt-16 pt-12 border-t border-hairline">
           <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">More Guides</p>
+          <div className="mb-6 space-y-3">
+            <p className="text-[0.83rem] text-ink-muted leading-relaxed">
+              <strong className="text-ink">If the audit started from a Tax Alert:</strong> See the{" "}
+              <a href="/resources/vat-special-table-risks/#tax-alerts" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA Tax Alerts guide</a>
+              for how the validation engine raises per-line alerts in RAIS.
+            </p>
+            <p className="text-[0.83rem] text-ink-muted leading-relaxed">
+              <strong className="text-ink">Before you file (to avoid audit triggers):</strong> Run the{" "}
+              <a href="/resources/vat-return-filing-checklist/#validation-engine" className="text-brand underline underline-offset-2 hover:text-brand-hover">2026 Validation Engine pre-flight check</a>
+              on your return.
+            </p>
+          </div>
           <ArticleGrid currentSlug="kra-vat-audit-process" />
         </div>
 

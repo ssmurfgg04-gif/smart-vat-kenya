@@ -34,12 +34,14 @@ export * from "./dojah.js"
 export * from "./pin.js"
 export * from "./vat.js"
 export * from "./protax.js"
+export * from "./validation.js"
 
 import { DeadlineConfig, planPeriod, dueWithin } from "./deadlines.js"
 import { computeHealth, HealthInput } from "./health.js"
 import { diagnoseAmnesty, AmnestyInput, screenSuppliers, SpecialTableChecker, SupplierRecord, assessRefund, RefundInput } from "./exposure.js"
 import { compareToBenchmark, BENCHMARKS } from "./benchmarks.js"
 import { TaxAssistant, buildKnowledgeBase, LlmPort, Rule } from "./intel.js"
+import { validateReturn, classifyMatchedInvoices, ValidationInput } from "./validation.js"
 
 export interface SmartVatOsOptions {
   deadlines?: DeadlineConfig
@@ -98,6 +100,18 @@ export class SmartVatOs {
 
   refund(input: RefundInput) {
     return assessRefund(input)
+  }
+
+  /* ---- return-rematch validation (2026 engine) ---- */
+
+  validate(input: ValidationInput) {
+    return validateReturn(input)
+  }
+
+  classify(
+    invoices: Array<{ declared: number; transmitted: boolean; hasBuyerPin: boolean }>,
+  ) {
+    return classifyMatchedInvoices(invoices)
   }
 
   /* ---- benchmarks ---- */

@@ -22,7 +22,7 @@ const articleSchema = {
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-27",
-  dateModified: "2026-07-27",
+  dateModified: "2026-08-08",
   url: "https://smartvatkenya.co.ke/resources/vat-return-filing-checklist",
   mainEntityOfPage: "https://smartvatkenya.co.ke/resources/vat-return-filing-checklist",
 }
@@ -80,6 +80,7 @@ const toc = [
   { id: "purchases-input-vat", label: "Purchases and Input VAT" },
   { id: "itax-entry",          label: "iTax Entry: Step by Step" },
   { id: "validation",          label: "Pre-Submission Validation Check" },
+  { id: "validation-engine",   label: "KRA's 2026 Validation Engine — Invoice-Level Checks" },
   { id: "after-submission",    label: "After Submission: Confirm and Pay" },
   { id: "common-mistakes",     label: "Common Mistakes That Cause Rejection" },
   { id: "faq",                 label: "Frequently Asked Questions" },
@@ -108,7 +109,7 @@ export default function VATReturnFilingChecklistPage() {
           <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
             VAT Return Filing Checklist Kenya 2026: Monthly Filing Guide
           </h1>
-          <p className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; KRA-registered VAT agents &mdash; Updated July 2026</p>
+          <p className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; KRA-registered VAT agents &mdash; Updated August 2026</p>
         </div>
       </div>
 
@@ -374,6 +375,70 @@ export default function VATReturnFilingChecklistPage() {
                 </li>
               ))}
             </ul>
+          </section>
+
+          <section id="validation-engine" aria-labelledby="validation-engine-h">
+            <h2 id="validation-engine-h" className="font-display text-[1.4rem] font-semibold text-ink mb-2 tracking-tight">
+              KRA&apos;s 2026 Validation Engine — Invoice-Level Checks
+            </h2>
+            <p className="text-[0.85rem] text-ink-muted mb-6">
+              Since January 2026, KRA runs a real-time income & expense validation engine that
+              cross-checks every figure on your filed return against eTIMS invoice data
+              month-to-month — not only at audit. If your declared figures fall outside the
+              tolerance band, KRA issues a query letter with a 14-day response window before
+              escalating to audit. Run these checks on every invoice before you file.
+            </p>
+
+            <div className="border border-brand/25 bg-brand-muted rounded-lg p-4 flex items-start gap-3 mb-6">
+              <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
+              <div>
+                <p className="font-semibold text-ink text-[0.88rem] mb-2">What the engine checks</p>
+                <ul className="space-y-2 text-[0.83rem] text-ink-soft">
+                  {[
+                    "<strong className=\"text-ink\">Sales — upward only:</strong> Your declared sales must be &ge; eTIMS transmissions for the period. The auto-populated iTax return only allows upward adjustments; you cannot declare below what eTIMS recorded.",
+                    "<strong className=\"text-ink\">Expenses — eTIMS invoice + buyer PIN required:</strong> Every input VAT claim must be backed by a transmitted eTIMS invoice that carries YOUR KRA PIN. Un-transmitted invoices or invoices without your PIN will be flagged as unsupported and risk disallowance.",
+                    "<strong className=\"text-ink\">14-day query window:</strong> If the engine flags a gap outside the ~5% tolerance, KRA issues a query letter. You have <strong className=\"text-ink\">14 days</strong> to respond with evidence (eTIMS control numbers, PINs, original invoices).",
+                    "<strong className=\"text-ink\">6-month late transmission window:</strong> Purchases transmitted late to eTIMS remain claimable if filed within 6 months of the tax period.",
+                    "<strong className=\"text-ink\">120-day refund processing:</strong> Valid refund applications are processed within 120 days by KRA (Finance Act 2025).",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-[0.85rem] text-ink-soft" dangerouslySetInnerHTML={{ __html: item }} />
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="border border-hairline rounded-lg overflow-hidden">
+              <table className="w-full text-[0.83rem]">
+                <thead>
+                  <tr className="border-b border-hairline bg-canvas-alt">
+                    <th className="text-left p-3.5 font-semibold text-ink">Invoice Status</th>
+                    <th className="text-left p-3.5 font-semibold text-ink">Input VAT Claimable?</th>
+                    <th className="text-left p-3.5 font-semibold text-ink">Action</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-hairline">
+                  <tr>
+                    <td className="p-3.5 text-ink-muted">eTIMS transmitted + your KRA PIN present</td>
+                    <td className="p-3.5 text-ink"><span className="text-brand font-semibold">Yes</span></td>
+                    <td className="p-3.5 text-ink-muted">Claim normally — engine will validate clean</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3.5 text-ink-muted">eTIMS transmitted but NO buyer PIN</td>
+                    <td className="p-3.5 text-ink"><span className="text-[#b03030] font-semibold">No</span></td>
+                    <td className="p-3.5 text-ink-muted">Ask supplier to re-issue with your PIN; cannot claim until fixed</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3.5 text-ink-muted">NOT transmitted to eTIMS</td>
+                    <td className="p-3.5 text-ink"><span className="text-[#b03030] font-semibold">No</span></td>
+                    <td className="p-3.5 text-ink-muted">Follow up with supplier; use Buyer-Initiated Invoicing (BII) if urgent</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p className="text-[0.83rem] text-ink-muted mt-4">
+              See our <a href="/resources/vat-special-table-risks/#tax-alerts" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA Tax Alerts guide</a> for how the engine raises per-line alerts in the RAIS portal, and <a href="/resources/kra-vat-audit-process/" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA VAT Audit Process</a> for the full audit timeline if a query escalates.
+            </p>
           </section>
 
           <section id="after-submission" aria-labelledby="after-h">

@@ -101,3 +101,34 @@ test("assessRefund flags a profitable export/zero-rated claim as claimable with 
   assert.equal(a.status, "claimable")
   assert.ok(a.requiredDocuments.includes("Export / zero-rated supply evidence"))
 })
+
+test("assessRefund enforces the 12-month refund clock (Finance Act 2025)", () => {
+  const fresh = assessRefund({
+    inputVat: 200_000,
+    outputVat: 0,
+    blocked: 0,
+    stale: 0,
+    zeroRated: true,
+    pendingRefund: false,
+    ageMonths: 6,
+  })
+  assert.equal(fresh.status, "claimable")
+  assert.equal(fresh.stale, false)
+  assert.ok((fresh.daysLeftClosure ?? 0) > 0)
+  assert.equal(fresh.processingDays, 120)
+
+  const stale = assessRefund({
+    inputVat: 200_000,
+    outputVat: 0,
+    blocked: 0,
+    stale: 0,
+    zeroRated: true,
+    pendingRefund: false,
+    ageMonths: 25,
+  })
+  assert.equal(stale.status, "stale")
+  assert.equal(stale.stale, true)
+  assert.equal(stale.daysLeftClosure, 0)
+  assert.equal(stale.claimableAmount, 0)
+  assert.ok(stale.blockers.some((b) => b.includes("12-month")))
+})

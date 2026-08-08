@@ -139,6 +139,11 @@ export interface RefundInput {
   zeroRated: boolean
   /** Prior refund application still pending at KRA? */
   pendingRefund: boolean
+  /**
+   * Whole months since the credit first became refundable. Used by the
+   * 12-month refund clock (Finance Act 2025); omit to disable the clock.
+   */
+  ageMonths?: number
 }
 
 export function assessRefund(i: RefundInput): RefundAssessment {
@@ -151,6 +156,15 @@ export function assessRefund(i: RefundInput): RefundAssessment {
   if (i.stale > 0) blockers.push("Input VAT older than 6 months may require documentation")
   if (i.pendingRefund) blockers.push("A prior refund application is still pending")
 
+  const REFUND_WINDOW_MONTHS = 12
+  const PROCESSING_DAYS = 120
+  const stale =
+    i.ageMonths !== undefined ? i.ageMonths >= REFUND_WINDOW_MONTHS : false
+  const daysLeftClosure =
+    i.ageMonths === undefined
+      ? undefined
+      : Math.max(0, Math.round((REFUND_WINDOW_MONTHS - i.ageMonths) * 30.44))
+
   if (net <= 0) {
     return {
       status: "not_eligible",
@@ -159,6 +173,26 @@ export function assessRefund(i: RefundInput): RefundAssessment {
       blockers,
       requiredDocuments: [],
       recommended: "No refund balance; net output VAT exceeds recoverable input.",
+      stale,
+      ageMonths: i.ageMonths,
+      daysLeftClosure,
+      processingDays: PROCESSING_DAYS,
+    }
+  }
+
+  if (stale) {
+    return {
+      status: "stale",
+      claimableAmount: 0,
+      blockedAmount,
+      blockers: [...blockers, "Refund credit is beyond the 12-month claim window"],
+      requiredDocuments: ["E-TIMS compliant invoices", "VAT return history"],
+      recommended:
+        "The 12-month Finance Act 2025 refund window has lapsed. Explore KRA amnesty / written representation, or whether any portion still falls within a 12-month period.",
+      stale,
+      ageMonths: i.ageMonths,
+      daysLeftClosure: 0,
+      processingDays: PROCESSING_DAYS,
     }
   }
 
@@ -169,14 +203,23 @@ export function assessRefund(i: RefundInput): RefundAssessment {
   if (blockedAmount > 0 || i.pendingRefund) status = "partially_claimable"
   if (blockedAmount >= net) status = "blocked"
 
+  const clockNote =
+    i.ageMonths !== undefined
+      ? ` Approximately ${daysLeftClosure} days remain in the 12-month claim window. KRA has up to ${PROCESSING_DAYS} days to process once lodged.`
+      : ` KRA has up to ${PROCESSING_DAYS} days to process once lodged.`
+
   return {
     status,
     claimableAmount: claimable,
     blockedAmount,
     blockers,
     requiredDocuments,
-    recommended: i.zeroRated
+    recommended: (i.zeroRated
       ? "Export/zero-rated input is refundable; file for the export refund stream."
-      : "Standard input-VAT refund stream; lodge the claim within the 12-month Finance Act 2025 window before it lapses.",
+      : "Standard input-VAT refund stream; lodge the claim within the 12-month Finance Act 2025 window before it lapses.") + clockNote,
+    stale,
+    ageMonths: i.ageMonths,
+    daysLeftClosure,
+    processingDays: PROCESSING_DAYS,
   }
 }

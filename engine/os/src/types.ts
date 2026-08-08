@@ -74,6 +74,7 @@ export type RefundStatus =
   | "partially_claimable"
   | "blocked"
   | "not_eligible"
+  | "stale"
 
 export interface RefundAssessment {
   status: RefundStatus
@@ -82,6 +83,14 @@ export interface RefundAssessment {
   blockers: string[]
   requiredDocuments: string[]
   recommended: string
+  /** True when the refund credit is older than the 12-month claim window. */
+  stale?: boolean
+  /** Whole months since the credit first became refundable. */
+  ageMonths?: number
+  /** Calendar days until the 12-month window lapses (0 when stale). */
+  daysLeftClosure?: number
+  /** KRA's statutory processing time for a lodged refund (days). */
+  processingDays?: number
 }
 
 export interface SectorBenchmark {
@@ -103,6 +112,50 @@ export interface SectorComparison {
   /** Position of the client within the band. */
   zBands: "below" | "within" | "above"
   note: string
+}
+
+/**
+ * Return-rematch (validation engine) types. These model KRA's Income &
+ * Expense Validation Engine, live since Jan 2026: declared figures are
+ * cross-checked against eTIMS transmissions month-to-month.
+ */
+export type ValidationSeverity = "low" | "elevated" | "high"
+
+export interface ValidationIssue {
+  code: string
+  severity: ValidationSeverity
+  message: string
+  gapKes: number
+}
+
+export type ValidationStatus = "clean" | "attention" | "broken"
+
+export interface ValidationOutput {
+  status: ValidationStatus
+  summary: string
+  values: {
+    declaredSales: number
+    etimsSales: number
+    declaredExpenses: number
+    etimsSupportedPurchases: number
+  }
+  /** Declared minus transmitted sales (positive = under-reporting). */
+  salesGapKes: number
+  /** Supported eTIMS purchases minus declared expenses (negative = gap). */
+  expenseGapKes: number
+  tolerance: number
+  queryResponseDays: number
+  issues: ValidationIssue[]
+  generatedAt: string
+}
+
+/** One supplier invoice in the buyer-view match (claimable input VAT?). */
+export interface InvoiceMatch {
+  declared: number
+  transmitted: boolean
+  hasBuyerPin: boolean
+  claimable: boolean
+  reason: "NOT_TRANSMITTED" | "NO_BUYER_PIN" | null
 }
 
 /** A single taxpayer snapshot fed to the health engine. */

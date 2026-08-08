@@ -2,6 +2,7 @@ import { Messenger, WaMessage } from "./whatsapp.js"
 import { BillingGateway, LipaStkRequest, PaymentReceipt } from "./mpesa.js"
 import { FilingService } from "./filing.js"
 import { TaxAssistant, LlmAnswer } from "./intel.js"
+import { validateReturn, ValidationInput, ValidationOutput } from "./validation.js"
 
 /* ------------------------------------------------------------------ */
 /* SmartVAT Client layer — the per-client portal/workflow shell.        */
@@ -31,6 +32,8 @@ export interface ClientHandle {
   ask(query: string): Promise<LlmAnswer>
   due(daysAhead: number): ReturnType<FilingService["buildTasks"]>
   runFiling(): Promise<Awaited<ReturnType<FilingService["runAll"]>>>
+  /** Pre-flight a proposed return against the 2026 validation engine before filing. */
+  preflight(input: ValidationInput): ValidationOutput
   notify(body: string): Promise<Awaited<ReturnType<Messenger["send"]>>>
   pay(amount: number, reference?: string): Promise<{ merchantRequestId: string }>
   recordPayment(receipt: PaymentReceipt): Promise<PaymentReceipt>
@@ -47,6 +50,7 @@ export function createClient(cfg: ClientConfig): ClientHandle {
     ask: (query) => cfg.assistant.ask(query),
     due: (daysAhead) => cfg.filing.buildTasks(daysAhead),
     runFiling: () => cfg.filing.runAll(runDays),
+    preflight: (input: ValidationInput) => validateReturn(input),
     notify: (body) => cfg.messenger.send(toWaMessage(cfg.clientId, cfg.phone, body)),
     pay: (amount, reference) => {
       const req: LipaStkRequest = {

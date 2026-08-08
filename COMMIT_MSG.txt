@@ -1,0 +1,27 @@
+Phase 2: validation engine + Phase 2 wiring + Phase 3 licensing plan + Phase 0 acceptance status
+
+Engine (engine/os):
+- validation.ts: validateReturn (2026 KRA engine: sales upward-only, eTIMS expense match, 14-day query, 120-day refund) + classifyMatchedInvoices
+- exposure.ts: assessRefund 12-month refund clock + 120-day KRA processing
+- intel.ts: KB Special Table -> Tax Alerts rule + golden set
+- index.ts: exports + SmartVatOs.validate() + SmartVatOs.classify()
+- client.ts: ClientHandle.preflight() wires validateReturn into portal flow
+- Tests: +3 preflight tests, +6 validation tests, +1 refund clock test = 122 total
+
+Frontend (content site):
+- vat-return-filing-checklist.tsx: new "KRA's 2026 Validation Engine" section with invoice classification table, TOC entry, date Updated Aug 2026
+- vat-special-table-risks.tsx: discontinuation banner, Tax Alerts section, softened KRA-claim boxes, FAQ updates, backlinks to filing checklist + audit process, date Aug 2026
+- kra-vat-audit-process.tsx: backlinks to Special Table Tax Alerts + validation engine
+- All cross-links form a backlink matrix between Special Table, Filing Checklist, Audit Process
+
+Docs:
+- docs/phase-2-return-module.md: research pivot captured (Special Table -> Tax Alerts + validation engine)
+- docs/phase-3-b2b2b-licensing.md: B2B2B licensing sprint plan (6 weeks, tiers, architecture, metrics)
+- docs/phase-0-acceptance-status.md: Phase 0 criteria mapped to code evidence
+
+Web-verified:
+- Finance Act 2026 effective 1 Jul 2026 (bad debt 3yr, digital payments VAT, input VAT clawback)
+- VAT threshold 5M operative, 8M proposed not gazetted
+- eTIMS validation engine live Jan 2026, Special Table -> Tax Alerts confirmed
+
+All 122 tests pass, typecheck clean.
