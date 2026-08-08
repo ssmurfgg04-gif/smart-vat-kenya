@@ -103,7 +103,7 @@ export default function ToolsPage() {
               <Calculator size={17} weight="duotone" className="text-brand" aria-hidden="true" />
               <h2 id="vat-calc-heading" className="font-display text-[1rem] font-semibold text-ink">Kenya VAT Calculator 2026 — 16% Standard Rate</h2>
             </div>
-            <div className="border border-hairline rounded-lg overflow-hidden divide-y divide-hairline">
+            <div className="border border-hairline rounded-lg overflow-hidden divide-y divide-hairline bg-canvas">
               <div className="p-5">
                 <label htmlFor="amount" className="block text-[0.78rem] font-medium text-ink-muted mb-2">Amount (KES)</label>
                 <input id="amount" type="text" inputMode="decimal" placeholder="50,000" value={amount} onChange={(e) => setAmount(e.target.value)} className="w-full font-display text-[1.6rem] font-semibold text-ink bg-transparent focus:outline-none placeholder:text-ink-muted/30 placeholder:font-normal placeholder:text-xl" />
@@ -144,10 +144,10 @@ export default function ToolsPage() {
           {/* KRA Penalty Calculator */}
           <section aria-labelledby="penalty-heading">
             <div className="flex items-center gap-2.5 mb-6"><WarningCircle size={17} weight="duotone" className="text-brand" aria-hidden="true" /><h2 id="penalty-heading" className="font-display text-[1rem] font-semibold text-ink">KRA Penalty Calculator — All 6 Tax Regimes</h2></div>
-            <div className="border border-hairline rounded-lg overflow-hidden divide-y divide-hairline">
+            <div className="border border-hairline rounded-lg overflow-hidden divide-y divide-hairline bg-canvas">
               <div className="p-5">
                 <label htmlFor="pen-tax-type" className="block text-[0.78rem] font-medium text-ink-muted mb-2">Tax Type</label>
-                <select id="pen-tax-type" value={penTaxType} onChange={(e) => setPenTaxType(e.target.value)} className="w-full text-[0.95rem] text-ink bg-transparent border border-hairline rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-brand">
+                <select id="pen-tax-type" value={penTaxType} onChange={(e) => setPenTaxType(e.target.value)} className="w-full text-[0.95rem] text-ink bg-canvas border border-hairline rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-brand">
                   {TAX_REGIMES.map((t) => (<option key={t.value} value={t.value}>{t.label}</option>))}
                 </select>
               </div>

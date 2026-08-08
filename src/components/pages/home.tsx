@@ -184,7 +184,8 @@ export default function HomePage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pt-12 pb-12 lg:pt-14 lg:pb-16">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pt-12 pb-12 lg:pt-14 lg:pb-16 grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-20 items-start">
+          <div>
             <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
               Kenya Revenue Authority Registered Agents
             </p>
@@ -252,6 +253,39 @@ export default function HomePage() {
               </p>
             </div>
           </div>
+
+          {/* Stats card */}
+          <aside
+            aria-label="Key figures"
+            className="bg-canvas/[0.06] border border-canvas/15 rounded-xl p-8 self-start hidden lg:block"
+            style={{ backdropFilter: "blur(12px)" }}
+          >
+            <p className="font-mono text-[0.65rem] uppercase tracking-[0.16em] text-canvas/60 mb-6">
+              At a glance
+            </p>
+            <dl className="space-y-6">
+              {[
+                { value: "KES 5,000", label: "One-time VAT registration" },
+                { value: "KES 3,500", label: "Monthly iTax filing" },
+                { value: "1–3 days", label: "Average turnaround" },
+                { value: "16%", label: "Kenya VAT standard rate 2026" },
+                { value: "17th", label: "We file, not the 20th — never late" },
+              ].map(({ value, label }) => (
+                <div
+                  key={label}
+                  className="flex items-baseline justify-between gap-4 border-b border-canvas/15 pb-5 last:border-0 last:pb-0"
+                >
+                  <dd className="font-display text-[1.65rem] font-semibold text-canvas leading-none tabular-nums">
+                    {value}
+                  </dd>
+                  <dt className="text-[0.78rem] text-canvas/70 text-right max-w-[120px] leading-snug">
+                    {label}
+                  </dt>
+                </div>
+              ))}
+            </dl>
+          </aside>
+        </div>
         </section>
 
         {/* ─── SHAME BLOCK ─── */}

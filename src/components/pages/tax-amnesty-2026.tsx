@@ -165,50 +165,77 @@ export default function TaxAmnesty2026Page() {
 
       {/* ── Header ──────────────────────────────────────────── */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-16 lg:py-20">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="inline-flex items-center gap-2.5 mb-5 text-canvas/70 py-2 pr-4 pl-3 rounded-full bg-canvas/10">
-            <span className="flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.14em] tabular-nums">
-              <Clock size={14} className="text-brand" weight="fill" aria-hidden="true" />
-              {days}d : {hours}h : {minutes}m : {seconds}s
-            </span>
-            <span className="text-[0.7rem] text-canvas/50">until the window closes</span>
+        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-[1fr_400px] gap-12 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2.5 mb-5 text-canvas/70 py-2 pr-4 pl-3 rounded-full bg-canvas/10">
+              <span className="flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.14em] tabular-nums">
+                <Clock size={14} className="text-brand" weight="fill" aria-hidden="true" />
+                {days}d : {hours}h : {minutes}m : {seconds}s
+              </span>
+              <span className="text-[0.7rem] text-canvas/50">until the window closes</span>
+            </div>
+
+            <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
+              KRA Tax Amnesty 2026
+            </p>
+            <h1 className="font-display text-[clamp(2.2rem,5vw,3.6rem)] font-semibold text-canvas tracking-tight leading-tight mb-5 text-balance">
+              KRA is wiping out penalties —{" "}
+              <span className="text-canvas/80 font-normal">but only until 31 December 2026.</span>
+            </h1>
+            <p className="text-[1rem] text-canvas/70 max-w-[56ch] leading-relaxed mb-6">
+              Most Kenyan SMEs don&apos;t know they qualify for a 100% waiver of VAT penalties,
+              interest and fines on debt accrued up to the end of 2025. Get a free iTax ledger check —
+              we tell you exactly which of the three amnesty paths applies to you.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-6" role="list" aria-label="Trust signals">
+              <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+                <SealCheck size={12} weight="fill" className="text-brand" aria-hidden="true" />
+                Registered KRA tax agent
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+                <CheckCircle size={12} weight="fill" className="text-brand" aria-hidden="true" />
+                Free ledger check
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
+                <ShieldCheck size={12} weight="fill" className="text-brand" aria-hidden="true" />
+                We file on the 17th
+              </span>
+            </div>
+            <a
+              href={`${WA_BASE}?text=${WA_TEXT}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
+            >
+              <WhatsappLogo size={16} weight="fill" aria-hidden="true" />
+              Get my free ledger check
+            </a>
           </div>
 
-          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
-            KRA Tax Amnesty 2026
-          </p>
-          <h1 className="font-display text-[clamp(2.2rem,5vw,3.6rem)] font-semibold text-canvas tracking-tight leading-tight mb-5 text-balance">
-            KRA is wiping out penalties —{" "}
-            <span className="text-canvas/80 font-normal">but only until 31 December 2026.</span>
-          </h1>
-          <p className="text-[1rem] text-canvas/70 max-w-[56ch] leading-relaxed mb-6">
-            Most Kenyan SMEs don&apos;t know they qualify for a 100% waiver of VAT penalties,
-            interest and fines on debt accrued up to the end of 2025. Get a free iTax ledger check —
-            we tell you exactly which of the three amnesty paths applies to you.
-          </p>
-          <div className="flex flex-wrap gap-2 mb-6" role="list" aria-label="Trust signals">
-            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
-              <SealCheck size={12} weight="fill" className="text-brand" aria-hidden="true" />
-              Registered KRA tax agent
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
-              <CheckCircle size={12} weight="fill" className="text-brand" aria-hidden="true" />
-              Free ledger check
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-medium text-canvas/80 bg-canvas/10 rounded-full px-3 py-1.5">
-              <ShieldCheck size={12} weight="fill" className="text-brand" aria-hidden="true" />
-              We file on the 17th
-            </span>
-          </div>
-          <a
-            href={`${WA_BASE}?text=${WA_TEXT}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
-          >
-            <WhatsappLogo size={16} weight="fill" aria-hidden="true" />
-            Get my free ledger check
-          </a>
+          {/* Right side summary card */}
+          <aside className="bg-canvas/[0.06] border border-canvas/15 rounded-xl p-8 backdrop-blur hidden lg:block">
+            <p className="font-mono text-[0.65rem] uppercase tracking-[0.16em] text-canvas/60 mb-6">
+              Amnesty Summary
+            </p>
+            <ul className="space-y-4 text-[0.85rem] text-canvas/80 leading-relaxed">
+              <li className="flex items-start gap-2.5">
+                <CheckCircle size={16} weight="fill" className="text-brand shrink-0 mt-0.5" />
+                <span><strong>100% Waiver:</strong> All pre-2026 penalties & interest forgiven.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <CheckCircle size={16} weight="fill" className="text-brand shrink-0 mt-0.5" />
+                <span><strong>Deadline:</strong> Hard-capped at 31 December 2026.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <CheckCircle size={16} weight="fill" className="text-brand shrink-0 mt-0.5" />
+                <span><strong>Principal:</strong> Must be paid or structured to unlock waiver.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <CheckCircle size={16} weight="fill" className="text-brand shrink-0 mt-0.5" />
+                <span><strong>Free Check:</strong> We review your iTax ledger at zero cost.</span>
+              </li>
+            </ul>
+          </aside>
         </div>
       </div>
 
