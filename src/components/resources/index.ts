@@ -18,7 +18,6 @@ export { default as HowToRegisterKraPinIndividual } from "./how-to-register-kra-
 export { default as HowToCreateKraPin } from "./how-to-create-kra-pin"
 export { default as VatInputGuide } from "./vat-input-guide"
 export { default as KraPortalVsService } from "./kra-portal-vs-service"
-export { default as NephewTest } from "./nephew-test"
 export { default as VatDeadlineReminders } from "./vat-deadline-reminders"
 export { default as IcmsExportGuide } from "./icms-export-guide"
 export { default as KPLCBlackoutEtimsCompliance } from "./kplc-blackout-etims-compliance"
