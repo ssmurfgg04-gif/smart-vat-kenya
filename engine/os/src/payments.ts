@@ -123,6 +123,13 @@ export interface PaystackConfig {
 
 const PAYSTACK_BASE = "https://api.paystack.co"
 
+/** Paystack references allow only alphanumerics plus - . = (per Paystack docs). */
+export const PAYSTACK_REFERENCE_REGEX = /^[A-Za-z0-9\-.=]+$/
+
+export function isValidPaystackReference(reference: string): boolean {
+  return PAYSTACK_REFERENCE_REGEX.test(reference)
+}
+
 export class PaystackError extends Error {
   constructor(
     message: string,
@@ -158,6 +165,11 @@ export function createPaystackGateway(cfg: PaystackConfig): PaymentGateway {
   return {
     provider: "paystack",
     async initiate(req: PaymentRequest): Promise<PaymentInitiation> {
+      if (!isValidPaystackReference(req.accountReference)) {
+        throw new PaystackError(
+          `Invalid Paystack reference "${req.accountReference}" — only alphanumerics and - . _ = are allowed`,
+        )
+      }
       const res = await post("/transaction/initialize", {
         email: req.email ?? "billing@smartvat.io",
         amount: Math.round(req.amount * 100), // KES -> cents

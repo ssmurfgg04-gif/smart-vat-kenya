@@ -177,6 +177,6 @@ export function assessRefund(i: RefundInput): RefundAssessment {
     requiredDocuments,
     recommended: i.zeroRated
       ? "Export/zero-rated input is refundable; file for the export refund stream."
-      : "Standard input-VAT refund stream; escalate to a refund officer for >6-month aging.",
+      : "Standard input-VAT refund stream; lodge the claim within the 12-month Finance Act 2025 window before it lapses.",
   }
 }

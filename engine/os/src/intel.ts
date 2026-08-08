@@ -41,15 +41,15 @@ export const DEFAULT_RULES: Rule[] = [
     id: "vat-registration-threshold",
     title: "VAT registration threshold",
     keywords: ["register", "registration", "threshold", "8 million", "5 million", "turnover", "voluntary", "mandatory"],
-    body: "Under the Finance Act 2025 a business must register for VAT once annual taxable turnover reaches KES 8,000,000; registration is voluntary once turnover reaches KES 5,000,000. Late/non-registration when compulsory attracts the higher of KES 100,000 or the tax that would have been due.",
-    source: "Finance Act 2025 / VAT Act 2013",
+    body: "The operative mandatory registration threshold is an annual taxable turnover of KES 5,000,000 (VAT Act 2013 s.34); below it, registration is voluntary (subject to conditions). The Finance Act 2025 proposed raising the mandatory threshold to KES 8,000,000, but that change did not take effect. Non-registration when compulsory attracts the higher of KES 100,000 or the tax that would have been due.",
+    source: "VAT Act 2013 (s.34) / Finance Act 2025 proposal",
   },
   {
     id: "non-registration-penalty",
     title: "Non-registration penalty",
-    keywords: ["register", "registration", "penalty", "100,000", "threshold", "8 million", "penalties"],
-    body: "Failure to register for VAT when mandatory (annual taxable turnover at or above KES 8,000,000 under the Finance Act 2025) attracts the higher of KES 100,000 or the tax that would have been due.",
-    source: "Finance Act 2025 / VAT Act 2013",
+    keywords: ["register", "registration", "penalty", "100,000", "threshold", "5 million", "penalties"],
+    body: "Failure to register for VAT when mandatory (annual taxable turnover at or above the operative KES 5,000,000 threshold) attracts the higher of KES 100,000 or the tax that would have been due.",
+    source: "VAT Act 2013 (s.34) / TPA 2015",
   },
   {
     id: "vat-refund-window",
@@ -82,8 +82,8 @@ export const DEFAULT_RULES: Rule[] = [
   {
     id: "input-vat-time-limit",
     title: "Input VAT claiming rules",
-    keywords: ["input", "vat", "claim", "credit", "invoice", "time", "deduction"],
-    body: "Input VAT is recoverable when supported by a compliant eTIMS invoice and used for taxable supplies. Blocked (flagged supplier) and stale (older than the 12-month Finance Act 2025 window) claims need extra documentation and may be disallowed.",
+    keywords: ["input", "vat", "claim", "credit", "invoice", "time", "deduction", "6 months"],
+    body: "Input VAT is recoverable when supported by a compliant eTIMS invoice and used for taxable supplies, and must be claimed in the return for the period incurred or within 6 months after the end of that tax period (VAT Act 2013 s.17). Blocked (flagged supplier) or stale claims need extra documentation and may be disallowed. Do not confuse this with the refund window: excess VAT refund applications must be lodged within 12 months (Finance Act 2025, reduced from 24).",
     source: "VAT Act 2013 / Finance Act 2025",
   },
   {

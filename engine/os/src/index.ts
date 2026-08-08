@@ -33,6 +33,7 @@ export * from "./taxke.js"
 export * from "./dojah.js"
 export * from "./pin.js"
 export * from "./vat.js"
+export * from "./protax.js"
 
 import { DeadlineConfig, planPeriod, dueWithin } from "./deadlines.js"
 import { computeHealth, HealthInput } from "./health.js"

@@ -29,8 +29,10 @@ export interface DojahKraResponse {
 export interface KraLookupResult {
   pin: string
   taxpayerName?: string
-  /** "Active" / "Suspended" / "Cancelled" / "Stopped". */
+  /** KRA PIN lifecycle status: "Active" / "Inactive" / "Cancelled" / "Stopped" (entity.pin_status). */
   status?: string
+  /** Registration posture: "Registered" / "Not Registered" (entity.current_status). */
+  registrationStatus?: string
   obligationName?: string
 }
 
@@ -41,11 +43,14 @@ export interface KraPinChecker {
 export interface DojahConfig {
   appId: string
   appKey: string
+  /** "production" (api.dojah.io, default) or "sandbox" (sandbox.dojah.io). */
+  environment?: "production" | "sandbox"
   baseUrl?: string
   transport?: HttpTransport
 }
 
 const DOJAH_BASE = "https://api.dojah.io"
+const DOJAH_SANDBOX = "https://sandbox.dojah.io"
 
 export class DojahError extends Error {
   constructor(
@@ -59,7 +64,8 @@ export class DojahError extends Error {
 }
 
 export function createDojahKraChecker(cfg: DojahConfig): KraPinChecker {
-  const base = cfg.baseUrl ?? DOJAH_BASE
+  const base =
+    cfg.baseUrl ?? (cfg.environment === "sandbox" ? DOJAH_SANDBOX : DOJAH_BASE)
   const http = cfg.transport ?? createFetchTransport()
 
   return {
@@ -75,7 +81,8 @@ export function createDojahKraChecker(cfg: DojahConfig): KraPinChecker {
       return {
         pin,
         taxpayerName: entity?.taxpayer_name,
-        status: entity?.current_status ?? entity?.pin_status,
+        status: entity?.pin_status,
+        registrationStatus: entity?.current_status,
         obligationName: entity?.obligation_name,
       }
     },

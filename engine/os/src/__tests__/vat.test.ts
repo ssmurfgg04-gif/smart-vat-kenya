@@ -10,9 +10,13 @@ import {
   lateFilingPenalty,
   latePaymentCharge,
   isRefundStale,
-  REGISTRATION_THRESHOLD_MANDATORY,
-  REGISTRATION_THRESHOLD_VOLUNTARY,
+  VAT_REGISTRATION_THRESHOLD,
+  VAT_REGISTRATION_THRESHOLD_PROPOSED,
   REFUND_WINDOW_MONTHS,
+  INPUT_CLAIM_WINDOW_MONTHS,
+  isInputClaimStale,
+  registrationDeadlineOverdue,
+  REGISTRATION_DEADLINE_DAYS,
 } from "../vat.js"
 
 test("VAT rate is 16%", () => {
@@ -37,12 +41,23 @@ test("vatFromInclusive recovers embedded VAT", () => {
   assert.equal(vatFromInclusive(1160), 160)
 })
 
-test("registrationStatus follows the Finance Act 2025 thresholds", () => {
-  assert.equal(registrationStatus(4_000_000), "none")
-  assert.equal(registrationStatus(REGISTRATION_THRESHOLD_VOLUNTARY), "voluntary")
-  assert.equal(registrationStatus(7_000_000), "voluntary")
-  assert.equal(registrationStatus(REGISTRATION_THRESHOLD_MANDATORY), "mandatory")
+test("registrationStatus follows the operative VAT Act threshold at 5M", () => {
+  assert.equal(registrationStatus(0), "none")
+  assert.equal(registrationStatus(4_000_000), "voluntary")
+  assert.equal(registrationStatus(VAT_REGISTRATION_THRESHOLD), "mandatory")
+  assert.equal(registrationStatus(7_000_000), "mandatory")
   assert.equal(registrationStatus(12_000_000), "mandatory")
+  // FA2025 proposal (8M) is not yet the operative mandatory threshold.
+  assert.equal(VAT_REGISTRATION_THRESHOLD_PROPOSED, 8_000_000)
+})
+
+test("registration deadline applies 30 days after crossing the threshold", () => {
+  const day = 24 * 60 * 60 * 1000
+  const crossed = new Date(2026, 0, 1)
+  assert.equal(REGISTRATION_DEADLINE_DAYS, 30)
+  assert.equal(registrationDeadlineOverdue(new Date(crossed.getTime() + 29 * day), crossed), false)
+  assert.equal(registrationDeadlineOverdue(new Date(crossed.getTime() + 30 * day), crossed), false)
+  assert.equal(registrationDeadlineOverdue(new Date(crossed.getTime() + 31 * day), crossed), true)
 })
 
 test("lateFilingPenalty is the higher of 10,000 or 5% of tax due", () => {
@@ -62,9 +77,13 @@ test("latePaymentCharge adds 5% penalty plus 1%/month interest", () => {
   assert.equal(zero.penalty, 5_000)
 })
 
-test("refund window is 12 months (Finance Act 2025)", () => {
+test("refund window is 12 months; input claim window is 6 months", () => {
   assert.equal(REFUND_WINDOW_MONTHS, 12)
+  assert.equal(INPUT_CLAIM_WINDOW_MONTHS, 6)
   assert.equal(isRefundStale(11), false)
   assert.equal(isRefundStale(12), false)
   assert.equal(isRefundStale(13), true)
+  assert.equal(isInputClaimStale(5), false)
+  assert.equal(isInputClaimStale(6), false)
+  assert.equal(isInputClaimStale(7), true)
 })

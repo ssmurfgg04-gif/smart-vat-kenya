@@ -1,7 +1,7 @@
 import { test } from "node:test"
 import assert from "node:assert/strict"
 import { createScriptedTransport, RecordedCall } from "../transport.js"
-import { createInMemoryPaymentGateway, createPaystackGateway, PaystackError, mpesaToPaymentGateway, PaymentRequest } from "../payments.js"
+import { createInMemoryPaymentGateway, createPaystackGateway, PaystackError, mpesaToPaymentGateway, PaymentRequest, isValidPaystackReference } from "../payments.js"
 import { createInMemoryGateway } from "../mpesa.js"
 
 test("in-memory gateway records requests and verifies them completed", async () => {
@@ -50,6 +50,20 @@ test("Paystack initiate throws when no reference comes back", async () => {
   const gateway = createPaystackGateway({ secretKey: "sk_test_x", transport })
   await assert.rejects(
     () => gateway.initiate({ amount: 100, accountReference: "r", description: "d" }),
+    PaystackError,
+  )
+})
+
+test("Paystack rejects references outside the allowed charset", async () => {
+  assert.equal(isValidPaystackReference("c1-2026.08=1"), true)
+  assert.equal(isValidPaystackReference("plainReference"), true)
+  assert.equal(isValidPaystackReference("c1-2026_08"), false) // underscore not allowed
+  assert.equal(isValidPaystackReference("spaces not ok"), false)
+  assert.equal(isValidPaystackReference("ref/with/slash"), false)
+  const transport = createScriptedTransport([{ url: "/transaction/initialize", body: { data: { reference: "x" } } }])
+  const gateway = createPaystackGateway({ secretKey: "sk_test_x", transport })
+  await assert.rejects(
+    () => gateway.initiate({ amount: 100, accountReference: "bad/ref", description: "d" }),
     PaystackError,
   )
 })

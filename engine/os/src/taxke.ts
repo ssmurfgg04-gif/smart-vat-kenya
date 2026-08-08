@@ -42,7 +42,8 @@ export interface EtimsGeneratedInvoice {
   invoiceNumber: string
   controlNumber: string
   qrCode?: string
-  status: "synced" | "pending" | "failed"
+  /** tax.ke sync lifecycle: pending → syncing → synced, or failed after 72h retries. */
+  status: "pending" | "syncing" | "synced" | "failed"
 }
 
 export interface EtimsSyncStatus {
@@ -102,7 +103,7 @@ export function createTaxKeEtims(cfg: TaxKeConfig): EtimsClient {
       const data = res.body as {
         controlNumber?: string
         qrCode?: string
-        status?: "synced" | "pending" | "failed"
+        status?: "pending" | "syncing" | "synced" | "failed"
         invoiceNumber?: string
       }
       if (!data.controlNumber) throw new TaxKeError("tax.ke returned no control number", res.status, res.body)

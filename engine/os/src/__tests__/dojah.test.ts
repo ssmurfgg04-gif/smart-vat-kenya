@@ -13,7 +13,7 @@ test("Dojah KRA lookup hits the KYC endpoint with raw AppKey (no Bearer)", async
           entity: {
             pin: "A123456789Z",
             taxpayer_name: "JANE DOE",
-            current_status: "Active",
+            current_status: "Registered",
             pin_status: "Active",
             obligation_name: "VAT",
           },
@@ -28,19 +28,21 @@ test("Dojah KRA lookup hits the KYC endpoint with raw AppKey (no Bearer)", async
 
   assert.equal(out.taxpayerName, "JANE DOE")
   assert.equal(out.status, "Active")
+  assert.equal(out.registrationStatus, "Registered")
   assert.equal(out.obligationName, "VAT")
   assert.ok(calls[0]!.url.includes("?pin=A123456789Z"))
   assert.equal(calls[0]!.headers!.Authorization, "sk_live_raw")
   assert.equal(calls[0]!.headers!.AppId, "did_1")
 })
 
-test("Dojah falls back to pin_status when current_status is absent", async () => {
+test("Dojah reports an inactive PIN via pin_status", async () => {
   const transport = createScriptedTransport([
-    { url: "/api/v1/ke/kyc/kra", body: { entity: { pin: "P123456789Z", pin_status: "Suspended" } } },
+    { url: "/api/v1/ke/kyc/kra", body: { entity: { pin: "P123456789Z", current_status: "Registered", pin_status: "Suspended" } } },
   ])
   const checker = createDojahKraChecker({ appId: "x", appKey: "y", transport })
   const out = await checker.lookup("P123456789Z")
   assert.equal(out.status, "Suspended")
+  assert.equal(out.registrationStatus, "Registered")
 })
 
 test("Dojah throws DojahError on a non-200 response", async () => {
