@@ -57,9 +57,9 @@
 html {
   color-scheme: light dark;
 
-  --ink:         #141311;
-  --ink-soft:    #3c3a36;
-  --ink-muted:   #5d5a4e;
+  --ink:         #111110;
+  --ink-soft:    #2c2a26;
+  --ink-muted:   #4a473f;
   --canvas:      #faf8f3;
   --canvas-alt:  #f0ede5;
   --canvas-warm: #e8e3d8;
