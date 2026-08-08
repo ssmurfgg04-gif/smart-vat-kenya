@@ -171,6 +171,7 @@ html.dark {
     transform: translateX(-101%);
     transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: -1;
+    border-radius: inherit;
   }
   .btn-fill:hover::before {
     transform: translateX(0);
