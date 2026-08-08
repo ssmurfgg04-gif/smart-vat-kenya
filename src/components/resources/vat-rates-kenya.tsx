@@ -348,7 +348,7 @@ export default function VatRatesKenyaPage() {
                     <ul className="space-y-1.5 text-[0.83rem] text-ink-soft leading-relaxed">
                       <li><strong className="text-ink">e-bicycles</strong> (HS code 8712) and <strong className="text-ink">solar batteries</strong> (except HS 8507.60.00) moved from zero-rated to <strong className="text-ink">standard-rated 16%</strong>.</li>
                       <li><strong className="text-ink">Inputs and raw materials for pharmaceutical manufacturing</strong> and <strong className="text-ink">BEV (electric) stove inputs</strong> moved from zero-rated to <strong className="text-ink">exempt</strong> — no VAT charged, but no input VAT recovery either.</li>
-                      <li><strong className="text-ink">Aircraft spare parts and chapter-88 goods</strong> moved from exempt to standard-rated 16%.</li>
+                      <li><strong className="text-ink">Small aircraft</strong> (unladen weight under 2,000 kg, incl. helicopters and light aircraft) and <strong className="text-ink">direction-finding compasses/instruments for aircraft</strong> moved from exempt to standard-rated 16%. Larger aircraft (8802.30 / 8802.40) and <strong className="text-ink">aircraft spare parts imported by operators or maintenance businesses</strong> (with the civil-aviation recommendation) remain exempt.</li>
                     </ul>
                   </div>
                 </div>
