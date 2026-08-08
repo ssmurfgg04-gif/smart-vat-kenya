@@ -33,15 +33,19 @@ const faqs = [
   },
   {
     q: "Who is required to use eTIMS?",
-    a: "Every person registered for VAT in Kenya must use eTIMS for invoicing. There is no turnover threshold exemption — if you are VAT-registered, you must use eTIMS. This includes businesses under the KES 8 million threshold who registered voluntarily, small taxpayer regime participants, and businesses using the special VAT table for unregistered suppliers.",
+    a: "Every person registered for VAT in Kenya must use eTIMS for invoicing. There is no turnover threshold exemption — if you are VAT-registered, you must use eTIMS. This includes businesses below the KES 5 million threshold who registered voluntarily, small taxpayer regime participants, and businesses using the special VAT table for unregistered suppliers.",
   },
   {
     q: "Can I use eTIMS if I am not VAT-registered?",
-    a: "No. eTIMS is mandatory only for VAT-registered persons. However, unregistered businesses may need to register for VAT if they meet the KES 5 million (or KES 8 million with effect from 1 September 2024) annual turnover threshold.",
+    a: "No. eTIMS is mandatory for all persons engaged in business — VAT-registered or not. KRA has progressively extended the mandate to non-VAT-registered businesses, and Tax Compliance Certificate (TCC) issuance is now tied to eTIMS registration. A business with annual turnover above KES 5 million must comply regardless of VAT status; smaller businesses previously outside the mandate are also being onboarded as enforcement widens.",
   },
   {
     q: "What happens if I do not onboard eTIMS within 30 days of VAT registration?",
-    a: "KRA imposes a penalty of KES 50,000 per month for failure to onboard eTIMS within 30 days of VAT registration. This penalty continues until you onboard. KRA has been actively enforcing this penalty in 2026.",
+    a: "The penalties with clear legal footing sit in the Tax Procedures (Electronic Tax Invoice) Regulations (LN 64/2024) and the TPA: issuing a non-compliant electronic tax invoice costs the higher of KES 1,000,000 or 10% of the tax involved per invoice (LN 64/2024); failing to keep or issue the required invoices is exposed to TPA s.86 (higher of KES 100,000 or twice the tax); and failing to integrate a data-management system after written notice costs KES 500,000 per month. Some guidance quotes a KES 50,000-per-month figure, but that is not a standalone statutory penalty under the ETI Regulations — budget for the per-invoice exposure, which is far larger.",
+  },
+  {
+    q: "What is the penalty for issuing a non-eTIMS invoice?",
+    a: "Issuing an invoice that fails to comply with eTIMS requirements attracts the higher of KES 1,000,000 or 10% of the tax involved per invoice under the Tax Procedures (Electronic Tax Invoice) Regulations, LN 64/2024. It is also exposed to TPA s.86 (higher of KES 100,000 or twice the tax). This applies to handwritten receipts, parallel invoicing, or any attempt to bypass the eTIMS system — and KRA denies input VAT on any purchase not backed by a compliant eTIMS invoice.",
   },
   {
     q: "Can I claim input VAT on a purchase if the supplier did not use eTIMS?",
@@ -58,10 +62,6 @@ const faqs = [
   {
     q: "Does eTIMS apply to B2C sales (sales to individuals)?",
     a: "Yes. Every sale — B2B or B2C — must go through eTIMS. For B2C sales where the customer does not have or provide a KRA PIN, you issue a simplified eTIMS invoice without the customer PIN. The sale is still transmitted to KRA in real time.",
-  },
-  {
-    q: "What is the penalty for issuing a non-eTIMS invoice?",
-    a: "KRA can impose a penalty of up to KES 100,000 per instance for issuing an invoice that does not comply with eTIMS requirements. This applies to manually written receipts, parallel invoicing, or any attempt to bypass the eTIMS system.",
   },
   {
     q: "Can I use eTIMS offline?",
@@ -143,21 +143,22 @@ export default function EtimsMandateGuide() {
             </p>
 
             <h2>Who Must Comply?</h2>
-            <p>The eTIMS mandate applies to <strong>every VAT-registered person</strong> in Kenya. There is no exemption based on:</p>
+            <p>The eTIMS mandate applies to <strong>all persons engaged in business</strong> in Kenya — VAT-registered or not. KRA widened the mandate to every business, so there is no exemption based on:</p>
             <ul>
-              <li><strong>Turnover:</strong> If you are VAT-registered — whether because your turnover exceeds KES 5 million (KES 8 million from September 2024) or you registered voluntarily — eTIMS applies</li>
+              <li><strong>VAT status:</strong> The mandate covers VAT-registered businesses and non-VAT-registered businesses alike; Tax Compliance Certificate (TCC) issuance is now tied to eTIMS registration</li>
+              <li><strong>Turnover:</strong> A business with annual turnover above KES 5 million must comply regardless of VAT status</li>
               <li><strong>Business type:</strong> Retailers, wholesalers, service providers, manufacturers, landlords, NGOs, tech startups — all must use eTIMS</li>
               <li><strong>Customer type:</strong> B2B, B2C, cash sales, credit sales — all must go through eTIMS</li>
-              <li><strong>Small taxpayer regime:</strong> Businesses on the 8% turnover-inclusive regime still need eTIMS for invoicing</li>
+              <li><strong>Small taxpayer regime:</strong> Businesses on turnover tax still need eTIMS for invoicing</li>
             </ul>
             <p>
-              Businesses that are <strong>not VAT-registered</strong> are not required to use eTIMS. However, if an unregistered business crosses the VAT registration threshold, it must register and then onboard eTIMS within 30 days.
+              <strong>Onboarding:</strong> once you are required to operate eTIMS (VAT-registered or otherwise in scope), onboard without delay. Issuing a non-compliant invoice attracts the higher of KES 1,000,000 or 10% of the tax per invoice under the ETI Regulations (LN 64/2024), plus TPA s.86 exposure.
             </p>
 
             <h2>eTIMS Onboarding: What You Need to Do</h2>
             <p>Onboarding is the first step after VAT registration. Here is the process:</p>
             <ol>
-              <li><strong>Onboard within 30 days</strong> of VAT registration. KRA imposes KES 50,000/month in penalties for late onboarding</li>
+              <li><strong>Register for eTIMS</strong> via iTax, choosing your channel (mobile app, web portal, or API integration)</li>
               <li><strong>Choose your channel:</strong> Mobile app (recommended for most SMEs), web portal, or API integration for ERP/POS systems</li>
               <li><strong>Download the eTIMS app</strong> from Google Play Store or Apple App Store, or access the web portal at <a href="https://etims.kra.go.ke" target="_blank" rel="noopener noreferrer">etims.kra.go.ke</a></li>
               <li><strong>Register your device</strong> and link it to your KRA PIN</li>
@@ -215,16 +216,16 @@ export default function EtimsMandateGuide() {
             </div>
 
             <h2>Penalties and Enforcement in 2026</h2>
-            <p>The Finance Act 2026 introduced higher minimum penalties for eTIMS non-compliance. Current penalty structure:</p>
+            <p>eTIMS penalties rest on two legal foundations — the Tax Procedures (Electronic Tax Invoice) Regulations (LN 64/2024) and the Tax Procedures Act. Structure:</p>
             <ul>
-              <li><strong>KES 50,000 per month</strong> for failure to onboard eTIMS within 30 days of VAT registration</li>
-              <li><strong>Up to KES 100,000 per instance</strong> for issuing non-compliant invoices (handwritten, non-eTIMS, parallel invoicing)</li>
-              <li><strong>Minimum penalty threshold:</strong> KES 100,000 for businesses, KES 10,000 for individuals for failures like not issuing an eTIMS invoice, not filing electronically, or not paying tax electronically</li>
+              <li><strong>Higher of KES 1,000,000 or 10% of the tax involved</strong> per non-compliant electronic tax invoice (LN 64/2024) — applied to handwritten, non-eTIMS, or parallel invoicing, and to invoices with missing fields</li>
+              <li><strong>Higher of KES 100,000 or twice the tax</strong> for failing to keep or issue the required invoices (TPA s.86)</li>
+              <li><strong>KES 500,000 per month</strong> for failing to integrate a data-management system with KRA's electronic system once notified (TPA s.25(12))</li>
               <li><strong>Input VAT denial:</strong> Indirect penalty — non-eTIMS purchases result in denied input VAT, increasing your net VAT payable</li>
               <li><strong>Stock report non-compliance:</strong> Late or missing stock reports can trigger an audit and penalties</li>
             </ul>
             <p>
-              KRA has publicly stated that eTIMS enforcement is a priority for 2026. Businesses should expect more audits focused on eTIMS compliance, especially cross-referencing stock reports against invoicing data.
+              A KES 50,000-per-month figure circulates in some business guidance, but it is not a standalone statutory penalty under the ETI Regulations — the enforceable exposure is the per-invoice LN 64/2024 amount and the monthly integration penalty above. KRA has publicly stated that eTIMS enforcement is a priority for 2026. Businesses should expect more audits focused on eTIMS compliance, especially cross-referencing stock reports against invoicing data.
             </p>
 
             <h2>eTIMS and VAT Return Filing</h2>

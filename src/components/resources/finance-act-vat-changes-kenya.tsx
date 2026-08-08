@@ -18,7 +18,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Finance Act 2025 & 2026 VAT Changes Kenya",
   description:
-    "All VAT-related changes from the Finance Act 2025 and Finance Act 2026 in Kenya: KES 8M threshold, 12-month refund window, fintech VAT, apportionment rule changes, and more.",
+    "All VAT-related changes from the Finance Act 2025 and Finance Act 2026 in Kenya: KES 5M operative threshold (8M proposed), 12-month refund window, fintech VAT, apportionment, bad-debt relief and rate moves.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-25",
@@ -290,6 +290,10 @@ export default function FinanceActVatPage() {
                     { key: "mosquito-repellent", change: "Mosquito repellent exempted from VAT", detail: "Mosquito repellent products were reclassified from 16% VAT to exempt, effective 1 July 2025." },
                     { key: "tea-coffee-packaging", change: "Tea and coffee packaging materials zero-rated", detail: "Packaging materials for tea and coffee are now zero-rated (0%), allowing suppliers to claim input VAT and apply for refunds." },
                     { key: "manufacturing-capital", change: "Manufacturing capital goods exemption extended", detail: "The VAT exemption on capital goods for the manufacturing sector, granted before 27 December 2024, was extended to apply until 27 December 2025." },
+                    { key: "e-bikes-solar", change: "e-bicycles and solar batteries now 16% VAT", detail: "Electric bicycles (HS 8712) and solar batteries (excluding HS 8507.60.00) moved from zero-rated to standard-rated 16% from 1 July 2026. Dealers and manufacturers must now charge VAT and can claim input VAT." },
+                    { key: "pharma-bev-inputs", change: "Pharma & BEV stove inputs now exempt", detail: "Inputs and raw materials supplied to pharmaceutical manufacturers, and inputs for bioethanol-vapour (BEV) stoves, moved from zero-rated to exempt from 1 July 2026 — no VAT is charged, but the related input VAT is no longer recoverable." },
+                    { key: "dialyzers-scrap", change: "Dialyzers and scrap metal exempted", detail: "Kidney dialysis equipment (tariff 8421.29.00) and scrap metal goods moved from standard-rated 16% to exempt from 1 July 2026." },
+                    { key: "aircraft-ch88", change: "Aircraft parts and chapter-88 goods now 16%", detail: "Aircraft spare parts and chapter-88 goods moved from exempt to standard-rated 16% from 1 July 2026, along with tourism and convention-facility construction supplies, direction-finding compasses, and cash-restocking services." },
                   ].map(({ key, change, detail }) => (
                     <div key={key} className="border border-hairline rounded-lg p-4">
                       <p className="font-semibold text-ink text-[0.88rem] mb-1">{change}</p>
@@ -314,6 +318,8 @@ export default function FinanceActVatPage() {
                     "If you have mixed supplies (taxable and exempt), implement the input VAT apportionment formula immediately.",
                     "If you supply government security agencies, start tracking input VAT on related purchases for refund claims.",
                     "If you use outsourced labour or staffing services, check that your supplier has correctly excluded employee costs from the taxable value.",
+                    "If you sell e-bicycles, solar batteries, aircraft parts, or chapter-88 goods, re-price your catalogue for the rate moves effective 1 July 2026.",
+                    "If you purchase pharma inputs, BEV stoves, dialyzers, or scrap metal, confirm which VAT rate your supplier applies and stop claiming input VAT if the item is now exempt.",
                   ].map((item) => (
                     <li key={item} className="flex gap-3">
                       <CheckCircle size={14} weight="fill" className="text-brand shrink-0 mt-1.5" aria-hidden="true" />

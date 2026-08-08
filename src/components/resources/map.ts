@@ -145,7 +145,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "etims-down-offline-invoicing": {
     title: "KRA eTIMS Down? Invoice Offline Now — Avoid the 7-Day Lockout",
-    description: "KRA eTIMS down or offline? Keep issuing invoices now, sync when the portal recovers, and avoid the 7-day device lockout and KES 50,000/month compliance fines.",
+    description: "KRA eTIMS down or offline? Keep issuing invoices now, sync when the portal recovers, and avoid the 7-day device lockout and eTIMS penalties (higher of KES 1M or 10% of tax per invoice).",
     canonical: "/resources/etims-down-offline-invoicing/",
   },
   "etims-fuel-stations": {
@@ -179,8 +179,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/etims-pending-sync/",
   },
   "etims-penalty-50000-per-month-kenya": {
-    title: "eTIMS Penalty KES 50,000/Month — Avoid It Now 2026",
-    description: "KRA charges KES 50,000/month for eTIMS non-compliance. Learn what triggers the penalty, how to appeal, and how to avoid it entirely.",
+    title: "eTIMS Penalties Kenya — 1M or 10% Per Invoice, LN 64/2024",
+    description: "eTIMS penalties broken down by legal basis: higher of KES 1M or 10% of tax per non-compliant invoice (LN 64/2024), TPA s.86, and KES 500,000/month for non-integration. Clarifies where the 50k figure comes from.",
     canonical: "/resources/etims-penalty-50000-per-month-kenya/",
   },
   "faq": {
@@ -364,8 +364,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/vat-rates-kenya/",
   },
   "vat-threshold-kenya": {
-    title: "VAT Threshold Kenya 2026 — KES 5M or 8M?",
-    description: "Kenya's VAT registration threshold is KES 5 million annual turnover. Learn who must register, the voluntary threshold debate, and late-registration penalties.",
+    title: "VAT Threshold Kenya 2026 — The KES 5M Threshold (Is 8M Law?)",
+    description: "Kenya's VAT registration threshold is KES 5 million annual turnover; the proposed KES 8 million in the Finance Act 2025 is not yet in force. Learn who must register, voluntary registration, and late-registration penalties.",
     canonical: "/resources/vat-threshold-kenya/",
   },
   "vat-refund-guide-kenya": {

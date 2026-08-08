@@ -117,7 +117,7 @@ const faqSchema = {
       name: "Will KRA penalise me for Pending Sync invoices?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Invoices stuck on Pending Sync are not yet counted as transmitted to KRA. If they stay unsynced, KRA may treat the sales as not declared under eTIMS, which can trigger the KES 50,000/month non-compliance penalty or a VAT audit. Fix the sync promptly and keep evidence (sync logs, screenshots) if a KRA outage caused the delay. eTIMS Client also locks you out if it cannot sync for more than 7 consecutive days — so resolve pending syncs before that threshold.",
+        text: "Invoices stuck on Pending Sync are not yet counted as transmitted to KRA. If they stay unsynced, KRA may treat the sales as not declared under eTIMS, which can trigger a non-compliant-invoice penalty (higher of KES 1,000,000 or 10% of the tax per invoice under LN 64/2024) or a VAT audit. Fix the sync promptly and keep evidence (sync logs, screenshots) if a KRA outage caused the delay. eTIMS Client also locks you out if it cannot sync for more than 7 consecutive days — so resolve pending syncs before that threshold.",
       },
     },
     {

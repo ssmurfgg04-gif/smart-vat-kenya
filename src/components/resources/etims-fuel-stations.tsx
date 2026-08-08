@@ -67,7 +67,7 @@ const faqSchema = {
       name: "Do fuel stations face penalties for not using eTIMS?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Failure to comply with the eTIMS mandate attracts the standard eTIMS penalties — KES 50,000 per month of non-compliance plus fines tied to invoicing violations — along with enforcement action. KRA has also linked eTIMS compliance to Tax Compliance Certificate (TCC) issuance, so non-compliant stations get blocked on multiple fronts.",
+        text: "Yes. Failure to comply with the eTIMS mandate attracts the standard eTIMS penalties — the higher of KES 1,000,000 or 10% of the tax per non-compliant invoice under the ETI Regulations (LN 64/2024), TPA s.86 exposure, and KES 500,000/month for system non-integration — along with enforcement action. KRA has also linked eTIMS compliance to Tax Compliance Certificate (TCC) issuance, so non-compliant stations get blocked on multiple fronts.",
       },
     },
     {
@@ -235,7 +235,7 @@ export default function EtimsFuelStations() {
             <h2 id="owner-h">If You Run a Station: What Non-Compliance Now Costs</h2>
             <p>KRA&apos;s enforcement posture after the December 2025 deadline is straightforward:</p>
             <ul>
-              <li><strong>eTIMS penalties:</strong> the standard eTIMS penalty regime applies — KES 50,000 per month of non-compliance, plus per-invoice fines for continued failures (see our <a href="/resources/etims-penalty-50000-per-month-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS penalty guide</a> for the full breakdown)</li>
+              <li><strong>eTIMS penalties:</strong> the standard eTIMS penalty regime applies — the higher of KES 1,000,000 or 10% of the tax per non-compliant invoice (LN 64/2024), plus TPA s.86 exposure (see our <a href="/resources/etims-penalty-50000-per-month-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS penalty guide</a> for the full breakdown)</li>
               <li><strong>Enforcement action:</strong> KRA has explicitly warned of enforcement measures for fuel retailers that missed the deadline</li>
               <li><strong>TCC blockage:</strong> eTIMS compliance is now a gate for Tax Compliance Certificates — a non-compliant station can&apos;t renew licences, win supply contracts, or process permits</li>
               <li><strong>Audit exposure:</strong> stations outside the system are prime audit targets because KRA can compare pump sales against its own fuel distribution data</li>

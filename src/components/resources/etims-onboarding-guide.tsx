@@ -54,7 +54,7 @@ const faqSchema = {
       name: "What is the penalty for not registering for eTIMS in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "KRA imposes a penalty of KES 50,000 per month for every month a business fails to register for eTIMS after the deadline. Additionally, input VAT claims are blocked for invoices not transmitted through eTIMS, and businesses face a 50% surcharge on audit adjustments if non-compliance is detected. System integration failures attract penalties of up to KES 500,000 per month.",
+        text: "The eTIMS penalties with clear legal footing are: higher of KES 1,000,000 or 10% of the tax involved per non-compliant invoice (Tax Procedures (Electronic Tax Invoice) Regulations, LN 64/2024); higher of KES 100,000 or twice the tax for failing to keep or issue the required invoices (TPA s.86); and KES 500,000 per month for failing to integrate a data-management system once notified (TPA s.25(12)). Additionally, input VAT claims are blocked for invoices not transmitted through eTIMS. A KES 50,000-per-month figure circulates in some guidance but is not a standalone statutory penalty under the ETI Regulations.",
       },
     },
     {
@@ -141,7 +141,8 @@ export default function ETIMSOnboardingPage() {
             <strong className="text-ink">every business in Kenya</strong> — whether VAT-registered or not — must issue invoices through eTIMS. Choose from{" "}
             <strong className="text-ink">eTIMS Lite</strong> (free, web-based), <strong className="text-ink">eTIMS Client</strong> (desktop app),{" "}
             <strong className="text-ink">eTIMS Trader</strong> (importers), or <strong className="text-ink">VSCU/OSCU</strong> (POS integration). Registration is done on the{" "}
-            <strong className="text-ink">KRA iTax portal</strong>, and failing to register attracts a penalty of <strong className="text-ink">KES 50,000 per month</strong>.
+            <strong className="text-ink">KRA iTax portal</strong>, and failing to issue compliant invoices attracts penalties under the
+            ETI Regulations (higher of <strong className="text-ink">KES 1,000,000 or 10% of the tax per invoice</strong>) and TPA s.86.
           </p>
         </div>
 
@@ -457,12 +458,12 @@ export default function ETIMSOnboardingPage() {
                   </thead>
                   <tbody className="divide-y divide-hairline">
                     {[
-                      { off: "Failing to register for eTIMS", cost: "KES 50,000 per month" },
+                      { off: "Non-compliant eTIMS invoice issued (incl. unregistered / outside-system sales)", cost: "Higher of KES 1,000,000 or 10% of tax per invoice (LN 64/2024)" },
+                      { off: "Failure to keep or issue required invoices", cost: "Higher of KES 100,000 or 2x tax (TPA s.86)" },
+                      { off: "System integration not completed after written notice", cost: "KES 500,000 per month (TPA s.25(12))" },
                       { off: "Issuing invoices outside eTIMS", cost: "Input VAT blocked + audit adjustment" },
-                      { off: "System integration not completed", cost: "KES 500,000 per month" },
                       { off: "Non-compliance found on audit", cost: "50% surcharge on additional assessment" },
                       { off: "Incorrect or incomplete invoice fields", cost: "KES 10,000 per invoice" },
-                      { off: "Failure to produce eTIMS records on demand", cost: "KES 100,000 per instance" },
                     ].map(({ off, cost }) => (
                       <tr key={off}>
                         <td className="p-3.5 text-ink-muted">{off}</td>

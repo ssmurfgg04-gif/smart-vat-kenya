@@ -36,7 +36,7 @@ const faqSchema = {
       name: "What happens if I don't comply with eTIMS requirements?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Non-compliance with eTIMS can attract penalties of up to KES 100,000 per instance. KRA has been aggressively enforcing eTIMS compliance in 2026. Specific penalties include: KES 50,000 per month for failure to onboard within 30 days of VAT registration, KES 100,000 for issuing non-compliant invoices, and denial of input VAT claims for purchases that are not eTIMS-compliant.",
+        text: "Non-compliance with eTIMS can be expensive. Issuing a non-compliant electronic tax invoice attracts the higher of KES 1,000,000 or 10% of the tax involved per invoice (Tax Procedures (Electronic Tax Invoice) Regulations, LN 64/2024), and failure to keep or issue the required invoices is exposed to TPA s.86 (higher of KES 100,000 or twice the tax). A business notified to integrate its data-management system with KRA's electronic system that fails to comply pays KES 500,000 per month. Additionally, input VAT claims are denied for purchases that are not eTIMS-compliant.",
       },
     },
     {
@@ -115,7 +115,7 @@ export default function ETIMSComplianceChecklistPage() {
         <div className="border-l-[3px] border-brand pl-5 mb-10">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Why This Checklist Matters</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            eTIMS compliance is <strong className="text-ink">not optional</strong> for VAT-registered businesses in Kenya. KRA's 2026 enforcement drive has led to penalties against thousands of businesses for eTIMS violations — from KES 50,000 for late onboarding to KES 100,000 for issuing non-compliant invoices. This checklist covers every obligation you have: <strong className="text-ink">daily, monthly, quarterly, and annual</strong>. Run through it regularly to stay compliant and avoid costly penalties.
+            eTIMS compliance is <strong className="text-ink">not optional</strong> for businesses in Kenya. KRA's 2026 enforcement drive has led to penalties against thousands of businesses for eTIMS violations — the higher of KES 1,000,000 or 10% of the tax per non-compliant invoice (LN 64/2024), TPA s.86 exposure, and KES 500,000/month for system non-integration. This checklist covers every obligation you have: <strong className="text-ink">daily, monthly, quarterly, and annual</strong>. Run through it regularly to stay compliant and avoid costly penalties.
           </p>
         </div>
 

@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "What happens if I do not register for eTIMS as a restaurant?",
-    a: "KRA will impose a penalty of KES 50,000 per month for each month you are non-compliant. This is separate from and in addition to late VAT filing penalties. KRA has been actively auditing the hospitality sector for eTIMS compliance since 2025.",
+    a: "Issuing invoices outside eTIMS exposes you to the higher of KES 1,000,000 or 10% of the tax per non-compliant invoice (LN 64/2024) and TPA s.86 exposure. This is separate from and in addition to late VAT filing penalties. KRA has been actively auditing the hospitality sector for eTIMS compliance since 2025.",
   },
 ]
 
@@ -226,7 +226,7 @@ export default function VatForRestaurantsHospitality() {
           <p>
             Every VAT-registered restaurant and hospitality business in Kenya must issue <a href="/resources/etims-invoicing-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS-compliant invoices</a> for every sale — including cash sales, card payments, and mobile money transactions.
             This is one of the most significant compliance requirements introduced in recent years, and
-            non-compliance attracts a penalty of <strong>KES 50,000 per month</strong>.
+            non-compliance attracts the higher of <strong>KES 1,000,000 or 10% of the tax per non-compliant invoice</strong> (LN 64/2024).
           </p>
           <h3 className="font-display text-[1rem] font-semibold text-ink mt-6 mb-2">
             How eTIMS Works in a Restaurant Setting
@@ -392,7 +392,7 @@ export default function VatForRestaurantsHospitality() {
               },
               {
                 title: "Failure to issue eTIMS invoices",
-                desc: "Busy service staff may skip eTIMS invoicing during peak hours, especially for small cash bills. This is a direct violation. Each missing invoice is a potential KES 50,000 penalty. Automating eTIMS through POS integration is the only reliable solution for high-volume restaurants.",
+                desc: "Busy service staff may skip eTIMS invoicing during peak hours, especially for small cash bills. This is a direct violation. Each missing invoice is exposed to the higher of KES 1,000,000 or 10% of the tax (LN 64/2024). Automating eTIMS through POS integration is the only reliable solution for high-volume restaurants.",
               },
               {
                 title: "Improper handling of tips and service charge",

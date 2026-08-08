@@ -9,11 +9,11 @@ function formatKES(n: number) {
   return "KES " + Math.round(n).toLocaleString("en-KE")
 }
 
-const ETIMS_FINE_PER_MONTH = 50000
+const ETIMS_FINE_PER_MONTH = 500000
 const LATE_FILING_FLAT = 10000
 const LATE_FILING_RATE = 0.05
 const INTEREST_RATE = 0.01
-const INVOICE_FINE = 100000
+const INVOICE_FINE = 1000000
 
 export function EtimsPenaltyCalculator() {
   const [monthsNonCompliant, setMonthsNonCompliant] = useState("0")
@@ -21,10 +21,10 @@ export function EtimsPenaltyCalculator() {
   const [vatDue, setVatDue] = useState("")
   const [invoiceCount, setInvoiceCount] = useState("0")
 
-  const mNon = Math.min(Math.max(parseInt(monthsNonCompliant, 10) || 0, 0), 24)
+  const mNon = Math.min(Math.max(parseInt(monthsNonCompliant, 10) || 0, 0), 12)
   const mLate = Math.min(Math.max(parseInt(monthsLateFiling, 10) || 0, 0), 24)
   const vat = Math.max(parseFloat(vatDue.replace(/,/g, "")) || 0, 0)
-  const inv = Math.min(Math.max(parseInt(invoiceCount, 10) || 0, 0), 50)
+  const inv = Math.min(Math.max(parseInt(invoiceCount, 10) || 0, 0), 20)
 
   const etimsNonCompliance = mNon * ETIMS_FINE_PER_MONTH
   const lateFilingPerMonth = Math.max(LATE_FILING_FLAT, vat * LATE_FILING_RATE)
@@ -54,22 +54,22 @@ export function EtimsPenaltyCalculator() {
       <div className="border border-hairline rounded-lg overflow-hidden divide-y divide-hairline">
         <div className="p-5">
           <label htmlFor="etims-months" className={`${labelCls} flex items-baseline justify-between`}>
-            <span>Months without eTIMS compliance (no device, no onboarding)</span>
+            <span>Months your system was not integrated after a KRA notice (TPA s.25(12))</span>
             <span className="font-display text-[1rem] font-semibold text-ink tabular-nums">{mNon}</span>
           </label>
           <input
             id="etims-months"
             type="range"
             min="0"
-            max="24"
+            max="12"
             value={mNon}
             onChange={(e) => setMonthsNonCompliant(e.target.value)}
             className="w-full accent-brand"
           />
           <div className="flex justify-between text-[0.7rem] text-ink-muted mt-1.5">
             <span>0 months</span>
-            <span>KES 50,000 / month</span>
-            <span>24 months</span>
+            <span>KES 500,000 / month</span>
+            <span>12 months</span>
           </div>
         </div>
 
@@ -110,22 +110,22 @@ export function EtimsPenaltyCalculator() {
 
         <div className="p-5">
           <label htmlFor="etims-invoices" className={`${labelCls} flex items-baseline justify-between`}>
-            <span>Non-compliant eTIMS invoices (issued without eTIMS, wrong details)</span>
+            <span>Non-compliant eTIMS invoices (issued via eTIMS requires valid control number / QR)</span>
             <span className="font-display text-[1rem] font-semibold text-ink tabular-nums">{inv}</span>
           </label>
           <input
             id="etims-invoices"
             type="range"
             min="0"
-            max="50"
+            max="20"
             value={inv}
             onChange={(e) => setInvoiceCount(e.target.value)}
             className="w-full accent-brand"
           />
           <div className="flex justify-between text-[0.7rem] text-ink-muted mt-1.5">
             <span>0 invoices</span>
-            <span>KES 100,000 / invoice</span>
-            <span>50</span>
+            <span>KES 1,000,000 / invoice (or 10% of the tax, whichever is higher)</span>
+            <span>20</span>
           </div>
         </div>
 
@@ -140,8 +140,8 @@ export function EtimsPenaltyCalculator() {
               <dl className="space-y-3">
                 <div className="flex items-baseline justify-between">
                   <dt className="text-[0.78rem] text-ink-muted">
-                    eTIMS non-compliance
-                    <span className="block text-[0.65rem]">{mNon} month(s) &times; KES 50,000</span>
+                    System non-integration (TPA s.25(12))
+                    <span className="block text-[0.65rem]">{mNon} month(s) &times; KES 500,000</span>
                   </dt>
                   <dd className="font-mono text-[0.88rem] text-ink tabular-nums">{formatKES(etimsNonCompliance)}</dd>
                 </div>
@@ -164,7 +164,7 @@ export function EtimsPenaltyCalculator() {
                 <div className="flex items-baseline justify-between">
                   <dt className="text-[0.78rem] text-ink-muted">
                     Non-compliant invoices
-                    <span className="block text-[0.65rem]">{inv} invoice(s) &times; KES 100,000 (or 2&times; the tax — whichever is higher)</span>
+                    <span className="block text-[0.65rem]">{inv} invoice(s) &times; KES 1,000,000 (or 10% of the tax involved — whichever is higher)</span>
                   </dt>
                   <dd className="font-mono text-[0.88rem] text-ink tabular-nums">{formatKES(invoicePenalties)}</dd>
                 </div>
@@ -223,7 +223,7 @@ export function EtimsPenaltyCalculator() {
 
       <p className="mt-3 text-[0.72rem] text-ink-muted leading-relaxed flex items-start gap-1.5">
         <Info size={12} className="shrink-0 mt-0.5" aria-hidden="true" />
-        Indicative estimates based on KRA 2026 rates: KES 50,000/month for eTIMS non-compliance, KES 10,000 or 5% of tax due (whichever higher) plus 1% monthly interest for late filing, and KES 100,000 per non-compliant invoice or 2&times; the tax — whichever is higher. KRA may assess additional amounts; this is not tax advice.
+        Indicative estimates based on the 2026 legal footing: KES 500,000/month for failing to integrate a data-management system after a written KRA notice (TPA s.25(12)); KES 1,000,000 or 10% of the tax — whichever is higher — per non-compliant electronic tax invoice (Tax Procedures (Electronic Tax Invoice) Regulations, LN 64/2024); and KES 10,000 or 5% of tax due (whichever higher) plus 1% monthly interest for late filing. TPA s.86 also exposes failures to the higher of KES 100,000 or twice the tax. KRA may assess additional amounts; this is not tax advice.
       </p>
     </section>
   )

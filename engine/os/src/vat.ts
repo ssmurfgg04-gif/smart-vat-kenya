@@ -13,6 +13,11 @@
  *                                        period (VAT Act 2013 s.17)
  *   · refund claim window                12 months (Finance Act 2025 shortened
  *                                        it from 24)
+ *   · bad-debt refund wait               3 years from supply (FA2025 cut 3->2;
+ *                                        FA2026 restored 2->3 effective 1 Jul
+ *                                        2026; immediate if the debtor enters
+ *                                        statutory management/receivership or
+ *                                        liquidation)
  *   · late-filing penalty                higher of KES 10,000 or 5% of tax due
  *   · late-payment                       5% of the unpaid amount + 1%/month
  *                                        interest (TPA 2015)
@@ -41,6 +46,8 @@ export const REGISTRATION_DEADLINE_DAYS = 30 as const
 export const INPUT_CLAIM_WINDOW_MONTHS = 6 as const
 /** Refund claim window, months (Finance Act 2025, down from 24). */
 export const REFUND_WINDOW_MONTHS = 12 as const
+/** Bad-debt VAT relief wait, months from the date of supply (VAT Act s.31). */
+export const BAD_DEBT_REFUND_WAIT_MONTHS = 36 as const
 
 const ROUND = 2
 export const roundCents = (n: number): number => Math.round(n * 100) / 100
@@ -115,4 +122,15 @@ export function isRefundStale(issuedMonthsAgo: number): boolean {
 /** True once input VAT on an invoice is beyond the 6-month claim window. */
 export function isInputClaimStale(monthsSincePeriodEnd: number): boolean {
   return monthsSincePeriodEnd > INPUT_CLAIM_WINDOW_MONTHS
+}
+
+/**
+ * True when a supplier may claim a VAT bad-debt refund on an unpaid invoice.
+ * Structural/banking customers or a customer in statutory management,
+ * receivership or liquidation accelerate eligibility (VAT Act s.31, as amended
+ * by FA2025/FA2026: 2 years -> restored to 3 years from 1 Jul 2026).
+ */
+export function canClaimBadDebtRefund(monthsSinceSupply: number, debtorInsolvent = false): boolean {
+  if (debtorInsolvent) return monthsSinceSupply > 0
+  return monthsSinceSupply >= BAD_DEBT_REFUND_WAIT_MONTHS
 }

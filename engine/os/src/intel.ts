@@ -184,6 +184,34 @@ export const DEFAULT_RULES: Rule[] = [
     body: "An eTIMS invoice cannot be deleted once generated. Corrections require issuing a credit note through eTIMS referencing the original invoice and control number, then issuing a corrected invoice. Credit notes must also go through eTIMS - not a manual books adjustment.",
     source: "KRA eTIMS guide",
   },
+  {
+    id: "bad-debt-refund",
+    title: "VAT bad-debt refund (3-year wait)",
+    keywords: ["bad", "debt", "refund", "unpaid", "default", "insolvent", "liquidation", "receivership", "3 years", "write off", "relief"],
+    body: "A supplier can reclaim VAT already remitted on an invoice the customer never paid. Since 1 July 2026 the wait is 3 years from the date of supply (VAT Act s.31; the Finance Act 2025 had cut it to 2, the Finance Act 2026 restored 3). The wait is waived if the debtor enters statutory management, receivership or liquidation. Requirements: eTIMS-compliant invoice, VAT accounted for, reasonable recovery steps taken, debt written off, and the customer is not a related party.",
+    source: "VAT Act 2013 (s.31) / Finance Act 2025 / Finance Act 2026",
+  },
+  {
+    id: "fa2026-rate-moves",
+    title: "VAT rate moves from 1 July 2026",
+    keywords: ["finance", "act", "2026", "zero-rated", "exempt", "standard", "rate", "electric", "bicycle", "solar", "battery", "dialyzer", "scrap", "reclassify", "pharmaceutical"],
+    body: "From 1 July 2026 the Finance Act 2026 moved: electric bicycles and solar batteries (outside tariff heading 8507.60.00) from zero-rated to standard-rated (16%); inputs/raw materials to pharmaceutical manufacturers and bioethanol-vapour (BEV) stoves from zero-rated to exempt; dialyzers (tariff 8421.29.00) and scrap metal from standard-rated to exempt; aircraft spare parts, chapter-88 goods, tourism/convention facility construction supplies, direction-finding compasses, and cash-restocking services from exempt to standard-rated.",
+    source: "Finance Act 2026 (First Schedule amendments)",
+  },
+  {
+    id: "etims-invoice-penalty",
+    title: "eTIMS non-compliance penalties",
+    keywords: ["etims", "penalty", "invoice", "non-compliance", "1 million", "500,000", "s.86", "regulation", "integrate", "device"],
+    body: "Failing to issue a compliant electronic tax invoice attracts the higher of KES 1,000,000 or 10% of the tax involved per transaction (Tax Procedures (Electronic Tax Invoice) Regulations, LN 64/2024), and failure to keep/issue the required invoices is also exposed to TPA s.86 (higher of KES 100,000 or 2x the tax). A business notified to integrate its data-management system with KRA's electronic system that fails to comply is liable to a penalty of KES 500,000 per month. These are on top of VAT late-filing/late-payment penalties.",
+    source: "TPA 2015 (s.86) / TPA (ETI) Regulations LN 64/2024",
+  },
+  {
+    id: "etims-mandate-all-businesses",
+    title: "eTIMS applies to all businesses",
+    keywords: ["etims", "mandatory", "all", "business", "everyone", "register", "registered", "unregistered", "non-vat", "turnover", "5 million", "need"],
+    body: "eTIMS is mandatory for all persons engaged in business - including non-VAT-registered businesses - not just VAT-registered ones. Any business with annual turnover above KES 5 million must comply regardless of VAT status, and KRA has progressively extended enforcement to smaller businesses. TCC issuance now depends on eTIMS registration.",
+    source: "KRA eTIMS mandate",
+  },
 ]
 
 export function buildKnowledgeBase(extra: Rule[] = []): Rule[] {
@@ -300,7 +328,7 @@ export const GOLDEN_SET: GoldenItem[] = [
   { query: "what interest do I owe on unpaid vat", expected: ["interest-rate"] },
   { query: "amnesty 2026 penalty waiver", expected: ["amnesty-2026"] },
   { query: "supplier on the special table blocks my input vat", expected: ["special-table"] },
-  { query: "do I need etims as a small business", expected: ["etims-mandate"] },
+  { query: "do I need etims as a small business", expected: ["etims-mandate", "etims-mandate-all-businesses"] },
   { query: "when must I submit my vat return", expected: ["vat-return-cycle"] },
   { query: "standard vat rate in kenya 16%", expected: ["vat-rate-changes"] },
   { query: "my tcc is expired and i have tenders", expected: ["tcc"] },
@@ -320,5 +348,11 @@ export const GOLDEN_SET: GoldenItem[] = [
   { query: "is registration voluntary below 8 million", expected: ["vat-registration-threshold"] },
   { query: "how long do I have to claim a vat refund", expected: ["vat-refund-window", "input-vat-time-limit"] },
   { query: "refund older than 12 months disallowed", expected: ["vat-refund-window"] },
+  { query: "how long must I wait to claim vat back on an unpaid invoice", expected: ["bad-debt-refund"] },
+  { query: "customer went into liquidation can I reclaim the vat now", expected: ["bad-debt-refund"] },
+  { query: "are electric bicycles zero rated in 2026", expected: ["fa2026-rate-moves"] },
+  { query: "is scrap metal charged vat now", expected: ["fa2026-rate-moves"] },
+  { query: "how much is the etims penalty for no invoice", expected: ["etims-invoice-penalty", "etims-mandate-all-businesses"] },
+  { query: "do I need etims if I am not vat registered", expected: ["etims-mandate-all-businesses"] },
   { query: "what penalty for not registering for vat", expected: ["non-registration-penalty", "vat-registration-threshold"] },
 ]

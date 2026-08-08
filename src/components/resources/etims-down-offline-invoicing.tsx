@@ -75,7 +75,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "KRA eTIMS Down? Invoice Offline Now and Sync When It Recovers",
   description:
-    "KRA eTIMS down or offline? Keep issuing invoices in offline mode, sync when the portal recovers, and avoid the 7-day device lockout and KES 50,000/month compliance fines.",
+    "KRA eTIMS down or offline? Keep issuing invoices in offline mode, sync when the portal recovers, and avoid the 7-day device lockout and eTIMS non-compliance penalties (higher of KES 1M or 10% of tax per invoice under LN 64/2024).",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-25",
@@ -191,7 +191,7 @@ export default function ETIMSDownPage() {
         <div className="border-l-[3px] border-brand pl-5 mb-10">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            KRA eTIMS goes down regularly, especially during peak periods. If you use <strong className="text-ink">eTIMS Client</strong> (desktop app), you can continue invoicing offline — invoices are queued locally and synced automatically when the connection returns. If you use <strong className="text-ink">eTIMS Lite</strong> (web-based), you cannot invoice during an outage; keep a manual sales log and create the invoices retroactively when the portal is back. The <strong className="text-ink">KES 50,000/month</strong> penalty applies to non-compliance, but KRA may exercise discretion if you can demonstrate the outage prevented compliance. The only guaranteed solution is to <strong className="text-ink">upgrade to eTIMS Client</strong>, which has full offline capability.
+            KRA eTIMS goes down regularly, especially during peak periods. If you use <strong className="text-ink">eTIMS Client</strong> (desktop app), you can continue invoicing offline — invoices are queued locally and synced automatically when the connection returns. If you use <strong className="text-ink">eTIMS Lite</strong> (web-based), you cannot invoice during an outage; keep a manual sales log and create the invoices retroactively when the portal is back. The <strong className="text-ink">eTIMS non-compliance penalties</strong> apply (the higher of KES 1,000,000 or 10% of the tax involved per non-compliant invoice under LN 64/2024), but KRA may exercise discretion if you can demonstrate the outage prevented compliance. Keep outage evidence. The only guaranteed solution is to <strong className="text-ink">upgrade to eTIMS Client</strong>, which has full offline capability.
           </p>
         </div>
 

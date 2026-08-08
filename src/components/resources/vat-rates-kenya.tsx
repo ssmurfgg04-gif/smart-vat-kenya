@@ -148,8 +148,9 @@ export default function VatRatesKenyaPage() {
               Zero-rated supplies (0%) include exports, unprocessed food, pharmaceuticals, and agricultural
               inputs — you can claim input VAT on these. <strong className="text-ink">Exempt supplies</strong>
               (financial services, residential rent, education) have no VAT charged and no input VAT recovery.
-              Mandatory registration is triggered at <strong className="text-ink">KES 8M annual turnover</strong>{" "}
-              (Finance Act 2025). Returns are due on <strong className="text-ink">iTax by the 20th</strong> of
+              Mandatory registration is triggered at <strong className="text-ink">KES 5M annual taxable turnover</strong>{" "}
+              (the Finance Act 2025 proposed raising this to 8M but it has not taken effect). Returns are due on{" "}
+              <strong className="text-ink">iTax by the 20th</strong> of
               every month; late filing costs the higher of KES 10,000 or 5% of tax due. Verified against the
               VAT Act and Finance Act 2026.
             </p>
@@ -166,8 +167,8 @@ export default function VatRatesKenyaPage() {
                   { label: "Standard rate", value: "16% on most goods and services" },
                   { label: "Zero-rated", value: "0% — exports, unprocessed food, pharma, agricultural inputs; input VAT claimable" },
                   { label: "Exempt", value: "No VAT — financial services, residential rent, education, medical; no input VAT recovery" },
-                  { label: "Mandatory registration", value: "KES 8M annual taxable turnover (Finance Act 2025)" },
-                  { label: "Voluntary registration", value: "Allowed from KES 5M" },
+                  { label: "Mandatory registration", value: "KES 5M annual taxable turnover" },
+                  { label: "Voluntary registration", value: "Available below the threshold (VAT Act s.34(3))" },
                   { label: "Filing deadline", value: "20th of every month via iTax (nil returns included)" },
                   { label: "Late filing penalty", value: "Higher of KES 10,000 or 5% of tax due" },
                   { label: "Late payment penalty", value: "5% of unpaid tax + 1% interest per month" },
@@ -327,11 +328,9 @@ export default function VatRatesKenyaPage() {
                     "Pharmaceuticals and medical supplies — prescription medicines, medical equipment and apparatus, surgical instruments, laboratory reagents",
                     "Books, educational materials, and printed materials — textbooks, exercise books, newspapers",
                     "Goods supplied to EPZ and SEZ enterprises — goods supplied to Export Processing Zones and Special Economic Zones",
-                    "Aircraft, aircraft engines, and spare parts — for use in air transport",
                     "Goods supplied to diplomatic missions — accredited diplomats and international organisations",
                     "International transport services — international freight and passenger transport",
                     "Tea and coffee packaging materials — packaging materials for tea and coffee (added by Finance Act 2025)",
-                    "Supplies to registered pharmaceutical manufacturers — raw materials and inputs for pharmaceutical manufacturing",
                     "Supply of taxable goods to manufacturers of agricultural machinery — inputs for making agricultural equipment",
                     "Services rendered outside Kenya — services physically performed outside the country",
                   ].map((item) => (
@@ -341,6 +340,18 @@ export default function VatRatesKenyaPage() {
                     </li>
                   ))}
                 </ul>
+
+                <div className="border border-brand/25 bg-brand-muted rounded-lg p-4 flex items-start gap-3 mt-4">
+                  <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
+                  <div>
+                    <p className="font-semibold text-ink text-[0.85rem] mb-1">Changed by the Finance Act 2026 (from 1 July 2026)</p>
+                    <ul className="space-y-1.5 text-[0.83rem] text-ink-soft leading-relaxed">
+                      <li><strong className="text-ink">e-bicycles</strong> (HS code 8712) and <strong className="text-ink">solar batteries</strong> (except HS 8507.60.00) moved from zero-rated to <strong className="text-ink">standard-rated 16%</strong>.</li>
+                      <li><strong className="text-ink">Inputs and raw materials for pharmaceutical manufacturing</strong> and <strong className="text-ink">BEV (electric) stove inputs</strong> moved from zero-rated to <strong className="text-ink">exempt</strong> — no VAT charged, but no input VAT recovery either.</li>
+                      <li><strong className="text-ink">Aircraft spare parts and chapter-88 goods</strong> moved from exempt to standard-rated 16%.</li>
+                    </ul>
+                  </div>
+                </div>
 
                 <div className="border border-brand/25 bg-brand-muted rounded-lg p-4 flex items-start gap-3 mt-4">
                   <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -399,6 +410,9 @@ export default function VatRatesKenyaPage() {
                     { title: "Goods imported by registered NGOs", detail: "Goods imported by registered NGOs for donation to charitable institutions" },
                     { title: "Mosquito repellent products", detail: "Reclassified from 16% to exempt effective 1 July 2025" },
                     { title: "Supplies to KDF, NIS, NPS, DEFWES", detail: "Exempt, but input VAT on related costs is recoverable (Finance Act 2026 exception)" },
+                    { title: "Pharma manufacturing inputs & BEV stove inputs", detail: "Inputs/raw materials for pharmaceutical manufacturing and electric (BEV) stove inputs moved from zero-rated to exempt from 1 July 2026 (Finance Act 2026)" },
+                    { title: "Dialyzers (HS 8421.29.00)", detail: "Kidney dialysis filtration equipment reclassified from standard 16% to exempt effective 1 July 2026" },
+                    { title: "Scrap metal goods", detail: "Moved from standard-rated 16% to exempt effective 1 July 2026 (Finance Act 2026)" },
                   ].map(({ title, detail }) => (
                     <div key={title} className="border border-hairline rounded-lg p-4">
                       <p className="font-semibold text-ink text-[0.88rem] mb-1">{title}</p>
