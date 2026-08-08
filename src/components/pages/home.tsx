@@ -182,8 +182,7 @@ export default function HomePage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pt-12 pb-20 lg:pt-16 lg:pb-24 grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-20 items-start">
-          <div>
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pt-12 pb-12 lg:pt-14 lg:pb-16">
             <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
               Kenya Revenue Authority Registered Services
             </p>
@@ -201,9 +200,6 @@ export default function HomePage() {
               <strong className="text-canvas"> That&apos;s ours instead.</strong> We file your
               registration and monthly returns for a flat fee you know upfront.
               No surprises. No portal errors.
-            </p>
-            <p className="font-display text-[1.05rem] font-semibold text-canvas mb-6">
-              Kenya's WhatsApp tax agent — send your PIN, done in 3 days.
             </p>
 
             <div className="mb-8 border border-brand/40 bg-brand/15 rounded-lg px-5 py-4 max-w-[52ch]">
@@ -247,7 +243,7 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="mt-6 flex items-start gap-2.5 text-[0.8rem] text-canvas/65 max-w-[52ch] leading-relaxed">
+<div className="mt-6 flex items-start gap-2.5 text-[0.8rem] text-canvas/65 max-w-[52ch] leading-relaxed">
               <ShieldCheck size={15} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
               <p>
                 <strong className="text-canvas">Your KRA PIN is used for your filings only.</strong>{" "}
@@ -256,41 +252,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Stats card */}
-          <aside
-            aria-label="Key figures"
-            className="bg-canvas/[0.06] border border-canvas/15 rounded-xl p-8 self-start hidden lg:block"
-            style={{ backdropFilter: "blur(12px)" }}
-          >
-            <p className="font-mono text-[0.65rem] uppercase tracking-[0.16em] text-canvas/60 mb-6">
-              At a glance
-            </p>
-            <dl className="space-y-6">
-              {[
-                { value: "KES 5,000", label: "One-time VAT registration" },
-                { value: "KES 3,500", label: "Monthly iTax filing" },
-                { value: "1–3 days", label: "Average turnaround" },
-                { value: "16%", label: "Kenya VAT standard rate 2026" },
-                { value: "17th", label: "We file, not the 20th — never late" },
-              ].map(({ value, label }) => (
-                <div
-                  key={label}
-                  className="flex items-baseline justify-between gap-4 border-b border-canvas/15 pb-5 last:border-0 last:pb-0"
-                >
-                  <dd className="font-display text-[1.65rem] font-semibold text-canvas leading-none tabular-nums">
-                    {value}
-                  </dd>
-                  <dt className="text-[0.78rem] text-canvas/70 text-right max-w-[120px] leading-snug">
-                    {label}
-                  </dt>
-                </div>
-              ))}
-            </dl>
-          </aside>
-        </div>
-      </section>
-
-      {/* ─── TRUST BAND ─── */}
+        {/* ─── TRUST BAND ─── */}
       <section className="bg-canvas-alt border-y border-hairline py-5 px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-4">
           {[

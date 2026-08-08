@@ -4,14 +4,14 @@
 /* Dark mode using class-based approach */
 @custom-variant dark (&:is(.dark *));
 
-/* â”€â”€â”€ Font faces â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Font faces ────────────────────────────────────────────────────── */
 
 @theme inline {
   --font-sans: 'DM Sans', 'DM Sans Fallback', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Outfit', 'Outfit Fallback', ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', 'Fira Mono', monospace;
 
-  /* â”€â”€ Ink & canvas tokens (Anthropic-inspired restraint) â”€â”€ */
+  /* ─── Ink & canvas tokens (Anthropic-inspired restraint) ─── */
   --color-ink:          var(--ink);
   --color-ink-soft:     var(--ink-soft);
   --color-ink-muted:    var(--ink-muted);
@@ -20,14 +20,14 @@
   --color-canvas-warm:  var(--canvas-warm);
   --color-canvas-dark:  var(--canvas-dark);
 
-  /* â”€â”€ Brand tokens â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ─── Brand tokens ─── */
   --color-brand:        var(--brand);
   --color-brand-hover:  var(--brand-hover);
   --color-brand-muted:  var(--brand-muted);
   --color-accent:       var(--accent-kra);
   --color-hairline:     var(--hairline);
 
-  /* â”€â”€ Shadcn mapping â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ─── Shadcn mapping ─── */
   --color-background:           var(--background);
   --color-foreground:           var(--foreground);
   --color-card:                 var(--card);
@@ -52,12 +52,12 @@
   --radius-2xl: calc(var(--radius) * 3);
 }
 
-/* â”€â”€ Light mode (default) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Light mode (default) ─── */
 :root,
 html {
   color-scheme: light dark;
 
-  /* â”€â”€ Core palette â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ─── Core palette ─── */
   --ink:         #141311;
   --ink-soft:    #3c3a36;
   --ink-muted:   #5d5a4e;
@@ -66,14 +66,14 @@ html {
   --canvas-warm: #e8e3d8;
   --canvas-dark: #1b2a3b;
 
-  /* â”€â”€ Brand: KRA-authority red + trust slate â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ─── Brand: KRA-authority red + trust slate ─── */
   --brand:       #c8372d;
   --brand-hover: #b02e24;
   --brand-muted: #f5e9e8;
   --accent-kra:  #1b2a3b;
   --hairline:    #dedad2;
 
-  /* â”€â”€ Shadcn light â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ─── Shadcn light ─── */
   --background:             #faf8f3;
   --foreground:             #141311;
   --card:                   #ffffff;
@@ -93,44 +93,45 @@ html {
   --radius:                 0.5rem;
 }
 
-/* â”€â”€ Dark mode â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Dark mode ─── */
 .dark,
 html.dark {
-  /* â”€â”€ Core palette - darker values for dark mode â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-  --ink:         #e8e4dc;
-  --ink-soft:    #c9c4ba;
-  --ink-muted:   #9e9990;
-  --canvas:      #0f1419;
-  --canvas-alt:  #1a2332;
-  --canvas-warm: #242d3a;
-  --canvas-dark: #0f1419;
+  /* ─── Core palette - carefully chosen for contrast ─── */
+  --ink:         #f5f2eb;
+  --ink-soft:    #d4d0c8;
+  --ink-muted:   #a8a39a;
+  --canvas:      #0d1218;
+  --canvas-alt:  #141d2a;
+  --canvas-warm: #1e2a3a;
+  --canvas-dark: #080d12;
 
-  /* â”€â”€ Brand - slightly brighter for dark mode visibility â”€â”€ */
-  --brand:       #e64545;
-  --brand-hover: #ef5a5a;
+  /* ─── Brand - optimized for dark backgrounds ─── */
+  --brand:       #e85555;
+  --brand-hover: #ef6a6a;
   --brand-muted: #3d1f1f;
   --accent-kra:  #2a4a6b;
-  --hairline:    #2d3748;
+  --hairline:    #2a3542;
 
-  /* â”€â”€ Shadcn dark â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-  --background:             #0f1419;
-  --foreground:             #e8e4dc;
-  --card:                   #1a2332;
-  --card-foreground:        #e8e4dc;
-  --popover:                #1a2332;
-  --popover-foreground:     #e8e4dc;
+  /* ─── Shadcn dark ─── */
+  --background:             #0d1218;
+  --foreground:             #f5f2eb;
+  --card:                   #141d2a;
+  --card-foreground:        #f5f2eb;
+  --popover:                #141d2a;
+  --popover-foreground:     #f5f2eb;
   --primary:                #3b82f6;
   --primary-foreground:     #ffffff;
-  --secondary:              #2d3748;
-  --secondary-foreground:   #e8e4dc;
-  --muted:                  #2d3748;
-  --muted-foreground:       #9e9990;
+  --secondary:              #1e2a3a;
+  --secondary-foreground:   #f5f2eb;
+  --muted:                  #1e2a3a;
+  --muted-foreground:       #a8a39a;
   --destructive:            #ef4444;
-  --border:                 #2d3748;
-  --input:                  #2d3748;
+  --border:                 #2a3542;
+  --input:                  #1e2a3a;
   --ring:                   #3b82f6;
 }
 
+/* ─── Base layer ─── */
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -150,9 +151,15 @@ html.dark {
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
   }
+
+  /* Prevent flash of unstyled content */
+  .dark body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
 }
 
-/* â”€â”€ Utility classes â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Utility classes ─── */
 @layer utilities {
   .font-display {
     font-family: var(--font-display);
@@ -180,15 +187,59 @@ html.dark {
     transform: scale(0.98);
   }
 
-  /* â”€â”€ Dark mode hover-fill adjustment â”€â”€ */
+  /* Dark mode hover-fill adjustment */
   .dark .btn-fill::before {
     background: rgba(255,255,255,0.08);
   }
 
   /* Dark panels keep their light text even though the base canvas flips dark */
   .dark .bg-canvas-dark {
-    --canvas: #e8e4dc;
+    background-color: var(--canvas-dark);
   }
+
+  /* Ensure text colors work in both modes */
+  .text-ink { color: var(--ink); }
+  .text-ink-soft { color: var(--ink-soft); }
+  .text-ink-muted { color: var(--ink-muted); }
+  .text-canvas { color: var(--canvas); }
+  .text-canvas-alt { color: var(--canvas-alt); }
+  .text-brand { color: var(--brand); }
+  .text-brand-hover { color: var(--brand-hover); }
+  .bg-canvas { background-color: var(--canvas); }
+  .bg-canvas-alt { background-color: var(--canvas-alt); }
+  .bg-canvas-warm { background-color: var(--canvas-warm); }
+  .bg-canvas-dark { background-color: var(--canvas-dark); }
+  .bg-brand-muted { background-color: var(--brand-muted); }
+  .border-hairline { border-color: var(--hairline); }
+
+  /* Opacity utilities for semantic colors */
+  .text-ink\/50 { color: color-mix(in srgb, var(--ink) 50%, transparent); }
+  .text-ink\/60 { color: color-mix(in srgb, var(--ink) 60%, transparent); }
+  .text-ink\/70 { color: color-mix(in srgb, var(--ink) 70%, transparent); }
+  .text-ink\/80 { color: color-mix(in srgb, var(--ink) 80%, transparent); }
+  .text-ink-soft\/50 { color: color-mix(in srgb, var(--ink-soft) 50%, transparent); }
+  .text-ink-muted\/50 { color: color-mix(in srgb, var(--ink-muted) 50%, transparent); }
+  .text-ink-muted\/70 { color: color-mix(in srgb, var(--ink-muted) 70%, transparent); }
+  .text-canvas\/50 { color: color-mix(in srgb, var(--canvas) 50%, transparent); }
+  .text-canvas\/60 { color: color-mix(in srgb, var(--canvas) 60%, transparent); }
+  .text-canvas\/70 { color: color-mix(in srgb, var(--canvas) 70%, transparent); }
+  .text-brand\/50 { color: color-mix(in srgb, var(--brand) 50%, transparent); }
+  .bg-canvas\/10 { background-color: color-mix(in srgb, var(--canvas) 10%, transparent); }
+  .bg-canvas\/15 { background-color: color-mix(in srgb, var(--canvas) 15%, transparent); }
+  .bg-canvas\/20 { background-color: color-mix(in srgb, var(--canvas) 20%, transparent); }
+  .bg-canvas\/25 { background-color: color-mix(in srgb, var(--canvas) 25%, transparent); }
+  .bg-canvas\/30 { background-color: color-mix(in srgb, var(--canvas) 30%, transparent); }
+  .bg-canvas\/50 { background-color: color-mix(in srgb, var(--canvas) 50%, transparent); }
+  .bg-canvas-alt\/50 { background-color: color-mix(in srgb, var(--canvas-alt) 50%, transparent); }
+  .bg-brand-muted\/50 { background-color: color-mix(in srgb, var(--brand-muted) 50%, transparent); }
+  .border-canvas\/10 { border-color: color-mix(in srgb, var(--canvas) 10%, transparent); }
+  .border-canvas\/15 { border-color: color-mix(in srgb, var(--canvas) 15%, transparent); }
+  .border-canvas\/20 { border-color: color-mix(in srgb, var(--canvas) 20%, transparent); }
+  .border-canvas\/25 { border-color: color-mix(in srgb, var(--canvas) 25%, transparent); }
+  .border-canvas\/30 { border-color: color-mix(in srgb, var(--canvas) 30%, transparent); }
+  .border-brand\/20 { border-color: color-mix(in srgb, var(--brand) 20%, transparent); }
+  .border-brand\/25 { border-color: color-mix(in srgb, var(--brand) 25%, transparent); }
+  .border-brand\/30 { border-color: color-mix(in srgb, var(--brand) 30%, transparent); }
 
   /* Skeleton shimmer */
   .shimmer {
@@ -198,7 +249,7 @@ html.dark {
   }
 
   .dark .shimmer {
-    background: linear-gradient(90deg, #2d3748 0%, #3d4a5c 50%, #2d3748 100%);
+    background: linear-gradient(90deg, #1e2a3a 0%, #2a3d52 50%, #1e2a3a 100%);
   }
 
   @keyframes shimmer {
@@ -220,5 +271,15 @@ html.dark {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
   }
+
+  /* Focus visible for accessibility */
+  .focus-visible-ring:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  /* Print styles */
+  @media print {
+    .no-print { display: none !important; }
+  }
 }
-/* Added timestamp for deploy trigger: Tue Aug  4 14:14:32 UTC 2026 */
