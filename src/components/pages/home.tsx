@@ -15,6 +15,7 @@ import {
   Sparkle,
 } from "@phosphor-icons/react/dist/ssr"
 import { RelatedLinks } from "@/components/related-links"
+import React from "react"
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -163,7 +164,7 @@ const WA_BASE = "https://wa.me/254721725958"
 
 export default function HomePage() {
   return (
-    <>
+    <React.Fragment>
       <script
         id="faq-schema"
         type="application/ld+json"
@@ -937,6 +938,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </>
+    </React.Fragment>
   )
 }
+ 
+ 
