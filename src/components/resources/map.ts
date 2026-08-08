@@ -26,6 +26,7 @@ import {
   EtimsPenalties2026,
   VatRefundAuditDefense,
   VatForFreelancersCreators,
+  EfrisLessonsPreClearance,
   HowToCalculateVatInKenya,
   HowToFileVatReturnOnItax,
   HowToRegisterForVatInKenya,
@@ -99,6 +100,7 @@ export const resourceComponents: Record<string, React.ComponentType> = {
   "etims-penalties-2026": EtimsPenalties2026,
   "vat-refund-audit-defense": VatRefundAuditDefense,
   "vat-for-freelancers-creators": VatForFreelancersCreators,
+  "efris-lessons-pre-clearance": EfrisLessonsPreClearance,
   "icms-export-guide": IcmsExportGuide,
   "how-to-calculate-vat-in-kenya": HowToCalculateVatInKenya,
   "how-to-file-vat-return-on-itax": HowToFileVatReturnOnItax,
@@ -472,5 +474,10 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     title: "VAT for Freelancers & Creators in Kenya 2026",
     description: "Do digital creators, freelance developers, and remote consultants in Kenya need a KRA PIN and VAT registration? Threshold rules, digital services, and eTIMS compliance.",
     canonical: "/resources/vat-for-freelancers-creators/",
+  },
+  "efris-lessons-pre-clearance": {
+    title: "Real-Time Pre-Clearance & E-Invoicing: Lessons from EFRIS and How to Prepare",
+    description: "When tax authorities shift from post-issuance reporting to real-time pre-clearance e-invoicing (like Uganda's EFRIS and upcoming regional models), what breaks in SME POS systems and how to build operational resilience.",
+    canonical: "/resources/efris-lessons-pre-clearance/",
   },
 }

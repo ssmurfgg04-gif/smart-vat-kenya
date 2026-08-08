@@ -25,6 +25,7 @@ export { default as Vat2027AutoFilledReturns } from "./vat-2027-auto-filled-retu
 export { default as EtimsPenalties2026 } from "./etims-penalties-2026"
 export { default as VatRefundAuditDefense } from "./vat-refund-audit-defense"
 export { default as VatForFreelancersCreators } from "./vat-for-freelancers-creators"
+export { default as EfrisLessonsPreClearance } from "./efris-lessons-pre-clearance"
 export { default as IcmsExportGuide } from "./icms-export-guide"
 export { default as KPLCBlackoutEtimsCompliance } from "./kplc-blackout-etims-compliance"
 export { default as HowToCalculateVatInKenya } from "./how-to-calculate-vat-in-kenya"
