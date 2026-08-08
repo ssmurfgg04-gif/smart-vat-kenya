@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ArrowRight, CheckCircle, ShieldCheck, Search, Warning } from "@phosphor-icons/react/dist/ssr"
+import { ArrowRight, CheckCircle, ShieldCheck, MagnifyingGlass, Warning } from "@phosphor-icons/react/dist/ssr"
 
 const WA_BASE = "https://wa.me/254721725958"
 
@@ -60,11 +60,11 @@ export default function PinCheckerTool() {
                 className="w-full bg-canvas-alt border border-hairline rounded-lg px-4 py-3.5 text-ink font-mono text-lg uppercase focus:outline-none focus:border-brand transition-colors"
                 maxLength={11}
               />
-              <button
+                <button
                 type="submit"
                 className="absolute right-2 top-2 bottom-2 bg-brand text-canvas font-semibold px-6 rounded-md hover:bg-brand-hover transition-colors flex items-center gap-2 text-sm"
               >
-                <Search size={16} weight="bold" /> Check PIN
+                <MagnifyingGlass size={16} weight="bold" /> Check PIN
               </button>
             </div>
           </div>
