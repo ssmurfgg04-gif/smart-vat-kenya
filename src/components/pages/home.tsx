@@ -16,6 +16,7 @@
 } from "@phosphor-icons/react/dist/ssr"
 import { RelatedLinks } from "@/components/related-links"
 import React from "react"
+import { FACTS } from "@/lib/vat-facts"
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -26,7 +27,7 @@ const faqSchema = {
       name: "What is the Kenya VAT standard rate in 2026?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The Kenya VAT standard rate is 16% as per KRA guidelines for 2026. This applies to most taxable goods and services. Essential items including basic foodstuffs, medical supplies, and exports are zero-rated (0%) or exempt.",
+        text: `The Kenya VAT standard rate is ${FACTS.standardRate} as per KRA guidelines for 2026. This applies to most taxable goods and services. Essential items including basic foodstuffs, medical supplies, and exports are zero-rated (0%) or exempt.`,
       },
     },
     {
@@ -34,7 +35,7 @@ const faqSchema = {
       name: "How much does VAT registration cost in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Smart VAT Kenya charges a flat fee of KES 5,000 for complete VAT registration, including iTax profile update and VAT PIN generation, completed in 1–3 working days. Traditional facilitators charge KES 15,000–30,000.",
+        text: `Smart VAT Kenya charges a flat fee of ${FACTS.prices.registration} for complete VAT registration, including iTax profile update and VAT PIN generation, completed in 1–3 working days.`,
       },
     },
     {
@@ -42,7 +43,7 @@ const faqSchema = {
       name: "What is the penalty for late VAT filing in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "KRA imposes a penalty of KES 10,000 or 5% of the tax due (whichever is higher), plus 1% interest per month on unpaid tax. VAT returns must be filed by the 20th of each following month.",
+        text: `KRA imposes a penalty of ${FACTS.lateFilingPenalty}. VAT returns must be filed by the ${FACTS.filingDeadline}.`,
       },
     },
     {
@@ -50,7 +51,7 @@ const faqSchema = {
       name: "When must a business register for VAT in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A business must register for VAT when its annual taxable turnover reaches or exceeds KES 5 million. Voluntary registration is also possible below this threshold. KRA is expanding mandatory registration thresholds under the Finance Act 2025.",
+        text: `A business must register for VAT when its annual taxable turnover reaches or exceeds ${FACTS.mandatoryThreshold}. Voluntary registration is also possible from ${FACTS.voluntaryFrom}.`,
       },
     },
     {
@@ -58,7 +59,7 @@ const faqSchema = {
       name: "How do I register for VAT online in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "VAT registration is done via the KRA iTax portal at itax.kra.go.ke. The process involves updating your iTax profile, completing Form VAT 1, and uploading supporting documents. Many business owners experience errors. Smart VAT Kenya handles the entire process for KES 5,000.",
+        text: "VAT registration is done via the KRA iTax portal at itax.kra.go.ke. The process involves updating your iTax profile, completing Form VAT 1, and uploading supporting documents. Smart VAT Kenya handles the entire process for KES 5,000.",
       },
     },
     {
@@ -82,7 +83,7 @@ const faqSchema = {
       name: "What is the penalty for not registering for VAT in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "KRA imposes a penalty of KES 100,000 per month (Tax Procedures Act, s.95) for failure to register for VAT when required. This is separate from the KES 10,000 late-filing penalty.",
+        text: `KRA imposes a penalty of ${FACTS.nonRegistrationPenalty} for failure to register for VAT when required. This is separate from the KES 10,000 late-filing penalty.`,
       },
     },
     {
@@ -90,7 +91,7 @@ const faqSchema = {
       name: "What is the VAT Special Table and why is my input VAT being rejected?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The KRA VAT Special Table is a KRA-maintained list of taxpayers under compliance review. If your supplier is on the Special Table, any input VAT claims involving their invoices are automatically blocked by iTax. Smart VAT Kenya checks this before registration.",
+        text: "The KRA VAT Special Table (and associated RAIS Tax Alerts) tracks suppliers under compliance review. If your supplier is flagged, input VAT claims involving their invoices are automatically blocked by iTax. Smart VAT Kenya checks this during onboarding.",
       },
     },
     {
@@ -98,7 +99,7 @@ const faqSchema = {
       name: "Is the VAT registration threshold in Kenya KES 5 million or KES 8 million?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "KES 5 million remains the current operational threshold. The Finance Act 2025 proposed raising it to KES 8 million, but this has not yet taken effect as of August 2026. See our explainer: /resources/kra-portal-vs-service/ for the full breakdown.",
+        text: `${FACTS.thresholdStatus}`,
       },
     },
     {
@@ -114,7 +115,7 @@ const faqSchema = {
       name: "Is it mandatory to register for VAT in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "VAT registration is mandatory in Kenya when your annual taxable turnover exceeds KES 5 million. However, you can voluntarily register below this threshold to claim input VAT credits. Failure to register when required attracts a KES 100,000 penalty.",
+        text: `VAT registration is mandatory in Kenya when your annual taxable turnover exceeds ${FACTS.mandatoryThreshold}. However, you can voluntarily register below this threshold to claim input VAT credits. Failure to register when required attracts a penalty of ${FACTS.nonRegistrationPenalty}.`,
       },
     },
     {
@@ -122,7 +123,7 @@ const faqSchema = {
       name: "What happens if I don't register for VAT in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "If you fail to register for VAT when your turnover exceeds the mandatory threshold, KRA can impose penalties of KES 100,000 or the tax that would have been due (whichever is higher). Additionally, you cannot claim input VAT, and you risk audit, interest charges, and business closure.",
+        text: `If you fail to register for VAT when your turnover exceeds the mandatory threshold, KRA can impose penalties of ${FACTS.nonRegistrationPenalty}. Additionally, you cannot claim input VAT, and you risk audit, interest charges, and business closure.`,
       },
     },
     {
@@ -130,7 +131,7 @@ const faqSchema = {
       name: "Can I register for VAT voluntarily in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. You can voluntarily register for VAT even if your annual turnover is below KES 5 million. This allows you to claim input VAT credits on your purchases, which can improve cash flow. Many small businesses choose voluntary registration for this reason.",
+        text: "Yes. You can voluntarily register for VAT even if your annual turnover is below KES 5 million. This allows you to claim input VAT credits on your purchases, which can improve cash flow.",
       },
     },
     {
@@ -138,7 +139,7 @@ const faqSchema = {
       name: "How long does VAT registration take in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "VAT registration through Smart VAT Kenya typically takes 1–3 working days from the time you submit your documents via WhatsApp. The KRA iTax portal may take up to 5–7 working days for approval in some cases, but our service is usually faster.",
+        text: "VAT registration through Smart VAT Kenya typically takes 1–3 working days from the time you submit your documents via WhatsApp.",
       },
     },
     {
@@ -160,7 +161,7 @@ const faqSchema = {
   ],
 }
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = FACTS.contact.whatsappUrl
 
 export default function HomePage() {
   return (
@@ -171,7 +172,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-{/* ─── HERO ─── */}
+      {/* ─── HERO ─── */}
       <section className="bg-canvas-dark overflow-hidden relative">
         <div
           className="absolute inset-0 pointer-events-none z-0 opacity-[0.04]"
@@ -185,19 +186,21 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pt-12 pb-12 lg:pt-14 lg:pb-16">
             <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
-              Kenya Revenue Authority Registered Services
+              Kenya Revenue Authority Registered Agents
             </p>
             <h1 className="font-display text-[clamp(2.4rem,6vw,4.5rem)] font-semibold leading-[1.05] tracking-tight text-canvas mb-6 text-balance">
-              Our first client didn't ask for a VAT number.
-              <span className="text-brand">{" He had a broken eTIMS device"}</span>
-              {" and a KRA freeze."}
+              VAT Registration Services Kenya
+              <span className="text-brand">{" done in 3 days,"}</span>
+              {" not 3 weeks."}
             </h1>
 
             <p className="text-[1.05rem] text-canvas/80 leading-relaxed max-w-[52ch] mb-3 text-pretty">
-              He ran a hardware shop — one counter, one cousin, and an eTIMS machine that kept rejecting invoices. 
-              KRA's system claimed tax on sales he’d already accounted for. His "IT guy" had stopped answering. 
-              His money was locked inside hardware he couldn't negotiate with. 
-              <strong className="text-canvas"> That was our first sale.</strong> We've been the people who make the machine stop shouting ever since.
+              What does missing one iTax deadline actually cost you?
+              Kenyan SMEs lose KES 10,000 the moment — and the next month
+              it&apos;s another KES 10,000, on top of portal errors you were never warned about. It isn&apos;t
+              that you slipped up: KRA was never built to be your job.
+              <strong className="text-canvas"> That&apos;s ours instead.</strong> We file your
+              registration and monthly returns for a flat fee you know upfront.
             </p>
 
             <div className="mb-8 border border-brand/40 bg-brand/15 rounded-lg px-5 py-4 max-w-[52ch]">
@@ -251,6 +254,34 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ─── SHAME BLOCK ─── */}
+        <section className="bg-canvas py-12 px-6 lg:px-10">
+          <div className="max-w-[1400px] mx-auto text-center">
+            <p className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-ink tracking-tight mb-2">
+              You're not behind. KRA's portal was never built for you.
+            </p>
+            <p className="text-[0.9rem] text-ink-muted max-w-[48ch] mx-auto leading-relaxed">
+              It was built for KRA. The crashes, the OTP failures, the 11:47pm timeout — that's the system 
+              telling you it wasn't built for small business owners. We handle registration, eTIMS and monthly filing 
+              for KES 5,000 + KES 3,500/month. M-PESA accepted. Replies in minutes on WhatsApp.
+            </p>
+          </div>
+        </section>
+
+        {/* ─── STATUS BLOCK ─── */}
+        <section className="bg-canvas-alt py-12 px-6 lg:px-10">
+          <div className="max-w-[1400px] mx-auto text-center">
+            <p className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-ink tracking-tight mb-2">
+              The tender said "attach a Tax Compliance Certificate."
+            </p>
+            <p className="text-[0.9rem] text-ink-muted max-w-[48ch] mx-auto leading-relaxed">
+              That's when the VAT number stopped being optional. TCCs require a clean VAT record, 
+              and clean records require eTIMS + on-time filing. Get registered in 1–3 working days, 
+              filed by the 17th, and never wonder what KRA sees again.
+            </p>
+          </div>
+        </section>
+
         {/* ─── TRUST BAND ─── */}
       <section className="bg-canvas-alt border-y border-hairline py-5 px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-4">
@@ -272,37 +303,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      </section>
-
-        {/* ─── SHAME BLOCK ─── */}
-        <section className="bg-canvas py-12 px-6 lg:px-10">
-          <div className="max-w-[1400px] mx-auto text-center">
-            <p className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-ink tracking-tight mb-2">
-              You're not behind. KRA's portal was never built for you.
-            </p>
-            <p className="text-[0.9rem] text-ink-muted max-w-[48ch] mx-auto leading-relaxed">
-              It was built for KRA. The crashes, the OTP failures, the 11:47pm timeout — that's the system 
-              telling you it wasn't built for you. We handle registration, eTIMS and monthly filing 
-              for KES 5,000 + KES 3,500/month. M-PESA accepted. Replies in minutes on WhatsApp.
-            </p>
-          </div>
-        </section>
-
-        {/* ─── STATUS BLOCK ─── */}
-        <section className="bg-canvas-alt py-12 px-6 lg:px-10">
-          <div className="max-w-[1400px] mx-auto text-center">
-            <p className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-ink tracking-tight mb-2">
-              The tender said "attach a Tax Compliance Certificate."
-            </p>
-            <p className="text-[0.9rem] text-ink-muted max-w-[48ch] mx-auto leading-relaxed">
-              That's when the VAT number stopped being optional. TCCs require a clean VAT record, 
-              and clean records require eTIMS + on-time filing. Get registered in 1–3 working days, 
-              filed by the 17th, and never wonder what KRA sees again.
-            </p>
-          </div>
-        </section>
-
-        {/* ─── PROBLEM ─── */}
+      {/* ─── PROBLEM ─── */}
       <section className="bg-canvas py-24 px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
@@ -640,13 +641,12 @@ export default function HomePage() {
               .
             </p>
             <p>
-              A business must register for VAT when its annual taxable turnover reaches the
-               mandatory threshold (KES 5 million under the VAT Act; the Finance Act 2025
-               proposed raising it to KES 8 million, but this has not yet taken effect). Failure to register when required attracts a{" "}
+              A business must register for VAT when its annual taxable turnover reaches the{" "}
+              mandatory threshold ({FACTS.mandatoryThreshold}). Failure to register when required attracts a{" "}
               <a href="/resources/what-happens-if-i-don-t-register-for-vat/" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
-                KES 100,000 non-registration penalty
+                KES 100,000 per month non-registration penalty
               </a>
-              . Voluntary registration is available below the threshold to claim input VAT credits —
+              . Voluntary registration is available from {FACTS.voluntaryFrom} to claim input VAT credits —
               use our{" "}
               <a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 guide on whether you need to register for VAT in Kenya
