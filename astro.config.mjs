@@ -44,6 +44,44 @@ function singleSitemap() {
 export default defineConfig({
   site: SITE,
   trailingSlash: "always",
+  security: {
+    csp: {
+      algorithm: "SHA-256",
+      cspDestination: "meta",
+      directives: [
+        "default-src 'self'",
+        "object-src 'none'",
+        "font-src 'self' https://fonts.gstatic.com data:",
+        "img-src 'self' data: https:",
+        "media-src 'self' data:",
+        "connect-src 'self' https:",
+        "frame-ancestors 'none'",
+        "base-uri 'self'",
+        "form-action 'self' https:",
+        "upgrade-insecure-requests",
+      ],
+      scriptDirective: {
+        resources: ["'self'"],
+        // SHA-256 hashes of the two deliberately inline non-hydrated scripts
+        // in BaseLayout.astro (theme pre-paint hook + speculationrules block).
+        // VERIFY with: node verify-csp.cjs  (after any edit to either script)
+        hashes: [
+          "sha256-Gg0/seg1F+l3T1CRtiPaHSLgTl8bS2jSXkuz+6PeAW0=",
+          "sha256-/avMCWurbOW+mgAjEyqVaOOGjJyKPiE8ruWr08EiUqU=",
+        ],
+      },
+      styleDirective: {
+        resources: [
+          "'self'",
+          "'unsafe-inline'",
+          "https://fonts.googleapis.com",
+          // style="…" attributes (hero gradient, header blur, badge colors)
+          // can't use <style>-hashes, so allow them via style-src-attr only.
+          { resource: "'unsafe-inline'", kind: "attribute" },
+        ],
+      },
+    },
+  },
   integrations: [react(), mdx(), singleSitemap()],
   vite: {
     plugins: [tailwindcss()],

@@ -485,7 +485,7 @@ export default function KRAPenaltiesReferencePage() {
                 </table>
               </div>
               <p className="mt-3">
-                All fees are payable via <strong className="text-ink">M-PESA Paybill 572572</strong>. We do not charge retainer fees, monthly commitments, or hidden costs. You only pay when we deliver the service.
+                All fees are payable via M-PESA (paybill details shared after you book). We do not charge retainer fees, monthly commitments, or hidden costs. You only pay when we deliver the service.
               </p>
 
               {/* Conversion CTA */}

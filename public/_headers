@@ -4,4 +4,6 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https:
+  // CSP is emitted per-page by Astro via a <meta http-equiv="Content-Security-Policy">
+  // tag (astro.config.mjs -> security.csp). If the Netlify header is set too, the
+  // two policies would be intersected and block our hash-allowlisted inline scripts.

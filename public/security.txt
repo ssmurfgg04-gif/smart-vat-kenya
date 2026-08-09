@@ -1,0 +1,6 @@
+Contact: mailto:security@smartvatkenya.co.ke
+Contact: https://smartvatkenya.co.ke/contact
+Expires: 2027-08-09T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://smartvatkenya.co.ke/.well-known/security.txt
+Policy: https://smartvatkenya.co.ke/privacy

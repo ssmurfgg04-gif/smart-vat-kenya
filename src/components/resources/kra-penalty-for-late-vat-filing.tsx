@@ -417,7 +417,7 @@ export default function KRAPenaltyPage() {
                 </ul>
               </div>
               <p>
-                Our fee is a flat <strong className="text-ink">KES 4,000</strong> — payable via M-PESA Paybill <strong className="text-ink">572572</strong>. There are no hidden charges, no monthly retainers, and no surprise fees. You pay only if we take on your case.
+                Our fee is a flat <strong className="text-ink">KES 4,000</strong> — payable via M-PESA (paybill details shared after you book). There are no hidden charges, no monthly retainers, and no surprise fees. You pay only if we take on your case.
               </p>
 
               {/* Conversion CTA */}
