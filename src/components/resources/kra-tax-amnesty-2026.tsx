@@ -9,7 +9,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "KRA Tax Amnesty 2026", item: "https://smartvatkenya.co.ke/resources/kra-tax-amnesty-2026" },
+    { "@type": "ListItem", position: 3, name: "KRA Tax Amnesty 2026", item: "https://smartvatkenya.co.ke/resources/kra-tax-amnesty-2026/" },
   ],
 }
 

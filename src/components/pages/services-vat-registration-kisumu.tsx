@@ -24,7 +24,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 3,
       name: "VAT Registration Kisumu",
-      item: "https://smartvatkenya.co.ke/services/vat-registration-kisumu",
+      item: "https://smartvatkenya.co.ke/services/vat-registration-kisumu/",
     },
   ],
 }
@@ -54,13 +54,6 @@ const localBusinessSchema = {
   serviceArea: { "@type": "City", name: "Kisumu" },
   priceRange: "KES 5,000",
   paymentAccepted: "M-PESA",
-  offers: {
-    "@type": "Offer",
-    price: "5000",
-    priceCurrency: "KES",
-    availability: "https://schema.org/InStock",
-    description: "VAT registration services for Kisumu businesses",
-  },
 }
 
 const faqSchema = {
@@ -106,12 +99,6 @@ const serviceSchema = {
     "Professional KRA VAT registration in Kisumu — KES 5,000 flat fee, done in 1–3 working days. iTax VAT Form 1, PIN generation, and eTIMS guidance included. Fully remote via WhatsApp. M-PESA accepted.",
   provider: { "@type": "Organization", name: "Smart VAT Kenya" },
   areaServed: { "@type": "City", name: "Kisumu" },
-  offers: {
-    "@type": "Offer",
-    price: "5000",
-    priceCurrency: "KES",
-    availability: "https://schema.org/InStock",
-  },
 }
 
 const inclusions = [

@@ -9,7 +9,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "VAT for Construction & Real Estate", item: "https://smartvatkenya.co.ke/resources/vat-for-construction-real-estate-kenya" },
+    { "@type": "ListItem", position: 3, name: "VAT for Construction & Real Estate", item: "https://smartvatkenya.co.ke/resources/vat-for-construction-real-estate-kenya/" },
   ],
 }
 

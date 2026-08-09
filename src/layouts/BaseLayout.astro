@@ -110,24 +110,6 @@ const localBusinessSchema = {
       paymentAccepted: "M-PESA, Cash",
       currenciesAccepted: "KES",
       priceRange: "KES 4,000 – KES 5,000",
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "VAT Services Kenya",
-        itemListElement: [
-          {
-            "@type": "Offer",
-            itemOffered: { "@type": "Service", name: "VAT Registration" },
-            priceSpecification: { "@type": "PriceSpecification", "price": "5000", "priceCurrency": "KES" },
-            availability: "https://schema.org/InStock"
-          },
-          {
-            "@type": "Offer",
-            itemOffered: { "@type": "Service", name: "Monthly VAT Filing" },
-            priceSpecification: { "@type": "PriceSpecification", "price": "3500", "priceCurrency": "KES" },
-            availability: "https://schema.org/InStock"
-          },
-        ],
-      },
     },
     {
       "@type": "SoftwareApplication",
@@ -137,7 +119,6 @@ const localBusinessSchema = {
       operatingSystem: "Any",
       description:
         "Calculate Kenya VAT at 16% standard rate, zero-rated (0%) or exempt. Includes KRA late-filing penalty estimator and 'Am I Required?' VAT registration check.",
-      offers: { "@type": "Offer", price: "0", priceCurrency: "KES" },
       url: "https://smartvatkenya.co.ke/tools",
     },
     {
@@ -164,13 +145,6 @@ const localBusinessSchema = {
       provider: { "@id": "https://smartvatkenya.co.ke/#business" },
       areaServed: { "@type": "Country", name: "Kenya" },
       serviceType: "VAT Filing",
-      offers: {
-        "@type": "Offer",
-        price: "3500",
-        priceCurrency: "KES",
-        availability: "https://schema.org/InStock",
-        url: "https://smartvatkenya.co.ke/services",
-      },
     },
     {
       "@type": "Service",
@@ -181,12 +155,6 @@ const localBusinessSchema = {
         "Complete VAT registration via KRA iTax portal. Includes profile update, VAT Form 1, PIN generation, eTIMS onboarding guidance, and taxpayer education.",
       provider: { "@id": "https://smartvatkenya.co.ke/#business" },
       areaServed: { "@type": "Country", name: "Kenya" },
-      offers: {
-        "@type": "Offer",
-        priceSpecification: { "@type": "PriceSpecification", "price": "5000", "priceCurrency": "KES" },
-        availability: "https://schema.org/InStock",
-        validFrom: "2026-01-01",
-      },
     },
     {
       "@type": "Service",
@@ -197,12 +165,6 @@ const localBusinessSchema = {
         "Monthly iTax VAT return filing before the 20th KRA deadline. We file on the 17th. Avoids KES 10,000 late-filing penalty.",
       provider: { "@id": "https://smartvatkenya.co.ke/#business" },
       areaServed: { "@type": "Country", name: "Kenya" },
-      offers: {
-        "@type": "Offer",
-        priceSpecification: { "@type": "PriceSpecification", "price": "3500", "priceCurrency": "KES" },
-        availability: "https://schema.org/InStock",
-        validFrom: "2026-01-01",
-      },
     },
   ],
 }

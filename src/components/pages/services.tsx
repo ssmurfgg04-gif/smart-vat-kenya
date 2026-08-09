@@ -25,7 +25,6 @@ const offerSchema = {
         name: "VAT Registration Services Kenya",
         description:
           "Complete VAT registration on KRA iTax including iTax profile update, Form VAT 1, and PIN generation. Done in 1–3 working days.",
-        offers: { "@type": "Offer", price: "5000", priceCurrency: "KES" },
       },
     },
     {
@@ -36,7 +35,6 @@ const offerSchema = {
         name: "Monthly VAT Filing Kenya",
         description:
           "Monthly iTax VAT return filing before the 20th KRA deadline. Avoids KES 10,000 late penalty.",
-        offers: { "@type": "Offer", price: "3500", priceCurrency: "KES" },
       },
     },
     {
@@ -47,7 +45,6 @@ const offerSchema = {
         name: "KRA Penalty Waiver Application",
         description:
           "Drafting and submission of KRA penalty waiver request for outstanding VAT penalties.",
-        offers: { "@type": "Offer", price: "4000", priceCurrency: "KES" },
       },
     },
   ],

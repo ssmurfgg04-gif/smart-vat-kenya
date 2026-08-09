@@ -9,7 +9,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "KRA Penalty for Late VAT Filing", item: "https://smartvatkenya.co.ke/resources/kra-penalty-for-late-vat-filing" },
+    { "@type": "ListItem", position: 3, name: "KRA Penalty for Late VAT Filing", item: "https://smartvatkenya.co.ke/resources/kra-penalty-for-late-vat-filing/" },
   ],
 }
 

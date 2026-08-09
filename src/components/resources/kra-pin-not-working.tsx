@@ -9,7 +9,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "KRA PIN Not Working", item: "https://smartvatkenya.co.ke/resources/kra-pin-not-working" },
+    { "@type": "ListItem", position: 3, name: "KRA PIN Not Working", item: "https://smartvatkenya.co.ke/resources/kra-pin-not-working/" },
   ],
 }
 

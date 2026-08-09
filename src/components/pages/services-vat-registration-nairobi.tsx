@@ -23,7 +23,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 3,
       name: "VAT Registration Nairobi",
-      item: "https://smartvatkenya.co.ke/services/vat-registration-nairobi",
+      item: "https://smartvatkenya.co.ke/services/vat-registration-nairobi/",
     },
   ],
 }
@@ -143,12 +143,6 @@ const serviceSchema = {
     "Professional KRA VAT registration in Nairobi — KES 5,000 flat fee, done in 1–3 working days. iTax VAT Form 1, PIN generation, and eTIMS guidance included. M-PESA accepted. No hidden costs.",
   provider: { "@type": "Organization", name: "Smart VAT Kenya" },
   areaServed: { "@type": "City", name: "Nairobi" },
-  offers: {
-    "@type": "Offer",
-    price: "5000",
-    priceCurrency: "KES",
-    availability: "https://schema.org/InStock",
-  },
 }
 
 const inclusions = [

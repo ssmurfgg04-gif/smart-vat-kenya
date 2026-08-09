@@ -1,4 +1,4 @@
-﻿import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
+import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
@@ -9,7 +9,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "VAT Return Filing Checklist", item: "https://smartvatkenya.co.ke/resources/vat-return-filing-checklist" },
+    { "@type": "ListItem", position: 3, name: "VAT Return Filing Checklist", item: "https://smartvatkenya.co.ke/resources/vat-return-filing-checklist/" },
   ],
 }
 

@@ -23,7 +23,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "How to Apply for a KRA PIN in Kenya", item: "https://smartvatkenya.co.ke/resources/how-to-apply-for-kra-pin" },
+    { "@type": "ListItem", position: 3, name: "How to Apply for a KRA PIN in Kenya", item: "https://smartvatkenya.co.ke/resources/how-to-apply-for-kra-pin/" },
   ],
 }
 

@@ -27,7 +27,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 3,
       name: "VAT Registration Mombasa",
-      item: "https://smartvatkenya.co.ke/services/vat-registration-mombasa",
+      item: "https://smartvatkenya.co.ke/services/vat-registration-mombasa/",
     },
   ],
 }
@@ -70,13 +70,6 @@ const serviceSchema = {
     "@type": "City",
     name: "Mombasa",
     sameAs: "https://en.wikipedia.org/wiki/Mombasa",
-  },
-  offers: {
-    "@type": "Offer",
-    price: "5000",
-    priceCurrency: "KES",
-    availability: "https://schema.org/InStock",
-    priceValidUntil: "2027-12-31",
   },
 }
 

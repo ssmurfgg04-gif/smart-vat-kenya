@@ -8,7 +8,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "What Happens If I Don't Register for VAT", item: "https://smartvatkenya.co.ke/resources/what-happens-if-i-don-t-register-for-vat" },
+    { "@type": "ListItem", position: 3, name: "What Happens If I Don't Register for VAT", item: "https://smartvatkenya.co.ke/resources/what-happens-if-i-don-t-register-for-vat/" },
   ],
 }
 

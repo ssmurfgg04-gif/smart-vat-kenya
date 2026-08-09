@@ -85,12 +85,6 @@ export default function MonthlyVatFilingPage() {
     description:
       "Monthly iTax VAT return filing before the 20th KRA deadline. KES 3,500 per month. Avoids KES 10,000 late penalty.",
     provider: { "@type": "Organization", name: "Smart VAT Kenya" },
-    offers: {
-      "@type": "Offer",
-      price: "3500",
-      priceCurrency: "KES",
-      availability: "https://schema.org/InStock",
-    },
   }
 
   const breadcrumbSchema = {
@@ -103,7 +97,7 @@ export default function MonthlyVatFilingPage() {
         "@type": "ListItem",
         position: 3,
         name: "Monthly VAT Filing",
-        item: "https://smartvatkenya.co.ke/services/monthly-vat-filing",
+        item: "https://smartvatkenya.co.ke/services/monthly-vat-filing/",
       },
     ],
   }

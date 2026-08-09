@@ -157,7 +157,7 @@ export default function ETIMSOnboardingPage() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
       { "@type": "ListItem", position: 2, name: "Services", item: "https://smartvatkenya.co.ke/services" },
-      { "@type": "ListItem", position: 3, name: "eTIMS Onboarding", item: "https://smartvatkenya.co.ke/services/etims-onboarding" },
+      { "@type": "ListItem", position: 3, name: "eTIMS Onboarding", item: "https://smartvatkenya.co.ke/services/etims-onboarding/" },
     ],
   }
 
@@ -168,13 +168,6 @@ export default function ETIMSOnboardingPage() {
     description:
       "KRA eTIMS registration and onboarding in Kenya — KES 3,000. Solution type consultation, registration, test invoice, QR code setup, staff training, and compliance check.",
     provider: { "@type": "Organization", name: "Smart VAT Kenya" },
-    offers: {
-      "@type": "Offer",
-      price: "3000",
-      priceCurrency: "KES",
-      priceValidUntil: "2027-12-31",
-      availability: "https://schema.org/InStock",
-    },
   }
 
   return (
