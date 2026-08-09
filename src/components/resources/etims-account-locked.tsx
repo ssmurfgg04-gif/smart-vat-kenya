@@ -136,6 +136,14 @@ const faqSchema = {
         text: "Sync your device at least once every 7 days — ideally daily. Keep your login credentials saved securely, use the correct portal (eTIMS vs iTax have separate passwords), keep the device certificate active, and update eTIMS Client when KRA releases new versions. A daily 5-minute sync check prevents the most common lockout cause.",
       },
     },
+    {
+      "@type": "Question",
+      name: "Why do I see \"wrong obligation ID\" or \"NONVAT only\" when I try to create an eTIMS invoice?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "This error means your iTax obligations and your eTIMS registration are out of sync — for example, a NONVAT invoice type selected while no matching NONVAT obligation is active, or e-invoicing not activated on that PIN yet (the activation error reads 'inactive/invalid PIN number'). Fix it by reviewing your tax obligations in iTax, registering the correct obligation (VAT / Income Tax – Business), and activating eTIMS for that PIN. If it persists, contact KRA eTIMS support (+254 711 099 999 / etims-support@kra.go.ke) — they activate or adjust the obligation, usually within 1–2 working days.",
+      },
+    },
   ],
 }
 
