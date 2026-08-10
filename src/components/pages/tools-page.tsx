@@ -96,19 +96,19 @@ export default function ToolsPage() {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
-        <div className="grid gap-8 lg:gap-10 lg:grid-cols-2 items-start">
+        <div className="grid grid-cols-2 gap-4 lg:gap-10 items-start">
           {/* VAT Calculator */}
           <section aria-labelledby="vat-calc-heading">
             <div className="flex items-center gap-2.5 mb-6">
               <Calculator size={17} weight="duotone" className="text-brand" aria-hidden="true" />
-              <h2 id="vat-calc-heading" className="font-display text-[1rem] font-semibold text-ink">Kenya VAT Calculator 2026 — 16% Standard Rate</h2>
+              <h2 id="vat-calc-heading" className="font-display text-[0.88rem] sm:text-[1rem] font-semibold text-ink">Kenya VAT Calculator 2026 — 16% Standard Rate</h2>
             </div>
             <div className="border border-hairline rounded-lg overflow-hidden divide-y divide-hairline bg-canvas">
-              <div className="p-5">
+              <div className="p-3 sm:p-5">
                 <label htmlFor="amount" className="block text-[0.78rem] font-medium text-ink-muted mb-2">Amount (KES)</label>
-                <input id="amount" type="text" inputMode="decimal" placeholder="50,000" value={amount} onChange={(e) => setAmount(e.target.value)} className="w-full font-display text-[1.6rem] font-semibold text-ink bg-transparent focus:outline-none placeholder:text-ink-muted/30 placeholder:font-normal placeholder:text-xl" />
+                <input id="amount" type="text" inputMode="decimal" placeholder="50,000" value={amount} onChange={(e) => setAmount(e.target.value)} className="w-full font-display text-[1.25rem] sm:text-[1.6rem] font-semibold text-ink bg-transparent focus:outline-none placeholder:text-ink-muted/30 placeholder:font-normal placeholder:text-xl" />
               </div>
-              <div className="p-5">
+              <div className="p-3 sm:p-5">
                 <p className="text-[0.78rem] font-medium text-ink-muted mb-3">KRA VAT Rate</p>
                 <div className="flex flex-wrap gap-2">
                   {([{ value: "standard", label: "Standard 16%" }, { value: "zero", label: "Zero-rated 0%" }, { value: "exempt", label: "Exempt" }] as { value: RateType; label: string }[]).map((r) => (
@@ -116,7 +116,7 @@ export default function ToolsPage() {
                   ))}
                 </div>
               </div>
-              <div className="p-5">
+              <div className="p-3 sm:p-5">
                 <p className="text-[0.78rem] font-medium text-ink-muted mb-3">Calculate</p>
                 <div className="flex gap-2 flex-wrap">
                   {([{ value: "add", label: "Add VAT to amount" }, { value: "extract", label: "Extract VAT from total (reverse)" }] as { value: Direction; label: string }[]).map((d) => (
@@ -124,7 +124,7 @@ export default function ToolsPage() {
                   ))}
                 </div>
               </div>
-              <div className="p-5 bg-canvas-alt">
+              <div className="p-3 sm:p-5 bg-canvas-alt">
                 {rateType === "exempt" ? (
                   <div className="flex items-start gap-2.5 text-[0.82rem] text-ink-muted"><Info size={14} className="shrink-0 mt-0.5" aria-hidden="true" />Exempt supplies carry no VAT charge and do not qualify for input VAT credit.</div>
                 ) : rateType === "zero" ? (
@@ -143,24 +143,24 @@ export default function ToolsPage() {
 
           {/* KRA Penalty Calculator */}
           <section aria-labelledby="penalty-heading">
-            <div className="flex items-center gap-2.5 mb-6"><WarningCircle size={17} weight="duotone" className="text-brand" aria-hidden="true" /><h2 id="penalty-heading" className="font-display text-[1rem] font-semibold text-ink">KRA Penalty Calculator — All 6 Tax Regimes</h2></div>
+            <div className="flex items-center gap-2.5 mb-6"><WarningCircle size={17} weight="duotone" className="text-brand" aria-hidden="true" /><h2 id="penalty-heading" className="font-display text-[0.88rem] sm:text-[1rem] font-semibold text-ink">KRA Penalty Calculator — All 6 Tax Regimes</h2></div>
             <div className="border border-hairline rounded-lg overflow-hidden divide-y divide-hairline bg-canvas">
-              <div className="p-5">
+              <div className="p-3 sm:p-5">
                 <label htmlFor="pen-tax-type" className="block text-[0.78rem] font-medium text-ink-muted mb-2">Tax Type</label>
                 <select id="pen-tax-type" value={penTaxType} onChange={(e) => setPenTaxType(e.target.value)} className="w-full text-[0.95rem] text-ink bg-canvas border border-hairline rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-brand">
                   {TAX_REGIMES.map((t) => (<option key={t.value} value={t.value}>{t.label}</option>))}
                 </select>
               </div>
-              <div className="p-5">
+              <div className="p-3 sm:p-5">
                 <label htmlFor="pen-taxdue" className="block text-[0.78rem] font-medium text-ink-muted mb-2">{regime.label} — principal tax due (KES)</label>
-                <input id="pen-taxdue" type="text" inputMode="decimal" placeholder="80,000" value={penTaxDue} onChange={(e) => setPenTaxDue(e.target.value)} className="w-full font-display text-[1.6rem] font-semibold text-ink bg-transparent focus:outline-none placeholder:text-ink-muted/30 placeholder:font-normal placeholder:text-xl" />
+                <input id="pen-taxdue" type="text" inputMode="decimal" placeholder="80,000" value={penTaxDue} onChange={(e) => setPenTaxDue(e.target.value)} className="w-full font-display text-[1.25rem] sm:text-[1.6rem] font-semibold text-ink bg-transparent focus:outline-none placeholder:text-ink-muted/30 placeholder:font-normal placeholder:text-xl" />
               </div>
-              <div className="p-5">
+              <div className="p-3 sm:p-5">
                 <label htmlFor="pen-months" className="flex items-baseline justify-between text-[0.78rem] font-medium text-ink-muted mb-3"><span>Months overdue</span><span className="font-display text-[1rem] font-semibold text-ink tabular-nums">{penM}</span></label>
                 <input id="pen-months" type="range" min="1" max="60" value={penMonths} onChange={(e) => setPenMonths(e.target.value)} className="w-full accent-brand" />
                 <div className="flex justify-between text-[0.7rem] text-ink-muted mt-1.5"><span>1 month</span><span>60 months</span></div>
               </div>
-              <div className="p-5 bg-canvas-alt">
+              <div className="p-3 sm:p-5 bg-canvas-alt">
                 <dl className="space-y-3">
                   <div className="flex items-baseline justify-between"><dt className="text-[0.78rem] text-ink-muted">Late-filing penalty<br /><span className="text-[0.65rem]">{regime.penaltyDesc}</span></dt><dd className="font-mono text-[0.88rem] text-ink tabular-nums">{formatKES(lateFiling)}</dd></div>
                   <div className="flex items-baseline justify-between"><dt className="text-[0.78rem] text-ink-muted">Interest (1%/month &times; {penM})</dt><dd className="font-mono text-[0.88rem] text-ink tabular-nums">{formatKES(interest)}</dd></div>
@@ -258,7 +258,7 @@ export default function ToolsPage() {
         {/* More Tools Grid */}
         <section className="mt-14 border-t border-hairline pt-12" aria-labelledby="advanced-heading">
           <div className="flex items-center gap-2.5 mb-6"><Calculator size={17} weight="duotone" className="text-brand" aria-hidden="true" /><h2 id="advanced-heading" className="font-display text-[1rem] font-semibold text-ink">More Free KRA Tax Tools</h2></div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
             {[
               { href: "/resources/vat-rates-kenya/", icon: CurrencyCircleDollar, label: "VAT Rates & Calculator Guide", desc: "Standard 16%, zero-rated, exempt — rates and how to apply them" },
               { href: "/resources/vat-vs-turnover-tax/", icon: Scales, label: "VAT vs Turnover Tax", desc: "Decision guide for choosing the right tax regime" },
@@ -279,7 +279,7 @@ export default function ToolsPage() {
         {/* Resources Grid */}
         <section className="mt-14 border-t border-hairline pt-12" aria-labelledby="resources-heading">
           <div className="flex items-center gap-2.5 mb-6"><ClipboardText size={17} weight="duotone" className="text-brand" aria-hidden="true" /><h2 id="resources-heading" className="font-display text-[1rem] font-semibold text-ink">Need More Help? Read Our Free KRA VAT Guides</h2></div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { href: "/resources/how-to-register-for-vat-in-kenya/", label: "How to Register for VAT in Kenya" },
               { href: "/resources/kra-penalty-for-late-vat-filing/", label: "KRA Penalty for Late VAT Filing" },

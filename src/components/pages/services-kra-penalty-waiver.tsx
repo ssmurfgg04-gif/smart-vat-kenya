@@ -176,7 +176,7 @@ export default function KRAPenaltyWaiverPage() {
               <h2 className="font-display text-[1.05rem] font-semibold text-ink mb-3">
                 What you could be facing without the amnesty
               </h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
                 {penalties.map((p) => (
                   <div key={p.name} className="bg-canvas border border-hairline rounded-md p-4">
                     <p className="font-display text-[1.1rem] font-semibold text-brand leading-none mb-1">
@@ -209,7 +209,7 @@ export default function KRAPenaltyWaiverPage() {
           <p className="text-[0.9rem] text-ink-muted max-w-[48ch] leading-relaxed mb-10">
             Free to check. Flat fee only if you need us to file or structure a plan. No success-fee extras.
           </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 lg:gap-4">
             {included.map((item) => (
               <div key={item.label} className="bg-canvas-alt border border-hairline rounded-lg p-5 flex items-start gap-3">
                 <CheckCircle size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -254,7 +254,7 @@ export default function KRAPenaltyWaiverPage() {
             If you have any of the following on your iTax ledger from before 2026, the amnesty can
             waive them in full — we&apos;ll confirm your exact position with the free check.
           </p>
-          <div className="grid sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-2 gap-4 lg:gap-5">
             {[
               {
                 icon: Warning,
@@ -277,7 +277,7 @@ export default function KRAPenaltyWaiverPage() {
                 desc: "Unpaid VAT accrues interest at 1% per month compounded. Pre-2026 interest and fines are waived once principal is cleared by 31 December 2026.",
               },
             ].map((p) => (
-              <div key={p.title} className="bg-canvas-alt border border-hairline rounded-lg p-6 flex items-start gap-4">
+              <div key={p.title} className="bg-canvas-alt border border-hairline rounded-lg p-5 lg:p-6 flex items-start gap-4">
                 <div className="shrink-0 w-10 h-10 rounded-full bg-brand-muted flex items-center justify-center">
                   <p.icon size={18} weight="duotone" className="text-brand" aria-hidden="true" />
                 </div>

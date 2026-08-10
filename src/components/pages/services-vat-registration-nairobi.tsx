@@ -434,13 +434,13 @@ export default function VATRegistrationNairobiPage() {
             Three steps to your VAT PIN.
           </h2>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
             {steps.map(({ number, Icon, title, description, details }) => (
-              <article key={number} className="border border-hairline rounded-lg p-7 flex flex-col bg-canvas">
-                <p className="font-display text-[3.5rem] font-semibold text-ink/10 leading-none mb-4 tabular-nums">
+              <article key={number} className="border border-hairline rounded-lg p-4 sm:p-7 flex flex-col bg-canvas">
+                <p className="font-display text-[2.25rem] sm:text-[3.5rem] font-semibold text-ink/10 leading-none mb-3 sm:mb-4 tabular-nums">
                   {number}
                 </p>
-                <Icon size={22} weight="duotone" className="text-brand mb-4" aria-hidden="true" />
+                <Icon size={22} weight="duotone" className="text-brand mb-3 sm:mb-4" aria-hidden="true" />
                 <h3 className="font-display text-[1.05rem] font-semibold text-ink mb-3">
                   {title}
                 </h3>

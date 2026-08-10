@@ -142,13 +142,13 @@ export default function HowItWorksPage() {
         <div className="max-w-[1400px] mx-auto">
           <h2 id="steps-heading" className="sr-only">How it works — 3 steps</h2>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
             {steps.map(({ number, Icon, title, description, details }) => (
-              <article key={number} className="border border-hairline rounded-lg p-7 flex flex-col">
-                <p className="font-display text-[3.5rem] font-semibold text-ink/10 leading-none mb-4 tabular-nums">
+              <article key={number} className="border border-hairline rounded-lg p-4 sm:p-7 flex flex-col">
+                <p className="font-display text-[2.25rem] sm:text-[3.5rem] font-semibold text-ink/10 leading-none mb-3 sm:mb-4 tabular-nums">
                   {number}
                 </p>
-                <Icon size={22} weight="duotone" className="text-brand mb-4" aria-hidden="true" />
+                <Icon size={22} weight="duotone" className="text-brand mb-3 sm:mb-4" aria-hidden="true" />
                 <h3 className="font-display text-[1.05rem] font-semibold text-ink mb-3">
                   {title}
                 </h3>
@@ -187,10 +187,10 @@ export default function HowItWorksPage() {
             What you can always expect from us
           </h2>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
             {guarantees.map(({ Icon, title, desc }) => (
-              <div key={title} className="border border-hairline rounded-lg p-6 bg-canvas">
-                <Icon size={20} weight="duotone" className="text-brand mb-4" aria-hidden="true" />
+              <div key={title} className="border border-hairline rounded-lg p-4 lg:p-6 bg-canvas">
+                <Icon size={20} weight="duotone" className="text-brand mb-3 lg:mb-4" aria-hidden="true" />
                 <h3 className="font-display text-[0.9rem] font-semibold text-ink mb-2">{title}</h3>
                 <p className="text-[0.8rem] text-ink-muted leading-relaxed">{desc}</p>
               </div>

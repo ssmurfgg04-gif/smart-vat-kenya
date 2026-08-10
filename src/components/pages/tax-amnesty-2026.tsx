@@ -282,7 +282,7 @@ export default function TaxAmnesty2026Page() {
               <h2 className="font-display text-[1.05rem] font-semibold text-ink mb-3">
                 The amnesty does not forgive everything
               </h2>
-              <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-3">
                 {excluded.map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-[0.85rem] text-ink-soft leading-relaxed">
                     <Warning size={13} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -311,7 +311,7 @@ export default function TaxAmnesty2026Page() {
           <p className="text-[0.9rem] text-ink-muted max-w-[48ch] leading-relaxed mb-10">
             No commitment. Send us your KRA PIN and we tell you your position — with numbers.
           </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 lg:gap-4">
             {included.map((item) => (
               <div key={item} className="bg-canvas-alt border border-hairline rounded-lg p-5 flex items-start gap-3">
                 <CheckCircle size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />

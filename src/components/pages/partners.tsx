@@ -17,9 +17,9 @@ export default function PartnersPage() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 mb-16">
-        <div className="border border-hairline rounded-xl p-8 bg-canvas-alt">
-          <h2 className="font-display text-xl font-semibold text-ink mb-4 flex items-center gap-2">
+      <div className="grid grid-cols-2 gap-4 lg:gap-8 mb-16">
+        <div className="border border-hairline rounded-xl p-5 lg:p-8 bg-canvas-alt">
+          <h2 className="font-display text-lg lg:text-xl font-semibold text-ink mb-4 flex items-center gap-2">
             <CurrencyDollar size={24} weight="duotone" className="text-brand" />
             What You Get
           </h2>
@@ -39,8 +39,8 @@ export default function PartnersPage() {
           </ul>
         </div>
 
-        <div className="border border-hairline rounded-xl p-8 bg-canvas-alt">
-          <h2 className="font-display text-xl font-semibold text-ink mb-4 flex items-center gap-2">
+        <div className="border border-hairline rounded-xl p-5 lg:p-8 bg-canvas-alt">
+          <h2 className="font-display text-lg lg:text-xl font-semibold text-ink mb-4 flex items-center gap-2">
             <ShieldCheck size={24} weight="duotone" className="text-brand" aria-hidden="true" />
             Why It Works
           </h2>

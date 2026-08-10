@@ -218,11 +218,11 @@ export default function ServicesPage() {
         <div className="max-w-[1400px] mx-auto">
           <h2 id="services-heading" className="sr-only">Our VAT services and pricing</h2>
 
-          <div className="grid lg:grid-cols-[1fr_1fr_320px] gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-[1fr_1fr_320px] gap-4 lg:gap-5">
             {services.map((s) => (
               <article
                 key={s.id}
-                className={`rounded-lg p-8 flex flex-col ${
+                className={`rounded-lg p-4 sm:p-8 flex flex-col ${
                   s.featured
                     ? "bg-canvas-dark"
                     : "bg-canvas border border-hairline"
@@ -255,14 +255,14 @@ export default function ServicesPage() {
                   {s.summary}
                 </p>
                 <p
-                  className={`font-display text-[2.4rem] font-semibold leading-none mb-1 tabular-nums ${
+                  className={`font-display text-[1.7rem] sm:text-[2.4rem] font-semibold leading-none mb-1 tabular-nums ${
                     s.featured ? "text-canvas" : "text-ink"
                   }`}
                 >
                   {s.price}
                 </p>
                 <p
-                  className={`text-[0.75rem] mb-8 ${
+                  className={`text-[0.75rem] mb-5 sm:mb-8 ${
                     s.featured ? "text-canvas/55" : "text-ink-muted"
                   }`}
                 >

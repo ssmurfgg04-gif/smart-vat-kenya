@@ -423,8 +423,8 @@ export default function HomePage() {
             quietly costs more in your time, your sanity, and KES 10,000 penalties.
           </p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">
-            <div className="bg-canvas rounded-lg border border-hairline p-8">
+          <div className="grid grid-cols-2 gap-4 lg:gap-5">
+            <div className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8">
               <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-4">Doing it yourself</p>
               <div className="space-y-4">
                 {[
@@ -433,19 +433,19 @@ export default function HomePage() {
                   { label: "Deadline risk", value: "KES 10,000 penalty", cost: "Automatic, non-negotiable" },
                   { label: "Input VAT protection", value: "Often missed", cost: "Lost money back" },
                 ].map((r) => (
-                  <div key={r.label} className="flex items-start justify-between gap-4 border-b border-hairline last:border-0 pb-4 last:pb-0">
+                  <div key={r.label} className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-4 border-b border-hairline last:border-0 pb-4 last:pb-0">
                     <div>
                       <p className="text-[0.88rem] font-semibold text-ink">{r.label}</p>
                       <p className="text-[0.76rem] text-ink-muted">{r.cost}</p>
                     </div>
-                    <p className="text-[0.85rem] text-ink text-right font-medium">{r.value}</p>
+                    <p className="text-[0.85rem] text-ink text-left sm:text-right font-medium">{r.value}</p>
                   </div>
                 ))}
               </div>
               <p className="mt-6 text-[0.82rem] text-brand font-medium">Total: at least KES 10,000 + weeks of your time.</p>
             </div>
 
-            <div className="bg-canvas-dark rounded-lg p-8">
+            <div className="bg-canvas-dark rounded-lg p-4 sm:p-8">
               <p className="font-mono text-[0.65rem] uppercase tracking-widest text-canvas/60 mb-4">With Smart VAT Kenya</p>
               <div className="space-y-4">
                 {[
@@ -454,12 +454,12 @@ export default function HomePage() {
                   { label: "Deadline risk", value: "Filed on the 17th", cost: "Never the 20th, never late" },
                   { label: "Input tax protection", value: "eTIMS-ready day one", cost: "Special Table checks included" },
                 ].map((r) => (
-                  <div key={r.label} className="flex items-start justify-between gap-4 border-b border-canvas/15 last:border-0 pb-4 last:pb-0">
+                  <div key={r.label} className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-4 border-b border-canvas/15 last:border-0 pb-4 last:pb-0">
                     <div>
                       <p className="text-[0.88rem] font-semibold text-canvas">{r.label}</p>
                       <p className="text-[0.76rem] text-canvas/55">{r.cost}</p>
                     </div>
-                    <p className="text-[0.85rem] text-brand text-right font-semibold">{r.value}</p>
+                    <p className="text-[0.85rem] text-brand text-left sm:text-right font-semibold">{r.value}</p>
                   </div>
                 ))}
               </div>
@@ -497,14 +497,14 @@ export default function HomePage() {
             Registration is the door. Filling unlocks what most small businesses never hear about — the upside
             that makes VAT worth it.
           </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
             {[
               { Icon: Briefcase, title: "Win tenders & contracts", body: "Government and corporate clients require a valid VAT number and tax compliance certificate. Without it, you cannot bid." },
               { Icon: CheckCircle, title: "Sell to big buyers", body: "Corporate clients and importers want eTIMS-compliant VAT invoices. A VAT number makes your business credible." },
               { Icon: CurrencyDollar, title: "Claim input VAT back", body: "Money back on the VAT you pay on purchases — cash flow most unregistered businesses simply lose." },
               { Icon: TrendUp, title: "Import & grow", body: "Importing stock, expanding capacity, and qualifying for refunds all open up once you're VAT-registered." },
             ].map(({ Icon, title, body }) => (
-              <article key={title} className="bg-canvas/[0.06] border border-canvas/15 rounded-lg p-7">
+              <article key={title} className="bg-canvas/[0.06] border border-canvas/15 rounded-lg p-5 lg:p-7">
                 <Icon size={26} weight="duotone" className="text-brand mb-5" aria-hidden="true" />
                 <h3 className="font-display text-[1.02rem] font-semibold text-canvas mb-2">{title}</h3>
                 <p className="text-[0.83rem] text-canvas/70 leading-relaxed">{body}</p>
@@ -531,9 +531,9 @@ export default function HomePage() {
             KRA VAT services with published prices. No discovery calls required.
           </h2>
 
-          <div className="grid lg:grid-cols-[1fr_1fr_340px] gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-[1fr_1fr_340px] gap-4 lg:gap-5">
             {/* Card 1 — VAT Registration */}
-            <article className="bg-canvas rounded-lg border border-hairline p-8 flex flex-col">
+            <article className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8 flex flex-col">
               <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-4">
                 One-time
               </p>
@@ -541,10 +541,10 @@ export default function HomePage() {
               <p className="text-[0.85rem] text-ink-muted mb-6 leading-relaxed">
                 Full iTax VAT registration — we handle the portal, you get the PIN in 1–3 days.
               </p>
-              <p className="font-display text-[2.5rem] font-semibold text-ink leading-none mb-1 tabular-nums">
+              <p className="font-display text-[1.75rem] sm:text-[2.5rem] font-semibold text-ink leading-none mb-1 tabular-nums">
                 KES 5,000
               </p>
-              <p className="text-[0.78rem] text-ink-muted mb-8">flat fee, paid once</p>
+              <p className="text-[0.78rem] text-ink-muted mb-5 sm:mb-8">flat fee, paid once</p>
               <ul className="space-y-2.5 flex-1 mb-8" role="list">
                 {[
                   "iTax profile update",
@@ -571,7 +571,7 @@ export default function HomePage() {
             </article>
 
             {/* Card 2 — Monthly Filing (featured) */}
-            <article className="bg-canvas-dark rounded-lg p-8 flex flex-col relative overflow-hidden">
+            <article className="bg-canvas-dark rounded-lg p-4 sm:p-8 flex flex-col relative overflow-hidden">
               <span className="absolute top-0 right-0 font-mono text-[0.6rem] uppercase tracking-widest bg-brand text-canvas px-3 py-1.5 rounded-bl-lg">
                 Most Popular
               </span>
@@ -582,10 +582,10 @@ export default function HomePage() {
               <p className="text-[0.85rem] text-canvas/80 mb-6 leading-relaxed">
                 Filed before the 20th. Every month. Without you having to think about it.
               </p>
-              <p className="font-display text-[2.5rem] font-semibold text-canvas leading-none mb-1 tabular-nums">
+              <p className="font-display text-[1.75rem] sm:text-[2.5rem] font-semibold text-canvas leading-none mb-1 tabular-nums">
                 KES 3,500
               </p>
-              <p className="text-[0.78rem] text-canvas/65 mb-8">per month</p>
+              <p className="text-[0.78rem] text-canvas/65 mb-5 sm:mb-8">per month</p>
               <ul className="space-y-2.5 flex-1 mb-8" role="list">
                 {[
                   "Filed by the 20th — always",
@@ -612,7 +612,7 @@ export default function HomePage() {
             </article>
 
             {/* Card 3 — Amnesty Cleanup */}
-            <article className="bg-canvas rounded-lg border border-hairline p-8 flex flex-col lg:self-start">
+            <article className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8 flex flex-col col-span-2 lg:col-span-1 lg:self-start">
               <p className="font-mono text-[0.65rem] uppercase tracking-widest text-brand mb-4">
                 Ends 31 Dec 2026
               </p>
@@ -621,7 +621,7 @@ export default function HomePage() {
                 Free iTax ledger check. We tell you which amnesty path you&apos;re on, file the
                 returns that unlock the waiver, and structure the payment plan if you owe principal.
               </p>
-              <p className="font-display text-[2rem] font-semibold text-ink leading-none mb-1 tabular-nums">
+              <p className="font-display text-[1.5rem] sm:text-[2rem] font-semibold text-ink leading-none mb-1 tabular-nums">
                 Free check
               </p>
               <p className="text-[0.78rem] text-ink-muted mb-7">cleanup at a flat fee</p>
@@ -801,7 +801,7 @@ export default function HomePage() {
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-10">
             What our clients say
           </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
             {[
               {
                 quote:
@@ -824,7 +824,7 @@ export default function HomePage() {
             ].map(({ quote, name, business }) => (
               <article
                 key={name}
-                className="bg-canvas rounded-lg border border-hairline p-7 flex flex-col"
+                className="bg-canvas rounded-lg border border-hairline p-5 lg:p-7 flex flex-col"
               >
                 <div className="flex gap-0.5 mb-4" role="img" aria-label="5 out of 5 stars">
                   {Array.from({ length: 5 }).map((_, i) => (

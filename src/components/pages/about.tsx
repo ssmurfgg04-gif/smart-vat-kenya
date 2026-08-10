@@ -92,9 +92,9 @@ export default function AboutPage() {
           <h2 className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-6">
             Real people, not a ticketing system
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
             {team.map((member) => (
-              <article key={member.initials} className="border border-hairline rounded-lg p-7 bg-canvas">
+              <article key={member.initials} className="border border-hairline rounded-lg p-4 lg:p-7 bg-canvas">
                 <div
                   className="w-14 h-14 rounded-full flex items-center justify-center font-display font-semibold text-canvas mb-5"
                   style={{ backgroundColor: member.color }}
