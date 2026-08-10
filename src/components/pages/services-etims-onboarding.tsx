@@ -232,7 +232,7 @@ export default function ETIMSOnboardingPage() {
 
       {/* What's included */}
       <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="included-heading">
-        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-16 lg:grid-cols-2 items-center">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
               What is included
@@ -278,7 +278,7 @@ export default function ETIMSOnboardingPage() {
             Every business is different. We help you pick the right eTIMS solution for your size, volume,
             and existing setup — then get you registered and running.
           </p>
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             {solutions.map(({ Icon, title, for: forText, body }) => (
               <article key={title} className="bg-canvas border border-hairline rounded-lg p-8 flex flex-col">
                 <Icon size={28} weight="duotone" className="text-brand mb-4" aria-hidden="true" />
@@ -303,7 +303,7 @@ export default function ETIMSOnboardingPage() {
           <p className="text-[0.93rem] text-canvas/70 leading-relaxed max-w-[55ch] mb-10">
             From first message to compliant invoicing — here is exactly how it works.
           </p>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {steps.map(({ Icon, title, body }, i) => (
               <div key={title} className="flex flex-col">
                 <Icon size={32} weight="duotone" className="text-brand mb-3" aria-hidden="true" />

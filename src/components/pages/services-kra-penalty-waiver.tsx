@@ -229,7 +229,7 @@ export default function KRAPenaltyWaiverPage() {
           <h2 id="how-heading" className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-canvas tracking-tight mb-12 text-balance">
             Three steps to your tax amnesty cleanup.
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {steps.map((step) => (
               <div key={step.num} className="border border-canvas/15 rounded-lg p-6">
                 <p className="font-mono text-[0.7rem] text-canvas/40 tracking-widest mb-3">{step.num}</p>

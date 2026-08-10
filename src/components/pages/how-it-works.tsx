@@ -142,7 +142,7 @@ export default function HowItWorksPage() {
         <div className="max-w-[1400px] mx-auto">
           <h2 id="steps-heading" className="sr-only">How it works — 3 steps</h2>
 
-          <div className="grid lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {steps.map(({ number, Icon, title, description, details }) => (
               <article key={number} className="border border-hairline rounded-lg p-7 flex flex-col">
                 <p className="font-display text-[3.5rem] font-semibold text-ink/10 leading-none mb-4 tabular-nums">

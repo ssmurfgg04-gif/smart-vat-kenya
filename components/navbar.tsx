@@ -41,7 +41,11 @@ export function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-40 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+    <header
+      className={`sticky top-0 backdrop-blur-md border-b bg-white/90 dark:bg-gray-900/90 border-gray-200 dark:border-gray-700 ${
+        open ? "z-[90]" : "z-40"
+      }`}
+    >
       <nav
         className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between h-[60px]"
         aria-label="Main navigation"

@@ -187,7 +187,7 @@ export default function VATRegistrationPage() {
 
       {/* What's included */}
       <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="included-heading">
-        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-16 lg:grid-cols-2 items-center">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
               What you get
@@ -233,7 +233,7 @@ export default function VATRegistrationPage() {
             Three steps to your VAT PIN.
           </h2>
 
-          <div className="grid lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {steps.map(({ number, Icon, title, description, details }) => (
               <article key={number} className="border border-hairline rounded-lg p-7 flex flex-col bg-canvas">
                 <p className="font-display text-[3.5rem] font-semibold text-ink/10 leading-none mb-4 tabular-nums">

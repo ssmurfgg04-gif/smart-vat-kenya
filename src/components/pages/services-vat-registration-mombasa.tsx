@@ -294,7 +294,7 @@ export default function VATRegistrationMombasaPage() {
 
       {/* What's included */}
       <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="included-heading">
-        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-16 lg:grid-cols-2 items-center">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
               What you get
@@ -338,7 +338,7 @@ export default function VATRegistrationMombasaPage() {
           >
             Remote service designed for the Coast.
           </h2>
-          <div className="grid md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-5">
             {whyUs.map(({ Icon, title, desc }) => (
               <article key={title} className="border border-hairline rounded-lg p-6 bg-canvas">
                 <Icon size={22} weight="duotone" className="text-brand mb-3" aria-hidden="true" />
@@ -397,7 +397,7 @@ export default function VATRegistrationMombasaPage() {
             Mombasa's economy is driven by the port, tourism, and logistics. Here is how VAT
             registration applies to common Coast-based businesses — and how we help.
           </p>
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             {mombasaBusinessTypes.map(({ emoji, title, desc }) => (
               <article key={title} className="border border-hairline rounded-lg p-6 bg-canvas-alt">
                 <span className="text-2xl block mb-3" aria-hidden="true">{emoji}</span>
@@ -427,7 +427,7 @@ export default function VATRegistrationMombasaPage() {
             Three steps to your VAT PIN — no office visit needed.
           </h2>
 
-          <div className="grid lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {steps.map(({ number, Icon, title, description, details }) => (
               <article key={number} className="border border-hairline rounded-lg p-7 flex flex-col bg-canvas">
                 <p className="font-display text-[3.5rem] font-semibold text-ink/10 leading-none mb-4 tabular-nums">

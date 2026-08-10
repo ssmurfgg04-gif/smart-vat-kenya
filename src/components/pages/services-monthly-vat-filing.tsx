@@ -182,7 +182,7 @@ export default function MonthlyVatFilingPage() {
           <h2 id="process-heading" className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-12 text-balance">
             Three steps, done every month.
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {steps.map((step, i) => (
               <div key={step.num} className="relative bg-canvas border border-hairline rounded-lg p-8">
                 <span className="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted mb-3 block">

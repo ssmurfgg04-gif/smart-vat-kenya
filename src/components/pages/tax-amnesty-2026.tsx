@@ -165,7 +165,7 @@ export default function TaxAmnesty2026Page() {
 
       {/* ── Header ──────────────────────────────────────────── */}
       <div className="bg-canvas-dark px-6 lg:px-10 py-16 lg:py-20">
-        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-[1fr_400px] gap-12 items-center">
+        <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-12 lg:grid-cols-[1fr_400px] items-center">
           <div>
             <div className="inline-flex items-center gap-2.5 mb-5 text-canvas/70 py-2 pr-4 pl-3 rounded-full bg-canvas/10">
               <span className="flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.14em] tabular-nums">
@@ -252,7 +252,7 @@ export default function TaxAmnesty2026Page() {
             Most penalties are waived automatically — no application required. The one thing you need
             to know first is which bucket your business is in. We&apos;ll tell you for free.
           </p>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {paths.map((p) => (
               <div key={p.title} className="border border-hairline rounded-lg p-6 flex flex-col">
                 <div className="shrink-0 w-10 h-10 rounded-full bg-brand-muted flex items-center justify-center mb-4">
@@ -331,7 +331,7 @@ export default function TaxAmnesty2026Page() {
           <h2 id="how-heading" className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-canvas tracking-tight mb-12 text-balance">
             From PIN to plan in about a day.
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {steps.map((step) => (
               <div key={step.num} className="border border-canvas/15 rounded-lg p-6">
                 <p className="font-mono text-[0.7rem] text-canvas/40 tracking-widest mb-3">{step.num}</p>

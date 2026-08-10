@@ -96,7 +96,7 @@ export default function ToolsPage() {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
-        <div className="grid lg:grid-cols-2 gap-10 items-start">
+        <div className="grid gap-8 lg:gap-10 lg:grid-cols-2 items-start">
           {/* VAT Calculator */}
           <section aria-labelledby="vat-calc-heading">
             <div className="flex items-center gap-2.5 mb-6">

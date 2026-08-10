@@ -348,7 +348,7 @@ export default function ServicesPage() {
 
       {/* What is included */}
       <section className="bg-canvas-dark px-6 lg:px-10 py-16">
-        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-16 lg:grid-cols-2 items-center">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/55 mb-4">
               Included in every service
@@ -381,7 +381,7 @@ export default function ServicesPage() {
 
       {/* Service FAQ */}
       <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="services-faq-heading">
-        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-[360px_1fr] gap-16">
+        <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-16 lg:grid-cols-[360px_1fr]">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
               Pricing questions

@@ -184,7 +184,7 @@ export default function HomePage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pt-12 pb-12 lg:pt-14 lg:pb-16 grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-20 items-start">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pt-12 pb-12 lg:pt-14 lg:pb-16 grid gap-10 lg:gap-20 lg:grid-cols-[1fr_420px] items-start">
           <div>
             <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
               Kenya Revenue Authority Registered Agents
@@ -423,7 +423,7 @@ export default function HomePage() {
             quietly costs more in your time, your sanity, and KES 10,000 penalties.
           </p>
 
-          <div className="grid lg:grid-cols-2 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">
             <div className="bg-canvas rounded-lg border border-hairline p-8">
               <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-4">Doing it yourself</p>
               <div className="space-y-4">
@@ -642,7 +642,7 @@ export default function HomePage() {
 
       {/* ─── SEO PROSE — KRA VAT 16% 2026 ─── */}
       <section className="bg-canvas-dark py-24 px-6 lg:px-10">
-        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-[480px_1fr] gap-16 lg:gap-24">
+        <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-24 lg:grid-cols-[480px_1fr]">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/65 mb-4">
               Kenya VAT 2026
@@ -846,7 +846,7 @@ export default function HomePage() {
 
       {/* ─── FAQ ─── */}
       <section className="bg-canvas py-24 px-6 lg:px-10" aria-labelledby="faq-heading">
-        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-[360px_1fr] gap-16">
+        <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-16 lg:grid-cols-[360px_1fr]">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
               FAQ
@@ -971,7 +971,7 @@ export default function HomePage() {
 
       {/* ─── FINAL CTA ─── */}
       <section className="bg-canvas-dark py-24 px-6 lg:px-10">
-        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-12 lg:grid-cols-2 items-center">
           <div>
             <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
               Ready to get your VAT number?

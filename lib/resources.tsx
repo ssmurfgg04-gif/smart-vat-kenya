@@ -85,7 +85,7 @@ export function ArticleGrid({ currentSlug, limit = 6 }: { currentSlug?: string; 
   }
   const items = related.slice(0, limit)
   return (
-    <div className="grid sm:grid-cols-2 gap-3">
+    <div className="grid grid-cols-2 gap-3">
       {items.map((a) => (
         <a
           key={a.slug}

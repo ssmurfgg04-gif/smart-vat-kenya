@@ -34,7 +34,7 @@ export function Testimonials() {
         >
           Real results from real penalty waiver clients.
         </h2>
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
           {testimonials.map((t) => (
             <article key={t.name} className="bg-canvas border border-hairline rounded-lg p-6 flex flex-col">
               <div className="flex gap-0.5 mb-4" aria-label={`${t.rating} out of 5 stars`}>
