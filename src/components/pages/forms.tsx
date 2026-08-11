@@ -185,21 +185,21 @@ function FormCard({ form }: { form: (typeof KRA_FORMS)[number] }) {
 
       <div className="flex items-center justify-between gap-2 mt-auto">
         <a
-          href={`/forms/${form.file}`}
-          download
-          className="btn-fill inline-flex items-center gap-1.5 bg-brand text-canvas text-[0.82rem] font-semibold px-3.5 py-2 rounded-md transition-colors hover:bg-brand-hover"
-        >
-          <Download size={15} weight="bold" aria-hidden="true" />
-          Download {form.kind}
-        </a>
-        <a
           href={`https://www.${form.source}`}
           target="_blank"
           rel="noopener noreferrer"
+          className="btn-fill inline-flex items-center gap-1.5 bg-brand text-canvas text-[0.82rem] font-semibold px-3.5 py-2 rounded-md transition-colors hover:bg-brand-hover"
+        >
+          <ArrowUpRight size={15} weight="bold" aria-hidden="true" />
+          Open official PDF
+        </a>
+        <a
+          href={`/forms/${form.file}`}
+          download
           className="inline-flex items-center gap-1 text-[0.72rem] text-ink-muted hover:text-brand transition-colors"
         >
-          Source
-          <ArrowUpRight size={12} aria-hidden="true" />
+          Local copy
+          <Download size={12} aria-hidden="true" />
         </a>
       </div>
     </article>

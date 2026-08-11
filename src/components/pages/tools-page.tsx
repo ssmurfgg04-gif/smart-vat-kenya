@@ -264,6 +264,7 @@ export default function ToolsPage() {
           <div className="flex items-center gap-2.5 mb-6"><Calculator size={17} weight="duotone" className="text-brand" aria-hidden="true" /><h2 id="advanced-heading" className="font-display text-[1rem] font-semibold text-ink">More Free KRA Tax Tools</h2></div>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
             {[
+              { href: "/tools/pin-checker/", icon: WarningCircle, label: "KRA PIN Checker", desc: "Verify a Kenyan KRA PIN format and status instantly", badge: "New" },
               { href: "/resources/vat-rates-kenya/", icon: CurrencyCircleDollar, label: "VAT Rates & Calculator Guide", desc: "Standard 16%, zero-rated, exempt — rates and how to apply them" },
               { href: "/resources/vat-vs-turnover-tax/", icon: Scales, label: "VAT vs Turnover Tax", desc: "Decision guide for choosing the right tax regime" },
               { href: "/resources/etims-compliance-checklist/", icon: ListChecks, label: "eTIMS Compliance Checklist", desc: "Daily, monthly, and annual eTIMS obligations" },

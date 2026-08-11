@@ -267,13 +267,6 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="mt-6 flex items-start gap-2.5 text-[0.8rem] text-canvas/65 max-w-[52ch] leading-relaxed">
-              <ShieldCheck size={15} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
-              <p>
-                <strong className="text-canvas">Your KRA PIN is used for your filings only.</strong>{" "}
-                Never shared, never re-used. You receive an official M-PESA receipt for every payment.
-              </p>
-            </div>
           </div>
 
           {/* Stats card */}

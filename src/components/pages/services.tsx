@@ -314,6 +314,43 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Service areas */}
+      <section className="bg-canvas-alt px-6 lg:px-10 py-12" aria-labelledby="areas-heading">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
+            We work with businesses nationwide
+          </p>
+          <h2
+            id="areas-heading"
+            className="font-display text-[clamp(1.4rem,2.5vw,2rem)] font-semibold text-ink tracking-tight mb-6 text-balance"
+          >
+            VAT registration, filing &amp; eTIMS — in Kenya's major cities
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {[
+              { href: "/services/vat-registration-nairobi/", city: "Nairobi", desc: "KRA VAT registration for Nairobi businesses — flat KES 5,000, done in 1–3 working days." },
+              { href: "/services/vat-registration-mombasa/", city: "Mombasa", desc: "VAT registration and filing for Mombasa companies and traders — same flat pricing." },
+              { href: "/services/vat-registration-kisumu/", city: "Kisumu", desc: "VAT registration and filing for Kisumu SMEs — handled end-to-end via WhatsApp." },
+            ].map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="group rounded-lg border border-hairline bg-card p-6 flex flex-col hover:border-ink/15 hover:shadow-sm transition-all"
+              >
+                <h3 className="font-display text-[1.05rem] font-semibold text-ink group-hover:text-brand transition-colors mb-2">
+                  {l.city}
+                </h3>
+                <p className="text-[0.83rem] text-ink-muted leading-relaxed">{l.desc}</p>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-[0.78rem] font-semibold text-brand">
+                  VAT registration in {l.city}
+                  <ArrowRight size={12} weight="bold" aria-hidden="true" />
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Comparison table */}
       <section className="bg-canvas-alt px-6 lg:px-10 py-16" aria-labelledby="compare-heading">
         <div className="max-w-[1400px] mx-auto">

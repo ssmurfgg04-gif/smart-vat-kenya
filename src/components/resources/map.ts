@@ -48,6 +48,7 @@ import {
   KraVatAuditProcess,
   KraVatFilingDeadlineAugust2026,
   KraVatPenaltiesReference,
+  KraDataSources,
   MpesaErrorCodes,
   NilReturnsTaxAmnesty,
   SafaricomNotWorking,
@@ -128,6 +129,7 @@ export const resourceComponents: Record<string, React.ComponentType> = {
   "kra-vat-audit-process": KraVatAuditProcess,
   "kra-vat-filing-deadline-august-2026": KraVatFilingDeadlineAugust2026,
   "kra-vat-penalties-reference": KraVatPenaltiesReference,
+  "kra-data-sources": KraDataSources,
   "mpesa-error-codes": MpesaErrorCodes,
   "nil-returns-tax-amnesty": NilReturnsTaxAmnesty,
   "safaricom-not-working": SafaricomNotWorking,
@@ -164,7 +166,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "cetis-kenya-2027": {
     title: "CETIS Kenya 2027: KRA's Pre-Clearance e-Invoicing — What to Do Now",
-    description: "KRA's Comprehensive Electronic Tax Invoicing System (CETIS) is in procurement for 2027–28. Every invoice validated and signed by KRA before it reaches the buyer. What it means, Uganda's EFRIS lessons, and how to prepare.",
+    description: "KRA's CETIS is in procurement for 2027-28: every invoice validated and signed by KRA before it reaches the buyer. EFRIS lessons and how to prepare.",
     canonical: "/resources/cetis-kenya-2027/",
   },
   "etims-account-locked": {
@@ -173,8 +175,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/etims-account-locked/",
   },
   "etims-can-i-claim-my-expenses": {
-    title: "Fuel, Rent, KPLC & Safaricom eTIMS Receipts — What You Can Claim | Smart VAT Kenya",
-    description: "Can you claim fuel, Safaricom internet, KPLC electricity, rent and M-Pesa payments as business expenses in 2026? The exact eTIMS receipt rules — and the 'wrong obligation ID' fix.",
+    title: "Fuel, Rent, KPLC & Safaricom eTIMS Receipts — What You Can Claim",
+    description: "Can you claim fuel, Safaricom internet, KPLC electricity, rent and M-Pesa payments as business expenses in 2026? The exact eTIMS receipt rules.",
     canonical: "/resources/etims-can-i-claim-my-expenses/",
   },
   "etims-compliance-checklist": {
@@ -183,18 +185,18 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/etims-compliance-checklist/",
   },
   "etims-corporate-client-invoice-requirement": {
-    title: "Client Asking for eTIMS Invoice? The 5-Day Fix for Small Suppliers | Smart VAT Kenya",
-    description: "Corporate clients now demand eTIMS invoices before they pay. Small suppliers are losing accounts over late onboarding — here's why clients insist, and the five-day fix.",
+    title: "Client Asking for eTIMS Invoice? The 5-Day Fix for Small Suppliers",
+    description: "Corporate clients now demand eTIMS invoices before they pay. Small suppliers are losing accounts over late onboarding - here's the five-day fix.",
     canonical: "/resources/etims-corporate-client-invoice-requirement/",
   },
   "etims-down-offline-invoicing": {
     title: "KRA eTIMS Down? Invoice Offline Now — Avoid the 7-Day Lockout",
-    description: "KRA eTIMS down or offline? Keep issuing invoices now, sync when the portal recovers, and avoid the 7-day device lockout and eTIMS penalties (TPA s.86: higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals).",
+    description: "KRA eTIMS down or offline? Keep issuing invoices now, sync when the portal recovers, and avoid the 7-day device lockout and eTIMS penalties.",
     canonical: "/resources/etims-down-offline-invoicing/",
   },
   "etims-fuel-stations": {
     title: "Petrol Station Refusing an eTIMS Receipt? Here's Why and What to Do",
-    description: "KRA made eTIMS mandatory for all fuel stations by June 30, 2025 — most independents still aren't compliant. What to do when a station won't issue an eTIMS receipt, and what it costs station owners who keep delaying.",
+    description: "KRA made eTIMS mandatory for all fuel stations by June 30, 2025. What to do when a station won't issue an eTIMS receipt, and what it costs owners.",
     canonical: "/resources/etims-fuel-stations/",
   },
   "etims-invoice-rejected": {
@@ -224,12 +226,12 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "etims-penalty-50000-per-month-kenya": {
     title: "eTIMS Penalties Kenya — What the Law Actually Provides",
-    description: "eTIMS penalties broken down by legal basis: TPA s.86 (higher of 5% of tax due, KES 100,000 for companies, KES 10,000 for individuals) and TPA s.59A(5) (up to KES 100,000/month for integration failure). Explains why figures like KES 1M/10% or KES 500,000/month are not enacted law.",
+    description: "eTIMS penalties by legal basis: TPA s.86 (5% of tax due, KES 100,000 companies, KES 10,000 individuals) and TPA s.59A(5) integration failure.",
     canonical: "/resources/etims-penalty-50000-per-month-kenya/",
   },
   "etims-what-does-kra-see": {
-    title: "Can KRA See My M-Pesa? eTIMS Monitoring Explained | Smart VAT Kenya",
-    description: "Does eTIMS let KRA spy on your M-Pesa balance, phone or bank account? Here's exactly what KRA can and cannot see through eTIMS in 2026 — and what the nil-return change means for you.",
+    title: "Can KRA See My M-Pesa? eTIMS Monitoring Explained",
+    description: "Does eTIMS let KRA spy on your M-Pesa balance, phone or bank account? Exactly what KRA can and cannot see through eTIMS in 2026.",
     canonical: "/resources/etims-what-does-kra-see/",
   },
   "faq": {
@@ -259,7 +261,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "how-to-file-nil-returns-2026": {
     title: "How to File Nil Returns on KRA iTax Kenya 2026 — Complete Step-by-Step Guide",
-    description: "Complete guide to filing nil returns on KRA iTax for VAT, income tax, and turnover tax. Covers monthly VAT nil returns, annual income tax nil returns for students/unemployed, the new No Obligation PIN status, penalties, and the 2026 tax amnesty programme.",
+    description: "Complete guide to filing nil returns on KRA iTax for VAT, income tax, and turnover tax: monthly nil returns, No Obligation PIN status and penalties.",
     canonical: "/resources/how-to-file-nil-returns-2026/",
   },
   "how-to-file-vat-return-on-itax": {
@@ -289,17 +291,17 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "kra-fine-70000": {
     title: "Got a KRA Fine Around KES 70,000? You May Only Owe the Principal",
-    description: "A KES 70,000 KRA bill is usually late-filing penalties piling up, not tax you own. Check whether the 2026 tax amnesty wipes most of it before you pay a shilling.",
+    description: "A KES 70,000 KRA bill is usually late-filing penalties piling up, not tax you own. Check whether the 2026 tax amnesty wipes most of it.",
     canonical: "/resources/kra-fine-70000/",
   },
   "kra-itax-maintenance-schedule": {
     title: "KRA iTax Maintenance Schedule 2026 — Plan Around Portal Downtime",
-    description: "KRA iTax scheduled maintenance windows for 2026. Learn the typical monthly maintenance patterns, how to check upcoming downtime, and plan your VAT filing to avoid portal outages. Includes historical data and real-time status sources.",
+    description: "KRA iTax scheduled maintenance windows for 2026: typical monthly patterns, how to check downtime, and how to plan VAT filing around outages.",
     canonical: "/resources/kra-itax-maintenance-schedule/",
   },
   "kra-itax-traffic-update": {
     title: "KRA iTax Traffic Update — Real-Time Portal Congestion & Workarounds",
-    description: "Is KRA iTax slow or timing out? Real-time traffic and congestion updates for the iTax portal. Learn why the portal gets congested at deadline time, how to check if it's you or KRA, and proven workarounds to file VAT returns when the system is overwhelmed.",
+    description: "Is KRA iTax slow or timing out? Real-time congestion updates, why the portal gets busy at deadline time, and workarounds to file VAT returns.",
     canonical: "/resources/kra-itax-traffic-update/",
   },
   "kra-penalty-for-late-vat-filing": {
@@ -329,7 +331,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "kra-vat-filing-deadline-august-2026": {
     title: "VAT Deadline Kenya — August 2026 KRA Filing Dates & Penalties",
-    description: "KRA VAT return for July 2026 is due August 20, 2026. Under the VAT Act 2013 every VAT-registered business (KES 5M threshold) must file by the 20th — late filing triggers a 5% penalty plus 1% monthly interest. File on time with our step-by-step guide.",
+    description: "KRA VAT return for July 2026 is due August 20, 2026. Late filing triggers a 5% penalty plus 1% monthly interest. File on time with our guide.",
     canonical: "/resources/kra-vat-filing-deadline-august-2026/",
   },
   "kra-vat-penalties-reference": {
@@ -337,14 +339,19 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     description: "KRA VAT penalties reference table for 2026: late filing (5%), late payment (1%/month), eTIMS non-compliance (KES 50K/mo), and waiver eligibility.",
     canonical: "/resources/kra-vat-penalties-reference/",
   },
+  "kra-data-sources": {
+    title: "KRA Data Sources Kenya — Where to Get Official VAT & Revenue Data",
+    description: "Where analysts source official KRA data: KRA Publications, iKESRA, GavaConnect APIs, openAFRICA, KNBS and National Treasury — free download pages.",
+    canonical: "/resources/kra-data-sources/",
+  },
   "mpesa-error-codes": {
     title: "M-Pesa Error Codes 2026 — Fix MR101, MR105 Fast",
     description: "M-Pesa error codes explained: MR101, MR102, MR105, MR110, 'transaction failed', and PIN-locked. What each means, how to fix it, and paying KRA VAT.",
     canonical: "/resources/mpesa-error-codes/",
   },
   "nil-returns-tax-amnesty": {
-    title: "How to File VAT Nil Returns on KRA iTax Kenya (2026) + Amnesty Guide | vat nil return filing",
-    description: "Step-by-step guide to filing VAT nil returns on KRA iTax Kenya 2026 — monthly VAT nil returns and annual income tax nil returns for students and the unemployed (plus the new No Obligation PIN). Includes how the 2026 tax amnesty wipes late-filing penalties.",
+    title: "How to File VAT Nil Returns on KRA iTax Kenya (2026) + Amnesty Guide",
+    description: "How to file VAT nil returns on KRA iTax Kenya 2026, plus annual income tax nil returns for students and the unemployed, and the 2026 tax amnesty.",
     canonical: "/resources/nil-returns-tax-amnesty/",
   },
   "safaricom-not-working": {
@@ -359,7 +366,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "tax-compliance-certificate-kenya": {
     title: "KRA Tax Compliance Certificate Kenya 2026: Get Your TCC (KRA Clearance Certificate)",
-    description: "How to get your KRA Tax Compliance Certificate (TCC) fast via iTax: requirements, eTIMS rules, nil return blocks, amnesty for old debt, validity, and common rejection reasons.",
+    description: "How to get your KRA Tax Compliance Certificate (TCC) fast via iTax: requirements, eTIMS rules, nil return blocks, amnesty for old debt and validity.",
     canonical: "/resources/tax-compliance-certificate-kenya/",
   },
   "vat-auto-populated-return": {
@@ -429,7 +436,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "vat-threshold-kenya": {
     title: "VAT Threshold Kenya 2026 — The KES 5M Threshold (Is 8M Law?)",
-    description: "Kenya's VAT registration threshold is KES 5 million annual turnover; the proposed KES 8 million in the Finance Act 2025 is not yet in force. Learn who must register, voluntary registration, and late-registration penalties.",
+    description: "Kenya's VAT registration threshold is KES 5 million annual turnover; the proposed KES 8 million is not yet in force. Who must register and penalties.",
     canonical: "/resources/vat-threshold-kenya/",
   },
   "vat-refund-guide-kenya": {
@@ -499,12 +506,12 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "vat-2027-auto-filled-returns": {
     title: "VAT 2027: KRA Pre-Filled Returns Are Coming — Prepare Now",
-    description: "KRA's transition to pre-filled (auto-populated) VAT returns starting January 2027. How eTIMS data and iCMS customs integration will assemble your return automatically.",
+    description: "KRA's transition to pre-filled (auto-populated) VAT returns starting January 2027, and how eTIMS and iCMS data will assemble your return automatically.",
     canonical: "/resources/vat-2027-auto-filled-returns/",
   },
   "etims-penalties-2026": {
     title: "eTIMS Penalties 2026 — Exact Figures From the Law",
-    description: "A definitive legal breakdown of KRA eTIMS penalties under Tax Procedures Act s.86 (as amended by Finance Act 2026) and s.59A(5). Separating statutory law from internet myths.",
+    description: "A legal breakdown of KRA eTIMS penalties under Tax Procedures Act s.86 (as amended by Finance Act 2026) and s.59A(5), separating law from myths.",
     canonical: "/resources/etims-penalties-2026/",
   },
   "vat-refund-audit-defense": {
@@ -514,12 +521,12 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "vat-for-freelancers-creators": {
     title: "VAT for Freelancers & Creators in Kenya 2026",
-    description: "Do digital creators, freelance developers, and remote consultants in Kenya need a KRA PIN and VAT registration? Threshold rules, digital services, and eTIMS compliance.",
+    description: "Do digital creators, freelance developers, and remote consultants in Kenya need a KRA PIN and VAT registration? Threshold rules and eTIMS compliance.",
     canonical: "/resources/vat-for-freelancers-creators/",
   },
   "efris-lessons-pre-clearance": {
     title: "Real-Time Pre-Clearance & E-Invoicing: Lessons from EFRIS and How to Prepare",
-    description: "When tax authorities shift from post-issuance reporting to real-time pre-clearance e-invoicing (like Uganda's EFRIS and upcoming regional models), what breaks in SME POS systems and how to build operational resilience.",
+    description: "What breaks in SME POS systems when tax authorities shift to real-time pre-clearance e-invoicing (like Uganda's EFRIS), and how to prepare.",
     canonical: "/resources/efris-lessons-pre-clearance/",
   },
 }

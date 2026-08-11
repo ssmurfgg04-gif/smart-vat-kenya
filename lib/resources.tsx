@@ -58,6 +58,21 @@ const articles: Resource[] = [
   { slug: "safaricom-not-working", title: "Safaricom Not Working? Status, M-Pesa Fixes & Workarounds" },
   { slug: "kplc-blackout-etims-compliance", title: "KPLC Blackout? Keep Your eTIMS & VAT Compliance Intact" },
   { slug: "mpesa-error-codes", title: "M-Pesa Error Codes 2026 — MR101, MR105 & Fixes" },
+  { slug: "how-to-file-nil-returns-2026", title: "How to File Nil Returns on KRA iTax 2026" },
+  { slug: "etims-can-i-claim-my-expenses", title: "Fuel, Rent & M-Pesa eTIMS Receipts — What You Can Claim" },
+  { slug: "etims-corporate-client-invoice-requirement", title: "Client Asking for eTIMS Invoice? The 5-Day Fix" },
+  { slug: "etims-fuel-stations", title: "Petrol Station Refusing an eTIMS Receipt? What to Do" },
+  { slug: "etims-penalties-2026", title: "eTIMS Penalties 2026 — Exact Figures From the Law" },
+  { slug: "etims-what-does-kra-see", title: "Can KRA See My M-Pesa? eTIMS Monitoring Explained" },
+  { slug: "how-to-register-kra-pin-individual", title: "How to Register a KRA PIN for Individuals" },
+  { slug: "kra-pin-registration-foreigners", title: "KRA PIN Registration for Foreigners in Kenya" },
+  { slug: "vat-for-freelancers-creators", title: "VAT for Freelancers & Creators in Kenya 2026" },
+  { slug: "vat-refund-audit-defense", title: "VAT Refund & Audit Defense in Kenya" },
+  { slug: "efris-lessons-pre-clearance", title: "Real-Time Pre-Clearance & E-Invoicing: EFRIS Lessons" },
+  { slug: "vat-2027-auto-filled-returns", title: "VAT 2027: KRA Pre-Filled Returns Are Coming" },
+  { slug: "kra-portal-vs-service", title: "Register for VAT Yourself or Pay KES 5,000? The Honest Math" },
+  { slug: "vat-deadline-reminders", title: "Free KRA VAT Deadline Reminders on WhatsApp" },
+  { slug: "kra-data-sources", title: "KRA Data Sources — Official VAT & Revenue Data" },
 ]
 
 export function getPrevNext(slug: string) {
