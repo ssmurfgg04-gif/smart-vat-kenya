@@ -488,7 +488,7 @@ export default function ETIMSInvoiceRejectedPage() {
                   Stop wasting time on rejected invoices. Our experts handle your eTIMS invoicing and ensure every single invoice is accepted by KRA. From KES 2,500/month.
                 </p>
                 <a
-                  href="https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20invoicing.%20Please%20help%20me%20sign%20up."
+                  href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20invoicing.%20Please%20help%20me%20sign%20up."
                   target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
@@ -513,7 +513,7 @@ export default function ETIMSInvoiceRejectedPage() {
             We help businesses set up eTIMS, fix invoice rejections, and stay compliant. Message us on WhatsApp for fast support.
           </p>
           <a
-            href="https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20eTIMS"
+            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20eTIMS"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >

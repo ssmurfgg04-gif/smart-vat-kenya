@@ -11,6 +11,7 @@ import {
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 import { RelatedLinks } from "@/components/related-links"
+import { FACTS } from "@/src/lib/vat-facts"
 
 const offerSchema = {
   "@context": "https://schema.org",
@@ -87,7 +88,7 @@ const serviceFaqSchema = {
   })),
 }
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = "https://wa.me/254717344440"
 
 const services = [
   {
@@ -187,6 +188,9 @@ export default function ServicesPage() {
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
             Services &amp; pricing
+          </p>
+          <p className="font-mono text-[0.7rem] text-brand mb-6">
+            Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
             VAT Registration Services Kenya.

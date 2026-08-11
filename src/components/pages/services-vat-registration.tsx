@@ -10,6 +10,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr"
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
+import { FACTS } from "@/src/lib/vat-facts"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -36,7 +37,7 @@ const serviceSchema = {
   provider: { "@type": "Organization", name: "Smart VAT Kenya" },
 }
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = "https://wa.me/254717344440"
 
 const inclusions = [
   "iTax profile update",
@@ -151,6 +152,9 @@ export default function VATRegistrationPage() {
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
             Service
+          </p>
+          <p className="font-mono text-[0.7rem] text-brand mb-6">
+            Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
             VAT Registration Kenya — KES 5,000

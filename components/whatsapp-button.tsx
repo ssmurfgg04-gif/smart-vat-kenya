@@ -1,10 +1,10 @@
 export function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/254721725958?text=Hi%2C%20I%20have%20a%20question%20about%20VAT%20registration%20or%20filing%20in%20Kenya."
+      href="https://wa.me/254717344440?text=Hi%2C%20I%20have%20a%20question%20about%20VAT%20registration%20or%20filing%20in%20Kenya."
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Ask about VAT registration on WhatsApp — +254 721 725 958"
+      aria-label="Ask about VAT registration on WhatsApp — +254 717 344 440"
       className="fixed right-[calc(env(safe-area-inset-right,0px)+1.5rem)] bottom-[calc(env(safe-area-inset-bottom,0px)+1.5rem)] z-50 flex items-center justify-center gap-2.5 min-h-14 min-w-14 bg-[#128C7E] hover:bg-[#0e6d5c] text-white font-semibold text-[0.95rem] px-5 py-4 rounded-full shadow-lg transition-colors active:scale-[0.98]"
     >
       {/* WhatsApp logo SVG */}

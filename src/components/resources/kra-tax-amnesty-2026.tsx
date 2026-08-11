@@ -201,7 +201,7 @@ export default function KRATaxAmnesty2026() {
               <li><strong>Settle principal tax</strong> — Pay the outstanding principal in full once the ledger is correct, or navigate to Payments → Apply Payment Plan (new) to set up instalments</li>
               <li><strong>Confirm waiver</strong> — Once principal is paid, the KRA system automatically applies the waiver. Check your ledger to confirm penalties and interest have been cleared</li>
             </ol>
-            <p className="text-sm text-ink-muted italic mt-2">Note: If you have an ongoing tax dispute, you must pursue KRA's Alternative Dispute Resolution (ADR) framework to settle the principal amount before the amnesty can apply. <strong>Note for August 2026:</strong> KRA has indicated iTax-related issues will be resolved by the end of August 2026. This page will be updated in place once the fix rolls out — check back or <a href="https://wa.me/254721725958?text=I%20need%20help%20with%20the%20KRA%20tax%20amnesty" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2">contact us on WhatsApp</a> for the current status.</p>
+            <p className="text-sm text-ink-muted italic mt-2">Note: If you have an ongoing tax dispute, you must pursue KRA's Alternative Dispute Resolution (ADR) framework to settle the principal amount before the amnesty can apply. <strong>Note for August 2026:</strong> KRA has indicated iTax-related issues will be resolved by the end of August 2026. This page will be updated in place once the fix rolls out — check back or <a href="https://wa.me/254717344440?text=I%20need%20help%20with%20the%20KRA%20tax%20amnesty" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2">contact us on WhatsApp</a> for the current status.</p>
 
             <h2>What the Amnesty Does Not Cover</h2>
             <ul>
@@ -260,7 +260,7 @@ export default function KRATaxAmnesty2026() {
               <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
             </a>
             <a
-              href="https://wa.me/254721725958?text=I%20need%20help%20with%20the%20KRA%20tax%20amnesty%20-%20PRN%20not%20generating"
+              href="https://wa.me/254717344440?text=I%20need%20help%20with%20the%20KRA%20tax%20amnesty%20-%20PRN%20not%20generating"
               target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-brand/30 text-ink text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand/5 transition-colors"
             >

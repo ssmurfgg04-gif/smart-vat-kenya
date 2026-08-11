@@ -14,7 +14,7 @@ const navLinks = [
 ]
 
 const WA_LINK =
-  "https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20VAT%20registration%20or%20filing."
+  "https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT%20registration%20or%20filing."
 
 export function Navbar() {
   const [pathname, setPathname] = useState("/")

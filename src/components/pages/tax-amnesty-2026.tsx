@@ -14,8 +14,9 @@ import {
 } from "@phosphor-icons/react/dist/ssr"
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
+import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = "https://wa.me/254717344440"
 const WA_TEXT = encodeURIComponent("Hi, I'd like a FREE KRA Tax Amnesty ledger check before 31 Dec 2026")
 
 const serviceSchema = {
@@ -177,6 +178,9 @@ export default function TaxAmnesty2026Page() {
 
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
               KRA Tax Amnesty 2026
+            </p>
+            <p className="font-mono text-[0.7rem] text-brand mb-6">
+              Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
             </p>
             <h1 className="font-display text-[clamp(2.2rem,5vw,3.6rem)] font-semibold text-canvas tracking-tight leading-tight mb-5 text-balance">
               KRA is wiping out penalties —{" "}

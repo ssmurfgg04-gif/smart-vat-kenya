@@ -82,7 +82,7 @@ const breadcrumbSchema = {
   ],
 }
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = "https://wa.me/254717344440"
 
 /** Contextual internal links surfaced under the answer of any matching question. */
 const ANSWER_LINKS: { match: RegExp; href: string; label: string }[] = [

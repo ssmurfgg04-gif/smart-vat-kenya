@@ -1,8 +1,9 @@
 import { Download, FileText, ArrowUpRight, ChatCircle, SealCheck } from "@phosphor-icons/react/dist/ssr"
 import { KRA_FORMS } from "@/lib/forms"
+import { FACTS } from "@/src/lib/vat-facts"
 
 const WA_LINK =
-  "https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20the%20iTax%20portal%20or%20eTIMS."
+  "https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20the%20iTax%20portal%20or%20eTIMS."
 
 export default function FormsPage() {
   const vatForms = KRA_FORMS.filter((f) => f.category === "VAT")
@@ -47,6 +48,9 @@ export default function FormsPage() {
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4 flex items-center gap-2">
             <SealCheck size={14} weight="fill" aria-hidden="true" />
             Sourced from kra.go.ke
+          </p>
+          <p className="font-mono text-[0.7rem] text-brand mb-6">
+            Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
             Official KRA VAT Guides &amp; iTax Manuals
@@ -146,7 +150,7 @@ export default function FormsPage() {
               </a>
               . The guides above are the official KRA documents that walk you through each of those
               steps. Need someone to do it for you?{" "}
-              <a href="https://wa.me/254721725958" target="_blank" rel="noopener noreferrer" className="text-brand font-medium hover:underline">
+              <a href="https://wa.me/254717344440" target="_blank" rel="noopener noreferrer" className="text-brand font-medium hover:underline">
                 Talk to us on WhatsApp
               </a>
               .

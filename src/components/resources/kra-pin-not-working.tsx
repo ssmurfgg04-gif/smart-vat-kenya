@@ -494,7 +494,7 @@ export default function KRAPinNotWorkingPage() {
             We help businesses and individuals resolve KRA PIN issues every day. Send us a message and we will guide you through the fix.
           </p>
           <a
-            href="https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20my%20KRA%20PIN"
+            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20my%20KRA%20PIN"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >

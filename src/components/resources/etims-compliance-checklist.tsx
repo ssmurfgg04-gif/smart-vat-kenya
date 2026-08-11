@@ -386,7 +386,7 @@ export default function ETIMSComplianceChecklistPage() {
                 Our team manages your eTIMS invoicing, stock reconciliation, and monthly compliance reporting. No more worrying about KRA audits. From <strong className="text-ink">KES 2,500/month</strong>.
               </p>
               <a
-                href="https://wa.me/254721725958?text=I%20want%20to%20sign%20up%20for%20eTIMS%20managed%20service%20-%20KES%202,500%2Fmonth.%20Please%20send%20me%20the%20next%20steps."
+                href="https://wa.me/254717344440?text=I%20want%20to%20sign%20up%20for%20eTIMS%20managed%20service%20-%20KES%202,500%2Fmonth.%20Please%20send%20me%20the%20next%20steps."
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
               >
@@ -410,7 +410,7 @@ export default function ETIMSComplianceChecklistPage() {
             We help VAT-registered businesses stay eTIMS compliant. Daily invoice management, stock reconciliation, and audit support.
           </p>
           <a
-            href="https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20compliance"
+            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20compliance"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >

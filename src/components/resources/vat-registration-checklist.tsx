@@ -467,7 +467,7 @@ title: "Monthly Filing Calendar Setup",
               </ul>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
-                  href="https://wa.me/254721725958?text=I%20want%20to%20register%20for%20VAT%20in%20Kenya.%20I%20have%20some%20documents%20ready.%20Please%20guide%20me."
+                  href="https://wa.me/254717344440?text=I%20want%20to%20register%20for%20VAT%20in%20Kenya.%20I%20have%20some%20documents%20ready.%20Please%20guide%20me."
                   target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-6 py-3 rounded-md hover:bg-brand-hover transition-colors"
                 >
@@ -490,7 +490,7 @@ title: "Monthly Filing Calendar Setup",
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
-                  href="https://wa.me/254721725958?text=I%20want%20to%20register%20for%20VAT%20-%20KES%205,000%20flat%20fee.%20Please%20send%20me%20the%20next%20steps."
+                  href="https://wa.me/254717344440?text=I%20want%20to%20register%20for%20VAT%20-%20KES%205,000%20flat%20fee.%20Please%20send%20me%20the%20next%20steps."
                   target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-6 py-3 rounded-md hover:bg-brand-hover transition-colors"
                 >
@@ -518,7 +518,7 @@ title: "Monthly Filing Calendar Setup",
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20VAT"
+            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >

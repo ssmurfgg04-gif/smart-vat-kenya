@@ -422,7 +422,7 @@ export default function SmallTaxpayerRegimePage() {
                   <strong className="text-ink">KES 5,000 flat fee</strong> for VAT registration. No hidden costs.
                 </p>
                 <a
-                  href="https://wa.me/254721725958?text=Hi%2C%20I%20want%20to%20find%20out%20which%20tax%20regime%20is%20right%20for%20my%20small%20business."
+                  href="https://wa.me/254717344440?text=Hi%2C%20I%20want%20to%20find%20out%20which%20tax%20regime%20is%20right%20for%20my%20small%20business."
                   target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
@@ -450,7 +450,7 @@ export default function SmallTaxpayerRegimePage() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20VAT"
+            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >

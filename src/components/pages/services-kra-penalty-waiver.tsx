@@ -11,6 +11,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr"
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
+import { FACTS } from "@/src/lib/vat-facts"
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -23,7 +24,7 @@ const serviceSchema = {
   priceRange: "Free check — cleanup at a flat fee",
 }
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = "https://wa.me/254717344440"
 const WA_TEXT = "Hi%2C%20I%20want%20a%20FREE%20KRA%20Tax%20Amnesty%20ledger%20check"
 
 const included = [
@@ -121,6 +122,9 @@ export default function KRAPenaltyWaiverPage() {
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
             KRA Tax Amnesty 2026
+          </p>
+          <p className="font-mono text-[0.7rem] text-brand mb-6">
+            Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4.5vw,3.2rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
             Tax Amnesty Cleanup —{" "}

@@ -249,7 +249,7 @@ export default function VatThresholdKenya() {
               <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
             </a>
             <a
-              href="https://wa.me/254721725958?text=Do%20I%20need%20to%20register%20for%20VAT%3F%20My%20turnover%20is"
+              href="https://wa.me/254717344440?text=Do%20I%20need%20to%20register%20for%20VAT%3F%20My%20turnover%20is"
               target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-brand/30 text-ink text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand/5 transition-colors"
             >

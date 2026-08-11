@@ -10,7 +10,7 @@ export const FACTS = {
   // THRESHOLD — decision tree outcome: KRA + PwC both say 5M operative as of 2026-08-08
   mandatoryThreshold: "KES 5,000,000",
   voluntaryFrom: "KES 5,000,000",
-  thresholdStatus: "KRA official guidance applies KES 5M (verified 2026-08-08); an increase to KES 8M has been reported via Finance Act 2025 commentary. See our explainer: /resources/kra-portal-vs-service/",
+  thresholdStatus: "KRA official guidance applies KES 5M (verified 2026-08-08); an increase to KES 8M has been reported via Finance Act 2025 commentary.",
   thresholdSource: "KRA: kra.go.ke/individual/filing-paying/types-of-taxes/value-added-tax",
 
   filingDeadline: "20th of the following month",
@@ -38,8 +38,8 @@ export const FACTS = {
   },
 
   contact: {
-    whatsappDisplay: "+254 721 725 958",
-    whatsappUrl: "https://wa.me/254721725958",
+    whatsappDisplay: "+254 717 344 440",
+    whatsappUrl: "https://wa.me/254717344440",
     email: "info@smartvatkenya.co.ke",
     address: "Pioneer House, Moi Avenue, Nairobi CBD, Kenya",
   },

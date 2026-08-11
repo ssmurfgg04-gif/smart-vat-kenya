@@ -12,7 +12,6 @@
   Star,
   Briefcase,
   TrendUp,
-  Sparkle,
 } from "@phosphor-icons/react/dist/ssr"
 import { RelatedLinks } from "@/components/related-links"
 import React from "react"
@@ -172,6 +171,20 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
+      {/* ─── AMNESTY BANNER ─── */}
+      <div className="bg-brand px-6 py-2.5">
+        <p className="max-w-[1400px] mx-auto text-center text-[0.8rem] text-canvas font-medium leading-snug">
+          <strong>Most Kenyan businesses don&apos;t know this:</strong> KRA is waiving 100% of pre-2026
+          penalties and interest — but only until 31 Dec 2026.{" "}
+          <a
+            href="/tax-amnesty-2026/"
+            className="underline underline-offset-2 font-semibold hover:opacity-80 whitespace-nowrap"
+          >
+            Check if you qualify &rarr;
+          </a>
+        </p>
+      </div>
+
       {/* ─── HERO ─── */}
       <section className="bg-canvas-dark overflow-hidden relative">
         <div
@@ -189,19 +202,20 @@ export default function HomePage() {
             <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
               Kenya Revenue Authority Registered Agents
             </p>
+            <p className="font-mono text-[0.7rem] text-brand mb-6">
+              Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
+            </p>
             <h1 className="font-display text-[clamp(2.4rem,6vw,4.5rem)] font-semibold leading-[1.05] tracking-tight text-canvas mb-6 text-balance">
-              VAT Registration Services Kenya
-              <span className="text-brand">{" done in 3 days,"}</span>
-              {" not 3 weeks."}
+              Your eTIMS invoice just failed.{" "}
+              <span className="text-brand">Your VAT return is due.</span>
+              {" We handle both — before you have to think about either."}
             </h1>
 
             <p className="text-[1.05rem] text-canvas/80 leading-relaxed max-w-[52ch] mb-3 text-pretty">
-              What does missing one iTax deadline actually cost you?
-              Kenyan SMEs lose KES 10,000 the moment — and the next month
-              it&apos;s another KES 10,000, on top of portal errors you were never warned about. It isn&apos;t
-              that you slipped up: KRA was never built to be your job.
-              <strong className="text-canvas"> That&apos;s ours instead.</strong> We file your
-              registration and monthly returns for a flat fee you know upfront.
+              Rejected invoices. Pending sync. Locked accounts. A VAT registration that&apos;s overdue.
+              Most Kenyan SME owners don&apos;t have one KRA problem — they have three, all at once, and
+              no idea which to fix first. We do. Send us what&apos;s wrong on WhatsApp; we tell you the
+              fix, and if it needs doing, we do it.
             </p>
 
             <div className="mb-8 border border-brand/40 bg-brand/15 rounded-lg px-5 py-4 max-w-[52ch]">
@@ -215,13 +229,21 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
               <a
-                href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20register%20for%20VAT`}
+                href={`${WA_BASE}?text=Hi%2C%20my%20eTIMS%20invoice%20isn%27t%20going%20through`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-fill inline-flex items-center justify-center gap-2 bg-brand text-canvas font-semibold px-6 py-3.5 rounded-md text-sm transition-colors hover:bg-brand-hover"
               >
-                Register for VAT — KES 5,000
+                Fix My eTIMS Issue
                 <ArrowRight size={16} weight="bold" aria-hidden="true" />
+              </a>
+              <a
+                href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20register%20for%20VAT`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 border border-canvas/25 text-canvas/80 hover:text-canvas hover:border-canvas/50 font-medium px-6 py-3.5 rounded-md text-sm transition-colors"
+              >
+                Register for VAT — KES 5,000
               </a>
               <a
                 href="/tools/"
@@ -265,6 +287,7 @@ export default function HomePage() {
             </p>
             <dl className="space-y-6">
               {[
+                { value: "KES 1,500", label: "eTIMS troubleshooting, per incident" },
                 { value: "KES 5,000", label: "One-time VAT registration" },
                 { value: "KES 3,500", label: "Monthly iTax filing" },
                 { value: "1–3 days", label: "Average turnaround" },
@@ -344,14 +367,14 @@ export default function HomePage() {
             Why Kenyan SMEs struggle with VAT
           </p>
           <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-tight text-ink max-w-[40ch] leading-tight mb-4 text-balance">
-            Why VAT registration and iTax filing is hard for Kenyan SME owners.
+            Why eTIMS and iTax filing is hard for Kenyan SME owners.
           </h2>
           <p className="text-[0.9rem] text-ink-muted max-w-[52ch] mb-16 leading-relaxed">
             KRA's{" "}
             <a href="/resources/itax-portal-not-working/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
               portal crashes 2–3 times per week
             </a>
-            . Facilitators quote KES 15,000–30,000.
+            . Rejected invoices and pending-sync errors stall sales. Facilitators quote KES 15,000–30,000.
             Missing the 20th deadline costs KES 10,000 automatically.
           </p>
 
@@ -359,27 +382,27 @@ export default function HomePage() {
             {[
               {
                 number: "01",
-                problem: "The iTax portal keeps returning errors",
-                fix: "We navigate it for you — you send your KRA PIN and details over WhatsApp, we handle the rest. 100% first-attempt success rate.",
+                problem: "Your eTIMS invoice won't go through",
+                fix: "Error 500, pending sync, a locked account — usually mid-sale, with a customer waiting. We diagnose it over WhatsApp and tell you exactly what's wrong, often in minutes.",
                 Icon: WarningCircle,
               },
               {
                 number: "02",
+                problem: "The iTax portal keeps returning errors",
+                fix: "We navigate it for you — you send your KRA PIN and details over WhatsApp, we handle the rest. 100% first-attempt success rate.",
+                Icon: FileText,
+              },
+              {
+                number: "03",
                 problem: "Traditional facilitators quote KES 15,000–30,000",
                 fix: "Our published flat fee is KES 5,000. One price. No discovery calls, no negotiation, no hidden costs.",
                 Icon: CurrencyDollar,
               },
               {
-                number: "03",
+                number: "04",
                 problem: "A single missed deadline costs KES 10,000",
                 fix: "We file before the 20th every month as a matter of process — not a service you have to chase. We file on the 17th.",
                 Icon: Clock,
-              },
-              {
-                number: "04",
-                problem: "eTIMS compliance and the VAT Special Table block your input VAT",
-                fix: "We ensure your VAT registration is eTIMS-ready from day one and flag Special Table supplier risks before they silently cancel your input VAT claims.",
-                Icon: ShieldCheck,
               },
             ].map(({ number, problem, fix, Icon }, i) => (
               <div
@@ -466,21 +489,6 @@ export default function HomePage() {
               <p className="mt-6 text-[0.82rem] text-canvas/85 font-medium">KES 5,000 flat. You get your PIN in 1–3 days.</p>
             </div>
           </div>
-
-          {/* Vs AI */}
-          <div className="mt-10 border border-hairline rounded-lg p-6 flex flex-col sm:flex-row items-start gap-6">
-            <Sparkle size={24} weight="duotone" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
-            <div>
-              <p className="font-display text-[1.05rem] font-semibold text-ink mb-1">
-                What about just asking ChatGPT?
-              </p>
-              <p className="text-[0.9rem] text-ink-muted leading-relaxed">
-                A chatbot can draft a form. It can't log into iTax, navigate the eTIMS check, or file before
-                the 20th — and it won't be accountable if KRA levies a penalty. We do all of it, and we answer
-                for it. That's the difference between advice and a done deal.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -531,8 +539,47 @@ export default function HomePage() {
             KRA VAT services with published prices. No discovery calls required.
           </h2>
 
-          <div className="grid grid-cols-2 lg:grid-cols-[1fr_1fr_340px] gap-4 lg:gap-5">
-            {/* Card 1 — VAT Registration */}
+          <div className="grid grid-cols-2 gap-4 lg:gap-5">
+            {/* Card 1 — eTIMS Rescue */}
+            <article className="bg-canvas-dark rounded-lg p-4 sm:p-8 flex flex-col relative overflow-hidden">
+              <span className="absolute top-0 right-0 font-mono text-[0.6rem] uppercase tracking-widest bg-brand text-canvas px-3 py-1.5 rounded-bl-lg">
+                Most Common
+              </span>
+              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-canvas/65 mb-4">
+                Per incident
+              </p>
+              <h3 className="font-display text-xl font-semibold text-canvas mb-1">eTIMS Troubleshooting &amp; Rescue</h3>
+              <p className="text-[0.85rem] text-canvas/80 mb-6 leading-relaxed">
+                Invoice rejected, account locked, stuck on pending sync — we diagnose it over WhatsApp and fix it, usually same-day.
+              </p>
+              <p className="font-display text-[1.75rem] sm:text-[2.5rem] font-semibold text-canvas leading-none mb-1 tabular-nums">
+                KES 1,500
+              </p>
+              <p className="text-[0.78rem] text-canvas/65 mb-5 sm:mb-8">per incident</p>
+              <ul className="space-y-2.5 flex-1 mb-8" role="list">
+                {[
+                  "Diagnosed over WhatsApp",
+                  "Fixed or escalated same-day",
+                  "Applies whether or not you're VAT-registered",
+                  "M-PESA receipt provided",
+                ].map((f) => (
+                  <li key={f} className="flex items-start gap-2.5 text-[0.85rem] text-canvas/85">
+                    <CheckCircle size={14} weight="fill" className="text-canvas/55 shrink-0 mt-0.5" aria-hidden="true" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={`${WA_BASE}?text=I%20need%20eTIMS%20help`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-fill block text-center bg-brand text-canvas text-sm font-semibold py-3 rounded-md transition-colors hover:bg-brand-hover"
+              >
+                Get eTIMS Help Now
+              </a>
+            </article>
+
+            {/* Card 2 — VAT Registration */}
             <article className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8 flex flex-col">
               <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-4">
                 One-time
@@ -570,22 +617,22 @@ export default function HomePage() {
               </a>
             </article>
 
-            {/* Card 2 — Monthly Filing (featured) */}
-            <article className="bg-canvas-dark rounded-lg p-4 sm:p-8 flex flex-col relative overflow-hidden">
+            {/* Card 3 — Monthly Filing */}
+            <article className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8 flex flex-col relative overflow-hidden">
               <span className="absolute top-0 right-0 font-mono text-[0.6rem] uppercase tracking-widest bg-brand text-canvas px-3 py-1.5 rounded-bl-lg">
                 Most Popular
               </span>
-              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-canvas/65 mb-4">
+              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-4">
                 Recurring
               </p>
-              <h3 className="font-display text-xl font-semibold text-canvas mb-1">Monthly VAT Filing</h3>
-              <p className="text-[0.85rem] text-canvas/80 mb-6 leading-relaxed">
+              <h3 className="font-display text-xl font-semibold text-ink mb-1">Monthly VAT Filing</h3>
+              <p className="text-[0.85rem] text-ink-muted mb-6 leading-relaxed">
                 Filed before the 20th. Every month. Without you having to think about it.
               </p>
-              <p className="font-display text-[1.75rem] sm:text-[2.5rem] font-semibold text-canvas leading-none mb-1 tabular-nums">
+              <p className="font-display text-[1.75rem] sm:text-[2.5rem] font-semibold text-ink leading-none mb-1 tabular-nums">
                 KES 3,500
               </p>
-              <p className="text-[0.78rem] text-canvas/65 mb-5 sm:mb-8">per month</p>
+              <p className="text-[0.78rem] text-ink-muted mb-5 sm:mb-8">per month</p>
               <ul className="space-y-2.5 flex-1 mb-8" role="list">
                 {[
                   "Filed by the 20th — always",
@@ -595,8 +642,8 @@ export default function HomePage() {
                   "Dedicated WhatsApp support",
                   "Monthly confirmation receipt",
                 ].map((f) => (
-                  <li key={f} className="flex items-start gap-2.5 text-[0.85rem] text-canvas/85">
-                    <CheckCircle size={14} weight="fill" className="text-canvas/55 shrink-0 mt-0.5" aria-hidden="true" />
+                  <li key={f} className="flex items-start gap-2.5 text-[0.85rem] text-ink-soft">
+                    <CheckCircle size={14} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
                     {f}
                   </li>
                 ))}
@@ -605,14 +652,14 @@ export default function HomePage() {
                 href={`${WA_BASE}?text=I%20want%20the%20KES%203500%20Monthly%20Filing`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-fill block text-center bg-brand text-canvas text-sm font-semibold py-3 rounded-md transition-colors hover:bg-brand-hover"
+                className="btn-fill block text-center border border-ink text-ink text-sm font-semibold py-3 rounded-md transition-colors hover:bg-ink hover:text-canvas"
               >
                 Start Filing
               </a>
             </article>
 
-            {/* Card 3 — Amnesty Cleanup */}
-            <article className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8 flex flex-col col-span-2 lg:col-span-1 lg:self-start">
+            {/* Card 4 — Amnesty Cleanup */}
+            <article className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8 flex flex-col">
               <p className="font-mono text-[0.65rem] uppercase tracking-widest text-brand mb-4">
                 Ends 31 Dec 2026
               </p>
@@ -871,6 +918,15 @@ export default function HomePage() {
                 </summary>
                 <div className="mt-3 pb-1">
                   <p className="text-[0.875rem] text-ink-muted leading-relaxed">{q.acceptedAnswer.text}</p>
+                  {q.name.includes("5 million or KES 8 million") && (
+                    <a
+                      href="/resources/vat-threshold-kenya/"
+                      className="inline-flex items-center gap-1.5 mt-2.5 text-[0.82rem] font-medium text-brand hover:underline underline-offset-4"
+                    >
+                      Read our complete VAT threshold guide (5M vs 8M)
+                      <ArrowRight size={12} weight="bold" aria-hidden="true" />
+                    </a>
+                  )}
                 </div>
               </details>
             ))}
@@ -949,7 +1005,7 @@ export default function HomePage() {
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
             <a
-              href={`https://wa.me/254721725958?text=Hi%2C%20I%20want%20VAT%20deadline%20reminders%20on%20WhatsApp`}
+              href={`https://wa.me/254717344440?text=Hi%2C%20I%20want%20VAT%20deadline%20reminders%20on%20WhatsApp`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3.5 rounded-md hover:bg-brand-hover transition-colors whitespace-nowrap"
@@ -958,7 +1014,7 @@ export default function HomePage() {
               <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
             </a>
             <a
-              href={`https://wa.me/254721725958?text=Hi%2C%20I%20want%20the%20KES%203500%20Monthly%20VAT%20Filing%20service`}
+              href={`https://wa.me/254717344440?text=Hi%2C%20I%20want%20the%20KES%203500%20Monthly%20VAT%20Filing%20service`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-medium text-ink-muted hover:text-ink transition-colors whitespace-nowrap"

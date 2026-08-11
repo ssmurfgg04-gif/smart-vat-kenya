@@ -66,7 +66,7 @@ const faqSchema = {
   ],
 }
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = "https://wa.me/254717344440"
 
 export default function WhatHappensIfIDontRegisterForVAT() {
   return (

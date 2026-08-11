@@ -711,7 +711,7 @@ export default function ITaxPortalNotWorkingPage() {
                   <strong className="text-ink">KES 3,500/month</strong> and your returns are filed on time, every time.
                 </p>
                 <a
-                  href="https://wa.me/254721725958?text=Hi%2C%20I%20want%20to%20stop%20dealing%20with%20iTax%20errors.%20Please%20help%20me%20sign%20up%20for%20auto-filing%20at%20KES%203%2C500%2Fmonth."
+                  href="https://wa.me/254717344440?text=Hi%2C%20I%20want%20to%20stop%20dealing%20with%20iTax%20errors.%20Please%20help%20me%20sign%20up%20for%20auto-filing%20at%20KES%203%2C500%2Fmonth."
                   target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
@@ -750,7 +750,7 @@ export default function ITaxPortalNotWorkingPage() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20VAT"
+            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >

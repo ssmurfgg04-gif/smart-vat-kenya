@@ -304,7 +304,7 @@ export default function ETIMSOnboardingPage() {
                   Most small businesses should start with eTIMS Lite because it is free and requires no installation. If you outgrow it, KRA allows you to upgrade to eTIMS Client or VSCU later. See our{" "}<a href="/resources/etims-invoicing-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">invoicing guide</a>{" "}for mandatory invoice fields and QR code verification. Smart VAT Kenya can help you choose the right solution and complete the registration.
                 </p>
               <a
-                href="https://wa.me/254721725958?text=I%20need%20help%20choosing%20the%20right%20eTIMS%20solution%20for%20my%20business"
+                href="https://wa.me/254717344440?text=I%20need%20help%20choosing%20the%20right%20eTIMS%20solution%20for%20my%20business"
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
               >
@@ -391,7 +391,7 @@ export default function ETIMSOnboardingPage() {
                 Smart VAT Kenya handles eTIMS onboarding as part of our VAT registration package (KES 5,000 flat fee). If you already have a VAT PIN, we offer standalone eTIMS onboarding at a competitive rate. We identify the right solution, complete your iTax application, and walk you through your first invoice.
               </p>
               <a
-                href="https://wa.me/254721725958?text=I%20need%20help%20with%20eTIMS%20onboarding%20for%20my%20business"
+                href="https://wa.me/254717344440?text=I%20need%20help%20with%20eTIMS%20onboarding%20for%20my%20business"
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
               >
@@ -678,7 +678,7 @@ export default function ETIMSOnboardingPage() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20VAT"
+            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >

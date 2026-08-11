@@ -326,7 +326,7 @@ export default function VatLabourOutsourcingPage() {
             <p className="text-[0.83rem] text-ink-muted mb-3">
               Our KRA-registered agents can review your contracts, update your invoicing templates, and ensure you benefit from the new disbursement treatment. From KES 3,500/month for monthly filing support.
             </p>
-            <a href="https://wa.me/254721725958?text=I%20need%20help%20with%20VAT%20on%20labour%20outsourcing%20under%20the%20Finance%20Act%202026"
+            <a href="https://wa.me/254717344440?text=I%20need%20help%20with%20VAT%20on%20labour%20outsourcing%20under%20the%20Finance%20Act%202026"
               target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-4 py-2.5 rounded-md hover:bg-brand-hover transition-colors">
               Chat on WhatsApp <ArrowRight size={14} weight="bold" aria-hidden="true" />
@@ -385,7 +385,7 @@ export default function VatLabourOutsourcingPage() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20VAT"
+            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >

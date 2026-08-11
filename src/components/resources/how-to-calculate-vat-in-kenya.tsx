@@ -415,7 +415,7 @@ export default function HowToCalculateVATPage() {
               </a>
 
               <a
-                href="https://wa.me/254721725958?text=I%20need%20help%20calculating%20VAT%20for%20my%20Kenya%20business"
+                href="https://wa.me/254717344440?text=I%20need%20help%20calculating%20VAT%20for%20my%20Kenya%20business"
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 border-2 border-brand text-ink font-semibold text-sm px-6 py-3 rounded-md hover:bg-brand/10 transition-colors"
               >
@@ -440,7 +440,7 @@ export default function HowToCalculateVATPage() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20VAT"
+            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >

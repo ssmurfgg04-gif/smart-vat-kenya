@@ -2,7 +2,7 @@ import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-ico
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
   "@context": "https://schema.org",

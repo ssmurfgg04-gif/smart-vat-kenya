@@ -20,8 +20,9 @@ import {
 } from "@phosphor-icons/react/dist/ssr"
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
+import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = "https://wa.me/254717344440"
 const WA_TEXT = "Hi%2C%20I%20need%20help%20with%20eTIMS%20onboarding"
 
 const includedItems = [
@@ -184,6 +185,9 @@ export default function ETIMSOnboardingPage() {
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
             Service
+          </p>
+          <p className="font-mono text-[0.7rem] text-brand mb-6">
+            Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
             eTIMS Onboarding Kenya.{" "}

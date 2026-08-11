@@ -3,8 +3,9 @@
 import { useState } from "react"
 import { ArrowRight, Calculator, Info, WarningCircle, Question, Wrench, ClipboardText, CurrencyCircleDollar, Scales, ListChecks, HandCoins } from "@phosphor-icons/react/dist/ssr"
 import { EtimsPenaltyCalculator } from "@/src/components/pages/etims-penalty-calculator"
+import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = "https://wa.me/254717344440"
 
 function formatKES(n: number) {
   return "KES " + n.toLocaleString("en-KE", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
@@ -90,6 +91,9 @@ export default function ToolsPage() {
       <div className="bg-canvas-dark px-6 lg:px-10 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">Free tools — no sign-up required</p>
+          <p className="font-mono text-[0.7rem] text-brand mb-6">
+            Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
+          </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">Free Kenya Tax Tools — Calculators, Checklists &amp; Guides</h1>
           <p className="text-[0.95rem] text-canvas/70 max-w-[60ch] leading-relaxed">VAT calculator, PAYE salary calculator, KRA penalty calculator for all 6 tax regimes, eTIMS penalty calculator, amnesty savings calculator, withholding tax calculator, eTIMS checklist, and more — all free, no sign-up required.</p>
         </div>

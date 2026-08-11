@@ -8,6 +8,7 @@ import {
   Clock,
   CurrencyDollar,
 } from "@phosphor-icons/react/dist/ssr"
+import { FACTS } from "@/src/lib/vat-facts"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -127,6 +128,9 @@ export default function HowItWorksPage() {
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
             Process
           </p>
+          <p className="font-mono text-[0.7rem] text-brand mb-6">
+            Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
+          </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
             Three steps. Zero portal headaches.
           </h1>
@@ -212,7 +216,7 @@ export default function HowItWorksPage() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a
-              href="https://wa.me/254721725958?text=Hi%2C%20I%20want%20to%20get%20started%20with%20Smart%20VAT%20Kenya."
+              href="https://wa.me/254717344440?text=Hi%2C%20I%20want%20to%20get%20started%20with%20Smart%20VAT%20Kenya."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"

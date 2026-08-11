@@ -12,6 +12,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr"
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
+import { FACTS } from "@/src/lib/vat-facts"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -36,7 +37,7 @@ const localBusinessSchema = {
   description:
     "Professional VAT registration services in Nairobi — KES 5,000 flat fee. KRA iTax registration, eTIMS guidance, and monthly VAT filing.",
   url: "https://smartvatkenya.co.ke/services/vat-registration-nairobi",
-  telephone: "+254721725958",
+  telephone: "+254717344440",
   email: "info@smartvatkenya.co.ke",
   areaServed: [
     "Nairobi CBD",
@@ -131,7 +132,7 @@ const faqSchema = {
   ],
 }
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = "https://wa.me/254717344440"
 const WA_TEXT = "Hi%2C%20I%20need%20VAT%20registration%20in%20Nairobi"
 
 const serviceSchema = {
@@ -272,6 +273,9 @@ export default function VATRegistrationNairobiPage() {
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
             VAT registration — Nairobi
+          </p>
+          <p className="font-mono text-[0.7rem] text-brand mb-6">
+            Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
             VAT Registration Services Nairobi — KES 5,000

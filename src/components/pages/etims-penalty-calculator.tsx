@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { ArrowRight, Info, WarningCircle, Scales, HandCoins, ListChecks } from "@phosphor-icons/react/dist/ssr"
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = "https://wa.me/254717344440"
 
 function formatKES(n: number) {
   return "KES " + Math.round(n).toLocaleString("en-KE")

@@ -429,7 +429,7 @@ export default function KraStatusCode500Page() {
                   <strong className="text-ink">KES 3,500/month</strong>, filed before the 20th, every month.
                 </p>
                 <a
-                  href="https://wa.me/254721725958?text=Hi%2C%20I%20want%20to%20stop%20dealing%20with%20iTax%20Error%20500.%20Please%20help%20me%20sign%20up%20for%20auto-filing."
+                  href="https://wa.me/254717344440?text=Hi%2C%20I%20want%20to%20stop%20dealing%20with%20iTax%20Error%20500.%20Please%20help%20me%20sign%20up%20for%20auto-filing."
                   target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
@@ -457,7 +457,7 @@ export default function KraStatusCode500Page() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254721725958?text=Hi%2C%20I%20need%20help%20with%20VAT"
+            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >

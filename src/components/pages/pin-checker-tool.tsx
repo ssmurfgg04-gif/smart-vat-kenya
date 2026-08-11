@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { ArrowRight, CheckCircle, ShieldCheck, MagnifyingGlass, Warning } from "@phosphor-icons/react/dist/ssr"
+import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = "https://wa.me/254717344440"
 
 export default function PinCheckerTool() {
   const [pin, setPin] = useState("")
@@ -41,6 +42,9 @@ export default function PinCheckerTool() {
         </h1>
         <p className="text-ink-muted text-base max-w-xl mx-auto leading-relaxed">
           Verify any Kenyan individual or corporate KRA PIN instantly. Ensure supplier and client PINs are valid before issuing eTIMS invoices or claiming input VAT.
+        </p>
+        <p className="font-mono text-[0.7rem] text-brand mt-4">
+          Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
         </p>
       </div>
 

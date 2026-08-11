@@ -237,7 +237,7 @@ export default function EtimsCorporateClientInvoiceRequirement() {
           </ul>
           <div className="flex flex-wrap gap-3">
             <a
-              href="https://wa.me/254721725958?text=Hi%2C%20my%20client%20is%20asking%20for%20eTIMS%20invoices.%20I%20need%20help."
+              href="https://wa.me/254717344440?text=Hi%2C%20my%20client%20is%20asking%20for%20eTIMS%20invoices.%20I%20need%20help."
               target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
             >

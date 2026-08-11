@@ -250,7 +250,7 @@ export default function EtimsCanIClaimMyExpenses() {
               eTIMS Onboarding
             </a>
             <a
-              href="https://wa.me/254721725958?text=Hi%2C%20I%20want%20my%20business%20receipts%20reviewed"
+              href="https://wa.me/254717344440?text=Hi%2C%20I%20want%20my%20business%20receipts%20reviewed"
               target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
             >

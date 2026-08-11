@@ -13,7 +13,7 @@ export function StatusBanner({
     day: "numeric",
   }),
   status = "unknown",
-  whatsappNumber = "254721725958",
+  whatsappNumber = "254717344440",
 }: StatusBannerProps) {
   const statusConfig = {
     operational: {

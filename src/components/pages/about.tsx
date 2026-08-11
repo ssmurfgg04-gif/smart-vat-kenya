@@ -1,7 +1,8 @@
 ﻿import { ArrowRight, ChatCircle, ShieldCheck, MapPin, LockKey, CheckCircle, Clock, Star } from "@phosphor-icons/react/dist/ssr"
 import { RelatedLinks } from "@/components/related-links"
+import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = "https://wa.me/254717344440"
 
 const team = [
   {
@@ -52,6 +53,9 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto">
           <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
             About Smart VAT Kenya
+          </p>
+          <p className="font-mono text-[0.7rem] text-brand mb-6">
+            Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4.5vw,3.4rem)] font-semibold leading-tight tracking-tight text-canvas mb-6 text-balance">
             The first client who paid us wasn't registering for VAT. She was registering to stop lying awake at 3am.

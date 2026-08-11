@@ -203,7 +203,7 @@ export default function CetisKenya2027() {
                     enough that <em>when</em> it does, nothing you send gets rejected. That is a
                     discipline today — not a panic in 2028. Need a compliance check on how your
                     invoices and eTIMS setup look right now?{" "}
-                    <a href="https://wa.me/254721725958?text=Hi%2C%20I%20want%20a%20CETIS-readiness%20check" target="_blank" rel="noopener noreferrer" className="text-brand font-semibold underline underline-offset-2 hover:text-brand-hover">
+                    <a href="https://wa.me/254717344440?text=Hi%2C%20I%20want%20a%20CETIS-readiness%20check" target="_blank" rel="noopener noreferrer" className="text-brand font-semibold underline underline-offset-2 hover:text-brand-hover">
                       Message us on WhatsApp
                     </a>{" "}
                     and we&apos;ll review your position.

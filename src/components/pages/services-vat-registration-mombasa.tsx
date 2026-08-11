@@ -13,8 +13,9 @@ import {
 } from "@phosphor-icons/react/dist/ssr"
 import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
+import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = "https://wa.me/254717344440"
 const WA_TEXT = "Hi%2C%20I%20need%20VAT%20registration%20in%20Mombasa"
 
 const breadcrumbSchema = {
@@ -40,7 +41,7 @@ const localBusinessSchema = {
   description:
     "Remote VAT registration services for Mombasa businesses. KES 5,000 flat fee. WhatsApp-based service covering Mombasa CBD, Nyali, Bamburi, Changamwe, and all Mombasa County.",
   url: "https://smartvatkenya.co.ke/services/vat-registration-mombasa",
-  telephone: "+254721725958",
+  telephone: "+254717344440",
   email: "info@smartvatkenya.co.ke",
   areaServed: [
     { "@type": "City", name: "Mombasa" },
@@ -55,7 +56,7 @@ const localBusinessSchema = {
     addressCountry: "KE",
   },
   priceRange: "KES 5,000",
-  sameAs: ["https://wa.me/254721725958"],
+  sameAs: ["https://wa.me/254717344440"],
 }
 
 const serviceSchema = {
@@ -250,6 +251,9 @@ export default function VATRegistrationMombasaPage() {
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
             Mombasa service
+          </p>
+          <p className="font-mono text-[0.7rem] text-brand mb-6">
+            Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
             VAT Registration Services Mombasa — KES 5,000

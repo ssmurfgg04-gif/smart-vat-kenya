@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle, Handshake, ShieldCheck, CurrencyDollar } from "@phosphor-icons/react/dist/ssr"
+import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254721725958"
+const WA_BASE = "https://wa.me/254717344440"
 
 export default function PartnersPage() {
   return (
@@ -14,6 +15,9 @@ export default function PartnersPage() {
         </h1>
         <p className="text-ink-muted text-lg leading-relaxed">
           You're an accountant or cyber cafe owner with dozens of clients. KRA now requires eTIMS for all of them, and the iTax portal crashes on deadline night. You don't want to become iTax support staff. We already are.
+        </p>
+        <p className="font-mono text-[0.7rem] text-brand mt-4">
+          Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
         </p>
       </div>
 
