@@ -197,7 +197,7 @@ export default function HomePage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pt-12 pb-12 lg:pt-14 lg:pb-16 grid gap-10 lg:gap-20 lg:grid-cols-[1fr_420px] items-start">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pt-6 pb-12 lg:pt-8 lg:pb-16 grid gap-10 lg:gap-20 lg:grid-cols-[1fr_420px] items-start">
           <div>
             <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
               Kenya Revenue Authority Registered Agents
@@ -227,7 +227,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 mb-8">
+            <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
               <a
                 href={`${WA_BASE}?text=Hi%2C%20my%20eTIMS%20invoice%20isn%27t%20going%20through`}
                 target="_blank"
@@ -238,19 +238,11 @@ export default function HomePage() {
                 <ArrowRight size={16} weight="bold" aria-hidden="true" />
               </a>
               <a
-                href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20register%20for%20VAT`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 border border-canvas/25 text-canvas/80 hover:text-canvas hover:border-canvas/50 font-medium px-6 py-3.5 rounded-md text-sm transition-colors"
-              >
-                Register for VAT — KES 5,000
-              </a>
-              <a
                 href="/tools/"
-                className="inline-flex items-center justify-center gap-2 border border-canvas/25 text-canvas/80 hover:text-canvas hover:border-canvas/50 font-medium px-6 py-3.5 rounded-md text-sm transition-colors"
+                className="inline-flex items-center gap-2 text-[0.92rem] font-medium text-canvas/75 hover:text-canvas underline underline-offset-4 transition-colors"
               >
-                <Calculator size={16} aria-hidden="true" />
-                Free VAT Calculator
+                <Calculator size={15} aria-hidden="true" />
+                Calculate VAT
               </a>
             </div>
 
