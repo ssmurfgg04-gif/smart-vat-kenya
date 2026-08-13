@@ -134,7 +134,7 @@ export default function NilReturnsTaxAmnestyPage() {
             Guide &middot; 8 min read
           </p>
           <h1 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-semibold tracking-tight text-ink leading-tight mb-4 text-balance">
-            How to File VAT Nil Returns on KRA iTax Kenya (2026) — and Take Advantage of the Tax Amnesty Programme | vat nil return filing
+            How to File VAT Nil Returns on KRA iTax (2026)
           </h1>
           <p className="text-[0.92rem] text-ink-muted leading-relaxed max-w-[58ch]">
             Nil returns are the most misunderstood part of Kenya VAT compliance. File them wrong

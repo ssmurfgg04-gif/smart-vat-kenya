@@ -11,4 +11,16 @@
   # clear the "Runtime" field (currently set to Next.js).
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
+# Hashed static assets (Astro emits into /_astro/ with content hashes) can be cached forever.
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Pagefind search index assets are content hashed on build too.
+[[headers]]
+  for = "/_pagefind/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 # redeploy-trigger: 2026-08-04T14:28:00Z - Force Netlify to rebuild main with latest changes

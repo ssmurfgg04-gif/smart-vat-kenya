@@ -58,7 +58,7 @@ export default function AboutPage() {
             Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4.5vw,3.4rem)] font-semibold leading-tight tracking-tight text-canvas mb-6 text-balance">
-            The first client who paid us wasn't registering for VAT. She was registering to stop lying awake at 3am.
+            The first client paid us to stop lying awake at 3am.
           </h1>
           <p className="text-[1rem] text-canvas/75 leading-relaxed max-w-[54ch] text-pretty">
             She had a letter from KRA in her bag and zero idea what a 'Special Table' was. 

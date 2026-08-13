@@ -160,12 +160,12 @@ export const resourceComponents: Record<string, React.ComponentType> = {
 
 export const resourceMeta: Record<string, ResourceMeta> = {
   "do-i-need-to-register-for-vat-kenya": {
-    title: "Do I Need to Register for VAT Kenya? Threshold & Rules 2026",
+    title: "Do I Need to Register for VAT in Kenya?",
     description: "Unsure if your business needs VAT registration? Learn the KES 5M threshold, penalties for late registration, and how to check your obligation.",
     canonical: "/resources/do-i-need-to-register-for-vat-kenya/",
   },
   "cetis-kenya-2027": {
-    title: "CETIS Kenya 2027: KRA's Pre-Clearance e-Invoicing — What to Do Now",
+    title: "CETIS 2027: Pre-Clearance e-Invoicing Overview",
     description: "KRA's CETIS is in procurement for 2027-28: every invoice validated and signed by KRA before it reaches the buyer. EFRIS lessons and how to prepare.",
     canonical: "/resources/cetis-kenya-2027/",
   },
@@ -180,7 +180,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/etims-can-i-claim-my-expenses/",
   },
   "etims-compliance-checklist": {
-    title: "eTIMS Compliance Checklist Kenya 2026 — Daily & Monthly",
+    title: "eTIMS Compliance Checklist Kenya 2026",
     description: "KRA eTIMS compliance checklist covering daily sales uploads, device maintenance, invoice issuance, and stock reconciliation. Audit-ready in 10 minutes.",
     canonical: "/resources/etims-compliance-checklist/",
   },
@@ -215,7 +215,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/etims-invoicing-guide/",
   },
   "etims-onboarding-guide": {
-    title: "eTIMS Onboarding Guide Kenya 2026: Register Step by Step",
+    title: "eTIMS Onboarding Guide Kenya 2026",
     description: "Step-by-step eTIMS registration guide for Kenyan businesses. How to get your ECD device, upload stock, and start issuing compliant invoices.",
     canonical: "/resources/etims-onboarding-guide/",
   },
