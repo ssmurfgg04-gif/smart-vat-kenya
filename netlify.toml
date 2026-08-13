@@ -5,5 +5,10 @@
 [build.environment]
   # Astro 7 requires Node >= 22.12.0 (older pinned 18 caused builds to fail)
   NODE_VERSION = "22"
+  # Site is Astro, not Next.js — skip the auto-installed @netlify/plugin-nextjs
+  # (a stale "Next.js" Runtime in the Netlify UI caused failed deploys).
+  # Permanent fix: Project configuration → Build & deploy → Build settings →
+  # clear the "Runtime" field (currently set to Next.js).
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 # redeploy-trigger: 2026-08-04T14:28:00Z - Force Netlify to rebuild main with latest changes
