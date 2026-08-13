@@ -177,64 +177,52 @@ export default function HomePage() {
 
       {/* ─── HERO ─── */}
       <section className="bg-white overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-12 lg:pt-14 pb-14 lg:pb-16">
-          <div className="grid lg:grid-cols-[1fr_minmax(0,460px)] gap-12 lg:gap-16 items-center">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-8 lg:pt-10 pb-10 lg:pb-12">
+          <div className="grid lg:grid-cols-[1fr_minmax(0,460px)] gap-10 lg:gap-14 items-center">
             <div className="max-w-[560px]">
-              <p className="font-mono text-[0.7rem] font-semibold text-blue-600 mb-5 inline-flex items-center gap-2">
+              <p className="font-mono text-[0.7rem] font-semibold text-blue-600 mb-4 inline-flex items-center gap-2">
                 <ShieldCheck size={14} weight="bold" aria-hidden="true" />
                 Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
               </p>
 
-              <h1 className="font-display text-[2.1rem] sm:text-[2.6rem] lg:text-[3.05rem] font-bold leading-[1.1] tracking-tight text-[#14243e] mb-6 text-balance">
+              <h1 className="font-display text-[1.95rem] sm:text-[2.35rem] lg:text-[2.85rem] font-bold leading-[1.08] tracking-tight text-[#14243e] mb-2 text-balance">
               Your eTIMS invoice just failed.
               <span className="block text-red-600">Your VAT return is due.</span>
-              <span className="block text-[#14243e]">We handle both — before you have to think about either.</span>
             </h1>
+              <p className="text-[1.02rem] lg:text-[1.12rem] font-medium text-[#3f4f68] leading-snug mb-5">
+              We handle both before you have to think about either.
+            </p>
 
-            <div className="text-[0.95rem] leading-relaxed text-[#3f4f68] space-y-2.5 mb-7 max-w-[54ch]">
-              <p>
-                <span className="font-semibold text-red-600">Rejected invoices. Pending sync. Locked accounts.</span>{" "}
-                A VAT registration that&apos;s overdue.
-              </p>
-              <p>
-                Most Kenyan SME owners don&apos;t have one KRA problem — they have three, all at once, and
-                no idea which to fix first. We do.
-              </p>
-              <p>
-                Send us what&apos;s wrong on WhatsApp; we tell you the fix, and if it needs doing, we do it.
-              </p>
-            </div>
+            <p className="text-[0.92rem] leading-relaxed text-[#3f4f68] mb-5 max-w-[54ch]">
+              <span className="font-semibold text-red-600">Rejected invoices. Pending sync. Locked accounts.</span>{" "}
+              An overdue VAT registration. Send us what&apos;s wrong on WhatsApp and we tell you the fix. If it
+              needs doing, we do it.
+            </p>
 
             {/* 17th Guarantee */}
-            <div className="flex gap-4 items-start rounded-xl border border-red-200 bg-red-50/70 p-4 mb-8 max-w-[54ch]">
-              <span className="font-display shrink-0 rounded-lg bg-red-600 text-white text-[0.85rem] font-bold px-2.5 py-1.5 leading-none mt-0.5">
+            <div className="flex items-center gap-3 rounded-lg border border-red-200 bg-red-50/70 px-4 py-2.5 mb-6 max-w-[54ch]">
+              <span className="font-display shrink-0 rounded-md bg-red-600 text-white text-[0.75rem] font-bold px-2 py-1 leading-none">
                 17th
               </span>
-              <div>
-                <p className="font-display text-[0.95rem] font-semibold text-[#14243e] mb-1">
-                  The 17th Guarantee
-                </p>
-                <p className="text-[0.85rem] text-[#3f4f68] leading-relaxed">
-                  Every return is filed on the 17th — three working days before KRA&apos;s deadline. If KRA
-                  ever rejects a return you&apos;ve sent us, we fix it and resubmit at no extra cost. Every
-                  return is reviewed by a person before it goes out.
-                </p>
-              </div>
+              <p className="text-[0.8rem] text-[#3f4f68] leading-snug">
+                <strong className="text-[#14243e]">The 17th Guarantee:</strong> every return is filed three
+                working days before KRA&apos;s deadline. If KRA rejects one, we fix it and resubmit free.
+              </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row items-center gap-4 mb-5">
               <a
                 href={`${WA_BASE}?text=Hi%2C%20my%20eTIMS%20invoice%20isn%27t%20going%20through`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold px-7 py-4 rounded-lg text-[0.95rem] shadow-sm transition-colors"
+                className="inline-flex items-center justify-center gap-2.5 w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3.5 rounded-lg text-[0.95rem] shadow-sm transition-colors"
               >
                 Fix My eTIMS Issue
                 <ArrowRight size={17} weight="bold" aria-hidden="true" />
               </a>
               <a
                 href="/tools/"
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto border border-blue-700 text-blue-700 hover:bg-blue-50 font-semibold px-7 py-4 rounded-lg text-[0.95rem] transition-colors"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto border border-blue-700 text-blue-700 hover:bg-blue-50 font-semibold px-6 py-3.5 rounded-lg text-[0.95rem] transition-colors"
               >
                 <Calculator size={17} aria-hidden="true" />
                 Calculate VAT
@@ -255,10 +243,10 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* RIGHT — problem dashboard */}
+          {/* RIGHT - problem dashboard */}
           <div className="relative w-full max-w-[460px] mx-auto lg:mx-0 lg:justify-self-end">
             <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_24px_60px_-24px_rgba(15,32,70,0.35)] overflow-hidden">
-              <div className="flex items-center justify-between px-5 py-4 border-b border-slate-100">
+              <div className="flex items-center justify-between px-5 py-3 border-b border-slate-100">
                 <div className="flex items-center gap-2.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-blue-600" aria-hidden="true" />
                   <p className="font-display text-[0.95rem] font-semibold text-[#14243e]">
@@ -272,7 +260,7 @@ export default function HomePage() {
               </div>
 
               <div className="divide-y divide-slate-100">
-                <div className="flex items-center gap-4 px-5 py-4">
+                <div className="flex items-center gap-4 px-5 py-3.5">
                   <span className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
                     <Invoice size={20} weight="bold" aria-hidden="true" />
                   </span>
@@ -285,7 +273,7 @@ export default function HomePage() {
                   </span>
                 </div>
 
-                <div className="flex items-center gap-4 px-5 py-4">
+                <div className="flex items-center gap-4 px-5 py-3.5">
                   <span className="w-10 h-10 rounded-lg bg-red-50 text-red-600 flex items-center justify-center shrink-0">
                     <FileText size={20} weight="bold" aria-hidden="true" />
                   </span>
@@ -301,7 +289,7 @@ export default function HomePage() {
                   </span>
                 </div>
 
-                <div className="flex items-center gap-4 px-5 py-4">
+                <div className="flex items-center gap-4 px-5 py-3.5">
                   <span className="w-10 h-10 rounded-lg bg-slate-100 text-[#3f4f68] flex items-center justify-center shrink-0">
                     <ArrowsClockwise size={20} weight="bold" aria-hidden="true" />
                   </span>
@@ -329,7 +317,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── TRUST SECTION ─── */}
-        <section className="bg-[#0f1f3d] px-6 lg:px-10 py-10" aria-label="Why businesses trust Smart VAT Kenya">
+        <section className="bg-[#0f1f3d] px-6 lg:px-10 py-8" aria-label="Why businesses trust Smart VAT Kenya">
           <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6">
             {[
               { Icon: Lightning, title: "Fast Resolution", body: "Most issues fixed in under 24 hours." },
