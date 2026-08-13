@@ -1,13 +1,17 @@
 ﻿import {
   ArrowRight,
+  ArrowsClockwise,
   Calculator,
   ChatCircle,
   CheckCircle,
   Clock,
   CurrencyDollar,
   FileText,
+  Invoice,
+  Lightning,
   Prohibit,
   ShieldCheck,
+  UsersThree,
   WarningCircle,
   Star,
   Briefcase,
@@ -172,102 +176,177 @@ export default function HomePage() {
       />
 
       {/* ─── HERO ─── */}
-      <section className="bg-canvas-dark overflow-hidden relative">
-        <div
-          className="absolute inset-0 pointer-events-none z-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(#dedad2 1px, transparent 1px), linear-gradient(to right, #dedad2 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-          }}
-          aria-hidden="true"
-        />
+      <section className="bg-white overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-12 lg:pt-14 pb-14 lg:pb-16">
+          <div className="grid lg:grid-cols-[1fr_minmax(0,460px)] gap-12 lg:gap-16 items-center">
+            <div className="max-w-[560px]">
+              <p className="font-mono text-[0.7rem] font-semibold text-blue-600 mb-5 inline-flex items-center gap-2">
+                <ShieldCheck size={14} weight="bold" aria-hidden="true" />
+                Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
+              </p>
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 min-h-[calc(100vh-100px)] max-h-screen overflow-hidden flex flex-col justify-between py-8">
-          <div className="flex flex-col justify-center max-w-3xl">
-            <p className="font-mono text-[0.7rem] text-brand mb-4">
-              Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
-            </p>
-            <h1 className="font-display text-3xl lg:text-4xl font-semibold leading-tight tracking-tight text-canvas mb-4 text-balance">
-              Your eTIMS invoice just failed.{" "}
-              <span className="text-brand">Your VAT return is due.</span>
-              {" We handle both — before you have to think about either."}
+              <h1 className="font-display text-[2.1rem] sm:text-[2.6rem] lg:text-[3.05rem] font-bold leading-[1.1] tracking-tight text-[#14243e] mb-6 text-balance">
+              Your eTIMS invoice just failed.
+              <span className="block text-red-600">Your VAT return is due.</span>
+              <span className="block text-[#14243e]">We handle both — before you have to think about either.</span>
             </h1>
 
-            <p className="text-xs lg:text-sm text-canvas/80 leading-relaxed max-w-[52ch] mb-4 text-pretty">
-              Rejected invoices. Pending sync. Locked accounts. A VAT registration that&apos;s overdue.
-              Most Kenyan SME owners don&apos;t have one KRA problem — they have three, all at once, and
-              no idea which to fix first. We do. Send us what&apos;s wrong on WhatsApp; we tell you the
-              fix, and if it needs doing, we do it.
-            </p>
-
-            <div className="mb-6 border border-brand/40 bg-brand/15 rounded-lg p-2.5 max-w-[52ch]">
-              <p className="text-[0.8rem] text-canvas leading-relaxed">
-                <strong className="text-canvas">The 17th Guarantee:</strong> every return is filed
-                on the 17th — three working days before KRA's deadline. If KRA ever rejects a
-                return you've sent us, we fix it and resubmit at no extra cost. Every return is
-                reviewed by a person before it goes out.
+            <div className="text-[0.95rem] leading-relaxed text-[#3f4f68] space-y-2.5 mb-7 max-w-[54ch]">
+              <p>
+                <span className="font-semibold text-red-600">Rejected invoices. Pending sync. Locked accounts.</span>{" "}
+                A VAT registration that&apos;s overdue.
+              </p>
+              <p>
+                Most Kenyan SME owners don&apos;t have one KRA problem — they have three, all at once, and
+                no idea which to fix first. We do.
+              </p>
+              <p>
+                Send us what&apos;s wrong on WhatsApp; we tell you the fix, and if it needs doing, we do it.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
+            {/* 17th Guarantee */}
+            <div className="flex gap-4 items-start rounded-xl border border-red-200 bg-red-50/70 p-4 mb-8 max-w-[54ch]">
+              <span className="font-display shrink-0 rounded-lg bg-red-600 text-white text-[0.85rem] font-bold px-2.5 py-1.5 leading-none mt-0.5">
+                17th
+              </span>
+              <div>
+                <p className="font-display text-[0.95rem] font-semibold text-[#14243e] mb-1">
+                  The 17th Guarantee
+                </p>
+                <p className="text-[0.85rem] text-[#3f4f68] leading-relaxed">
+                  Every return is filed on the 17th — three working days before KRA&apos;s deadline. If KRA
+                  ever rejects a return you&apos;ve sent us, we fix it and resubmit at no extra cost. Every
+                  return is reviewed by a person before it goes out.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
               <a
                 href={`${WA_BASE}?text=Hi%2C%20my%20eTIMS%20invoice%20isn%27t%20going%20through`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-fill inline-flex items-center justify-center gap-2 bg-brand text-canvas font-semibold px-6 py-3.5 rounded-md text-sm transition-colors hover:bg-brand-hover"
+                className="inline-flex items-center justify-center gap-2.5 w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold px-7 py-4 rounded-lg text-[0.95rem] shadow-sm transition-colors"
               >
                 Fix My eTIMS Issue
-                <ArrowRight size={16} weight="bold" aria-hidden="true" />
+                <ArrowRight size={17} weight="bold" aria-hidden="true" />
               </a>
               <a
                 href="/tools/"
-                className="inline-flex items-center gap-2 text-[0.92rem] font-medium text-canvas/75 hover:text-canvas underline underline-offset-4 transition-colors"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto border border-blue-700 text-blue-700 hover:bg-blue-50 font-semibold px-7 py-4 rounded-lg text-[0.95rem] transition-colors"
               >
-                <Calculator size={15} aria-hidden="true" />
+                <Calculator size={17} aria-hidden="true" />
                 Calculate VAT
               </a>
             </div>
 
-            <div className="flex flex-wrap gap-5">
+            <div className="flex flex-wrap gap-x-6 gap-y-3">
               {[
                 { Icon: ShieldCheck, label: "100% iTax Compliant" },
                 { Icon: CurrencyDollar, label: "M-PESA Receipts" },
                 { Icon: Prohibit, label: "No Hidden Fees" },
               ].map(({ Icon, label }) => (
-                <div key={label} className="flex items-center gap-2 text-[0.8rem] text-canvas/65">
-                  <Icon size={14} weight="bold" className="text-brand shrink-0" aria-hidden="true" />
+                <div key={label} className="flex items-center gap-2 text-[0.85rem] font-medium text-[#3f4f68]">
+                  <Icon size={15} weight="bold" className="text-blue-600 shrink-0" aria-hidden="true" />
                   {label}
                 </div>
               ))}
             </div>
           </div>
-        </div>
-        </section>
 
-        {/* ─── AT A GLANCE ─── */}
-        <section className="bg-canvas-dark border-t border-canvas/10 px-6 lg:px-10 py-8" aria-label="Key figures">
-          <div className="max-w-[1400px] mx-auto">
-            <p className="font-mono text-[0.65rem] uppercase tracking-[0.16em] text-canvas/60 mb-6">
-              At a glance
-            </p>
-            <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-7">
-              {[
-                { value: "KES 1,500", label: "eTIMS troubleshooting, per incident" },
-                { value: "KES 5,000", label: "One-time VAT registration" },
-                { value: "KES 3,500", label: "Monthly iTax filing" },
-                { value: "1–3 days", label: "Average turnaround" },
-                { value: "16%", label: "Kenya VAT standard rate 2026" },
-                { value: "17th", label: "We file, not the 20th — never late" },
-              ].map(({ value, label }) => (
-                <div key={label} className="flex flex-col gap-1.5">
-                  <dd className="font-display text-[1.35rem] font-semibold text-canvas leading-none tabular-nums">
-                    {value}
-                  </dd>
-                  <dt className="text-[0.75rem] text-canvas/70 leading-snug">{label}</dt>
+          {/* RIGHT — problem dashboard */}
+          <div className="relative w-full max-w-[460px] mx-auto lg:mx-0 lg:justify-self-end">
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_24px_60px_-24px_rgba(15,32,70,0.35)] overflow-hidden">
+              <div className="flex items-center justify-between px-5 py-4 border-b border-slate-100">
+                <div className="flex items-center gap-2.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-blue-600" aria-hidden="true" />
+                  <p className="font-display text-[0.95rem] font-semibold text-[#14243e]">
+                    SmartVAT Dashboard
+                  </p>
                 </div>
-              ))}
-            </dl>
+                <span className="flex items-center gap-1.5 text-[0.7rem] font-medium text-[#3f4f68]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-500" aria-hidden="true" />
+                  Live
+                </span>
+              </div>
+
+              <div className="divide-y divide-slate-100">
+                <div className="flex items-center gap-4 px-5 py-4">
+                  <span className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                    <Invoice size={20} weight="bold" aria-hidden="true" />
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[0.7rem] font-medium uppercase tracking-wide text-[#3f4f68]">eTIMS Invoice</p>
+                    <p className="text-[0.88rem] font-medium text-[#14243e] truncate">Invalid Tax Details</p>
+                  </div>
+                  <span className="text-[0.7rem] font-bold uppercase tracking-wide bg-red-50 text-red-600 border border-red-200 rounded-md px-2 py-1 shrink-0">
+                    Rejected
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-4 px-5 py-4">
+                  <span className="w-10 h-10 rounded-lg bg-red-50 text-red-600 flex items-center justify-center shrink-0">
+                    <FileText size={20} weight="bold" aria-hidden="true" />
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[0.7rem] font-medium uppercase tracking-wide text-[#3f4f68]">VAT Returns</p>
+                    <p className="text-[0.88rem] font-medium text-[#14243e]">Aug 2026</p>
+                  </div>
+                  <span className="text-[0.7rem] font-bold uppercase tracking-wide bg-red-50 text-red-600 border border-red-200 rounded-md px-2 py-1 shrink-0">
+                    Due
+                  </span>
+                  <span className="text-[0.75rem] font-semibold text-white bg-blue-600 rounded-md px-3 py-2 shrink-0">
+                    File Now
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-4 px-5 py-4">
+                  <span className="w-10 h-10 rounded-lg bg-slate-100 text-[#3f4f68] flex items-center justify-center shrink-0">
+                    <ArrowsClockwise size={20} weight="bold" aria-hidden="true" />
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[0.7rem] font-medium uppercase tracking-wide text-[#3f4f68]">KRA Sync</p>
+                    <p className="text-[0.88rem] font-semibold text-red-600">Sync Failed</p>
+                  </div>
+                  <span className="text-[0.75rem] font-semibold text-white bg-red-600 rounded-md px-3 py-2 shrink-0">
+                    Retry Sync
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Amnesty badge */}
+            <div className="absolute -top-9 -right-3 sm:-right-6 w-32 h-32 rounded-full bg-red-600 text-white flex flex-col items-center justify-center text-center shadow-[0_12px_30px_-8px_rgba(220,38,38,0.55)] rotate-6 ring-4 ring-white">
+              <p className="text-[0.55rem] font-semibold uppercase tracking-[0.14em] leading-tight">KRA Penalty</p>
+              <p className="text-[0.65rem] font-bold leading-tight mt-0.5">WAIVED</p>
+              <p className="font-display text-[1.6rem] font-bold leading-none mt-0.5">100%</p>
+              <p className="text-[0.5rem] font-medium tracking-wide leading-tight mt-1 uppercase">until 31 Dec 2026</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── TRUST SECTION ─── */}
+        <section className="bg-[#0f1f3d] px-6 lg:px-10 py-10" aria-label="Why businesses trust Smart VAT Kenya">
+          <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6">
+            {[
+              { Icon: Lightning, title: "Fast Resolution", body: "Most issues fixed in under 24 hours." },
+              { Icon: ShieldCheck, title: "Penalty Protection", body: "We help you qualify for the Tax Amnesty." },
+              { Icon: UsersThree, title: "Human Support", body: "Real people. Real solutions." },
+              { Icon: ChatCircle, title: "WhatsApp Support", body: "Send us a screenshot. We'll tell you exactly what's wrong.", whatsapp: true },
+            ].map(({ Icon, title, body, whatsapp }) => (
+              <div key={title} className="flex items-start gap-4">
+                <span className={`shrink-0 rounded-lg p-2.5 ${whatsapp ? "bg-[#25D366]/15 text-[#25D366]" : "bg-blue-400/15 text-blue-300"}`}>
+                  <Icon size={22} weight="bold" aria-hidden="true" />
+                </span>
+                <div>
+                  <h3 className="font-display text-[0.98rem] font-semibold text-white mb-1">{title}</h3>
+                  <p className="text-[0.83rem] text-blue-100/70 leading-relaxed">{body}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
