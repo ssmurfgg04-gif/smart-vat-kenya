@@ -171,24 +171,10 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* ─── AMNESTY BANNER ─── */}
-      <div className="bg-brand px-6 py-2.5">
-        <p className="max-w-[1400px] mx-auto text-center text-[0.8rem] text-canvas font-medium leading-snug">
-          <strong>Most Kenyan businesses don&apos;t know this:</strong> KRA is waiving 100% of pre-2026
-          penalties and interest — but only until 31 Dec 2026.{" "}
-          <a
-            href="/tax-amnesty-2026/"
-            className="underline underline-offset-2 font-semibold hover:opacity-80 whitespace-nowrap"
-          >
-            Check if you qualify &rarr;
-          </a>
-        </p>
-      </div>
-
       {/* ─── HERO ─── */}
       <section className="bg-canvas-dark overflow-hidden relative">
         <div
-          className="absolute inset-0 pointer-events-none z-0 opacity-[0.04]"
+          className="absolute inset-0 pointer-events-none z-0 opacity-[0.03]"
           style={{
             backgroundImage:
               "linear-gradient(#dedad2 1px, transparent 1px), linear-gradient(to right, #dedad2 1px, transparent 1px)",
@@ -197,29 +183,26 @@ export default function HomePage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pt-6 pb-12 lg:pt-8 lg:pb-16 grid gap-10 lg:gap-20 lg:grid-cols-[1fr_420px] items-start">
-          <div>
-            <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
-              Kenya Revenue Authority Registered Agents
-            </p>
-            <p className="font-mono text-[0.7rem] text-brand mb-6">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 min-h-[calc(100vh-100px)] max-h-screen overflow-hidden flex flex-col justify-between py-8">
+          <div className="flex flex-col justify-center max-w-3xl">
+            <p className="font-mono text-[0.7rem] text-brand mb-4">
               Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
             </p>
-            <h1 className="font-display text-[clamp(2.4rem,6vw,4.5rem)] font-semibold leading-[1.05] tracking-tight text-canvas mb-6 text-balance">
+            <h1 className="font-display text-3xl lg:text-4xl font-semibold leading-tight tracking-tight text-canvas mb-4 text-balance">
               Your eTIMS invoice just failed.{" "}
               <span className="text-brand">Your VAT return is due.</span>
               {" We handle both — before you have to think about either."}
             </h1>
 
-            <p className="text-[1.05rem] text-canvas/80 leading-relaxed max-w-[52ch] mb-3 text-pretty">
+            <p className="text-xs lg:text-sm text-canvas/80 leading-relaxed max-w-[52ch] mb-4 text-pretty">
               Rejected invoices. Pending sync. Locked accounts. A VAT registration that&apos;s overdue.
               Most Kenyan SME owners don&apos;t have one KRA problem — they have three, all at once, and
               no idea which to fix first. We do. Send us what&apos;s wrong on WhatsApp; we tell you the
               fix, and if it needs doing, we do it.
             </p>
 
-            <div className="mb-8 border border-brand/40 bg-brand/15 rounded-lg px-5 py-4 max-w-[52ch]">
-              <p className="text-[0.82rem] text-canvas leading-relaxed">
+            <div className="mb-6 border border-brand/40 bg-brand/15 rounded-lg p-2.5 max-w-[52ch]">
+              <p className="text-[0.8rem] text-canvas leading-relaxed">
                 <strong className="text-canvas">The 17th Guarantee:</strong> every return is filed
                 on the 17th — three working days before KRA's deadline. If KRA ever rejects a
                 return you've sent us, we fix it and resubmit at no extra cost. Every return is
@@ -227,7 +210,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
               <a
                 href={`${WA_BASE}?text=Hi%2C%20my%20eTIMS%20invoice%20isn%27t%20going%20through`}
                 target="_blank"
@@ -246,7 +229,7 @@ export default function HomePage() {
               </a>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-5">
+            <div className="flex flex-wrap gap-5">
               {[
                 { Icon: ShieldCheck, label: "100% iTax Compliant" },
                 { Icon: CurrencyDollar, label: "M-PESA Receipts" },
@@ -258,19 +241,17 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-
           </div>
+        </div>
+        </section>
 
-          {/* Stats card */}
-          <aside
-            aria-label="Key figures"
-            className="bg-canvas/[0.06] border border-canvas/15 rounded-xl p-8 self-start hidden lg:block"
-            style={{ backdropFilter: "blur(12px)" }}
-          >
+        {/* ─── AT A GLANCE ─── */}
+        <section className="bg-canvas-dark border-t border-canvas/10 px-6 lg:px-10 py-8" aria-label="Key figures">
+          <div className="max-w-[1400px] mx-auto">
             <p className="font-mono text-[0.65rem] uppercase tracking-[0.16em] text-canvas/60 mb-6">
               At a glance
             </p>
-            <dl className="space-y-6">
+            <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-7">
               {[
                 { value: "KES 1,500", label: "eTIMS troubleshooting, per incident" },
                 { value: "KES 5,000", label: "One-time VAT registration" },
@@ -279,21 +260,15 @@ export default function HomePage() {
                 { value: "16%", label: "Kenya VAT standard rate 2026" },
                 { value: "17th", label: "We file, not the 20th — never late" },
               ].map(({ value, label }) => (
-                <div
-                  key={label}
-                  className="flex items-baseline justify-between gap-4 border-b border-canvas/15 pb-5 last:border-0 last:pb-0"
-                >
-                  <dd className="font-display text-[1.65rem] font-semibold text-canvas leading-none tabular-nums">
+                <div key={label} className="flex flex-col gap-1.5">
+                  <dd className="font-display text-[1.35rem] font-semibold text-canvas leading-none tabular-nums">
                     {value}
                   </dd>
-                  <dt className="text-[0.78rem] text-canvas/70 text-right max-w-[120px] leading-snug">
-                    {label}
-                  </dt>
+                  <dt className="text-[0.75rem] text-canvas/70 leading-snug">{label}</dt>
                 </div>
               ))}
             </dl>
-          </aside>
-        </div>
+          </div>
         </section>
 
         {/* ─── SHAME BLOCK ─── */}

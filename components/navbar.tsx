@@ -132,6 +132,19 @@ export function Navbar() {
         </button>
       </nav>
 
+      <a
+        href="/tax-amnesty-2026/"
+        className="block bg-brand px-4 py-1.5 text-center"
+      >
+        <p className="max-w-[1400px] mx-auto text-[0.82rem] text-white font-medium leading-snug text-center">
+          <strong>Most Kenyan businesses don&apos;t know this:</strong> KRA is waiving 100% of
+          pre-2026 penalties and interest — but only until 31 Dec 2026.{" "}
+          <span className="underline underline-offset-2 font-semibold hover:opacity-80 whitespace-nowrap">
+            Check if you qualify &rarr;
+          </span>
+        </p>
+      </a>
+
       {open && (
         <div id="mobile-nav" className="md:hidden border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-6 py-5 space-y-1">
           {navLinks.map((link) => {

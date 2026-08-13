@@ -177,6 +177,10 @@ export default function AboutPage() {
               used for your filings alone — it is never shared, never stored beyond what's needed, and never
               used for anything else. Every payment you make is backed by an official M-PESA receipt.
             </p>
+            <p className="mt-4 text-[0.9rem] text-canvas/75 leading-relaxed">
+              Read the full details of what we collect and how it's used in our{" "}
+              <a href="/privacy-policy/" className="text-brand underline underline-offset-2 hover:text-brand-hover font-medium">privacy policy</a>.
+            </p>
           </div>
         </section>
 

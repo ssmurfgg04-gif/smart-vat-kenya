@@ -123,12 +123,14 @@ const included = [
 ]
 
 export default function TaxAmnesty2026Page() {
+  const [mounted, setMounted] = useState(false)
   const [days, setDays] = useState(0)
   const [hours, setHours] = useState(0)
   const [minutes, setMinutes] = useState(0)
   const [seconds, setSeconds] = useState(0)
 
   useEffect(() => {
+    setMounted(true)
     const target = new Date("2026-12-31T23:59:59Z")
     const tick = () => {
       const diff = target.getTime() - Date.now()
@@ -171,9 +173,13 @@ export default function TaxAmnesty2026Page() {
             <div className="inline-flex items-center gap-2.5 mb-5 text-canvas/70 py-2 pr-4 pl-3 rounded-full bg-canvas/10">
               <span className="flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.14em] tabular-nums">
                 <Clock size={14} className="text-brand" weight="fill" aria-hidden="true" />
-                {days}d : {hours}h : {minutes}m : {seconds}s
+                {mounted
+                  ? `${days}d : ${hours}h : ${minutes}m : ${seconds}s`
+                  : "Closes 31 December 2026"}
               </span>
-              <span className="text-[0.7rem] text-canvas/50">until the window closes</span>
+              {mounted && (
+                <span className="text-[0.7rem] text-canvas/50">until the window closes</span>
+              )}
             </div>
 
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">

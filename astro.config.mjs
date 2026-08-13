@@ -15,7 +15,7 @@ function singleSitemap() {
         const urls = pages
           .map((p) => p.pathname)
           .map((p) => (p.startsWith("/") ? p : `/${p}`))
-          .filter((p) => p !== "/404/" && !p.includes("404"))
+          .filter((p) => p !== "/404/" && !p.includes("404") && p !== "/blog/")
           .sort()
         logger.info(`writing sitemap with ${urls.length} URLs`)
         const xml = [
