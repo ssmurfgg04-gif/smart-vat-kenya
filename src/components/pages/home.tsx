@@ -210,12 +210,12 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 mb-5">
+            <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
               <a
                 href={`${WA_BASE}?text=Hi%2C%20my%20eTIMS%20invoice%20isn%27t%20going%20through`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full sm:w-auto flex-col items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-7 py-3 rounded-lg shadow-sm transition-colors"
+                className="inline-flex w-full sm:w-auto flex-col items-center justify-center bg-red-600 hover:bg-red-700 text-white px-7 py-3 rounded-lg shadow-[0_10px_24px_-10px_rgba(220,38,38,0.6)] transition-colors"
               >
                 <span className="inline-flex items-center gap-2.5 font-semibold text-[0.95rem]">
                   Fix My eTIMS Issue
@@ -226,13 +226,26 @@ export default function HomePage() {
                 </span>
               </a>
               <a
-                href="/tools/"
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto border border-blue-700 text-blue-700 hover:bg-blue-50 font-semibold px-6 py-3.5 rounded-lg text-[0.95rem] transition-colors"
+                href="/services/vat-registration/"
+                className="inline-flex w-full sm:w-auto flex-col items-center justify-center border border-blue-700 text-blue-700 hover:bg-blue-50 px-7 py-3 rounded-lg transition-colors"
               >
-                <Calculator size={17} aria-hidden="true" />
-                Calculate VAT
+                <span className="inline-flex items-center gap-2.5 font-semibold text-[0.95rem]">
+                  Register for VAT — KES 5,000
+                  <ArrowRight size={17} weight="bold" aria-hidden="true" />
+                </span>
+                <span className="text-[0.68rem] text-blue-700/80 font-medium mt-0.5">
+                  We handle the iTax work. 1-3 working days.
+                </span>
               </a>
             </div>
+
+            <a
+              href="/tools/"
+              className="inline-flex items-center gap-1.5 text-[0.85rem] font-medium text-blue-700 hover:text-blue-800 hover:underline mb-5"
+            >
+              <Calculator size={14} aria-hidden="true" />
+              Just need to check a number? Free VAT calculator &rarr;
+            </a>
 
             <div className="flex flex-wrap gap-x-6 gap-y-3">
               {[
@@ -289,7 +302,7 @@ export default function HomePage() {
                   <span className="text-[0.72rem] font-bold uppercase tracking-wide bg-red-50 text-red-600 border border-red-200 rounded-md px-2.5 py-1 shrink-0">
                     Due
                   </span>
-                  <span className="text-[0.8rem] font-semibold text-white bg-blue-600 rounded-md px-3.5 py-2 shrink-0">
+                  <span className="text-[0.8rem] font-semibold text-white bg-red-600 rounded-md px-3.5 py-2 shrink-0">
                     File Now
                   </span>
                 </div>
@@ -310,11 +323,11 @@ export default function HomePage() {
             </div>
 
             {/* Amnesty badge */}
-            <div className="absolute -top-9 -right-3 sm:-right-6 w-36 h-36 rounded-full bg-red-600 text-white flex flex-col items-center justify-center text-center shadow-[0_12px_30px_-8px_rgba(220,38,38,0.55)] rotate-6 ring-4 ring-white">
-              <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] leading-tight">KRA Penalty</p>
-              <p className="text-[0.7rem] font-bold leading-tight mt-0.5">WAIVED</p>
-              <p className="font-display text-[1.8rem] font-bold leading-none mt-0.5">100%</p>
-              <p className="text-[0.55rem] font-medium tracking-wide leading-tight mt-1 uppercase">until 31 Dec 2026</p>
+            <div className="absolute -top-9 -right-3 sm:-right-6 rounded-lg bg-red-600 text-white px-4 py-3 shadow-[0_12px_30px_-8px_rgba(220,38,38,0.55)] ring-4 ring-white rotate-2">
+              <p className="text-[0.62rem] font-semibold uppercase tracking-[0.12em] leading-tight">KRA Penalty Waived</p>
+              <p className="text-[0.95rem] font-bold leading-tight mt-1">
+                100% <span className="font-medium text-red-100">until 31 Dec 2026</span>
+              </p>
             </div>
           </div>
           </div>
