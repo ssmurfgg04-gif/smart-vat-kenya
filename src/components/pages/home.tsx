@@ -227,13 +227,13 @@ export default function HomePage() {
               </a>
               <a
                 href="/services/vat-registration/"
-                className="inline-flex w-full sm:w-auto flex-col items-center justify-center border border-blue-700 text-blue-700 hover:bg-blue-50 px-7 py-3 rounded-lg transition-colors"
+                className="inline-flex w-full sm:w-auto flex-col items-center justify-center border border-[#14243e] text-[#14243e] hover:bg-slate-50 px-7 py-3 rounded-lg transition-colors"
               >
                 <span className="inline-flex items-center gap-2.5 font-semibold text-[0.95rem]">
                   Register for VAT — KES 5,000
                   <ArrowRight size={17} weight="bold" aria-hidden="true" />
                 </span>
-                <span className="text-[0.68rem] text-blue-700/80 font-medium mt-0.5">
+                <span className="text-[0.68rem] text-[#14243e]/80 font-medium mt-0.5">
                   We handle the iTax work. 1-3 working days.
                 </span>
               </a>
@@ -241,7 +241,7 @@ export default function HomePage() {
 
             <a
               href="/tools/"
-              className="inline-flex items-center gap-1.5 text-[0.85rem] font-medium text-blue-700 hover:text-blue-800 hover:underline mb-5"
+              className="inline-flex items-center gap-1.5 text-[0.85rem] font-medium text-[#14243e] hover:text-[#3f4f68] hover:underline mb-5"
             >
               <Calculator size={14} aria-hidden="true" />
               Just need to check a number? Free VAT calculator &rarr;
