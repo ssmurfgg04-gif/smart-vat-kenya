@@ -9,7 +9,7 @@ export const FACTS = {
 
   // THRESHOLD — decision tree outcome: KRA + PwC both say 5M operative as of 2026-08-08
   mandatoryThreshold: "KES 5,000,000",
-  voluntaryFrom: "KES 5,000,000",
+  voluntaryFrom: "below KES 5,000,000",
   thresholdStatus: "KRA official guidance applies KES 5M (verified 2026-08-08); an increase to KES 8M has been reported via Finance Act 2025 commentary.",
   thresholdSource: "KRA: kra.go.ke/individual/filing-paying/types-of-taxes/value-added-tax",
 

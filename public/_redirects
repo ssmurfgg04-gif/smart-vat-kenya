@@ -1,0 +1,34 @@
+# Netlify redirects for canonical URLs (trailing slash enforcement)
+# Redirect non-slash to slash versions for all section routes
+
+# Resources section
+/resources/*  /resources/:splat/  301!
+
+# Services section
+/services/*  /services/:splat/  301!
+
+# Tools section
+/tools/*  /tools/:splat/  301!
+
+# Tax amnesty page (already has trailing slash in sitemap, but just in case)
+/tax-amnesty-2026  /tax-amnesty-2026/  301!
+
+# About page
+/about  /about/  301!
+
+# How it works
+/how-it-works  /how-it-works/  301!
+
+# Forms
+/forms  /forms/  301!
+
+# Partners
+/partners  /partners/  301!
+
+# Privacy policy
+/privacy-policy  /privacy-policy/  301!
+
+# Blog
+/blog  /blog/  301!
+
+# Homepage (root - handled by Netlify automatically)

@@ -75,10 +75,10 @@ const faqSchema = {
 }
 
 const toc = [
+  { id: "free-calc",      label: "Free Kenya VAT Calculator (No Sign-Up Required)" },
   { id: "current-rate",   label: "What is the Current VAT Rate in Kenya? (16% Explained)" },
   { id: "calculate",      label: "How to Calculate VAT Inclusive and Exclusive Prices" },
   { id: "zero-vs-exempt", label: "What is the Difference Between Zero-Rated and VAT Exempt Goods?" },
-  { id: "free-calc",      label: "Free Kenya VAT Calculator (No Sign-Up Required)" },
   { id: "mistakes",       label: "Common Mistakes When Calculating VAT for M-PESA Sales" },
   { id: "faq",            label: "Frequently Asked Questions" },
 ]
@@ -120,6 +120,59 @@ export default function HowToCalculateVATPage() {
             To calculate 16% VAT in Kenya, multiply the price by <strong className="text-ink">0.16</strong> for VAT-exclusive amounts (price before VAT). For VAT-inclusive prices (the price already includes VAT), multiply the total by <strong className="text-ink">16 &divide; 116</strong> to extract the VAT. Use the free calculator below &mdash; no sign-up required.
           </p>
         </div>
+
+        {/* Free Kenya VAT Calculator - Moved to top for immediate interaction */}
+        <section id="free-calc" aria-labelledby="free-calc-h" className="mb-10">
+          <h2 id="free-calc-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
+            Free Kenya VAT Calculator (No Sign-Up Required)
+          </h2>
+          <p className="text-[0.9rem] text-ink-soft leading-relaxed mb-6">
+            Use our instant Kenya VAT calculator. Enter any amount and choose whether it is VAT-inclusive or VAT-exclusive. The calculator shows the VAT amount and the total or base price immediately.
+          </p>
+          <div className="border-2 border-brand/20 rounded-xl p-6 bg-canvas-alt">
+            <div className="flex items-center gap-3 mb-5">
+              <Calculator size={22} weight="fill" className="text-brand" aria-hidden="true" />
+              <p className="font-display text-[1.1rem] font-semibold text-ink">Kenya 16% VAT Calculator</p>
+            </div>
+            <div className="space-y-4">
+              <div>
+                <label htmlFor="calc-amount" className="block text-[0.82rem] font-medium text-ink-muted mb-1.5">Enter Amount (KES)</label>
+                <input
+                  id="calc-amount"
+                  type="number"
+                  defaultValue={10000}
+                  className="w-full border border-hairline rounded-md px-4 py-2.5 text-[0.95rem] text-ink bg-canvas focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand transition-colors"
+                />
+              </div>
+              <div className="flex gap-3">
+                <button className="flex-1 bg-brand text-canvas text-sm font-semibold py-2.5 rounded-md hover:bg-brand-hover transition-colors">
+                  Price Excl. VAT
+                </button>
+                <button className="flex-1 border border-hairline text-ink-muted text-sm font-semibold py-2.5 rounded-md hover:border-brand/40 hover:text-ink transition-colors">
+                  Price Inc. VAT
+                </button>
+              </div>
+              <div className="border-t border-hairline pt-4 space-y-2">
+                <div className="flex justify-between items-center">
+                  <span className="text-[0.85rem] text-ink-muted">Base Amount (excl. VAT)</span>
+                  <span className="font-mono text-[0.95rem] font-semibold text-ink" aria-live="polite">KES 10,000.00</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-[0.85rem] text-ink-muted">VAT (16%)</span>
+                  <span className="font-mono text-[0.95rem] font-semibold text-brand" aria-live="polite">KES 1,600.00</span>
+                </div>
+                <div className="flex justify-between items-center border-t border-hairline pt-2">
+                  <span className="text-[0.85rem] font-semibold text-ink">Total (incl. VAT)</span>
+                  <span className="font-mono text-[1.05rem] font-bold text-ink" aria-live="polite">KES 11,600.00</span>
+                </div>
+              </div>
+            </div>
+            <p className="text-[0.75rem] text-ink-muted mt-4 text-center">
+              Results update instantly. This tool is for estimation only. Use our{" "}
+              <a href="/tools/" className="text-brand underline underline-offset-2 hover:text-brand-hover">full VAT tool suite</a> for returns, invoices, and iTax reconciliation.
+            </p>
+          </div>
+        </section>
 
         {/* Table of contents */}
         <nav aria-label="Table of contents" className="mb-12">
@@ -296,59 +349,6 @@ export default function HowToCalculateVATPage() {
                   <strong className="text-ink">Why it matters:</strong> If you sell zero-rated goods, you still must charge 0% VAT, issue a tax invoice, and file monthly returns. But you can claim back the VAT you paid on your business costs. If you sell exempt goods, you cannot claim any input VAT, which means the 16% you pay on rent, transport, or professional fees is a permanent cost to your business.
                 </p>
               </div>
-            </div>
-          </section>
-
-          {/* Section 4 */}
-          <section id="free-calc" aria-labelledby="free-calc-h">
-            <h2 id="free-calc-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
-              Free Kenya VAT Calculator (No Sign-Up Required)
-            </h2>
-            <p className="text-[0.9rem] text-ink-soft leading-relaxed mb-6">
-              Use our instant Kenya VAT calculator. Enter any amount and choose whether it is VAT-inclusive or VAT-exclusive. The calculator shows the VAT amount and the total or base price immediately.
-            </p>
-            <div className="border-2 border-brand/20 rounded-xl p-6 bg-canvas-alt">
-              <div className="flex items-center gap-3 mb-5">
-                <Calculator size={22} weight="fill" className="text-brand" aria-hidden="true" />
-                <p className="font-display text-[1.1rem] font-semibold text-ink">Kenya 16% VAT Calculator</p>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <label htmlFor="calc-amount" className="block text-[0.82rem] font-medium text-ink-muted mb-1.5">Enter Amount (KES)</label>
-                  <input
-                    id="calc-amount"
-                    type="number"
-                    defaultValue={10000}
-                    className="w-full border border-hairline rounded-md px-4 py-2.5 text-[0.95rem] text-ink bg-canvas focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand transition-colors"
-                  />
-                </div>
-                <div className="flex gap-3">
-                  <button className="flex-1 bg-brand text-canvas text-sm font-semibold py-2.5 rounded-md hover:bg-brand-hover transition-colors">
-                    Price Excl. VAT
-                  </button>
-                  <button className="flex-1 border border-hairline text-ink-muted text-sm font-semibold py-2.5 rounded-md hover:border-brand/40 hover:text-ink transition-colors">
-                    Price Inc. VAT
-                  </button>
-                </div>
-                <div className="border-t border-hairline pt-4 space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="text-[0.85rem] text-ink-muted">Base Amount (excl. VAT)</span>
-                    <span className="font-mono text-[0.95rem] font-semibold text-ink" aria-live="polite">KES 10,000.00</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-[0.85rem] text-ink-muted">VAT (16%)</span>
-                    <span className="font-mono text-[0.95rem] font-semibold text-brand" aria-live="polite">KES 1,600.00</span>
-                  </div>
-                  <div className="flex justify-between items-center border-t border-hairline pt-2">
-                    <span className="text-[0.85rem] font-semibold text-ink">Total (incl. VAT)</span>
-                    <span className="font-mono text-[1.05rem] font-bold text-ink" aria-live="polite">KES 11,600.00</span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-[0.75rem] text-ink-muted mt-4 text-center">
-                Results update instantly. This tool is for estimation only. Use our{" "}
-                <a href="/tools/" className="text-brand underline underline-offset-2 hover:text-brand-hover">full VAT tool suite</a> for returns, invoices, and iTax reconciliation.
-              </p>
             </div>
           </section>
 

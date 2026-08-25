@@ -170,7 +170,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/cetis-kenya-2027/",
   },
   "etims-account-locked": {
-    title: "eTIMS Account Locked? Unlock It Now",
+    title: "eTIMS Account Locked? How to Unlock (2026)",
     description: "Your eTIMS device is locked after 7 days without syncing. Learn why KRA locks accounts, how to unlock via Device Management, and avoid future lockouts.",
     canonical: "/resources/etims-account-locked/",
   },
@@ -280,7 +280,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/input-vat-deduction-guide/",
   },
   "itax-portal-not-working": {
-    title: "KRA iTax Not Working? Fix It Now",
+    title: "KRA iTax Not Working? 7 Fixes (2026)",
     description: "Is KRA iTax down? Check current portal status, fix common errors (status code 500, OTP not received, login failed), and workarounds for outages.",
     canonical: "/resources/itax-portal-not-working/",
   },
@@ -335,7 +335,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/kra-vat-filing-deadline-august-2026/",
   },
   "kra-vat-penalties-reference": {
-    title: "VAT Penalties Kenya 2026: Reference Table",
+    title: "KRA VAT Penalties: Filing & Payment",
     description: "KRA VAT penalties reference table for 2026: late filing (5%), late payment (1%/month), eTIMS non-compliance (KES 50K/mo), and waiver eligibility.",
     canonical: "/resources/kra-vat-penalties-reference/",
   },
