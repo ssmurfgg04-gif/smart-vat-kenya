@@ -149,7 +149,7 @@ export default function MonthlyVatFilingPage() {
             </span>
           </div>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`}
+            href={`${WA_BASE} data-track="whatsapp-cta"?text=${WA_TEXT}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
@@ -247,7 +247,7 @@ export default function MonthlyVatFilingPage() {
             </p>
           </div>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`}
+            href={`${WA_BASE} data-track="whatsapp-cta"?text=${WA_TEXT}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
@@ -299,7 +299,7 @@ export default function MonthlyVatFilingPage() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a
-              href={`${WA_BASE}?text=${WA_TEXT}`}
+              href={`${WA_BASE} data-track="whatsapp-cta"?text=${WA_TEXT}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"

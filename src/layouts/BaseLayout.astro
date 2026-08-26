@@ -317,5 +317,19 @@ const localBusinessSchema = {
   <Footer />
   <WhatsAppButton />
   <BackToTop client:load />
+  <script is:inline>
+    // Query-to-service conversion tracking — WhatsApp CTA clicks
+    document.addEventListener('click', function(e){
+      var a = e.target.closest('a[href*="wa.me"]');
+      if(!a) return;
+      var label = a.getAttribute('data-track') || a.textContent.trim().slice(0,40) || 'whatsapp';
+      var href = a.getAttribute('href') || '';
+      // GA4 / dataLayer
+      if(window.dataLayer) window.dataLayer.push({event:'whatsapp_click', label: label, href: href, page: location.pathname});
+      if(window.gtag) window.gtag('event','whatsapp_click',{event_label: label, page_path: location.pathname});
+      // console for debug
+      // console.log('[track] whatsapp_click', label);
+    });
+  </script>
 </body>
 </html>

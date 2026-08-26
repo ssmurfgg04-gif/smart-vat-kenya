@@ -1,6 +1,7 @@
 "use client"
 
-import { useState, FormEvent } from "react"
+import { useState } from "react"
+import type { FormEvent } from "react"
 
 export function NewsletterSignup() {
   const [email, setEmail] = useState("")

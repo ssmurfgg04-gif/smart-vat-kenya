@@ -186,7 +186,6 @@ export default function ETIMSDownPage() {
         <StatusBanner 
           lastUpdated="August 4, 2026" 
           status="unknown"
-          whatsappNumber="254717344440"
         />
 
         {/* Quick Answer / BLUF */}

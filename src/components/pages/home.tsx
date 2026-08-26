@@ -212,7 +212,7 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
               <a
-                href={`${WA_BASE}?text=Hi%2C%20my%20eTIMS%20invoice%20isn%27t%20going%20through`}
+                href={`${WA_BASE} data-track="whatsapp-cta"?text=Hi%2C%20my%20eTIMS%20invoice%20isn%27t%20going%20through`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex w-full sm:w-auto flex-col items-center justify-center bg-red-600 hover:bg-red-700 text-white px-7 py-3 rounded-lg shadow-[0_10px_24px_-10px_rgba(220,38,38,0.6)] transition-colors"
@@ -352,6 +352,24 @@ export default function HomePage() {
                   <p className="text-[0.83rem] text-blue-100/70 leading-relaxed">{body}</p>
                 </div>
               </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ─── HUBS — KRA Help / Status / Deadlines (internal-link tightening) ─── */}
+        <section className="bg-canvas py-8 px-6 lg:px-10 border-y border-hairline">
+          <div className="max-w-[1400px] mx-auto grid gap-4 sm:grid-cols-3">
+            {[
+              { href: "/kra-help/", title: "KRA Problem Solver", desc: "32 common eTIMS, iTax & VAT fixes — diagnose your issue", Icon: ChatCircle },
+              { href: "/kra-status/", title: "KRA System Status", desc: "Is iTax or eTIMS down right now? Live status + workarounds", Icon: ShieldCheck },
+              { href: "/tax-deadlines/", title: "Tax Deadline Calendar", desc: "VAT 20th, PAYE 9th, amnesty 31 Dec — add reminders", Icon: Clock },
+            ].map(({ href, title, desc, Icon }) => (
+              <a key={href} href={href} className="border border-hairline rounded-xl p-5 bg-canvas-alt hover:border-brand/30 hover:shadow-sm transition-all group">
+                <Icon size={20} weight="duotone" className="text-brand mb-3" aria-hidden="true" />
+                <p className="font-display text-[0.95rem] font-semibold text-ink group-hover:text-brand transition-colors">{title}</p>
+                <p className="text-[0.82rem] text-ink-muted leading-snug mt-1">{desc}</p>
+                <span className="text-[0.78rem] font-medium text-brand mt-2 inline-block">Open →</span>
+              </a>
             ))}
           </div>
         </section>
@@ -615,7 +633,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <a
-                href={`${WA_BASE}?text=I%20need%20eTIMS%20help`}
+                href={`${WA_BASE} data-track="whatsapp-cta"?text=I%20need%20eTIMS%20help`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-fill block text-center bg-brand text-canvas text-sm font-semibold py-3 rounded-md transition-colors hover:bg-brand-hover"
@@ -653,7 +671,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <a
-                href={`${WA_BASE}?text=I%20want%20the%20KES%205000%20VAT%20Registration`}
+                href={`${WA_BASE} data-track="whatsapp-cta"?text=I%20want%20the%20KES%205000%20VAT%20Registration`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-fill block text-center border border-ink text-ink text-sm font-semibold py-3 rounded-md transition-colors hover:bg-ink hover:text-canvas"
@@ -694,7 +712,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <a
-                href={`${WA_BASE}?text=I%20want%20the%20KES%203500%20Monthly%20Filing`}
+                href={`${WA_BASE} data-track="whatsapp-cta"?text=I%20want%20the%20KES%203500%20Monthly%20Filing`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-fill block text-center border border-ink text-ink text-sm font-semibold py-3 rounded-md transition-colors hover:bg-ink hover:text-canvas"
@@ -1019,7 +1037,7 @@ export default function HomePage() {
               <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
             <a
-              href={`${WA_BASE}?text=Hi%2C%20I%20want%20a%20FREE%20KRA%20Tax%20Amnesty%20ledger%20check`}
+              href={`${WA_BASE} data-track="whatsapp-cta"?text=Hi%2C%20I%20want%20a%20FREE%20KRA%20Tax%20Amnesty%20ledger%20check`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-medium text-ink-muted hover:text-ink transition-colors whitespace-nowrap"
@@ -1084,7 +1102,7 @@ export default function HomePage() {
           </div>
           <div className="flex flex-col sm:flex-row lg:justify-end gap-3">
             <a
-              href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20register%20for%20VAT%20with%20Smart%20VAT%20Kenya`}
+              href={`${WA_BASE} data-track="whatsapp-cta"?text=Hi%2C%20I%20want%20to%20register%20for%20VAT%20with%20Smart%20VAT%20Kenya`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-fill inline-flex items-center justify-center gap-2 bg-brand text-canvas font-semibold px-6 py-3.5 rounded-md text-sm hover:bg-brand-hover transition-colors"

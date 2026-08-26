@@ -222,7 +222,6 @@ export default function ETIMSAccountLockedPage() {
         <StatusBanner 
           lastUpdated="August 4, 2026" 
           status="unknown"
-          whatsappNumber="254717344440"
         />
 
         {/* Quick Answer / BLUF */}

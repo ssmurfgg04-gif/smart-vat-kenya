@@ -1,4 +1,4 @@
-﻿import { Sun, Moon, Menu, X } from "@phosphor-icons/react/dist/ssr"
+﻿import { Sun, Moon, List, X } from "@phosphor-icons/react/dist/ssr"
 import { useEffect, useState } from "react"
 
 export function Navbar() {
@@ -39,6 +39,7 @@ export function Navbar() {
           <nav className="hidden md:flex items-center gap-8">
             <a href="/services/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">Services</a>
             <a href="/resources/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">Resources</a>
+            <a href="/kra-help/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">KRA Help</a>
             <a href="/tools/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">Tools</a>
             <a href="/about/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">About</a>
           </nav>
@@ -81,7 +82,7 @@ export function Navbar() {
           </a>
 
           <button className="md:hidden p-2 rounded-lg text-ink-muted hover:text-ink hover:bg-canvas-warm transition-colors" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label={mobileMenuOpen ? "Close menu" : "Open menu"} aria-expanded={mobileMenuOpen}>
-            {mobileMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
+            {mobileMenuOpen ? <X size={24} aria-hidden="true" /> : <List size={24} aria-hidden="true" />}
           </button>
         </div>
       </div>
@@ -92,6 +93,9 @@ export function Navbar() {
             {[
               { href: "/services/", label: "Services" },
               { href: "/resources/", label: "Resources" },
+              { href: "/kra-help/", label: "KRA Help" },
+              { href: "/kra-status/", label: "KRA Status" },
+              { href: "/tax-deadlines/", label: "Tax Deadlines" },
               { href: "/tools/", label: "Tools" },
               { href: "/tax-amnesty-2026/", label: "Tax Amnesty 2026" },
               { href: "/about/", label: "About" },
