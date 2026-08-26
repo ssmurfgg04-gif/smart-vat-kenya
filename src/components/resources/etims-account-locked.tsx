@@ -1,21 +1,13 @@
-import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, User } from "@phosphor-icons/react/dist/ssr"
+import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
-
-const author = {
-  name: "David Ochieng",
-  title: "Senior Tax Consultant",
-  credentials: "CPA(K), ICPAK Member",
-  linkedin: "https://linkedin.com/in/david-ochieng-tax",
-  bio: "David is a KRA-registered tax agent with 8+ years handling VAT compliance, eTIMS onboarding, and iTax disputes for Kenyan SMEs.",
-}
 
 const lastVerified = "2026-08-25"
 
 const WHATSAPP_NUMBER = "254717344440"
 
-const StatusBanner = ({ lastUpdated = "August 4, 2026", status = "unknown" }: { lastUpdated?: string; status?: "operational" | "disrupted" | "unknown" }) => {
+const StatusBanner = ({ lastUpdated = "August 25, 2026", status = "unknown" }: { lastUpdated?: string; status?: "operational" | "disrupted" | "unknown" }) => {
   const configs = {
     operational: {
       borderClass: "border-emerald-500",
@@ -88,10 +80,8 @@ const articleSchema = {
     "Your KRA eTIMS account or device is locked. Learn the common reasons (7-day sync lockout, failed logins, expired certificates), how to unlock it via eTIMS Lite or KRA support, and how to avoid getting locked out again.",
   author: {
     "@type": "Person",
-    name: author.name,
-    jobTitle: author.title,
-    url: author.linkedin,
-    worksFor: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+    name: "Smart VAT Kenya",
+    url: "https://smartvatkenya.co.ke"
   },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-02",
@@ -198,14 +188,6 @@ export default function ETIMSAccountLockedPage() {
           </h1>
           <div className="flex flex-wrap items-center gap-4 mb-4 text-[0.78rem] text-canvas/60">
             <span className="flex items-center gap-1.5">
-              <User size={13} weight="fill" aria-hidden="true" />
-              <span className="font-medium text-canvas/80">{author.name}</span>
-              <span className="text-canvas/40">|</span>
-              <span>{author.title}</span>
-              <span className="text-canvas/40">|</span>
-              <span className="text-canvas/50">{author.credentials}</span>
-            </span>
-            <span className="flex items-center gap-1.5">
               <span className="text-canvas/50">Last verified:</span>
               <time dateTime={lastVerified} className="font-mono text-canvas/70">
                 {new Date(lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
@@ -220,7 +202,7 @@ export default function ETIMSAccountLockedPage() {
       <div className="max-w-3xl mx-auto px-6 py-14">
         {/* eTIMS Status Banner */}
         <StatusBanner 
-          lastUpdated="August 4, 2026" 
+          lastUpdated="August 25, 2026" 
           status="unknown"
         />
 
@@ -228,7 +210,7 @@ export default function ETIMSAccountLockedPage() {
         <div className="border-l-[3px] border-brand pl-5 mb-10">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer - Fix It in 3 Minutes</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            Locked mid-sale? <strong className="text-ink">Don&apos;t reinstall eTIMS</strong> - that orphans your queued invoices. 90% of locks are the <strong className="text-ink">7-day sync rule</strong> and unlock in 3 minutes: <strong className="text-ink">eTIMS Lite</strong> → <strong className="text-ink">Device Management</strong> → Reactivate → Sync. Password or certificate lock? Reset or renew. Compliance flag? Call KRA 020 499 9999 - or <a href="https://wa.me/254717344440?text=My%20eTIMS%20is%20locked%20-%20need%20help%20unlocking" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">send us a screenshot, we unlock it for you</a>.
+            Locked mid-sale? <strong className="text-ink">Don&apos;t reinstall eTIMS</strong> - that orphans your queued invoices. A common cause is the <strong className="text-ink">7-day sync rule</strong>. Try <strong className="text-ink">eTIMS Lite</strong> &rarr; <strong className="text-ink">Device Management</strong> &rarr; Reactivate &rarr; Sync. Password or certificate lock? Reset or renew. Still stuck? <a href="https://wa.me/254717344440?text=My%20eTIMS%20is%20locked%20-%20need%20help%20unlocking" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">send us a screenshot, we&apos;ll diagnose it</a>.
           </p>
         </div>
 

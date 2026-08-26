@@ -198,17 +198,6 @@ export default function HomePage() {
               Overdue VAT registration. We diagnose on WhatsApp and handle the KRA work - you get back to business.
             </p>
 
-            {/* 17th Guarantee */}
-            <div className="flex items-center gap-3 rounded-lg border border-red-200 bg-red-50/70 px-4 py-2.5 mb-6 max-w-[54ch]">
-              <span className="font-display shrink-0 rounded-md bg-red-600 text-white text-[0.75rem] font-bold px-2 py-1 leading-none">
-                17th
-              </span>
-              <p className="text-[0.8rem] text-[#3f4f68] leading-snug">
-                <strong className="text-[#14243e]">The 17th Guarantee:</strong> every return is filed three
-                working days before KRA&apos;s deadline. If KRA rejects one, we fix it and resubmit free.
-              </p>
-            </div>
-
             <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
               <a
                 href={`${WA_BASE}?text=Hi%2C%20my%20eTIMS%20invoice%20isn%27t%20going%20through`} data-track="whatsapp-cta" data-cta-type="hero-etims" data-service="eTIMS Rescue"
