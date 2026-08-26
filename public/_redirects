@@ -1,34 +1,21 @@
-# Netlify redirects for canonical URLs (trailing slash enforcement)
-# Redirect non-slash to slash versions for all section routes
+# Netlify redirects - only explicit non-directory pages
+# Netlify natively handles trailing slash normalization for directory-based static files
+# (Astro outputs /resources/foo/index.html -> served at /resources/foo/)
+# These explicit rules are only for pages that are NOT directory-based
 
-# Resources section
-/resources/*  /resources/:splat/  301!
-
-# Services section
-/services/*  /services/:splat/  301!
-
-# Tools section
-/tools/*  /tools/:splat/  301!
-
-# Tax amnesty page (already has trailing slash in sitemap, but just in case)
+# Tax amnesty page (single file, not a directory)
 /tax-amnesty-2026  /tax-amnesty-2026/  301!
 
-# About page
-/about  /about/  301!
-
-# How it works
-/how-it-works  /how-it-works/  301!
-
-# Forms
-/forms  /forms/  301!
-
-# Partners
-/partners  /partners/  301!
-
-# Privacy policy
-/privacy-policy  /privacy-policy/  301!
-
-# Blog
+# Blog (may be single page, not directory)
 /blog  /blog/  301!
 
-# Homepage (root - handled by Netlify automatically)
+# Explicit non-directory pages
+/about  /about/  301!
+/how-it-works  /how-it-works/  301!
+/forms  /forms/  301!
+/partners  /partners/  301!
+/privacy-policy  /privacy-policy/  301!
+
+# Note: /resources/*, /services/*, /tools/* are directory-based in Astro output
+# Netlify natively handles /foo -> /foo/ for directory-based content
+# No catch-all rules needed - they cause redirect loops
