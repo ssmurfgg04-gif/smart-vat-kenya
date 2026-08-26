@@ -409,7 +409,7 @@ export default function ServicesPage() {
               { Icon: Prohibit,       label: "No hidden fees, ever" },
               { Icon: Clock,          label: "Deadlines met by default" },
               { Icon: FileText,       label: "Filing confirmation sent to you" },
-              { Icon: SealCheck,      label: "100% iTax compliant process" },
+              { Icon: SealCheck,      label: "KRA-compliant iTax process" },
             ].map(({ Icon, label }) => (
               <li key={label} className="flex items-start gap-3">
                 <Icon size={16} weight="duotone" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />

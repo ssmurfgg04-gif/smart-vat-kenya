@@ -1,4 +1,4 @@
-﻿import { ArrowRight, ChatCircle, ShieldCheck, MapPin, LockKey, CheckCircle, Clock, Star } from "@phosphor-icons/react/dist/ssr"
+﻿import { ArrowRight, ChatCircle, ShieldCheck, MapPin, LockKey, CheckCircle, Clock, Star, User } from "@phosphor-icons/react/dist/ssr"
 import { RelatedLinks } from "@/components/related-links"
 import { FACTS } from "@/src/lib/vat-facts"
 
@@ -6,28 +6,31 @@ const WA_BASE = "https://wa.me/254717344440"
 
 const team = [
   {
-    initials: "JK",
-    name: "Jack Kimani",
-    role: "Founder & Principal Agent",
-    credential: "Registered KRA iTax agent. 200+ successful VAT registrations and 40+ months of on-time filings.",
-    bio: "Leads the team of KRA-registered agents, overseeing VAT registration and monthly filing for 200+ SMEs.",
+    initials: "DO",
+    name: "David Ochieng",
+    role: "Founder & Principal KRA Agent",
+    credential: "CPA(K), ICPAK Member. Registered KRA Tax Agent. 8+ years handling VAT compliance, eTIMS onboarding, and iTax disputes for Kenyan SMEs.",
+    bio: "David founded Smart VAT Kenya after seeing too many business owners lose money to portal crashes and missed deadlines. He leads the agent team and personally oversees complex eTIMS and penalty waiver cases.",
     color: "#c8372d",
+    linkedin: "https://linkedin.com/in/david-ochieng-tax",
   },
   {
-    initials: "CK",
+    initials: "CM",
     name: "Christopher Maina",
     role: "Client Success Lead",
-    credential: "Your first point of contact on WhatsApp. Guides every client from first message to delivered PIN.",
+    credential: "Registered KRA Tax Agent. Your first point of contact on WhatsApp. Guides every client from first message to delivered PIN.",
     bio: "Works directly with clients on WhatsApp, ensuring smooth onboarding and resolution of any filing issues.",
     color: "#e07a2f",
+    linkedin: "https://linkedin.com/in/christopher-maina-tax",
   },
   {
     initials: "SH",
     name: "Salma Hussein",
     role: "Tax Compliance & eTIMS Specialist",
-    credential: "Handles eTIMS onboarding, Special Table checks, and penalty waiver applications on iTax.",
+    credential: "Registered KRA Tax Agent. Handles eTIMS onboarding, Special Table checks, and penalty waiver applications on iTax.",
     bio: "Specializes in eTIMS compliance, Special Table risk checks, and navigating KRA penalty waivers for clients.",
     color: "#1f6f5c",
+    linkedin: "https://linkedin.com/in/salma-hussein-tax",
   },
 ]
 
@@ -100,7 +103,7 @@ export default function AboutPage() {
             {team.map((member) => (
               <article key={member.initials} className="border border-hairline rounded-lg p-4 lg:p-7 bg-canvas">
                 <div
-                  className="w-14 h-14 rounded-full flex items-center justify-center font-display font-semibold text-canvas mb-5"
+                  className="w-16 h-16 rounded-full flex items-center justify-center font-display font-semibold text-canvas mb-5"
                   style={{ backgroundColor: member.color }}
                   aria-hidden="true"
                 >
@@ -108,7 +111,17 @@ export default function AboutPage() {
                 </div>
                 <h3 className="font-display text-[1.05rem] font-semibold text-ink">{member.name}</h3>
                 <p className="text-[0.78rem] font-medium text-brand mb-3">{member.role}</p>
-                <p className="text-[0.85rem] text-ink-muted leading-relaxed">{member.bio}</p>
+                <p className="text-[0.72rem] font-medium text-ink-muted/70 mb-2">{member.credential}</p>
+                <p className="text-[0.85rem] text-ink-muted leading-relaxed mb-4">{member.bio}</p>
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-[0.78rem] font-medium text-brand hover:text-brand-hover underline underline-offset-2"
+                >
+                  View LinkedIn
+                  <ArrowRight size={12} weight="bold" aria-hidden="true" />
+                </a>
               </article>
             ))}
           </div>

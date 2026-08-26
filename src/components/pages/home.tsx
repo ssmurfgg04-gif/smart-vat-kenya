@@ -248,7 +248,7 @@ export default function HomePage() {
 
             <div className="flex flex-wrap gap-x-6 gap-y-3">
               {[
-                { Icon: ShieldCheck, label: "100% iTax Compliant" },
+                { Icon: ShieldCheck, label: "KRA-Compliant Process" },
                 { Icon: CurrencyDollar, label: "M-PESA Receipts" },
                 { Icon: Prohibit, label: "No Hidden Fees" },
               ].map(({ Icon, label }) => (
@@ -260,72 +260,72 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* RIGHT - problem dashboard */}
+          {/* RIGHT - compliance overview */}
           <div className="relative w-full max-w-[520px] mx-auto lg:mx-0 lg:justify-self-end">
             <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_24px_60px_-24px_rgba(15,32,70,0.35)] overflow-hidden">
               <div className="flex items-center justify-between px-5 py-3.5 border-b border-slate-100">
                 <div className="flex items-center gap-2.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-blue-600" aria-hidden="true" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-600" aria-hidden="true" />
                   <p className="font-display text-[1rem] font-semibold text-[#14243e]">
-                    SmartVAT Dashboard
+                    Compliance Overview
                   </p>
                 </div>
                 <span className="flex items-center gap-1.5 text-[0.72rem] font-medium text-[#3f4f68]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-red-500" aria-hidden="true" />
-                  Live
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" aria-hidden="true" />
+                  Operational
                 </span>
               </div>
 
               <div className="divide-y divide-slate-100">
                 <div className="flex items-center gap-4 px-5 py-4">
-                  <span className="w-11 h-11 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                  <span className="w-11 h-11 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                     <Invoice size={22} weight="bold" aria-hidden="true" />
                   </span>
                   <div className="flex-1 min-w-0">
-                    <p className="text-[0.72rem] font-medium uppercase tracking-wide text-[#3f4f68]">eTIMS Invoice</p>
-                    <p className="text-[0.95rem] font-medium text-[#14243e] truncate">Invalid Tax Details</p>
+                    <p className="text-[0.72rem] font-medium uppercase tracking-wide text-[#3f4f68]">eTIMS</p>
+                    <p className="text-[0.95rem] font-medium text-[#14243e] truncate">Operational</p>
                   </div>
-                  <span className="text-[0.72rem] font-bold uppercase tracking-wide bg-red-50 text-red-600 border border-red-200 rounded-md px-2.5 py-1 shrink-0">
-                    Rejected
+                  <span className="text-[0.72rem] font-bold uppercase tracking-wide bg-emerald-50 text-emerald-600 border border-emerald-200 rounded-md px-2.5 py-1 shrink-0">
+                    Active
                   </span>
                 </div>
 
                 <div className="flex items-center gap-4 px-5 py-4">
-                  <span className="w-11 h-11 rounded-lg bg-red-50 text-red-600 flex items-center justify-center shrink-0">
+                  <span className="w-11 h-11 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
                     <FileText size={22} weight="bold" aria-hidden="true" />
                   </span>
                   <div className="flex-1 min-w-0">
                     <p className="text-[0.72rem] font-medium uppercase tracking-wide text-[#3f4f68]">VAT Returns</p>
-                    <p className="text-[0.95rem] font-medium text-[#14243e]">Aug 2026</p>
+                    <p className="text-[0.95rem] font-medium text-[#14243e]">Due in 3 days</p>
                   </div>
-                  <span className="text-[0.72rem] font-bold uppercase tracking-wide bg-red-50 text-red-600 border border-red-200 rounded-md px-2.5 py-1 shrink-0">
-                    Due
+                  <span className="text-[0.72rem] font-bold uppercase tracking-wide bg-amber-50 text-amber-600 border border-amber-200 rounded-md px-2.5 py-1 shrink-0">
+                    Due Soon
                   </span>
-                  <span className="text-[0.8rem] font-semibold text-white bg-red-600 rounded-md px-3.5 py-2 shrink-0">
+                  <span className="text-[0.8rem] font-semibold text-white bg-amber-600 rounded-md px-3.5 py-2 shrink-0">
                     File Now
                   </span>
                 </div>
 
                 <div className="flex items-center gap-4 px-5 py-4">
-                  <span className="w-11 h-11 rounded-lg bg-slate-100 text-[#3f4f68] flex items-center justify-center shrink-0">
+                  <span className="w-11 h-11 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                     <ArrowsClockwise size={22} weight="bold" aria-hidden="true" />
                   </span>
                   <div className="flex-1 min-w-0">
                     <p className="text-[0.72rem] font-medium uppercase tracking-wide text-[#3f4f68]">KRA Sync</p>
-                    <p className="text-[0.95rem] font-semibold text-red-600">Sync Failed</p>
+                    <p className="text-[0.95rem] font-medium text-emerald-600">Operational</p>
                   </div>
-                  <span className="text-[0.8rem] font-semibold text-white bg-red-600 rounded-md px-3.5 py-2 shrink-0">
-                    Retry Sync
+                  <span className="text-[0.72rem] font-bold uppercase tracking-wide bg-emerald-50 text-emerald-600 border border-emerald-200 rounded-md px-2.5 py-1 shrink-0">
+                    Operational
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* Amnesty badge */}
-            <div className="absolute -top-9 -right-3 sm:-right-6 rounded-lg bg-red-600 text-white px-4 py-3 shadow-[0_12px_30px_-8px_rgba(220,38,38,0.55)] ring-4 ring-white rotate-2">
-              <p className="text-[0.62rem] font-semibold uppercase tracking-[0.12em] leading-tight">KRA Penalty Waived</p>
+            {/* Amnesty status */}
+            <div className="absolute -top-9 -right-3 sm:-right-6 rounded-lg bg-emerald-600 text-white px-4 py-3 shadow-[0_12px_30px_-8px_rgba(16,185,129,0.55)] ring-4 ring-white rotate-2">
+              <p className="text-[0.62rem] font-semibold uppercase tracking-[0.12em] leading-tight">Tax Amnesty Active</p>
               <p className="text-[0.95rem] font-bold leading-tight mt-1">
-                100% <span className="font-medium text-red-100">until 31 Dec 2026</span>
+                Ends 31 Dec 2026
               </p>
             </div>
           </div>
@@ -355,21 +355,41 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ─── HUBS - KRA Help / Status / Deadlines (internal-link tightening) ─── */}
-        <section className="bg-canvas py-12 px-6 lg:px-10 border-y border-hairline">
-          <div className="max-w-[1400px] mx-auto grid gap-6 sm:grid-cols-3">
-            {[
-              { href: "/kra-help/", title: "KRA Problem Solver", desc: "32 common eTIMS, iTax & VAT fixes - diagnose your issue", Icon: ChatCircle },
-              { href: "/kra-status/", title: "KRA System Status", desc: "Is iTax or eTIMS down right now? Status + workarounds", Icon: ShieldCheck },
-              { href: "/tax-deadlines/", title: "Tax Deadline Calendar", desc: "VAT 20th, PAYE 9th, amnesty 31 Dec - add reminders", Icon: Clock },
-            ].map(({ href, title, desc, Icon }) => (
-              <a key={href} href={href} className="border border-hairline rounded-xl p-6 bg-canvas-alt hover:border-brand/20 transition-colors group">
-                <Icon size={20} weight="duotone" className="text-brand mb-3" aria-hidden="true" />
-                <p className="font-display text-[0.95rem] font-semibold text-ink group-hover:text-brand transition-colors">{title}</p>
-                <p className="text-[0.82rem] text-ink-muted leading-snug mt-1">{desc}</p>
-                <span className="text-[0.78rem] font-medium text-brand mt-2 inline-block">Open →</span>
+        {/* ─── KRA PROBLEM SOLVER - Featured Hub ─── */}
+        <section className="bg-canvas py-16 px-6 lg:px-10 border-y border-hairline">
+          <div className="max-w-[1400px] mx-auto">
+            <div className="text-center mb-12">
+              <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
+                KRA Help Center
+              </p>
+              <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-tight text-ink mb-4 text-balance">
+                Something broken with KRA?
+              </h2>
+              <p className="text-[0.95rem] text-ink-muted max-w-[60ch] mx-auto leading-relaxed mb-8">
+                Pick your problem - get the fix in 3 minutes, or send us a screenshot and we'll handle it.
+              </p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { href: "/kra-help/", title: "eTIMS Problems", desc: "Invoice rejected, account locked, pending sync, offline invoicing", Icon: ChatCircle },
+                { href: "/kra-help/", title: "iTax Problems", desc: "Portal down, OTP not received, login errors, return rejected", Icon: ShieldCheck },
+                { href: "/kra-help/", title: "VAT Problems", desc: "Registration, filing, penalties, input VAT, refunds", Icon: Calculator },
+                { href: "/kra-help/", title: "Penalties & Amnesty", desc: "Late filing, KES 10K penalty, 2026 amnesty eligibility", Icon: Clock },
+              ].map(({ href, title, desc, Icon }) => (
+                <a key={href} href={href} className="border border-hairline rounded-xl p-6 bg-canvas-alt hover:border-brand/30 hover:shadow-sm transition-all group flex flex-col h-full">
+                  <Icon size={24} weight="duotone" className="text-brand mb-3" aria-hidden="true" />
+                  <p className="font-display text-[1.05rem] font-semibold text-ink mb-2 group-hover:text-brand transition-colors">{title}</p>
+                  <p className="text-[0.82rem] text-ink-muted leading-snug flex-1 mb-4">{desc}</p>
+                  <span className="text-[0.78rem] font-medium text-brand mt-auto inline-block">Open →</span>
+                </a>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <a href="/kra-help/" className="inline-flex items-center gap-2 bg-brand text-white font-semibold text-sm px-7 py-3.5 rounded-md hover:bg-brand-hover transition-colors">
+                View All 32 KRA Problem Guides
+                <ArrowRight size={14} weight="bold" aria-hidden="true" />
               </a>
-            ))}
+            </div>
           </div>
         </section>
 
@@ -411,6 +431,7 @@ export default function HomePage() {
             "eTIMS Onboarding Included",
             "M-PESA Payment Records Provided",
             "WhatsApp Support - Not Email Tickets",
+            "Published Flat-Fee Pricing",
           ].map((item) => (
             <span key={item} className="flex items-center gap-2 text-[0.78rem] text-ink-muted">
               <svg viewBox="0 0 12 12" className="w-3 h-3 shrink-0 fill-brand" aria-hidden="true">
@@ -432,12 +453,12 @@ export default function HomePage() {
             Why eTIMS and iTax filing is hard for Kenyan SME owners.
           </h2>
           <p className="text-[0.9rem] text-ink-muted max-w-[52ch] mb-16 leading-relaxed">
-            KRA's{" "}
-            <a href="/resources/itax-portal-not-working/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
-              portal crashes 2–3 times per week
-            </a>
-            . Rejected invoices and pending-sync errors stall sales. Facilitators quote KES 15,000–30,000.
-            Missing the 20th deadline costs KES 10,000 automatically.
+KRA's{" "}
+              <a href="/resources/itax-portal-not-working/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                portal frequently crashes near deadlines
+              </a>
+              . Rejected invoices and pending-sync errors stall sales. Facilitators quote KES 15,000–30,000.
+              Missing the 20th deadline costs KES 10,000 automatically.
           </p>
 
           <div className="space-y-0">
@@ -451,7 +472,7 @@ export default function HomePage() {
               {
                 number: "02",
                 problem: "The iTax portal keeps returning errors",
-                fix: "We navigate it for you - you send your KRA PIN and details over WhatsApp, we handle the rest. High first-attempt success - if KRA rejects a filing we fix and resubmit free.",
+                fix: "We navigate it for you - you send your KRA PIN and details over WhatsApp, we handle the rest. Our first-attempt rate is high - if KRA rejects a filing we fix and resubmit free.",
                 Icon: FileText,
               },
               {
@@ -514,7 +535,7 @@ export default function HomePage() {
               <div className="space-y-4">
                 {[
                   { label: "Time spent on the portal", value: "3 weeks, off-and-on", cost: "Hours you don't have" },
-                  { label: "Errors encountered", value: "14+ portal errors", cost: "KRA Status Code 500, timeouts" },
+                  { label: "Errors encountered", value: "Frequent portal errors", cost: "KRA Status Code 500, timeouts" },
                   { label: "Deadline risk", value: "KES 10,000 penalty", cost: "Automatic, non-negotiable" },
                   { label: "Input VAT protection", value: "Often missed", cost: "Lost money back" },
                 ].map((r) => (
@@ -639,6 +660,20 @@ export default function HomePage() {
               >
                 Get eTIMS Help Now
               </a>
+              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-canvas/50 mt-5 mb-2">What happens next</p>
+              <ol className="space-y-1.5 text-[0.8rem] text-canvas/70" role="list">
+                {[
+                  "You WhatsApp us the error screenshot",
+                  "We diagnose the exact issue in minutes",
+                  "We guide you through the fix or handle it for you",
+                  "You get back to invoicing",
+                ].map((step, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="font-mono text-[0.65rem] text-canvas/40 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ol>
             </article>
 
             {/* Card 2 - VAT Registration */}
@@ -677,6 +712,20 @@ export default function HomePage() {
               >
                 Start Registration
               </a>
+              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mt-5 mb-2">What happens next</p>
+              <ol className="space-y-1.5 text-[0.8rem] text-ink-muted" role="list">
+                {[
+                  "You send KRA PIN + ID copy + business name on WhatsApp",
+                  "We handle iTax Form VAT 1 and profile update",
+                  "You receive VAT PIN + M-PESA receipt in 1-3 days",
+                  "We guide you through eTIMS onboarding",
+                ].map((step, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="font-mono text-[0.63rem] text-ink-muted/40 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ol>
             </article>
 
             {/* Card 3 - Monthly Filing */}
@@ -718,6 +767,20 @@ export default function HomePage() {
               >
                 Start Filing
               </a>
+              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mt-5 mb-2">What happens next</p>
+              <ol className="space-y-1.5 text-[0.8rem] text-ink-muted" role="list">
+                {[
+                  "You send sales & purchase invoices each month",
+                  "We calculate VAT, file on iTax by the 17th",
+                  "You get filing confirmation + M-PESA payment guide",
+                  "We handle any KRA queries or rejections free",
+                ].map((step, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="font-mono text-[0.63rem] text-ink-muted/40 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ol>
             </article>
 
             {/* Card 4 - Amnesty Cleanup */}
@@ -740,6 +803,20 @@ export default function HomePage() {
               >
                 Get the free check
               </a>
+              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mt-5 mb-2">What happens next</p>
+              <ol className="space-y-1.5 text-[0.8rem] text-ink-muted" role="list">
+                {[
+                  "You request a free iTax ledger check on WhatsApp",
+                  "We identify which amnesty path applies to you",
+                  "We file the returns that unlock the waiver",
+                  "If you owe principal, we structure a payment plan",
+                ].map((step, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="font-mono text-[0.63rem] text-ink-muted/40 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ol>
             </article>
           </div>
 
@@ -789,7 +866,7 @@ export default function HomePage() {
               <a href="/resources/what-happens-if-i-don-t-register-for-vat/" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 KES 100,000 per month non-registration penalty
               </a>
-              . Voluntary registration is available from {FACTS.voluntaryFrom} to claim input VAT credits -
+              . Voluntary registration is available for eligible businesses below the {FACTS.mandatoryThreshold} mandatory threshold to claim input VAT credits -
               use our{" "}
               <a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 guide on whether you need to register for VAT in Kenya
@@ -1022,7 +1099,7 @@ export default function HomePage() {
               KRA is wiping out old penalties - until 31 December 2026
             </h2>
             <p className="text-[0.85rem] text-ink-muted max-w-[48ch] leading-relaxed">
-              A 100% waiver on pre-2026 penalties, interest and fines. Many businesses qualify
+              KRA's 2026 Tax Amnesty can waive qualifying penalties, interest and fines on eligible tax debts accrued up to 31 December 2025. Many businesses qualify
               automatically - others just need outstanding returns filed. Get a free iTax ledger
               check and find out which path you&apos;re on.
             </p>

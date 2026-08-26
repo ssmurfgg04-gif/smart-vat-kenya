@@ -119,7 +119,7 @@ const whyKisumu = [
   { Icon: ChatCircle, label: "Full service delivered over WhatsApp" },
   { Icon: Prohibit, label: "No need to travel to Nairobi" },
   { Icon: Phone, label: "M-PESA payment accepted in Kisumu" },
-  { Icon: SealCheck, label: "100% iTax compliant process" },
+  { Icon: SealCheck, label: "KRA-compliant iTax process" },
 ]
 
 const serviceAreas = [

@@ -10,12 +10,10 @@
 /blog  /blog/  301!
 
 # Explicit non-directory pages
-/about  /about/  301!
-/how-it-works  /how-it-works/  301!
 /forms  /forms/  301!
 /partners  /partners/  301!
 /privacy-policy  /privacy-policy/  301!
 
-# Note: /resources/*, /services/*, /tools/* are directory-based in Astro output
+# Note: /about and /how-it-works are directory-based in Astro output (trailingSlash: "always")
 # Netlify natively handles /foo -> /foo/ for directory-based content
 # No catch-all rules needed - they cause redirect loops

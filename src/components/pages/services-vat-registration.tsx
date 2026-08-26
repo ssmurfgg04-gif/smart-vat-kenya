@@ -360,7 +360,7 @@ export default function VATRegistrationPage() {
 
             <div>
               <h3 className="font-display text-[1.1rem] font-semibold text-ink mb-2">How long does it take? What can go wrong?</h3>
-              <p>Typical turnaround is <strong className="text-ink">1–3 working days</strong> after correct submission. Common KRA rejection reasons: mismatched ID vs PIN details, incomplete business address, or filing with outstanding returns on the account. We pre-check your iTax ledger for these issues - including the <a href="/resources/vat-special-table-risks/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Special Table</a> - before submitting, which is why our first-attempt rate is high. If KRA queries the application, we address it without extra charge.</p>
+              <p>Typical turnaround is <strong className="text-ink">1–3 working days</strong> after correct submission. Common KRA rejection reasons: mismatched ID vs PIN details, incomplete business address, or filing with outstanding returns on the account. We pre-check your iTax ledger for these issues - including the <a href="/resources/vat-special-table-risks/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Special Table</a> - before submitting, which is why our first-attempt rate is strong. If KRA queries the application, we address it without extra charge.</p>
             </div>
 
             <div>
