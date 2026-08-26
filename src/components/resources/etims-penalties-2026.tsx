@@ -6,7 +6,7 @@ import { FACTS } from "@/src/lib/vat-facts"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "eTIMS Penalties 2026 - Exact Figures From the Law",
   description: "A definitive legal breakdown of KRA eTIMS penalties under Tax Procedures Act s.86 (as amended by Finance Act 2026) and s.59A(5). Separating statutory law from internet myths.",
@@ -16,7 +16,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "FAQPage",
   mainEntity: [
     {

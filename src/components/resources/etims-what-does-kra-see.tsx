@@ -23,7 +23,7 @@ const FAQs = [
 ]
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "FAQPage",
   mainEntity: FAQs.map((f) => ({
     "@type": "Question",
@@ -33,7 +33,7 @@ const faqSchema = {
 }
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -43,7 +43,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "Can KRA See Your M-Pesa? What eTIMS Really Tells KRA About Your Business",
   description:

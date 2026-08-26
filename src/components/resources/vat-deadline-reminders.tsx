@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq-section"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "Article",
   headline: "Free KRA VAT Deadline Reminders on WhatsApp",
   description: "Never miss the 20th KRA VAT filing deadline again. Get automated WhatsApp reminders on the 17th of every month. Free service by Smart VAT Kenya.",
@@ -15,7 +15,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "FAQPage",
   mainEntity: [
     {

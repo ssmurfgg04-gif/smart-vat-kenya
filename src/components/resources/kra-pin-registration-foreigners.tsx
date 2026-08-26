@@ -3,7 +3,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "Article",
   headline: "KRA PIN Registration for Foreigners in Kenya (2026 Guide)",
   description: "Complete guide for non-citizens and expatriates on how to get a KRA PIN in Kenya. Requirements, passport upload, work permits, and online iTax steps.",
@@ -13,7 +13,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "FAQPage",
   mainEntity: [
     {

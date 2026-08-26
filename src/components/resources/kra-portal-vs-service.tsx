@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq-section"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "Article",
   headline: "Register for VAT Yourself on iTax or Pay KES 5,000? The Honest Math",
   description: "An honest comparison of DIY VAT registration on KRA iTax vs hiring Smart VAT Kenya. Portal crashes, 14+ error codes, time cost, and penalty risk.",
@@ -15,7 +15,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "FAQPage",
   mainEntity: [
     {

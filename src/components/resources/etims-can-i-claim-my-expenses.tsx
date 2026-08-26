@@ -27,7 +27,7 @@ const faqs = [
 ]
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "FAQPage",
   mainEntity: faqs.map((f) => ({
     "@type": "Question",
@@ -37,7 +37,7 @@ const faqSchema = {
 }
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -47,7 +47,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "Fuel, Rent, Electricity, Internet: Which Business Expenses Actually Need an eTIMS Receipt?",
   description:

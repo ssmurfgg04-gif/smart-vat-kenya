@@ -6,7 +6,7 @@ import { FACTS } from "@/src/lib/vat-facts"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "Article",
   headline: "VAT Threshold Kenya 2026 - KES 5M or 8M? The Real Answer",
   description: "Resolving the confusion between the operative KES 5 million VAT registration threshold and the proposed KES 8 million Finance Act 2025 rule. Official KRA guidance verified.",
@@ -16,7 +16,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "FAQPage",
   mainEntity: [
     {

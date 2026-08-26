@@ -14,7 +14,7 @@ const author = {
 const lastVerified = "2026-08-25"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -24,7 +24,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "Article",
   headline: "KRA VAT Penalties Kenya 2026: The Complete Reference Table",
   description:
@@ -44,7 +44,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "FAQPage",
   mainEntity: [
     {

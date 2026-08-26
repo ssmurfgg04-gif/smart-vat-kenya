@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq-section"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "Article",
   headline: "VAT 2027: KRA Pre-Filled Returns Are Coming - Prepare Now",
   description: "KRA's transition to pre-filled (auto-populated) VAT returns starting January 2027. How eTIMS data and iCMS customs integration will assemble your return automatically.",
@@ -15,7 +15,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "FAQPage",
   mainEntity: [
     {

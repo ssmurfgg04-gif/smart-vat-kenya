@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq-section"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "Article",
   headline: "KRA Data Sources Kenya - Where to Get Official VAT & Revenue Data Free",
   description:
@@ -16,7 +16,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "FAQPage",
   mainEntity: [
     {
@@ -110,7 +110,7 @@ export default function KraDataSourcesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
+            "@context": "https://schema.org" as const as const as const as const as const,
             "@type": "Dataset",
             name: "Official KRA, KNBS & Treasury data sources for Kenya VAT and revenue analysis",
             description:

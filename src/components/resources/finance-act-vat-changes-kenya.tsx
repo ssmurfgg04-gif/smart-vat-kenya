@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "Finance Act 2025 & 2026 VAT Changes Kenya",
   description:
@@ -28,7 +28,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "FAQPage",
   mainEntity: [
     {

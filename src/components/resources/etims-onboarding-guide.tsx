@@ -6,7 +6,7 @@ import { Flowchart, ETIMSSolutionFlow, ETIMSOnboardingFlow } from "@/components/
 import { Accordion } from "@/components/accordion"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -16,7 +16,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "eTIMS Kenya Onboarding Guide 2026: How to Register for KRA Electronic Tax Invoicing",
   description:
@@ -30,7 +30,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "FAQPage",
   mainEntity: [
     {
@@ -330,7 +330,6 @@ export default function ETIMSOnboardingPage() {
               {[
                 {
                   step: 1,
-                  title: "Log in to itax.kra.go.ke",
                   title: "Log in to itax.kra.go.ke",
                   detail: "Use your KRA PIN and password. If you do not have a KRA PIN, register for one first at the iTax portal under 'New PIN Registration'.",
                 },

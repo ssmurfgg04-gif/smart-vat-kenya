@@ -3,7 +3,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "How to Create a KRA PIN Online in Kenya (2026 Guide)",
   description: "Complete guide on creating a new KRA PIN on iTax. Step-by-step instructions for citizens, businesses, and taxpayers.",
@@ -13,7 +13,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "FAQPage",
   mainEntity: [
     {

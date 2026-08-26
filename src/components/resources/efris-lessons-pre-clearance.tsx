@@ -3,7 +3,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "Real-Time Pre-Clearance & E-Invoicing: Lessons from EFRIS and How to Prepare",
   description: "When tax authorities shift from post-issuance reporting to real-time pre-clearance e-invoicing (like Uganda's EFRIS and upcoming regional models), what breaks in SME POS systems and how to build operational resilience.",
@@ -13,7 +13,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "FAQPage",
   mainEntity: [
     {

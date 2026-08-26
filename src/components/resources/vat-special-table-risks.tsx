@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "Article",
 headline: "KRA VAT Special Table - How It Works and How to Avoid Being Flagged",
   description:
@@ -28,7 +28,7 @@ headline: "KRA VAT Special Table - How It Works and How to Avoid Being Flagged",
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "FAQPage",
   mainEntity: [
     {

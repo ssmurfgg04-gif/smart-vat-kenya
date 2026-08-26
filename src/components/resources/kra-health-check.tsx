@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq-section"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "Article",
   headline: "Free KRA Status & Ledger Health Check (2026)",
   description: "Check your KRA iTax profile status, outstanding filing gaps, and Special Table / Tax Alert exposures before KRA flags you. Free check by Smart VAT Kenya.",
@@ -15,7 +15,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "FAQPage",
   mainEntity: [
     {

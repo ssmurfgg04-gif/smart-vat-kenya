@@ -7,7 +7,7 @@ import { FAQSection } from "@/components/faq-section"
 
 const WHATSAPP_NUMBER = "254717344440"
 
-const StatusBanner = ({ lastUpdated = "August 4, 2026", status = "unknown" }: { lastUpdated?: string; status?: "operational" | "disrupted" | "unknown" }) => {
+const StatusBanner = ({ lastUpdated = "August 4, 2026", status = "unknown", whatsappNumber }: { lastUpdated?: string; status?: "operational" | "disrupted" | "unknown"; whatsappNumber?: string }) => {
   const configs = {
     operational: {
       borderClass: "border-emerald-500",
@@ -48,7 +48,7 @@ const StatusBanner = ({ lastUpdated = "August 4, 2026", status = "unknown" }: { 
           </p>
           <p className={`text-sm ${config.subtextClass} mt-1`}>Last checked: {lastUpdated}</p>
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20right%20now`}
+            href={`https://wa.me/${whatsappNumber || WHATSAPP_NUMBER}?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20right%20now`}
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center gap-2 ${config.buttonClass} text-white font-semibold py-2 px-4 rounded text-sm mt-3 transition-colors`}
@@ -63,7 +63,7 @@ const StatusBanner = ({ lastUpdated = "August 4, 2026", status = "unknown" }: { 
 }
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -73,7 +73,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "Pending eTIMS Sync in Kenya - Why Invoices Are Stuck and How to Fix It (2026)",
   description:
@@ -87,7 +87,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "FAQPage",
   mainEntity: [
     {

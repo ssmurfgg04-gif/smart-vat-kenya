@@ -31,7 +31,7 @@ const faqs = [
 ]
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "FAQPage",
   mainEntity: faqs.map((f) => ({
     "@type": "Question",
@@ -41,7 +41,7 @@ const faqSchema = {
 }
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -51,7 +51,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "Your Client Just Asked for an eTIMS Invoice - Do This Within 5 Days",
   description:

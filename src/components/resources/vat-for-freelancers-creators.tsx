@@ -8,7 +8,7 @@ import { FACTS } from "@/src/lib/vat-facts"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "Article",
   headline: "VAT for Freelancers & Creators in Kenya 2026",
   description: "Do digital creators, freelance developers, and remote consultants in Kenya need a KRA PIN and VAT registration? Threshold rules, digital services, and eTIMS compliance.",
@@ -18,7 +18,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "FAQPage",
   mainEntity: [
     {

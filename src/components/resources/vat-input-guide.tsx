@@ -3,7 +3,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "Article",
   headline: "VAT Input Tax in Kenya: Complete Claim & eTIMS Guide (2026)",
   description: "Learn how input VAT works in Kenya, eTIMS invoice requirements, buyer PIN matching, and the 6-month claim window under current KRA rules.",
@@ -13,7 +13,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "FAQPage",
   mainEntity: [
     {

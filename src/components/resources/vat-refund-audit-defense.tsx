@@ -6,7 +6,7 @@ import { FACTS } from "@/src/lib/vat-facts"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "Article",
   headline: "VAT Refund & Audit Defense in Kenya - How to Win",
   description: "Navigate KRA VAT audits, survive the Special Table / Tax Alerts review, and recover excess input VAT within the 12-month refund window under Finance Act rules.",
@@ -16,7 +16,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const as const as const as const as const,
   "@type": "FAQPage",
   mainEntity: [
     {

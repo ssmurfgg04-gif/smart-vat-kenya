@@ -3,7 +3,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const articleSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "How to Register a KRA PIN for Individuals in Kenya (2026)",
   description: "Step-by-step guide to registering an individual KRA PIN online via iTax. Requirements, ID card upload, and activation.",
@@ -13,7 +13,7 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org" as const,
   "@type": "FAQPage",
   mainEntity: [
     {
