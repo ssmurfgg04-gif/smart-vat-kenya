@@ -94,7 +94,7 @@ export const KRA_FORMS: KRAForm[] = [
     category: "eTIMS",
     kind: "Manual",
     description:
-      "Using eTIMS Lite for non-VAT and small taxpayers — simplified invoicing from a phone or browser.",
+      "Using eTIMS Lite for non-VAT and small taxpayers - simplified invoicing from a phone or browser.",
     pages: 29,
     source: "kra.go.ke/images/publications/eTIMS-lite-VAT-User-Guide.2023.pdf",
   },
@@ -127,7 +127,7 @@ export const KRA_FORMS: KRAForm[] = [
     category: "eTIMS",
     kind: "Manual",
     description:
-      "Installing and using eTIMS PayPoint on Android — ideal for small and micro taxpayers invoicing on the go.",
+      "Installing and using eTIMS PayPoint on Android - ideal for small and micro taxpayers invoicing on the go.",
     pages: 30,
     source: "kra.go.ke/images/publications/eTIMS-Paypoint-Android-User-guide-2024.pdf",
   },

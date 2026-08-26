@@ -59,7 +59,7 @@ export default function KraPinPost() {
             Kenyan who earns income or owns property needs one.
           </p>
           <p>
-            In this guide you will learn how to apply for a KRA PIN — online through the iTax portal,
+            In this guide you will learn how to apply for a KRA PIN - online through the iTax portal,
             in person at a Huduma Centre, and via the KRA mobile app. We also cover how to check your
             PIN status, how to get a business PIN, and what non-residents need to do.
           </p>
@@ -83,7 +83,7 @@ export default function KraPinPost() {
               "Pay taxes to KRA through iTax",
               "Register for VAT or apply for a VAT refund",
               "Clear goods through customs at the port of Mombasa or JKIA",
-              "Secure formal employment — every employer requires your KRA PIN",
+              "Secure formal employment - every employer requires your KRA PIN",
               "Apply for a driving licence, passport, or other government services",
               "Register property or land transfers",
               "Access government tenders and procurement opportunities",
@@ -115,11 +115,11 @@ export default function KraPinPost() {
               "Visit itax.kra.go.ke. Click on the \"Register\" tab at the top of the page.",
               "Select whether you are registering as an Individual or a Business (Non-Individual). For a personal PIN, choose Individual.",
               "Fill in your full legal name, date of birth, gender, and nationality exactly as they appear on your national ID or passport. Any mismatch will delay processing.",
-              "Enter your contact details — a valid email address and a mobile phone number. KRA will send your PIN confirmation to these contacts.",
+              "Enter your contact details - a valid email address and a mobile phone number. KRA will send your PIN confirmation to these contacts.",
               "Provide your physical address details including your residential postal address, county, sub-county, location, and estate or building name.",
-              "Upload scanned copies of the required documents — your national ID or passport (both sides for ID), and a recent passport-size photograph (colour, plain background, max 500 KB).",
+              "Upload scanned copies of the required documents - your national ID or passport (both sides for ID), and a recent passport-size photograph (colour, plain background, max 500 KB).",
               "Review your application details carefully. Correct any errors before submitting.",
-              "Submit the application. You will receive an application reference number — save this for tracking.",
+              "Submit the application. You will receive an application reference number - save this for tracking.",
               "Wait for 1 to 3 working days. KRA will send your PIN via SMS and email. You can also check the status on iTax.",
             ].map((step, i) => (
               <li key={i} className="flex gap-3">
@@ -132,8 +132,8 @@ export default function KraPinPost() {
           <div className="border border-brand/25 bg-brand-muted rounded-lg p-4 text-[0.83rem] mt-4">
             <p className="font-semibold text-ink mb-0.5">Tip</p>
             <p className="text-ink-muted">
-              If the iTax portal is slow or unresponsive — which is common during peak hours
-              (8 AM to 12 PM) — try applying late in the evening or over the weekend. See our
+              If the iTax portal is slow or unresponsive - which is common during peak hours
+              (8 AM to 12 PM) - try applying late in the evening or over the weekend. See our
               <a href="/resources/itax-portal-not-working/" className="text-brand underline underline-offset-2 mx-1">
                 iTax troubleshooting guide
               </a>
@@ -186,7 +186,7 @@ export default function KraPinPost() {
             early. Smaller centres may take 1 to 2 working days to forward your application to KRA.
           </p>
           <p className="mt-3">
-            Huduma Centre walk-in service is free — you only pay for photocopies and
+            Huduma Centre walk-in service is free - you only pay for photocopies and
             passport photos if you do not have them ready.
           </p>
 
@@ -195,7 +195,7 @@ export default function KraPinPost() {
             KRA PIN Application via Mobile App
           </h2>
           <p>
-            KRA offers two mobile options for PIN applications — the KRA M-Service app and the
+            KRA offers two mobile options for PIN applications - the KRA M-Service app and the
             USSD code <strong>*572#</strong>. These options work best for individual PIN
             applications and are not recommended for business registrations.
           </p>
@@ -271,7 +271,7 @@ export default function KraPinPost() {
           </h2>
           <p>
             A business KRA PIN (also called a non-individual PIN) is required for any legal entity
-            that carries on business in Kenya — sole proprietorships, partnerships, limited
+            that carries on business in Kenya - sole proprietorships, partnerships, limited
             companies, and non-governmental organisations (NGOs). The process is similar to the
             individual application, with additional documentation requirements.
           </p>
@@ -292,7 +292,7 @@ export default function KraPinPost() {
           <p className="mt-3">
             You apply for a business PIN through the same iTax portal. Select
             <strong> Non-Individual</strong> during registration and choose your business structure
-            from the drop-down menu. The CR12 document is the most common requirement — it lists
+            from the drop-down menu. The CR12 document is the most common requirement - it lists
             your company directors, shareholders, and registered address.
           </p>
           <p>
@@ -303,9 +303,9 @@ export default function KraPinPost() {
 
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">KRA PIN for Non-Residents</h2>
           <p>
-            Non-residents who earn income from Kenya — such as freelance contractors, digital
+            Non-residents who earn income from Kenya - such as freelance contractors, digital
             service providers, landlords with Kenyan property, or employees of Kenyan companies
-            working remotely — must also obtain a KRA PIN.
+            working remotely - must also obtain a KRA PIN.
           </p>
           <p className="font-semibold text-ink mt-4">Requirements for non-residents:</p>
           <ul className="space-y-1.5">
@@ -315,7 +315,7 @@ export default function KraPinPost() {
               "Proof of foreign address (utility bill, bank statement, or rental agreement)",
               "Completed KRA PIN application form (Form IT-1 for individuals)",
               "Letter stating the source and nature of your Kenya-sourced income",
-              "Appointment of a tax representative in Kenya (this is a legal requirement — your representative must have their own KRA PIN and will handle your KRA correspondence)",
+              "Appointment of a tax representative in Kenya (this is a legal requirement - your representative must have their own KRA PIN and will handle your KRA correspondence)",
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <CheckCircle size={14} weight="fill" className="text-brand shrink-0 mt-1" />
@@ -324,7 +324,7 @@ export default function KraPinPost() {
             ))}
           </ul>
           <p className="mt-3">
-            Non-resident applications cannot be completed through the USSD or mobile app — you must
+            Non-resident applications cannot be completed through the USSD or mobile app - you must
             use the iTax portal or visit a Huduma Centre. Processing times may take longer (up to
             7 working days) because KRA must verify your foreign documents.
           </p>
@@ -338,7 +338,7 @@ export default function KraPinPost() {
           <div className="border border-brand/25 bg-brand-muted rounded-lg p-5 mt-8">
             <p className="font-semibold text-ink text-[0.9rem] mb-1">Need help getting your KRA PIN or VAT registration?</p>
             <p className="text-[0.83rem] text-ink-muted mb-3">
-              We handle the entire process for KES 5,000 — from PIN application to VAT registration.
+              We handle the entire process for KES 5,000 - from PIN application to VAT registration.
               First consultation is free.
             </p>
             <a href="https://wa.me/254717344440?text=I%20need%20help%20with%20KRA%20PIN%20or%20VAT%20registration"
@@ -359,7 +359,7 @@ export default function KraPinPost() {
                 <a href={slug} className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   {title}
                 </a>
-                <span className="text-ink-muted"> — {desc}</span>
+                <span className="text-ink-muted"> - {desc}</span>
               </li>
             ))}
           </ul>

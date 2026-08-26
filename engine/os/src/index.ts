@@ -1,5 +1,5 @@
 ﻿/**
- * SmartVAT OS — composition root.
+ * SmartVAT OS - composition root.
  *
  * Layers the gavaconnect KRA client under the compliance product layers so an
  * application can drive filings (via providers), deadlines, health scores,

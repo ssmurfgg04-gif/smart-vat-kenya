@@ -28,7 +28,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "KRA iTax Portal Not Working? Common iTax Errors and How to Fix Them (Kenya 2026)",
   description:
-    "Complete guide to fixing common KRA iTax portal errors in Kenya — login failures, OTP not received, system timeouts, browser issues, return validation errors, and what to do when the portal crashes on deadline day.",
+    "Complete guide to fixing common KRA iTax portal errors in Kenya - login failures, OTP not received, system timeouts, browser issues, return validation errors, and what to do when the portal crashes on deadline day.",
   author: {
     "@type": "Person",
     name: author.name,
@@ -60,7 +60,7 @@ const faqSchema = {
       name: "How do I fix 'Invalid PIN or Password' on iTax?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Check that Caps Lock is off — iTax passwords are case-sensitive. Ensure you are entering your KRA PIN in the correct format (e.g., A0123456789Z, all uppercase, no spaces). If you have forgotten your password, click 'Forgot Password' to receive a reset link via your registered email. If you cannot access that email, visit a KRA Huduma Centre in person with your ID.",
+        text: "Check that Caps Lock is off - iTax passwords are case-sensitive. Ensure you are entering your KRA PIN in the correct format (e.g., A0123456789Z, all uppercase, no spaces). If you have forgotten your password, click 'Forgot Password' to receive a reset link via your registered email. If you cannot access that email, visit a KRA Huduma Centre in person with your ID.",
       },
     },
     {
@@ -68,7 +68,7 @@ const faqSchema = {
       name: "What should I do if iTax says 'System Timeout'?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Clear your browser cache and cookies, then restart your browser. Use Google Chrome or Microsoft Edge (version 120 or newer) — Firefox sometimes has compatibility issues. Switch from 3G to 4G or Wi-Fi if you are on mobile data, or try a different internet connection. Finally, try logging in during off-peak hours (before 8 AM or after 10 PM) when the iTax servers are less congested.",
+        text: "Clear your browser cache and cookies, then restart your browser. Use Google Chrome or Microsoft Edge (version 120 or newer) - Firefox sometimes has compatibility issues. Switch from 3G to 4G or Wi-Fi if you are on mobile data, or try a different internet connection. Finally, try logging in during off-peak hours (before 8 AM or after 10 PM) when the iTax servers are less congested.",
       },
     },
     {
@@ -76,7 +76,7 @@ const faqSchema = {
       name: "Why am I not receiving the iTax OTP?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "SMS delays are common during peak periods. Wait at least 5 minutes and check your spam or blocked messages. If the SMS still does not arrive, try the email OTP option instead — the one-time password is sent to your registered email address. If neither works, your phone number or email may need updating. Visit a KRA Huduma Centre to update your contact details, or log in to iTax and update your profile if you can access your account through the agent portal.",
+        text: "SMS delays are common during peak periods. Wait at least 5 minutes and check your spam or blocked messages. If the SMS still does not arrive, try the email OTP option instead - the one-time password is sent to your registered email address. If neither works, your phone number or email may need updating. Visit a KRA Huduma Centre to update your contact details, or log in to iTax and update your profile if you can access your account through the agent portal.",
       },
     },
     {
@@ -92,7 +92,7 @@ const faqSchema = {
       name: "What happens if I cannot file my VAT return because iTax is down on the 20th?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "If the iTax portal is down on the deadline, take a screenshot of the error or downtime message as evidence. File as soon as the portal is back up. If KRA later imposes a late filing penalty, you can apply for a penalty waiver citing system downtime. However, KRA does not automatically excuse late filings due to portal issues — you must proactively apply for the waiver. To avoid this stress entirely, consider using a KRA-registered VAT agent like Smart VAT Kenya who can file on your behalf without you ever needing to log in to iTax.",
+        text: "If the iTax portal is down on the deadline, take a screenshot of the error or downtime message as evidence. File as soon as the portal is back up. If KRA later imposes a late filing penalty, you can apply for a penalty waiver citing system downtime. However, KRA does not automatically excuse late filings due to portal issues - you must proactively apply for the waiver. To avoid this stress entirely, consider using a KRA-registered VAT agent like Smart VAT Kenya who can file on your behalf without you ever needing to log in to iTax.",
       },
     },
   ],
@@ -163,9 +163,9 @@ export default function ITaxPortalNotWorkingPage() {
 
         {/* Quick Answer / BLUF */}
         <div className="border-l-[3px] border-brand pl-5 mb-10">
-          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer — 60-Second Workaround</p>
+          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer - 60-Second Workaround</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            iTax down again? Don&apos;t keep refreshing. Most failures are <strong className="text-ink">cache, OTP delay, or 20th rush</strong> — fixed in 60 seconds: clear cache, switch to <strong className="text-ink">Chrome/Edge</strong>, try before 8am or after 10pm, or reset credentials. Or skip iTax entirely — <strong className="text-ink">we file via the agent portal (no queues)</strong> for <strong className="text-ink">KES 3,500/month</strong> and you never log in again. <a href="https://wa.me/254717344440?text=iTax%20not%20working%20-%20need%20help%20filing" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">WhatsApp us, we file it today</a>.
+            iTax down again? Don&apos;t keep refreshing. Most failures are <strong className="text-ink">cache, OTP delay, or 20th rush</strong> - fixed in 60 seconds: clear cache, switch to <strong className="text-ink">Chrome/Edge</strong>, try before 8am or after 10pm, or reset credentials. Or skip iTax entirely - <strong className="text-ink">we file via the agent portal (no queues)</strong> for <strong className="text-ink">KES 3,500/month</strong> and you never log in again. <a href="https://wa.me/254717344440?text=iTax%20not%20working%20-%20need%20help%20filing" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">WhatsApp us, we file it today</a>.
           </p>
         </div>
 
@@ -188,7 +188,7 @@ export default function ITaxPortalNotWorkingPage() {
 
         <article className="space-y-14">
 
-          {/* Section 0 — Current iTax Status */}
+          {/* Section 0 - Current iTax Status */}
           <section id="current-status" aria-labelledby="current-status-h" className="scroll-mt-20">
             <h2 id="current-status-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Is iTax Down Right Now?
@@ -196,7 +196,7 @@ export default function ITaxPortalNotWorkingPage() {
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
                 Before you go through the troubleshooting steps below, check whether iTax is currently down
-                for everyone — or if the problem is on your end.
+                for everyone - or if the problem is on your end.
               </p>
               <div className="grid sm:grid-cols-2 gap-3">
                 <a href="https://downdetector.co.ke/status/itax/" target="_blank" rel="noopener noreferrer"
@@ -226,14 +226,14 @@ export default function ITaxPortalNotWorkingPage() {
                 <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
                   <strong className="text-ink">Can't afford to wait?</strong> Smart VAT Kenya files returns
-                  through the KRA agent portal — a separate system with better reliability. We never experience
+                  through the KRA agent portal - a separate system with better reliability. We never experience
                   the iTax login queues, timeouts, or OTP delays that plague the public portal.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Section 1 — Invalid PIN or Password */}
+          {/* Section 1 - Invalid PIN or Password */}
           <section id="invalid-pin" aria-labelledby="invalid-pin-h">
             <h2 id="invalid-pin-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               "Invalid PIN or Password" &mdash; Cannot Log In to iTax
@@ -276,7 +276,7 @@ export default function ITaxPortalNotWorkingPage() {
             </div>
           </section>
 
-          {/* Section 2 — System Timeout */}
+          {/* Section 2 - System Timeout */}
           <section id="system-timeout" aria-labelledby="system-timeout-h">
             <h2 id="system-timeout-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               "System Timeout" or "Session Expired" &mdash; iTax Keeps Logging You Out
@@ -336,7 +336,7 @@ export default function ITaxPortalNotWorkingPage() {
             </div>
           </section>
 
-          {/* Section 3 — Page Not Loading / Error 500 */}
+          {/* Section 3 - Page Not Loading / Error 500 */}
           <section id="page-not-loading" aria-labelledby="page-not-loading-h">
             <h2 id="page-not-loading-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               "Page Not Loading" or "Error 500" &mdash; iTax Server Down
@@ -353,7 +353,7 @@ export default function ITaxPortalNotWorkingPage() {
                   },
                   {
                     title: "Wait 30-60 minutes and try again",
-                    desc: "Most iTax outages resolve within an hour. KRA typically restarts the servers or clears the backlog during this window. Do not keep refreshing every 30 seconds — this can get your IP temporarily blocked.",
+                    desc: "Most iTax outages resolve within an hour. KRA typically restarts the servers or clears the backlog during this window. Do not keep refreshing every 30 seconds - this can get your IP temporarily blocked.",
                   },
                   {
                     title: "Try after 10 PM or before 6 AM",
@@ -380,7 +380,7 @@ export default function ITaxPortalNotWorkingPage() {
                 </p>
               </div>
               <p>
-                For a dedicated guide to iTax Error 500 — including how to distinguish an outage from a local issue, expected recovery times, and what to do on deadline day — see our{" "}
+                For a dedicated guide to iTax Error 500 - including how to distinguish an outage from a local issue, expected recovery times, and what to do on deadline day - see our{" "}
                 <a href="/resources/kra-status-code-500-itax-errors/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   KRA Status Code 500 guide
                 </a>.
@@ -388,14 +388,14 @@ export default function ITaxPortalNotWorkingPage() {
             </div>
           </section>
 
-          {/* Section 4 — OTP Not Received */}
+          {/* Section 4 - OTP Not Received */}
           <section id="otp-not-received" aria-labelledby="otp-not-received-h">
             <h2 id="otp-not-received-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               "OTP Not Received" &mdash; SMS One-Time Password Delays
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                iTax sends a One-Time Password (OTP) via SMS every time you log in. During peak periods, these SMS messages can take 10-30 minutes to arrive — or may not arrive at all. Here is what to do.
+                iTax sends a One-Time Password (OTP) via SMS every time you log in. During peak periods, these SMS messages can take 10-30 minutes to arrive - or may not arrive at all. Here is what to do.
               </p>
               <div className="space-y-3">
                 {[
@@ -431,7 +431,7 @@ export default function ITaxPortalNotWorkingPage() {
             </div>
           </section>
 
-          {/* Section 5 — Forgot Password Issues */}
+          {/* Section 5 - Forgot Password Issues */}
           <section id="forgot-password" aria-labelledby="forgot-password-h">
             <h2 id="forgot-password-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               "Forgot Password" Not Working or Reset Link Not Arriving
@@ -477,7 +477,7 @@ export default function ITaxPortalNotWorkingPage() {
             </div>
           </section>
 
-          {/* Section 6 — Return Validation Failed */}
+          {/* Section 6 - Return Validation Failed */}
           <section id="return-validation" aria-labelledby="return-validation-h">
             <h2 id="return-validation-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               "Return Validation Failed" &mdash; iTax Rejects Your VAT Return
@@ -490,7 +490,7 @@ export default function ITaxPortalNotWorkingPage() {
                 {[
                   {
                     title: "Decimal format error",
-                    desc: "iTax expects decimal places to use a dot (.) not a comma (,). Entering '1,500.50' instead of '1500.50' can trigger validation failure. Do not include thousand separators at all — type '1500.50' exactly.",
+                    desc: "iTax expects decimal places to use a dot (.) not a comma (,). Entering '1,500.50' instead of '1500.50' can trigger validation failure. Do not include thousand separators at all - type '1500.50' exactly.",
                   },
                   {
                     title: "Missing required fields",
@@ -498,7 +498,7 @@ export default function ITaxPortalNotWorkingPage() {
                   },
                   {
                     title: "Excel upload format mismatch",
-                    desc: "If you are using the Excel upload feature, your spreadsheet must match KRA's exact column template — same headers, same order, no extra columns. Download a fresh template from iTax each month and paste your data into it.",
+                    desc: "If you are using the Excel upload feature, your spreadsheet must match KRA's exact column template - same headers, same order, no extra columns. Download a fresh template from iTax each month and paste your data into it.",
                   },
                   {
                     title: "PIN does not match the registered business name",
@@ -520,7 +520,7 @@ export default function ITaxPortalNotWorkingPage() {
             </div>
           </section>
 
-          {/* Section 7 — Already Submitted Error */}
+          {/* Section 7 - Already Submitted Error */}
           <section id="already-submitted" aria-labelledby="already-submitted-h">
             <h2 id="already-submitted-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               "Already Submitted" Error &mdash; Did iTax Already Receive Your Return?
@@ -533,7 +533,7 @@ export default function ITaxPortalNotWorkingPage() {
                 {[
                   {
                     title: "Check your return history before re-submitting",
-                    desc: "Go to 'Returns' then 'File VAT Return' and look at the status for the period in question. If it shows 'Filed' or 'Pending', your return was received. Do not submit again — filing a duplicate can trigger a penalty.",
+                    desc: "Go to 'Returns' then 'File VAT Return' and look at the status for the period in question. If it shows 'Filed' or 'Pending', your return was received. Do not submit again - filing a duplicate can trigger a penalty.",
                   },
                   {
                     title: "Look for the submission receipt in your email",
@@ -559,7 +559,7 @@ export default function ITaxPortalNotWorkingPage() {
             </div>
           </section>
 
-          {/* Section 8 — Browser Compatibility Warning */}
+          {/* Section 8 - Browser Compatibility Warning */}
           <section id="browser-compat" aria-labelledby="browser-compat-h">
             <h2 id="browser-compat-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               "Browser Compatibility" Warning &mdash; iTax Looks Broken
@@ -603,7 +603,7 @@ export default function ITaxPortalNotWorkingPage() {
             </div>
           </section>
 
-          {/* Section 9 — eTIMS / iTax Login Confusion */}
+          {/* Section 9 - eTIMS / iTax Login Confusion */}
           <section id="etims-confusion" aria-labelledby="etims-confusion-h">
             <h2 id="etims-confusion-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               eTIMS / iTax Login Confusion &mdash; Wrong Portal, Wrong Password
@@ -646,14 +646,14 @@ export default function ITaxPortalNotWorkingPage() {
                     Quick check: which portal are you on?
                   </p>
                   <p className="text-[0.83rem] text-[#8a6500] dark:text-[#ccaa33] leading-relaxed">
-                    Look at the URL in your browser address bar. If it says <strong>itax.kra.go.ke</strong>, you are on iTax. If it says <strong>etims.kra.go.ke</strong>, you are on eTIMS. The two portals also look different — iTax has a blue and white interface, while eTIMS has a green theme. If the page looks unfamiliar, check the URL first.
+                    Look at the URL in your browser address bar. If it says <strong>itax.kra.go.ke</strong>, you are on iTax. If it says <strong>etims.kra.go.ke</strong>, you are on eTIMS. The two portals also look different - iTax has a blue and white interface, while eTIMS has a green theme. If the page looks unfamiliar, check the URL first.
                   </p>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Section 10 — KRA PIN Locked */}
+          {/* Section 10 - KRA PIN Locked */}
           <section id="pin-locked" aria-labelledby="pin-locked-h">
             <h2 id="pin-locked-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               KRA PIN Locked &mdash; Too Many Failed Login Attempts
@@ -666,7 +666,7 @@ export default function ITaxPortalNotWorkingPage() {
                 {[
                   {
                     title: "Wait for the automatic unlock",
-                    desc: "The lock is usually temporary. Wait at least one hour before attempting to log in again. Do not keep trying — each failed attempt during the lock period extends the lock time.",
+                    desc: "The lock is usually temporary. Wait at least one hour before attempting to log in again. Do not keep trying - each failed attempt during the lock period extends the lock time.",
                   },
                   {
                     title: "Reset your password while locked",
@@ -696,7 +696,7 @@ export default function ITaxPortalNotWorkingPage() {
             </div>
           </section>
 
-          {/* Section 11 — Prevention */}
+          {/* Section 11 - Prevention */}
           <section id="prevention" aria-labelledby="prevention-h">
             <h2 id="prevention-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Prevention: Never Deal with iTax Errors Again
@@ -712,12 +712,12 @@ export default function ITaxPortalNotWorkingPage() {
                 <p className="font-semibold text-ink text-[0.9rem] mb-3">Here is what you get for KES 3,500/month:</p>
                 <ul className="space-y-2">
                   {[
-                    "Monthly VAT return filed on iTax before the 20th deadline — every single month, guaranteed.",
+                    "Monthly VAT return filed on iTax before the 20th deadline - every single month, guaranteed.",
                     "No more login errors, no more OTP delays, no more browser compatibility warnings.",
-                    "We prepare your return from your sales and purchase records — you just send us the figures on WhatsApp.",
-                    "Penalty monitoring — we alert you if KRA has applied any penalties to your account.",
-                    "Free eTIMS support — we help you with invoice generation and eTIMS troubleshooting.",
-                    "Dedicated WhatsApp line — reach us anytime, not when iTax decides to work.",
+                    "We prepare your return from your sales and purchase records - you just send us the figures on WhatsApp.",
+                    "Penalty monitoring - we alert you if KRA has applied any penalties to your account.",
+                    "Free eTIMS support - we help you with invoice generation and eTIMS troubleshooting.",
+                    "Dedicated WhatsApp line - reach us anytime, not when iTax decides to work.",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-[0.85rem] text-ink-soft">
                       <CheckCircle size={15} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -742,7 +742,7 @@ export default function ITaxPortalNotWorkingPage() {
                   target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
-                  Start Auto-Filing — KES 3,500/month
+                  Start Auto-Filing - KES 3,500/month
                   <ArrowRight size={14} weight="bold" aria-hidden="true" />
                 </a>
               </div>

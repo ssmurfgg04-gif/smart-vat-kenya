@@ -201,7 +201,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "etims-invoice-rejected": {
     title: "eTIMS Invoice Rejected? Fix It Fast",
-    description: "Your eTIMS invoice was rejected by KRA — here's why and exactly how to fix common errors like invalid PIN, duplicate invoice, and stock mismatch.",
+    description: "Your eTIMS invoice was rejected by KRA - here's why and exactly how to fix common errors like invalid PIN, duplicate invoice, and stock mismatch.",
     canonical: "/resources/etims-invoice-rejected/",
   },
   "etims-mandate-guide": {
@@ -256,7 +256,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "how-to-calculate-vat-in-kenya": {
     title: "How to Calculate VAT Kenya: 16% Formula",
-    description: "Learn how to calculate 16% VAT in Kenya — VAT exclusive vs inclusive formulas, zero-rated vs exempt, and a free KRA VAT calculator you can use instantly.",
+    description: "Learn how to calculate 16% VAT in Kenya - VAT exclusive vs inclusive formulas, zero-rated vs exempt, and a free KRA VAT calculator you can use instantly.",
     canonical: "/resources/how-to-calculate-vat-in-kenya/",
   },
   "how-to-file-nil-returns-2026": {
@@ -341,7 +341,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "kra-data-sources": {
     title: "KRA Data Sources: Official VAT Data",
-    description: "Where analysts source official KRA data: KRA Publications, iKESRA, GavaConnect APIs, openAFRICA, KNBS and National Treasury — free download pages.",
+    description: "Where analysts source official KRA data: KRA Publications, iKESRA, GavaConnect APIs, openAFRICA, KNBS and National Treasury - free download pages.",
     canonical: "/resources/kra-data-sources/",
   },
   "mpesa-error-codes": {
@@ -461,7 +461,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "vat-vs-turnover-tax": {
     title: "Turnover Tax vs VAT: Which Applies?",
-    description: "Turnover tax (3% of gross sales) vs VAT (16%, input deductible) — which applies to your business? Thresholds, compliance burden, and switching rules.",
+    description: "Turnover tax (3% of gross sales) vs VAT (16%, input deductible) - which applies to your business? Thresholds, compliance burden, and switching rules.",
     canonical: "/resources/vat-vs-turnover-tax/",
   },
   "what-happens-if-i-don-t-register-for-vat": {

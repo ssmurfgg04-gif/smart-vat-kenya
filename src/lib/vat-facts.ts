@@ -1,13 +1,13 @@
 // SINGLE SOURCE OF TRUTH for all legal/commercial facts on the site.
 // Rule: every page imports from here. Never hardcode a number elsewhere.
-// Update ONLY when law changes (Finance Act season) — then bump LAST_VERIFIED.
+// Update ONLY when law changes (Finance Act season) - then bump LAST_VERIFIED.
 
 export const FACTS = {
   lastVerified: "2026-08-08",
   standardRate: "16%",
   standardRateSource: "VAT Act (Cap. 476); KRA VAT page, verified 2026-08-08",
 
-  // THRESHOLD — decision tree outcome: KRA + PwC both say 5M operative as of 2026-08-08
+  // THRESHOLD - decision tree outcome: KRA + PwC both say 5M operative as of 2026-08-08
   mandatoryThreshold: "KES 5,000,000",
   voluntaryFrom: "below KES 5,000,000",
   thresholdStatus: "KRA official guidance applies KES 5M (verified 2026-08-08); an increase to KES 8M has been reported via Finance Act 2025 commentary.",
@@ -20,7 +20,7 @@ export const FACTS = {
   latePaymentPenalty: "5% of unpaid tax plus 1% interest per month",
 
   nonRegistrationPenalty: "KES 100,000 per month (TPA s.95)",
-  nonRegistrationSource: "Tax Procedures Act (Cap. 469), s.95 — verified 2026-08-08",
+  nonRegistrationSource: "Tax Procedures Act (Cap. 469), s.95 - verified 2026-08-08",
 
   etimsNonCompliance: "2x tax due, with Finance Act 2026 minimums of KES 100,000 (companies) / KES 10,000 (individuals)",
   etimsNonComplianceSource: "TPA s.86 as amended by Finance Act 2026 (Business Daily, 26 Jul 2026)",

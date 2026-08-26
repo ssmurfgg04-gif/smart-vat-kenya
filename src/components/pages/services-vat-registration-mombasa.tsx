@@ -37,7 +37,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": "https://smartvatkenya.co.ke/services/vat-registration-mombasa#business",
-  name: "Smart VAT Kenya — Mombasa Service",
+  name: "Smart VAT Kenya - Mombasa Service",
   description:
     "Remote VAT registration services for Mombasa businesses. KES 5,000 flat fee. WhatsApp-based service covering Mombasa CBD, Nyali, Bamburi, Changamwe, and all Mombasa County.",
   url: "https://smartvatkenya.co.ke/services/vat-registration-mombasa",
@@ -65,7 +65,7 @@ const serviceSchema = {
   "@id": "https://smartvatkenya.co.ke/services/vat-registration-mombasa#service",
   name: "VAT Registration Services Mombasa",
   description:
-    "Professional KRA VAT registration in Mombasa — KES 5,000 flat fee, done in 1–3 working days. iTax VAT Form 1, PIN generation, and eTIMS guidance included. WhatsApp-based, no office visit needed. M-PESA accepted.",
+    "Professional KRA VAT registration in Mombasa - KES 5,000 flat fee, done in 1–3 working days. iTax VAT Form 1, PIN generation, and eTIMS guidance included. WhatsApp-based, no office visit needed. M-PESA accepted.",
   provider: { "@type": "Organization", name: "Smart VAT Kenya" },
   areaServed: {
     "@type": "City",
@@ -91,7 +91,7 @@ const faqSchema = {
       name: "Can Smart VAT Kenya handle Mombasa KRA matters?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. KRA iTax is a centralised online portal — all VAT registration, filing, and compliance is done digitally regardless of where your business is located. Being in Mombasa or anywhere on the Coast makes no difference. We handle everything remotely with the same speed and quality as we do for Nairobi businesses.",
+        text: "Yes. KRA iTax is a centralised online portal - all VAT registration, filing, and compliance is done digitally regardless of where your business is located. Being in Mombasa or anywhere on the Coast makes no difference. We handle everything remotely with the same speed and quality as we do for Nairobi businesses.",
       },
     },
     {
@@ -107,7 +107,7 @@ const faqSchema = {
       name: "What if I am in Ukunda, Diani, or other parts of the Coast?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We serve businesses across the entire Kenyan Coast — including Ukunda, Diani, Kwale, Kilifi, Malindi, and Watamu. Since everything is done remotely via WhatsApp, your location does not matter. KES 5,000 flat fee applies to all businesses nationwide.",
+        text: "We serve businesses across the entire Kenyan Coast - including Ukunda, Diani, Kwale, Kilifi, Malindi, and Watamu. Since everything is done remotely via WhatsApp, your location does not matter. KES 5,000 flat fee applies to all businesses nationwide.",
       },
     },
     {
@@ -153,14 +153,14 @@ const areas = [
 ]
 
 const whyUs = [
-  { Icon: Phone, title: "Fully remote — no office visit", desc: "You never need to step into an office. Everything happens over WhatsApp, from document collection to PIN delivery." },
+  { Icon: Phone, title: "Fully remote - no office visit", desc: "You never need to step into an office. Everything happens over WhatsApp, from document collection to PIN delivery." },
   { Icon: ChatCircle, title: "WhatsApp-based communication", desc: "Real-time updates, no chasing. You get a clear paper trail of every step we take on your registration." },
-  { Icon: CurrencyDollar, title: "M-PESA payments only", desc: "Pay via M-PESA — no bank transfers, no queuing at a bank, no credit card needed." },
-  { Icon: MapPin, title: "Serving the entire Coast", desc: "From Mombasa CBD to Ukunda, Kilifi to Malindi — we serve every business on the Kenyan Coast remotely." },
+  { Icon: CurrencyDollar, title: "M-PESA payments only", desc: "Pay via M-PESA - no bank transfers, no queuing at a bank, no credit card needed." },
+  { Icon: MapPin, title: "Serving the entire Coast", desc: "From Mombasa CBD to Ukunda, Kilifi to Malindi - we serve every business on the Kenyan Coast remotely." },
 ]
 
 const mombasaBusinessTypes = [
-  { emoji: "🚢", title: "Importers & Exporters", desc: "Mombasa is Kenya's gateway for international trade. If you import or export goods, VAT registration is mandatory — and eTIMS compliance is required for customs clearance." },
+  { emoji: "🚢", title: "Importers & Exporters", desc: "Mombasa is Kenya's gateway for international trade. If you import or export goods, VAT registration is mandatory - and eTIMS compliance is required for customs clearance." },
   { emoji: "🏨", title: "Hotels & Tourism", desc: "From Diani to Malindi, hospitality businesses charging 16% VAT must be registered. Input VAT claims on supplies, utilities, and renovations help reduce your tax bill." },
   { emoji: "📦", title: "Logistics & Shipping", desc: "Freight forwarding, clearing & forwarding, and transport companies need VAT registration to issue compliant invoices and claim input VAT on fuel, maintenance, and port charges." },
 ]
@@ -184,9 +184,9 @@ const steps = [
     Icon: FileText,
     title: "We Handle iTax Remotely",
     description:
-      "We log into KRA iTax, update your profile, complete VAT Form 1, and submit your application — all remotely. You get WhatsApp updates at every stage.",
+      "We log into KRA iTax, update your profile, complete VAT Form 1, and submit your application - all remotely. You get WhatsApp updates at every stage.",
     details: [
-      "KRA iTax portal — fully handled",
+      "KRA iTax portal - fully handled",
       "Profile update completed remotely",
       "VAT Form 1 submitted",
       "WhatsApp updates throughout",
@@ -214,7 +214,7 @@ const faqs = [
   },
   {
     q: "Can Smart VAT Kenya handle Mombasa KRA matters?",
-    a: "Yes. KRA iTax is a centralised online portal — all VAT registration, filing, and compliance is done digitally regardless of where your business is located. Being in Mombasa or anywhere on the Coast makes no difference. We handle everything remotely with the same speed and quality as we do for Nairobi businesses.",
+    a: "Yes. KRA iTax is a centralised online portal - all VAT registration, filing, and compliance is done digitally regardless of where your business is located. Being in Mombasa or anywhere on the Coast makes no difference. We handle everything remotely with the same speed and quality as we do for Nairobi businesses.",
   },
   {
     q: "How do I pay for VAT registration in Mombasa?",
@@ -222,7 +222,7 @@ const faqs = [
   },
   {
     q: "What if I am in Ukunda, Diani, or other parts of the Coast?",
-    a: "We serve businesses across the entire Kenyan Coast — including Ukunda, Diani, Kwale, Kilifi, Malindi, and Watamu. Since everything is done remotely via WhatsApp, your location does not matter. KES 5,000 flat fee applies to all businesses nationwide.",
+    a: "We serve businesses across the entire Kenyan Coast - including Ukunda, Diani, Kwale, Kilifi, Malindi, and Watamu. Since everything is done remotely via WhatsApp, your location does not matter. KES 5,000 flat fee applies to all businesses nationwide.",
   },
   {
     q: "How long does VAT registration take for a Mombasa business?",
@@ -256,7 +256,7 @@ export default function VATRegistrationMombasaPage() {
             Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
-            VAT Registration Services Mombasa — KES 5,000
+            VAT Registration Services Mombasa - KES 5,000
           </h1>
           <div className="flex items-start gap-3 bg-canvas/10 rounded-lg p-4 mb-6 max-w-[550px]">
             <Phone size={18} weight="duotone" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -266,7 +266,7 @@ export default function VATRegistrationMombasaPage() {
             </p>
           </div>
           <p className="text-[0.95rem] text-canvas/70 max-w-[50ch] leading-relaxed mb-6">
-            Professional KRA VAT registration at a flat fee — fully remote, M-PESA accepted, 
+            Professional KRA VAT registration at a flat fee - fully remote, M-PESA accepted, 
             and delivered to your phone in 1–3 working days. Serving Mombasa CBD, Nyali, 
             Bamburi, Changamwe, and the entire Coast.
           </p>
@@ -311,7 +311,7 @@ export default function VATRegistrationMombasaPage() {
             </h2>
             <p className="text-[0.93rem] text-ink-muted leading-relaxed max-w-[44ch]">
               Your KES 5,000 covers end-to-end handling of the iTax VAT registration
-              process — fully remote, delivered to your WhatsApp. No add-ons, no upsells.
+              process - fully remote, delivered to your WhatsApp. No add-ons, no upsells.
             </p>
           </div>
           <ul className="space-y-3.5" role="list">
@@ -368,7 +368,7 @@ export default function VATRegistrationMombasaPage() {
           </h2>
           <p className="text-[0.93rem] text-ink-muted leading-relaxed max-w-[50ch] mb-10">
             Based in Mombasa or anywhere on the Coast? We serve the following areas 
-            and beyond — all remotely via WhatsApp.
+            and beyond - all remotely via WhatsApp.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3" role="list">
             {areas.map((area) => (
@@ -399,7 +399,7 @@ export default function VATRegistrationMombasaPage() {
           </h2>
           <p className="text-[0.9rem] text-ink-muted leading-relaxed max-w-[55ch] mb-10">
             Mombasa's economy is driven by the port, tourism, and logistics. Here is how VAT
-            registration applies to common Coast-based businesses — and how we help.
+            registration applies to common Coast-based businesses - and how we help.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             {mombasaBusinessTypes.map(({ emoji, title, desc }) => (
@@ -428,7 +428,7 @@ export default function VATRegistrationMombasaPage() {
             id="steps-heading"
             className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-10 text-balance"
           >
-            Three steps to your VAT PIN — no office visit needed.
+            Three steps to your VAT PIN - no office visit needed.
           </h2>
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
@@ -468,7 +468,7 @@ export default function VATRegistrationMombasaPage() {
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.1rem] font-semibold text-ink">
-              KES 5,000 — VAT registration for Mombasa
+              KES 5,000 - VAT registration for Mombasa
             </p>
             <p className="text-[0.85rem] text-ink-muted mt-1">
               Fully remote via WhatsApp. No office visit needed. Done in 1–3 working days.
@@ -499,7 +499,7 @@ export default function VATRegistrationMombasaPage() {
             id="faq-heading"
             className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-10 text-balance"
           >
-            VAT registration for Mombasa businesses — answered.
+            VAT registration for Mombasa businesses - answered.
           </h2>
 
           <div className="space-y-6">
@@ -522,7 +522,7 @@ export default function VATRegistrationMombasaPage() {
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <h2 className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-canvas mb-2 text-balance">
-              Register for VAT in Mombasa — KES 5,000.
+              Register for VAT in Mombasa - KES 5,000.
             </h2>
             <p className="text-[0.88rem] text-canvas/65 max-w-[40ch]">
               Message us on WhatsApp now. No office visit required. We confirm we can help before any payment.

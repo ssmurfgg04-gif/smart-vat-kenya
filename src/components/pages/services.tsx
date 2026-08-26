@@ -68,13 +68,13 @@ const serviceFaqs = [
     q: "When is the monthly VAT return due in Kenya?",
     a: "VAT returns and payment are due by the 20th of the month following the tax period. We file client returns on the 17th so there is room to fix iTax errors before the KRA deadline. Late filing costs the higher of KES 10,000 or 5% of the tax due, plus 1% monthly interest.",
     href: "/services/monthly-vat-filing/",
-    linkLabel: "Monthly VAT filing service — KES 3,500/month",
+    linkLabel: "Monthly VAT filing service - KES 3,500/month",
   },
   {
     q: "Do you handle eTIMS onboarding and KRA penalties too?",
     a: "Yes. eTIMS onboarding guidance is included with every registration, and we also handle standalone eTIMS onboarding and KRA penalty waiver applications for businesses that already have outstanding VAT penalties.",
     href: "/services/kra-penalty-waiver/",
-    linkLabel: "KRA penalty waiver application — KES 4,000",
+    linkLabel: "KRA penalty waiver application - KES 4,000",
   },
 ]
 
@@ -121,9 +121,9 @@ const services = [
     featured: true,
     waText: "I%20want%20the%20KES%203500%20Monthly%20VAT%20Filing%20service",
     summary:
-      "Filed before the 20th, every month — without you having to think about it. We file on the 17th.",
+      "Filed before the 20th, every month - without you having to think about it. We file on the 17th.",
     features: [
-      "Filed by the 20th — always",
+      "Filed by the 20th - always",
       "We file on the 17th, not the 20th",
       "Avoids KES 10,000 late penalty",
       "M-PESA payment guidance",
@@ -324,13 +324,13 @@ export default function ServicesPage() {
             id="areas-heading"
             className="font-display text-[clamp(1.4rem,2.5vw,2rem)] font-semibold text-ink tracking-tight mb-6 text-balance"
           >
-            VAT registration, filing &amp; eTIMS — in Kenya's major cities
+            VAT registration, filing &amp; eTIMS - in Kenya's major cities
           </h2>
           <div className="grid gap-4 sm:grid-cols-3">
             {[
-              { href: "/services/vat-registration-nairobi/", city: "Nairobi", desc: "KRA VAT registration for Nairobi businesses — flat KES 5,000, done in 1–3 working days." },
-              { href: "/services/vat-registration-mombasa/", city: "Mombasa", desc: "VAT registration and filing for Mombasa companies and traders — same flat pricing." },
-              { href: "/services/vat-registration-kisumu/", city: "Kisumu", desc: "VAT registration and filing for Kisumu SMEs — handled end-to-end via WhatsApp." },
+              { href: "/services/vat-registration-nairobi/", city: "Nairobi", desc: "KRA VAT registration for Nairobi businesses - flat KES 5,000, done in 1–3 working days." },
+              { href: "/services/vat-registration-mombasa/", city: "Mombasa", desc: "VAT registration and filing for Mombasa companies and traders - same flat pricing." },
+              { href: "/services/vat-registration-kisumu/", city: "Kisumu", desc: "VAT registration and filing for Kisumu SMEs - handled end-to-end via WhatsApp." },
             ].map((l) => (
               <a
                 key={l.href}
@@ -464,7 +464,7 @@ export default function ServicesPage() {
                   { href: "/resources/vat-registration-checklist/", label: "VAT registration document checklist", description: "Everything KRA asks for before your application goes through." },
                   { href: "/resources/kra-vat-penalties-reference/", label: "KRA VAT penalties reference", description: "Late filing, late payment, non-registration, and eTIMS fines." },
                   { href: "/resources/etims-onboarding-guide/", label: "eTIMS onboarding guide", description: "Which eTIMS option fits your business and how to get compliant." },
-                  { href: "/tools/", label: "Free KRA VAT calculator", description: "16% VAT, reverse VAT, and penalty estimates — no sign-up." },
+                  { href: "/tools/", label: "Free KRA VAT calculator", description: "16% VAT, reverse VAT, and penalty estimates - no sign-up." },
                 ]}
               />
             </div>

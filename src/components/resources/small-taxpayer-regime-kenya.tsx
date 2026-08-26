@@ -16,7 +16,7 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Small Taxpayer Regime Kenya — VAT, Turnover Tax, and Simplified Compliance Guide 2026",
+  headline: "Small Taxpayer Regime Kenya - VAT, Turnover Tax, and Simplified Compliance Guide 2026",
   description:
     "Complete guide to Kenya's small taxpayer regime. Understand the KES 5M VAT threshold, turnover tax rules, eTIMS obligations for small businesses, voluntary VAT registration, and how to choose the right tax regime for your business.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -52,7 +52,7 @@ const faqSchema = {
       name: "If I am a small taxpayer, do I still need eTIMS?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The Finance Act 2023 amended the Tax Procedures Act to require ALL persons engaged in business to use eTIMS, regardless of turnover. This means even if you pay turnover tax and are not VAT-registered, you must issue eTIMS-compliant invoices. Small businesses should use eTIMS Lite, which is free and accessed through a web browser. Issuing a non-compliant invoice attracts the TPA s.86 penalty — since 1 July 2026, the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals) — and non-integration after notice costs up to KES 100,000 per month (TPA s.59A(5), turnover above KES 5 million).",
+        text: "Yes. The Finance Act 2023 amended the Tax Procedures Act to require ALL persons engaged in business to use eTIMS, regardless of turnover. This means even if you pay turnover tax and are not VAT-registered, you must issue eTIMS-compliant invoices. Small businesses should use eTIMS Lite, which is free and accessed through a web browser. Issuing a non-compliant invoice attracts the TPA s.86 penalty - since 1 July 2026, the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals) - and non-integration after notice costs up to KES 100,000 per month (TPA s.59A(5), turnover above KES 5 million).",
       },
     },
     {
@@ -60,7 +60,7 @@ const faqSchema = {
       name: "Can a small business voluntarily register for VAT below the KES 5 million threshold?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Voluntary VAT registration allows businesses below the KES 5 million threshold to register for VAT. The main benefit is that you can claim input VAT on your purchases — laptops, software, rent, professional fees, etc. This can improve your cash flow if you sell to VAT-registered customers who can claim input VAT on purchases from you. However, you must charge 16% VAT on your sales, which may make your prices less competitive for non-VAT customers.",
+        text: "Yes. Voluntary VAT registration allows businesses below the KES 5 million threshold to register for VAT. The main benefit is that you can claim input VAT on your purchases - laptops, software, rent, professional fees, etc. This can improve your cash flow if you sell to VAT-registered customers who can claim input VAT on purchases from you. However, you must charge 16% VAT on your sales, which may make your prices less competitive for non-VAT customers.",
       },
     },
     {
@@ -68,7 +68,7 @@ const faqSchema = {
       name: "What is the difference between Turnover Tax and VAT?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Turnover Tax (TOT) is 1-3% on gross sales, paid monthly or annually. It is simpler — no input VAT claims, no complex returns. VAT is 16% on the value added, with input VAT deductions on purchases. VAT requires monthly filing on iTax and full eTIMS compliance. The decision between the two depends on your turnover, profit margins, customer type (B2B vs B2C), and whether you want to claim input VAT.",
+        text: "Turnover Tax (TOT) is 1-3% on gross sales, paid monthly or annually. It is simpler - no input VAT claims, no complex returns. VAT is 16% on the value added, with input VAT deductions on purchases. VAT requires monthly filing on iTax and full eTIMS compliance. The decision between the two depends on your turnover, profit margins, customer type (B2B vs B2C), and whether you want to claim input VAT.",
       },
     },
     {
@@ -76,7 +76,7 @@ const faqSchema = {
       name: "As a small taxpayer, should I register for VAT voluntarily?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "It depends on your customer base and margins. If most of your customers are VAT-registered businesses (B2B), voluntary registration allows them to claim input VAT on purchases from you, which can increase your sales. You also get to claim input VAT on your own purchases. If most customers are individual consumers (B2C), adding 16% VAT makes your prices higher — staying on turnover tax is usually better. We recommend speaking with a KRA-registered agent to run the numbers for your specific business.",
+        text: "It depends on your customer base and margins. If most of your customers are VAT-registered businesses (B2B), voluntary registration allows them to claim input VAT on purchases from you, which can increase your sales. You also get to claim input VAT on your own purchases. If most customers are individual consumers (B2C), adding 16% VAT makes your prices higher - staying on turnover tax is usually better. We recommend speaking with a KRA-registered agent to run the numbers for your specific business.",
       },
     },
   ],
@@ -114,11 +114,11 @@ export default function SmallTaxpayerRegimePage() {
             ))}
           </div>
           <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
-            Small Taxpayer Regime Kenya — Tax Options for Businesses Under KES 5 Million
+            Small Taxpayer Regime Kenya - Tax Options for Businesses Under KES 5 Million
           </h1>
           <div className="flex flex-wrap items-center gap-3 mt-4">
             <span className="font-mono text-[0.62rem] uppercase tracking-widest bg-brand/20 text-brand px-2.5 py-1 rounded-sm">Last updated: July 25, 2026</span>
-            <span className="text-[0.78rem] text-canvas/50">Smart VAT Kenya — KRA-registered VAT agents</span>
+            <span className="text-[0.78rem] text-canvas/50">Smart VAT Kenya - KRA-registered VAT agents</span>
           </div>
         </div>
       </div>
@@ -129,7 +129,7 @@ export default function SmallTaxpayerRegimePage() {
         <div className="border-l-[3px] border-brand pl-5 mb-10">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            Kenya's small taxpayer regime covers businesses with annual turnover below <strong className="text-ink">KES 5 million</strong>. These businesses pay <strong className="text-ink">Turnover Tax (TOT) at 1-3%</strong> on gross sales instead of 16% VAT. However, since January 2026, ALL businesses must use <strong className="text-ink">eTIMS</strong> regardless of size. Small businesses can voluntarily register for VAT to claim input VAT on purchases — but this means charging 16% VAT to customers. The right choice depends on your profit margins, customer type, and whether you need to claim input VAT.
+            Kenya's small taxpayer regime covers businesses with annual turnover below <strong className="text-ink">KES 5 million</strong>. These businesses pay <strong className="text-ink">Turnover Tax (TOT) at 1-3%</strong> on gross sales instead of 16% VAT. However, since January 2026, ALL businesses must use <strong className="text-ink">eTIMS</strong> regardless of size. Small businesses can voluntarily register for VAT to claim input VAT on purchases - but this means charging 16% VAT to customers. The right choice depends on your profit margins, customer type, and whether you need to claim input VAT.
           </p>
         </div>
 
@@ -152,20 +152,20 @@ export default function SmallTaxpayerRegimePage() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — What Is It */}
+          {/* Section 1 - What Is It */}
           <section id="what-is" aria-labelledby="what-is-h">
             <h2 id="what-is-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What Is the Small Taxpayer Regime in Kenya?
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                Kenya's tax system divides businesses into categories based largely on turnover. The small taxpayer regime is the category for businesses with <strong className="text-ink">annual turnover below KES 5 million</strong>. If your business falls in this category, you are not required to register for VAT — instead, you register for <strong className="text-ink">Turnover Tax (TOT)</strong>.
+                Kenya's tax system divides businesses into categories based largely on turnover. The small taxpayer regime is the category for businesses with <strong className="text-ink">annual turnover below KES 5 million</strong>. If your business falls in this category, you are not required to register for VAT - instead, you register for <strong className="text-ink">Turnover Tax (TOT)</strong>.
               </p>
               <p>
                 The small taxpayer regime was designed to simplify tax compliance for Kenya's vast informal sector and small businesses. Instead of the complex VAT system (which requires monthly filing, detailed record-keeping, and eTIMS invoicing), small taxpayers file simpler returns and pay a lower percentage of their gross sales.
               </p>
               <p>
-                However, keep in mind that <strong className="text-ink">eTIMS applies to everyone regardless of size</strong>. Since January 2026, KRA has enforced the requirement that all businesses — including turnover tax payers, rental income earners, and informal sector operators — must issue eTIMS-compliant invoices through the free eTIMS Lite platform.
+                However, keep in mind that <strong className="text-ink">eTIMS applies to everyone regardless of size</strong>. Since January 2026, KRA has enforced the requirement that all businesses - including turnover tax payers, rental income earners, and informal sector operators - must issue eTIMS-compliant invoices through the free eTIMS Lite platform.
               </p>
               <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
                 <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
@@ -180,7 +180,7 @@ export default function SmallTaxpayerRegimePage() {
             </div>
           </section>
 
-          {/* Section 2 — Thresholds */}
+          {/* Section 2 - Thresholds */}
           <section id="thresholds" aria-labelledby="thresholds-h">
             <h2 id="thresholds-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Tax Thresholds and Regimes Compared
@@ -226,7 +226,7 @@ export default function SmallTaxpayerRegimePage() {
             </div>
           </section>
 
-          {/* Section 3 — TOT vs VAT */}
+          {/* Section 3 - TOT vs VAT */}
           <section id="tot-vs-vat" aria-labelledby="tot-vs-vat-h">
             <h2 id="tot-vs-vat-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Turnover Tax vs VAT: Which One Fits Your Business?
@@ -242,7 +242,7 @@ export default function SmallTaxpayerRegimePage() {
                     {[
                       "Your customers are mostly individual consumers (B2C) who cannot claim input VAT.",
                       "Your profit margins are thin, and adding 16% VAT would make your prices uncompetitive.",
-                      "You want the simplest possible compliance — one return, one rate, no input VAT calculations.",
+                      "You want the simplest possible compliance - one return, one rate, no input VAT calculations.",
                       "Your annual turnover is well under KES 5 million and not growing rapidly.",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-3 text-[0.85rem] text-ink-soft">
@@ -258,8 +258,8 @@ export default function SmallTaxpayerRegimePage() {
                     {[
                       "Most of your customers are VAT-registered businesses (B2B) who can claim input VAT on your invoices.",
                       "You spend significantly on business purchases (laptops, software, rent, raw materials) and want to claim input VAT back.",
-                      "Your annual turnover is close to KES 5 million and will cross the threshold soon — registering now avoids a forced transition later.",
-                      "You want to present your business as established and compliant — some large companies and government tenders require suppliers to be VAT-registered.",
+                      "Your annual turnover is close to KES 5 million and will cross the threshold soon - registering now avoids a forced transition later.",
+                      "You want to present your business as established and compliant - some large companies and government tenders require suppliers to be VAT-registered.",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-3 text-[0.85rem] text-ink-soft">
                         <CheckCircle size={15} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -278,14 +278,14 @@ export default function SmallTaxpayerRegimePage() {
             </div>
           </section>
 
-          {/* Section 4 — eTIMS */}
+          {/* Section 4 - eTIMS */}
           <section id="etims" aria-labelledby="etims-h">
             <h2 id="etims-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               eTIMS Obligations for Small Taxpayers
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                Many small business owners believe that because they are not VAT-registered, they do not need eTIMS. This is <strong className="text-ink">incorrect</strong>. The law requires all persons engaged in business in Kenya to use eTIMS — regardless of turnover or VAT status.
+                Many small business owners believe that because they are not VAT-registered, they do not need eTIMS. This is <strong className="text-ink">incorrect</strong>. The law requires all persons engaged in business in Kenya to use eTIMS - regardless of turnover or VAT status.
               </p>
               <p>
                 For small taxpayers, the relevant solution is <strong className="text-ink">eTIMS Lite</strong>, which is free and accessed through a web browser at etims.kra.go.ke. You do not need to install any software. You log in, create invoices, and print or email them to your customers.
@@ -302,7 +302,7 @@ export default function SmallTaxpayerRegimePage() {
                   },
                   {
                     title: "Penalty for non-compliance",
-                    desc: "Issuing invoices outside eTIMS exposes you to the TPA s.86 penalty — the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals) — even if you are on turnover tax. KRA has been conducting compliance checks since January 2026.",
+                    desc: "Issuing invoices outside eTIMS exposes you to the TPA s.86 penalty - the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals) - even if you are on turnover tax. KRA has been conducting compliance checks since January 2026.",
                   },
                   {
                     title: "Your customers may insist on eTIMS invoices",
@@ -332,7 +332,7 @@ export default function SmallTaxpayerRegimePage() {
             </div>
           </section>
 
-          {/* Section 5 — Voluntary VAT */}
+          {/* Section 5 - Voluntary VAT */}
           <section id="voluntary-vat" aria-labelledby="voluntary-vat-h">
             <h2 id="voluntary-vat-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Voluntary VAT Registration for Small Businesses
@@ -361,7 +361,7 @@ export default function SmallTaxpayerRegimePage() {
                   },
                   {
                     title: "Compliance burden",
-                    desc: "VAT requires monthly filing on iTax, proper eTIMS invoices, and detailed record-keeping. If you register voluntarily, you take on the full compliance burden — including the risk of penalties for late filing or errors.",
+                    desc: "VAT requires monthly filing on iTax, proper eTIMS invoices, and detailed record-keeping. If you register voluntarily, you take on the full compliance burden - including the risk of penalties for late filing or errors.",
                   },
                 ].map(({ title, desc }) => (
                   <div key={title} className="flex items-start gap-3">
@@ -382,7 +382,7 @@ export default function SmallTaxpayerRegimePage() {
             </div>
           </section>
 
-          {/* Section 6 — Decision */}
+          {/* Section 6 - Decision */}
           <section id="decision" aria-labelledby="decision-h">
             <h2 id="decision-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               How to Choose the Right Tax Regime
@@ -413,12 +413,12 @@ export default function SmallTaxpayerRegimePage() {
                 ))}
               </div>
               <p>
-                Not sure which regime fits your business? <strong className="text-ink">Smart VAT Kenya</strong> offers a free WhatsApp consultation. We can review your numbers and recommend the right approach — no obligation, no sales pressure.
+                Not sure which regime fits your business? <strong className="text-ink">Smart VAT Kenya</strong> offers a free WhatsApp consultation. We can review your numbers and recommend the right approach - no obligation, no sales pressure.
               </p>
               <div className="mt-8 border border-brand/20 bg-brand-muted rounded-lg p-6">
                 <p className="font-display text-[1.15rem] font-semibold text-ink mb-3">Still not sure which regime applies?</p>
                 <p className="text-[0.84rem] text-ink-soft leading-relaxed mb-4">
-                  Send us a message on WhatsApp. We will help you determine whether you should be on Turnover Tax, voluntary VAT, or mandatory VAT — and handle the entire registration process for you.{" "}
+                  Send us a message on WhatsApp. We will help you determine whether you should be on Turnover Tax, voluntary VAT, or mandatory VAT - and handle the entire registration process for you.{" "}
                   <strong className="text-ink">KES 5,000 flat fee</strong> for VAT registration. No hidden costs.
                 </p>
                 <a
@@ -426,7 +426,7 @@ export default function SmallTaxpayerRegimePage() {
                   target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
-                  Ask on WhatsApp — Free
+                  Ask on WhatsApp - Free
                   <ArrowRight size={14} weight="bold" aria-hidden="true" />
                 </a>
               </div>

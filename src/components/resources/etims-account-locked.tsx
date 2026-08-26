@@ -76,7 +76,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "eTIMS Account Locked — How to Unlock", item: "https://smartvatkenya.co.ke/resources/etims-account-locked/" },
+    { "@type": "ListItem", position: 3, name: "eTIMS Account Locked - How to Unlock", item: "https://smartvatkenya.co.ke/resources/etims-account-locked/" },
   ],
 }
 
@@ -109,7 +109,7 @@ const faqSchema = {
       name: "Why is my eTIMS account locked?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The most common reason is the 7-day sync rule: if your eTIMS device does not sync with KRA for 7 consecutive days, KRA locks it automatically. Other causes include too many failed login attempts, an expired or deactivated device certificate, or KRA flagging the account during a compliance review. The unlock process differs by cause, so identify the reason first — check your email for a KRA notice and the eTIMS Client error message.",
+        text: "The most common reason is the 7-day sync rule: if your eTIMS device does not sync with KRA for 7 consecutive days, KRA locks it automatically. Other causes include too many failed login attempts, an expired or deactivated device certificate, or KRA flagging the account during a compliance review. The unlock process differs by cause, so identify the reason first - check your email for a KRA notice and the eTIMS Client error message.",
       },
     },
     {
@@ -117,7 +117,7 @@ const faqSchema = {
       name: "How do I unlock my eTIMS account?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For a sync-related lockout, log in to eTIMS Lite (etims.kra.go.ke), go to Device Management, and reactivate the device, then sync eTIMS Client. For a password lockout, use the 'Forgot Password' option on eTIMS Lite. For an expired certificate, renew it through Device Management. If the account is locked by KRA for compliance reasons, you must contact KRA eTIMS support directly — do not try to reinstall the application or create a new device, as that can orphan your queued invoices.",
+        text: "For a sync-related lockout, log in to eTIMS Lite (etims.kra.go.ke), go to Device Management, and reactivate the device, then sync eTIMS Client. For a password lockout, use the 'Forgot Password' option on eTIMS Lite. For an expired certificate, renew it through Device Management. If the account is locked by KRA for compliance reasons, you must contact KRA eTIMS support directly - do not try to reinstall the application or create a new device, as that can orphan your queued invoices.",
       },
     },
     {
@@ -125,7 +125,7 @@ const faqSchema = {
       name: "How long does an eTIMS lockout last?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A temporary login lockout from failed attempts typically clears after 30-60 minutes. A sync-related lockout lasts until you reactivate the device through eTIMS Lite or KRA support — it does not clear on its own. A compliance-related lockout is indefinite until KRA resolves it, which can take days. Do not wait if you suspect a compliance lockout; contact KRA early.",
+        text: "A temporary login lockout from failed attempts typically clears after 30-60 minutes. A sync-related lockout lasts until you reactivate the device through eTIMS Lite or KRA support - it does not clear on its own. A compliance-related lockout is indefinite until KRA resolves it, which can take days. Do not wait if you suspect a compliance lockout; contact KRA early.",
       },
     },
     {
@@ -133,7 +133,7 @@ const faqSchema = {
       name: "Will I lose my pending invoices if my account is locked?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. Pending invoices are stored locally on your eTIMS Client device and survive a lockout. Once the device is reactivated, click Sync and the queued invoices transmit in order. However, do not reinstall eTIMS Client or register a new device before unlocking the existing one — that can orphan the local queue and lose the invoice data.",
+        text: "No. Pending invoices are stored locally on your eTIMS Client device and survive a lockout. Once the device is reactivated, click Sync and the queued invoices transmit in order. However, do not reinstall eTIMS Client or register a new device before unlocking the existing one - that can orphan the local queue and lose the invoice data.",
       },
     },
     {
@@ -141,7 +141,7 @@ const faqSchema = {
       name: "Can I invoice while my eTIMS account is locked?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. A locked device or account blocks invoice creation entirely. You must unlock it before you can issue eTIMS invoices. In the meantime, keep a manual sales log so no sales are lost — create the invoices retroactively once you are unlocked. If the lockout is close to a KRA deadline, document everything and contact KRA promptly.",
+        text: "No. A locked device or account blocks invoice creation entirely. You must unlock it before you can issue eTIMS invoices. In the meantime, keep a manual sales log so no sales are lost - create the invoices retroactively once you are unlocked. If the lockout is close to a KRA deadline, document everything and contact KRA promptly.",
       },
     },
     {
@@ -149,7 +149,7 @@ const faqSchema = {
       name: "How do I stop my eTIMS account from locking again?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sync your device at least once every 7 days — ideally daily. Keep your login credentials saved securely, use the correct portal (eTIMS vs iTax have separate passwords), keep the device certificate active, and update eTIMS Client when KRA releases new versions. A daily 5-minute sync check prevents the most common lockout cause.",
+        text: "Sync your device at least once every 7 days - ideally daily. Keep your login credentials saved securely, use the correct portal (eTIMS vs iTax have separate passwords), keep the device certificate active, and update eTIMS Client when KRA releases new versions. A daily 5-minute sync check prevents the most common lockout cause.",
       },
     },
     {
@@ -157,7 +157,7 @@ const faqSchema = {
       name: "Why do I see \"wrong obligation ID\" or \"NONVAT only\" when I try to create an eTIMS invoice?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "This error means your iTax obligations and your eTIMS registration are out of sync — for example, a NONVAT invoice type selected while no matching NONVAT obligation is active, or e-invoicing not activated on that PIN yet (the activation error reads 'inactive/invalid PIN number'). Fix it by reviewing your tax obligations in iTax, registering the correct obligation (VAT / Income Tax – Business), and activating eTIMS for that PIN. If it persists, contact KRA eTIMS support (+254 711 099 999 / etims-support@kra.go.ke) — they activate or adjust the obligation, usually within 1–2 working days.",
+        text: "This error means your iTax obligations and your eTIMS registration are out of sync - for example, a NONVAT invoice type selected while no matching NONVAT obligation is active, or e-invoicing not activated on that PIN yet (the activation error reads 'inactive/invalid PIN number'). Fix it by reviewing your tax obligations in iTax, registering the correct obligation (VAT / Income Tax – Business), and activating eTIMS for that PIN. If it persists, contact KRA eTIMS support (+254 711 099 999 / etims-support@kra.go.ke) - they activate or adjust the obligation, usually within 1–2 working days.",
       },
     },
   ],
@@ -165,7 +165,7 @@ const faqSchema = {
 
 const toc = [
   { id: "why-locked", label: "Why Your eTIMS Account Gets Locked" },
-  { id: "unlock-itax", label: "How to Unlock — Step by Step" },
+  { id: "unlock-itax", label: "How to Unlock - Step by Step" },
   { id: "reactivate-device", label: "Reactivating the Device" },
   { id: "what-not-to-do", label: "What NOT to Do (Critical)" },
   { id: "prevention", label: "Prevention: Never Get Locked Out" },
@@ -226,9 +226,9 @@ export default function ETIMSAccountLockedPage() {
 
         {/* Quick Answer / BLUF */}
         <div className="border-l-[3px] border-brand pl-5 mb-10">
-          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer — Fix It in 3 Minutes</p>
+          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer - Fix It in 3 Minutes</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            Locked mid-sale? <strong className="text-ink">Don&apos;t reinstall eTIMS</strong> — that orphans your queued invoices. 90% of locks are the <strong className="text-ink">7-day sync rule</strong> and unlock in 3 minutes: <strong className="text-ink">eTIMS Lite</strong> → <strong className="text-ink">Device Management</strong> → Reactivate → Sync. Password or certificate lock? Reset or renew. Compliance flag? Call KRA 020 499 9999 — or <a href="https://wa.me/254717344440?text=My%20eTIMS%20is%20locked%20-%20need%20help%20unlocking" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">send us a screenshot, we unlock it for you</a>.
+            Locked mid-sale? <strong className="text-ink">Don&apos;t reinstall eTIMS</strong> - that orphans your queued invoices. 90% of locks are the <strong className="text-ink">7-day sync rule</strong> and unlock in 3 minutes: <strong className="text-ink">eTIMS Lite</strong> → <strong className="text-ink">Device Management</strong> → Reactivate → Sync. Password or certificate lock? Reset or renew. Compliance flag? Call KRA 020 499 9999 - or <a href="https://wa.me/254717344440?text=My%20eTIMS%20is%20locked%20-%20need%20help%20unlocking" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">send us a screenshot, we unlock it for you</a>.
           </p>
         </div>
 
@@ -251,7 +251,7 @@ export default function ETIMSAccountLockedPage() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — Why locked */}
+          {/* Section 1 - Why locked */}
           <section id="why-locked" aria-labelledby="why-locked-h">
             <h2 id="why-locked-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Why Your eTIMS Account Gets Locked
@@ -269,7 +269,7 @@ export default function ETIMSAccountLockedPage() {
                   },
                   {
                     title: "Too many failed login attempts",
-                    desc: "Like iTax, eTIMS locks the account after a number of failed login attempts — usually 5. The lock is typically temporary (30-60 minutes) and clears on its own.",
+                    desc: "Like iTax, eTIMS locks the account after a number of failed login attempts - usually 5. The lock is typically temporary (30-60 minutes) and clears on its own.",
                   },
                   {
                     title: "Expired or deactivated device certificate",
@@ -296,10 +296,10 @@ export default function ETIMSAccountLockedPage() {
             </div>
           </section>
 
-          {/* Section 2 — Unlock steps */}
+          {/* Section 2 - Unlock steps */}
           <section id="unlock-itax" aria-labelledby="unlock-itax-h">
             <h2 id="unlock-itax-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
-              How to Unlock Your eTIMS Account — Step by Step
+              How to Unlock Your eTIMS Account - Step by Step
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
@@ -325,7 +325,7 @@ export default function ETIMSAccountLockedPage() {
                   {
                     step: 4,
                     title: "If it is a password lock, reset it",
-                    desc: "Use 'Forgot Password' on eTIMS Lite. The reset link goes to your registered email. Wait 10-15 minutes between attempts — KRA throttles reset requests.",
+                    desc: "Use 'Forgot Password' on eTIMS Lite. The reset link goes to your registered email. Wait 10-15 minutes between attempts - KRA throttles reset requests.",
                   },
                   {
                     step: 5,
@@ -358,7 +358,7 @@ export default function ETIMSAccountLockedPage() {
             </div>
           </section>
 
-          {/* Section 3 — Reactivate device */}
+          {/* Section 3 - Reactivate device */}
           <section id="reactivate-device" aria-labelledby="reactivate-device-h">
             <h2 id="reactivate-device-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What If the Device Itself Needs Reactivation?
@@ -400,7 +400,7 @@ export default function ETIMSAccountLockedPage() {
             </div>
           </section>
 
-          {/* Section 4 — What NOT to do */}
+          {/* Section 4 - What NOT to do */}
           <section id="what-not-to-do" aria-labelledby="what-not-to-do-h">
             <h2 id="what-not-to-do-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What NOT to Do When Your eTIMS Account Is Locked
@@ -457,7 +457,7 @@ export default function ETIMSAccountLockedPage() {
             </div>
           </section>
 
-          {/* Section 5 — Prevention */}
+          {/* Section 5 - Prevention */}
           <section id="prevention" aria-labelledby="prevention-h">
             <h2 id="prevention-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Prevention: Never Get Locked Out Again
@@ -466,12 +466,12 @@ export default function ETIMSAccountLockedPage() {
               <div className="space-y-3">
                 {[
                   {
-                    title: "Sync daily — it takes 1 minute",
+                    title: "Sync daily - it takes 1 minute",
                     desc: "Open eTIMS Client each morning and confirm the Pending Sync count is zero. A daily check completely eliminates the 7-day lockout cause.",
                   },
                   {
                     title: "Keep credentials saved securely",
-                    desc: "Store your eTIMS password in a password manager. Use the correct password for eTIMS — it is separate from iTax.",
+                    desc: "Store your eTIMS password in a password manager. Use the correct password for eTIMS - it is separate from iTax.",
                   },
                   {
                     title: "Monitor your certificate expiry",

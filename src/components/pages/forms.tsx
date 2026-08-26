@@ -73,7 +73,7 @@ export default function FormsPage() {
             VAT Guides &amp; Manuals
           </h2>
           <p className="text-[0.9rem] text-ink-muted max-w-[55ch] mb-10">
-            Registration, monthly returns, and refunds — explained by KRA.
+            Registration, monthly returns, and refunds - explained by KRA.
           </p>
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 stagger">

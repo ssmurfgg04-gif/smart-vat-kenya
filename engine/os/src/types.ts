@@ -1,5 +1,5 @@
 ﻿/**
- * SmartVAT OS — shared domain types.
+ * SmartVAT OS - shared domain types.
  *
  * The OS sits on top of the gavaconnect KRA client and adds the layers that
  * turn raw API access into a compliance product: deadlines, health scores,

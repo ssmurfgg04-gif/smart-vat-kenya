@@ -72,7 +72,7 @@ export default function EtimsPenaltyPost() {
             The eTIMS penalty sits in two places. First, the
             Tax Procedures (Electronic Tax Invoice) Regulations, Legal Notice 64 of 2024 make it an
             offence to fail e-invoicing compliance or to tamper with the system, and refer breaches to
-            TPA s.86 — they do not set a separate KES 1 million or 10% figure. Under s.86, as amended by
+            TPA s.86 - they do not set a separate KES 1 million or 10% figure. Under s.86, as amended by
             the Finance Act 2026 (in force 1 July 2026), failing to issue an electronic tax invoice, file
             a return electronically or pay tax electronically attracts <strong>the higher of 5% of the
             tax due, KES 100,000 for companies, or KES 10,000 for individuals</strong>, applied after a
@@ -81,7 +81,7 @@ export default function EtimsPenaltyPost() {
           <p>
             Second, the integration requirement sits in TPA s.59A. A business with turnover above
             KES 5 million that the Commissioner has notified to integrate its data-management system
-            with KRA&apos;s electronic system, and that fails to comply, is liable — on conviction — to a
+            with KRA&apos;s electronic system, and that fails to comply, is liable - on conviction - to a
             penalty of <strong>not exceeding KES 100,000 for every month or part thereof</strong> that
             the failure continues.
           </p>
@@ -143,12 +143,12 @@ export default function EtimsPenaltyPost() {
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">How to Avoid the Penalty</h2>
           <ul className="space-y-1.5">
             {[
-              "Register for eTIMS if you have not already — choose between the mobile app, web portal, or ERP integration.",
+              "Register for eTIMS if you have not already - choose between the mobile app, web portal, or ERP integration.",
               "Issue every invoice through eTIMS, even for cash sales and B2C transactions.",
               "Keep your eTIMS device or app active at all times.",
               "Test your QR codes monthly with the KRA verification app.",
               "If you use an ERP, ensure your integration is certified and maintained.",
-              "File your VAT returns on time — the eTIMS penalty can stack on top of late-filing penalties.",
+              "File your VAT returns on time - the eTIMS penalty can stack on top of late-filing penalties.",
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <CheckCircle size={14} weight="fill" className="text-brand shrink-0 mt-1" />
@@ -185,7 +185,7 @@ export default function EtimsPenaltyPost() {
                 <a href={slug} className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   {title}
                 </a>
-                <span className="text-ink-muted"> — {desc}</span>
+                <span className="text-ink-muted"> - {desc}</span>
               </li>
             ))}
           </ul>

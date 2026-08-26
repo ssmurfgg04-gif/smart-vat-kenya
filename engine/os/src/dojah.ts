@@ -1,7 +1,7 @@
 import { HttpTransport, createFetchTransport } from "./transport.js"
 
 /**
- * Dojah Kenya — KRA PIN lookup.
+ * Dojah Kenya - KRA PIN lookup.
  *
  * Complementary to the GavaConnect PIN checkers: Dojah's KYC endpoint returns
  * taxpayer status fields KRA's raw pinbypin response doesn't expose cleanly

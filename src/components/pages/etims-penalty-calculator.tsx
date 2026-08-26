@@ -46,7 +46,7 @@ export function EtimsPenaltyCalculator() {
       <div className="flex items-center gap-2.5 mb-6">
         <Scales size={17} weight="duotone" className="text-brand" aria-hidden="true" />
         <h2 id="etims-penalty-heading" className="font-display text-[1rem] font-semibold text-ink">
-          eTIMS Penalty Calculator — How Much Is Your Non-Compliance Costing You?
+          eTIMS Penalty Calculator - How Much Is Your Non-Compliance Costing You?
         </h2>
       </div>
 
@@ -74,7 +74,7 @@ export function EtimsPenaltyCalculator() {
 
         <div className="p-5">
           <label htmlFor="etims-vat-due" className={labelCls}>
-            Optional — VAT due for months you filed late (KES)
+            Optional - VAT due for months you filed late (KES)
           </label>
           <input
             id="etims-vat-due"
@@ -163,7 +163,7 @@ export function EtimsPenaltyCalculator() {
                 <div className="flex items-baseline justify-between">
                   <dt className="text-[0.78rem] text-ink-muted">
                     Non-compliant invoices (TPA s.86)
-                    <span className="block text-[0.65rem]">{inv} failure(s) &times; up to KES 100,000 (or 5% of the tax involved — whichever is higher)</span>
+                    <span className="block text-[0.65rem]">{inv} failure(s) &times; up to KES 100,000 (or 5% of the tax involved - whichever is higher)</span>
                   </dt>
                   <dd className="font-mono text-[0.88rem] text-ink tabular-nums">{formatKES(invoicePenalties)}</dd>
                 </div>
@@ -190,7 +190,7 @@ export function EtimsPenaltyCalculator() {
                 rel="noopener noreferrer"
                 className="btn-fill mt-5 w-full flex items-center justify-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold py-3 rounded-md hover:bg-brand-hover transition-colors"
               >
-                Fix this before it grows — chat with us <ArrowRight size={13} weight="bold" aria-hidden="true" />
+                Fix this before it grows - chat with us <ArrowRight size={13} weight="bold" aria-hidden="true" />
               </a>
             </>
           )}
@@ -215,7 +215,7 @@ export function EtimsPenaltyCalculator() {
           <WarningCircle size={18} weight="duotone" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
           <div>
             <p className="text-[0.85rem] font-semibold text-ink group-hover:text-brand transition-colors">Already have penalties? Waive them</p>
-            <p className="text-[0.72rem] text-ink-muted mt-1">Penalty waiver drafting and submission — KES 4,000 per application.</p>
+            <p className="text-[0.72rem] text-ink-muted mt-1">Penalty waiver drafting and submission - KES 4,000 per application.</p>
           </div>
         </a>
       </div>

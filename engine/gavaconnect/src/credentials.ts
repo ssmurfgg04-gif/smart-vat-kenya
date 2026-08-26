@@ -3,7 +3,7 @@ import { CredentialsError } from "./errors.js"
 
 /**
  * Credential manager. KRA requires ONE app (consumer key/secret) per API
- * product — this is the #1 integration footgun. Credentials are read from
+ * product - this is the #1 integration footgun. Credentials are read from
  * environment variables, never from source.
  *
  * Env convention: GAVA_{PRODUCT_UPPER_SNAKE}_{SANDBOX|PRODUCTION}_KEY / _SECRET
@@ -63,7 +63,7 @@ export function getCredential(
   const pair = credentials[product]
   if (!pair) {
     throw new CredentialsError(
-      `Missing credentials for API product "${product}". KRA requires one app per product — set GAVA_${productEnvName(product)}_KEY/_SECRET for the environment in use.`,
+      `Missing credentials for API product "${product}". KRA requires one app per product - set GAVA_${productEnvName(product)}_KEY/_SECRET for the environment in use.`,
       [product],
     )
   }

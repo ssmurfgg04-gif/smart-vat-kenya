@@ -36,7 +36,7 @@ const faqSchema = {
       name: "Do NGOs have to register for VAT in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, if your NGO's annual taxable turnover exceeds KES 5 million. The VAT exemption on certain supplies does not remove the obligation to register. Many NGOs registered as VAT persons must still file monthly returns — even if all their supplies are exempt — to report their exempt status.",
+        text: "Yes, if your NGO's annual taxable turnover exceeds KES 5 million. The VAT exemption on certain supplies does not remove the obligation to register. Many NGOs registered as VAT persons must still file monthly returns - even if all their supplies are exempt - to report their exempt status.",
       },
     },
     {
@@ -114,7 +114,7 @@ export default function VATForNGOsPage() {
         <div className="border-l-[3px] border-brand pl-5 mb-10">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            NGOs in Kenya can qualify for VAT exemptions on donated goods (medicines, medical equipment, educational materials, and certain food items) by obtaining a <strong className="text-ink">KRA exemption certificate</strong>. However, if your NGO's annual turnover exceeds <strong className="text-ink">KES 5 million</strong>, you must still register for VAT and file monthly returns — even if all your supplies are exempt. Cash donations and grants are not subject to VAT. The most common mistake NGOs make is assuming VAT exemption is automatic; it requires advance approval from KRA for each qualifying transaction.
+            NGOs in Kenya can qualify for VAT exemptions on donated goods (medicines, medical equipment, educational materials, and certain food items) by obtaining a <strong className="text-ink">KRA exemption certificate</strong>. However, if your NGO's annual turnover exceeds <strong className="text-ink">KES 5 million</strong>, you must still register for VAT and file monthly returns - even if all your supplies are exempt. Cash donations and grants are not subject to VAT. The most common mistake NGOs make is assuming VAT exemption is automatic; it requires advance approval from KRA for each qualifying transaction.
           </p>
         </div>
 
@@ -196,7 +196,7 @@ export default function VATForNGOsPage() {
                   "Medicines, vaccines, and pharmaceutical products",
                   "Medical equipment, hospital furniture, and laboratory supplies",
                   "Educational materials, books, and school equipment",
-                  "Agricultural inputs — seeds, fertilisers, pesticides, and farm machinery",
+                  "Agricultural inputs - seeds, fertilisers, pesticides, and farm machinery",
                   "Food items for distribution in feeding programmes",
                   "Vehicles designed or adapted for use by persons with disabilities",
                   "Goods imported using funds from a recognised donor agency",

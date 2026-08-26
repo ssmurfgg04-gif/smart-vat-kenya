@@ -53,7 +53,7 @@ export function Navbar() {
         <a
           href="/"
           className="font-display text-[1.15rem] font-semibold tracking-tight text-gray-900 dark:text-gray-100 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-          aria-label="Smart VAT Kenya — Home"
+          aria-label="Smart VAT Kenya - Home"
         >
           Smart<span className="text-gray-900 dark:text-gray-100">VAT</span>
           <span className="text-gray-500 dark:text-gray-400 font-normal text-sm ml-1">Kenya</span>
@@ -138,7 +138,7 @@ export function Navbar() {
       >
         <p className="max-w-[1400px] mx-auto text-[0.82rem] text-white font-medium leading-snug text-center">
           <strong>Most Kenyan businesses don&apos;t know this:</strong> KRA is waiving 100% of
-          pre-2026 penalties and interest — but only until 31 Dec 2026.{" "}
+          pre-2026 penalties and interest - but only until 31 Dec 2026.{" "}
           <span className="underline underline-offset-2 font-semibold hover:opacity-80 whitespace-nowrap">
             Check if you qualify &rarr;
           </span>

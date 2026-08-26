@@ -18,7 +18,7 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "KRA Tax Amnesty 2026: Full Penalty and Interest Waiver — Complete Guide",
+  headline: "KRA Tax Amnesty 2026: Full Penalty and Interest Waiver - Complete Guide",
   description:
     "The KRA tax amnesty 2026 waives 100% of penalties and interest on tax debt accumulated up to December 31, 2025. Running from July 1 to December 31, 2026. How to qualify, apply on iTax, and clear your ledger.",
   author: personSchema(),
@@ -32,7 +32,7 @@ const articleSchema = {
 const faqs = [
   {
     q: "When does the KRA tax amnesty 2026 end?",
-    a: "The amnesty closes on December 31, 2026. All outstanding principal tax must be settled by this date to qualify for the 100% waiver of penalties and interest. KRA strongly advises against waiting until December — early action avoids platform congestion and allows time for payment plan approvals.",
+    a: "The amnesty closes on December 31, 2026. All outstanding principal tax must be settled by this date to qualify for the 100% waiver of penalties and interest. KRA strongly advises against waiting until December - early action avoids platform congestion and allows time for payment plan approvals.",
   },
   {
     q: "Does the amnesty waive the principal tax itself?",
@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     q: "Do I need to apply for the waiver, or is it automatic?",
-    a: "If you already paid your principal tax in full by December 31, 2025, the waiver is automatic — no application needed. KRA's system applies it. If you still owe principal tax, you must settle it (lump sum or payment plan) by December 31, 2026 to unlock the waiver. In that case, the waiver is automatic once the principal is cleared.",
+    a: "If you already paid your principal tax in full by December 31, 2025, the waiver is automatic - no application needed. KRA's system applies it. If you still owe principal tax, you must settle it (lump sum or payment plan) by December 31, 2026 to unlock the waiver. In that case, the waiver is automatic once the principal is cleared.",
   },
   {
     q: "Can I get a partial waiver if I pay part of the principal?",
@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     q: "What happens if I miss the December 31, 2026 deadline?",
-    a: "You lose the amnesty benefit entirely. The penalties and interest on your pre-2026 debt remain fully due. KRA has indicated this is a once-in-a-decade opportunity — the last comparable amnesty closed in 2004. It is unlikely to be extended.",
+    a: "You lose the amnesty benefit entirely. The penalties and interest on your pre-2026 debt remain fully due. KRA has indicated this is a once-in-a-decade opportunity - the last comparable amnesty closed in 2004. It is unlikely to be extended.",
   },
   {
     q: "I have an ongoing tax dispute in court. Can I still benefit?",
@@ -114,7 +114,7 @@ export default function KRATaxAmnesty2026() {
           </div>
 
           <div className="prose prose-gray max-w-none">
-            <Flowchart caption="Amnesty eligibility flowchart — find your path to the penalty and interest waiver">
+            <Flowchart caption="Amnesty eligibility flowchart - find your path to the penalty and interest waiver">
               <AmnestyEligibilityFlow />
             </Flowchart>
 
@@ -123,7 +123,7 @@ export default function KRATaxAmnesty2026() {
               The <strong>KRA tax amnesty 2026</strong>, introduced under the <strong>Finance Act, 2026</strong>, is a time-limited programme that waives <strong>100% of penalties, interest, and fines</strong> on qualifying tax liabilities accumulated up to <strong>31 December 2025</strong>. It took effect on <strong>1 July 2026</strong> and closes on <strong>31 December 2026</strong>.
             </p>
             <p>
-              This is the third amnesty cycle from KRA. The previous two cycles collectively recovered over <strong>KES 80.9 billion</strong> in principal tax payments while bringing hundreds of thousands of taxpayers back into compliance. In the current cycle KRA has already waived <strong>KES 170 billion</strong> in fines as of early August 2026, according to reporting on the programme&apos;s progress — and KRA has confirmed that filing outstanding returns (including nil returns) <strong>automatically triggers the waiver</strong> of penalties and interest, with qualifying cases processed in weekly iTax batches. The 2026 programme is expected to be the final broad-based amnesty for the foreseeable future.
+              This is the third amnesty cycle from KRA. The previous two cycles collectively recovered over <strong>KES 80.9 billion</strong> in principal tax payments while bringing hundreds of thousands of taxpayers back into compliance. In the current cycle KRA has already waived <strong>KES 170 billion</strong> in fines as of early August 2026, according to reporting on the programme&apos;s progress - and KRA has confirmed that filing outstanding returns (including nil returns) <strong>automatically triggers the waiver</strong> of penalties and interest, with qualifying cases processed in weekly iTax batches. The 2026 programme is expected to be the final broad-based amnesty for the foreseeable future.
             </p>
 
             <h2>Which Taxes Are Covered?</h2>
@@ -141,7 +141,7 @@ export default function KRATaxAmnesty2026() {
             <p><strong>Important:</strong> Only penalties, interest, and fines on pre-2026 debt are waived. The principal tax must still be paid. Any tax liability arising on or after 1 January 2026 falls entirely outside the amnesty.</p>
 
             <h2 id="am-i-eligible">Am I Eligible for the Amnesty?</h2>
-            <p className="mb-4">Five scenarios cover every taxpayer. Find yours below — then scroll for exactly what to do.</p>
+            <p className="mb-4">Five scenarios cover every taxpayer. Find yours below - then scroll for exactly what to do.</p>
             <div className="border border-hairline rounded-lg overflow-hidden not-prose">
               <table className="w-full text-[0.83rem]">
                 <thead>
@@ -153,10 +153,10 @@ export default function KRATaxAmnesty2026() {
                 </thead>
                 <tbody className="divide-y divide-hairline">
                   {[
-                    { s: "Principal already paid", c: "You cleared all principal tax by 31 Dec 2025", a: "Automatic waiver — no action needed" },
+                    { s: "Principal already paid", c: "You cleared all principal tax by 31 Dec 2025", a: "Automatic waiver - no action needed" },
                     { s: "Late filing penalties only", c: "You owe no principal tax, only late filing penalties", a: "File outstanding returns → automatic waiver" },
-                    { s: "Still owe principal — can pay lump sum", c: "You have outstanding principal tax from before 2026", a: "Pay full principal by 31 Dec 2026 → waiver applied" },
-                    { s: "Still owe principal — need instalments", c: "Cannot pay the full principal at once", a: "Apply for a payment plan on iTax → clear by 31 Dec 2026 → waiver applied" },
+                    { s: "Still owe principal - can pay lump sum", c: "You have outstanding principal tax from before 2026", a: "Pay full principal by 31 Dec 2026 → waiver applied" },
+                    { s: "Still owe principal - need instalments", c: "Cannot pay the full principal at once", a: "Apply for a payment plan on iTax → clear by 31 Dec 2026 → waiver applied" },
                     { s: "Ongoing tax dispute", c: "You are in court or ADR over your tax liability", a: "Settle principal through ADR → amnesty unlocked" },
                   ].map(({ s, c, a }) => (
                     <tr key={s}>
@@ -185,10 +185,10 @@ export default function KRATaxAmnesty2026() {
                     Many taxpayers attempting the amnesty are hitting a wall: KRA's iTax portal shows outstanding principal tax even though they already paid. This is usually caused by an <strong>iTax allocation error</strong> or system glitch where payments were applied to the wrong ledger period or posted to a different tax head.
                   </p>
                   <p className="text-sm text-amber-800 leading-relaxed mb-2">
-                    Without a clean ledger, the system cannot generate a <strong>Payment Registration Number (PRN)</strong> for the amnesty — you're stuck in a loop where KRA says you owe, but your records show you paid.
+                    Without a clean ledger, the system cannot generate a <strong>Payment Registration Number (PRN)</strong> for the amnesty - you're stuck in a loop where KRA says you owe, but your records show you paid.
                   </p>
                   <p className="text-sm text-amber-800 leading-relaxed">
-                    KRA has acknowledged these allocation errors and is resolving iTax-related issues through August 2026. If you're stuck, you need to <strong>reconcile your iTax ledger against your bank statements and payment receipts</strong> — then lodge a correction request with KRA. Our <a href="/services/kra-penalty-waiver/" className="text-amber-900 font-semibold underline underline-offset-2 hover:text-amber-950">Penalty Waiver service (KES 4,000)</a> includes ledger reconciliation, error identification, and the full amnesty application — we handle the PRN bug for you.
+                    KRA has acknowledged these allocation errors and is resolving iTax-related issues through August 2026. If you're stuck, you need to <strong>reconcile your iTax ledger against your bank statements and payment receipts</strong> - then lodge a correction request with KRA. Our <a href="/services/kra-penalty-waiver/" className="text-amber-900 font-semibold underline underline-offset-2 hover:text-amber-950">Penalty Waiver service (KES 4,000)</a> includes ledger reconciliation, error identification, and the full amnesty application - we handle the PRN bug for you.
                   </p>
                 </div>
               </div>
@@ -197,13 +197,13 @@ export default function KRATaxAmnesty2026() {
             <h2>Step-by-Step: How to Apply on iTax</h2>
             <ol>
               <li><strong>Log in</strong> to the KRA iTax portal at <a href="https://itax.kra.go.ke" target="_blank" rel="noopener noreferrer">itax.kra.go.ke</a></li>
-              <li><strong>Check your ledger</strong> — Go to the Returns menu and view your outstanding balances, penalties, and interest. If the amount shown doesn't match your records, you may have an allocation error (see above)</li>
+              <li><strong>Check your ledger</strong> - Go to the Returns menu and view your outstanding balances, penalties, and interest. If the amount shown doesn't match your records, you may have an allocation error (see above)</li>
               <li><strong>Reconcile</strong> your iTax ledger against your internal accounting records. Identify any discrepancies before attempting payment</li>
-              <li><strong>File outstanding returns</strong> — If you have unfiled returns, file them first. Late filing penalties will be waived automatically once returns are submitted</li>
-              <li><strong>Settle principal tax</strong> — Pay the outstanding principal in full once the ledger is correct, or navigate to Payments → Apply Payment Plan (new) to set up instalments</li>
-              <li><strong>Confirm waiver</strong> — Once principal is paid, the KRA system automatically applies the waiver. Check your ledger to confirm penalties and interest have been cleared</li>
+              <li><strong>File outstanding returns</strong> - If you have unfiled returns, file them first. Late filing penalties will be waived automatically once returns are submitted</li>
+              <li><strong>Settle principal tax</strong> - Pay the outstanding principal in full once the ledger is correct, or navigate to Payments → Apply Payment Plan (new) to set up instalments</li>
+              <li><strong>Confirm waiver</strong> - Once principal is paid, the KRA system automatically applies the waiver. Check your ledger to confirm penalties and interest have been cleared</li>
             </ol>
-            <p className="text-sm text-ink-muted italic mt-2">Note: If you have an ongoing tax dispute, you must pursue KRA's Alternative Dispute Resolution (ADR) framework to settle the principal amount before the amnesty can apply. <strong>Note for August 2026:</strong> KRA has indicated iTax-related issues will be resolved by the end of August 2026. This page will be updated in place once the fix rolls out — check back or <a href="https://wa.me/254717344440?text=I%20need%20help%20with%20the%20KRA%20tax%20amnesty" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2">contact us on WhatsApp</a> for the current status.</p>
+            <p className="text-sm text-ink-muted italic mt-2">Note: If you have an ongoing tax dispute, you must pursue KRA's Alternative Dispute Resolution (ADR) framework to settle the principal amount before the amnesty can apply. <strong>Note for August 2026:</strong> KRA has indicated iTax-related issues will be resolved by the end of August 2026. This page will be updated in place once the fix rolls out - check back or <a href="https://wa.me/254717344440?text=I%20need%20help%20with%20the%20KRA%20tax%20amnesty" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2">contact us on WhatsApp</a> for the current status.</p>
 
             <h2>What the Amnesty Does Not Cover</h2>
             <ul>
@@ -248,10 +248,10 @@ export default function KRATaxAmnesty2026() {
             The amnesty mechanics are straightforward in principle, but the PRN bug, iTax allocation errors, and ledger reconciliation trips up most taxpayers. Our <strong>Penalty Waiver service (KES 4,000)</strong> handles everything:
           </p>
           <ul className="space-y-2 text-sm text-ink-muted mb-5">
-            <li className="flex items-start gap-2">— Full iTax ledger reconciliation against your payment receipts and bank statements</li>
-            <li className="flex items-start gap-2">— Identification and correction of KRA allocation errors and phantom balances</li>
-            <li className="flex items-start gap-2">— Payment plan application and negotiation with KRA if needed</li>
-            <li className="flex items-start gap-2">— Complete amnesty application, PRN generation, and waiver confirmation</li>
+            <li className="flex items-start gap-2">- Full iTax ledger reconciliation against your payment receipts and bank statements</li>
+            <li className="flex items-start gap-2">- Identification and correction of KRA allocation errors and phantom balances</li>
+            <li className="flex items-start gap-2">- Payment plan application and negotiation with KRA if needed</li>
+            <li className="flex items-start gap-2">- Complete amnesty application, PRN generation, and waiver confirmation</li>
           </ul>
           <div className="flex flex-col sm:flex-row gap-3">
             <a

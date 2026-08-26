@@ -150,7 +150,7 @@ export default function VATForConstructionPage() {
                 <div>
                   <p className="font-semibold text-ink text-[0.85rem] mb-1">Key Holding from the Ruling</p>
                   <p className="text-[0.83rem] text-ink-muted leading-relaxed">
-                    The court distinguished between commercial property (taxable) and residential premises (exempt). The determining factor is the <em>use</em> of the property, not its physical characteristics. A building constructed for commercial purposes — regardless of whether it could also be used for residential purposes — is subject to VAT.
+                    The court distinguished between commercial property (taxable) and residential premises (exempt). The determining factor is the <em>use</em> of the property, not its physical characteristics. A building constructed for commercial purposes - regardless of whether it could also be used for residential purposes - is subject to VAT.
                   </p>
                 </div>
               </div>
@@ -162,7 +162,7 @@ export default function VATForConstructionPage() {
                   "If you sell a commercial unit (office, shop, showroom, warehouse), charge 16% VAT on the sale price.",
                   "If you sell a residential unit (apartment, house for dwelling purposes), no VAT is charged.",
                   "If you are a VAT-registered developer, you can claim input VAT on construction costs attributable to commercial units.",
-                  "The ruling applies retroactively — developers with ongoing or prior transactions should review their VAT position.",
+                  "The ruling applies retroactively - developers with ongoing or prior transactions should review their VAT position.",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[0.88rem] text-ink-soft">
                     <CheckCircle size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -227,7 +227,7 @@ export default function VATForConstructionPage() {
               </div>
 
               <p>
-                When a property includes both land and a commercial building (e.g. a building on a plot being sold together), the developer must apportion the sale price between the land (exempt) and the building (taxable). KRA expects a reasonable apportionment method — typically based on the ratio of construction cost to land value, or a professional valuation.
+                When a property includes both land and a commercial building (e.g. a building on a plot being sold together), the developer must apportion the sale price between the land (exempt) and the building (taxable). KRA expects a reasonable apportionment method - typically based on the ratio of construction cost to land value, or a professional valuation.
               </p>
               <p>
                 The same logic applies to input VAT. A developer constructing commercial buildings can claim input VAT on materials and services used for the building, but not on land acquisition costs (which are exempt).
@@ -355,7 +355,7 @@ export default function VATForConstructionPage() {
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                Many modern developments combine residential and commercial units — ground-floor shops with apartments above, or office blocks with residential wings. These <strong className="text-ink">mixed-use developments</strong> require careful VAT apportionment because the two use types have different VAT treatments.
+                Many modern developments combine residential and commercial units - ground-floor shops with apartments above, or office blocks with residential wings. These <strong className="text-ink">mixed-use developments</strong> require careful VAT apportionment because the two use types have different VAT treatments.
               </p>
 
               <div className="border border-hairline rounded-lg overflow-hidden">

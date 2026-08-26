@@ -4,7 +4,7 @@ const testimonials = [
   {
     name: "Sarah W.",
     role: "Retail Business, Nairobi",
-    text: "I had accumulated late filing penalties over three months — nearly KES 30,000. Smart VAT Kenya handled the waiver application and KRA waived everything except a small admin fee. Worth every shilling.",
+    text: "I had accumulated late filing penalties over three months - nearly KES 30,000. Smart VAT Kenya handled the waiver application and KRA waived everything except a small admin fee. Worth every shilling.",
     rating: 5,
   },
   {
@@ -16,7 +16,7 @@ const testimonials = [
   {
     name: "Grace K.",
     role: "SME Owner, Nakuru",
-    text: "The WhatsApp updates made the whole process stress-free. I didn't have to chase anyone — they kept me informed at every stage. My penalty was fully waived in 2 weeks.",
+    text: "The WhatsApp updates made the whole process stress-free. I didn't have to chase anyone - they kept me informed at every stage. My penalty was fully waived in 2 weeks.",
     rating: 5,
   },
 ]

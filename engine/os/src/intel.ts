@@ -83,7 +83,7 @@ export const DEFAULT_RULES: Rule[] = [
     id: "kra-tax-alerts",
     title: "KRA Tax Alerts (early-warning system)",
     keywords: ["tax", "alerts", "warning", "invoice", "refund", "ring", "flag", "early", "risk"],
-    body: "From April 2026 KRA replaced the old VAT Special Table with 'Tax Alerts' — an early-warning system that notifies a taxpayer about invoicing/compliance issues that could complicate their VAT refunds or claims, rather than blocking input today. Monitor alerts, fix the underlying invoicing issue, and it typically clears without a restriction.",
+    body: "From April 2026 KRA replaced the old VAT Special Table with 'Tax Alerts' - an early-warning system that notifies a taxpayer about invoicing/compliance issues that could complicate their VAT refunds or claims, rather than blocking input today. Monitor alerts, fix the underlying invoicing issue, and it typically clears without a restriction.",
     source: "KRA Tax Alerts, April 2026",
   },
   {
@@ -181,7 +181,7 @@ export const DEFAULT_RULES: Rule[] = [
     id: "pin-format",
     title: "KRA PIN format",
     keywords: ["pin", "format", "structure", "11", "a", "p", "regex", "valid"],
-    body: "A KRA PIN is exactly 11 characters: a starting letter (A for individuals/sole proprietors, P for companies), nine digits, then a terminal letter (e.g. A123456789Z, P123456789Z). Validate the PIN format before issuing a B2B eTIMS invoice — an invalid buyer PIN causes invoice rejection and blocks the buyer's input-VAT claim.",
+    body: "A KRA PIN is exactly 11 characters: a starting letter (A for individuals/sole proprietors, P for companies), nine digits, then a terminal letter (e.g. A123456789Z, P123456789Z). Validate the PIN format before issuing a B2B eTIMS invoice - an invalid buyer PIN causes invoice rejection and blocks the buyer's input-VAT claim.",
     source: "KRA PIN format",
   },
   {

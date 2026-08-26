@@ -11,10 +11,10 @@ import { PROTAX_WEBHOOK, verifyProviderWebhook } from "./webhooks.js"
  * and to running self-hosted tax.ke. All endpoints use `X-API-Key`.
  *
  * Per official API reference (v2.0):
- *   POST /invoices              — submit an invoice for signature
- *   GET  /customers?pin=        — validate a buyer PIN before B2B invoicing
- *   POST /webhooks              — register a callback URL + secret
- *   X-ProTax-Signature: <hex>   — HMAC webhook signing (provider-chosen algo)
+ *   POST /invoices              - submit an invoice for signature
+ *   GET  /customers?pin=        - validate a buyer PIN before B2B invoicing
+ *   POST /webhooks              - register a callback URL + secret
+ *   X-ProTax-Signature: <hex>   - HMAC webhook signing (provider-chosen algo)
  */
 
 /** ProTax invoice submit payload (fields the v2 API reference documents). */

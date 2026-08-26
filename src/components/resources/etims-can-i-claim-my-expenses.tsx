@@ -6,23 +6,23 @@ import { FAQSection } from "@/components/faq-section"
 const faqs = [
   {
     q: "Do I need an eTIMS receipt for literally every business expense?",
-    a: "For claims, yes — KRA cross-references the big categories at filing: supplier goods, fuel, rent, professional services, and imported digital services. The habit is correct regardless: always ask 'can I get this as an eTIMS invoice with my PIN?' — from suppliers, supermarkets, fuel stations and providers.",
+    a: "For claims, yes - KRA cross-references the big categories at filing: supplier goods, fuel, rent, professional services, and imported digital services. The habit is correct regardless: always ask 'can I get this as an eTIMS invoice with my PIN?' - from suppliers, supermarkets, fuel stations and providers.",
   },
   {
-    q: "Matatus and buses — is there an eTIMS receipt for business travel?",
-    a: "Not systematically yet — but it is coming. Ride-hailing (Uber, Bolt) fares have moved to eTIMS receipts in 2026. For matatu and bus trips, keep the tickets and records in a simple travel log — and expect the rules to change as the system extends.",
+    q: "Matatus and buses - is there an eTIMS receipt for business travel?",
+    a: "Not systematically yet - but it is coming. Ride-hailing (Uber, Bolt) fares have moved to eTIMS receipts in 2026. For matatu and bus trips, keep the tickets and records in a simple travel log - and expect the rules to change as the system extends.",
   },
   {
     q: "Can I claim Facebook ads, Fiverr or an AI subscription without an eTIMS receipt?",
-    a: "Foreign providers do not issue KRA eTIMS invoices, so hold the contract, the provider invoice, and the payment trail (M-Pesa/bank) as documentary support for these subscriptions. Digital services handled through the digital-services tax regime follow their own rules — this area is moving, so check with an advisor before claiming big amounts.",
+    a: "Foreign providers do not issue KRA eTIMS invoices, so hold the contract, the provider invoice, and the payment trail (M-Pesa/bank) as documentary support for these subscriptions. Digital services handled through the digital-services tax regime follow their own rules - this area is moving, so check with an advisor before claiming big amounts.",
   },
   {
     q: "Must the vehicle be company-registered to claim fuel?",
-    a: "Yes — fuel claims trace to the asset that is the business's. If you are a sole proprietor driving a personal car for client visits, consult how to structure the vehicle properly before stacking up large fuel claims.",
+    a: "Yes - fuel claims trace to the asset that is the business's. If you are a sole proprietor driving a personal car for client visits, consult how to structure the vehicle properly before stacking up large fuel claims.",
   },
   {
     q: "Do I still need accounting software if I use eTIMS?",
-    a: "Not for compliance alone — eTIMS Lite covers invoicing. But a bookkeeping tool (Zoho Books, QuickBooks, and others) still handles the rest: receipts, profit, reporting, finance hygiene. Many businesses run eTIMS and accounting software side by side: the eTIMS invoices are the tax layer, and the software is the business layer.",
+    a: "Not for compliance alone - eTIMS Lite covers invoicing. But a bookkeeping tool (Zoho Books, QuickBooks, and others) still handles the rest: receipts, profit, reporting, finance hygiene. Many businesses run eTIMS and accounting software side by side: the eTIMS invoices are the tax layer, and the software is the business layer.",
   },
 ]
 
@@ -51,7 +51,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Fuel, Rent, Electricity, Internet: Which Business Expenses Actually Need an eTIMS Receipt?",
   description:
-    "Can you claim fuel, Safaricom internet, KPLC electricity, rent and M-Pesa payments as business expenses in 2026? The exact eTIMS receipt rules — and the 'wrong obligation ID' fix.",
+    "Can you claim fuel, Safaricom internet, KPLC electricity, rent and M-Pesa payments as business expenses in 2026? The exact eTIMS receipt rules - and the 'wrong obligation ID' fix.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-09",
@@ -90,7 +90,7 @@ export default function EtimsCanIClaimMyExpenses() {
             <div>
               <p className="text-sm font-semibold text-ink mb-1">The rule in one sentence</p>
               <p className="text-sm text-ink-muted leading-relaxed">
-                To claim an expense, KRA must be able to trace it back to your KRA PIN — and for most purchases that
+                To claim an expense, KRA must be able to trace it back to your KRA PIN - and for most purchases that
                 means a document that went through eTIMS. A receipt without your PIN is treated as unproven. That is
                 where the phrase <strong>"no eTIMS, no expense"</strong> comes from, and it is accurate.
               </p>
@@ -100,14 +100,14 @@ export default function EtimsCanIClaimMyExpenses() {
           <div className="prose prose-gray max-w-none">
             <h2>Why This Page Exists</h2>
             <p>
-              Every week, business owners in Kenya ask the same questions — in WhatsApp groups, business forums, and
+              Every week, business owners in Kenya ask the same questions - in WhatsApp groups, business forums, and
               over the counter:
             </p>
             <ul>
-              <li><em>"I bought fuel for the delivery vehicle — is a till receipt from the pump enough?"</em></li>
+              <li><em>"I bought fuel for the delivery vehicle - is a till receipt from the pump enough?"</em></li>
               <li><em>"Can I claim my Safaricom internet as a business expense?"</em></li>
-              <li><em>"The landlord won't give me any receipt — can I still claim rent?"</em></li>
-              <li><em>"I pay KPLC tokens for the office — where's my eTIMS receipt?"</em></li>
+              <li><em>"The landlord won't give me any receipt - can I still claim rent?"</em></li>
+              <li><em>"I pay KPLC tokens for the office - where's my eTIMS receipt?"</em></li>
               <li><em>"Do I need an eTIMS receipt for every single expense?"</em></li>
             </ul>
             <p>
@@ -115,51 +115,51 @@ export default function EtimsCanIClaimMyExpenses() {
             </p>
             <p>
               <strong>Why it matters this month:</strong> KRA now cross-checks declared expenses against eTIMS at filing
-              time — a receipt that never reached the system gets rejected, and your taxable profit grows by
+              time - a receipt that never reached the system gets rejected, and your taxable profit grows by
               the unproven amount. The receipts you collect today decide the return you file this year.
             </p>
 
-            <h2>Fuel — Can You Claim It Without an eTIMS Receipt?</h2>
+            <h2>Fuel - Can You Claim It Without an eTIMS Receipt?</h2>
             <p>
               Fuel is the classic case. If the vehicle is registered in the <strong>business's name</strong>, fuel for
-              it is a genuine business expense — you claim it with a fuel receipt that went through eTIMS and carries
+              it is a genuine business expense - you claim it with a fuel receipt that went through eTIMS and carries
               your business PIN.
             </p>
             <p>What doesn't work: generic till/M-Pesa receipts without your PIN, handwritten dockets, or "fuel" lines listed with no receipt.</p>
             <p>Practical moves:</p>
             <ul>
-              <li><strong>Ask for an eTIMS fuel receipt before you pay</strong> — the fuel module is mandatory for stations, and eTIMS receipts can be issued at the pump for both individual motorists and businesses. The deadline for station rollout was extended to 31 December 2025, and around 500 stations (about 16% of the country) were live by early 2026 — so a station that cannot yet issue an eTIMS receipt is a station mid-onboarding, not a business permanently exempt.</li>
+              <li><strong>Ask for an eTIMS fuel receipt before you pay</strong> - the fuel module is mandatory for stations, and eTIMS receipts can be issued at the pump for both individual motorists and businesses. The deadline for station rollout was extended to 31 December 2025, and around 500 stations (about 16% of the country) were live by early 2026 - so a station that cannot yet issue an eTIMS receipt is a station mid-onboarding, not a business permanently exempt.</li>
               <li>If a station still can't issue one, keep the normal receipt <strong>plus</strong> a record (date, litres purchased, station, vehicle registration) in your books. Not perfect, but it is evidence.</li>
               <li>Ground rule: <strong>the vehicle must be registered to the business.</strong> A receipt for your personal car doesn't become the company's expense just because the business "used" it occasionally.</li>
             </ul>
 
-            <h2>Safaricom Airtime and Internet — Can You Claim Them?</h2>
-            <p>This is where owners get genuinely stuck — the mechanics exist, they're just new.</p>
+            <h2>Safaricom Airtime and Internet - Can You Claim Them?</h2>
+            <p>This is where owners get genuinely stuck - the mechanics exist, they're just new.</p>
             <ul>
-              <li>Safaricom runs an official KRA compliance flow on its business portal (business.safaricom.co.ke/kra) — you submit your business KRA PIN once, and Safaricom's invoices for your account are then issued with it and transmitted to iTax in real time. Customer care can walk you through the documentation.</li>
+              <li>Safaricom runs an official KRA compliance flow on its business portal (business.safaricom.co.ke/kra) - you submit your business KRA PIN once, and Safaricom's invoices for your account are then issued with it and transmitted to iTax in real time. Customer care can walk you through the documentation.</li>
               <li>In parallel, <strong>keep the payment records</strong>: M-Pesa statements, the account number, and any emailed invoice. If KRA validates later and your PIN is pending on a purchase, you at least have the audit trail built.</li>
             </ul>
             <p>If you can't get the PIN on a specific token or airtime purchase, log it honestly and keep the payment proof.</p>
 
-            <h2>KPLC Tokens and Electricity — Can You Claim Them?</h2>
-            <p>Power is a large cost — and a gnarly one:</p>
+            <h2>KPLC Tokens and Electricity - Can You Claim Them?</h2>
+            <p>Power is a large cost - and a gnarly one:</p>
             <ul>
-              <li>Electricity billing is tied to the <strong>meter owner's registration</strong> — usually the landlord or the named account holder, not the person who buys tokens.</li>
-              <li>KRA's datasets include Kenya Power account records — so the meter's registered name should match the business that pays for it. That match is exactly what makes a power expense traceable.</li>
-              <li>If the meter is registered in <strong>your business name</strong>, the bills plus token purchase records are your evidence — claim it.</li>
-              <li>If you buy tokens on someone else's meter (rented space, shared premises), the expense belongs to the meter owner, not the token payer. Don't "reverse-engineer" a fake receipt — fix it at setup instead: ask the owner to register the meter to you or issue you a tax invoice for the service.</li>
+              <li>Electricity billing is tied to the <strong>meter owner's registration</strong> - usually the landlord or the named account holder, not the person who buys tokens.</li>
+              <li>KRA's datasets include Kenya Power account records - so the meter's registered name should match the business that pays for it. That match is exactly what makes a power expense traceable.</li>
+              <li>If the meter is registered in <strong>your business name</strong>, the bills plus token purchase records are your evidence - claim it.</li>
+              <li>If you buy tokens on someone else's meter (rented space, shared premises), the expense belongs to the meter owner, not the token payer. Don't "reverse-engineer" a fake receipt - fix it at setup instead: ask the owner to register the meter to you or issue you a tax invoice for the service.</li>
             </ul>
 
-            <h2>Rent — Can You Claim It Without a Landlord Receipt?</h2>
+            <h2>Rent - Can You Claim It Without a Landlord Receipt?</h2>
             <ul>
-              <li>If your <strong>landlord</strong> is a VAT/eTIMS-aware taxpayer, they should issue monthly eTIMS rental invoices that include your PIN. Landlords increasingly do this — KRA has been moving the rental sector onto e-invoices precisely so tenants can claim rent as a business cost. Landlords earning between KES 288,000 and KES 15 million a year in rent sit in the Monthly Rental Income regime (7.5% on gross rent since January 2024), and that same landlord base is being onboarded onto eTIMS.</li>
-              <li>If they refuse: <strong>ask in writing</strong>, keep every documented payment (M-Pesa reference, bank transfer), and hold that record. The claim without any invoice is risky — the ask-in-writing covers you in any audit conversation.</li>
+              <li>If your <strong>landlord</strong> is a VAT/eTIMS-aware taxpayer, they should issue monthly eTIMS rental invoices that include your PIN. Landlords increasingly do this - KRA has been moving the rental sector onto e-invoices precisely so tenants can claim rent as a business cost. Landlords earning between KES 288,000 and KES 15 million a year in rent sit in the Monthly Rental Income regime (7.5% on gross rent since January 2024), and that same landlord base is being onboarded onto eTIMS.</li>
+              <li>If they refuse: <strong>ask in writing</strong>, keep every documented payment (M-Pesa reference, bank transfer), and hold that record. The claim without any invoice is risky - the ask-in-writing covers you in any audit conversation.</li>
             </ul>
 
             <h2>M-Pesa Till Receipts</h2>
             <p>
               M-Pesa till receipts are <strong>proof of payment</strong>, not tax invoices. The supplier's eTIMS invoice
-              (with your PIN) is the claimable document; the M-Pesa receipt proves you actually paid. Keep both —
+              (with your PIN) is the claimable document; the M-Pesa receipt proves you actually paid. Keep both -
               they do different jobs.
             </p>
 
@@ -170,16 +170,16 @@ export default function EtimsCanIClaimMyExpenses() {
             </p>
             <p>
               <strong>What's happening:</strong> the tax obligations on your PIN and the eTIMS registration aren't in
-              sync — for example, a NONVAT invoice type issued while no matching NONVAT obligation is active on the PIN.
+              sync - for example, a NONVAT invoice type issued while no matching NONVAT obligation is active on the PIN.
             </p>
             <p>The practical fix flow:</p>
             <ol>
               <li>Log in to iTax → confirm your active obligations (VAT-registered? Income Tax – Business? TOT?)</li>
               <li>Register the correct obligation and re-activate eTIMS under that PIN</li>
               <li>Issue using the invoice type that matches the error you saw</li>
-              <li>If it persists, raise the ticket with your obligation ID — this resolves in 1–2 working days</li>
+              <li>If it persists, raise the ticket with your obligation ID - this resolves in 1–2 working days</li>
             </ol>
-            <p>We see this weekly — if you get stuck, send us a screenshot and we'll walk it through on WhatsApp.</p>
+            <p>We see this weekly - if you get stuck, send us a screenshot and we'll walk it through on WhatsApp.</p>
           </div>
 
           {/* FAQ */}
@@ -202,9 +202,9 @@ export default function EtimsCanIClaimMyExpenses() {
                     ["Fuel (company vehicle)", "Yes", "Fuel-station eTIMS receipt with PIN; vehicle registered to the company"],
                     ["Safaricom internet / airtime", "Yes (evolving)", "Register your PIN on the account; keep payment records"],
                     ["KPLC tokens", "Meter-owner's claim", "Meter registered to the business; tokens prove payment"],
-                    ["Rent", "Yes — landlord-issued", "Landlord issues monthly eTIMS rental invoice; ask in writing if not"],
+                    ["Rent", "Yes - landlord-issued", "Landlord issues monthly eTIMS rental invoice; ask in writing if not"],
                     ["Transport / matatu", "Not yet systematic", "Keep tickets for genuine business trips"],
-                    ["M-Pesa till payments", "No — payment receipt only", "M-Pesa proves payment; eTIMS proves the claim — keep both"],
+                    ["M-Pesa till payments", "No - payment receipt only", "M-Pesa proves payment; eTIMS proves the claim - keep both"],
                     ["Foreign ads / subscriptions", "No local eTIMS", "Contract + payment trail; check the digital-services rules"],
                   ].map((row) => (
                     <tr key={row[0]} className="hover:bg-canvas-alt/50">
@@ -239,7 +239,7 @@ export default function EtimsCanIClaimMyExpenses() {
         <div className="mt-10 border border-brand/20 bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-[1rem] font-semibold text-ink mb-1">Unsure whether your receipts pass?</p>
           <p className="text-[0.85rem] text-ink-muted mb-4 max-w-[42ch] mx-auto leading-relaxed">
-            Send photos of your last three business receipts on WhatsApp — we'll say which ones you can claim. Or
+            Send photos of your last three business receipts on WhatsApp - we'll say which ones you can claim. Or
             let us handle your eTIMS onboarding end to end.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">

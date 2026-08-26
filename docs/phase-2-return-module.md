@@ -1,4 +1,4 @@
-﻿# Phase 2 — Return Validity Module (RVM) & Validation Engine
+﻿# Phase 2 - Return Validity Module (RVM) & Validation Engine
 
 _Date: 2026-08-08 · Status: engine shipped + content pivot_
 
@@ -13,8 +13,8 @@ input claims.
 ## Why
 
 The Jan 2026 Special Table research landed in a disappointing place. The
-supposed "Special Table" / "Taskforce Special List" concept — treated as a
-mechanism for **blocking a buyer's input VAT based on the seller's KRA PIN** —
+supposed "Special Table" / "Taskforce Special List" concept - treated as a
+mechanism for **blocking a buyer's input VAT based on the seller's KRA PIN** -
 does not hold up as a concrete, actionable mechanism under current sources.
 
 Reading the governing documents (VAT Act as amended by the Finance Act 2025,
@@ -23,11 +23,11 @@ buyer-claim blocking never appears as a rule. The scholarly sources we reviewed
 (Allan Simiyu 2024 on VAT refund paralysis; KRA annual bulletins; CITPA guidance
 memos on the VAT bill) make clear the actual recognition points for a return are:
 
-1. **eTIMS enrolment and invoice transmission** — if an invoice was never
+1. **eTIMS enrolment and invoice transmission** - if an invoice was never
    transmitted, the buyer's claim collapses regardless of the supplier's register.
-2. **Counterparty verification** — buyer PIN and seller PIN must both resolve on
+2. **Counterparty verification** - buyer PIN and seller PIN must both resolve on
    iTax/RAIS. Relying on a buyer's proper VAT database is the legal base for a claim.
-3. **Output VAT vs. input VAT consistently** — the standard, and the real
+3. **Output VAT vs. input VAT consistently** - the standard, and the real
    enforcement now sits in RAIS **Tax Alerts**, cross-checking eTIMS numbers
    against the filed return (systemic mismatch → an alert, not a supplier flag).
 4. **The 12-month refund / input-claim clock** (Finance Lit): refunds recognised
@@ -53,7 +53,7 @@ the sources. What replaced it in the product:
 - Discontinuation banner: VAT-Special-Table as an agent-facing mechanism is not
   supported by our sources; we keep the practical "don't file 6+ months of nil"
   advice because RAIS cross-checks are real.
-- New section on **RAIS "Tax Alerts"** — the operative screen.
+- New section on **RAIS "Tax Alerts"** - the operative screen.
 - Removed the "official KRA guidance confirms" claim that attributed a block.
 
 ## Next steps

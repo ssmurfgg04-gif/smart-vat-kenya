@@ -9,7 +9,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "Safaricom Not Working — Status & Fixes", item: "https://smartvatkenya.co.ke/resources/safaricom-not-working/" },
+    { "@type": "ListItem", position: 3, name: "Safaricom Not Working - Status & Fixes", item: "https://smartvatkenya.co.ke/resources/safaricom-not-working/" },
   ],
 }
 
@@ -49,15 +49,15 @@ const faqSchema = {
       name: "How does Safaricom downtime affect M-Pesa payments?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "During a Safaricom network outage, M-Pesa transactions (send money, pay bill, Lipa na M-Pesa, till payments) can fail, delay, or be held in a 'pending' state. Money is only debited from your M-Pesa balance once the transaction is confirmed by Safaricom's systems. If a payment fails with an error, do not resend immediately — check whether the money left your account first, otherwise you can double-pay. For VAT remittance via the KRA Paybill 572572, wait for the network to stabilise, then confirm the payment was received before re-sending.",
+        text: "During a Safaricom network outage, M-Pesa transactions (send money, pay bill, Lipa na M-Pesa, till payments) can fail, delay, or be held in a 'pending' state. Money is only debited from your M-Pesa balance once the transaction is confirmed by Safaricom's systems. If a payment fails with an error, do not resend immediately - check whether the money left your account first, otherwise you can double-pay. For VAT remittance via the KRA Paybill 572572, wait for the network to stabilise, then confirm the payment was received before re-sending.",
       },
     },
     {
       "@type": "Question",
-      name: "My M-Pesa payment to KRA failed — will I be penalised for late VAT payment?",
+      name: "My M-Pesa payment to KRA failed - will I be penalised for late VAT payment?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "If you attempted to pay KRA VAT via M-Pesa Paybill 572572 before the deadline but the transaction failed due to a Safaricom or M-Pesa outage, take a screenshot of the failure message with the date and time. File your return and pay as soon as the network is restored, then apply for a late-payment penalty waiver citing the network outage. KRA does not automatically waive penalties for third-party network failures — you must apply proactively with evidence.",
+        text: "If you attempted to pay KRA VAT via M-Pesa Paybill 572572 before the deadline but the transaction failed due to a Safaricom or M-Pesa outage, take a screenshot of the failure message with the date and time. File your return and pay as soon as the network is restored, then apply for a late-payment penalty waiver citing the network outage. KRA does not automatically waive penalties for third-party network failures - you must apply proactively with evidence.",
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: "What can I do when Safaricom is not working?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Try these steps: toggle airplane mode on and off to force a network re-registration, restart your phone, move to a different location (outages are often coverage-based), and use Wi-Fi calling if your phone supports it. To reach customer care, call 0722 000 000 or 100 (free from Safaricom lines). For urgent M-Pesa needs, consider a short-term fallback — many businesses keep a second SIM on Airtel or Telkom for resilience, and KRA payment can also be made via bank or PesaLink once the network recovers.",
+        text: "Try these steps: toggle airplane mode on and off to force a network re-registration, restart your phone, move to a different location (outages are often coverage-based), and use Wi-Fi calling if your phone supports it. To reach customer care, call 0722 000 000 or 100 (free from Safaricom lines). For urgent M-Pesa needs, consider a short-term fallback - many businesses keep a second SIM on Airtel or Telkom for resilience, and KRA payment can also be made via bank or PesaLink once the network recovers.",
       },
     },
     {
@@ -157,7 +157,7 @@ export default function SafaricomNotWorkingPage() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — Current Status */}
+          {/* Section 1 - Current Status */}
           <section id="current-status" aria-labelledby="current-status-h" className="scroll-mt-20">
             <h2 id="current-status-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Is Safaricom Down Right Now?
@@ -184,7 +184,7 @@ export default function SafaricomNotWorkingPage() {
               <div className="space-y-3">
                 {[
                   {
-                    title: "Call Safaricom customer care — 0722 000 000",
+                    title: "Call Safaricom customer care - 0722 000 000",
                     desc: "The recorded message often includes an outage notice when there is a known network problem. If you hear a standard message, the network is likely up and the issue is local to you.",
                   },
                   {
@@ -221,7 +221,7 @@ export default function SafaricomNotWorkingPage() {
             </div>
           </section>
 
-          {/* Section 2 — Outages & VAT */}
+          {/* Section 2 - Outages & VAT */}
           <section id="how-outages-hit-vat" aria-labelledby="how-outages-hit-vat-h">
             <h2 id="how-outages-hit-vat-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               How Safaricom Outages Affect M-Pesa &amp; KRA Payments
@@ -277,7 +277,7 @@ export default function SafaricomNotWorkingPage() {
             </div>
           </section>
 
-          {/* Section 3 — M-Pesa fixes */}
+          {/* Section 3 - M-Pesa fixes */}
           <section id="m-pesa-fixes" aria-labelledby="m-pesa-fixes-h">
             <h2 id="m-pesa-fixes-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               M-Pesa Payment Fixes During an Outage
@@ -328,7 +328,7 @@ export default function SafaricomNotWorkingPage() {
             </div>
           </section>
 
-          {/* Section 4 — Network fixes */}
+          {/* Section 4 - Network fixes */}
           <section id="network-fixes" aria-labelledby="network-fixes-h">
             <h2 id="network-fixes-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Network / Signal Fixes for No Service or No Data
@@ -372,7 +372,7 @@ export default function SafaricomNotWorkingPage() {
             </div>
           </section>
 
-          {/* Section 5 — Contacting Safaricom */}
+          {/* Section 5 - Contacting Safaricom */}
           <section id="customer-care" aria-labelledby="customer-care-h">
             <h2 id="customer-care-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               How to Contact Safaricom Customer Care
@@ -383,7 +383,7 @@ export default function SafaricomNotWorkingPage() {
                   { title: "0722 000 000", desc: "The main customer care line. The automated message usually includes outage notices when there is a known network problem." },
                   { title: "100", desc: "Free customer care number when calling from a Safaricom line." },
                   { title: "200", desc: "M-Pesa customer care line for M-Pesa-specific issues (free from Safaricom lines)." },
-                  { title: "X (Twitter)", desc: "@SafaricomCare is the fastest way to get a response during outages — they reply publicly and via DM." },
+                  { title: "X (Twitter)", desc: "@SafaricomCare is the fastest way to get a response during outages - they reply publicly and via DM." },
                 ].map(({ title, desc }) => (
                   <div key={title} className="flex items-start gap-3">
                     <Info size={15} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
@@ -397,7 +397,7 @@ export default function SafaricomNotWorkingPage() {
             </div>
           </section>
 
-          {/* Section 6 — Business resilience */}
+          {/* Section 6 - Business resilience */}
           <section id="business-resilience" aria-labelledby="business-resilience-h">
             <h2 id="business-resilience-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Business Resilience During Network Outages
@@ -438,7 +438,7 @@ export default function SafaricomNotWorkingPage() {
               <p>
                 Related guides:{" "}
                 <a href="/resources/etims-down-offline-invoicing/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
-                  KRA eTIMS Down — Offline Invoicing
+                  KRA eTIMS Down - Offline Invoicing
                 </a>
                 {" · "}
                 <a href="/resources/itax-portal-not-working/" className="text-brand underline underline-offset-2 hover:text-brand-hover">

@@ -20,7 +20,7 @@ const WA_BASE = "https://wa.me/254717344440"
 const WA_TEXT = "Hi%2C%20I%20want%20the%20KES%203500%20Monthly%20VAT%20Filing%20service"
 
 const features = [
-  { Icon: CalendarBlank, label: "Filed before the 20th — every month" },
+  { Icon: CalendarBlank, label: "Filed before the 20th - every month" },
   { Icon: CheckCircle, label: "We file on the 17th, not the 20th" },
   { Icon: ShieldCheck, label: "Avoids KES 10,000 late penalty" },
   { Icon: CurrencyDollar, label: "M-PESA payment guidance" },
@@ -31,23 +31,23 @@ const features = [
 
 const steps = [
   { num: "01", title: "Send us your KRA PIN", desc: "Share your KRA PIN and VAT details via WhatsApp. We handle everything from there." },
-  { num: "02", title: "We file on iTax on the 17th", desc: "Your VAT return is prepared and submitted on iTax before the 17th — three days ahead of the deadline." },
+  { num: "02", title: "We file on iTax on the 17th", desc: "Your VAT return is prepared and submitted on iTax before the 17th - three days ahead of the deadline." },
   { num: "03", title: "You get confirmation", desc: "We send you the KRA filing confirmation receipt via WhatsApp the same day. You are done for the month." },
 ]
 
 const comparisons = [
   { criterion: "Time spent on iTax portal", us: "2 minutes on WhatsApp", them: "Hours navigating iTax" },
   { criterion: "Stress of deadline", us: "We handle it", them: "You chase the 20th" },
-  { criterion: "Risk of KES 10,000 penalty", us: "Filed on 17th — protected", them: "At risk near the 20th" },
+  { criterion: "Risk of KES 10,000 penalty", us: "Filed on 17th - protected", them: "At risk near the 20th" },
   { criterion: "Portal errors & downtime", us: "We deal with iTax", them: "You deal with it" },
-  { criterion: "Payment", us: "M-PESA — 30 seconds", them: "Filing fees + bank charges" },
+  { criterion: "Payment", us: "M-PESA - 30 seconds", them: "Filing fees + bank charges" },
   { criterion: "Filing confirmation", us: "Sent to you on WhatsApp", them: "You download from iTax" },
 ]
 
 const faqs = [
   {
     q: "What if I miss the 20th?",
-    a: "Our process is to file on the 17th — three full working days before KRA's 20th deadline — so you have a buffer against outages. If KRA rejects a return, we fix it and resubmit at no extra cost the same day.",
+    a: "Our process is to file on the 17th - three full working days before KRA's 20th deadline - so you have a buffer against outages. If KRA rejects a return, we fix it and resubmit at no extra cost the same day.",
   },
   {
     q: "Can I cancel anytime?",
@@ -59,11 +59,11 @@ const faqs = [
   },
   {
     q: "Do I need to do anything each month?",
-    a: "Just send your sales and purchase invoices for the month. We take it from there — we calculate the VAT, file on iTax, and send you the confirmation. It takes about 2 minutes of your time.",
+    a: "Just send your sales and purchase invoices for the month. We take it from there - we calculate the VAT, file on iTax, and send you the confirmation. It takes about 2 minutes of your time.",
   },
   {
     q: "What if my VAT liability is zero (nil return)?",
-    a: "No problem. We still file a nil return on iTax before the 20th. Filing a nil return is just as important as filing a payable one — KRA still penalises KES 10,000 for missing a nil return deadline.",
+    a: "No problem. We still file a nil return on iTax before the 20th. Filing a nil return is just as important as filing a payable one - KRA still penalises KES 10,000 for missing a nil return deadline.",
   },
 ]
 
@@ -126,7 +126,7 @@ export default function MonthlyVatFilingPage() {
             <span className="text-canvas/70 font-normal">KES 3,500/mo. Filed before the 20th.</span>
           </h1>
           <p className="text-[0.95rem] text-canvas/70 max-w-[50ch] leading-relaxed mb-6">
-            We file your iTax VAT return on the 17th every month — well before the KRA deadline.
+            We file your iTax VAT return on the 17th every month - well before the KRA deadline.
             No more rushing, no more KES 10,000 late penalties. Just send us your invoices and
             we handle the rest.
           </p>
@@ -240,7 +240,7 @@ export default function MonthlyVatFilingPage() {
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.1rem] font-semibold text-ink">
-              KES 3,500/month — filed before the 20th
+              KES 3,500/month - filed before the 20th
             </p>
             <p className="text-[0.85rem] text-ink-muted mt-1">
               No lock-in. Cancel anytime. We file on the 17th to keep you ahead of the deadline.

@@ -9,14 +9,14 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "KRA VAT Special Table — Risks and Remedies", item: "https://smartvatkenya.co.ke/resources/vat-special-table-risks/" },
+    { "@type": "ListItem", position: 3, name: "KRA VAT Special Table - Risks and Remedies", item: "https://smartvatkenya.co.ke/resources/vat-special-table-risks/" },
   ],
 }
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-headline: "KRA VAT Special Table — How It Works and How to Avoid Being Flagged",
+headline: "KRA VAT Special Table - How It Works and How to Avoid Being Flagged",
   description:
     "What we actually know about KRA's supplier-compliance checks in 2026: how the VAT Special Table concept was handed down, why we now read it as RAIS 'Tax Alerts' plus eTIMS invoice validation, and how to keep your input VAT claims safe. Filing consecutive nil returns can still get you flagged.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -36,7 +36,7 @@ const faqSchema = {
       name: "What is the KRA VAT Special Table?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The VAT Special Table is a term that has circulated for a KRA list of suppliers flagged for non-compliance. Note: our August 2026 review of KRA sources did not find an official register literally named 'Special Table'. What operates in practice is RAIS 'Tax Alerts' plus eTIMS-level validation — an un-transmitted or unverified invoice loses you the input VAT claim even if your return is otherwise correct.",
+        text: "The VAT Special Table is a term that has circulated for a KRA list of suppliers flagged for non-compliance. Note: our August 2026 review of KRA sources did not find an official register literally named 'Special Table'. What operates in practice is RAIS 'Tax Alerts' plus eTIMS-level validation - an un-transmitted or unverified invoice loses you the input VAT claim even if your return is otherwise correct.",
       },
     },
     {
@@ -44,7 +44,7 @@ const faqSchema = {
       name: "Can filing nil returns put me on the Special Table?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Filing consecutive nil returns over 6 to 12 months can trigger a KRA compliance review, which can result in you being added to the VAT Special Table. KRA reasons that a business filing consistent nil returns may be under-reporting sales. To avoid this, ensure your nil returns are legitimate — and if you do have activity, file a normal return.",
+        text: "Yes. Filing consecutive nil returns over 6 to 12 months can trigger a KRA compliance review, which can result in you being added to the VAT Special Table. KRA reasons that a business filing consistent nil returns may be under-reporting sales. To avoid this, ensure your nil returns are legitimate - and if you do have activity, file a normal return.",
       },
     },
     {
@@ -60,7 +60,7 @@ const faqSchema = {
       name: "How do I get my business removed from the VAT Special Table?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Removal from the Special Table requires filing all outstanding returns, paying any penalties, and demonstrating consistent compliance — usually 3 to 6 months of on-time, accurate returns. In serious cases, you may need to meet with a KRA compliance officer. Smart VAT Kenya can help draft a compliance letter and manage the removal process.",
+        text: "Removal from the Special Table requires filing all outstanding returns, paying any penalties, and demonstrating consistent compliance - usually 3 to 6 months of on-time, accurate returns. In serious cases, you may need to meet with a KRA compliance officer. Smart VAT Kenya can help draft a compliance letter and manage the removal process.",
       },
     },
     {
@@ -76,7 +76,7 @@ const faqSchema = {
       name: "Is the VAT Special Table the same as a KRA blacklist?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Not exactly. The Special Table is specifically a VAT compliance flag — it blocks input VAT claims from that supplier. A KRA blacklist is a broader designation that can affect your ability to clear goods at customs, get tax compliance certificates, or bid for government tenders. Being on the Special Table can escalate to a broader blacklist if non-compliance continues.",
+        text: "Not exactly. The Special Table is specifically a VAT compliance flag - it blocks input VAT claims from that supplier. A KRA blacklist is a broader designation that can affect your ability to clear goods at customs, get tax compliance certificates, or bid for government tenders. Being on the Special Table can escalate to a broader blacklist if non-compliance continues.",
       },
     },
     {
@@ -84,7 +84,7 @@ const faqSchema = {
       name: "How does eTIMS relate to the VAT Special Table?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "eTIMS and the Special Table are connected. Suppliers who fail to onboard eTIMS or who issue non-compliant invoices are prime candidates for the Special Table. Conversely, being eTIMS-compliant and filing regular returns is the best way to avoid being flagged. KRA's real-time invoice data from eTIMS is used to cross-check returns — discrepancies can trigger a Special Table review.",
+        text: "eTIMS and the Special Table are connected. Suppliers who fail to onboard eTIMS or who issue non-compliant invoices are prime candidates for the Special Table. Conversely, being eTIMS-compliant and filing regular returns is the best way to avoid being flagged. KRA's real-time invoice data from eTIMS is used to cross-check returns - discrepancies can trigger a Special Table review.",
       },
     },
   ],
@@ -138,11 +138,11 @@ export default function VATSpecialTablePage() {
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
             <strong className="text-ink">"VAT Special Table"</strong> is a term that has
             circulated for KRA's list of flagged suppliers. After an August 2026 source review we
-            could not verify an official supplier-block mechanism under that name — the operative
+            could not verify an official supplier-block mechanism under that name - the operative
             controls today are <strong className="text-ink">RAIS "Tax Alerts"</strong> and eTIMS
             invoice validation. What is still real: filing{" "}
             <strong className="text-ink">consecutive nil returns</strong> (6+ months) raises a
-            compliance flag — and un-transmitted or unverifiable invoices will cost your input VAT
+            compliance flag - and un-transmitted or unverifiable invoices will cost your input VAT
             claim. Check your suppliers&apos; eTIMS status before you claim input VAT.
           </p>
         </div>
@@ -157,7 +157,7 @@ export default function VATSpecialTablePage() {
             <p className="text-[0.83rem] text-[#8a6500] dark:text-[#ccaa33] leading-relaxed">
               The VAT Special Table is not widely discussed, but it affects thousands of Kenyan
               businesses. You will only discover you are on it when your input VAT claim gets
-              rejected — or when your own customers start complaining that their claims linked
+              rejected - or when your own customers start complaining that their claims linked
               to your invoices are being denied. Awareness is your best defence.
             </p>
           </div>
@@ -173,12 +173,12 @@ export default function VATSpecialTablePage() {
             <p className="text-[0.83rem] text-[#7a1f1f] dark:text-[#ffb4b4] leading-relaxed">
               We traced the "VAT Special Table" story to its governing-law sources and
               could not find an official KRA mechanism that <em>blocks a buyer&apos;s
-              input VAT specifically because the supplier is listed</em> — there is no
+              input VAT specifically because the supplier is listed</em> - there is no
               public supplier register and the reality is more nuanced. What is
               real and enforceable today: <strong>RAIS "Tax Alerts"</strong> cross-check
               eTIMS invoice data against your return, and un-transmitted or unverified
               invoices will lose you the claim regardless. We keep this guide for its
-              practical compliance advice — especially the nil-return warning — and point
+              practical compliance advice - especially the nil-return warning - and point
               you to the Tax Alerts section below for what actually operates.
             </p>
           </div>
@@ -203,7 +203,7 @@ export default function VATSpecialTablePage() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — What Is It */}
+          {/* Section 1 - What Is It */}
           <section id="what-is-special-table" aria-labelledby="what-is-special-table-h">
             <h2 id="what-is-special-table-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What Is the VAT Special Table?
@@ -212,19 +212,19 @@ export default function VATSpecialTablePage() {
               <p>
                 The <strong className="text-ink">VAT Special Table</strong> (also called the Special
                 Suppliers Table) is a KRA-maintained database of suppliers flagged for VAT
-                non-compliance. It is separate from the general taxpayer register — it specifically
+                non-compliance. It is separate from the general taxpayer register - it specifically
                 tracks suppliers whose input VAT claims KRA does not trust.
               </p>
               <p>
                 When you file your monthly VAT return on iTax and enter purchases from a supplier
                 on the Special Table, the system <strong className="text-ink">automatically rejects</strong>{" "}
                 your input VAT claim for that particular supplier. You will see a warning or error
-                message referencing the Special Table. The rejection is automatic — no human review
+                message referencing the Special Table. The rejection is automatic - no human review
                 involved.
               </p>
               <p>
                 The Special Table was created to combat <strong className="text-ink">VAT carousel fraud</strong>{" "}
-                and invoice mills — schemes where fake invoices are used to claim fraudulent input
+                and invoice mills - schemes where fake invoices are used to claim fraudulent input
                 VAT refunds from KRA. However, it also catches legitimate businesses that have fallen
                 behind on compliance without realising the consequences.
               </p>
@@ -241,7 +241,7 @@ export default function VATSpecialTablePage() {
             </div>
           </section>
 
-          {/* Section 2 — KRA Tax Alerts (operative mechanism) */}
+          {/* Section 2 - KRA Tax Alerts (operative mechanism) */}
           <section id="tax-alerts" aria-labelledby="tax-alerts-h">
             <h2 id="tax-alerts-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               KRA Tax Alerts: The Actual Screen You Should Watch
@@ -250,11 +250,11 @@ export default function VATSpecialTablePage() {
               <p>
                 In practice, KRA&apos;s enforcement for this exact risk does not run through
                 a public "Special Table" register. It runs through <strong className="text-ink">Tax
-                Alerts</strong> — the notices KRA raises in the RAIS taxpayer portal when it
+                Alerts</strong> - the notices KRA raises in the RAIS taxpayer portal when it
                 reconciles your eTIMS invoice data against the returns you file.
               </p>
               <p>
-                An alert is raised per line item — for example when declared output differs
+                An alert is raised per line item - for example when declared output differs
                 from the sales transmitted through eTIMS, or when input purchases reference
                 a supplier whose PIN does not resolve on iTax. Because the alert attaches to
                 the specific entry rather than a wholesale supplier ban, the correct remedy
@@ -266,7 +266,7 @@ export default function VATSpecialTablePage() {
                 <ul className="space-y-2">
                   {[
                     "The supplier's invoice was transmitted through eTIMS (or covered by offline invoicing protocols).",
-                    "Both buyer and supplier KRA PINs resolve on iTax — an unverified supplier PIN collapses the claim.",
+                    "Both buyer and supplier KRA PINs resolve on iTax - an unverified supplier PIN collapses the claim.",
                     "The purchase is supported by a normal, commercially sound transaction with documentation kept.",
                     "The claim sits inside the legal window: input VAT reclaimed within 6 months, refunds within 12 months (Finance Act 2025).",
                   ].map((item) => (
@@ -285,7 +285,7 @@ export default function VATSpecialTablePage() {
             </div>
           </section>
 
-          {/* Section 3 — How Suppliers Get Flagged */}
+          {/* Section 3 - How Suppliers Get Flagged */}
           <section id="how-suppliers-get-added" aria-labelledby="how-suppliers-get-added-h">
             <h2 id="how-suppliers-get-added-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               How Suppliers Get Flagged
@@ -300,32 +300,32 @@ export default function VATSpecialTablePage() {
                   {
                     trigger: "Consecutive nil returns (6+ months)",
                     detail: "Filing nil returns for 6 to 12 months in a row triggers a compliance review. KRA questions whether a business can operate for that long with zero activity.",
-                    risk: "High — one of the most common triggers for legitimate small businesses",
+                    risk: "High - one of the most common triggers for legitimate small businesses",
                   },
                   {
                     trigger: "eTIMS non-compliance",
                     detail: "Not registered for eTIMS or issuing invoices outside the eTIMS system. Since eTIMS is mandatory for all businesses, non-compliance is a red flag.",
-                    risk: "High — escalating enforcement from January 2026",
+                    risk: "High - escalating enforcement from January 2026",
                   },
                   {
                     trigger: "Discrepancy between eTIMS data and returns",
                     detail: "If your eTIMS invoice data shows sales but your VAT return declares lower amounts, KRA flags the mismatch automatically.",
-                    risk: "Medium — caught by KRA's automated cross-checking",
+                    risk: "Medium - caught by KRA's automated cross-checking",
                   },
                   {
                     trigger: "Late filing pattern",
                     detail: "Filing consistently late (even by a few days) can build a compliance risk profile that lands you on the Special Table.",
-                    risk: "Medium — depends on frequency and lateness",
+                    risk: "Medium - depends on frequency and lateness",
                   },
                   {
                     trigger: "Audit finding of under-declaration",
                     detail: "If a KRA desk audit or field audit finds you under-declared sales, you will likely be added to the Special Table as part of the remedial action.",
-                    risk: "Very High — usually involves penalties too",
+                    risk: "Very High - usually involves penalties too",
                   },
                   {
                     trigger: "Suspicious invoice patterns",
                     detail: "Issuing invoices that look irregular (round-number amounts, rapid escalation in invoice volume, invoices to related parties) can trigger a review.",
-                    risk: "Medium — KRA's analytics system flags anomalies",
+                    risk: "Medium - KRA's analytics system flags anomalies",
                   },
                 ].map(({ trigger, detail, risk }) => (
                   <div key={trigger} className="border border-hairline rounded-lg p-4">
@@ -343,7 +343,7 @@ export default function VATSpecialTablePage() {
             </div>
           </section>
 
-          {/* Section 3 — Nil Returns */}
+          {/* Section 3 - Nil Returns */}
           <section id="nil-return-flagging" aria-labelledby="nil-return-flagging-h">
             <h2 id="nil-return-flagging-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Consecutive Nil Returns: A Hidden Risk
@@ -351,7 +351,7 @@ export default function VATSpecialTablePage() {
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
                 This is the <strong className="text-ink">most overlooked trap</strong> in Kenya VAT
-                compliance. Filing nil returns is the right thing to do when you have no activity —
+                compliance. Filing nil returns is the right thing to do when you have no activity -
                 but filing them <strong className="text-ink">month after month without a break</strong>{" "}
                 can flag you in KRA's system.
               </p>
@@ -359,17 +359,17 @@ export default function VATSpecialTablePage() {
                 Here is the logic from KRA's perspective: if a business has zero sales, zero purchases,
                 zero expenses for six straight months, is it really operating? KRA's compliance system
                 flags such taxpayers for review. If your business genuinely has a seasonal or pre-launch
-                period with no activity, you may be fine — but you need to be prepared to explain.
+                period with no activity, you may be fine - but you need to be prepared to explain.
               </p>
               <div className="border border-hairline rounded-lg p-5 bg-canvas-alt">
                 <p className="font-semibold text-ink text-[0.88rem] mb-2">How to avoid nil return flagging</p>
                 <ul className="space-y-2 mt-3">
                   {[
-                    "If you have even small activity (KES 1,000 in sales or KES 500 in purchases), file it — do not file a nil return when you have real transactions.",
-                    "Keep records of why you filed nil returns — pre-launch phase, seasonal business, restructuring, etc.",
+                    "If you have even small activity (KES 1,000 in sales or KES 500 in purchases), file it - do not file a nil return when you have real transactions.",
+                    "Keep records of why you filed nil returns - pre-launch phase, seasonal business, restructuring, etc.",
                     "If you registered for VAT but have not launched yet, consider whether voluntary registration was the right move. A business with no activity for 12+ months should not be VAT-registered.",
                     "Consider de-registering from VAT if you consistently have nil activity for 12 months. KRA allows voluntary de-registration if you meet the criteria.",
-                    "If you are flagged, respond promptly — ignoring KRA's compliance inquiry can escalate to the Special Table.",
+                    "If you are flagged, respond promptly - ignoring KRA's compliance inquiry can escalate to the Special Table.",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-[0.85rem] text-ink-muted">
                       <CheckCircle size={15} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -387,7 +387,7 @@ export default function VATSpecialTablePage() {
                   <p className="text-[0.83rem] text-[#8a6500] dark:text-[#ccaa33] leading-relaxed">
                     The exact mechanism "VAT Special Table" did not survive our August 2026
                     source review, but filing consecutive nil returns gets you flagged
-                    regardless of the label — RAIS raises a review flag and your customers'
+                    regardless of the label - RAIS raises a review flag and your customers'
                     input claims can be challenged on audit. File honest returns even when
                     the amounts are small.
                   </p>
@@ -403,7 +403,7 @@ export default function VATSpecialTablePage() {
             </div>
           </section>
 
-          {/* Section 4 — Impact on Buyers */}
+          {/* Section 4 - Impact on Buyers */}
           <section id="impact-on-buyers" aria-labelledby="impact-on-buyers-h">
             <h2 id="impact-on-buyers-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What Happens When You Buy From a Flagged Supplier
@@ -431,13 +431,13 @@ export default function VATSpecialTablePage() {
                   If you are a supplier and your customers cannot claim input VAT on your invoices,
                   they will stop buying from you. A B2B business that cannot pass the VAT deduction
                   to its customers is at a severe competitive disadvantage. This creates a powerful
-                  market incentive to stay off the Special Table — your customers will demand it.
+                  market incentive to stay off the Special Table - your customers will demand it.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Section 5 — Checking Status */}
+          {/* Section 5 - Checking Status */}
           <section id="checking-your-status" aria-labelledby="checking-your-status-h">
             <h2 id="checking-your-status-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               How to Check Your Status
@@ -488,14 +488,14 @@ export default function VATSpecialTablePage() {
             </div>
           </section>
 
-          {/* Section 6 — Removal */}
+          {/* Section 6 - Removal */}
           <section id="removal-process" aria-labelledby="removal-process-h">
             <h2 id="removal-process-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               How to Get Removed from the Special Table
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                Removal from the VAT Special Table is not automatic — you must <strong className="text-ink">demonstrate
+                Removal from the VAT Special Table is not automatic - you must <strong className="text-ink">demonstrate
                 sustained compliance</strong> and actively request removal. Here is the process:
               </p>
               <div className="space-y-4">
@@ -559,7 +559,7 @@ export default function VATSpecialTablePage() {
             </div>
           </section>
 
-          {/* Section 7 — Checklist */}
+          {/* Section 7 - Checklist */}
           <section id="protecting-yourself" aria-labelledby="protecting-yourself-h">
             <h2 id="protecting-yourself-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Protecting Your Business: Due Diligence Checklist
@@ -579,7 +579,7 @@ export default function VATSpecialTablePage() {
                   </thead>
                   <tbody className="divide-y divide-hairline">
                     {[
-                      { action: "File every return before the 20th — including nil returns", why: "Consistent on-time filing is your best defence against being flagged" },
+                      { action: "File every return before the 20th - including nil returns", why: "Consistent on-time filing is your best defence against being flagged" },
                       { action: "Onboard eTIMS and issue compliant invoices", why: "eTIMS compliance is mandatory and reduces audit risk" },
                       { action: "Verify your suppliers use eTIMS before making large purchases", why: "Non-compliant suppliers may be on the Special Table, blocking your input VAT" },
                       { action: "Avoid consecutive nil returns if you have any activity at all", why: "Even small transactions should be declared to avoid triggering KRA's nil return flag" },
@@ -611,7 +611,7 @@ export default function VATSpecialTablePage() {
             <p className="text-[0.83rem] text-ink-muted leading-relaxed">
               Looking further ahead?{" "}
               <a href="/resources/cetis-kenya-2027/" className="text-brand underline underline-offset-2 hover:text-brand-hover">CETIS Kenya 2027</a>{" "}
-              (KRA&apos;s pre-clearance e-invoicing system, in procurement for 2027&ndash;28) will make supplier-PIN validation automatic before an invoice reaches a buyer — the fix for supplier-caused Special Table blocks starts today.
+              (KRA&apos;s pre-clearance e-invoicing system, in procurement for 2027&ndash;28) will make supplier-PIN validation automatic before an invoice reaches a buyer - the fix for supplier-caused Special Table blocks starts today.
             </p>
           </div>
           <div className="mb-6 space-y-3">

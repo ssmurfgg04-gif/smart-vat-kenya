@@ -52,7 +52,7 @@ const faqSchema = {
       name: "What are the KRA VAT penalties for late filing in 2026?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The penalty for late filing of a VAT return is KES 10,000 fixed penalty or 5% of the tax due — whichever is higher — charged per month the return is outstanding. In addition, KRA charges 1% monthly interest on the unpaid tax. Even nil returns filed late attract the KES 10,000 fixed penalty.",
+        text: "The penalty for late filing of a VAT return is KES 10,000 fixed penalty or 5% of the tax due - whichever is higher - charged per month the return is outstanding. In addition, KRA charges 1% monthly interest on the unpaid tax. Even nil returns filed late attract the KES 10,000 fixed penalty.",
       },
     },
     {
@@ -76,7 +76,7 @@ const faqSchema = {
       name: "Can I apply for a KRA VAT penalty waiver?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Under Section 35 of the Tax Procedures Act, KRA may waive or remit penalties and interest if you demonstrate a valid reason — first-time offence, genuine mistake, system error, illness, or natural disaster. You submit the waiver application through iTax under the 'Penalty and Interest Waiver' menu. KRA typically responds within 7 to 30 working days.",
+        text: "Yes. Under Section 35 of the Tax Procedures Act, KRA may waive or remit penalties and interest if you demonstrate a valid reason - first-time offence, genuine mistake, system error, illness, or natural disaster. You submit the waiver application through iTax under the 'Penalty and Interest Waiver' menu. KRA typically responds within 7 to 30 working days.",
       },
     },
     {
@@ -109,7 +109,7 @@ const faqSchema = {
 const toc = [
   { id: "introduction",     label: "Understanding KRA VAT Penalties" },
   { id: "penalty-table",    label: "Complete KRA VAT Penalty Table" },
-  { id: "accumulation",     label: "How Penalties Accumulate — Worked Example" },
+  { id: "accumulation",     label: "How Penalties Accumulate - Worked Example" },
   { id: "waiver",           label: "KRA Penalty Waiver Process" },
   { id: "avoid",            label: "How to Avoid KRA VAT Penalties" },
   { id: "services",         label: "Smart VAT Kenya Services" },
@@ -154,10 +154,10 @@ const penaltyRows = [
     interest: "Not applicable",
   },
   {
-    type: "Special Table — Blocked input VAT claim",
+    type: "Special Table - Blocked input VAT claim",
     law: "First Schedule, VAT Act",
     penalty: "Full denial of the input VAT claimed on blocked items (entertainment, passenger vehicles, personal goods). KRA may also audit other periods.",
-    interest: "Not applicable — the principal claim is simply denied",
+    interest: "Not applicable - the principal claim is simply denied",
   },
   {
     type: "Withholding VAT agent default",
@@ -199,9 +199,9 @@ export default function KRAPenaltiesReferencePage() {
 
         {/* Quick Answer / BLUF */}
         <div className="border-l-[3px] border-brand pl-5 mb-10">
-          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">At a Glance — What You Owe & How to Waive It</p>
+          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">At a Glance - What You Owe & How to Waive It</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            Facing a KES 10,000+ bill? KRA has <strong className="text-ink">nine penalty categories</strong> — from <strong className="text-ink">KES 10,000</strong> fixed to <strong className="text-ink">KES 100,000/month</strong> (eTIMS, TPA s.59A(5)) and <strong className="text-ink">5% of tax due</strong> (s.86), plus <strong className="text-ink">1% monthly interest</strong>. Good news: most can be <strong className="text-ink">waived via iTax or the 2026 Tax Amnesty</strong> if you act before 31 Dec. This table shows exactly what you owe — and <a href="https://wa.me/254717344440?text=Need%20help%20with%20KRA%20VAT%20penalties" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">we check waiver eligibility free</a>.
+            Facing a KES 10,000+ bill? KRA has <strong className="text-ink">nine penalty categories</strong> - from <strong className="text-ink">KES 10,000</strong> fixed to <strong className="text-ink">KES 100,000/month</strong> (eTIMS, TPA s.59A(5)) and <strong className="text-ink">5% of tax due</strong> (s.86), plus <strong className="text-ink">1% monthly interest</strong>. Good news: most can be <strong className="text-ink">waived via iTax or the 2026 Tax Amnesty</strong> if you act before 31 Dec. This table shows exactly what you owe - and <a href="https://wa.me/254717344440?text=Need%20help%20with%20KRA%20VAT%20penalties" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">we check waiver eligibility free</a>.
           </p>
         </div>
 
@@ -224,17 +224,17 @@ export default function KRAPenaltiesReferencePage() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — Introduction */}
+          {/* Section 1 - Introduction */}
           <section id="introduction" aria-labelledby="introduction-h">
             <h2 id="introduction-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Understanding KRA VAT Penalties
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                Kenya&apos;s VAT system is governed by the <strong className="text-ink">VAT Act (Cap. 476)</strong> and administered by the Kenya Revenue Authority (KRA). The law gives KRA broad powers to penalise non-compliance in almost every aspect of VAT — from registration and filing to payment and digital invoicing through <strong className="text-ink">eTIMS</strong> (Electronic Tax Invoice Management System).
+                Kenya&apos;s VAT system is governed by the <strong className="text-ink">VAT Act (Cap. 476)</strong> and administered by the Kenya Revenue Authority (KRA). The law gives KRA broad powers to penalise non-compliance in almost every aspect of VAT - from registration and filing to payment and digital invoicing through <strong className="text-ink">eTIMS</strong> (Electronic Tax Invoice Management System).
               </p>
               <p>
-                What makes KRA penalties particularly challenging for businesses is that <strong className="text-ink">multiple penalties can apply to a single failure</strong>. File your VAT return one day late and you may face the late filing penalty (KES 10,000 or 5%), the late payment penalty (5%), and monthly interest (1%) — all on the same overdue obligation. Understanding exactly what each penalty is, when it applies, and how much it costs is the first step to staying compliant and avoiding costly surprises.
+                What makes KRA penalties particularly challenging for businesses is that <strong className="text-ink">multiple penalties can apply to a single failure</strong>. File your VAT return one day late and you may face the late filing penalty (KES 10,000 or 5%), the late payment penalty (5%), and monthly interest (1%) - all on the same overdue obligation. Understanding exactly what each penalty is, when it applies, and how much it costs is the first step to staying compliant and avoiding costly surprises.
               </p>
               <p>
                 This reference table covers <strong className="text-ink">nine separate penalty categories</strong> under the VAT Act and the Tax Procedures Act, including the newer eTIMS-specific penalties that KRA has been actively enforcing since 2024. We update this guide regularly to reflect current KRA practice.
@@ -242,7 +242,7 @@ export default function KRAPenaltiesReferencePage() {
             </div>
           </section>
 
-          {/* Section 2 — Complete Penalty Table */}
+          {/* Section 2 - Complete Penalty Table */}
           <section id="penalty-table" aria-labelledby="penalty-table-h">
             <h2 id="penalty-table-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Complete KRA VAT Penalty Table
@@ -279,16 +279,16 @@ export default function KRAPenaltiesReferencePage() {
                   eTIMS penalties are actively enforced
                 </p>
                 <p className="text-[0.83rem] text-[#8a6500] dark:text-[#ccaa33] leading-relaxed">
-                  KRA has been conducting physical and virtual compliance audits specifically targeting eTIMS usage. The e-invoicing penalty (up to KES 100,000 or 5% of the tax due for companies, under TPA s.86) and the up-to-KES 100,000-per-month integration penalty (TPA s.59A(5)) are not theoretical — KRA has issued these assessments to businesses that failed to integrate their point-of-sale or accounting systems within the required timeline. Ensure your system is connected to eTIMS and that every taxable supply generates an eTIMS invoice.
+                  KRA has been conducting physical and virtual compliance audits specifically targeting eTIMS usage. The e-invoicing penalty (up to KES 100,000 or 5% of the tax due for companies, under TPA s.86) and the up-to-KES 100,000-per-month integration penalty (TPA s.59A(5)) are not theoretical - KRA has issued these assessments to businesses that failed to integrate their point-of-sale or accounting systems within the required timeline. Ensure your system is connected to eTIMS and that every taxable supply generates an eTIMS invoice.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Section 3 — How Penalties Accumulate (Worked Example) */}
+          {/* Section 3 - How Penalties Accumulate (Worked Example) */}
           <section id="accumulation" aria-labelledby="accumulation-h">
             <h2 id="accumulation-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
-              How Penalties Accumulate — Worked Example
+              How Penalties Accumulate - Worked Example
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
@@ -322,17 +322,17 @@ export default function KRAPenaltiesReferencePage() {
                 (the higher of 5% of the tax due or the KES 100,000 corporate floor). This is why{" "}
                 <strong className="text-ink">proactive compliance</strong> and <strong className="text-ink">early resolution</strong>{" "}
                 are critical. The moment an eTIMS invoice is missed, the exposure jumps by a fixed
-                corporate-floor sum — not a small monthly charge.
+                corporate-floor sum - not a small monthly charge.
               </p>
               <p>
                 If ABC Traders had filed on time, paid on time, and issued every invoice through eTIMS, their
-                total liability would have been exactly KES 360,000 — the underlying VAT due. Every amount
+                total liability would have been exactly KES 360,000 - the underlying VAT due. Every amount
                 above that is preventable.
               </p>
             </div>
           </section>
 
-          {/* Section 4 — Penalty Waiver Process */}
+          {/* Section 4 - Penalty Waiver Process */}
           <section id="waiver" aria-labelledby="waiver-h">
             <h2 id="waiver-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               KRA Penalty Waiver Process
@@ -344,12 +344,12 @@ export default function KRAPenaltiesReferencePage() {
               <h3 className="font-display text-[1.05rem] font-semibold text-ink mt-6 mb-2">Eligible Reasons for a Waiver</h3>
               <div className="border border-hairline rounded-lg p-4 bg-canvas-alt space-y-2">
                 {[
-                  "First-time offence — you have not been penalised for the same issue before.",
-                  "System error or iTax downtime — KRA systems were unavailable during the filing window.",
-                  "Illness or hospitalisation — you or a key finance person was unable to file due to medical reasons.",
-                  "Natural disaster — fire, flood, theft, or other unforeseen events that prevented compliance.",
-                  "Error by KRA — KRA misapplied a penalty or gave incorrect guidance.",
-                  "Genuine mistake — an honest error with no intention to evade tax.",
+                  "First-time offence - you have not been penalised for the same issue before.",
+                  "System error or iTax downtime - KRA systems were unavailable during the filing window.",
+                  "Illness or hospitalisation - you or a key finance person was unable to file due to medical reasons.",
+                  "Natural disaster - fire, flood, theft, or other unforeseen events that prevented compliance.",
+                  "Error by KRA - KRA misapplied a penalty or gave incorrect guidance.",
+                  "Genuine mistake - an honest error with no intention to evade tax.",
                   "Death of the taxpayer or the person responsible for tax compliance.",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-2 text-[0.84rem] text-ink-muted leading-relaxed">
@@ -384,7 +384,7 @@ export default function KRAPenaltiesReferencePage() {
                   {
                     step: 5,
                     title: "Attach supporting documents",
-                    detail: "Upload evidence — hospital discharge summary, police abstract, screenshots of system errors, or a sworn affidavit. Files must be in PDF or JPG format and under 1 MB each. KRA officers review the evidence before making a decision.",
+                    detail: "Upload evidence - hospital discharge summary, police abstract, screenshots of system errors, or a sworn affidavit. Files must be in PDF or JPG format and under 1 MB each. KRA officers review the evidence before making a decision.",
                   },
                   {
                     step: 6,
@@ -404,13 +404,13 @@ export default function KRAPenaltiesReferencePage() {
               <div className="mt-6 border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
                 <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
-                  <strong className="text-ink">First-time waiver tip:</strong> KRA is generally more lenient with first-time applicants. Your first waiver application has a higher chance of approval. However, you cannot apply for a waiver of the same penalty twice — if KRA rejects your application, you must file a formal objection through the normal objection and appeals process.
+                  <strong className="text-ink">First-time waiver tip:</strong> KRA is generally more lenient with first-time applicants. Your first waiver application has a higher chance of approval. However, you cannot apply for a waiver of the same penalty twice - if KRA rejects your application, you must file a formal objection through the normal objection and appeals process.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Section 5 — How to Avoid Penalties */}
+          {/* Section 5 - How to Avoid Penalties */}
           <section id="avoid" aria-labelledby="avoid-h">
             <h2 id="avoid-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               How to Avoid KRA VAT Penalties
@@ -423,15 +423,15 @@ export default function KRAPenaltiesReferencePage() {
                 {[
                   {
                     title: "File your VAT return before the 20th of every month",
-                    desc: "Set a recurring calendar reminder for the 15th of each month. File early to account for any iTax downtime or last-minute issues. A nil return takes five minutes and costs nothing — but filing it late costs KES 10,000.",
+                    desc: "Set a recurring calendar reminder for the 15th of each month. File early to account for any iTax downtime or last-minute issues. A nil return takes five minutes and costs nothing - but filing it late costs KES 10,000.",
                   },
                   {
-                    title: "Pay your VAT by the 20th — do not wait for filing to trigger payment",
+                    title: "Pay your VAT by the 20th - do not wait for filing to trigger payment",
                     desc: "VAT is due on or before the 20th, regardless of when you file. If you file on the 20th but pay on the 21st, the late payment penalty of 5% and 1% interest still applies. Pay early to be safe.",
                   },
                   {
                     title: "Register for eTIMS and integrate your system",
-                    desc: "KRA requires all VAT-registered businesses to use eTIMS. Register immediately if you have not done so. Integrate your POS or accounting software so every invoice carries an eTIMS control number. The most expensive eTIMS exposure is the TPA s.86 penalty — the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals).",
+                    desc: "KRA requires all VAT-registered businesses to use eTIMS. Register immediately if you have not done so. Integrate your POS or accounting software so every invoice carries an eTIMS control number. The most expensive eTIMS exposure is the TPA s.86 penalty - the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals).",
                   },
                   {
                     title: "Register for VAT as soon as you exceed KES 5 million turnover",
@@ -464,10 +464,10 @@ export default function KRAPenaltiesReferencePage() {
             </div>
           </section>
 
-          {/* Section 6 — Smart VAT Kenya Services */}
+          {/* Section 6 - Smart VAT Kenya Services */}
           <section id="services" aria-labelledby="services-h">
             <h2 id="services-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
-              Smart VAT Kenya — Professional Help for KRA Penalties
+              Smart VAT Kenya - Professional Help for KRA Penalties
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
@@ -486,7 +486,7 @@ export default function KRAPenaltiesReferencePage() {
                     {[
                       { service: "VAT Registration", what: "KRA PIN application, VAT registration certificate, first filing setup", fee: "KES 5,000" },
                       { service: "Monthly VAT Filing", what: "Prepare and file your VAT return on iTax every month before the 20th", fee: "KES 3,500/month" },
-                      { service: "Penalty Waiver Application", what: "Full waiver application — statement drafting, document preparation, submission, and follow-up", fee: "KES 4,000" },
+                      { service: "Penalty Waiver Application", what: "Full waiver application - statement drafting, document preparation, submission, and follow-up", fee: "KES 4,000" },
                       { service: "eTIMS Registration", what: "eTIMS registration, system integration support, invoice template setup", fee: "KES 6,000" },
                       { service: "Penalty Assessment Review", what: "Full review of your KRA account, identification of all penalties, and resolution plan", fee: "KES 3,000" },
                     ].map(({ service, what, fee }) => (
@@ -507,7 +507,7 @@ export default function KRAPenaltiesReferencePage() {
               <div className="mt-8 border border-brand/20 bg-brand-muted rounded-lg p-6">
                 <p className="font-display text-[1.15rem] font-semibold text-ink mb-3">Need Help with a KRA VAT Penalty?</p>
                 <p className="text-[0.84rem] text-ink-soft leading-relaxed mb-4">
-                  If you have outstanding KRA VAT penalties — whether it is late filing, non-registration, eTIMS non-compliance, or any other penalty in this guide — we can help. We review your iTax account, identify every penalty, and handle the waiver application from start to finish. Flat fee of{" "}
+                  If you have outstanding KRA VAT penalties - whether it is late filing, non-registration, eTIMS non-compliance, or any other penalty in this guide - we can help. We review your iTax account, identify every penalty, and handle the waiver application from start to finish. Flat fee of{" "}
                   <strong className="text-ink">KES 4,000</strong> for a full waiver application.
                 </p>
                 <a
@@ -534,7 +534,7 @@ export default function KRAPenaltiesReferencePage() {
             <p className="text-[0.83rem] text-ink-muted leading-relaxed">
               Looking further ahead?{" "}
               <a href="/resources/cetis-kenya-2027/" className="text-brand underline underline-offset-2 hover:text-brand-hover">CETIS Kenya 2027</a>{" "}
-              (KRA&apos;s pre-clearance e-invoicing system, in procurement for 2027&ndash;28) changes the failure mode from "penalty after the fact" to "invoice rejected at the gate" — a different penalty landscape to plan for now.
+              (KRA&apos;s pre-clearance e-invoicing system, in procurement for 2027&ndash;28) changes the failure mode from "penalty after the fact" to "invoice rejected at the gate" - a different penalty landscape to plan for now.
             </p>
           </div>
           <ArticleGrid currentSlug="kra-vat-penalties-reference" />

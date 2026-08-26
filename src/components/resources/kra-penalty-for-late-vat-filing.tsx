@@ -18,7 +18,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "KRA Penalty for Late VAT Filing: How Much is it and How to Apply for a Waiver",
   description:
-    "Complete guide to KRA late VAT filing penalties — the KES 10,000 or 5% rule, how to check what you owe on iTax, and step-by-step instructions for applying for a KRA penalty waiver.",
+    "Complete guide to KRA late VAT filing penalties - the KES 10,000 or 5% rule, how to check what you owe on iTax, and step-by-step instructions for applying for a KRA penalty waiver.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-01",
@@ -44,7 +44,7 @@ const faqSchema = {
       name: "Can I get a KRA penalty waiver?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. You can apply for a KRA penalty waiver if you have a valid reason — first-time offence, system error, illness, or natural disaster. The waiver application is submitted through the iTax portal under the Penalty and Interest Waiver menu. KRA typically responds within 7 to 30 working days.",
+        text: "Yes. You can apply for a KRA penalty waiver if you have a valid reason - first-time offence, system error, illness, or natural disaster. The waiver application is submitted through the iTax portal under the Penalty and Interest Waiver menu. KRA typically responds within 7 to 30 working days.",
       },
     },
     {
@@ -68,7 +68,7 @@ const faqSchema = {
       name: "What happens if I file a nil VAT return late?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Even a nil VAT return — where you made no sales and owe no tax — attracts the KES 10,000 fixed penalty if filed after the 20th of the month. This is because KRA penalises the late filing itself, not the tax owed. You can apply for a waiver of this penalty if it was a genuine mistake or a first-time offence.",
+        text: "Even a nil VAT return - where you made no sales and owe no tax - attracts the KES 10,000 fixed penalty if filed after the 20th of the month. This is because KRA penalises the late filing itself, not the tax owed. You can apply for a waiver of this penalty if it was a genuine mistake or a first-time offence.",
       },
     },
   ],
@@ -121,7 +121,7 @@ export default function KRAPenaltyPage() {
             <strong className="text-ink">KES 10,000</strong> plus{" "}
             <strong className="text-ink">5%</strong> of the total tax payable, plus{" "}
             <strong className="text-ink">1% monthly interest</strong> on the unpaid tax. Filing even one day past the 20th of the month triggers these penalties automatically. You can apply for a{" "}
-            <strong className="text-ink">KRA penalty waiver</strong> on iTax if you have a valid reason — and Smart VAT Kenya can help you do it in one day for{" "}
+            <strong className="text-ink">KRA penalty waiver</strong> on iTax if you have a valid reason - and Smart VAT Kenya can help you do it in one day for{" "}
             <strong className="text-ink">KES 4,000</strong>.
           </p>
         </div>
@@ -145,20 +145,20 @@ export default function KRAPenaltyPage() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — What is the KRA Penalty for Late VAT Filing? */}
+          {/* Section 1 - What is the KRA Penalty for Late VAT Filing? */}
           <section id="what-is" aria-labelledby="what-is-h">
             <h2 id="what-is-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What is the KRA Penalty for Late VAT Filing? (The 5% + KES 10,000 Rule)
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                Under <strong className="text-ink">Section 38 of the Kenya VAT Act (Cap. 476)</strong>, every VAT-registered business must file their monthly VAT return by the <strong className="text-ink">20th day</strong> of the following month. If you miss this deadline — even by one day — KRA applies an automatic penalty that has three parts.
+                Under <strong className="text-ink">Section 38 of the Kenya VAT Act (Cap. 476)</strong>, every VAT-registered business must file their monthly VAT return by the <strong className="text-ink">20th day</strong> of the following month. If you miss this deadline - even by one day - KRA applies an automatic penalty that has three parts.
               </p>
               <ul className="space-y-2">
                 {[
-                  "KES 10,000 fixed penalty — charged for every month you file late, even if you owe no tax.",
-                  "5% of the total tax payable for that month — added on top of the fixed penalty.",
-                  "1% monthly interest on the unpaid tax amount — compounded every month until you pay in full.",
+                  "KES 10,000 fixed penalty - charged for every month you file late, even if you owe no tax.",
+                  "5% of the total tax payable for that month - added on top of the fixed penalty.",
+                  "1% monthly interest on the unpaid tax amount - compounded every month until you pay in full.",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[0.88rem]">
                     <CheckCircle size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -199,7 +199,7 @@ export default function KRAPenaltyPage() {
                     Nil returns are not exempt
                   </p>
                   <p className="text-[0.83rem] text-[#8a6500] dark:text-[#ccaa33] leading-relaxed">
-                    Many business owners assume that filing a nil return — when you made no sales in a month — means no penalty if filed late. This is incorrect. The KES 10,000 fixed penalty applies regardless of whether you owe any tax. Always file on time, even if the amount is zero.
+                    Many business owners assume that filing a nil return - when you made no sales in a month - means no penalty if filed late. This is incorrect. The KES 10,000 fixed penalty applies regardless of whether you owe any tax. Always file on time, even if the amount is zero.
                   </p>
                 </div>
               </div>
@@ -209,7 +209,7 @@ export default function KRAPenaltyPage() {
             </div>
           </section>
 
-          {/* Section 2 — How to Check Your KRA Penalties on iTax */}
+          {/* Section 2 - How to Check Your KRA Penalties on iTax */}
           <section id="how-check" aria-labelledby="how-check-h">
             <h2 id="how-check-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               How to Check Your KRA Penalties on iTax
@@ -222,12 +222,12 @@ export default function KRAPenaltyPage() {
                 {
                   step: 1,
                   title: "Log in to itax.kra.go.ke",
-                  detail: "Use your KRA PIN and password. If you have forgotten your credentials, click 'Forgot Password' — a reset link will be sent to your registered email address.",
+                  detail: "Use your KRA PIN and password. If you have forgotten your credentials, click 'Forgot Password' - a reset link will be sent to your registered email address.",
                 },
                 {
                   step: 2,
                   title: "Go to 'Returns' and select 'File VAT Return'",
-                  detail: "On the main dashboard, click the 'Returns' tab. From the dropdown, select 'File VAT Return'. This will show you a table of all VAT periods — past and present.",
+                  detail: "On the main dashboard, click the 'Returns' tab. From the dropdown, select 'File VAT Return'. This will show you a table of all VAT periods - past and present.",
                 },
                 {
                   step: 3,
@@ -257,12 +257,12 @@ export default function KRAPenaltyPage() {
             <div className="mt-6 border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
               <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
               <p className="text-[0.83rem] text-ink-muted leading-relaxed">
-                <strong className="text-ink">Pro tip:</strong> Penalties accumulate every month the return is unfiled. If you are 3 months behind, KRA has applied the KES 10,000 penalty three times — once for each month. The sooner you check, the sooner you can stop the accumulation.
+                <strong className="text-ink">Pro tip:</strong> Penalties accumulate every month the return is unfiled. If you are 3 months behind, KRA has applied the KES 10,000 penalty three times - once for each month. The sooner you check, the sooner you can stop the accumulation.
               </p>
             </div>
           </section>
 
-          {/* Section 3 — How to Apply for a KRA Penalty Waiver */}
+          {/* Section 3 - How to Apply for a KRA Penalty Waiver */}
           <section id="waiver" aria-labelledby="waiver-h">
             <h2 id="waiver-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               How to Apply for a KRA Penalty Waiver (Step-by-Step)
@@ -290,17 +290,17 @@ export default function KRAPenaltyPage() {
                 {
                   step: 4,
                   title: "Write your explanation (supporting statement)",
-                  detail: "This is the most important part. Write a clear, truthful explanation of why you filed late. For example: 'I was hospitalised for two weeks and missed the deadline. I have attached my discharge summary as evidence.' Do not lie — KRA cross-checks waiver applications.",
+                  detail: "This is the most important part. Write a clear, truthful explanation of why you filed late. For example: 'I was hospitalised for two weeks and missed the deadline. I have attached my discharge summary as evidence.' Do not lie - KRA cross-checks waiver applications.",
                 },
                 {
                   step: 5,
                   title: "Attach supporting documents",
-                  detail: "Upload any evidence — hospital letter, police abstract, screenshots of the iTax system error, or a sworn affidavit. Files must be PDF or JPG and under 1MB each. Strong evidence increases your approval chances significantly.",
+                  detail: "Upload any evidence - hospital letter, police abstract, screenshots of the iTax system error, or a sworn affidavit. Files must be PDF or JPG and under 1MB each. Strong evidence increases your approval chances significantly.",
                 },
                 {
                   step: 6,
                   title: "Submit and note your Application Reference Number",
-                  detail: "Click Submit. iTax will generate an Application Reference Number — save it. KRA will review your application and respond within 7 to 30 working days. You can check the status under 'Query' &gt; 'Application Status'.",
+                  detail: "Click Submit. iTax will generate an Application Reference Number - save it. KRA will review your application and respond within 7 to 30 working days. You can check the status under 'Query' &gt; 'Application Status'.",
                 },
               ].map(({ step, title, detail }) => (
                 <div key={step} className="flex gap-4">
@@ -316,10 +316,10 @@ export default function KRAPenaltyPage() {
               <p className="font-semibold text-ink text-[0.88rem] mb-1">What makes a strong waiver application?</p>
               <ul className="space-y-1 mt-2">
                 {[
-                  "Be honest — KRA can verify your claims against hospital, police, and iTax system logs.",
-                  "Attach evidence — an application with supporting documents is far more likely to be approved.",
-                  "Apply as soon as possible — KRA views timely waiver requests more favourably.",
-                  "Do not apply for the same penalty twice — if KRA rejects your application, you must file an objection through the normal objection process.",
+                  "Be honest - KRA can verify your claims against hospital, police, and iTax system logs.",
+                  "Attach evidence - an application with supporting documents is far more likely to be approved.",
+                  "Apply as soon as possible - KRA views timely waiver requests more favourably.",
+                  "Do not apply for the same penalty twice - if KRA rejects your application, you must file an objection through the normal objection process.",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2 text-[0.83rem] text-ink-muted leading-relaxed">
                     <span className="text-brand mt-0.5 shrink-0">&bull;</span>
@@ -338,7 +338,7 @@ export default function KRAPenaltyPage() {
             </div>
           </section>
 
-          {/* Section 4 — Can KRA Blacklist You for Unpaid Penalties? */}
+          {/* Section 4 - Can KRA Blacklist You for Unpaid Penalties? */}
           <section id="blacklist" aria-labelledby="blacklist-h">
             <h2 id="blacklist-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Can KRA Blacklist You for Unpaid Penalties?
@@ -375,7 +375,7 @@ export default function KRAPenaltyPage() {
                 ))}
               </div>
               <p>
-                The good news is that KRA is generally open to penalty waivers and payment plans. If you engage with KRA proactively — rather than ignoring the penalties — you can often resolve the issue before it escalates to enforcement. This is where working with experienced VAT agents makes a significant difference.
+                The good news is that KRA is generally open to penalty waivers and payment plans. If you engage with KRA proactively - rather than ignoring the penalties - you can often resolve the issue before it escalates to enforcement. This is where working with experienced VAT agents makes a significant difference.
               </p>
               <div className="border border-brand/25 bg-brand-muted rounded-lg p-4 flex items-start gap-3">
                 <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -386,7 +386,7 @@ export default function KRAPenaltyPage() {
             </div>
           </section>
 
-          {/* Section 5 — How We Can Help You Fix Your KRA Penalties */}
+          {/* Section 5 - How We Can Help You Fix Your KRA Penalties */}
           <section id="help" aria-labelledby="help-h">
             <h2 id="help-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               How We Can Help You Fix Your KRA Penalties
@@ -417,14 +417,14 @@ export default function KRAPenaltyPage() {
                 </ul>
               </div>
               <p>
-                Our fee is a flat <strong className="text-ink">KES 4,000</strong> — payable via M-PESA (paybill details shared after you book). There are no hidden charges, no monthly retainers, and no surprise fees. You pay only if we take on your case.
+                Our fee is a flat <strong className="text-ink">KES 4,000</strong> - payable via M-PESA (paybill details shared after you book). There are no hidden charges, no monthly retainers, and no surprise fees. You pay only if we take on your case.
               </p>
 
               {/* Conversion CTA */}
               <div className="mt-8 border border-brand/20 bg-brand-muted rounded-lg p-6">
                 <p className="font-display text-[1.15rem] font-semibold text-ink mb-3">Skip the iTax Stress</p>
                 <p className="text-[0.84rem] text-ink-soft leading-relaxed mb-4">
-                  Do not spend hours trying to figure out the iTax waiver system on your own. We handle the entire process — from checking your penalties to submitting the waiver application and following up with KRA. Flat fee of{" "}
+                  Do not spend hours trying to figure out the iTax waiver system on your own. We handle the entire process - from checking your penalties to submitting the waiver application and following up with KRA. Flat fee of{" "}
                   <strong className="text-ink">KES 4,000</strong> payable via M-PESA.
                 </p>
                 <a
@@ -432,7 +432,7 @@ export default function KRAPenaltyPage() {
                   target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
-                  Apply for Waiver — KES 4,000
+                  Apply for Waiver - KES 4,000
                   <ArrowRight size={14} weight="bold" aria-hidden="true" />
                 </a>
               </div>

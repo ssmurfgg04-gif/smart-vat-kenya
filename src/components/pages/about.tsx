@@ -32,16 +32,16 @@ const team = [
 ]
 
 const credentials = [
-  "Registered KRA iTax agents — we file through the official KRA agent portal",
-  "Named individuals on every account — you know exactly who handles your filings",
+  "Registered KRA iTax agents - we file through the official KRA agent portal",
+  "Named individuals on every account - you know exactly who handles your filings",
   "Physical office at Pioneer House, Moi Avenue, Nairobi CBD",
-  "M-PESA receipt for every payment — nothing off the books",
+  "M-PESA receipt for every payment - nothing off the books",
   "Privacy-first: your KRA PIN is used for your filings only",
 ]
 
 const values = [
   { title: "Your time is money", body: "We do the portal work so you run your business. One WhatsApp message replaces three weeks of iTax." },
-  { title: "Never the 20th", body: "We file on the 17th as a matter of process — not a service you have to chase. The deadline is never you or near." },
+  { title: "Never the 20th", body: "We file on the 17th as a matter of process - not a service you have to chase. The deadline is never you or near." },
   { title: "Total-cost honesty", body: "Published flat fees. No discovery call, no negotiation, no hidden costs. KES 5,000 registration. KES 3,500 monthly filing." },
 ]
 
@@ -135,7 +135,7 @@ export default function AboutPage() {
                 <p className="font-mono text-[0.62rem] uppercase tracking-widest text-ink-muted">The 17th Guarantee</p>
               </div>
               <p className="text-[0.88rem] text-ink-soft leading-relaxed mb-4">
-                Every monthly return is filed on the 17th — three days before KRA's deadline — so a portal
+                Every monthly return is filed on the 17th - three days before KRA's deadline - so a portal
                 outage or payment delay never costs you a KES 10,000 late penalty.
               </p>
               <a
@@ -174,7 +174,7 @@ export default function AboutPage() {
             </div>
             <p className="text-[0.9rem] text-canvas/75 leading-relaxed">
               We ask for your KRA PIN and ID only to complete filings that KRA itself requires. Your PIN is
-              used for your filings alone — it is never shared, never stored beyond what's needed, and never
+              used for your filings alone - it is never shared, never stored beyond what's needed, and never
               used for anything else. Every payment you make is backed by an official M-PESA receipt.
             </p>
             <p className="mt-4 text-[0.9rem] text-canvas/75 leading-relaxed">

@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     q: "Can I get a TCC if I have outstanding tax debt?",
-    a: 'Not immediately. Before a TCC can be issued, you must either settle all outstanding tax liabilities or have an approved payment plan in place with KRA. KRA\'s tax amnesty programme can help — it waives penalties and interest on voluntarily disclosed debt, leaving only the principal tax to pay. See our <a href="/resources/kra-tax-amnesty-2026/" class="underline underline-offset-2 font-medium text-brand">KRA Tax Amnesty 2026 guide</a> for how this works. Once resolved, you can proceed with the self-service TCC application on iTax.',
+    a: 'Not immediately. Before a TCC can be issued, you must either settle all outstanding tax liabilities or have an approved payment plan in place with KRA. KRA\'s tax amnesty programme can help - it waives penalties and interest on voluntarily disclosed debt, leaving only the principal tax to pay. See our <a href="/resources/kra-tax-amnesty-2026/" class="underline underline-offset-2 font-medium text-brand">KRA Tax Amnesty 2026 guide</a> for how this works. Once resolved, you can proceed with the self-service TCC application on iTax.',
   },
   {
     q: "What documents do I need to apply for a TCC?",
@@ -106,7 +106,7 @@ export default function TaxComplianceCertificateKenya() {
               The TCC is issued electronically via the <strong>iTax</strong> platform and is valid for <strong>12 months</strong> from the date of issuance. It is sent to the applicant's registered email address.
             </p>
 
-            <Flowchart caption="TCC application process — filing, payment, and compliance checks before issuance">
+            <Flowchart caption="TCC application process - filing, payment, and compliance checks before issuance">
               <TCCProcessFlow />
             </Flowchart>
 
@@ -126,10 +126,10 @@ export default function TaxComplianceCertificateKenya() {
             <h2>Requirements for a TCC in 2026</h2>
             <p>KRA has enhanced the TCC application process. To qualify, you must meet all of the following conditions:</p>
             <ol>
-              <li><strong>File all tax returns on time</strong> — Income tax, VAT, PAYE, and turnover tax returns must be filed by their respective due dates. Late or missing returns will block your TCC.</li>
-              <li><strong>Pay all taxes due</strong> — Clear all outstanding tax liabilities. If you cannot pay in full, you must have an approved payment plan in place before the TCC can be issued.</li>
-              <li><strong>Be eTIMS compliant</strong> — If you earn business income, you must be registered on eTIMS/TIMS and issuing electronic tax invoices. This is now a mandatory requirement.</li>
-              <li><strong>Be VAT compliant</strong> — If you are VAT-registered, you must have filed all VAT returns and your VAT special table status must be clean.</li>
+              <li><strong>File all tax returns on time</strong> - Income tax, VAT, PAYE, and turnover tax returns must be filed by their respective due dates. Late or missing returns will block your TCC.</li>
+              <li><strong>Pay all taxes due</strong> - Clear all outstanding tax liabilities. If you cannot pay in full, you must have an approved payment plan in place before the TCC can be issued.</li>
+              <li><strong>Be eTIMS compliant</strong> - If you earn business income, you must be registered on eTIMS/TIMS and issuing electronic tax invoices. This is now a mandatory requirement.</li>
+              <li><strong>Be VAT compliant</strong> - If you are VAT-registered, you must have filed all VAT returns and your VAT special table status must be clean.</li>
             </ol>
             <p>The TCC application is done through the <strong>iTax portal</strong>. Navigate to Certificates → Tax Compliance Certificate → Apply. The system checks your compliance status automatically and issues the certificate if you meet all requirements.</p>
 
@@ -144,9 +144,9 @@ export default function TaxComplianceCertificateKenya() {
             <ol>
               <li><strong>Log in</strong> to the KRA iTax portal at <a href="https://itax.kra.go.ke" target="_blank" rel="noopener noreferrer">itax.kra.go.ke</a> using your KRA PIN and password</li>
               <li><strong>Navigate</strong> to Certificates → Tax Compliance Certificate → Apply</li>
-              <li><strong>Review your details</strong> — The system displays your compliance status. Verify that all information is correct</li>
-              <li><strong>Submit your application</strong> — Click apply. The system processes your request automatically</li>
-              <li><strong>Download your TCC</strong> — If compliant, the TCC is issued instantly. You can download it from the portal. It is also sent to your registered email address</li>
+              <li><strong>Review your details</strong> - The system displays your compliance status. Verify that all information is correct</li>
+              <li><strong>Submit your application</strong> - Click apply. The system processes your request automatically</li>
+              <li><strong>Download your TCC</strong> - If compliant, the TCC is issued instantly. You can download it from the portal. It is also sent to your registered email address</li>
             </ol>
             <p className="text-sm text-ink-muted italic mt-2">If your application is unsuccessful, the system will indicate the reason. You must resolve the issue (file outstanding returns, pay taxes, register for eTIMS) and re-apply.</p>
 
@@ -156,17 +156,17 @@ export default function TaxComplianceCertificateKenya() {
 
             <h2>Common Reasons for TCC Rejection</h2>
             <ul>
-              <li><strong>Missing tax returns</strong> — One or more returns have not been filed. File them immediately and re-apply. This includes <strong>nil returns</strong>: an unfiled nil return from a year with zero income still blocks your TCC. See our <a href="/resources/nil-returns-tax-amnesty/" className="text-brand underline underline-offset-2 hover:text-brand-hover">nil returns guide</a> if you have missing years</li>
-              <li><strong>Unpaid tax balances</strong> — Outstanding principal tax needs to be settled or covered by an approved payment plan. If the balance is old (pre-2026) debt with penalties and interest on top, the <a href="/resources/kra-tax-amnesty-2026/" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA tax amnesty 2026</a> can waive those penalties — you pay the principal and clear the ledger before re-applying</li>
-              <li><strong>eTIMS non-compliance</strong> — Your business is not registered on eTIMS. Register first, then apply</li>
-              <li><strong>VAT special table issues</strong> — If you are on the VAT special table, your status must be compliant</li>
-              <li><strong>Incorrect taxpayer details</strong> — Your KRA PIN or business registration details may need updating</li>
+              <li><strong>Missing tax returns</strong> - One or more returns have not been filed. File them immediately and re-apply. This includes <strong>nil returns</strong>: an unfiled nil return from a year with zero income still blocks your TCC. See our <a href="/resources/nil-returns-tax-amnesty/" className="text-brand underline underline-offset-2 hover:text-brand-hover">nil returns guide</a> if you have missing years</li>
+              <li><strong>Unpaid tax balances</strong> - Outstanding principal tax needs to be settled or covered by an approved payment plan. If the balance is old (pre-2026) debt with penalties and interest on top, the <a href="/resources/kra-tax-amnesty-2026/" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA tax amnesty 2026</a> can waive those penalties - you pay the principal and clear the ledger before re-applying</li>
+              <li><strong>eTIMS non-compliance</strong> - Your business is not registered on eTIMS. Register first, then apply</li>
+              <li><strong>VAT special table issues</strong> - If you are on the VAT special table, your status must be compliant</li>
+              <li><strong>Incorrect taxpayer details</strong> - Your KRA PIN or business registration details may need updating</li>
             </ul>
 
             <h2>How Smart VAT Kenya Can Help</h2>
             <p>We help businesses get their Tax Compliance Certificates quickly and hassle-free. Our services include:</p>
             <ul>
-              <li>Compliance health check — we review your returns, payments, and eTIMS status</li>
+              <li>Compliance health check - we review your returns, payments, and eTIMS status</li>
               <li>eTIMS registration and setup guidance</li>
               <li>Missing return filing assistance</li>
               <li>Payment plan application support</li>
@@ -174,7 +174,7 @@ export default function TaxComplianceCertificateKenya() {
             </ul>
             <p>
               <a href="/services/vat-registration/" className="text-brand font-medium hover:underline inline-flex items-center gap-1">
-                Start with VAT registration — the first step to full compliance <ArrowRight size={14} aria-hidden="true" />
+                Start with VAT registration - the first step to full compliance <ArrowRight size={14} aria-hidden="true" />
               </a>
             </p>
           </div>

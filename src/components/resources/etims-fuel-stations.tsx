@@ -17,7 +17,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Petrol Station Refusing an eTIMS Receipt? Here's Why and What to Do",
   description:
-    "KRA required every fuel station to run the eTIMS Fuel Station System by June 30, 2025 — but most independent dealers still don't. What to do when a station won't give you an eTIMS receipt, and what station owners face if they keep delaying.",
+    "KRA required every fuel station to run the eTIMS Fuel Station System by June 30, 2025 - but most independent dealers still don't. What to do when a station won't give you an eTIMS receipt, and what station owners face if they keep delaying.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-05",
@@ -67,7 +67,7 @@ const faqSchema = {
       name: "Do fuel stations face penalties for not using eTIMS?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Failure to comply with the eTIMS mandate attracts the standard eTIMS penalties — the TPA s.86 e-invoice penalty (since 1 July 2026, the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals) and the up-to-KES 100,000-per-month system non-integration penalty under TPA s.59A(5) — along with enforcement action. KRA has also linked eTIMS compliance to Tax Compliance Certificate (TCC) issuance, so non-compliant stations get blocked on multiple fronts.",
+        text: "Yes. Failure to comply with the eTIMS mandate attracts the standard eTIMS penalties - the TPA s.86 e-invoice penalty (since 1 July 2026, the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals) and the up-to-KES 100,000-per-month system non-integration penalty under TPA s.59A(5) - along with enforcement action. KRA has also linked eTIMS compliance to Tax Compliance Certificate (TCC) issuance, so non-compliant stations get blocked on multiple fronts.",
       },
     },
     {
@@ -91,7 +91,7 @@ const faqSchema = {
       name: "Is the convenience shop attached to a fuel station also covered?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The shop attached to a fuel station (snacks, drinks, motor oil, and similar retail sales) falls under the same eTIMS requirements as any other retail business — it must issue eTIMS invoices for every sale.",
+        text: "Yes. The shop attached to a fuel station (snacks, drinks, motor oil, and similar retail sales) falls under the same eTIMS requirements as any other retail business - it must issue eTIMS invoices for every sale.",
       },
     },
   ],
@@ -125,7 +125,7 @@ export default function EtimsFuelStations() {
           </h1>
           <p className="text-[0.92rem] text-ink-muted leading-relaxed max-w-[58ch]">
             KRA gave fuel stations until <strong className="text-ink">30 June 2025</strong> to switch to the
-            eTIMS Fuel Station System — and yet most independent dealers are still running old ETR receipts.
+            eTIMS Fuel Station System - and yet most independent dealers are still running old ETR receipts.
             Here&apos;s what the mandate actually says, why so many stations haven&apos;t complied, and exactly
             what you can do about it.
           </p>
@@ -143,7 +143,7 @@ export default function EtimsFuelStations() {
               <p className="text-[0.83rem] text-ink-muted leading-relaxed mt-1">
                 KRA issued a reminder on <strong>30 June 2025</strong> that the fuel station deadline had passed,
                 then set a <strong>31 December 2025</strong> enforcement deadline. The Petroleum Outlets Association
-                is now publicly pushing its members to comply — partly because a motorist complained that a Thika Road
+                is now publicly pushing its members to comply - partly because a motorist complained that a Thika Road
                 station refused to issue an eTIMS receipt. Enforcement is real and ongoing.
               </p>
             </div>
@@ -154,15 +154,15 @@ export default function EtimsFuelStations() {
           <section aria-labelledby="news-h">
             <h2 id="news-h">Why This Is In the News Right Now</h2>
             <p>
-              This isn&apos;t an abstract compliance rule — it&apos;s a live enforcement story. In February 2026 a
+              This isn&apos;t an abstract compliance rule - it&apos;s a live enforcement story. In February 2026 a
               motorist publicly complained that a petrol station on <strong>Thika Road</strong> refused to issue an
-              eTIMS receipt. The <strong>Petroleum Outlets Association of Kenya (POAK)</strong> — the umbrella body for
-              roughly 3,100–6,000 independent fuel outlets, most of the country&apos;s retail market — responded by
+              eTIMS receipt. The <strong>Petroleum Outlets Association of Kenya (POAK)</strong> - the umbrella body for
+              roughly 3,100–6,000 independent fuel outlets, most of the country&apos;s retail market - responded by
               publicly urging its members to comply, and told motorists that enforcement will only work if customers
               keep demanding eTIMS receipts.
             </p>
             <p>
-              KRA has said it has onboarded more than <strong>500 fuel stations</strong> onto the eTIMS fuel module —
+              KRA has said it has onboarded more than <strong>500 fuel stations</strong> onto the eTIMS fuel module -
               around <strong>16% of outlets nationwide</strong> as of early 2026. That figure is the headline number
               behind the search spike: the vast majority of stations still aren&apos;t connected, enforcement is being
               stepped up, and both consumers and station owners are trying to figure out what happens next.
@@ -181,7 +181,7 @@ export default function EtimsFuelStations() {
               petroleum sector. Instead of a cashier typing sales into a separate tax machine, the system connects
               the station&apos;s <strong>forecourt controller, point-of-sale system, pumps, and fuel management
               software</strong> directly to KRA, transmitting every transaction in real time. It also supports
-              offline invoicing, PIN capture, mobile money, and loyalty programs — so a compliant station can invoice
+              offline invoicing, PIN capture, mobile money, and loyalty programs - so a compliant station can invoice
               even during an eTIMS outage.
             </p>
             <p>
@@ -194,14 +194,14 @@ export default function EtimsFuelStations() {
           <section aria-labelledby="why-h">
             <h2 id="why-h">Why Your Station May Still Be Refusing You an eTIMS Receipt</h2>
             <p>
-              If a station hands you an ordinary ETR receipt — or a handwritten chit — instead of an eTIMS invoice,
+              If a station hands you an ordinary ETR receipt - or a handwritten chit - instead of an eTIMS invoice,
               it almost certainly has not integrated the Fuel Station System yet. The reasons are financial, not
               malicious:
             </p>
             <ul>
               <li><strong>Integration cost:</strong> Connecting pumps, POS, and fuel management systems to KRA typically runs <strong>KES 400,000–1,000,000</strong> per station, depending on pump count and automation level</li>
               <li><strong>Third-party integrator dependency:</strong> Most dealers need a KRA-certified integrator, and integrator capacity is still catching up with demand</li>
-              <li><strong>Independent dealer economics:</strong> Small independents carry the heaviest burden — the Petroleum Outlets Association has publicly pushed compliance precisely because the cost has been a blocker</li>
+              <li><strong>Independent dealer economics:</strong> Small independents carry the heaviest burden - the Petroleum Outlets Association has publicly pushed compliance precisely because the cost has been a blocker</li>
               <li><strong>Legacy ETR hardware:</strong> Old fiscal devices don&apos;t talk to KRA, and replacing them is part of the same cost problem</li>
             </ul>
             <div className="not-prose border border-amber-200 bg-amber-50 rounded-lg p-4 my-6">
@@ -219,15 +219,15 @@ export default function EtimsFuelStations() {
           <section aria-labelledby="consumer-h">
             <h2 id="consumer-h">What to Do When a Station Won&apos;t Issue an eTIMS Receipt</h2>
             <ol>
-              <li><strong>Ask for an eTIMS invoice.</strong> Specifically request an invoice with a QR code and confirmation code — most cashiers will show you exactly what their system can (or can&apos;t) produce</li>
+              <li><strong>Ask for an eTIMS invoice.</strong> Specifically request an invoice with a QR code and confirmation code - most cashiers will show you exactly what their system can (or can&apos;t) produce</li>
               <li><strong>Note the details.</strong> Station name, franchise or brand, location, pump number, date and time, and amount</li>
               <li><strong>Report it to KRA.</strong> Call <strong>0711 099 999</strong> or message KRA&apos;s official channels (@KRACare on X). KRA has said it is acting on fuel station non-compliance reports</li>
-              <li><strong>Take a photo.</strong> Photograph the receipt you received (or the refusal) and any signage — it helps KRA verify the station</li>
+              <li><strong>Take a photo.</strong> Photograph the receipt you received (or the refusal) and any signage - it helps KRA verify the station</li>
               <li><strong>For fleet purchases:</strong> if you buy on a fleet or fuel card and the station can&apos;t issue a B2B eTIMS invoice with your company&apos;s KRA PIN, that invoice is not claimable as input VAT. Get it from a compliant station instead</li>
             </ol>
             <p>
               You are not being petty. Every eTIMS invoice KRA captures is used to verify VAT returns across the
-              economy — a station operating outside the system is under-reporting VAT on every litre it sells.
+              economy - a station operating outside the system is under-reporting VAT on every litre it sells.
             </p>
           </section>
 
@@ -235,9 +235,9 @@ export default function EtimsFuelStations() {
             <h2 id="owner-h">If You Run a Station: What Non-Compliance Now Costs</h2>
             <p>KRA&apos;s enforcement posture after the December 2025 deadline is straightforward:</p>
             <ul>
-              <li><strong>eTIMS penalties:</strong> the standard eTIMS penalty regime applies — the TPA s.86 e-invoice penalty (higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals), plus the up-to-KES 100,000/month TPA s.59A(5) integration penalty (see our <a href="/resources/etims-penalty-50000-per-month-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS penalty guide</a> for the full breakdown)</li>
+              <li><strong>eTIMS penalties:</strong> the standard eTIMS penalty regime applies - the TPA s.86 e-invoice penalty (higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals), plus the up-to-KES 100,000/month TPA s.59A(5) integration penalty (see our <a href="/resources/etims-penalty-50000-per-month-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS penalty guide</a> for the full breakdown)</li>
               <li><strong>Enforcement action:</strong> KRA has explicitly warned of enforcement measures for fuel retailers that missed the deadline</li>
-              <li><strong>TCC blockage:</strong> eTIMS compliance is now a gate for Tax Compliance Certificates — a non-compliant station can&apos;t renew licences, win supply contracts, or process permits</li>
+              <li><strong>TCC blockage:</strong> eTIMS compliance is now a gate for Tax Compliance Certificates - a non-compliant station can&apos;t renew licences, win supply contracts, or process permits</li>
               <li><strong>Audit exposure:</strong> stations outside the system are prime audit targets because KRA can compare pump sales against its own fuel distribution data</li>
             </ul>
             <p>
@@ -251,7 +251,7 @@ export default function EtimsFuelStations() {
             <div className="not-prose border border-brand/20 bg-brand-muted rounded-lg p-6 my-6">
               <p className="font-display text-[1.15rem] font-semibold text-ink mb-3">Need to Get Compliant?</p>
               <p className="text-[0.84rem] text-ink-soft leading-relaxed mb-4">
-                Smart VAT Kenya guides fuel station owners through eTIMS onboarding — understanding the integration
+                Smart VAT Kenya guides fuel station owners through eTIMS onboarding - understanding the integration
                 options, choosing a certified integrator, and getting the station invoicing correctly.{" "}
                 <strong className="text-ink">Free eTIMS support with our monthly VAT filing (KES 3,500/month)</strong>.
               </p>
@@ -270,7 +270,7 @@ export default function EtimsFuelStations() {
             <h2 id="fleet-h">Fleet Cards, Corporate Fuel Accounts, and the B2B Requirement</h2>
             <p>
               If your company buys fuel on a fleet card, fuel card, or credit account, the station must issue a{" "}
-              <strong>B2B eTIMS invoice with your company&apos;s KRA PIN</strong>. This is not optional paper work —
+              <strong>B2B eTIMS invoice with your company&apos;s KRA PIN</strong>. This is not optional paper work -
               it is the document that lets you claim input VAT on fuel. Ask your fleet provider which stations are
               eTIMS-compliant, and keep a list of the ones that aren&apos;t so you can route purchases to compliant
               sites.
@@ -285,9 +285,9 @@ export default function EtimsFuelStations() {
           <section aria-labelledby="verify-h">
             <h2 id="verify-h">How to Verify a Fuel Station Is Compliant</h2>
             <ul>
-              <li><strong>Check the receipt:</strong> a valid eTIMS invoice has a scannable QR code and a server confirmation code — the code must be present, not a blank box</li>
+              <li><strong>Check the receipt:</strong> a valid eTIMS invoice has a scannable QR code and a server confirmation code - the code must be present, not a blank box</li>
               <li><strong>Ask at the till:</strong> compliant stations&apos; cashiers will confirm their system sends every sale to KRA in real time</li>
-              <li><strong>Corporate buyers:</strong> request a copy of the station&apos;s eTIMS registration confirmation or ask for the B2B invoice on your company PIN — if they can&apos;t generate it, they aren&apos;t integrated</li>
+              <li><strong>Corporate buyers:</strong> request a copy of the station&apos;s eTIMS registration confirmation or ask for the B2B invoice on your company PIN - if they can&apos;t generate it, they aren&apos;t integrated</li>
             </ul>
           </section>
         </article>

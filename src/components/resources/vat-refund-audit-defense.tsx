@@ -8,7 +8,7 @@ const WA_BASE = "https://wa.me/254717344440"
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "VAT Refund & Audit Defense in Kenya — How to Win",
+  headline: "VAT Refund & Audit Defense in Kenya - How to Win",
   description: "Navigate KRA VAT audits, survive the Special Table / Tax Alerts review, and recover excess input VAT within the 12-month refund window under Finance Act rules.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-08",
@@ -36,7 +36,7 @@ export default function VatRefundAuditDefensePage() {
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4">
-            VAT Refund & Audit Defense in Kenya — How to Win
+            VAT Refund & Audit Defense in Kenya - How to Win
           </h1>
           <p className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; Last verified {FACTS.lastVerified} against KRA guidelines</p>
         </div>

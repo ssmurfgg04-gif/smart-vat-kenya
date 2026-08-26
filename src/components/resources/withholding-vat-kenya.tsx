@@ -99,14 +99,14 @@ export default function WithholdingVatPage() {
 
         <article>
           <header className="mb-10">
-            <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide — Withholding VAT</p>
+            <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide - Withholding VAT</p>
             <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-semibold text-ink tracking-tight leading-tight mb-4 text-balance">
               Withholding VAT Kenya Guide 2026
             </h1>
             <p className="text-[0.9rem] text-ink-muted leading-relaxed max-w-[65ch]">
               If you sell goods or services to large companies, government entities, or other appointed withholding
               VAT agents, your customer will deduct 2% from your VAT and pay it directly to KRA. This guide explains
-              exactly how the system works — for both suppliers and appointed agents.
+              exactly how the system works - for both suppliers and appointed agents.
             </p>
             <div className="flex items-center gap-4 text-[0.75rem] text-ink-muted">
               <time dateTime="2026-07-25">25 July 2026</time>
@@ -115,7 +115,7 @@ export default function WithholdingVatPage() {
           </header>
 
           <div className="space-y-10">
-            {/* Section 1 — How It Works */}
+            {/* Section 1 - How It Works */}
             <section id="how-it-works" aria-labelledby="how-it-works-h">
               <h2 id="how-it-works-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 How Withholding VAT Works
@@ -128,7 +128,7 @@ export default function WithholdingVatPage() {
               <p>
                 Late remittance or non-compliance attracts significant{" "}
                 <a href="/resources/kra-vat-penalties-reference/" className="text-brand underline underline-offset-2 hover:text-brand-hover">penalties</a>{" "}
-                — including a 5% late-remittance penalty plus 1% monthly interest.
+                - including a 5% late-remittance penalty plus 1% monthly interest.
               </p>
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
                 <p>
@@ -160,7 +160,7 @@ export default function WithholdingVatPage() {
               </div>
             </section>
 
-            {/* Section 2 — Appointed Agents */}
+            {/* Section 2 - Appointed Agents */}
             <section id="appointed-agents" aria-labelledby="appointed-agents-h">
               <h2 id="appointed-agents-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Who Are Appointed Withholding VAT Agents?
@@ -200,7 +200,7 @@ export default function WithholdingVatPage() {
               </div>
             </section>
 
-            {/* Section 3 — For Suppliers */}
+            {/* Section 3 - For Suppliers */}
             <section id="for-suppliers" aria-labelledby="for-suppliers-h">
               <h2 id="for-suppliers-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 What Suppliers Need to Do
@@ -210,7 +210,7 @@ export default function WithholdingVatPage() {
                 <div className="space-y-3">
                   {[
                     { title: "Issue normal eTIMS invoices", detail: "Do not create a special invoice for withholding VAT. Issue your standard eTIMS invoice with full 16% VAT. The withholding VAT is a separate remittance by the buyer, not a different invoice type." },
-                    { title: "Track your withholding VAT certificates", detail: "The agent must give you a withholding VAT certificate for each deduction. Keep these certificates in a dedicated file — they are your proof when filing returns and applying for refunds." },
+                    { title: "Track your withholding VAT certificates", detail: "The agent must give you a withholding VAT certificate for each deduction. Keep these certificates in a dedicated file - they are your proof when filing returns and applying for refunds." },
                     { title: "Declare the credit in your VAT return", detail: "On your iTax VAT return, declare the full output VAT from the sale. Then enter the withholding VAT credit in the withholding VAT section. The credit reduces your net VAT payable." },
                     { title: "Reconcile monthly", detail: "At the end of each month, reconcile the withholding VAT certificates you received against the invoices you issued. Any mismatch means either the agent did not remit or the certificate is missing." },
                     { title: "Follow up on missing certificates", detail: "If you have not received a withholding VAT certificate by the 10th of the following month, contact the agent's finance department. A late certificate means you cannot claim the credit that month." },
@@ -224,7 +224,7 @@ export default function WithholdingVatPage() {
               </div>
             </section>
 
-            {/* Section 4 — For Agents */}
+            {/* Section 4 - For Agents */}
             <section id="for-agents" aria-labelledby="for-agents-h">
               <h2 id="for-agents-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 What Appointed Agents Need to Do
@@ -248,7 +248,7 @@ export default function WithholdingVatPage() {
               </div>
             </section>
 
-            {/* Section 5 — Refunds */}
+            {/* Section 5 - Refunds */}
             <section id="refunds" aria-labelledby="refunds-h">
               <h2 id="refunds-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Refund of Excess Withholding VAT Credits
@@ -274,7 +274,7 @@ export default function WithholdingVatPage() {
               </div>
             </section>
 
-            {/* Section 6 — Common Mistakes */}
+            {/* Section 6 - Common Mistakes */}
             <section id="common-mistakes" aria-labelledby="common-mistakes-h">
               <h2 id="common-mistakes-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Common Withholding VAT Mistakes

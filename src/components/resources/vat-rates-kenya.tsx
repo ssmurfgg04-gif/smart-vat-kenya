@@ -16,7 +16,7 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "VAT Rates in Kenya 2026 — Standard (16%), Zero-Rated & Exempt",
+  headline: "VAT Rates in Kenya 2026 - Standard (16%), Zero-Rated & Exempt",
   description:
     "Complete guide to Kenya VAT rates 2026 covering the standard rate of 16%, zero-rated supplies (0%), and exempt supplies. Full lists from the VAT Act First and Second Schedules with practical examples and industry guidance.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -44,7 +44,7 @@ const faqSchema = {
       name: "What is the difference between zero-rated and exempt supplies in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The key difference is input VAT recovery. Zero-rated supplies (0%) are taxable at 0% — you still charge VAT on your invoice but at 0%, and you CAN claim input VAT on related costs and apply for refunds if you have excess input tax. Exempt supplies have no VAT charged at all, but you CANNOT claim input VAT on costs related to exempt supplies, making it a true cost to your business. This distinction is crucial for pricing and profitability.",
+        text: "The key difference is input VAT recovery. Zero-rated supplies (0%) are taxable at 0% - you still charge VAT on your invoice but at 0%, and you CAN claim input VAT on related costs and apply for refunds if you have excess input tax. Exempt supplies have no VAT charged at all, but you CANNOT claim input VAT on costs related to exempt supplies, making it a true cost to your business. This distinction is crucial for pricing and profitability.",
       },
     },
     {
@@ -100,7 +100,7 @@ const faqSchema = {
       name: "How do I know if my supply is zero-rated or exempt?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Consult the VAT Act Schedules. Zero-rated supplies are listed in the First Schedule (Section 6 of the VAT Act). Exempt supplies are listed in the Second Schedule (Section 7 of the VAT Act). If your supply is not listed in either schedule, it is subject to the standard rate of 16%. When in doubt, seek professional advice — misclassifying a supply can lead to penalties, interest, and KRA audit adjustments.",
+        text: "Consult the VAT Act Schedules. Zero-rated supplies are listed in the First Schedule (Section 6 of the VAT Act). Exempt supplies are listed in the Second Schedule (Section 7 of the VAT Act). If your supply is not listed in either schedule, it is subject to the standard rate of 16%. When in doubt, seek professional advice - misclassifying a supply can lead to penalties, interest, and KRA audit adjustments.",
       },
     },
   ],
@@ -123,14 +123,14 @@ export default function VatRatesKenyaPage() {
 
         <article>
           <header className="mb-10">
-            <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide — VAT Rates</p>
+            <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide - VAT Rates</p>
             <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-semibold text-ink tracking-tight leading-tight mb-4 text-balance">
-              VAT Rates in Kenya 2026 — Standard (16%), Zero-Rated &amp; Exempt
+              VAT Rates in Kenya 2026 - Standard (16%), Zero-Rated &amp; Exempt
             </h1>
             <p className="text-[0.9rem] text-ink-muted leading-relaxed max-w-[65ch]">
               Kenya operates a three-tier VAT system. Most goods and services attract the standard rate of 16%.
               Some are zero-rated at 0% (exports, unprocessed foods, agricultural inputs), while others are
-              exempt (financial services, residential rent, education). Getting the rate right is critical — errors
+              exempt (financial services, residential rent, education). Getting the rate right is critical - errors
               can mean overpaying tax or facing KRA penalties. This guide covers each rate with full lists and
               practical examples.
             </p>
@@ -140,13 +140,13 @@ export default function VatRatesKenyaPage() {
             </div>
           </header>
 
-          {/* Quick Answer — optimized for featured snippet / AI citation */}
+          {/* Quick Answer - optimized for featured snippet / AI citation */}
           <div className="border-l-[3px] border-brand pl-5 mb-10">
             <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
             <p className="text-[0.93rem] text-ink-soft leading-relaxed">
               <strong className="text-ink">Kenya's VAT rate is 16%</strong> on most goods and services.
               Zero-rated supplies (0%) include exports, unprocessed food, pharmaceuticals, and agricultural
-              inputs — you can claim input VAT on these. <strong className="text-ink">Exempt supplies</strong>
+              inputs - you can claim input VAT on these. <strong className="text-ink">Exempt supplies</strong>
               (financial services, residential rent, education) have no VAT charged and no input VAT recovery.
               Mandatory registration is triggered at <strong className="text-ink">KES 5M annual taxable turnover</strong>{" "}
               (the Finance Act 2025 proposed raising this to 8M but it has not taken effect). Returns are due on{" "}
@@ -156,7 +156,7 @@ export default function VatRatesKenyaPage() {
             </p>
           </div>
 
-          {/* VAT at a glance — compact summary table */}
+          {/* VAT at a glance - compact summary table */}
           <div className="border border-hairline rounded-lg overflow-hidden mb-10">
             <div className="bg-canvas-alt px-5 py-3 border-b border-hairline">
               <p className="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted">VAT at a Glance (2026)</p>
@@ -165,8 +165,8 @@ export default function VatRatesKenyaPage() {
               <tbody className="divide-y divide-hairline">
                 {[
                   { label: "Standard rate", value: "16% on most goods and services" },
-                  { label: "Zero-rated", value: "0% — exports, unprocessed food, pharma, agricultural inputs; input VAT claimable" },
-                  { label: "Exempt", value: "No VAT — financial services, residential rent, education, medical; no input VAT recovery" },
+                  { label: "Zero-rated", value: "0% - exports, unprocessed food, pharma, agricultural inputs; input VAT claimable" },
+                  { label: "Exempt", value: "No VAT - financial services, residential rent, education, medical; no input VAT recovery" },
                   { label: "Mandatory registration", value: "KES 5M annual taxable turnover" },
                   { label: "Voluntary registration", value: "Available below the threshold (VAT Act s.34(3))" },
                   { label: "Filing deadline", value: "20th of every month via iTax (nil returns included)" },
@@ -186,7 +186,7 @@ export default function VatRatesKenyaPage() {
 
           <div className="space-y-10">
 
-            {/* Section 1 — Introduction */}
+            {/* Section 1 - Introduction */}
             <section id="introduction" aria-labelledby="introduction-h">
               <h2 id="introduction-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Kenya&apos;s Three VAT Rates
@@ -200,7 +200,7 @@ export default function VatRatesKenyaPage() {
                 </p>
                 <p>
                   Getting the classification right is one of the most common compliance challenges. A
-                  misclassified supply — for example, treating a standard-rated item as zero-rated — can
+                  misclassified supply - for example, treating a standard-rated item as zero-rated - can
                   result in KRA audit adjustments, penalties, and interest. If in doubt, you can consult
                   KRA for a private ruling, or seek professional advice.
                 </p>
@@ -218,10 +218,10 @@ export default function VatRatesKenyaPage() {
                     </thead>
                     <tbody className="divide-y divide-hairline">
                       {[
-                        { feature: "VAT charged to customer", standard: "Yes — 16% added to price", zero: "Yes — but at 0%", exempt: "No VAT charged" },
+                        { feature: "VAT charged to customer", standard: "Yes - 16% added to price", zero: "Yes - but at 0%", exempt: "No VAT charged" },
                         { feature: "Tax invoice required", standard: "Yes", zero: "Yes", exempt: "No" },
-                        { feature: "Include in VAT return", standard: "Yes — as output VAT", zero: "Yes — as zero-rated supply", exempt: "No" },
-                        { feature: "Input VAT recovery", standard: "Yes — can claim back", zero: "Yes — can claim and get refunds", exempt: "No — input VAT is a cost" },
+                        { feature: "Include in VAT return", standard: "Yes - as output VAT", zero: "Yes - as zero-rated supply", exempt: "No" },
+                        { feature: "Input VAT recovery", standard: "Yes - can claim back", zero: "Yes - can claim and get refunds", exempt: "No - input VAT is a cost" },
                         { feature: "Impact on profit", standard: "VAT is collected from customer", zero: "VAT refunds improve margin", exempt: "Input VAT erodes margin" },
                         { feature: "Common examples", standard: "Electronics, vehicles, hotel stays, professional fees", zero: "Exports, unprocessed food, medicines, books", exempt: "Residential rent, financial services, insurance, education" },
                       ].map(({ feature, standard, zero, exempt }) => (
@@ -249,7 +249,7 @@ export default function VatRatesKenyaPage() {
               </div>
             </section>
 
-            {/* Section 2 — Standard Rate */}
+            {/* Section 2 - Standard Rate */}
             <section id="standard-rate" aria-labelledby="standard-rate-h">
               <h2 id="standard-rate-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Standard Rate (16%)
@@ -258,7 +258,7 @@ export default function VatRatesKenyaPage() {
                 <p>
                   The <strong>standard rate of 16%</strong> applies to all supplies of goods and services
                   in Kenya that are not specifically zero-rated or exempt under the VAT Act. This is the
-                  default rate — if a supply is not listed in the First Schedule (zero-rated) or Second
+                  default rate - if a supply is not listed in the First Schedule (zero-rated) or Second
                   Schedule (exempt), it is standard-rated.
                 </p>
 
@@ -302,7 +302,7 @@ export default function VatRatesKenyaPage() {
               </div>
             </section>
 
-            {/* Section 3 — Zero-Rated */}
+            {/* Section 3 - Zero-Rated */}
             <section id="zero-rated" aria-labelledby="zero-rated-h">
               <h2 id="zero-rated-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Zero-Rated Supplies (0%)
@@ -310,7 +310,7 @@ export default function VatRatesKenyaPage() {
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
                 <p>
                   <strong>Zero-rated supplies</strong> are taxable supplies charged at <strong>0%</strong>.
-                  You must still issue a tax invoice and include the supply in your VAT return — but no VAT
+                  You must still issue a tax invoice and include the supply in your VAT return - but no VAT
                   is charged to the customer. Crucially, you <strong>can claim input VAT</strong> on costs
                   related to making zero-rated supplies and apply for refunds from KRA if you have excess
                   input tax.
@@ -322,17 +322,17 @@ export default function VatRatesKenyaPage() {
 
                 <ul className="space-y-2">
                   {[
-                    "Exports of goods and services — any goods or services exported from Kenya",
-                    "Unprocessed agricultural products — maize, wheat, rice, barley, sorghum, millet, fresh milk, potatoes, beans, peas, fresh fruits and vegetables, unprocessed meat and fish, eggs, honey",
-                    "Agricultural inputs — fertilisers, pesticides, herbicides, fungicides, seeds and seedlings, animal feeds and feed ingredients",
-                    "Pharmaceuticals and medical supplies — prescription medicines, medical equipment and apparatus, surgical instruments, laboratory reagents",
-                    "Books, educational materials, and printed materials — textbooks, exercise books, newspapers",
-                    "Goods supplied to EPZ and SEZ enterprises — goods supplied to Export Processing Zones and Special Economic Zones",
-                    "Goods supplied to diplomatic missions — accredited diplomats and international organisations",
-                    "International transport services — international freight and passenger transport",
-                    "Tea and coffee packaging materials — packaging materials for tea and coffee (added by Finance Act 2025)",
-                    "Supply of taxable goods to manufacturers of agricultural machinery — inputs for making agricultural equipment",
-                    "Services rendered outside Kenya — services physically performed outside the country",
+                    "Exports of goods and services - any goods or services exported from Kenya",
+                    "Unprocessed agricultural products - maize, wheat, rice, barley, sorghum, millet, fresh milk, potatoes, beans, peas, fresh fruits and vegetables, unprocessed meat and fish, eggs, honey",
+                    "Agricultural inputs - fertilisers, pesticides, herbicides, fungicides, seeds and seedlings, animal feeds and feed ingredients",
+                    "Pharmaceuticals and medical supplies - prescription medicines, medical equipment and apparatus, surgical instruments, laboratory reagents",
+                    "Books, educational materials, and printed materials - textbooks, exercise books, newspapers",
+                    "Goods supplied to EPZ and SEZ enterprises - goods supplied to Export Processing Zones and Special Economic Zones",
+                    "Goods supplied to diplomatic missions - accredited diplomats and international organisations",
+                    "International transport services - international freight and passenger transport",
+                    "Tea and coffee packaging materials - packaging materials for tea and coffee (added by Finance Act 2025)",
+                    "Supply of taxable goods to manufacturers of agricultural machinery - inputs for making agricultural equipment",
+                    "Services rendered outside Kenya - services physically performed outside the country",
                   ].map((item) => (
                     <li key={item} className="flex gap-3">
                       <CheckCircle size={14} weight="fill" className="text-brand shrink-0 mt-1.5" aria-hidden="true" />
@@ -347,7 +347,7 @@ export default function VatRatesKenyaPage() {
                     <p className="font-semibold text-ink text-[0.85rem] mb-1">Changed by the Finance Act 2026 (from 1 July 2026)</p>
                     <ul className="space-y-1.5 text-[0.83rem] text-ink-soft leading-relaxed">
                       <li><strong className="text-ink">e-bicycles</strong> (HS code 8712) and <strong className="text-ink">solar batteries</strong> (except HS 8507.60.00) moved from zero-rated to <strong className="text-ink">standard-rated 16%</strong>.</li>
-                      <li><strong className="text-ink">Inputs and raw materials for pharmaceutical manufacturing</strong> and <strong className="text-ink">BEV (electric) stove inputs</strong> moved from zero-rated to <strong className="text-ink">exempt</strong> — no VAT charged, but no input VAT recovery either.</li>
+                      <li><strong className="text-ink">Inputs and raw materials for pharmaceutical manufacturing</strong> and <strong className="text-ink">BEV (electric) stove inputs</strong> moved from zero-rated to <strong className="text-ink">exempt</strong> - no VAT charged, but no input VAT recovery either.</li>
                       <li><strong className="text-ink">Small aircraft</strong> (unladen weight under 2,000 kg, incl. helicopters and light aircraft) and <strong className="text-ink">direction-finding compasses/instruments for aircraft</strong> moved from exempt to standard-rated 16%. Larger aircraft (8802.30 / 8802.40) and <strong className="text-ink">aircraft spare parts imported by operators or maintenance businesses</strong> (with the civil-aviation recommendation) remain exempt.</li>
                     </ul>
                   </div>
@@ -378,7 +378,7 @@ export default function VatRatesKenyaPage() {
               </div>
             </section>
 
-            {/* Section 4 — Exempt Supplies */}
+            {/* Section 4 - Exempt Supplies */}
             <section id="exempt-supplies" aria-labelledby="exempt-supplies-h">
               <h2 id="exempt-supplies-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Exempt Supplies
@@ -388,7 +388,7 @@ export default function VatRatesKenyaPage() {
                   <strong>Exempt supplies</strong> are not subject to VAT at all. You do not charge VAT on
                   exempt supplies, but you also <strong>cannot claim input VAT</strong> on costs related to
                   making exempt supplies (with narrow exceptions such as supplies to KDF, NIS, and NPS under
-                  the Finance Act 2026). This makes exempt treatment a true cost to the business — the VAT
+                  the Finance Act 2026). This makes exempt treatment a true cost to the business - the VAT
                   you pay on inputs is not recoverable.
                 </p>
 
@@ -398,7 +398,7 @@ export default function VatRatesKenyaPage() {
 
                 <div className="space-y-3">
                   {[
-                    { title: "Financial services", detail: "Insurance, reinsurance, lending, credit facilities, issuance of securities, foreign exchange transactions (but NOT payment processing services — now 16% VAT)" },
+                    { title: "Financial services", detail: "Insurance, reinsurance, lending, credit facilities, issuance of securities, foreign exchange transactions (but NOT payment processing services - now 16% VAT)" },
                     { title: "Residential rent", detail: "Letting of residential premises for dwelling purposes. Landlords of residential property cannot charge VAT or claim input VAT" },
                     { title: "Education services", detail: "Tuition fees at registered educational institutions, training services, and educational materials supplied by the institution" },
                     { title: "Medical, dental, and hospital services", detail: "Services provided by registered medical practitioners, hospitals, clinics, dentists, and opticians" },
@@ -426,7 +426,7 @@ export default function VatRatesKenyaPage() {
                   <p className="text-[0.83rem] text-red-700 dark:text-red-400 leading-relaxed">
                     <strong className="text-red-800 dark:text-red-300">Important:</strong> If you make both
                     taxable and exempt supplies (mixed supplies), you must apportion input VAT. The 90:10 rule
-                    was removed by the Finance Act 2025 — you can no longer claim full input VAT even if exempt
+                    was removed by the Finance Act 2025 - you can no longer claim full input VAT even if exempt
                     supplies are under 10% of turnover. See our{" "}
                     <a href="/resources/input-vat-deduction-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                       Input VAT Deduction Guide
@@ -437,7 +437,7 @@ export default function VatRatesKenyaPage() {
               </div>
             </section>
 
-            {/* Section 5 — Quick Reference Table */}
+            {/* Section 5 - Quick Reference Table */}
             <section id="quick-reference" aria-labelledby="quick-reference-h">
               <h2 id="quick-reference-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Quick Reference: Kenya VAT Rate Comparison
@@ -455,7 +455,7 @@ export default function VatRatesKenyaPage() {
                   <tbody className="divide-y divide-hairline">
                     {[
                       { feature: "Rate", standard: "16%", zero: "0%", exempt: "No VAT" },
-                      { feature: "Charge VAT on invoice?", standard: "Yes — 16%", zero: "Yes — but at 0%", exempt: "No" },
+                      { feature: "Charge VAT on invoice?", standard: "Yes - 16%", zero: "Yes - but at 0%", exempt: "No" },
                       { feature: "Issue tax invoice required?", standard: "Yes", zero: "Yes", exempt: "Generally no (but best practice)" },
                       { feature: "Include in VAT return?", standard: "Yes", zero: "Yes", exempt: "No (unless for apportionment)" },
                       { feature: "Claim input VAT on costs?", standard: "Yes", zero: "Yes", exempt: "No (narrow exceptions)" },
@@ -475,7 +475,7 @@ export default function VatRatesKenyaPage() {
               </div>
             </section>
 
-            {/* Section 6 — Industry Cross-Links */}
+            {/* Section 6 - Industry Cross-Links */}
             <section id="industry-guides" aria-labelledby="industry-guides-h">
               <h2 id="industry-guides-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Rate Guides by Industry
@@ -488,12 +488,12 @@ export default function VatRatesKenyaPage() {
 
                 <div className="grid sm:grid-cols-2 gap-3 mt-4">
                   {[
-                    { href: "/resources/vat-for-restaurants-hospitality/", label: "Restaurants & Hospitality", desc: "Meals, drinks, accommodation, event catering — which items are 16% vs zero-rated?" },
-                    { href: "/resources/vat-fintech-digital-payments-kenya/", label: "Fintech & Digital Payments", desc: "Payment processing, merchant fees, mobile money — now 16% VAT under Finance Act 2026" },
+                    { href: "/resources/vat-for-restaurants-hospitality/", label: "Restaurants & Hospitality", desc: "Meals, drinks, accommodation, event catering - which items are 16% vs zero-rated?" },
+                    { href: "/resources/vat-fintech-digital-payments-kenya/", label: "Fintech & Digital Payments", desc: "Payment processing, merchant fees, mobile money - now 16% VAT under Finance Act 2026" },
                     { href: "/resources/vat-for-importers-kenya/", label: "Importers", desc: "Import VAT at 16%, customs valuation, duty + VAT calculation, and deferment options" },
                     { href: "/resources/vat-for-landlords-kenya/", label: "Landlords & Property", desc: "Residential rent (exempt) vs commercial rent (16%), input VAT on construction and maintenance" },
                     { href: "/resources/vat-digital-services-kenya/", label: "Digital Services", desc: "E-books, streaming, software downloads, SaaS, online advertising, digital broadcasting" },
-                    { href: "/resources/vat-labour-outsourcing-kenya/", label: "Labour Outsourcing", desc: "Staff placement, temp labour — employee costs are disbursements, not subject to VAT" },
+                    { href: "/resources/vat-labour-outsourcing-kenya/", label: "Labour Outsourcing", desc: "Staff placement, temp labour - employee costs are disbursements, not subject to VAT" },
                   ].map(({ href, label, desc }) => (
                     <a key={href} href={href}
                       className="group border border-hairline rounded-lg p-4 hover:border-ink/15 hover:shadow-sm transition-all no-underline">
@@ -505,7 +505,7 @@ export default function VatRatesKenyaPage() {
               </div>
             </section>
 
-            {/* Section 7 — Checklist */}
+            {/* Section 7 - Checklist */}
             <section id="getting-it-right" aria-labelledby="getting-it-right-h">
               <h2 id="getting-it-right-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 How to Get the Rate Right
@@ -523,7 +523,7 @@ export default function VatRatesKenyaPage() {
                     "For mixed supplies (multiple items in one transaction), apply the correct rate to each item separately.",
                     "If you export goods or services, ensure you have documentary proof of export (bill of lading, airway bill, customs export declaration).",
                     "If you supply to an EPZ or SEZ enterprise, obtain their valid EPZ/SEZ certificate to support zero-rating.",
-                    "Review your product or service descriptions against the VAT Act Schedules each year — the lists change with each Finance Act.",
+                    "Review your product or service descriptions against the VAT Act Schedules each year - the lists change with each Finance Act.",
                     "If uncertain, apply for a KRA private ruling or consult a tax professional.",
                   ].map((item) => (
                     <li key={item} className="flex gap-3">
@@ -550,7 +550,7 @@ export default function VatRatesKenyaPage() {
           </div>
         </article>
 
-        {/* Sources & Methodology — authority signal for AI citation */}
+        {/* Sources & Methodology - authority signal for AI citation */}
         <div className="mt-14 border-t border-hairline pt-8">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted mb-3">Sources &amp; Methodology</p>
           <p className="text-[0.78rem] text-ink-muted leading-relaxed max-w-[60ch]">

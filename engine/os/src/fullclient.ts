@@ -10,7 +10,7 @@ import { createClient, ClientHandle } from "./client.js"
 import { buildReminderPlan, dispatchReminders, SchedulerOptions } from "./reminders.js"
 
 /**
- * FullEngine — the Phase-1 product wiring assembled from parts.
+ * FullEngine - the Phase-1 product wiring assembled from parts.
  *
  *   - a real `GavaClient` (PIN → TCC → obligations → supplier) becomes the
  *     portal adapter,

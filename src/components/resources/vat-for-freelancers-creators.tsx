@@ -58,7 +58,7 @@ export default function VatForFreelancersCreatorsPage() {
         <div className="bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-lg font-semibold text-ink mb-2">Are you a creator or freelancer needing tax registration?</p>
           <a href={`${WA_BASE}?text=Hi%2C%20I%20am%20a%20freelancer%20needing%20KRA%20tax%20or%20VAT%20help`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold px-6 py-3 rounded-md hover:bg-brand-hover transition-colors">
-            Get Registered via WhatsApp — KES 5,000 <ArrowRight size={14} weight="bold" />
+            Get Registered via WhatsApp - KES 5,000 <ArrowRight size={14} weight="bold" />
           </a>
         </div>
 

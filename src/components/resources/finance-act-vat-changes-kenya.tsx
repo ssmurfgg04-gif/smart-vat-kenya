@@ -44,7 +44,7 @@ const faqSchema = {
       name: "What is the VAT refund application deadline for 2026?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The deadline is 12 months from the date the tax became due and payable. The Finance Act 2025 reduced this from 24 months, effective 1 July 2025. The Finance Act 2026 did not change this further. Any refund not applied for within 12 months is forfeited. Check your iTax portal now — if you have excess input VAT older than 12 months, you may have lost the right to claim it.",
+        text: "The deadline is 12 months from the date the tax became due and payable. The Finance Act 2025 reduced this from 24 months, effective 1 July 2025. The Finance Act 2026 did not change this further. Any refund not applied for within 12 months is forfeited. Check your iTax portal now - if you have excess input VAT older than 12 months, you may have lost the right to claim it.",
       },
     },
     {
@@ -99,14 +99,14 @@ export default function FinanceActVatPage() {
 
         <article>
           <header className="mb-10">
-            <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide — Finance Act Changes</p>
+            <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide - Finance Act Changes</p>
             <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-semibold text-ink tracking-tight leading-tight mb-4 text-balance">
               Finance Act 2025 & 2026: VAT Changes for Kenyan Businesses
             </h1>
             <p className="text-[0.9rem] text-ink-muted leading-relaxed max-w-[65ch]">
               Two Finance Acts in two years have reshaped Kenya's VAT landscape. The threshold may be rising,
               the refund window has shrunk, fintech services are now taxable, and bad debt rules have changed.
-              This guide summarises every VAT change you need to know — and what to do about them.
+              This guide summarises every VAT change you need to know - and what to do about them.
             </p>
             <div className="flex items-center gap-4 text-[0.75rem] text-ink-muted">
               <time dateTime="2026-07-25">25 July 2026</time>
@@ -115,7 +115,7 @@ export default function FinanceActVatPage() {
           </header>
 
           <div className="space-y-10">
-            {/* Section 1 — Threshold */}
+            {/* Section 1 - Threshold */}
             <section id="threshold" aria-labelledby="threshold-h">
               <h2 id="threshold-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 VAT Registration Threshold: KES 5M vs KES 8M
@@ -137,12 +137,12 @@ export default function FinanceActVatPage() {
                 <p>
                   <strong>What this means for your business:</strong> If your turnover is between KES 5 million and
                   KES 8 million, you are still required to register for VAT under current rules. If the KES 8 million
-                  threshold takes effect, you may be able to deregister — but wait for the official notice.
+                  threshold takes effect, you may be able to deregister - but wait for the official notice.
                 </p>
               </div>
             </section>
 
-            {/* Section 2 — Refund Window */}
+            {/* Section 2 - Refund Window */}
             <section id="refund-window" aria-labelledby="refund-window-h">
               <h2 id="refund-window-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 VAT Refund Window Reduced to 12 Months
@@ -171,7 +171,7 @@ export default function FinanceActVatPage() {
               </div>
             </section>
 
-            {/* Section 3 — Fintech VAT */}
+            {/* Section 3 - Fintech VAT */}
             <section id="fintech-vat" aria-labelledby="fintech-vat-h">
               <h2 id="fintech-vat-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Fintech Services Now Subject to 16% VAT
@@ -196,7 +196,7 @@ export default function FinanceActVatPage() {
               </div>
             </section>
 
-            {/* Section 4 — Bad Debt Relief */}
+            {/* Section 4 - Bad Debt Relief */}
             <section id="bad-debt-relief" aria-labelledby="bad-debt-relief-h">
               <h2 id="bad-debt-relief-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Bad Debt Relief Timeline Reset to 3 Years
@@ -219,7 +219,7 @@ export default function FinanceActVatPage() {
               </div>
             </section>
 
-            {/* Section 5 — Apportionment */}
+            {/* Section 5 - Apportionment */}
             <section id="apportionment" aria-labelledby="apportionment-h">
               <h2 id="apportionment-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 90:10 Input VAT Apportionment Rule Deleted
@@ -252,7 +252,7 @@ export default function FinanceActVatPage() {
               </div>
             </section>
 
-            {/* Section 6 — KDF/NIS Exception */}
+            {/* Section 6 - KDF/NIS Exception */}
             <section id="kdf-exception" aria-labelledby="kdf-exception-h">
               <h2 id="kdf-exception-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Input VAT Deduction for Supplies to Government Security Agencies
@@ -276,7 +276,7 @@ export default function FinanceActVatPage() {
               </div>
             </section>
 
-            {/* Section 7 — Other Changes */}
+            {/* Section 7 - Other Changes */}
             <section id="other-changes" aria-labelledby="other-changes-h">
               <h2 id="other-changes-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Other Notable Changes
@@ -291,9 +291,9 @@ export default function FinanceActVatPage() {
                     { key: "tea-coffee-packaging", change: "Tea and coffee packaging materials zero-rated", detail: "Packaging materials for tea and coffee are now zero-rated (0%), allowing suppliers to claim input VAT and apply for refunds." },
                     { key: "manufacturing-capital", change: "Manufacturing capital goods exemption extended", detail: "The VAT exemption on capital goods for the manufacturing sector, granted before 27 December 2024, was extended to apply until 27 December 2025." },
                     { key: "e-bikes-solar", change: "e-bicycles and solar batteries now 16% VAT", detail: "Electric bicycles (HS 8712) and solar batteries (excluding HS 8507.60.00) moved from zero-rated to standard-rated 16% from 1 July 2026. Dealers and manufacturers must now charge VAT and can claim input VAT." },
-                    { key: "pharma-bev-inputs", change: "Pharma & BEV stove inputs now exempt", detail: "Inputs and raw materials supplied to pharmaceutical manufacturers, and inputs for bioethanol-vapour (BEV) stoves, moved from zero-rated to exempt from 1 July 2026 — no VAT is charged, but the related input VAT is no longer recoverable." },
+                    { key: "pharma-bev-inputs", change: "Pharma & BEV stove inputs now exempt", detail: "Inputs and raw materials supplied to pharmaceutical manufacturers, and inputs for bioethanol-vapour (BEV) stoves, moved from zero-rated to exempt from 1 July 2026 - no VAT is charged, but the related input VAT is no longer recoverable." },
                     { key: "dialyzers-scrap", change: "Dialyzers and scrap metal exempted", detail: "Kidney dialysis equipment (tariff 8421.29.00) and scrap metal goods moved from standard-rated 16% to exempt from 1 July 2026." },
-                    { key: "aircraft-ch88", change: "Aviation VAT: small aircraft and aircraft instruments now 16%; larger aircraft and operator spare parts stay exempt", detail: "The Finance Act 2026 narrowed the aviation exemption (narrower than the original bill): small aircraft with unladen weight not exceeding 2,000 kg (helicopters, light aircraft) and direction-finding compasses/instruments for aircraft moved from exempt to standard-rated 16%. Aircraft of unladen weight 2,000–15,000 kg (8802.30) and over 15,000 kg (8802.40), spacecraft, and aircraft spare parts imported by operators or maintenance businesses (aviation-authority recommendation) remain exempt — the Chapter 88 parts exemption was preserved after industry lobbying. Import-side IDF/RDL exemptions are also narrowed to Chapter 88 parts and 8802.30/8802.40." },
+                    { key: "aircraft-ch88", change: "Aviation VAT: small aircraft and aircraft instruments now 16%; larger aircraft and operator spare parts stay exempt", detail: "The Finance Act 2026 narrowed the aviation exemption (narrower than the original bill): small aircraft with unladen weight not exceeding 2,000 kg (helicopters, light aircraft) and direction-finding compasses/instruments for aircraft moved from exempt to standard-rated 16%. Aircraft of unladen weight 2,000–15,000 kg (8802.30) and over 15,000 kg (8802.40), spacecraft, and aircraft spare parts imported by operators or maintenance businesses (aviation-authority recommendation) remain exempt - the Chapter 88 parts exemption was preserved after industry lobbying. Import-side IDF/RDL exemptions are also narrowed to Chapter 88 parts and 8802.30/8802.40." },
                   ].map(({ key, change, detail }) => (
                     <div key={key} className="border border-hairline rounded-lg p-4">
                       <p className="font-semibold text-ink text-[0.88rem] mb-1">{change}</p>
@@ -304,7 +304,7 @@ export default function FinanceActVatPage() {
               </div>
             </section>
 
-            {/* Section 8 — What to Do */}
+            {/* Section 8 - What to Do */}
             <section id="what-to-do" aria-labelledby="what-to-do-h">
               <h2 id="what-to-do-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 What You Should Do Now
@@ -312,9 +312,9 @@ export default function FinanceActVatPage() {
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
                 <ul className="space-y-2">
                   {[
-                    "Check your iTax portal for any pending refunds — the 12-month window may have already expired for some periods.",
+                    "Check your iTax portal for any pending refunds - the 12-month window may have already expired for some periods.",
                     "If you are a fintech or payment service provider, update your systems to charge 16% VAT on fees effective 1 July 2026.",
-                    "Review your aged debtors list for invoices approaching 3 years — you may qualify for bad debt relief soon.",
+                    "Review your aged debtors list for invoices approaching 3 years - you may qualify for bad debt relief soon.",
                     "If you have mixed supplies (taxable and exempt), implement the input VAT apportionment formula immediately.",
                     "If you supply government security agencies, start tracking input VAT on related purchases for refund claims.",
                     "If you use outsourced labour or staffing services, check that your supplier has correctly excluded employee costs from the taxable value.",

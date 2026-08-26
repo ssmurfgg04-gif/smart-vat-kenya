@@ -16,7 +16,7 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "KRA Status Code 500 iTax Errors — Causes, Fixes, and What to Do When the Portal Is Down (Kenya 2026)",
+  headline: "KRA Status Code 500 iTax Errors - Causes, Fixes, and What to Do When the Portal Is Down (Kenya 2026)",
   description:
     "A KRA iTax Error 500 means the portal server is down. Here is how to check if it is a KRA outage vs your connection, how to fix it on your end when possible, and what to do when the deadline is approaching and the portal is not working.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -36,7 +36,7 @@ const faqSchema = {
       name: "What does KRA iTax Error 500 mean?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Error 500 (Internal Server Error) means the iTax portal server encountered an unexpected condition that prevented it from fulfilling the request. It is a server-side error — not a problem with your computer, browser, or internet connection. KRA's servers are either overloaded, undergoing maintenance, or experiencing a technical fault. You cannot fix Error 500 from your end — you must wait for KRA to resolve it.",
+        text: "Error 500 (Internal Server Error) means the iTax portal server encountered an unexpected condition that prevented it from fulfilling the request. It is a server-side error - not a problem with your computer, browser, or internet connection. KRA's servers are either overloaded, undergoing maintenance, or experiencing a technical fault. You cannot fix Error 500 from your end - you must wait for KRA to resolve it.",
       },
     },
     {
@@ -44,7 +44,7 @@ const faqSchema = {
       name: "Is iTax Error 500 the same as a portal outage?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Not always. Error 500 can appear intermittently even when the portal is technically 'up' — it usually means a specific server process crashed. But if the error persists for more than 30-60 minutes, it indicates a broader outage. A full outage typically shows a blank white page, an infinite loading spinner, or the message 'Service Unavailable'. KRA usually publishes outage notices on their official X (Twitter) account and website.",
+        text: "Not always. Error 500 can appear intermittently even when the portal is technically 'up' - it usually means a specific server process crashed. But if the error persists for more than 30-60 minutes, it indicates a broader outage. A full outage typically shows a blank white page, an infinite loading spinner, or the message 'Service Unavailable'. KRA usually publishes outage notices on their official X (Twitter) account and website.",
       },
     },
     {
@@ -68,7 +68,7 @@ const faqSchema = {
       name: "What do I do if Error 500 appears on the 20th deadline?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "First, take a screenshot showing the error and the date/time. This is your evidence. Second, keep trying every 30-60 minutes — do not refresh every 30 seconds as this can get your IP blocked. Third, if the error persists past the deadline, file as soon as the portal is back. Then apply for a penalty waiver citing the system downtime. KRA may reject the waiver — having a KRA-registered agent file through the agent portal (which has better uptime) is the only way to guarantee deadline compliance.",
+        text: "First, take a screenshot showing the error and the date/time. This is your evidence. Second, keep trying every 30-60 minutes - do not refresh every 30 seconds as this can get your IP blocked. Third, if the error persists past the deadline, file as soon as the portal is back. Then apply for a penalty waiver citing the system downtime. KRA may reject the waiver - having a KRA-registered agent file through the agent portal (which has better uptime) is the only way to guarantee deadline compliance.",
       },
     },
   ],
@@ -107,11 +107,11 @@ export default function KraStatusCode500Page() {
             ))}
           </div>
           <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
-            KRA iTax Status Code 500 — Why It Happens and How to Fix It
+            KRA iTax Status Code 500 - Why It Happens and How to Fix It
           </h1>
           <div className="flex flex-wrap items-center gap-3 mt-4">
             <span className="font-mono text-[0.62rem] uppercase tracking-widest bg-brand/20 text-brand px-2.5 py-1 rounded-sm">Last updated: July 25, 2026</span>
-            <span className="text-[0.78rem] text-canvas/50">Smart VAT Kenya — KRA-registered VAT agents</span>
+            <span className="text-[0.78rem] text-canvas/50">Smart VAT Kenya - KRA-registered VAT agents</span>
           </div>
         </div>
       </div>
@@ -145,14 +145,14 @@ export default function KraStatusCode500Page() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — What Is Error 500? */}
+          {/* Section 1 - What Is Error 500? */}
           <section id="what-is-error-500" aria-labelledby="what-is-error-500-h">
             <h2 id="what-is-error-500-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What Is KRA iTax Error 500?
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                When you see "500 Internal Server Error" on itax.kra.go.ke — or worse, a completely blank white page with no error message at all — it means the KRA server encountered a problem and could not complete your request. This is a <strong className="text-ink">server-side error</strong>, not something wrong with your computer, browser, or internet connection.
+                When you see "500 Internal Server Error" on itax.kra.go.ke - or worse, a completely blank white page with no error message at all - it means the KRA server encountered a problem and could not complete your request. This is a <strong className="text-ink">server-side error</strong>, not something wrong with your computer, browser, or internet connection.
               </p>
               <p>
                 The iTax portal runs on legacy infrastructure that was not designed for the volume of traffic it now receives. Every month, millions of Kenyan taxpayers log in during the same narrow window (1st–20th), and the servers struggle to keep up. Error 500 is the most common symptom of this overload.
@@ -162,7 +162,7 @@ export default function KraStatusCode500Page() {
                 <a href="/resources/itax-portal-not-working/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   complete iTax troubleshooting guide
                 </a>
-                ). But Error 500 means the server is failing — you cannot fix it from your side by clearing your cache or resetting your password.
+                ). But Error 500 means the server is failing - you cannot fix it from your side by clearing your cache or resetting your password.
               </p>
               <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
                 <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
@@ -173,7 +173,7 @@ export default function KraStatusCode500Page() {
             </div>
           </section>
 
-          {/* Section 2 — Outage vs Local */}
+          {/* Section 2 - Outage vs Local */}
           <section id="outage-vs-local" aria-labelledby="outage-vs-local-h">
             <h2 id="outage-vs-local-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Is It a KRA Outage or Your Connection?
@@ -213,7 +213,7 @@ export default function KraStatusCode500Page() {
             </div>
           </section>
 
-          {/* Section 3 — What Causes It */}
+          {/* Section 3 - What Causes It */}
           <section id="what-causes-it" aria-labelledby="what-causes-it-h">
             <h2 id="what-causes-it-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What Causes iTax Error 500?
@@ -234,7 +234,7 @@ export default function KraStatusCode500Page() {
                   },
                   {
                     title: "Unexpected system crash",
-                    desc: "A database crash, network failure, or software bug can take the entire portal down. These are less common but more serious — recovery can take 2–24 hours. The July 2022 outage lasted nearly 3 days.",
+                    desc: "A database crash, network failure, or software bug can take the entire portal down. These are less common but more serious - recovery can take 2–24 hours. The July 2022 outage lasted nearly 3 days.",
                   },
                   {
                     title: "Your IP or session was blocked",
@@ -253,7 +253,7 @@ export default function KraStatusCode500Page() {
             </div>
           </section>
 
-          {/* Section 4 — How Long */}
+          {/* Section 4 - How Long */}
           <section id="how-long" aria-labelledby="how-long-h">
             <h2 id="how-long-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               How Long Does iTax Error 500 Usually Last?
@@ -302,7 +302,7 @@ export default function KraStatusCode500Page() {
             </div>
           </section>
 
-          {/* Section 5 — What to Do */}
+          {/* Section 5 - What to Do */}
           <section id="what-to-do" aria-labelledby="what-to-do-h">
             <h2 id="what-to-do-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What to Do When You Get iTax Error 500
@@ -352,7 +352,7 @@ export default function KraStatusCode500Page() {
             </div>
           </section>
 
-          {/* Section 6 — Deadline Day */}
+          {/* Section 6 - Deadline Day */}
           <section id="deadline-day" aria-labelledby="deadline-day-h">
             <h2 id="deadline-day-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What If Error 500 Hits on the 20th (Deadline Day)?
@@ -365,9 +365,9 @@ export default function KraStatusCode500Page() {
                 <p className="font-semibold text-[#7a5500] dark:text-[#ffcc44] text-[0.9rem] mb-3">Deadline day protocol</p>
                 <ol className="space-y-3">
                   {[
-                    "Step 1: Take a screenshot showing the Error 500 with the date and time visible. Include the full browser window — the URL bar confirming you are on itax.kra.go.ke is critical evidence.",
+                    "Step 1: Take a screenshot showing the Error 500 with the date and time visible. Include the full browser window - the URL bar confirming you are on itax.kra.go.ke is critical evidence.",
                     "Step 2: Attempt to access iTax from a different device and network (e.g., your phone on mobile data). If the error persists, it is a KRA-side outage.",
-                    "Step 3: Keep trying every 30–60 minutes. Do not refresh more frequently — KRA's firewall may interpret this as a bot attack and block your IP.",
+                    "Step 3: Keep trying every 30–60 minutes. Do not refresh more frequently - KRA's firewall may interpret this as a bot attack and block your IP.",
                     "Step 4: If the portal comes back before midnight, file immediately. Do not wait until the next morning.",
                     "Step 5: If you miss the deadline due to the outage, file the moment the portal is back. Then go to iTax and submit a penalty waiver application citing system downtime. Attach your screenshots as evidence.",
                     "Step 6 (optional): Contact Smart VAT Kenya. As KRA-registered agents, we can often file returns through the agent portal even when the public iTax portal is down. We also handle penalty waiver applications for our clients.",
@@ -382,33 +382,33 @@ export default function KraStatusCode500Page() {
               <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
                 <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
-                  <strong className="text-ink">Important:</strong> KRA does NOT automatically waive penalties because the portal was down. You must proactively apply for a penalty waiver and provide evidence. A screenshot showing Error 500 on the deadline is strong evidence — but KRA has discretion to reject it. This is why many businesses choose to never rely on the public iTax portal for deadline filing.
+                  <strong className="text-ink">Important:</strong> KRA does NOT automatically waive penalties because the portal was down. You must proactively apply for a penalty waiver and provide evidence. A screenshot showing Error 500 on the deadline is strong evidence - but KRA has discretion to reject it. This is why many businesses choose to never rely on the public iTax portal for deadline filing.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Section 7 — Prevention */}
+          {/* Section 7 - Prevention */}
           <section id="prevention" aria-labelledby="prevention-h">
             <h2 id="prevention-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Prevention: Never Let Error 500 Cost You Again
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                Error 500 is a fact of life on the iTax portal. KRA has acknowledged the infrastructure limitations, but meaningful improvements have been slow. Every month, thousands of Kenyan business owners lose hours — and sometimes money — to this error.
+                Error 500 is a fact of life on the iTax portal. KRA has acknowledged the infrastructure limitations, but meaningful improvements have been slow. Every month, thousands of Kenyan business owners lose hours - and sometimes money - to this error.
               </p>
               <p>
-                There are two ways to deal with it: accept that you will periodically see Error 500 and manage around it, or <strong className="text-ink">never log in to iTax again</strong>. With Smart VAT Kenya's auto-filing service, we handle everything through KRA's agent portal — a system with separate, more reliable infrastructure designed for professional use.
+                There are two ways to deal with it: accept that you will periodically see Error 500 and manage around it, or <strong className="text-ink">never log in to iTax again</strong>. With Smart VAT Kenya's auto-filing service, we handle everything through KRA's agent portal - a system with separate, more reliable infrastructure designed for professional use.
               </p>
               <div className="border border-hairline rounded-lg p-5 bg-canvas-alt">
                 <p className="font-semibold text-ink text-[0.9rem] mb-3">What you get for KES 3,500/month:</p>
                 <ul className="space-y-2">
                   {[
-                    "Monthly VAT return filed before the 20th — every single month, guaranteed, via the KRA agent portal.",
+                    "Monthly VAT return filed before the 20th - every single month, guaranteed, via the KRA agent portal.",
                     "No more Error 500, no more blank white pages, no more waiting for KRA to restart their servers.",
-                    "We prepare your return from your sales and purchase records — you just send the figures on WhatsApp.",
+                    "We prepare your return from your sales and purchase records - you just send the figures on WhatsApp.",
                     "Penalty monitoring and waiver applications handled for you.",
-                    "Dedicated WhatsApp line — reach us anytime during business hours.",
+                    "Dedicated WhatsApp line - reach us anytime during business hours.",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-[0.85rem] text-ink-soft">
                       <CheckCircle size={15} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -425,7 +425,7 @@ export default function KraStatusCode500Page() {
               <div className="mt-8 border border-brand/20 bg-brand-muted rounded-lg p-6">
                 <p className="font-display text-[1.15rem] font-semibold text-ink mb-3">Tired of iTax Error 500?</p>
                 <p className="text-[0.84rem] text-ink-soft leading-relaxed mb-4">
-                  Stop refreshing the portal every 30 seconds hoping it will come back. Our KRA-registered agents file your VAT return through the dedicated agent portal — the one that actually works.{" "}
+                  Stop refreshing the portal every 30 seconds hoping it will come back. Our KRA-registered agents file your VAT return through the dedicated agent portal - the one that actually works.{" "}
                   <strong className="text-ink">KES 3,500/month</strong>, filed before the 20th, every month.
                 </p>
                 <a
@@ -433,7 +433,7 @@ export default function KraStatusCode500Page() {
                   target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
-                  Start Auto-Filing — KES 3,500/month
+                  Start Auto-Filing - KES 3,500/month
                   <ArrowRight size={14} weight="bold" aria-hidden="true" />
                 </a>
               </div>

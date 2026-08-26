@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "How to File Nil Returns on KRA iTax Kenya 2026 — Step-by-Step Guide | how to file nil returns 2026",
+  headline: "How to File Nil Returns on KRA iTax Kenya 2026 - Step-by-Step Guide | how to file nil returns 2026",
   description:
     "The complete 2026 step-by-step guide to filing nil returns on KRA iTax. Monthly VAT nil returns, annual income tax nil returns for students and the unemployed, the new No Obligation PIN status, and the penalties you avoid by filing on time.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -118,13 +118,13 @@ export default function HowToFileNilReturns2026Page() {
             Guide &middot; 7 min read
           </p>
           <h1 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-semibold tracking-tight text-ink leading-tight mb-4 text-balance">
-            How to File Nil Returns on KRA iTax Kenya 2026 — A Step-by-Step Guide | how to file nil returns 2026
+            How to File Nil Returns on KRA iTax Kenya 2026 - A Step-by-Step Guide | how to file nil returns 2026
           </h1>
           <p className="text-[0.92rem] text-ink-muted leading-relaxed max-w-[58ch]">
             If nothing happened in your business this month, you still owe KRA one thing:
             a <strong className="text-ink">nil return</strong>. This guide walks you through the
             exact clicks for both monthly VAT nil returns and annual income tax nil returns,
-            and what has changed in <strong className="text-ink">2026</strong> — including the
+            and what has changed in <strong className="text-ink">2026</strong> - including the
             new No Obligation PIN status that may end the annual filing for students and the
             unemployed.
           </p>
@@ -142,7 +142,7 @@ export default function HowToFileNilReturns2026Page() {
           <div className="text-[0.85rem] text-ink-muted leading-relaxed space-y-2">
             <p>
               A nil return is KRA&apos;s way of calling attendance. Every filing period,
-              you must answer the roll call — even if you had zero sales, zero purchases,
+              you must answer the roll call - even if you had zero sales, zero purchases,
               and zero tax. You answer with a form full of <strong className="text-ink">0.00</strong>.
             </p>
             <p>
@@ -156,7 +156,7 @@ export default function HowToFileNilReturns2026Page() {
           </div>
         </section>
 
-        {/* Section 1 — VAT nil return step by step */}
+        {/* Section 1 - VAT nil return step by step */}
         <section className="mb-16" aria-labelledby="vat-nil-h">
           <h2 id="vat-nil-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             Monthly VAT Nil Return: The Exact Clicks (5 Minutes)
@@ -190,7 +190,7 @@ export default function HowToFileNilReturns2026Page() {
               {
                 step: 5,
                 title: "Tick the declaration and click Submit",
-                detail: 'Check "I confirm the information is true and correct", then click Submit. You get a confirmation receipt with a submission ID. Screenshot it or save the PDF — that is your proof.',
+                detail: 'Check "I confirm the information is true and correct", then click Submit. You get a confirmation receipt with a submission ID. Screenshot it or save the PDF - that is your proof.',
               },
             ].map(({ step, title, detail }) => (
               <div key={step} className="flex gap-4">
@@ -207,13 +207,13 @@ export default function HowToFileNilReturns2026Page() {
             <p className="text-[0.83rem] text-ink-muted leading-relaxed">
               <strong className="text-ink">Pro tip for 2026:</strong> file between the 1st and
               10th. iTax is fastest early in the month. From the 15th to the 20th, portal
-              traffic spikes and the system slows or drops — that is when congestion complaints
+              traffic spikes and the system slows or drops - that is when congestion complaints
               peak (see our <a href="/resources/kra-itax-traffic-update/" className="text-brand underline">iTax traffic update</a> guide).
             </p>
           </div>
         </section>
 
-        {/* Section 2 — Income tax nil returns */}
+        {/* Section 2 - Income tax nil returns */}
         <section className="mb-16" aria-labelledby="income-nil-h">
           <h2 id="income-nil-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             Annual Income Tax Nil Return: Students, the Unemployed &amp; Dormant PINs
@@ -221,31 +221,31 @@ export default function HowToFileNilReturns2026Page() {
           <div className="text-[0.9rem] text-ink-muted leading-relaxed space-y-4">
             <p>
               Most people searching &ldquo;how to file nil returns 2026&rdquo; are not VAT-registered
-              businesses. They are <strong className="text-ink">individuals</strong> — students,
+              businesses. They are <strong className="text-ink">individuals</strong> - students,
               the unemployed, or people whose PIN was issued for a one-off transaction. If that&apos;s
               you, you file an <strong className="text-ink">annual income tax nil return</strong>.
             </p>
             <ul className="list-disc pl-6 space-y-1.5">
               <li><strong className="text-ink">Deadline:</strong> 30 June each year (the 2025 return was due 30 June 2026)</li>
-              <li><strong className="text-ink">Penalty:</strong> KES 2,000 for individuals filing late — even for nil returns. Unfiled returns also block your <a href="/resources/tax-compliance-certificate-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Tax Compliance Certificate</a></li>
+              <li><strong className="text-ink">Penalty:</strong> KES 2,000 for individuals filing late - even for nil returns. Unfiled returns also block your <a href="/resources/tax-compliance-certificate-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Tax Compliance Certificate</a></li>
               <li><strong className="text-ink">Where:</strong> itax.kra.go.ke → Returns → File Nil Return → Income Tax – Resident Individual → submit → download the acknowledgement receipt</li>
               <li><strong className="text-ink">Watch out:</strong> don&apos;t file nil if you actually earned income. Employees, freelancers, landlords, and businesses must file a normal return. Habitual nil filing while earning is a compliance red flag</li>
             </ul>
             <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
               <Warning size={16} weight="fill" className="text-amber-500 shrink-0 mt-0.5" aria-hidden="true" />
               <p className="text-[0.83rem] leading-relaxed">
-                <strong className="text-ink">New in 2026 — &ldquo;No Obligation&rdquo; PIN status:</strong>{" "}
+                <strong className="text-ink">New in 2026 - &ldquo;No Obligation&rdquo; PIN status:</strong>{" "}
                 KRA introduced PINs with a <em>No Obligation</em> status for specific categories
                 (notably students and the unemployed), which may end the mandatory annual nil
                 return for qualifying PINs. Check <strong className="text-ink">iTax → Taxpayer
-                Dashboard → Obligations</strong> to see your status — and confirm with KRA before
+                Dashboard → Obligations</strong> to see your status - and confirm with KRA before
                 assuming you&apos;re exempt.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Section 3 — Penalties table */}
+        {/* Section 3 - Penalties table */}
         <section className="mb-16" aria-labelledby="penalties-h">
           <h2 id="penalties-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             What Non-Filing Actually Costs You in 2026
@@ -290,7 +290,7 @@ export default function HowToFileNilReturns2026Page() {
           </p>
         </section>
 
-        {/* Section 4 — Common mistakes */}
+        {/* Section 4 - Common mistakes */}
         <section className="mb-16" aria-labelledby="mistakes-h">
           <h2 id="mistakes-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             Common Nil Return Mistakes That Cost KES 10,000+
@@ -311,7 +311,7 @@ export default function HowToFileNilReturns2026Page() {
               },
               {
                 mistake: '"I filed a nil return but still got a penalty."',
-                fix: "Check the filing date. After the 20th the penalty is automatic. Also confirm you clicked Submit — saving as draft does not count.",
+                fix: "Check the filing date. After the 20th the penalty is automatic. Also confirm you clicked Submit - saving as draft does not count.",
               },
             ].map(({ mistake, fix }) => (
               <div key={mistake} className="border border-hairline rounded-lg p-4">
@@ -326,7 +326,7 @@ export default function HowToFileNilReturns2026Page() {
           </div>
         </section>
 
-        {/* Section 5 — Amnesty tie-in */}
+        {/* Section 5 - Amnesty tie-in */}
         <section className="mb-16" aria-labelledby="amnesty-h">
           <h2 id="amnesty-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             Already Missed Nil Returns? The 2026 Amnesty Wipes the Penalties
@@ -335,7 +335,7 @@ export default function HowToFileNilReturns2026Page() {
             <p>
               If you&apos;ve missed nil returns and accumulated penalties, don&apos;t despair.
               The <strong className="text-ink">2026 KRA tax amnesty</strong> (Voluntary Tax Disclosure
-              Programme) waives <strong className="text-ink">100% of penalties and interest</strong> —
+              Programme) waives <strong className="text-ink">100% of penalties and interest</strong> -
               you only pay the principal tax, which for nil returns is KES 0.
             </p>
             <p>
@@ -354,7 +354,7 @@ export default function HowToFileNilReturns2026Page() {
             Stop worrying about nil returns. Let us file them for you.
           </p>
           <p className="text-[0.85rem] text-ink-muted mb-6 max-w-[48ch] mx-auto">
-            KES 3,500/month. We file on the 17th — before the iTax portal slows down.
+            KES 3,500/month. We file on the 17th - before the iTax portal slows down.
             Nil returns, normal returns, penalty waivers, and amnesty applications.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -364,7 +364,7 @@ export default function HowToFileNilReturns2026Page() {
               rel="noopener noreferrer"
               className="btn-fill inline-flex items-center justify-center gap-2 bg-brand text-canvas font-semibold px-6 py-3 rounded-md text-sm transition-colors hover:bg-brand-hover"
             >
-              Start Monthly Filing — KES 3,500
+              Start Monthly Filing - KES 3,500
               <ArrowRight size={16} weight="bold" aria-hidden="true" />
             </a>
           </div>

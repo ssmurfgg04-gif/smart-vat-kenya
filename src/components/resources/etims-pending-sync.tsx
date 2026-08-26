@@ -68,14 +68,14 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "Pending eTIMS Sync — How to Fix", item: "https://smartvatkenya.co.ke/resources/etims-pending-sync/" },
+    { "@type": "ListItem", position: 3, name: "Pending eTIMS Sync - How to Fix", item: "https://smartvatkenya.co.ke/resources/etims-pending-sync/" },
   ],
 }
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Pending eTIMS Sync in Kenya — Why Invoices Are Stuck and How to Fix It (2026)",
+  headline: "Pending eTIMS Sync in Kenya - Why Invoices Are Stuck and How to Fix It (2026)",
   description:
     "Your eTIMS invoices are stuck on 'Pending Sync'. Learn what Pending Sync means, why invoices stay stuck on eTIMS Client, how long KRA sync takes, and the exact steps to force a successful sync before the deadline.",
   author: personSchema(),
@@ -95,7 +95,7 @@ const faqSchema = {
       name: "What does 'Pending Sync' mean in eTIMS?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A 'Pending Sync' status means the invoice was created locally on eTIMS Client (or your ERP) but has not yet been transmitted to and confirmed by KRA's servers. This is normal in offline mode — invoices queue locally and sync when connectivity returns. The invoice only becomes fully valid for input VAT claims once KRA confirms it during the sync and assigns a server confirmation code.",
+        text: "A 'Pending Sync' status means the invoice was created locally on eTIMS Client (or your ERP) but has not yet been transmitted to and confirmed by KRA's servers. This is normal in offline mode - invoices queue locally and sync when connectivity returns. The invoice only becomes fully valid for input VAT claims once KRA confirms it during the sync and assigns a server confirmation code.",
       },
     },
     {
@@ -119,7 +119,7 @@ const faqSchema = {
       name: "Will KRA penalise me for Pending Sync invoices?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Invoices stuck on Pending Sync are not yet counted as transmitted to KRA. If they stay unsynced, KRA may treat the sales as not declared under eTIMS, which can trigger a non-compliant-invoice penalty (TPA s.86 — the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals) or a VAT audit. Fix the sync promptly and keep evidence (sync logs, screenshots) if a KRA outage caused the delay. eTIMS Client also locks you out if it cannot sync for more than 7 consecutive days — so resolve pending syncs before that threshold.",
+        text: "Invoices stuck on Pending Sync are not yet counted as transmitted to KRA. If they stay unsynced, KRA may treat the sales as not declared under eTIMS, which can trigger a non-compliant-invoice penalty (TPA s.86 - the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals) or a VAT audit. Fix the sync promptly and keep evidence (sync logs, screenshots) if a KRA outage caused the delay. eTIMS Client also locks you out if it cannot sync for more than 7 consecutive days - so resolve pending syncs before that threshold.",
       },
     },
     {
@@ -172,7 +172,7 @@ export default function ETIMSPendingSyncPage() {
             ))}
           </div>
 <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
-            Pending eTIMS Sync — Why Invoices Are Stuck & How to Fix It
+            Pending eTIMS Sync - Why Invoices Are Stuck & How to Fix It
             </h1>
           <div className="flex flex-wrap items-center gap-3 mt-4">
             <span className="font-mono text-[0.62rem] uppercase tracking-widest bg-brand/20 text-brand px-2.5 py-1 rounded-sm">Last updated: August 2, 2026</span>
@@ -216,7 +216,7 @@ export default function ETIMSPendingSyncPage() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — What Pending Sync means */}
+          {/* Section 1 - What Pending Sync means */}
           <section id="what-is-pending-sync" aria-labelledby="what-is-pending-sync-h">
             <h2 id="what-is-pending-sync-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What &ldquo;Pending Sync&rdquo; Means in eTIMS
@@ -230,15 +230,15 @@ export default function ETIMSPendingSyncPage() {
               <div className="space-y-3">
                 {[
                   {
-                    title: "Stage 1 — Created locally",
+                    title: "Stage 1 - Created locally",
                     desc: "eTIMS Client generates the invoice with a local (provisional) QR code. At this point the invoice exists only on your device and is marked Pending Sync.",
                   },
                   {
-                    title: "Stage 2 — Transmitted to KRA",
+                    title: "Stage 2 - Transmitted to KRA",
                     desc: "When you have connectivity, the invoice is uploaded to KRA's eTIMS servers. KRA validates it and assigns a server confirmation code.",
                   },
                   {
-                    title: "Stage 3 — Confirmed",
+                    title: "Stage 3 - Confirmed",
                     desc: "The invoice now displays 'Confirmed' with a valid server confirmation code. This is the version customers need for input VAT claims.",
                   },
                 ].map(({ title, desc }) => (
@@ -266,7 +266,7 @@ export default function ETIMSPendingSyncPage() {
             </div>
           </section>
 
-          {/* Section 2 — Why stuck */}
+          {/* Section 2 - Why stuck */}
           <section id="why-stuck" aria-labelledby="why-stuck-h">
             <h2 id="why-stuck-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Why eTIMS Invoices Stay Stuck on Pending Sync
@@ -311,7 +311,7 @@ export default function ETIMSPendingSyncPage() {
             </div>
           </section>
 
-          {/* Section 3 — How to force sync */}
+          {/* Section 3 - How to force sync */}
           <section id="how-to-force-sync" aria-labelledby="how-to-force-sync-h">
             <h2 id="how-to-force-sync-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               How to Force eTIMS Client to Sync Pending Invoices
@@ -340,7 +340,7 @@ export default function ETIMSPendingSyncPage() {
                   {
                     step: 4,
                     title: "Check for sync error messages",
-                    desc: "If sync fails, eTIMS Client shows an error code. Note it down — 'Certificate not active', 'Connection timeout', and 'Invalid payload' each have different fixes.",
+                    desc: "If sync fails, eTIMS Client shows an error code. Note it down - 'Certificate not active', 'Connection timeout', and 'Invalid payload' each have different fixes.",
                   },
                   {
                     step: 5,
@@ -365,7 +365,7 @@ export default function ETIMSPendingSyncPage() {
             </div>
           </section>
 
-          {/* Section 4 — Certificate issues */}
+          {/* Section 4 - Certificate issues */}
           <section id="certificate-issues" aria-labelledby="certificate-issues-h">
             <h2 id="certificate-issues-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Certificate &amp; Device Activation Issues
@@ -387,7 +387,7 @@ export default function ETIMSPendingSyncPage() {
                   },
                   {
                     title: "Renew expired certificates",
-                    desc: "Expired certificates must be renewed via eTIMS Lite or by contacting KRA eTIMS support. Do not attempt to bypass this — it is a security control.",
+                    desc: "Expired certificates must be renewed via eTIMS Lite or by contacting KRA eTIMS support. Do not attempt to bypass this - it is a security control.",
                   },
                   {
                     title: "Contact KRA eTIMS support",
@@ -406,7 +406,7 @@ export default function ETIMSPendingSyncPage() {
             </div>
           </section>
 
-          {/* Section 5 — 7-day rule */}
+          {/* Section 5 - 7-day rule */}
           <section id="deadline-7-days" aria-labelledby="deadline-7-days-h">
             <h2 id="deadline-7-days-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               The 7-Day Sync Lockout Rule
@@ -457,7 +457,7 @@ export default function ETIMSPendingSyncPage() {
                       eTIMS account locked guide
                     </a>{" "}
                     for the reactivation steps, or contact KRA eTIMS support on 020 499 9999. Do not try to
-                    reinstall eTIMS Client or generate a new device — that can orphan your queued invoices.
+                    reinstall eTIMS Client or generate a new device - that can orphan your queued invoices.
                   </p>
                 </div>
               </div>

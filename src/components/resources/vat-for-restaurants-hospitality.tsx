@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: "Is the service charge on a restaurant bill subject to VAT?",
-    a: "Yes — if the service charge is compulsory (mandatory for all customers or groups above a certain size), it forms part of the taxable value and VAT at 16% must be collected on it. Only genuinely voluntary tips given directly to staff are exempt from VAT.",
+    a: "Yes - if the service charge is compulsory (mandatory for all customers or groups above a certain size), it forms part of the taxable value and VAT at 16% must be collected on it. Only genuinely voluntary tips given directly to staff are exempt from VAT.",
   },
   {
     q: "Do delivery platforms like Uber Eats charge VAT?",
@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "What happens if I do not register for eTIMS as a restaurant?",
-    a: "Issuing invoices outside eTIMS exposes you to the TPA s.86 penalty — the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals). This is separate from and in addition to late VAT filing penalties. KRA has been actively auditing the hospitality sector for eTIMS compliance since 2025.",
+    a: "Issuing invoices outside eTIMS exposes you to the TPA s.86 penalty - the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals). This is separate from and in addition to late VAT filing penalties. KRA has been actively auditing the hospitality sector for eTIMS compliance since 2025.",
   },
 ]
 
@@ -95,7 +95,7 @@ export default function VatForRestaurantsHospitality() {
             environment where small errors can lead to significant penalties.
           </p>
           <p>
-            This guide covers everything a Kenyan hospitality business needs to know about VAT in 2026 —
+            This guide covers everything a Kenyan hospitality business needs to know about VAT in 2026 -
             what rate to charge, how eTIMS applies to restaurant bills, what input VAT you can reclaim,
             and the most common KRA compliance traps to avoid.
           </p>
@@ -104,7 +104,7 @@ export default function VatForRestaurantsHospitality() {
             Do Restaurants Charge VAT in Kenya?
           </h2>
           <p>
-            The short answer is yes — most restaurants, cafés, and food service businesses in Kenya are
+            The short answer is yes - most restaurants, cafés, and food service businesses in Kenya are
             required to charge VAT at the standard rate of <strong>16%</strong> on their sales of prepared
             food and beverages. However, the obligation only kicks in once your taxable turnover exceeds
             the VAT registration threshold.
@@ -156,7 +156,7 @@ export default function VatForRestaurantsHospitality() {
             (standard-rated) is one of the most common sources of confusion for hospitality businesses.
           </p>
           <h3 className="font-display text-[1rem] font-semibold text-ink mt-6 mb-2">
-            Standard Rate (16%) — Prepared Food and Beverages
+            Standard Rate (16%) - Prepared Food and Beverages
           </h3>
           <p>
             Any food that has been cooked, prepared, or processed for immediate consumption is standard-rated
@@ -167,7 +167,7 @@ export default function VatForRestaurantsHospitality() {
               "All restaurant meals (dine-in, takeaway, and delivery)",
               "Catering services and buffet packages",
               "Bakery items sold as ready-to-eat (not basic bread)",
-              "Beverages served in a restaurant — tea, coffee, juices, sodas",
+              "Beverages served in a restaurant - tea, coffee, juices, sodas",
               "Alcoholic beverages served in bars, restaurants, and hotels",
               "Snack foods and confectionery",
             ].map((item) => (
@@ -178,7 +178,7 @@ export default function VatForRestaurantsHospitality() {
             ))}
           </ul>
           <h3 className="font-display text-[1rem] font-semibold text-ink mt-6 mb-2">
-            Zero-Rated (0%) — Basic Foodstuffs
+            Zero-Rated (0%) - Basic Foodstuffs
           </h3>
           <p>
             Certain unprocessed or minimally processed food items are zero-rated under the First Schedule
@@ -188,7 +188,7 @@ export default function VatForRestaurantsHospitality() {
           <ul className="space-y-1.5">
             {[
               "Uncooked maize meal, wheat flour, and rice",
-              "Fresh bread (standard loaves — not specialty bakery)",
+              "Fresh bread (standard loaves - not specialty bakery)",
               "Fresh fruits and vegetables (unprocessed)",
               "Fresh milk and buttermilk (not flavoured or sweetened)",
               "Ordinary bread and baby cereal",
@@ -217,14 +217,14 @@ export default function VatForRestaurantsHospitality() {
             Beer, wine, spirits, and other alcoholic beverages are always standard-rated at 16% when sold
             by a restaurant, bar, or hotel. The zero-rating provisions for basic foodstuffs do not extend to
             alcoholic drinks. Additionally, excise duty applies separately to alcohol and is included in the
-            value on which VAT is calculated — meaning VAT is charged on the excise-inclusive price.
+            value on which VAT is calculated - meaning VAT is charged on the excise-inclusive price.
           </p>
 
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             eTIMS for Restaurants: Mandatory Electronic Invoicing
           </h2>
           <p>
-            Every VAT-registered restaurant and hospitality business in Kenya must issue <a href="/resources/etims-invoicing-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS-compliant invoices</a> for every sale — including cash sales, card payments, and mobile money transactions.
+            Every VAT-registered restaurant and hospitality business in Kenya must issue <a href="/resources/etims-invoicing-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS-compliant invoices</a> for every sale - including cash sales, card payments, and mobile money transactions.
             This is one of the most significant compliance requirements introduced in recent years, and
             non-compliance attracts the higher of <strong>5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals)</strong> (TPA s.86).
           </p>
@@ -265,8 +265,8 @@ export default function VatForRestaurantsHospitality() {
             eTIMS for Takeaway and Delivery Orders
           </h3>
           <p>
-            Takeaway and delivery orders are not exempt from eTIMS. Every transaction — whether through
-            your own ordering system, Uber Eats, Glovo, or any third-party platform — must be captured in
+            Takeaway and delivery orders are not exempt from eTIMS. Every transaction - whether through
+            your own ordering system, Uber Eats, Glovo, or any third-party platform - must be captured in
             eTIMS and a compliant receipt issued. If you use a delivery aggregator, ensure the platform
             provides eTIMS-compliant invoices or that you can issue them yourself for each order.
           </p>
@@ -276,7 +276,7 @@ export default function VatForRestaurantsHospitality() {
           </h2>
           <p>
             One of the primary benefits of VAT registration is the ability to reclaim <a href="/resources/input-vat-deduction-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">input VAT on purchases</a> directly attributable to your taxable supplies. For restaurants and hotels, this
-            can represent a significant recovery — often offsetting 60-80% of the output VAT collected.
+            can represent a significant recovery - often offsetting 60-80% of the output VAT collected.
           </p>
           <h3 className="font-display text-[1rem] font-semibold text-ink mt-6 mb-2">
             What You Can Claim Input VAT On
@@ -284,14 +284,14 @@ export default function VatForRestaurantsHospitality() {
           <ul className="space-y-1.5">
             {[
               "Food ingredients and raw materials purchased from VAT-registered suppliers",
-              "Kitchen equipment — ovens, fryers, refrigeration, utensils",
-              "Restaurant furniture and fittings — tables, chairs, counter equipment",
-              "Utilities — electricity, water, cooking gas (with KPLC, Nairobi City Water, or LP gas supplier eTIMS invoices)",
-              "Cleaning and hygiene supplies — detergents, sanitisers, PPE",
-              "Packaging materials — takeaway containers, bags, labels",
-              "Marketing and advertising services — printing, digital ads",
-              "Professional services — accounting, legal, consultants",
-              "Repairs and maintenance — equipment servicing, building maintenance",
+              "Kitchen equipment - ovens, fryers, refrigeration, utensils",
+              "Restaurant furniture and fittings - tables, chairs, counter equipment",
+              "Utilities - electricity, water, cooking gas (with KPLC, Nairobi City Water, or LP gas supplier eTIMS invoices)",
+              "Cleaning and hygiene supplies - detergents, sanitisers, PPE",
+              "Packaging materials - takeaway containers, bags, labels",
+              "Marketing and advertising services - printing, digital ads",
+              "Professional services - accounting, legal, consultants",
+              "Repairs and maintenance - equipment servicing, building maintenance",
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <CheckCircle size={14} weight="fill" className="text-brand shrink-0 mt-1" />
@@ -349,7 +349,7 @@ export default function VatForRestaurantsHospitality() {
             Hiring out conference rooms, meeting spaces, or event halls is standard-rated at 16%, whether
             charged per hour, per day, or as part of a conference package. If the package includes catering,
             accommodation, and facility hire as a single bundled price, the entire package is standard-rated
-            — you cannot split it to apply different rates.
+            - you cannot split it to apply different rates.
           </p>
           <h3 className="font-display text-[1rem] font-semibold text-ink mt-6 mb-2">
             Restaurant within a Hotel: Bundled vs Separate
@@ -360,9 +360,9 @@ export default function VatForRestaurantsHospitality() {
           </p>
           <ul className="space-y-1.5">
             {[
-              "If a guest pays a single all-inclusive rate for room, meals, and drinks, VAT applies at 16% on the entire package — it is a single composite supply.",
+              "If a guest pays a single all-inclusive rate for room, meals, and drinks, VAT applies at 16% on the entire package - it is a single composite supply.",
               "If the restaurant operates as a separate cost centre or the guest pays separately for meals (e.g., room charge plus restaurant bill), each supply is independently standard-rated at 16%.",
-              "In either case, the rate is 16% — the distinction matters for invoicing and input VAT apportionment.",
+              "In either case, the rate is 16% - the distinction matters for invoicing and input VAT apportionment.",
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <span className="font-semibold text-brand shrink-0 w-5">•</span>
@@ -392,7 +392,7 @@ export default function VatForRestaurantsHospitality() {
               },
               {
                 title: "Failure to issue eTIMS invoices",
-                desc: "Busy service staff may skip eTIMS invoicing during peak hours, especially for small cash bills. This is a direct violation. Each missing invoice is exposed to the TPA s.86 penalty — the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals). Automating eTIMS through POS integration is the only reliable solution for high-volume restaurants.",
+                desc: "Busy service staff may skip eTIMS invoicing during peak hours, especially for small cash bills. This is a direct violation. Each missing invoice is exposed to the TPA s.86 penalty - the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals). Automating eTIMS through POS integration is the only reliable solution for high-volume restaurants.",
               },
               {
                 title: "Improper handling of tips and service charge",
@@ -400,11 +400,11 @@ export default function VatForRestaurantsHospitality() {
               },
               {
                 title: "Mixed supply misclassification",
-                desc: "Applying zero-rating to prepared food items that are actually standard-rated — such as selling fresh juice (zero-rated if unprocessed) vs a blended smoothie (standard-rated). The distinction is subtle but KRA auditors examine it closely, particularly during targeted hospitality sector audits.",
+                desc: "Applying zero-rating to prepared food items that are actually standard-rated - such as selling fresh juice (zero-rated if unprocessed) vs a blended smoothie (standard-rated). The distinction is subtle but KRA auditors examine it closely, particularly during targeted hospitality sector audits.",
               },
               {
                 title: "VAT on delivery fees",
-                desc: "If you charge customers a delivery fee, that fee is part of the taxable supply and VAT must be charged on the total — food price plus delivery fee. The same applies if you use third-party aggregators; the commission they charge you is a separate taxable supply on which you can claim input VAT.",
+                desc: "If you charge customers a delivery fee, that fee is part of the taxable supply and VAT must be charged on the total - food price plus delivery fee. The same applies if you use third-party aggregators; the commission they charge you is a separate taxable supply on which you can claim input VAT.",
               },
               {
                 title: "Late VAT filing and payment",
@@ -457,7 +457,7 @@ export default function VatForRestaurantsHospitality() {
                 <a href={slug} className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   {title}
                 </a>
-                <span className="text-ink-muted"> — {desc}</span>
+                <span className="text-ink-muted"> - {desc}</span>
               </li>
             ))}
           </ul>

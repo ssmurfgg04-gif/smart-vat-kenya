@@ -5,7 +5,7 @@ import { TaxAssistant, LlmAnswer } from "./intel.js"
 import { validateReturn, ValidationInput, ValidationOutput } from "./validation.js"
 
 /* ------------------------------------------------------------------ */
-/* SmartVAT Client layer — the per-client portal/workflow shell.        */
+/* SmartVAT Client layer - the per-client portal/workflow shell.        */
 /*                                                                      */
 /* Binds a client's WhatsApp number, filing service, M-PESA gateway and */
 /* the compliance assistant so a conversation (or a bot) can drive:     */

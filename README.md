@@ -1,14 +1,14 @@
 # Smart VAT Kenya
 
-VAT registration and iTax filing services for Kenyan SMEs — flat KES 5,000 registration, KES 3,500/month filing, M-PESA accepted, handled on WhatsApp.
+VAT registration and iTax filing services for Kenyan SMEs - flat KES 5,000 registration, KES 3,500/month filing, M-PESA accepted, handled on WhatsApp.
 
 **Site:** https://smartvatkenya.co.ke · **Status:** production (Astro 7, static, deployed on Vercel)
 
 ## What this repo is
 
-- **Marketing + content site** (SSG) — 50+ SEO resource pages on Kenya VAT/eTIMS/iTax
-- **Free tools** — VAT calculator, penalty estimator, iTax error diagnosis, registration quiz
-- **AI-crawl friendly** — llms.txt, LLM-bot rules in robots.txt, Pagefind search
+- **Marketing + content site** (SSG) - 50+ SEO resource pages on Kenya VAT/eTIMS/iTax
+- **Free tools** - VAT calculator, penalty estimator, iTax error diagnosis, registration quiz
+- **AI-crawl friendly** - llms.txt, LLM-bot rules in robots.txt, Pagefind search
 
 ## Stack
 
@@ -33,4 +33,4 @@ npm run build    # static output + sitemap + Pagefind index
 
 ## License
 
-MIT © Smart VAT Kenya. The code is public by design — our transparency is our brand.
+MIT © Smart VAT Kenya. The code is public by design - our transparency is our brand.

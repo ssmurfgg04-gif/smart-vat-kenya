@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "KRA iTax Traffic Update — Portal Congestion, Slowdowns & Workarounds | kra itax traffic update",
+  headline: "KRA iTax Traffic Update - Portal Congestion, Slowdowns & Workarounds | kra itax traffic update",
   description:
     "Real-time traffic update for the KRA iTax portal: why it slows down at deadline time, how to tell if it's you or KRA, the congestion windows to avoid, and proven workarounds to file VAT returns when the system is overwhelmed.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -34,7 +34,7 @@ const faqSchema = {
       name: "Why is KRA iTax so slow at the end of the month?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Because the deadline falls on the 20th, tens of thousands of taxpayers log in in the final days — especially the 19th and 20th — and the portal slows or times out under load. Most 'iTax is down' reports are actually congestion, not a server failure.",
+        text: "Because the deadline falls on the 20th, tens of thousands of taxpayers log in in the final days - especially the 19th and 20th - and the portal slows or times out under load. Most 'iTax is down' reports are actually congestion, not a server failure.",
       },
     },
     {
@@ -110,7 +110,7 @@ export default function KraItaxTrafficUpdatePage() {
             Guide &middot; 6 min read
           </p>
           <h1 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-semibold tracking-tight text-ink leading-tight mb-4 text-balance">
-            KRA iTax Traffic Update — Portal Congestion, Slowdowns &amp; Workarounds | kra itax traffic update
+            KRA iTax Traffic Update - Portal Congestion, Slowdowns &amp; Workarounds | kra itax traffic update
           </h1>
           <p className="text-[0.92rem] text-ink-muted leading-relaxed max-w-[58ch]">
             Every month, the same thing happens: filing traffic surges in the final days before the
@@ -133,11 +133,11 @@ export default function KraItaxTrafficUpdatePage() {
             <p>
               Imagine one narrow door that every taxpayer in Kenya must pass through before midnight
               on the 20th. The door works fine when one person at a time walks through. When thousands
-              rush it on the 19th, everyone slows down — and the door sometimes locks entirely.
+              rush it on the 19th, everyone slows down - and the door sometimes locks entirely.
             </p>
             <p>
               That&apos;s <strong className="text-ink">iTax congestion</strong>. The portal isn&apos;t
-              broken; it&apos;s overwhelmed. The fix isn&apos;t a better browser — it&apos;s timing.
+              broken; it&apos;s overwhelmed. The fix isn&apos;t a better browser - it&apos;s timing.
             </p>
             <p className="font-medium text-ink">
               Bottom line: file early, and the crowd never touches you.
@@ -145,7 +145,7 @@ export default function KraItaxTrafficUpdatePage() {
           </div>
         </section>
 
-        {/* Section 1 — congestion calendar */}
+        {/* Section 1 - congestion calendar */}
         <section className="mb-16" aria-labelledby="calendar-h">
           <h2 id="calendar-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             The Monthly Congestion Calendar (Predictable Every Single Month)
@@ -189,13 +189,13 @@ export default function KraItaxTrafficUpdatePage() {
             </table>
           </div>
           <p className="mt-4 text-[0.85rem] text-ink-muted leading-relaxed">
-            This pattern is remarkably consistent month after month — it&apos;s the same
+            This pattern is remarkably consistent month after month - it&apos;s the same
             deadline-day surge that shows up in social media complaints and in the +3,450% spike in
             searches for &ldquo;kra itax traffic update&rdquo; around filing season.
           </p>
         </section>
 
-        {/* Section 2 — is it congestion or an outage */}
+        {/* Section 2 - is it congestion or an outage */}
         <section className="mb-16" aria-labelledby="diagnose-h">
           <h2 id="diagnose-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             Is It You, Congestion, or a Real Outage? 3 Quick Checks
@@ -204,7 +204,7 @@ export default function KraItaxTrafficUpdatePage() {
             {[
               {
                 title: "Does the homepage load?",
-                detail: "If itax.kra.go.ke loads but logging in or submitting hangs, it's almost always congestion. A true outage usually fails earlier — at the login page or even at DNS.",
+                detail: "If itax.kra.go.ke loads but logging in or submitting hangs, it's almost always congestion. A true outage usually fails earlier - at the login page or even at DNS.",
               },
               {
                 title: "What do other users report?",
@@ -230,7 +230,7 @@ export default function KraItaxTrafficUpdatePage() {
           </div>
         </section>
 
-        {/* Section 3 — workarounds */}
+        {/* Section 3 - workarounds */}
         <section className="mb-16" aria-labelledby="workarounds-h">
           <h2 id="workarounds-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             Proven Workarounds When iTax Is Overloaded
@@ -284,7 +284,7 @@ export default function KraItaxTrafficUpdatePage() {
           </div>
         </section>
 
-        {/* Section 4 — deadline pressure */}
+        {/* Section 4 - deadline pressure */}
         <section className="mb-16" aria-labelledby="deadline-h">
           <h2 id="deadline-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             What If Congestion Blocks You Past the 20th?
@@ -323,7 +323,7 @@ export default function KraItaxTrafficUpdatePage() {
             Never queue for congestion again.
           </p>
           <p className="text-[0.85rem] text-ink-muted mb-6 max-w-[48ch] mx-auto">
-            We file on the 17th, before the crowd hits. Monthly VAT filing from KES 3,500 —
+            We file on the 17th, before the crowd hits. Monthly VAT filing from KES 3,500 -
             deadlines handled, receipts provided, congestion avoided.
           </p>
           <a
@@ -332,7 +332,7 @@ export default function KraItaxTrafficUpdatePage() {
             rel="noopener noreferrer"
             className="btn-fill inline-flex items-center justify-center gap-2 bg-brand text-canvas font-semibold px-6 py-3 rounded-md text-sm transition-colors hover:bg-brand-hover"
           >
-            Hand Me My Filing — KES 3,500
+            Hand Me My Filing - KES 3,500
             <ArrowRight size={16} weight="bold" aria-hidden="true" />
           </a>
         </section>

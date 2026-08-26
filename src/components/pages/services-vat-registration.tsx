@@ -33,7 +33,7 @@ const serviceSchema = {
   "@id": "https://smartvatkenya.co.ke/services/vat-registration",
   name: "VAT Registration Services Kenya",
   description:
-    "Professional KRA VAT registration in Kenya — KES 5,000 flat fee, done in 1–3 working days. iTax VAT Form 1, PIN generation, and eTIMS guidance included. M-PESA accepted. No hidden costs.",
+    "Professional KRA VAT registration in Kenya - KES 5,000 flat fee, done in 1–3 working days. iTax VAT Form 1, PIN generation, and eTIMS guidance included. M-PESA accepted. No hidden costs.",
   provider: { "@type": "Organization", name: "Smart VAT Kenya" },
 }
 
@@ -55,7 +55,7 @@ const steps = [
     Icon: ChatCircle,
     title: "WhatsApp Us",
     description:
-      "Send your business name, KRA PIN, and a copy of your national ID over WhatsApp. We take it from there — no forms, no portals.",
+      "Send your business name, KRA PIN, and a copy of your national ID over WhatsApp. We take it from there - no forms, no portals.",
     details: [
       "Send KRA PIN certificate",
       "Share a copy of your national ID",
@@ -70,7 +70,7 @@ const steps = [
     description:
       "We log into the KRA iTax portal, update your profile, complete VAT Form 1, and submit your application. You get WhatsApp updates at every stage.",
     details: [
-      "KRA iTax portal — fully handled",
+      "KRA iTax portal - fully handled",
       "Profile update completed",
       "VAT Form 1 submitted",
       "WhatsApp updates throughout",
@@ -157,7 +157,7 @@ export default function VATRegistrationPage() {
             Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
-            VAT Registration Kenya — KES 5,000
+            VAT Registration Kenya - KES 5,000
           </h1>
           <p className="text-[0.95rem] text-canvas/70 max-w-[50ch] leading-relaxed mb-6">
             Professional KRA VAT registration at a flat fee. No hidden costs, no surprises.
@@ -204,7 +204,7 @@ export default function VATRegistrationPage() {
             </h2>
             <p className="text-[0.93rem] text-ink-muted leading-relaxed max-w-[44ch]">
               Your KES 5,000 covers end-to-end handling of the iTax VAT registration
-              process. No add-ons, no upsells — just a complete service delivered to your
+              process. No add-ons, no upsells - just a complete service delivered to your
               WhatsApp.
             </p>
           </div>
@@ -310,7 +310,7 @@ export default function VATRegistrationPage() {
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.1rem] font-semibold text-ink">
-              KES 5,000 — Register for VAT today
+              KES 5,000 - Register for VAT today
             </p>
             <p className="text-[0.85rem] text-ink-muted mt-1">
               Done in 1–3 working days. No hidden fees. M-PESA accepted.
@@ -328,11 +328,11 @@ export default function VATRegistrationPage() {
         </div>
       </section>
 
-      {/* ─── PILLAR CONTENT — VAT REGISTRATION KENYA 2026 ─── */}
+      {/* ─── PILLAR CONTENT - VAT REGISTRATION KENYA 2026 ─── */}
       <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="pillar-heading">
         <div className="max-w-[800px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
-            VAT Registration Kenya 2026 — the full guide
+            VAT Registration Kenya 2026 - the full guide
           </p>
           <h2 id="pillar-heading" className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-8 text-balance">
             Who must register, what it costs, and what happens after
@@ -342,7 +342,7 @@ export default function VATRegistrationPage() {
             <div>
               <h3 className="font-display text-[1.1rem] font-semibold text-ink mb-2">Who must register for VAT?</h3>
               <p>
-                You must register for VAT when your taxable turnover reaches <strong className="text-ink">{FACTS.mandatoryThreshold}</strong> in any 12-month period. This is the mandatory threshold per KRA and the VAT Act (Cap. 476), verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against <a href="https://www.kra.go.ke/individual/filing-paying/types-of-taxes/value-added-tax" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA's VAT guidance</a>. Businesses below this threshold may apply voluntarily to claim input VAT — see <a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">do I need to register?</a> and <a href="/resources/vat-registration-checklist/" className="text-brand underline underline-offset-2 hover:text-brand-hover">the registration checklist</a>.
+                You must register for VAT when your taxable turnover reaches <strong className="text-ink">{FACTS.mandatoryThreshold}</strong> in any 12-month period. This is the mandatory threshold per KRA and the VAT Act (Cap. 476), verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against <a href="https://www.kra.go.ke/individual/filing-paying/types-of-taxes/value-added-tax" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA's VAT guidance</a>. Businesses below this threshold may apply voluntarily to claim input VAT - see <a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">do I need to register?</a> and <a href="/resources/vat-registration-checklist/" className="text-brand underline underline-offset-2 hover:text-brand-hover">the registration checklist</a>.
               </p>
               <p className="mt-3">Voluntary registration is typically attractive if you have significant VAT-able purchases (stock, rent, services) and want to recover input VAT, or if corporate clients require a VAT-compliant invoice via eTIMS.</p>
             </div>
@@ -355,30 +355,30 @@ export default function VATRegistrationPage() {
                 <li>Business name and physical address (and for companies: certificate of incorporation, CR12, director IDs)</li>
                 <li>Bank account details and nature of business</li>
               </ul>
-              <p className="mt-3">Send these over WhatsApp — we handle the iTax Form VAT 1 and profile update. No portal login needed from you. See the full <a href="/resources/vat-registration-checklist/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT registration checklist</a> for a printable list.</p>
+              <p className="mt-3">Send these over WhatsApp - we handle the iTax Form VAT 1 and profile update. No portal login needed from you. See the full <a href="/resources/vat-registration-checklist/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT registration checklist</a> for a printable list.</p>
             </div>
 
             <div>
               <h3 className="font-display text-[1.1rem] font-semibold text-ink mb-2">How long does it take? What can go wrong?</h3>
-              <p>Typical turnaround is <strong className="text-ink">1–3 working days</strong> after correct submission. Common KRA rejection reasons: mismatched ID vs PIN details, incomplete business address, or filing with outstanding returns on the account. We pre-check your iTax ledger for these issues — including the <a href="/resources/vat-special-table-risks/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Special Table</a> — before submitting, which is why our first-attempt rate is high. If KRA queries the application, we address it without extra charge.</p>
+              <p>Typical turnaround is <strong className="text-ink">1–3 working days</strong> after correct submission. Common KRA rejection reasons: mismatched ID vs PIN details, incomplete business address, or filing with outstanding returns on the account. We pre-check your iTax ledger for these issues - including the <a href="/resources/vat-special-table-risks/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Special Table</a> - before submitting, which is why our first-attempt rate is high. If KRA queries the application, we address it without extra charge.</p>
             </div>
 
             <div>
               <h3 className="font-display text-[1.1rem] font-semibold text-ink mb-2">What happens after you get the VAT PIN?</h3>
               <ul className="list-disc pl-5 space-y-1.5">
                 <li>You must charge 16% VAT on taxable supplies and issue eTIMS-compliant invoices</li>
-                <li>File a VAT return and pay any VAT due by the <strong className="text-ink">20th of the following month</strong> (we file on the 17th) — see <a href="/resources/how-to-file-vat-return-on-itax/" className="text-brand underline underline-offset-2 hover:text-brand-hover">how to file on iTax</a> and <a href="/resources/vat-return-filing-checklist/" className="text-brand underline underline-offset-2 hover:text-brand-hover">the filing checklist</a></li>
-                <li>Complete <a href="/resources/etims-onboarding-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS onboarding</a> — from 2026 KRA validates returns against eTIMS invoice data</li>
+                <li>File a VAT return and pay any VAT due by the <strong className="text-ink">20th of the following month</strong> (we file on the 17th) - see <a href="/resources/how-to-file-vat-return-on-itax/" className="text-brand underline underline-offset-2 hover:text-brand-hover">how to file on iTax</a> and <a href="/resources/vat-return-filing-checklist/" className="text-brand underline underline-offset-2 hover:text-brand-hover">the filing checklist</a></li>
+                <li>Complete <a href="/resources/etims-onboarding-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS onboarding</a> - from 2026 KRA validates returns against eTIMS invoice data</li>
                 <li>Keep input VAT records for at least 5 years for <a href="/resources/kra-vat-audit-process/" className="text-brand underline underline-offset-2 hover:text-brand-hover">audit</a> purposes</li>
                 <li>If you later fall below the threshold you may consider <a href="/resources/vat-deregistration-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT deregistration</a>, but only with KRA approval</li>
               </ul>
-              <p className="mt-3">Need monthly help? Our <a href="/services/monthly-vat-filing/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Monthly VAT Filing — KES 3,500/month</a> handles the return, reconciliation, and payment guidance every month.</p>
+              <p className="mt-3">Need monthly help? Our <a href="/services/monthly-vat-filing/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Monthly VAT Filing - KES 3,500/month</a> handles the return, reconciliation, and payment guidance every month.</p>
             </div>
 
             <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
               <SealCheck size={18} weight="duotone" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
               <p className="text-[0.83rem] text-ink-muted leading-relaxed">
-                <strong className="text-ink">Cost:</strong> KES 5,000 flat — iTax registration, Form VAT 1, PIN generation, eTIMS guidance, taxpayer education, and M-PESA receipt. No hidden fees. Compare with facilitators quoting KES 15,000–30,000.
+                <strong className="text-ink">Cost:</strong> KES 5,000 flat - iTax registration, Form VAT 1, PIN generation, eTIMS guidance, taxpayer education, and M-PESA receipt. No hidden fees. Compare with facilitators quoting KES 15,000–30,000.
               </p>
             </div>
           </div>
@@ -421,10 +421,10 @@ export default function VATRegistrationPage() {
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <h2 className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-canvas mb-2 text-balance">
-              Register for VAT today — KES 5,000.
+              Register for VAT today - KES 5,000.
             </h2>
             <p className="text-[0.88rem] text-canvas/65 max-w-[40ch]">
-              Send a WhatsApp message now. No commitment required — we will confirm we can help before any payment.
+              Send a WhatsApp message now. No commitment required - we will confirm we can help before any payment.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">

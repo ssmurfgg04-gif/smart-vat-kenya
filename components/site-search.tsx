@@ -160,7 +160,7 @@ export function SiteSearch() {
             <div className="max-h-[60vh] overflow-y-auto p-2">
               {unavailable ? (
                 <p className="px-4 py-8 text-center text-sm text-gray-500 dark:text-gray-400">
-                  Search isn't available here yet — try it on the live site.
+                  Search isn't available here yet - try it on the live site.
                 </p>
               ) : searching ? (
                 <p className="px-4 py-8 text-center text-sm text-gray-500 dark:text-gray-400">Searching…</p>

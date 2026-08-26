@@ -7,9 +7,9 @@ const WA_BASE = "https://wa.me/254717344440"
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "KRA Data Sources Kenya — Where to Get Official VAT & Revenue Data Free",
+  headline: "KRA Data Sources Kenya - Where to Get Official VAT & Revenue Data Free",
   description:
-    "Where analysts and journalists source official KRA data: KRA Publications, iKESRA, GavaConnect APIs, openAFRICA, KNBS, National Treasury and more — all free, all direct download pages.",
+    "Where analysts and journalists source official KRA data: KRA Publications, iKESRA, GavaConnect APIs, openAFRICA, KNBS, National Treasury and more - all free, all direct download pages.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-11",
   dateModified: "2026-08-11",
@@ -50,19 +50,19 @@ const sources = [
   {
     name: "KRA Publications",
     url: "https://www.kra.go.ke/publications",
-    what: "Annual Revenue Performance reports, the 9th Tax Summit report, Corporate Plans and policy documents — all PDF.",
+    what: "Annual Revenue Performance reports, the 9th Tax Summit report, Corporate Plans and policy documents - all PDF.",
     access: "Free, direct download",
   },
   {
     name: "iKESRA Repository",
     url: "https://ikesra.kra.go.ke",
-    what: "KRA's own research library — legislation, journal articles, theses and research projects on taxation.",
+    what: "KRA's own research library - legislation, journal articles, theses and research projects on taxation.",
     access: "Free",
   },
   {
     name: "GavaConnect APIs",
     url: "https://gavaconnect.kra.go.ke",
-    what: "KRA's developer platform — PIN checker, Tax Compliance Certificate checker, NIL return, e-Slip checker (16+ APIs, 1,000+ developers).",
+    what: "KRA's developer platform - PIN checker, Tax Compliance Certificate checker, NIL return, e-Slip checker (16+ APIs, 1,000+ developers).",
     access: "Free developer accounts",
   },
   {
@@ -78,21 +78,21 @@ const sources = [
     access: "Free",
   },
   {
-    name: "KNBS — Kenya National Bureau of Statistics",
+    name: "KNBS - Kenya National Bureau of Statistics",
     url: "https://www.knbs.or.ke",
-    what: "The national statistics body — Economic Survey, Statistical Abstract and microdata via KeNADA/KenInfo.",
+    what: "The national statistics body - Economic Survey, Statistical Abstract and microdata via KeNADA/KenInfo.",
     access: "Free",
   },
   {
     name: "National Treasury",
     url: "https://www.treasury.go.ke",
-    what: "Statistical Annex to the Budget Statement — revenue tables by tax head.",
+    what: "Statistical Annex to the Budget Statement - revenue tables by tax head.",
     access: "Free",
   },
   {
     name: "sirkal.co.ke",
     url: "https://sirkal.co.ke",
-    what: "Civic-tech project remixing Treasury, KRA and CBK data into charts with CSVs — a live example of what you can build.",
+    what: "Civic-tech project remixing Treasury, KRA and CBK data into charts with CSVs - a live example of what you can build.",
     access: "Open",
   },
 ]
@@ -132,7 +132,7 @@ export default function KraDataSourcesPage() {
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4">
-            KRA Data Sources Kenya — Where Analysts Get Official VAT &amp; Revenue Data
+            KRA Data Sources Kenya - Where Analysts Get Official VAT &amp; Revenue Data
           </h1>
           <p className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; Updated August 2026</p>
         </div>

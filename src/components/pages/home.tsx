@@ -78,7 +78,7 @@ const faqSchema = {
       name: "What is eTIMS and do I need it for VAT registration in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "eTIMS (Electronic Tax Invoice Management System) is KRA's mandatory electronic invoicing system. All businesses in Kenya — VAT-registered or not — must onboard eTIMS and issue electronic invoices. From 2026, KRA validates all VAT returns against eTIMS invoice data.",
+        text: "eTIMS (Electronic Tax Invoice Management System) is KRA's mandatory electronic invoicing system. All businesses in Kenya - VAT-registered or not - must onboard eTIMS and issue electronic invoices. From 2026, KRA validates all VAT returns against eTIMS invoice data.",
       },
     },
     {
@@ -190,12 +190,12 @@ export default function HomePage() {
               <span className="block text-red-600">Your VAT return is due.</span>
             </h1>
               <p className="text-[1.08rem] lg:text-[1.2rem] font-semibold text-[#2c3a52] leading-snug mb-5">
-              Send a screenshot on WhatsApp — get the fix in minutes, not days.
+              Send a screenshot on WhatsApp - get the fix in minutes, not days.
             </p>
 
             <p className="text-[0.92rem] leading-relaxed text-[#3f4f68] mb-5 max-w-[54ch]">
               <span className="font-semibold text-red-600">Rejected invoices. Pending sync. Locked accounts.</span>{" "}
-              Overdue VAT registration. We diagnose on WhatsApp and handle the KRA work — you get back to business.
+              Overdue VAT registration. We diagnose on WhatsApp and handle the KRA work - you get back to business.
             </p>
 
             {/* 17th Guarantee */}
@@ -229,7 +229,7 @@ export default function HomePage() {
                 className="inline-flex w-full sm:w-auto flex-col items-center justify-center border border-[#14243e] text-[#14243e] hover:bg-slate-50 px-7 py-3 rounded-lg transition-colors"
               >
                 <span className="inline-flex items-center gap-2.5 font-semibold text-[0.95rem]">
-                  Register for VAT — KES 5,000
+                  Register for VAT - KES 5,000
                   <ArrowRight size={17} weight="bold" aria-hidden="true" />
                 </span>
                 <span className="text-[0.68rem] text-[#14243e]/80 font-medium mt-0.5">
@@ -355,15 +355,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ─── HUBS — KRA Help / Status / Deadlines (internal-link tightening) ─── */}
-        <section className="bg-canvas py-8 px-6 lg:px-10 border-y border-hairline">
-          <div className="max-w-[1400px] mx-auto grid gap-4 sm:grid-cols-3">
+        {/* ─── HUBS - KRA Help / Status / Deadlines (internal-link tightening) ─── */}
+        <section className="bg-canvas py-12 px-6 lg:px-10 border-y border-hairline">
+          <div className="max-w-[1400px] mx-auto grid gap-6 sm:grid-cols-3">
             {[
-              { href: "/kra-help/", title: "KRA Problem Solver", desc: "32 common eTIMS, iTax & VAT fixes — diagnose your issue", Icon: ChatCircle },
-              { href: "/kra-status/", title: "KRA System Status", desc: "Is iTax or eTIMS down right now? Live status + workarounds", Icon: ShieldCheck },
-              { href: "/tax-deadlines/", title: "Tax Deadline Calendar", desc: "VAT 20th, PAYE 9th, amnesty 31 Dec — add reminders", Icon: Clock },
+              { href: "/kra-help/", title: "KRA Problem Solver", desc: "32 common eTIMS, iTax & VAT fixes - diagnose your issue", Icon: ChatCircle },
+              { href: "/kra-status/", title: "KRA System Status", desc: "Is iTax or eTIMS down right now? Status + workarounds", Icon: ShieldCheck },
+              { href: "/tax-deadlines/", title: "Tax Deadline Calendar", desc: "VAT 20th, PAYE 9th, amnesty 31 Dec - add reminders", Icon: Clock },
             ].map(({ href, title, desc, Icon }) => (
-              <a key={href} href={href} className="border border-hairline rounded-xl p-5 bg-canvas-alt hover:border-brand/30 hover:shadow-sm transition-all group">
+              <a key={href} href={href} className="border border-hairline rounded-xl p-6 bg-canvas-alt hover:border-brand/20 transition-colors group">
                 <Icon size={20} weight="duotone" className="text-brand mb-3" aria-hidden="true" />
                 <p className="font-display text-[0.95rem] font-semibold text-ink group-hover:text-brand transition-colors">{title}</p>
                 <p className="text-[0.82rem] text-ink-muted leading-snug mt-1">{desc}</p>
@@ -380,9 +380,9 @@ export default function HomePage() {
               You're not behind. KRA's portal was never built for you.
             </p>
             <p className="text-[0.9rem] text-ink-muted max-w-[48ch] mx-auto leading-relaxed">
-              It was built for KRA. The crashes, the OTP failures, the 11:47pm timeout — that's the system 
+              It was built for KRA. The crashes, the OTP failures, the 11:47pm timeout - that's the system 
               telling you it wasn't built for small business owners. We handle registration, eTIMS and monthly filing 
-              for KES 5,000 + KES 3,500/month. M-PESA accepted. Fast replies on WhatsApp — typically within business hours.
+              for KES 5,000 + KES 3,500/month. M-PESA accepted. Fast replies on WhatsApp - typically within business hours.
             </p>
           </div>
         </section>
@@ -410,7 +410,7 @@ export default function HomePage() {
             "On-Time Filing by the 17th",
             "eTIMS Onboarding Included",
             "M-PESA Payment Records Provided",
-            "WhatsApp Support — Not Email Tickets",
+            "WhatsApp Support - Not Email Tickets",
           ].map((item) => (
             <span key={item} className="flex items-center gap-2 text-[0.78rem] text-ink-muted">
               <svg viewBox="0 0 12 12" className="w-3 h-3 shrink-0 fill-brand" aria-hidden="true">
@@ -445,13 +445,13 @@ export default function HomePage() {
               {
                 number: "01",
                 problem: "Your eTIMS invoice won't go through",
-                fix: "Error 500, pending sync, a locked account — usually mid-sale, with a customer waiting. We diagnose it over WhatsApp and tell you exactly what's wrong, often in minutes.",
+                fix: "Error 500, pending sync, a locked account - usually mid-sale, with a customer waiting. We diagnose it over WhatsApp and tell you exactly what's wrong, often in minutes.",
                 Icon: WarningCircle,
               },
               {
                 number: "02",
                 problem: "The iTax portal keeps returning errors",
-                fix: "We navigate it for you — you send your KRA PIN and details over WhatsApp, we handle the rest. High first-attempt success — if KRA rejects a filing we fix and resubmit free.",
+                fix: "We navigate it for you - you send your KRA PIN and details over WhatsApp, we handle the rest. High first-attempt success - if KRA rejects a filing we fix and resubmit free.",
                 Icon: FileText,
               },
               {
@@ -463,7 +463,7 @@ export default function HomePage() {
               {
                 number: "04",
                 problem: "A single missed deadline costs KES 10,000",
-                fix: "We file before the 20th every month as a matter of process — not a service you have to chase. We file on the 17th.",
+                fix: "We file before the 20th every month as a matter of process - not a service you have to chase. We file on the 17th.",
                 Icon: Clock,
               },
             ].map(({ number, problem, fix, Icon }, i) => (
@@ -564,14 +564,14 @@ export default function HomePage() {
             A VAT number isn't a cost. It's your licence to grow.
           </h2>
           <p className="text-[0.9rem] text-canvas/70 max-w-[52ch] mb-16 leading-relaxed">
-            Registration is the door. Filling unlocks what most small businesses never hear about — the upside
+            Registration is the door. Filling unlocks what most small businesses never hear about - the upside
             that makes VAT worth it.
           </p>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
             {[
               { Icon: Briefcase, title: "Win tenders & contracts", body: "Government and corporate clients require a valid VAT number and tax compliance certificate. Without it, you cannot bid." },
               { Icon: CheckCircle, title: "Sell to big buyers", body: "Corporate clients and importers want eTIMS-compliant VAT invoices. A VAT number makes your business credible." },
-              { Icon: CurrencyDollar, title: "Claim input VAT back", body: "Money back on the VAT you pay on purchases — cash flow most unregistered businesses simply lose." },
+              { Icon: CurrencyDollar, title: "Claim input VAT back", body: "Money back on the VAT you pay on purchases - cash flow most unregistered businesses simply lose." },
               { Icon: TrendUp, title: "Import & grow", body: "Importing stock, expanding capacity, and qualifying for refunds all open up once you're VAT-registered." },
             ].map(({ Icon, title, body }) => (
               <article key={title} className="bg-canvas/[0.06] border border-canvas/15 rounded-lg p-5 lg:p-7">
@@ -602,7 +602,7 @@ export default function HomePage() {
           </h2>
 
           <div className="grid grid-cols-2 gap-4 lg:gap-5">
-            {/* Card 1 — eTIMS Rescue */}
+            {/* Card 1 - eTIMS Rescue */}
             <article className="bg-canvas-dark rounded-lg p-4 sm:p-8 flex flex-col relative overflow-hidden">
               <span className="absolute top-0 right-0 font-mono text-[0.6rem] uppercase tracking-widest bg-brand text-canvas px-3 py-1.5 rounded-bl-lg">
                 Most Common
@@ -612,7 +612,7 @@ export default function HomePage() {
               </p>
               <h3 className="font-display text-xl font-semibold text-canvas mb-1">eTIMS Troubleshooting &amp; Rescue</h3>
               <p className="text-[0.85rem] text-canvas/80 mb-6 leading-relaxed">
-                Invoice rejected, account locked, stuck on pending sync — we diagnose it over WhatsApp and fix it, usually same-day.
+                Invoice rejected, account locked, stuck on pending sync - we diagnose it over WhatsApp and fix it, usually same-day.
               </p>
               <p className="font-display text-[1.75rem] sm:text-[2.5rem] font-semibold text-canvas leading-none mb-1 tabular-nums">
                 KES 1,500
@@ -641,14 +641,14 @@ export default function HomePage() {
               </a>
             </article>
 
-            {/* Card 2 — VAT Registration */}
+            {/* Card 2 - VAT Registration */}
             <article className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8 flex flex-col">
               <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-4">
                 One-time
               </p>
               <h3 className="font-display text-xl font-semibold text-ink mb-1">VAT Registration Kenya</h3>
               <p className="text-[0.85rem] text-ink-muted mb-6 leading-relaxed">
-                Full iTax VAT registration — we handle the portal, you get the PIN in 1–3 days.
+                Full iTax VAT registration - we handle the portal, you get the PIN in 1–3 days.
               </p>
               <p className="font-display text-[1.75rem] sm:text-[2.5rem] font-semibold text-ink leading-none mb-1 tabular-nums">
                 KES 5,000
@@ -679,7 +679,7 @@ export default function HomePage() {
               </a>
             </article>
 
-            {/* Card 3 — Monthly Filing */}
+            {/* Card 3 - Monthly Filing */}
             <article className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8 flex flex-col relative overflow-hidden">
               <span className="absolute top-0 right-0 font-mono text-[0.6rem] uppercase tracking-widest bg-brand text-canvas px-3 py-1.5 rounded-bl-lg">
                 Most Popular
@@ -697,7 +697,7 @@ export default function HomePage() {
               <p className="text-[0.78rem] text-ink-muted mb-5 sm:mb-8">per month</p>
               <ul className="space-y-2.5 flex-1 mb-8" role="list">
                 {[
-                  "Filed by the 20th — always",
+                  "Filed by the 20th - always",
                   "We file on the 17th, not the 20th",
                   "Avoids KES 10,000 late penalty",
                   "M-PESA payment guidance",
@@ -720,7 +720,7 @@ export default function HomePage() {
               </a>
             </article>
 
-            {/* Card 4 — Amnesty Cleanup */}
+            {/* Card 4 - Amnesty Cleanup */}
             <article className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8 flex flex-col">
               <p className="font-mono text-[0.65rem] uppercase tracking-widest text-brand mb-4">
                 Ends 31 Dec 2026
@@ -749,7 +749,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── SEO PROSE — KRA VAT 16% 2026 ─── */}
+      {/* ─── SEO PROSE - KRA VAT 16% 2026 ─── */}
       <section className="bg-canvas-dark py-24 px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-24 lg:grid-cols-[480px_1fr]">
           <div>
@@ -776,7 +776,7 @@ export default function HomePage() {
               </a>{" "}
               for 2026. This applies to most taxable goods and services supplied in Kenya. Essential
               items including basic foodstuffs, medical supplies, and exports remain{" "}
-              <strong className="text-canvas font-medium">zero-rated (0%)</strong> or exempt — see the
+              <strong className="text-canvas font-medium">zero-rated (0%)</strong> or exempt - see the
               full breakdown of{" "}
               <a href="/resources/vat-rates-kenya/" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 zero-rated vs exempt supplies in Kenya
@@ -789,7 +789,7 @@ export default function HomePage() {
               <a href="/resources/what-happens-if-i-don-t-register-for-vat/" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 KES 100,000 per month non-registration penalty
               </a>
-              . Voluntary registration is available from {FACTS.voluntaryFrom} to claim input VAT credits —
+              . Voluntary registration is available from {FACTS.voluntaryFrom} to claim input VAT credits -
               use our{" "}
               <a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 guide on whether you need to register for VAT in Kenya
@@ -806,7 +806,7 @@ export default function HomePage() {
               <a href="/resources/etims-onboarding-guide/" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 eTIMS onboarding
               </a>
-              . From 2026, KRA validates all VAT returns against eTIMS electronic invoice data —
+              . From 2026, KRA validates all VAT returns against eTIMS electronic invoice data -
               businesses without eTIMS-compliant invoices lose their input VAT claims automatically.
               Our{" "}
               <a href="/services/vat-registration/" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
@@ -820,7 +820,7 @@ export default function HomePage() {
               VAT returns must be filed and payment made by the{" "}
               <strong className="text-canvas font-medium">20th of the following month</strong> via
               KRA Paybill{" "}
-              <strong className="text-canvas font-medium">572572</strong> or the iTax portal — the{" "}
+              <strong className="text-canvas font-medium">572572</strong> or the iTax portal - the{" "}
               <a href="/resources/how-to-file-vat-return-on-itax/" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 step-by-step iTax filing guide
               </a>{" "}
@@ -832,7 +832,7 @@ export default function HomePage() {
               <a href="/resources/kra-penalty-for-late-vat-filing/" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 Late filing
               </a>{" "}
-              attracts the higher of KES 10,000 or 5% of tax due, plus 1% monthly interest — which is
+              attracts the higher of KES 10,000 or 5% of tax due, plus 1% monthly interest - which is
               why we file client returns on the 17th under our{" "}
               <a href="/services/monthly-vat-filing/" className="text-canvas underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
                 monthly VAT filing service
@@ -996,10 +996,10 @@ export default function HomePage() {
               <RelatedLinks
                 heading="Go deeper"
                 links={[
-                  { href: "/resources/faq/", label: "Full Kenya VAT FAQ — 40+ answers", description: "Registration, filing, penalties, rates, eTIMS, refunds and input VAT." },
+                  { href: "/resources/faq/", label: "Full Kenya VAT FAQ - 40+ answers", description: "Registration, filing, penalties, rates, eTIMS, refunds and input VAT." },
                   { href: "/resources/how-to-register-for-vat-in-kenya/", label: "How to register for VAT in Kenya on iTax", description: "Every screen of the KRA iTax registration process, step by step." },
                   { href: "/resources/kra-vat-penalties-reference/", label: "KRA VAT penalties reference table", description: "What late filing, late payment, and non-registration actually cost." },
-                  { href: "/tax-amnesty-2026/", label: "KRA Tax Amnesty 2026 — free ledger check", description: "Three paths, two automatic. Find out before the 31 Dec 2026 window closes." },
+                  { href: "/tax-amnesty-2026/", label: "KRA Tax Amnesty 2026 - free ledger check", description: "Three paths, two automatic. Find out before the 31 Dec 2026 window closes." },
                   { href: "/services/", label: "All services and published prices", description: "Registration, monthly filing, eTIMS onboarding, and penalty waivers." },
                 ]}
               />
@@ -1019,11 +1019,11 @@ export default function HomePage() {
               id="amnesty-heading"
               className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-ink tracking-tight mb-2"
             >
-              KRA is wiping out old penalties — until 31 December 2026
+              KRA is wiping out old penalties - until 31 December 2026
             </h2>
             <p className="text-[0.85rem] text-ink-muted max-w-[48ch] leading-relaxed">
               A 100% waiver on pre-2026 penalties, interest and fines. Many businesses qualify
-              automatically — others just need outstanding returns filed. Get a free iTax ledger
+              automatically - others just need outstanding returns filed. Get a free iTax ledger
               check and find out which path you&apos;re on.
             </p>
           </div>
@@ -1081,7 +1081,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-medium text-ink-muted hover:text-ink transition-colors whitespace-nowrap"
             >
-              Let us file for you — KES 3,500/month
+              Let us file for you - KES 3,500/month
             </a>
           </div>
         </div>

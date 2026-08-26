@@ -8,7 +8,7 @@ const WA_BASE = "https://wa.me/254717344440"
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "eTIMS Penalties 2026 — Exact Figures From the Law",
+  headline: "eTIMS Penalties 2026 - Exact Figures From the Law",
   description: "A definitive legal breakdown of KRA eTIMS penalties under Tax Procedures Act s.86 (as amended by Finance Act 2026) and s.59A(5). Separating statutory law from internet myths.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-08",
@@ -36,7 +36,7 @@ export default function EtimsPenalties2026Page() {
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4">
-            eTIMS Penalties 2026 — Exact Figures From the Law
+            eTIMS Penalties 2026 - Exact Figures From the Law
           </h1>
           <p className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; Last verified {FACTS.lastVerified} against Tax Procedures Act</p>
         </div>

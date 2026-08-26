@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------ */
-/* SmartVAT Client layer — WhatsApp messaging surface.                  */
+/* SmartVAT Client layer - WhatsApp messaging surface.                  */
 /*                                                                      */
 /* WhatsApp outbound/inbound is modeled as a message bus that an        */
 /* operator (Meta WhatsApp Cloud API, Twilio, or a local test driver)   */

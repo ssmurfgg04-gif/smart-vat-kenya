@@ -7,7 +7,7 @@ const WA_BASE = "https://wa.me/254717344440"
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "VAT 2027: KRA Pre-Filled Returns Are Coming — Prepare Now",
+  headline: "VAT 2027: KRA Pre-Filled Returns Are Coming - Prepare Now",
   description: "KRA's transition to pre-filled (auto-populated) VAT returns starting January 2027. How eTIMS data and iCMS customs integration will assemble your return automatically.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-08",
@@ -35,7 +35,7 @@ export default function Vat2027AutoFilledPage() {
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4">
-            VAT 2027: KRA Pre-Filled Returns Are Coming — Prepare Now
+            VAT 2027: KRA Pre-Filled Returns Are Coming - Prepare Now
           </h1>
           <p className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; Updated August 2026</p>
         </div>
@@ -55,7 +55,7 @@ export default function Vat2027AutoFilledPage() {
         <div className="bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-lg font-semibold text-ink mb-2">Want your returns reconciled automatically today?</p>
           <a href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20automate%20my%20monthly%20VAT%20filing%20with%20Smart%20VAT`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold px-6 py-3 rounded-md hover:bg-brand-hover transition-colors">
-            Start Monthly Filing — KES 3,500/mo <ArrowRight size={14} weight="bold" />
+            Start Monthly Filing - KES 3,500/mo <ArrowRight size={14} weight="bold" />
           </a>
         </div>
 

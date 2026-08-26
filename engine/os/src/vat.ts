@@ -1,5 +1,5 @@
 /**
- * VAT calculator — Finance Act 2025 / 2026 accurate constants and pure helpers.
+ * VAT calculator - Finance Act 2025 / 2026 accurate constants and pure helpers.
  *
  * Correctness matters here: these numbers gate money moving between a business
  * and KRA. Values below were re-verified against the Finance Act 2025 and 2026,
@@ -77,7 +77,7 @@ export type RegistrationStatus = "none" | "voluntary" | "mandatory"
 /**
  * Where a business stands on registration given its annual taxable turnover.
  * Operative rule (VAT Act s.34): mandatory at KES 5M; voluntary below it.
- * Finance Act 2025's proposed 8M raise is not yet in force — see constants.
+ * Finance Act 2025's proposed 8M raise is not yet in force - see constants.
  */
 export function registrationStatus(turnoverKes: number): RegistrationStatus {
   if (turnoverKes > 0 && turnoverKes < VAT_REGISTRATION_THRESHOLD) return "voluntary"

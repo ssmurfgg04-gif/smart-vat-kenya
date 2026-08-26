@@ -36,7 +36,7 @@ const faqSchema = {
       name: "What is the difference between Turnover Tax and VAT in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Turnover Tax (ToT) is a simplified 1-3% tax on gross sales for businesses with annual turnover under KES 8 million. VAT is a 16% consumption tax — currently mandatory once turnover exceeds KES 5 million (the Finance Act 2025 proposed raising this to KES 8 million, but this has not yet taken effect). Unlike ToT, VAT allows you to claim input VAT on business purchases and requires monthly eTIMS filings.",
+        text: "Turnover Tax (ToT) is a simplified 1-3% tax on gross sales for businesses with annual turnover under KES 8 million. VAT is a 16% consumption tax - currently mandatory once turnover exceeds KES 5 million (the Finance Act 2025 proposed raising this to KES 8 million, but this has not yet taken effect). Unlike ToT, VAT allows you to claim input VAT on business purchases and requires monthly eTIMS filings.",
       },
     },
     {
@@ -150,7 +150,7 @@ export default function VatVsTurnoverTaxPage() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — Quick Comparison Table */}
+          {/* Section 1 - Quick Comparison Table */}
           <section id="comparison" aria-labelledby="comparison-h">
             <h2 id="comparison-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Quick Comparison: Turnover Tax vs VAT
@@ -189,7 +189,7 @@ export default function VatVsTurnoverTaxPage() {
             </div>
           </section>
 
-          {/* Section 2 — What is Turnover Tax */}
+          {/* Section 2 - What is Turnover Tax */}
           <section id="what-is-tot" aria-labelledby="what-is-tot-h">
             <h2 id="what-is-tot-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What is Turnover Tax in Kenya?
@@ -216,7 +216,7 @@ export default function VatVsTurnoverTaxPage() {
             </div>
           </section>
 
-          {/* Section 3 — What is VAT */}
+          {/* Section 3 - What is VAT */}
           <section id="what-is-vat" aria-labelledby="what-is-vat-h">
             <h2 id="what-is-vat-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What is VAT in Kenya?
@@ -245,7 +245,7 @@ export default function VatVsTurnoverTaxPage() {
             </div>
           </section>
 
-          {/* Section 4 — Key Differences Deep Dive */}
+          {/* Section 4 - Key Differences Deep Dive */}
           <section id="key-differences" aria-labelledby="key-differences-h">
             <h2 id="key-differences-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Key Differences Between Turnover Tax and VAT
@@ -292,7 +292,7 @@ export default function VatVsTurnoverTaxPage() {
             </div>
           </section>
 
-          {/* Section 5 — Decision Framework */}
+          {/* Section 5 - Decision Framework */}
           <section id="decision" aria-labelledby="decision-h">
             <h2 id="decision-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Which Tax Regime Should Your Business Choose?
@@ -343,7 +343,7 @@ export default function VatVsTurnoverTaxPage() {
             </div>
           </section>
 
-          {/* Section 6 — Switching */}
+          {/* Section 6 - Switching */}
           <section id="switching" aria-labelledby="switching-h">
             <h2 id="switching-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Can You Switch Between Turnover Tax and VAT?
@@ -394,7 +394,7 @@ export default function VatVsTurnoverTaxPage() {
             </div>
           </section>
 
-          {/* Section 7 — How We Help */}
+          {/* Section 7 - How We Help */}
           <section id="how-we-help" aria-labelledby="how-we-help-h">
             <h2 id="how-we-help-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               How Smart VAT Kenya Helps with Both Regimes

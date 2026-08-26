@@ -43,7 +43,7 @@ const faqSchema = {
       name: "How long must I wait before claiming bad debt VAT relief?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The waiting period was extended from 2 years to 3 years by the Finance Act 2026. However, if the customer enters statutory management, receivership, or liquidation before the 3-year period ends, you can claim immediately — you do not need to wait the full 3 years.",
+        text: "The waiting period was extended from 2 years to 3 years by the Finance Act 2026. However, if the customer enters statutory management, receivership, or liquidation before the 3-year period ends, you can claim immediately - you do not need to wait the full 3 years.",
       },
     },
     {
@@ -108,7 +108,7 @@ export default function VatBadDebtRefundKenya() {
 
           <div className="prose prose-gray max-w-none">
             <p>
-              If your customer does not pay, you can <strong>claim back the VAT you already remitted</strong> on that unpaid invoice — this is called <strong>VAT bad debt relief</strong>. The Finance Act 2026 extended the waiting period from <strong>2 years to 3 years</strong>, unless the customer enters statutory management, receivership, or liquidation, in which case you can claim immediately.
+              If your customer does not pay, you can <strong>claim back the VAT you already remitted</strong> on that unpaid invoice - this is called <strong>VAT bad debt relief</strong>. The Finance Act 2026 extended the waiting period from <strong>2 years to 3 years</strong>, unless the customer enters statutory management, receivership, or liquidation, in which case you can claim immediately.
             </p>
 
             <h2>How Bad Debt VAT Relief Works</h2>
@@ -135,9 +135,9 @@ export default function VatBadDebtRefundKenya() {
             <h2>Key Change Under Finance Act 2026</h2>
             <p>The bad debt relief waiting period was <strong>extended from 2 years to 3 years</strong>. This means:</p>
             <ul>
-              <li>For supplies made before 1 July 2026 where 2 years have already passed, the old 2-year rule likely applies — check with a tax advisor</li>
+              <li>For supplies made before 1 July 2026 where 2 years have already passed, the old 2-year rule likely applies - check with a tax advisor</li>
               <li>For supplies made on or after 1 July 2026, you must wait 3 years before claiming unless the customer's financial distress accelerates the timeline</li>
-              <li>The immediate claim trigger for customers in statutory management, receivership, or liquidation remains unchanged — this is not affected by the extension</li>
+              <li>The immediate claim trigger for customers in statutory management, receivership, or liquidation remains unchanged - this is not affected by the extension</li>
             </ul>
 
             <h2>How to Apply</h2>
@@ -146,7 +146,7 @@ export default function VatBadDebtRefundKenya() {
               <li>Prepare supporting documents: original eTIMS invoice, proof of VAT remittance, evidence of recovery attempts (demand letters, emails, legal notices), debt write-off confirmation from your accounting records, declaration that the customer is not a related party</li>
               <li>Log in to iTax and navigate to the bad debt relief application section</li>
               <li>Submit the application with all supporting documents attached</li>
-              <li>KRA reviews and issues a decision — if approved, the refund is processed or offset against future VAT liabilities</li>
+              <li>KRA reviews and issues a decision - if approved, the refund is processed or offset against future VAT liabilities</li>
             </ol>
 
             <h2>What If the Customer Later Pays?</h2>
@@ -154,9 +154,9 @@ export default function VatBadDebtRefundKenya() {
 
             <h2>Related Resources</h2>
             <ul>
-              <li><a href="/resources/vat-refund-guide-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Refund Guide Kenya</a> — General VAT refund process and documentation</li>
-              <li><a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026 VAT Changes</a> — All VAT-related changes including bad debt relief timeline</li>
-              <li><a href="/services/monthly-vat-filing/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Monthly VAT Filing Service (KES 3,500/month)</a> — We handle returns, refund claims, and compliance</li>
+              <li><a href="/resources/vat-refund-guide-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Refund Guide Kenya</a> - General VAT refund process and documentation</li>
+              <li><a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026 VAT Changes</a> - All VAT-related changes including bad debt relief timeline</li>
+              <li><a href="/services/monthly-vat-filing/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Monthly VAT Filing Service (KES 3,500/month)</a> - We handle returns, refund claims, and compliance</li>
             </ul>
           </div>
         </article>

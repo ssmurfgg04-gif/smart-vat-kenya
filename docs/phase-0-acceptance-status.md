@@ -1,4 +1,4 @@
-﻿# Phase 0 — Acceptance Status
+﻿# Phase 0 - Acceptance Status
 
 _Date: 2026-08-08 · Based on `docs/phase-0-engine-spec.md` criteria_
 
@@ -11,7 +11,7 @@ _Date: 2026-08-08 · Based on `docs/phase-0-engine-spec.md` criteria_
 | 3 | **Amnesty triage accurately classifies the 3 (5) paths from a real ledger** | ✅ Code complete | `exposure.ts` `diagnoseAmnesty()` implements 5-path logic: excluded (outside window), auto-waiver (principal paid), pay-principal-by-year-end, file-returns-only (no principal), and special exclusion for payment-plan clients; `exposure.test.ts` 6 tests cover all paths. |
 | 4 | **M-PESA billing + receipts automated** | ✅ Code complete | `mpesa.ts` `createInMemoryGateway` + Daraja `stkPush` (token → STK); `client.ts` `pay()` + `recordPayment()`; `fullclient.ts` `monthlySweep()` pushes STK to all active clients; `webhooks.ts` Paystack verify; 7 tests green. |
 | 5 | **Golden dataset growing with structured filing/waiver/refund outcomes** | ✅ Code complete | `store.ts` records `filing` (periodId, provider, ack, ok, error), `payment` (merchantRequestId, amount, status), `healthSnapshot` (score, level, flags); `intel.ts` `GOLDEN_SET` 25 queries + `evaluateRetrieval()` recall guard; `exposure.ts` `assessRefund` enforces 12-mo clock + 120-day processing. |
-| 6 | **Data hosted in Kenya + privacy-by-default demonstrated** | 🟡 Code ready / Ops pending | Schema supports Kenya Postgres + object store (localization flags in `store.ts`); DPA/privacy templates in `docs/licensing-sprint.md`; ODPC registration steps documented. **Ops: deploy to Kenya DC, obtain ODPC cert, run DPIA** — not yet done. |
+| 6 | **Data hosted in Kenya + privacy-by-default demonstrated** | 🟡 Code ready / Ops pending | Schema supports Kenya Postgres + object store (localization flags in `store.ts`); DPA/privacy templates in `docs/licensing-sprint.md`; ODPC registration steps documented. **Ops: deploy to Kenya DC, obtain ODPC cert, run DPIA** - not yet done. |
 
 ## Additional Engine Capabilities (Beyond Phase 0 Spec)
 
@@ -47,4 +47,4 @@ _Date: 2026-08-08 · Based on `docs/phase-0-engine-spec.md` criteria_
 
 ## Verdict
 
-**Phase 0 code acceptance: ✅ COMPLETE** — All six acceptance criteria have production-grade implementations with passing tests. The only gaps are operational (Kenya hosting, ODPC registration, DPIA, sub-processor DPAs) which are explicitly tracked in the Phase 3 sprint plan as Week 1–3 deliverables.
+**Phase 0 code acceptance: ✅ COMPLETE** - All six acceptance criteria have production-grade implementations with passing tests. The only gaps are operational (Kenya hosting, ODPC registration, DPIA, sub-processor DPAs) which are explicitly tracked in the Phase 3 sprint plan as Week 1–3 deliverables.

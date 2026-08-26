@@ -26,12 +26,12 @@ const WA_BASE = "https://wa.me/254717344440"
 const WA_TEXT = "Hi%2C%20I%20need%20help%20with%20eTIMS%20onboarding"
 
 const includedItems = [
-  "eTIMS solution type consultation — we help you choose the right fit",
+  "eTIMS solution type consultation - we help you choose the right fit",
   "Registration on your chosen platform (mobile, web, or ERP)",
   "Test invoice issuance to confirm everything works",
   "QR code verification setup for your customers",
   "Staff guidance session (1 session, remote or onsite)",
-  "Compliance check — no loose ends",
+  "Compliance check - no loose ends",
 ]
 
 const solutions = [
@@ -45,7 +45,7 @@ const solutions = [
     Icon: Monitor,
     title: "Web Portal (eTIMS Lite)",
     for: "Best for businesses with a laptop or desktop",
-    body: "Browser-based eTIMS portal that works on any device with internet access. No installation required — log in, issue invoices, and manage your eTIMS account from any browser. Good for businesses that prefer working on a larger screen or have staff who share devices.",
+    body: "Browser-based eTIMS portal that works on any device with internet access. No installation required - log in, issue invoices, and manage your eTIMS account from any browser. Good for businesses that prefer working on a larger screen or have staff who share devices.",
   },
   {
     Icon: Cpu,
@@ -76,7 +76,7 @@ const steps = [
 const comparisons = [
   {
     criterion: "Solution selection",
-    us: "Guided — we match you to the right platform",
+    us: "Guided - we match you to the right platform",
     them: "Self-assessment, often choose wrong and restart",
   },
   {
@@ -87,7 +87,7 @@ const comparisons = [
   {
     criterion: "Testing",
     us: "Test invoice issued and verified before handoff",
-    them: "No testing — first invoice may fail compliance",
+    them: "No testing - first invoice may fail compliance",
   },
   {
     criterion: "Penalty risk",
@@ -109,15 +109,15 @@ const comparisons = [
 const faqs = [
   {
     q: "What is eTIMS and why do I need it?",
-    a: "eTIMS (Electronic Tax Invoice Management System) is KRA's mandatory system for issuing electronic tax invoices in Kenya. If you are registered for VAT, you must issue eTIMS-compliant invoices for every sale to a registered person. A non-compliant invoice attracts the TPA s.86 penalty — since 1 July 2026, the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals) — separate from any VAT penalties.",
+    a: "eTIMS (Electronic Tax Invoice Management System) is KRA's mandatory system for issuing electronic tax invoices in Kenya. If you are registered for VAT, you must issue eTIMS-compliant invoices for every sale to a registered person. A non-compliant invoice attracts the TPA s.86 penalty - since 1 July 2026, the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals) - separate from any VAT penalties.",
   },
   {
     q: "Can I use the eTIMS mobile app for free?",
-    a: "Yes. The eTIMS Mobile app is a free application published by KRA for Android and iOS. There is no cost to download or use it. Our KES 3,000 fee covers your registration, setup, test issuance, and staff training — not the app itself.",
+    a: "Yes. The eTIMS Mobile app is a free application published by KRA for Android and iOS. There is no cost to download or use it. Our KES 3,000 fee covers your registration, setup, test issuance, and staff training - not the app itself.",
   },
   {
     q: "How is eTIMS onboarding different from VAT registration?",
-    a: "VAT registration gets you a VAT PIN on iTax. eTIMS onboarding sets up the system you use to issue compliant electronic invoices. If you have a VAT PIN but are not on eTIMS, you are non-compliant. We cover both — see our VAT registration page for the registration service.",
+    a: "VAT registration gets you a VAT PIN on iTax. eTIMS onboarding sets up the system you use to issue compliant electronic invoices. If you have a VAT PIN but are not on eTIMS, you are non-compliant. We cover both - see our VAT registration page for the registration service.",
   },
   {
     q: "I already have an ERP. Can eTIMS integrate with it?",
@@ -128,12 +128,12 @@ const faqs = [
     a: "Most businesses are registered and issuing test invoices within 1–2 working days. ERP integrations take longer depending on your system's readiness. The staff guidance session is scheduled at your convenience after setup is complete.",
   },
   {
-    q: "What happens after onboarding — do you provide ongoing support?",
+    q: "What happens after onboarding - do you provide ongoing support?",
     a: "Yes. Every onboarding includes a compliance check and one staff session. If you need ongoing support, we offer a monthly eTIMS compliance monitoring add-on (KES 1,500/month) that covers invoice audits, KRA notice responses, and deadline tracking.",
   },
   {
     q: "Are the eTIMS penalties really enforced?",
-    a: "Yes. KRA has been actively enforcing eTIMS compliance since 2024. The legal bases are the Tax Procedures Act — TPA s.86 (since the Finance Act 2026, the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals, for e-invoice failure) and TPA s.59A(5) (up to KES 100,000 per month for failing to integrate a data-management system after written notice, for turnover above KES 5 million). These are distinct from late-filing or late-payment penalties. We have seen businesses receive these assessments firsthand — do not ignore eTIMS compliance.",
+    a: "Yes. KRA has been actively enforcing eTIMS compliance since 2024. The legal bases are the Tax Procedures Act - TPA s.86 (since the Finance Act 2026, the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals, for e-invoice failure) and TPA s.59A(5) (up to KES 100,000 per month for failing to integrate a data-management system after written notice, for turnover above KES 5 million). These are distinct from late-filing or late-payment penalties. We have seen businesses receive these assessments firsthand - do not ignore eTIMS compliance.",
   },
   {
     q: "Do I need a smartphone to use eTIMS?",
@@ -167,7 +167,7 @@ export default function ETIMSOnboardingPage() {
     "@type": "Service",
     name: "eTIMS Onboarding Kenya",
     description:
-      "KRA eTIMS registration and onboarding in Kenya — KES 3,000. Solution type consultation, registration, test invoice, QR code setup, staff training, and compliance check.",
+      "KRA eTIMS registration and onboarding in Kenya - KES 3,000. Solution type consultation, registration, test invoice, QR code setup, staff training, and compliance check.",
     provider: { "@type": "Organization", name: "Smart VAT Kenya" },
   }
 
@@ -195,7 +195,7 @@ export default function ETIMSOnboardingPage() {
           </h1>
           <p className="text-[0.95rem] text-canvas/70 max-w-[55ch] leading-relaxed mb-6">
             eTIMS is mandatory for every VAT-registered business in Kenya. We get you registered on the
-            right platform — mobile app, web portal, or ERP integration — and make sure every invoice you
+            right platform - mobile app, web portal, or ERP integration - and make sure every invoice you
             issue passes KRA compliance. No portal confusion. No missed deadlines.
           </p>
           <div className="flex flex-wrap gap-2 mb-6" role="list" aria-label="Trust signals">
@@ -229,7 +229,7 @@ export default function ETIMSOnboardingPage() {
         <div className="max-w-[1400px] mx-auto flex items-start gap-3">
           <WarningCircle size={18} weight="fill" className="text-red-500 shrink-0 mt-0.5" aria-hidden="true" />
           <p className="text-[0.85rem] text-red-800 leading-relaxed">
-            <strong className="font-semibold">TPA s.86</strong> e-invoice failure penalties (higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals, since 1 July 2026), and <strong className="font-semibold">up to KES 100,000 per month</strong> for system non-integration after a written notice (TPA s.59A(5)) — separate from VAT penalties. KRA has been actively enforcing this since 2024.
+            <strong className="font-semibold">TPA s.86</strong> e-invoice failure penalties (higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals, since 1 July 2026), and <strong className="font-semibold">up to KES 100,000 per month</strong> for system non-integration after a written notice (TPA s.59A(5)) - separate from VAT penalties. KRA has been actively enforcing this since 2024.
           </p>
         </div>
       </div>
@@ -245,7 +245,7 @@ export default function ETIMSOnboardingPage() {
               Everything you need to go live with eTIMS.
             </h2>
             <p className="text-[0.93rem] text-ink-muted leading-relaxed max-w-[44ch]">
-              KES 3,000 covers the full onboarding process — from choosing the right solution type
+              KES 3,000 covers the full onboarding process - from choosing the right solution type
               through to issuing your first compliant invoice. No add-ons, no upsells.
             </p>
             <a
@@ -280,7 +280,7 @@ export default function ETIMSOnboardingPage() {
           </h2>
           <p className="text-[0.93rem] text-ink-muted leading-relaxed max-w-[55ch] mb-10">
             Every business is different. We help you pick the right eTIMS solution for your size, volume,
-            and existing setup — then get you registered and running.
+            and existing setup - then get you registered and running.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             {solutions.map(({ Icon, title, for: forText, body }) => (
@@ -305,7 +305,7 @@ export default function ETIMSOnboardingPage() {
             Three steps to eTIMS compliance.
           </h2>
           <p className="text-[0.93rem] text-canvas/70 leading-relaxed max-w-[55ch] mb-10">
-            From first message to compliant invoicing — here is exactly how it works.
+            From first message to compliant invoicing - here is exactly how it works.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {steps.map(({ Icon, title, body }, i) => (
@@ -335,7 +335,7 @@ export default function ETIMSOnboardingPage() {
           </h2>
           <p className="text-[0.93rem] text-ink-muted leading-relaxed max-w-[55ch] mb-10">
             eTIMS setup looks simple on paper, but choosing the wrong solution type or missing a
-            configuration step can mean invoices that fail compliance — and notices from KRA.
+            configuration step can mean invoices that fail compliance - and notices from KRA.
           </p>
           <div className="border border-hairline rounded-lg overflow-hidden">
             <table className="w-full text-left" role="table">
@@ -365,7 +365,7 @@ export default function ETIMSOnboardingPage() {
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.1rem] font-semibold text-ink">
-              KES 3,000 — get eTIMS compliant today
+              KES 3,000 - get eTIMS compliant today
             </p>
             <p className="text-[0.85rem] text-ink-muted mt-1">
               Avoid the multi-million-shilling eTIMS penalties. We handle everything. M-PESA accepted.

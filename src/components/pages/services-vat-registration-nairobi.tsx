@@ -35,7 +35,7 @@ const localBusinessSchema = {
   "@id": "https://smartvatkenya.co.ke/services/vat-registration-nairobi#business",
   name: "Smart VAT Kenya",
   description:
-    "Professional VAT registration services in Nairobi — KES 5,000 flat fee. KRA iTax registration, eTIMS guidance, and monthly VAT filing.",
+    "Professional VAT registration services in Nairobi - KES 5,000 flat fee. KRA iTax registration, eTIMS guidance, and monthly VAT filing.",
   url: "https://smartvatkenya.co.ke/services/vat-registration-nairobi",
   telephone: "+254717344440",
   email: "info@smartvatkenya.co.ke",
@@ -94,7 +94,7 @@ const faqSchema = {
       name: "Can you pick up documents from my business in Nairobi?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. For clients within Nairobi — including Westlands, Kilimani, Industrial Area, Karen, and other suburbs — we can arrange document pickup. Just let us know your location on WhatsApp.",
+        text: "Yes. For clients within Nairobi - including Westlands, Kilimani, Industrial Area, Karen, and other suburbs - we can arrange document pickup. Just let us know your location on WhatsApp.",
       },
     },
     {
@@ -141,7 +141,7 @@ const serviceSchema = {
   "@id": "https://smartvatkenya.co.ke/services/vat-registration-nairobi#service",
   name: "VAT Registration Services Nairobi",
   description:
-    "Professional KRA VAT registration in Nairobi — KES 5,000 flat fee, done in 1–3 working days. iTax VAT Form 1, PIN generation, and eTIMS guidance included. M-PESA accepted. No hidden costs.",
+    "Professional KRA VAT registration in Nairobi - KES 5,000 flat fee, done in 1–3 working days. iTax VAT Form 1, PIN generation, and eTIMS guidance included. M-PESA accepted. No hidden costs.",
   provider: { "@type": "Organization", name: "Smart VAT Kenya" },
   areaServed: { "@type": "City", name: "Nairobi" },
 }
@@ -194,7 +194,7 @@ const steps = [
     description:
       "We log into the KRA iTax portal, update your profile, complete VAT Form 1, and submit. Familiar with Huduma Centre Nairobi processes if needed.",
     details: [
-      "KRA iTax portal — fully handled",
+      "KRA iTax portal - fully handled",
       "Profile update completed",
       "VAT Form 1 submitted",
       "WhatsApp updates throughout",
@@ -217,10 +217,10 @@ const steps = [
 
 const comparisons = [
   { criterion: "Price", us: "KES 5,000 flat", them: "KES 15,000–30,000" },
-  { criterion: "Communication", us: "WhatsApp — reply in minutes", them: "Email / scheduled calls" },
+  { criterion: "Communication", us: "WhatsApp - reply in minutes", them: "Email / scheduled calls" },
   { criterion: "Turnaround", us: "1–3 working days", them: "1–3 weeks" },
   { criterion: "Payment", us: "M-PESA", them: "Bank transfer / cheque" },
-  { criterion: "Location", us: "Nairobi CBD — Pioneer House", them: "Remote / no physical office" },
+  { criterion: "Location", us: "Nairobi CBD - Pioneer House", them: "Remote / no physical office" },
   { criterion: "eTIMS guidance", us: "Included", them: "Charged separately or not offered" },
   { criterion: "Hidden fees", us: "None", them: "Often yes" },
 ]
@@ -232,11 +232,11 @@ const faqs = [
   },
   {
     q: "Can you pick up documents from my business in Nairobi?",
-    a: "Yes. For clients within Nairobi — including Westlands, Kilimani, Industrial Area, Karen, Lang'ata, and all other suburbs — we can arrange document pickup. Just let us know your location on WhatsApp and we will coordinate a pickup time.",
+    a: "Yes. For clients within Nairobi - including Westlands, Kilimani, Industrial Area, Karen, Lang'ata, and all other suburbs - we can arrange document pickup. Just let us know your location on WhatsApp and we will coordinate a pickup time.",
   },
   {
     q: "Do you serve businesses outside Nairobi?",
-    a: "Absolutely. While we are based in Nairobi CBD, the entire KRA iTax process is handled online. We serve businesses across Kenya, including Mombasa, Kisumu, Nakuru, Eldoret, and all other counties. Everything is done via WhatsApp — no need to visit Nairobi.",
+    a: "Absolutely. While we are based in Nairobi CBD, the entire KRA iTax process is handled online. We serve businesses across Kenya, including Mombasa, Kisumu, Nakuru, Eldoret, and all other counties. Everything is done via WhatsApp - no need to visit Nairobi.",
   },
   {
     q: "How long does VAT registration take in Nairobi?",
@@ -272,13 +272,13 @@ export default function VATRegistrationNairobiPage() {
       <div className="bg-canvas-dark px-6 lg:px-10 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
-            VAT registration — Nairobi
+            VAT registration - Nairobi
           </p>
           <p className="font-mono text-[0.7rem] text-brand mb-6">
             Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
-            VAT Registration Services Nairobi — KES 5,000
+            VAT Registration Services Nairobi - KES 5,000
           </h1>
           <p className="text-[0.95rem] text-canvas/70 max-w-[55ch] leading-relaxed mb-6">
             We are based in Nairobi CBD. Our team is familiar with KRA iTax and
@@ -371,7 +371,7 @@ export default function VATRegistrationNairobiPage() {
               {
                 Icon: WhatsappLogo,
                 title: "WhatsApp-first",
-                desc: "Reply within minutes. No emails, no phone tag — just WhatsApp.",
+                desc: "Reply within minutes. No emails, no phone tag - just WhatsApp.",
               },
               {
                 Icon: CurrencyDollar,
@@ -511,7 +511,7 @@ export default function VATRegistrationNairobiPage() {
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.1rem] font-semibold text-ink">
-              KES 5,000 — VAT registration in Nairobi
+              KES 5,000 - VAT registration in Nairobi
             </p>
             <p className="text-[0.85rem] text-ink-muted mt-1">
               Based at Pioneer House, Moi Avenue. Done in 1–3 working days.
@@ -542,7 +542,7 @@ export default function VATRegistrationNairobiPage() {
             id="faq-heading"
             className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-10 text-balance"
           >
-            VAT registration in Nairobi — answered.
+            VAT registration in Nairobi - answered.
           </h2>
 
           <div className="space-y-6">
@@ -565,7 +565,7 @@ export default function VATRegistrationNairobiPage() {
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <h2 className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-canvas mb-2 text-balance">
-              Register for VAT in Nairobi — KES 5,000.
+              Register for VAT in Nairobi - KES 5,000.
             </h2>
             <p className="text-[0.88rem] text-canvas/65 max-w-[40ch]">
               Based in Nairobi CBD. Send a WhatsApp message now. No commitment required.

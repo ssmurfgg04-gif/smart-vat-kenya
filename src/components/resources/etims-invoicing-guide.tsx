@@ -60,7 +60,7 @@ const faqSchema = {
       "name": "What if my supplier does not issue eTIMS invoices?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "If your supplier is not using eTIMS, you have three options. First, ask them to register for eTIMS (send them KRA's eTIMS onboarding guide). Second, use Buyer-Initiated Invoicing (BII) on the eTIMS system — you generate the invoice on their behalf, they receive a notification, and you can claim your input VAT. Third, if neither works, consider switching to a compliant supplier, because you cannot claim input VAT on non-eTIMS invoices from that supplier.",
+        text: "If your supplier is not using eTIMS, you have three options. First, ask them to register for eTIMS (send them KRA's eTIMS onboarding guide). Second, use Buyer-Initiated Invoicing (BII) on the eTIMS system - you generate the invoice on their behalf, they receive a notification, and you can claim your input VAT. Third, if neither works, consider switching to a compliant supplier, because you cannot claim input VAT on non-eTIMS invoices from that supplier.",
       },
     },
     {
@@ -156,7 +156,7 @@ export default function ETIMSInvoicingGuidePage() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — What Is */}
+          {/* Section 1 - What Is */}
           <section id="what-is-etims-invoice" aria-labelledby="what-is-etims-invoice-h">
             <h2 id="what-is-etims-invoice-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What Is an eTIMS-Compliant Invoice?
@@ -165,7 +165,7 @@ export default function ETIMSInvoicingGuidePage() {
               <p>
                 An eTIMS-compliant invoice is a tax invoice that has been <strong className="text-ink">generated,
                 transmitted, and confirmed</strong> through KRA's Electronic Tax Invoice Management System
-                (eTIMS). It is not simply an invoice that includes a KRA PIN — it must be created through
+                (eTIMS). It is not simply an invoice that includes a KRA PIN - it must be created through
                 one of KRA's approved eTIMS solutions.
               </p>
               <p>
@@ -179,7 +179,7 @@ export default function ETIMSInvoicingGuidePage() {
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
                   <strong className="text-ink">Key point:</strong> An invoice from a word processor, Excel
                   spreadsheet, or handwritten receipt pad is <strong className="text-ink">not</strong> an
-                  eTIMS-compliant invoice — even if it includes your KRA PIN. Only invoices generated
+                  eTIMS-compliant invoice - even if it includes your KRA PIN. Only invoices generated
                   through eTIMS Lite, eTIMS Client, eTIMS Trader, or VSCU/OSCU qualify.
                 </p>
               </div>
@@ -193,7 +193,7 @@ export default function ETIMSInvoicingGuidePage() {
             </div>
           </section>
 
-          {/* Section 2 — Mandatory Fields */}
+          {/* Section 2 - Mandatory Fields */}
           <section id="mandatory-fields" aria-labelledby="mandatory-fields-h">
             <h2 id="mandatory-fields-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Mandatory eTIMS Invoice Fields
@@ -226,7 +226,7 @@ export default function ETIMSInvoicingGuidePage() {
             </div>
           </section>
 
-          {/* Section 3 — B2B vs B2C */}
+          {/* Section 3 - B2B vs B2C */}
           <section id="b2b-vs-b2c" aria-labelledby="b2b-vs-b2c-h">
             <h2 id="b2b-vs-b2c-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               B2B vs B2C Invoicing Rules
@@ -262,7 +262,7 @@ export default function ETIMSInvoicingGuidePage() {
                     </tr>
                     <tr>
                       <td className="p-3.5 text-ink-muted">Sale to unregistered person below KES 10,000</td>
-                      <td className="p-3.5 text-ink-muted">Simplified invoice — name only</td>
+                      <td className="p-3.5 text-ink-muted">Simplified invoice - name only</td>
                       <td className="p-3.5 text-ink font-medium">16%</td>
                     </tr>
                     <tr>
@@ -279,13 +279,13 @@ export default function ETIMSInvoicingGuidePage() {
                   <strong className="text-ink">Common mistake:</strong> Many businesses skip asking for the
                   buyer's KRA PIN on B2B transactions above KES 10,000. This is a compliance violation.
                   If the buyer later asks for a corrected invoice so they can claim input VAT, you must
-                  issue a credit note and a new eTIMS invoice — an administrative burden for both parties.
+                  issue a credit note and a new eTIMS invoice - an administrative burden for both parties.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Section 4 — QR Codes */}
+          {/* Section 4 - QR Codes */}
           <section id="qr-codes" aria-labelledby="qr-codes-h">
             <h2 id="qr-codes-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               QR Codes and Server Confirmation Codes
@@ -318,7 +318,7 @@ export default function ETIMSInvoicingGuidePage() {
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
                   <strong className="text-ink">Pro tip:</strong> Always scan your own eTIMS invoice QR code
                   before sending it to the customer. If the QR code fails, the invoice was not transmitted
-                  to KRA — even if your eTIMS system showed "success". This can happen due to network
+                  to KRA - even if your eTIMS system showed "success". This can happen due to network
                   interruptions or system glitches. A failing QR code means the invoice is not compliant
                   and your customer cannot claim input VAT.
                 </p>
@@ -326,7 +326,7 @@ export default function ETIMSInvoicingGuidePage() {
             </div>
           </section>
 
-          {/* Section 5 — Verification */}
+          {/* Section 5 - Verification */}
           <section id="verification" aria-labelledby="verification-h">
             <h2 id="verification-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               How to Verify an eTIMS Invoice
@@ -390,7 +390,7 @@ export default function ETIMSInvoicingGuidePage() {
             </div>
           </section>
 
-          {/* Section 6 — Supplier Not on eTIMS */}
+          {/* Section 6 - Supplier Not on eTIMS */}
           <section id="supplier-not-on-etims" aria-labelledby="supplier-not-on-etims-h">
             <h2 id="supplier-not-on-etims-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What If Your Supplier Is Not on eTIMS?
@@ -409,11 +409,11 @@ export default function ETIMSInvoicingGuidePage() {
                   },
                   {
                     option: "2. Use Buyer-Initiated Invoicing (BII)",
-                    detail: "If your supplier is not yet on eTIMS but you still need the goods, you can use BII on the eTIMS system. You generate an eTIMS invoice on behalf of your supplier, transmit it to KRA, and the supplier receives a notification to accept or reject it. If accepted, you can claim input VAT. BII is a transitional solution — the supplier is expected to onboard within a reasonable period.",
+                    detail: "If your supplier is not yet on eTIMS but you still need the goods, you can use BII on the eTIMS system. You generate an eTIMS invoice on behalf of your supplier, transmit it to KRA, and the supplier receives a notification to accept or reject it. If accepted, you can claim input VAT. BII is a transitional solution - the supplier is expected to onboard within a reasonable period.",
                   },
                   {
                     option: "3. Switch to a compliant supplier",
-                    detail: "If your supplier refuses to register for eTIMS and BII is not practical, consider switching to a supplier who is eTIMS-compliant. The cost of losing input VAT claims month after month adds up quickly — often exceeding any price advantage from a non-compliant supplier.",
+                    detail: "If your supplier refuses to register for eTIMS and BII is not practical, consider switching to a supplier who is eTIMS-compliant. The cost of losing input VAT claims month after month adds up quickly - often exceeding any price advantage from a non-compliant supplier.",
                   },
                   {
                     option: "4. Report persistent non-compliance to KRA",
@@ -436,7 +436,7 @@ export default function ETIMSInvoicingGuidePage() {
             </div>
           </section>
 
-          {/* Section 7 — Common Mistakes */}
+          {/* Section 7 - Common Mistakes */}
           <section id="common-mistakes" aria-labelledby="common-mistakes-h">
             <h2 id="common-mistakes-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Common eTIMS Invoice Mistakes
@@ -508,7 +508,7 @@ export default function ETIMSInvoicingGuidePage() {
             <p className="text-[0.83rem] text-ink-muted leading-relaxed">
               Looking further ahead?{" "}
               <a href="/resources/cetis-kenya-2027/" className="text-brand underline underline-offset-2 hover:text-brand-hover">CETIS Kenya 2027</a>{" "}
-              is KRA&apos;s planned pre-clearance e-invoicing system (in procurement for 2027&ndash;28) — a valid, structured invoice today is the fastest path to CETIS readiness.
+              is KRA&apos;s planned pre-clearance e-invoicing system (in procurement for 2027&ndash;28) - a valid, structured invoice today is the fastest path to CETIS readiness.
             </p>
           </div>
           <ArticleGrid currentSlug="etims-invoicing-guide" />

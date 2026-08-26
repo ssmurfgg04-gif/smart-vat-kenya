@@ -1,4 +1,4 @@
-﻿# Phase 3 — B2B2B Licensing Sprint
+﻿# Phase 3 - B2B2B Licensing Sprint
 
 _Date: 2026-08-08 · Status: plan ready_
 
@@ -60,46 +60,46 @@ client fees instead of flat fee (whichever is higher, min KES 10,000/mo).
 
 - Each licensee gets their own **GavaConnect credentials** (PIN → key/secret per product).
 - Shared engine code; per-licensee config via env / database.
-- Deployed on Kenya-hosted infra (Postgres + object store) — satisfies ODPC
+- Deployed on Kenya-hosted infra (Postgres + object store) - satisfies ODPC
   data-localization for licensee and their clients.
 
 ## Sprint Plan (6 weeks)
 
-### Week 1 — Multi-tenant Core & Config Schema
+### Week 1 - Multi-tenant Core & Config Schema
 - [ ] Add `licensee_id` to `ClientStore` schema; scope all queries by licensee
 - [ ] Licensee config table: branding, WhatsApp sender ID, M-PESA credentials, webhook endpoints, pricing overrides
-- [ ] Config injection into `createFullEngine` — `FullEngineConfig` gets `licenseeId`, resolves credentials from config store
+- [ ] Config injection into `createFullEngine` - `FullEngineConfig` gets `licenseeId`, resolves credentials from config store
 - [ ] Unit tests: licensee isolation (store, filing, portals)
 
-### Week 2 — Licensee Onboarding & Provisioning
+### Week 2 - Licensee Onboarding & Provisioning
 - [ ] Admin CLI / API: `createLicensee({ name, tier, gavaCreds, whatsapp, mpesa })`
 - [ ] Generate per-licensee `GavaClient` from stored creds; validate on create
 - [ ] Seed licensee config with defaults (reminder copy, 17th Guarantee terms)
 - [ ] Provision isolated DB schema or row-level security per licensee
 - [ ] Docs: licensee onboarding guide (how to get Gava creds, WhatsApp Business API, Daraja)
 
-### Week 3 — White-Label Client Portal (licensee-facing)
+### Week 3 - White-Label Client Portal (licensee-facing)
 - [ ] Licensee dashboard: view their clients, health scores, filing status, revenue
 - [ ] White-label WhatsApp sender ID (licensee's business name in messages)
 - [ ] Webhook dashboard: view filing outcomes, payment receipts, Tax Alerts
 - [ ] Embeddable client portal iframe for licensee's website (brand colors, logo)
 - [ ] Licensee billing: usage metering (filings, reminders, STK pushes) → invoice
 
-### Week 4 — Compliance Pack for Licensees (ODPC inheritance)
+### Week 4 - Compliance Pack for Licensees (ODPC inheritance)
 - [ ] DPA template pre-filled with SmartVAT as sub-processor
 - [ ] Data localization evidence pack (Kenya DC cert, backup region)
 - [ ] Breach notification procedure (72h) templated for licensee
 - [ ] DPIA guidance for health-score profiling (licensee as controller)
 - [ ] Privacy policy generator (licensee brand, SmartVAT as processor)
 
-### Week 5 — Sales Enablement & Pilot
+### Week 5 - Sales Enablement & Pilot
 - [ ] Agent pitch deck: "17th Guarantee + Tax Alerts engine = your moat"
 - [ ] Pilot agreement template (3 months, KES 15k/mo, success criteria)
 - [ ] Identify 3–5 pilot agents (existing network, KRA-registered, 10–50 clients)
 - [ ] Onboard pilots: credentials, WhatsApp, M-PESA, test filing cycle
 - [ ] Weekly pilot sync; collect NPS, bug reports, feature requests
 
-### Week 6 — Launch & Scale
+### Week 6 - Launch & Scale
 - [ ] Refine from pilot feedback; harden multi-tenant isolation
 - [ ] Public licensing page (smartvatkenya.co.ke/license)
 - [ ] Legal: MSA + DPA templates reviewed by counsel

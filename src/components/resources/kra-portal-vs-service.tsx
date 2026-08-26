@@ -49,7 +49,7 @@ export default function KraPortalVsServicePage() {
         <div className="border-l-[3px] border-brand pl-5">
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
             The portal is free. The penalty for getting it wrong is KES 10,000. 
-            The 11:47pm timeout isn't a glitch — it's the system telling you 
+            The 11:47pm timeout isn't a glitch - it's the system telling you 
             it wasn't built for you. We file on the 17th. You never touch iTax.
           </p>
         </div>
@@ -98,7 +98,7 @@ export default function KraPortalVsServicePage() {
         <div className="bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-lg font-semibold text-ink mb-2">Ready to let us handle the portal?</p>
           <a href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20register%20for%20VAT%20with%20Smart%20VAT`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold px-6 py-3 rounded-md hover:bg-brand-hover transition-colors">
-            Start Registration — KES 5,000 <ArrowRight size={14} weight="bold" />
+            Start Registration - KES 5,000 <ArrowRight size={14} weight="bold" />
           </a>
         </div>
 

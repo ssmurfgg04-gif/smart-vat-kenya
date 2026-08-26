@@ -1,5 +1,5 @@
 ﻿/**
- * SmartVAT OS — 2026 return-rematch (validation) module.
+ * SmartVAT OS - 2026 return-rematch (validation) module.
  *
  * Since January 2026 KRA's Income & Expense Validation Engine cross-checks
  * every figure on a filed return against eTIMS invoice data month-to-month,
@@ -78,7 +78,7 @@ export function validateReturn(input: ValidationInput): ValidationOutput {
       code: "SALES_OVER_DECLARED_OK",
       severity: "low",
       message:
-        `Declared sales are ${formatKES(-salesGap)} above eTIMS transmissions — ` +
+        `Declared sales are ${formatKES(-salesGap)} above eTIMS transmissions - ` +
         `acceptable, since the return only allows UPWARD adjustments.`,
       gapKes: salesGap,
     })
@@ -104,7 +104,7 @@ export function validateReturn(input: ValidationInput): ValidationOutput {
     status === "clean"
       ? "Declared figures match your eTIMS record within tolerance. File as-is."
       : status === "attention"
-        ? "Raise the declared sales to your transmitted level, then file — the KRA return only accepts upward."
+        ? "Raise the declared sales to your transmitted level, then file - the KRA return only accepts upward."
         : "Expenses above what your eTIMS purchase invoices support will be queried. Reconcile before filing."
 
   return {

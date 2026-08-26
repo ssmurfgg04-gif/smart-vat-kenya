@@ -6,7 +6,7 @@ import { ArticleGrid } from "@/lib/resources"
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "VAT Deadline Kenya: August 2026 — Don't Miss the 20th",
+  headline: "VAT Deadline Kenya: August 2026 - Don't Miss the 20th",
   description:
     "The KRA VAT return is due by the 20th of every month. Late filing costs KES 10,000 + 5% of tax due + 1%/month interest. Here is exactly what to file, how to avoid penalties, and what to do if you missed the deadline.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -23,7 +23,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "VAT Deadline Kenya — August 2026", item: "https://smartvatkenya.co.ke/resources/kra-vat-filing-deadline-august-2026/" },
+    { "@type": "ListItem", position: 3, name: "VAT Deadline Kenya - August 2026", item: "https://smartvatkenya.co.ke/resources/kra-vat-filing-deadline-august-2026/" },
   ],
 }
 
@@ -42,7 +42,7 @@ export default function DeadlinePost() {
         <header className="mb-8">
           <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Deadline Reminder</p>
           <h1 className="font-display text-[clamp(1.5rem,3vw,2rem)] font-semibold text-ink tracking-tight leading-tight mb-4 text-balance">
-            VAT Deadline Kenya: August 2026 — Don&apos;t Miss the 20th
+            VAT Deadline Kenya: August 2026 - Don&apos;t Miss the 20th
           </h1>
           <div className="flex items-center gap-4 text-[0.75rem] text-ink-muted">
             <time dateTime="2026-07-25">25 July 2026</time>
@@ -54,12 +54,12 @@ export default function DeadlinePost() {
         <div className="space-y-5 text-[0.9rem] text-ink-soft leading-[1.75]">
           <p>
             Every month, thousands of Kenyan business owners wake up on the 21st and realise they
-            missed the VAT filing deadline. The penalty hits automatically — KES 10,000 or 5% of
+            missed the VAT filing deadline. The penalty hits automatically - KES 10,000 or 5% of
             the tax due (whichever is higher), plus 1% interest per month. And if you filed a nil return late? Still KES 10,000.
           </p>
           <p>
-            Under the <strong>VAT Act 2013</strong>, every VAT-registered business — including those making
-            <strong> zero-rated supplies</strong> — must file a monthly return by the 20th of the following month,
+            Under the <strong>VAT Act 2013</strong>, every VAT-registered business - including those making
+            <strong> zero-rated supplies</strong> - must file a monthly return by the 20th of the following month,
             even in months with no sales (a nil return). The KES 5 million turnover threshold is what triggers
             registration in the first place; once you&apos;re registered, the 20th is non-negotiable.
           </p>
@@ -78,7 +78,7 @@ export default function DeadlinePost() {
             <div>
               <p className="font-semibold text-ink text-[0.9rem]">August 2026 deadline</p>
               <p className="text-[0.83rem] text-red-700 dark:text-red-400 leading-relaxed">
-                <strong>20 August 2026</strong> — for the July 2026 tax period. Mark your calendar.
+                <strong>20 August 2026</strong> - for the July 2026 tax period. Mark your calendar.
               </p>
             </div>
           </div>
@@ -145,14 +145,14 @@ export default function DeadlinePost() {
           <div className="border border-brand/25 bg-brand-muted rounded-lg p-5 mt-8">
             <p className="font-semibold text-ink text-[0.9rem] mb-1">Let us file for you</p>
             <p className="text-[0.83rem] text-ink-muted mb-3">
-              We file your VAT return before the 17th of every month — well before the KRA deadline.
+              We file your VAT return before the 17th of every month - well before the KRA deadline.
               KES 3,500/month. M-PESA accepted. Includes penalty waiver support if you have missed
               past deadlines.
             </p>
             <a href="https://wa.me/254717344440?text=I%20want%20the%20KES%203500%20Monthly%20VAT%20Filing%20service"
               target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-4 py-2.5 rounded-md hover:bg-brand-hover transition-colors">
-              Start Filing — KES 3,500/mo <ArrowRight size={14} weight="bold" aria-hidden="true" />
+              Start Filing - KES 3,500/mo <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
           </div>
 
@@ -168,7 +168,7 @@ export default function DeadlinePost() {
             <a href="/resources/kra-penalty-for-late-vat-filing/" className="text-brand underline underline-offset-2">
               KRA Penalty for Late VAT Filing
             </a>{" "}
-            — includes the waiver application process and a calculator to estimate your exposure.
+            - includes the waiver application process and a calculator to estimate your exposure.
           </p>
         </div>
       </article>

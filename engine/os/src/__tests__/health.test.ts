@@ -19,7 +19,7 @@ function makeSnapshot(overrides: Partial<ComplianceSnapshot> = {}): ComplianceSn
 
 test("a clean snapshot scores high", async () => {
   const h = await computeHealth({ snapshot: makeSnapshot() })
-  // on_time .4 + etims .2 + continuity .15 — all 100 = 75; tcc .1 + supplier
+  // on_time .4 + etims .2 + continuity .15 - all 100 = 75; tcc .1 + supplier
   // .1 = 20; zero-rated share 0 adds 0.05*0 => 95, which is still "low".
   assert.equal(h.score, 95)
   assert.equal(h.level, "low")

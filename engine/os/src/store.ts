@@ -3,7 +3,7 @@ import { FilingOutcome } from "./filing.js"
 import { PaymentReceipt } from "./mpesa.js"
 
 /**
- * Persistence — the client/ledger store.
+ * Persistence - the client/ledger store.
  *
  * Phase 0 will land a real DB (privacy-by-default, Kenya-hosted). Until then
  * the OS talks to a `Ledger` interface and ships an in-memory implementation so

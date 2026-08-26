@@ -8,7 +8,7 @@ const WA_BASE = "https://wa.me/254717344440"
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "VAT Threshold Kenya 2026 — KES 5M or 8M? The Real Answer",
+  headline: "VAT Threshold Kenya 2026 - KES 5M or 8M? The Real Answer",
   description: "Resolving the confusion between the operative KES 5 million VAT registration threshold and the proposed KES 8 million Finance Act 2025 rule. Official KRA guidance verified.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-08",
@@ -36,7 +36,7 @@ export default function VatThresholdExplainerPage() {
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
           </a>
           <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4">
-            VAT Threshold Kenya 2026 — KES 5M or 8M? The Real Answer
+            VAT Threshold Kenya 2026 - KES 5M or 8M? The Real Answer
           </h1>
           <p className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; Last verified {FACTS.lastVerified} against KRA guidance</p>
         </div>

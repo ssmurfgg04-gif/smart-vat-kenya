@@ -36,7 +36,7 @@ const faqSchema = {
       name: "Why does eTIMS keep rejecting my invoices?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The most common reasons are: (1) Wrong signature type — you selected ITAX but the customer is a DIGITAL user, or vice versa. (2) Duplicate invoice serial number — the number has already been used. (3) Customer's KRA PIN is invalid or not found. (4) Control unit malfunction or connection timeout. (5) Invoice total does not match the line item breakdown. Check the rejection message carefully — eTIMS usually tells you exactly what is wrong.",
+        text: "The most common reasons are: (1) Wrong signature type - you selected ITAX but the customer is a DIGITAL user, or vice versa. (2) Duplicate invoice serial number - the number has already been used. (3) Customer's KRA PIN is invalid or not found. (4) Control unit malfunction or connection timeout. (5) Invoice total does not match the line item breakdown. Check the rejection message carefully - eTIMS usually tells you exactly what is wrong.",
       },
     },
     {
@@ -60,7 +60,7 @@ const faqSchema = {
       name: "How do I fix a duplicate invoice number error in eTIMS?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A duplicate serial number error means that number has already been used in the system. eTIMS assigns serial numbers sequentially. If you are getting this error, check: (1) You may have skipped a number — find the last successfully issued invoice and continue from the next number. (2) The serial number was already used in a draft or cancelled invoice. (3) Your eTIMS device serial number range needs resetting — contact KRA eTIMS support.",
+        text: "A duplicate serial number error means that number has already been used in the system. eTIMS assigns serial numbers sequentially. If you are getting this error, check: (1) You may have skipped a number - find the last successfully issued invoice and continue from the next number. (2) The serial number was already used in a draft or cancelled invoice. (3) Your eTIMS device serial number range needs resetting - contact KRA eTIMS support.",
       },
     },
     {
@@ -250,7 +250,7 @@ export default function ETIMSInvoiceRejectedPage() {
                 {[
                   {
                     title: "PIN format may be incorrect",
-                    desc: "KRA PINs follow the format A0123456789Z — 11 characters, all uppercase, no spaces. Check for common typos: O vs 0, I vs 1, S vs 5.",
+                    desc: "KRA PINs follow the format A0123456789Z - 11 characters, all uppercase, no spaces. Check for common typos: O vs 0, I vs 1, S vs 5.",
                   },
                   {
                     title: "Customer's PIN may be deactivated or suspended",
@@ -283,7 +283,7 @@ export default function ETIMSInvoiceRejectedPage() {
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                eTIMS relies on either a physical control unit (ESD — Electronic Signature Device) or the online portal to sign and transmit invoices. If the control unit or connection fails, invoices get rejected.
+                eTIMS relies on either a physical control unit (ESD - Electronic Signature Device) or the online portal to sign and transmit invoices. If the control unit or connection fails, invoices get rejected.
               </p>
               <div className="space-y-3">
                 {[
@@ -347,7 +347,7 @@ export default function ETIMSInvoiceRejectedPage() {
                   },
                   {
                     title: "Discounts must be applied correctly",
-                    desc: "If you apply a discount, eTIMS expects it to be reflected in the line item amounts. You cannot show a gross total and a discount separately — the line items must reflect the discounted price.",
+                    desc: "If you apply a discount, eTIMS expects it to be reflected in the line item amounts. You cannot show a gross total and a discount separately - the line items must reflect the discounted price.",
                   },
                   {
                     title: "Currency rounding issues",
@@ -465,10 +465,10 @@ export default function ETIMSInvoiceRejectedPage() {
                 {[
                   "Confirm the customer type: VAT-registered business (ITAX) or consumer (DIGITAL).",
                   "If ITAX, verify the customer's KRA PIN on iTax before entering it into eTIMS.",
-                  "Ensure the serial number is the next available — let eTIMS auto-assign it.",
+                  "Ensure the serial number is the next available - let eTIMS auto-assign it.",
                   "Double-check line item totals add up to the invoice total exactly.",
                   "Verify VAT is calculated at exactly 16% (or the correct rate for zero-rated/exempt items).",
-                  "Use specific item descriptions — no vague terms like 'goods' or 'services'.",
+                  "Use specific item descriptions - no vague terms like 'goods' or 'services'.",
                   "Check that HS codes (if required) are correct and match the tax rate.",
                   "Ensure your eTIMS device or portal connection is working before you start.",
                   "Have a stable internet connection throughout the submission process.",
@@ -492,7 +492,7 @@ export default function ETIMSInvoiceRejectedPage() {
                   target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
-                  Start eTIMS Management — KES 2,500/month
+                  Start eTIMS Management - KES 2,500/month
                   <ArrowRight size={14} weight="bold" aria-hidden="true" />
                 </a>
               </div>

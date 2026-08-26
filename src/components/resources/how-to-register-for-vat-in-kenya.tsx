@@ -122,12 +122,12 @@ export default function Pillar1Page() {
             To register for VAT in Kenya, your business must have annual taxable turnover above{" "}
             <strong className="text-ink">KES 5 million</strong>. You apply on the{" "}
             <strong className="text-ink">KRA iTax portal</strong> at itax.kra.go.ke using your KRA PIN, national ID, and bank details. KRA issues your VAT PIN within{" "}
-            <strong className="text-ink">1–3 working days</strong>. KRA does not charge a fee — but if you hire a professional, Smart VAT Kenya charges a flat{" "}
+            <strong className="text-ink">1–3 working days</strong>. KRA does not charge a fee - but if you hire a professional, Smart VAT Kenya charges a flat{" "}
             <strong className="text-ink">KES 5,000</strong>.
           </p>
         </div>
 
-        <Flowchart caption="VAT registration decision flowchart — from turnover check to PIN issued">
+        <Flowchart caption="VAT registration decision flowchart - from turnover check to PIN issued">
           <VATRegistrationFlow />
         </Flowchart>
 
@@ -161,7 +161,7 @@ export default function Pillar1Page() {
                 <strong className="text-ink">KES 5 million</strong>. This is called the mandatory VAT registration threshold. You must apply within <strong className="text-ink">30 days</strong> of reaching this amount.
               </p>
               <p>
-                Taxable turnover means the total value of taxable supplies — the goods and services you sell that attract either the 16% standard rate or the 0% zero rate. Exempt supplies (financial services, residential rent, education) do not count toward this threshold.
+                Taxable turnover means the total value of taxable supplies - the goods and services you sell that attract either the 16% standard rate or the 0% zero rate. Exempt supplies (financial services, residential rent, education) do not count toward this threshold.
               </p>
               <div className="border border-canvas-warm bg-[#fffbf0] dark:bg-[#2a1f00] dark:border-[#4a3800] rounded-lg p-4 flex items-start gap-3">
                 <Warning size={17} weight="fill" className="text-[#b07a00] shrink-0 mt-0.5" aria-hidden="true" />
@@ -178,7 +178,7 @@ export default function Pillar1Page() {
               <div className="border border-hairline rounded-lg p-5 bg-canvas-alt">
                 <p className="font-semibold text-ink text-[0.88rem] mb-3">Can I register voluntarily?</p>
                 <p className="text-[0.85rem] text-ink-muted leading-relaxed">
-                  Yes. Even if your turnover is below KES 5 million, you can apply for voluntary VAT registration. This is useful if you have high business costs — because as a VAT-registered person, you can claim back the 16% VAT your suppliers charge you (called <strong className="text-ink">input VAT</strong>). Many Nairobi suppliers and corporate clients also prefer to work only with VAT-registered businesses.
+                  Yes. Even if your turnover is below KES 5 million, you can apply for voluntary VAT registration. This is useful if you have high business costs - because as a VAT-registered person, you can claim back the 16% VAT your suppliers charge you (called <strong className="text-ink">input VAT</strong>). Many Nairobi suppliers and corporate clients also prefer to work only with VAT-registered businesses.
                 </p>
               </div>
             </div>
@@ -194,12 +194,12 @@ export default function Pillar1Page() {
             </p>
             <div className="space-y-3">
               {[
-                { doc: "KRA PIN Certificate", note: "Your individual or company PIN — printed from the iTax portal." },
+                { doc: "KRA PIN Certificate", note: "Your individual or company PIN - printed from the iTax portal." },
                 { doc: "National ID or Passport", note: "For sole traders, one ID. For companies or partnerships, the ID of every director or partner." },
                 { doc: "Business name and physical address", note: "Use the registered business name. Include the street, town, and county." },
                 { doc: "Bank account details", note: "KRA uses this for any VAT refunds. Provide your account number and the bank name." },
                 { doc: "Certificate of Incorporation", note: "Companies only. Obtained from the Business Registration Service (BRS)." },
-                { doc: "CR12 (List of Directors)", note: "Companies only. Order from BRS — it must be dated within 90 days." },
+                { doc: "CR12 (List of Directors)", note: "Companies only. Order from BRS - it must be dated within 90 days." },
                 { doc: "Business permit or trade licence", note: "If applicable to your county or sector." },
               ].map(({ doc, note }) => (
                 <div key={doc} className="flex items-start gap-3 border border-hairline rounded-md p-3.5">
@@ -219,14 +219,14 @@ export default function Pillar1Page() {
               How to Apply for VAT on the iTax Portal
             </h2>
             <p className="text-[0.9rem] text-ink-soft leading-relaxed mb-6">
-              Use a <strong className="text-ink">desktop or laptop browser</strong> — the mobile version of iTax has known bugs with the VAT registration form. Google Chrome is recommended.
+              Use a <strong className="text-ink">desktop or laptop browser</strong> - the mobile version of iTax has known bugs with the VAT registration form. Google Chrome is recommended.
             </p>
             <div className="space-y-4">
               {[
                 {
                   step: 1,
                   title: "Log in to itax.kra.go.ke",
-                  detail: "Enter your KRA PIN and password. If you have forgotten your password, click 'Forgot Password' — a reset link will be sent to your registered email address.",
+                  detail: "Enter your KRA PIN and password. If you have forgotten your password, click 'Forgot Password' - a reset link will be sent to your registered email address.",
                 },
                 {
                   step: 2,
@@ -246,17 +246,17 @@ export default function Pillar1Page() {
                 {
                   step: 5,
                   title: "Upload your supporting documents",
-                  detail: "Attach each required document. Keep files under 1MB. If the upload fails, compress your PDF or reduce the JPG quality. Do not use scanned images on a dark background — KRA will reject them.",
+                  detail: "Attach each required document. Keep files under 1MB. If the upload fails, compress your PDF or reduce the JPG quality. Do not use scanned images on a dark background - KRA will reject them.",
                 },
                 {
                   step: 6,
                   title: "Submit and note your Application Reference Number",
-                  detail: "Click Submit. iTax will display an Application Reference Number — save this. You can use it to track the status of your application.",
+                  detail: "Click Submit. iTax will display an Application Reference Number - save this. You can use it to track the status of your application.",
                 },
                 {
                   step: 7,
                   title: "Check your email for KRA approval",
-                  detail: "KRA will send an email to your registered address when your VAT obligation is approved. Your updated KRA PIN certificate — now showing VAT — can be downloaded from the iTax portal.",
+                  detail: "KRA will send an email to your registered address when your VAT obligation is approved. Your updated KRA PIN certificate - now showing VAT - can be downloaded from the iTax portal.",
                 },
               ].map(({ step, title, detail }) => (
                 <div key={step} className="flex gap-4">
@@ -271,14 +271,14 @@ export default function Pillar1Page() {
             <div className="mt-7 border border-brand/20 bg-brand-muted rounded-lg p-5">
               <p className="font-semibold text-ink text-[0.88rem] mb-2">Skip the iTax Stress</p>
               <p className="text-[0.84rem] text-ink-soft leading-relaxed mb-4">
-                Most business owners encounter errors, confusing navigation, or rejection letters on their first iTax attempt. Smart VAT Kenya handles the entire process — document check, iTax submission, and eTIMS onboarding — for a flat fee of <strong className="text-ink">KES 5,000</strong>. We have a 100% first-attempt approval rate.
+                Most business owners encounter errors, confusing navigation, or rejection letters on their first iTax attempt. Smart VAT Kenya handles the entire process - document check, iTax submission, and eTIMS onboarding - for a flat fee of <strong className="text-ink">KES 5,000</strong>. We have a 100% first-attempt approval rate.
               </p>
               <a
                 href="https://wa.me/254717344440?text=I%20need%20help%20registering%20for%20VAT%20on%20iTax"
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
               >
-                Register for KES 5,000 — WhatsApp Us
+                Register for KES 5,000 - WhatsApp Us
                 <ArrowRight size={14} weight="bold" aria-hidden="true" />
               </a>
             </div>
@@ -292,7 +292,7 @@ export default function Pillar1Page() {
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
                 If your application is complete and correct, KRA typically approves it within{" "}
-                <strong className="text-ink">1 to 3 working days</strong>. You will receive an email notification, and your updated PIN certificate — now showing VAT as an active tax obligation — is available on the iTax portal.
+                <strong className="text-ink">1 to 3 working days</strong>. You will receive an email notification, and your updated PIN certificate - now showing VAT as an active tax obligation - is available on the iTax portal.
               </p>
               <p>
                 If documents are missing or unclear, KRA will send a <strong className="text-ink">query notice</strong> to your registered email. You must respond with the corrected documents within the stated deadline (usually 7 days) or your application will lapse and you will need to start again.
@@ -317,7 +317,7 @@ export default function Pillar1Page() {
               </p>
               <p>
                 If you hire an agent or accountant, the market rate in Nairobi ranges from{" "}
-                <strong className="text-ink">KES 10,000 to KES 30,000</strong> from traditional accounting firms. Smart VAT Kenya charges a flat <strong className="text-ink">KES 5,000</strong> — all-inclusive — payable via M-PESA.
+                <strong className="text-ink">KES 10,000 to KES 30,000</strong> from traditional accounting firms. Smart VAT Kenya charges a flat <strong className="text-ink">KES 5,000</strong> - all-inclusive - payable via M-PESA.
               </p>
               <div className="border border-hairline rounded-lg overflow-hidden">
                 <table className="w-full text-[0.83rem]">
@@ -355,11 +355,11 @@ export default function Pillar1Page() {
               </p>
               <ul className="space-y-3">
                 {[
-                  "File a VAT return on iTax every month — even if you made no sales (called a Nil Return).",
+                  "File a VAT return on iTax every month - even if you made no sales (called a Nil Return).",
                   "Pay any VAT due by the 20th of the following month via M-PESA Paybill 572572.",
                   "Issue tax invoices showing your VAT PIN and the VAT amount on every taxable sale.",
-                  "Complete your eTIMS onboarding — KRA requires all businesses to issue electronic tax invoices from 2026. Filing VAT without eTIMS-compliant invoices will result in rejected input VAT claims.",
-                  "Keep records of all sales and purchases for at least 5 years — KRA audits businesses and can request records.",
+                  "Complete your eTIMS onboarding - KRA requires all businesses to issue electronic tax invoices from 2026. Filing VAT without eTIMS-compliant invoices will result in rejected input VAT claims.",
+                  "Keep records of all sales and purchases for at least 5 years - KRA audits businesses and can request records.",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[0.88rem] text-ink-soft">
                     <CheckCircle size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />

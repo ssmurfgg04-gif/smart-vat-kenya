@@ -11,7 +11,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "KRA Fine of KES 70,000 — You May Only Owe the Principal", item: "https://smartvatkenya.co.ke/resources/kra-fine-70000/" },
+    { "@type": "ListItem", position: 3, name: "KRA Fine of KES 70,000 - You May Only Owe the Principal", item: "https://smartvatkenya.co.ke/resources/kra-fine-70000/" },
   ],
 }
 
@@ -46,7 +46,7 @@ const faqSchema = {
       name: "Can the 2026 KRA tax amnesty wipe my penalties?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "If your debt relates to a period up to 31 December 2025, yes. The Finance Act 2026 amnesty (running 1 July to 31 December 2026) waives 100% of penalties and interest — you only pay the principal tax. If the bill is pure late-filing penalties with no principal owed, filing the outstanding returns triggers the waiver automatically and you owe nothing extra.",
+        text: "If your debt relates to a period up to 31 December 2025, yes. The Finance Act 2026 amnesty (running 1 July to 31 December 2026) waives 100% of penalties and interest - you only pay the principal tax. If the bill is pure late-filing penalties with no principal owed, filing the outstanding returns triggers the waiver automatically and you owe nothing extra.",
       },
     },
     {
@@ -54,7 +54,7 @@ const faqSchema = {
       name: "Do I still have to pay the principal tax under the amnesty?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The amnesty waives penalties, interest, and fines — not the original tax. The principal must be paid in full (or cleared via a KRA-approved payment plan) by 31 December 2026. What gets wiped is everything on top of it.",
+        text: "Yes. The amnesty waives penalties, interest, and fines - not the original tax. The principal must be paid in full (or cleared via a KRA-approved payment plan) by 31 December 2026. What gets wiped is everything on top of it.",
       },
     },
     {
@@ -62,7 +62,7 @@ const faqSchema = {
       name: "My KRA debt is from 2026. Does the amnesty apply?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. Only liabilities accumulated up to 31 December 2025 qualify. Anything arising on or after 1 January 2026 falls entirely outside the amnesty and stays fully payable. For 2026 debt you must apply for a discretionary penalty waiver on iTax — a case-by-case decision that is not guaranteed.",
+        text: "No. Only liabilities accumulated up to 31 December 2025 qualify. Anything arising on or after 1 January 2026 falls entirely outside the amnesty and stays fully payable. For 2026 debt you must apply for a discretionary penalty waiver on iTax - a case-by-case decision that is not guaranteed.",
       },
     },
     {
@@ -70,7 +70,7 @@ const faqSchema = {
       name: "What is the late VAT nil-return penalty in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Reported figures vary by source and by whether tax was actually due — commonly KES 10,000 per month for a nil VAT return filed late, alongside 5% or a per-tax figure when tax was due. Individual income tax nil returns carry a KES 2,000 late penalty, and company income tax nil returns KES 20,000 (or 5% of tax due, whichever is higher). Always check your actual iTax ledger for the amount KRA applied to your account.",
+        text: "Reported figures vary by source and by whether tax was actually due - commonly KES 10,000 per month for a nil VAT return filed late, alongside 5% or a per-tax figure when tax was due. Individual income tax nil returns carry a KES 2,000 late penalty, and company income tax nil returns KES 20,000 (or 5% of tax due, whichever is higher). Always check your actual iTax ledger for the amount KRA applied to your account.",
       },
     },
     {
@@ -119,7 +119,7 @@ export default function KraFine70000() {
           </h1>
           <div className="flex flex-wrap items-center gap-3 mt-4">
             <span className="font-mono text-[0.62rem] uppercase tracking-widest bg-brand/20 text-brand px-2.5 py-1 rounded-sm">Last updated: August 5, 2026</span>
-            <span className="text-[0.78rem] text-canvas/50">Smart VAT Kenya — KRA-registered VAT agents</span>
+            <span className="text-[0.78rem] text-canvas/50">Smart VAT Kenya - KRA-registered VAT agents</span>
           </div>
         </div>
       </div>
@@ -133,7 +133,7 @@ export default function KraFine70000() {
             <strong className="text-ink">Most people don&apos;t know this:</strong> if your fine is for late filing from
             before 2026, you may not owe most of it. The <strong className="text-ink">2026 KRA tax amnesty</strong>{" "}
             waives <strong className="text-ink">100% of the penalties and interest</strong> on tax debt accumulated up to
-            31 December 2025 — you only pay the principal. If your bill is pure late-filing penalties with nothing owed
+            31 December 2025 - you only pay the principal. If your bill is pure late-filing penalties with nothing owed
             as principal, filing the outstanding returns wipes the penalties <strong className="text-ink">automatically</strong>.
           </p>
         </div>
@@ -147,7 +147,7 @@ export default function KraFine70000() {
             <a href="/resources/kra-tax-amnesty-2026/#am-i-eligible" className="text-brand underline underline-offset-2 hover:text-brand-hover">
               Jump to the eligibility guide
             </a>
-            , or message us — we&apos;ll tell you if it&apos;s covered.
+            , or message us - we&apos;ll tell you if it&apos;s covered.
           </p>
           <a
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20got%20a%20KRA%20fine%20around%2070%2C000%20-%20does%20the%20amnesty%20cover%20it%3F`}
@@ -178,14 +178,14 @@ export default function KraFine70000() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — where the fine comes from */}
+          {/* Section 1 - where the fine comes from */}
           <section id="where-it-comes-from" aria-labelledby="where-it-comes-from-h">
             <h2 id="where-it-comes-from-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Why Did My Fine Reach 70K?
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                That number is almost never a single tax bill. KRA fines are built from layers — late-filing penalties,
+                That number is almost never a single tax bill. KRA fines are built from layers - late-filing penalties,
                 interest on anything unpaid, and sometimes the principal itself. When you miss filings for several months,
                 they stack fast.
               </p>
@@ -193,7 +193,7 @@ export default function KraFine70000() {
                 {[
                   {
                     title: "Late-filing penalties per return",
-                    desc: "VAT nil returns are commonly penalised at about KES 10,000 per month filed late (amounts vary by source and whether tax was due — check iTax).",
+                    desc: "VAT nil returns are commonly penalised at about KES 10,000 per month filed late (amounts vary by source and whether tax was due - check iTax).",
                   },
                   {
                     title: "Individual income tax nil returns",
@@ -201,7 +201,7 @@ export default function KraFine70000() {
                   },
                   {
                     title: "Interest on unpaid amounts",
-                    desc: "Interest is commonly cited at around 1% per month, compounding — though some sources quote up to 2%. Because figures genuinely differ across sources, don&apos;t rely on a rule of thumb: read the exact rate KRA applied in your iTax ledger.",
+                    desc: "Interest is commonly cited at around 1% per month, compounding - though some sources quote up to 2%. Because figures genuinely differ across sources, don&apos;t rely on a rule of thumb: read the exact rate KRA applied in your iTax ledger.",
                   },
                 ].map(({ title, desc }) => (
                   <div key={title} className="flex items-start gap-3">
@@ -220,7 +220,7 @@ export default function KraFine70000() {
                 <div className="p-4 space-y-2 text-[0.85rem]">
                   <p className="text-ink">A company misses <strong>7 months</strong> of VAT <em>nil</em> returns.</p>
                   <p className="text-ink-soft">7 months × KES 10,000/month = <strong className="text-ink">KES 70,000</strong> in late-filing penalties.</p>
-                  <p className="text-ink-soft">No interest and no principal needed — just the missed filings. The KES 10,000/month is the widely-cited flat penalty for a late nil VAT return; months where VAT was actually due instead follow the 5%-of-tax-or-KES-10,000 rule, which can be higher.</p>
+                  <p className="text-ink-soft">No interest and no principal needed - just the missed filings. The KES 10,000/month is the widely-cited flat penalty for a late nil VAT return; months where VAT was actually due instead follow the 5%-of-tax-or-KES-10,000 rule, which can be higher.</p>
                 </div>
               </div>
               <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
@@ -228,16 +228,16 @@ export default function KraFine70000() {
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
                   <strong className="text-ink">Check your own numbers:</strong> VAT, individual, and company penalties combine
                   differently and sources differ on some figures. Always trust the amount shown in your own{" "}
-                  <strong className="text-ink">iTax ledger</strong> over any table — log in and read exactly what KRA applied.
+                  <strong className="text-ink">iTax ledger</strong> over any table - log in and read exactly what KRA applied.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Section 2 — you may only owe the principal */}
+          {/* Section 2 - you may only owe the principal */}
           <section id="you-may-only-pay-principal" aria-labelledby="you-may-only-pay-principal-h">
             <h2 id="you-may-only-pay-principal-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
-              You May Only Owe the Principal — Most People Don&apos;t Know This
+              You May Only Owe the Principal - Most People Don&apos;t Know This
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
@@ -250,12 +250,12 @@ export default function KraFine70000() {
               <p>
                 Say you owed KES 100,000 in tax and it grew to KES 180,000 through penalties and interest. Under the amnesty
                 you settle the <strong className="text-ink">KES 100,000 principal</strong> and{" "}
-                <strong className="text-ink">KES 80,000 falls away</strong>. And if you owe <em>no</em> principal — your 70K is pure
-                late-filing penalties on nil returns — the waiver is automatic once you file those returns, so that 70K can go to{" "}
+                <strong className="text-ink">KES 80,000 falls away</strong>. And if you owe <em>no</em> principal - your 70K is pure
+                late-filing penalties on nil returns - the waiver is automatic once you file those returns, so that 70K can go to{" "}
                 <strong className="text-ink">KES 0</strong>.
               </p>
               <p>
-                Most small-business owners race to pay the full amount because nothing told them otherwise. That&apos;s the gap —
+                Most small-business owners race to pay the full amount because nothing told them otherwise. That&apos;s the gap -
                 the amnesty exists in tax-policy press and KRA notices, not in front of the person panicking at a big iTax figure.
               </p>
               <p>
@@ -272,29 +272,29 @@ export default function KraFine70000() {
             </div>
           </section>
 
-          {/* Section 3 — check amnesty first */}
+          {/* Section 3 - check amnesty first */}
           <section id="check-amnesty-first" aria-labelledby="check-amnesty-first-h">
             <h2 id="check-amnesty-first-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Check the Amnesty First, Before You Pay Anything
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
-              <p>Match your situation below. In most cases the amnesty applies automatically — no application needed.</p>
+              <p>Match your situation below. In most cases the amnesty applies automatically - no application needed.</p>
               <div className="space-y-4 not-prose">
                 {[
                   {
                     scenario: "Principal already paid",
-                    result: "Automatic waiver — no action needed. KRA&apos;s system applies it.",
+                    result: "Automatic waiver - no action needed. KRA&apos;s system applies it.",
                   },
                   {
                     scenario: "Late-filing penalties only, no principal owed",
                     result: "File the outstanding returns, and the penalty waiver triggers automatically. Your 70K could go to KES 0.",
                   },
                   {
-                    scenario: "Still owe principal — can pay lump sum",
+                    scenario: "Still owe principal - can pay lump sum",
                     result: "Pay the full principal by 31 December 2026, and the waiver is applied.",
                   },
                   {
-                    scenario: "Still owe principal — need instalments",
+                    scenario: "Still owe principal - need instalments",
                     result: "Apply for a KRA-approved payment plan on iTax and clear the principal by 31 December 2026.",
                   },
                 ].map(({ scenario, result }) => (
@@ -308,14 +308,14 @@ export default function KraFine70000() {
                 <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
                   <strong className="text-ink">Note:</strong> even a fine that&apos;s been split between principal and penalties only
-                  gets the <em>penalty portion</em> waived — you don&apos;t need a fully nil bill to benefit. Get the routing right on{" "}
+                  gets the <em>penalty portion</em> waived - you don&apos;t need a fully nil bill to benefit. Get the routing right on{" "}
                   <a href="/resources/kra-tax-amnesty-2026/#am-i-eligible" className="text-brand underline underline-offset-2 hover:text-brand-hover">the eligibility guide</a>.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Section 4 — debt from 2026 */}
+          {/* Section 4 - debt from 2026 */}
           <section id="debt-from-2026" aria-labelledby="debt-from-2026-h">
             <h2 id="debt-from-2026-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               If Your Debt Is From 2026 Onward
@@ -323,7 +323,7 @@ export default function KraFine70000() {
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
                 Anything arising on or after <strong className="text-ink">1 January 2026</strong> sits outside the amnesty. For that
-                debt you don&apos;t have an automatic waiver — you must apply to KRA for a{" "}
+                debt you don&apos;t have an automatic waiver - you must apply to KRA for a{" "}
                 <strong className="text-ink">discretionary penalty waiver</strong>.
               </p>
               <div className="space-y-3">
@@ -338,7 +338,7 @@ export default function KraFine70000() {
                   },
                   {
                     title: "Case-by-case, not guaranteed",
-                    desc: "There is no blanket waiver — KRA decides each case. A genuine mistake or first-time offence is far more likely to succeed than a pattern.",
+                    desc: "There is no blanket waiver - KRA decides each case. A genuine mistake or first-time offence is far more likely to succeed than a pattern.",
                   },
                 ].map(({ title, desc }) => (
                   <div key={title} className="flex items-start gap-3">
@@ -361,7 +361,7 @@ export default function KraFine70000() {
             </div>
           </section>
 
-          {/* Section 5 — what to do now */}
+          {/* Section 5 - what to do now */}
           <section id="what-to-do-now" aria-labelledby="what-to-do-now-h">
             <h2 id="what-to-do-now-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What to Do Now
@@ -372,7 +372,7 @@ export default function KraFine70000() {
                   {
                     step: 1,
                     title: "Don&apos;t pay the full amount yet",
-                    desc: "Read the actual breakdown in iTax — separate principal from penalties and interest. Under the amnesty the principal is what matters.",
+                    desc: "Read the actual breakdown in iTax - separate principal from penalties and interest. Under the amnesty the principal is what matters.",
                   },
                   {
                     step: 2,
@@ -387,7 +387,7 @@ export default function KraFine70000() {
                   {
                     step: 4,
                     title: "Settle the principal by 31 December 2026",
-                    desc: "Lump sum, or a KRA-approved payment plan. The deadline is firm — miss it and the penalties come back.",
+                    desc: "Lump sum, or a KRA-approved payment plan. The deadline is firm - miss it and the penalties come back.",
                   },
                   {
                     step: 5,
@@ -409,7 +409,7 @@ export default function KraFine70000() {
                 <p className="text-[0.84rem] text-ink-soft leading-relaxed mb-4">
                   Cleared penalties unlock your{" "}
                   <a href="/resources/tax-compliance-certificate-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Tax Compliance Certificate</a>{" "}
-                  (TCC) — needed for tenders, licences, and work permits. Our{" "}
+                  (TCC) - needed for tenders, licences, and work permits. Our{" "}
                   <strong className="text-ink">Penalty Waiver service (KES 4,000)</strong> reconciles your iTax ledger, handles the
                   amnesty or waiver application, and sorts out the PRN/allocation errors that trip people up.
                 </p>
@@ -418,7 +418,7 @@ export default function KraFine70000() {
                     href="/services/kra-penalty-waiver/"
                     className="inline-flex items-center justify-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                   >
-                    Learn More — KES 4,000
+                    Learn More - KES 4,000
                     <ArrowRight size={14} weight="bold" aria-hidden="true" />
                   </a>
                   <a
@@ -447,7 +447,7 @@ export default function KraFine70000() {
         <div className="mt-10 border border-brand/20 bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-[1rem] font-semibold text-ink mb-1">Stuck with a KRA fine or unfiled returns?</p>
           <p className="text-[0.85rem] text-ink-muted mb-4 max-w-[40ch] mx-auto leading-relaxed">
-            We reconcile your ledger and handle amnesty or waiver applications so you pay the right amount — and fast.
+            We reconcile your ledger and handle amnesty or waiver applications so you pay the right amount - and fast.
           </p>
           <a
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20need%20help%20with%20a%20KRA%20penalty`}

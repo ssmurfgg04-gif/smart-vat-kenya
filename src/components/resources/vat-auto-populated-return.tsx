@@ -38,7 +38,7 @@ const faqSchema = {
       name: "What is the KRA auto-populated VAT return?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The auto-populated VAT return is a simplified filing process where KRA pre-fills your VAT return with data from iTax, eTIMS/TIMS, and customs systems. Sales invoices transmitted through eTIMS appear automatically in your return. Purchases from VAT-registered suppliers also appear if they transmitted valid eTIMS invoices with your KRA PIN. You review, adjust, and confirm — rather than entering every line manually.",
+        text: "The auto-populated VAT return is a simplified filing process where KRA pre-fills your VAT return with data from iTax, eTIMS/TIMS, and customs systems. Sales invoices transmitted through eTIMS appear automatically in your return. Purchases from VAT-registered suppliers also appear if they transmitted valid eTIMS invoices with your KRA PIN. You review, adjust, and confirm - rather than entering every line manually.",
       },
     },
     {
@@ -46,7 +46,7 @@ const faqSchema = {
       name: "Why are some of my sales invoices missing from the auto-populated return?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Missing sales invoices are usually caused by transmission issues. If your device was offline when the invoice was issued, it may not have reached KRA's servers. Check your internet connection and ensure your eTIMS device is consistently online. Invoices transmitted late will not appear in the original tax period — they go to the period when they were actually transmitted. You can add missing sales manually by declaring them under lump sum sales or adding them as line items in the return.",
+        text: "Missing sales invoices are usually caused by transmission issues. If your device was offline when the invoice was issued, it may not have reached KRA's servers. Check your internet connection and ensure your eTIMS device is consistently online. Invoices transmitted late will not appear in the original tax period - they go to the period when they were actually transmitted. You can add missing sales manually by declaring them under lump sum sales or adding them as line items in the return.",
       },
     },
     {
@@ -78,7 +78,7 @@ const faqSchema = {
       name: "What are the benefits of the auto-populated VAT return?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The auto-populated return reduces manual data entry, minimizes calculation errors, ensures that your declared sales match what KRA already has on record, and flags discrepancies early. It also makes the filing faster — instead of entering every invoice line by line, you download the pre-filled return, verify the figures, add any missing entries, and submit. The system updates daily, so downloading the latest version just before filing ensures the most complete data.",
+        text: "The auto-populated return reduces manual data entry, minimizes calculation errors, ensures that your declared sales match what KRA already has on record, and flags discrepancies early. It also makes the filing faster - instead of entering every invoice line by line, you download the pre-filled return, verify the figures, add any missing entries, and submit. The system updates daily, so downloading the latest version just before filing ensures the most complete data.",
       },
     },
   ],
@@ -101,7 +101,7 @@ export default function AutoPopulatedReturnPage() {
 
         <article>
           <header className="mb-10">
-            <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide — Auto-Populated Return</p>
+            <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide - Auto-Populated Return</p>
             <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-semibold text-ink tracking-tight leading-tight mb-4 text-balance">
               KRA Auto-Populated VAT Return Guide 2026
             </h1>
@@ -117,7 +117,7 @@ export default function AutoPopulatedReturnPage() {
           </header>
 
           <div className="space-y-10">
-            {/* Section 1 — How It Works */}
+            {/* Section 1 - How It Works */}
             <section id="how-it-works" aria-labelledby="how-it-works-h">
               <h2 id="how-it-works-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 How the Auto-Populated VAT Return Works
@@ -130,7 +130,7 @@ export default function AutoPopulatedReturnPage() {
                 <ul className="space-y-2">
                   {[
                     { source: "eTIMS/TIMS", detail: "All sales invoices you transmitted through your eTIMS device or portal appear as pre-filled sales. Purchases from suppliers who transmitted eTIMS invoices with your KRA PIN appear as pre-filled purchases." },
-                    { source: "Customs (iCMS)", detail: "Import entries from the Integrated Customs Management System appear under Section F — Imports. You can claim input VAT on valid customs declarations." },
+                    { source: "Customs (iCMS)", detail: "Import entries from the Integrated Customs Management System appear under Section F - Imports. You can claim input VAT on valid customs declarations." },
                     { source: "iTax records", detail: "Previous return data and taxpayer profiles inform certain fields. Your KRA-registered name, PIN, and tax period are filled automatically." },
                   ].map(({ source, detail }) => (
                     <li key={source} className="flex gap-3">
@@ -146,7 +146,7 @@ export default function AutoPopulatedReturnPage() {
               </div>
             </section>
 
-            {/* Section 2 — Monthly Workflow */}
+            {/* Section 2 - Monthly Workflow */}
             <section id="monthly-workflow" aria-labelledby="monthly-workflow-h">
               <h2 id="monthly-workflow-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Your Monthly Filing Workflow
@@ -171,7 +171,7 @@ export default function AutoPopulatedReturnPage() {
               </div>
             </section>
 
-            {/* Section 3 — Missing Sales */}
+            {/* Section 3 - Missing Sales */}
             <section id="missing-sales" aria-labelledby="missing-sales-h">
               <h2 id="missing-sales-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Why Are Some Sales Missing?
@@ -194,7 +194,7 @@ export default function AutoPopulatedReturnPage() {
               </div>
             </section>
 
-            {/* Section 4 — Missing Purchases */}
+            {/* Section 4 - Missing Purchases */}
             <section id="missing-purchases" aria-labelledby="missing-purchases-h">
               <h2 id="missing-purchases-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Why Are Some Purchases Missing?
@@ -239,7 +239,7 @@ export default function AutoPopulatedReturnPage() {
               </div>
             </section>
 
-            {/* Section 5 — Duplicate Invoices */}
+            {/* Section 5 - Duplicate Invoices */}
             <section id="duplicate-invoices" aria-labelledby="duplicate-invoices-h">
               <h2 id="duplicate-invoices-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Duplicate Invoices in the Return
@@ -262,7 +262,7 @@ export default function AutoPopulatedReturnPage() {
               </div>
             </section>
 
-            {/* Section 6 — Lump Sum Sales */}
+            {/* Section 6 - Lump Sum Sales */}
             <section id="lump-sum" aria-labelledby="lump-sum-h">
               <h2 id="lump-sum-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Declaring Lump Sum Sales
@@ -275,7 +275,7 @@ export default function AutoPopulatedReturnPage() {
                 </p>
                 <p>
                   If you made manual sales to unregistered customers that were not entered into eTIMS, add them
-                  under the lump sum sales field. Be accurate — KRA compares your declared lump sum against your
+                  under the lump sum sales field. Be accurate - KRA compares your declared lump sum against your
                   bank deposits and M-Pesa statements.
                 </p>
                 <div className="border border-brand/25 bg-brand-muted rounded-lg p-4 flex items-start gap-3">
@@ -289,7 +289,7 @@ export default function AutoPopulatedReturnPage() {
               </div>
             </section>
 
-            {/* Section 7 — Common Questions */}
+            {/* Section 7 - Common Questions */}
             <section id="common-questions" aria-labelledby="common-questions-h">
               <h2 id="common-questions-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Common Auto-Populated Return Questions
@@ -299,8 +299,8 @@ export default function AutoPopulatedReturnPage() {
                   {[
                     { q: "Can I file the old way (manual entry)?", a: "KRA encourages all VAT-registered taxpayers to use the auto-populated return. While you can still override and enter figures manually, the pre-filled data from eTIMS cannot be reduced. If you enter a lower figure than what eTIMS transmitted, the system will flag a discrepancy." },
                     { q: "What about non-VAT suppliers on my purchases?", a: "Purchases from non-VAT suppliers (e.g., a small shop without eTIMS) will not appear in the CSV. You cannot claim input VAT on these purchases. They can be used for income tax deductions but not for VAT input claims." },
-                    { q: "Does the return update right up to the 20th?", a: "Yes. The data updates daily through an incremental batch process. Download the latest version on the day you file to capture all recently transmitted invoices. Do not download once and file a week later — you will miss late-transmitted entries." },
-                    { q: "What about import entries?", a: "Import declarations from iCMS appear automatically under Section F — Imports. If an import entry is missing, contact your customs clearing agent to verify the declaration was filed correctly. You can also add it manually with the correct customs entry number." },
+                    { q: "Does the return update right up to the 20th?", a: "Yes. The data updates daily through an incremental batch process. Download the latest version on the day you file to capture all recently transmitted invoices. Do not download once and file a week later - you will miss late-transmitted entries." },
+                    { q: "What about import entries?", a: "Import declarations from iCMS appear automatically under Section F - Imports. If an import entry is missing, contact your customs clearing agent to verify the declaration was filed correctly. You can also add it manually with the correct customs entry number." },
                   ].map(({ q, a }) => (
                     <div key={q} className="border border-hairline rounded-lg p-4">
                       <p className="font-semibold text-ink text-[0.88rem] mb-1">{q}</p>

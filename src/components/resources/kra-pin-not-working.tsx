@@ -36,7 +36,7 @@ const faqSchema = {
       name: "How long does KRA take to issue a KRA PIN?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Online KRA PIN applications on iTax are processed immediately — your PIN is issued on the spot after successful submission. Huduma Centre applications typically take 2-5 working days. If your application is taking longer, check your iTax dashboard for rejection reasons or visit the Huduma Centre where you applied.",
+        text: "Online KRA PIN applications on iTax are processed immediately - your PIN is issued on the spot after successful submission. Huduma Centre applications typically take 2-5 working days. If your application is taking longer, check your iTax dashboard for rejection reasons or visit the Huduma Centre where you applied.",
       },
     },
     {
@@ -52,7 +52,7 @@ const faqSchema = {
       name: "Why is my KRA PIN not found on iTax?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "This error typically occurs when: (1) The PIN was recently issued and has not yet synced across KRA systems — wait 24-48 hours. (2) You are entering the PIN in the wrong format — use uppercase, no spaces, exactly 11 characters (e.g. A0123456789Z). (3) The PIN application is still being processed and is not yet active. (4) The PIN was deactivated due to non-compliance or inactivity.",
+        text: "This error typically occurs when: (1) The PIN was recently issued and has not yet synced across KRA systems - wait 24-48 hours. (2) You are entering the PIN in the wrong format - use uppercase, no spaces, exactly 11 characters (e.g. A0123456789Z). (3) The PIN application is still being processed and is not yet active. (4) The PIN was deactivated due to non-compliance or inactivity.",
       },
     },
     {
@@ -201,7 +201,7 @@ export default function KRAPinNotWorkingPage() {
                   },
                   {
                     title: "Wrong PIN format",
-                    desc: "KRA PINs follow the format A0123456789Z — exactly 11 characters, all uppercase, no spaces, no hyphens. Double-check you are entering it correctly, especially letters that could be confused (O vs 0, I vs 1, S vs 5).",
+                    desc: "KRA PINs follow the format A0123456789Z - exactly 11 characters, all uppercase, no spaces, no hyphens. Double-check you are entering it correctly, especially letters that could be confused (O vs 0, I vs 1, S vs 5).",
                   },
                   {
                     title: "PIN was issued but never activated",

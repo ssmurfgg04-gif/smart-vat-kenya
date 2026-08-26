@@ -23,7 +23,7 @@ const TAX_REGIMES = [
 const iTaxErrors = [
   { id: "login", title: '"Invalid PIN or Password"', cause: "Caps Lock is on, wrong PIN format (spaces), or incorrect password.", fix: "Check Caps Lock. Enter KRA PIN without spaces (A-format with hyphen is fine). Use 'Forgot Password' to reset. If reset email does not arrive, your email on KRA profile may be outdated." },
   { id: "timeout", title: "System Timeout / Session Expired", cause: "iTax has a short session timeout. Also common on slow 3G connections or older browsers.", fix: "Use Google Chrome 120+ or Edge 120+. Ensure stable 4G or WiFi. Clear browser cache. Log in during off-peak hours (before 9 AM or after 5 PM). Refresh and retry." },
-  { id: "error500", title: "Page Not Loading / Error 500 / Gateway Timeout", cause: "KRA server is down or under heavy load — common near the 20th deadline.", fix: "Wait 30-60 minutes and try again. Check KRA social media (@KRACare) for outage updates. If urgent, contact the KRA call centre. For peace of mind, let Smart VAT Kenya handle your filing so you never deal with this." },
+  { id: "error500", title: "Page Not Loading / Error 500 / Gateway Timeout", cause: "KRA server is down or under heavy load - common near the 20th deadline.", fix: "Wait 30-60 minutes and try again. Check KRA social media (@KRACare) for outage updates. If urgent, contact the KRA call centre. For peace of mind, let Smart VAT Kenya handle your filing so you never deal with this." },
   { id: "otp", title: "OTP Not Received", cause: "SMS delays from mobile networks, or your phone number on KRA profile is wrong.", fix: "Wait 5 minutes and try again. Check you have network signal. If still not received, log in to iTax via a desktop and check if email OTP option is available. Update your phone number at a KRA Huduma Centre if needed." },
   { id: "forgot", title: "Forgot Password / Reset Not Working", cause: "Reset email may go to spam. Your registered email may be outdated or deactivated.", fix: "Check spam/junk folders. If reset email never arrives, visit a KRA Huduma Centre with your ID to update your email on file. Then reset from the iTax login page." },
   { id: "validation", title: "Return Validation Failed", cause: "Excel download/upload format errors: missing fields, decimal places, wrong date format, or signing certificate not uploaded.", fix: "Download a fresh return form from iTax. Fill it out following the exact format. Validate in Excel before upload. For VAT returns, ensure your digital signature (for PAYE > KES 1M) is set up. If errors persist, let Smart VAT Kenya handle it." },
@@ -81,8 +81,8 @@ export default function ToolsPage() {
   }
 
   const resultLabels: Record<string, { label: string; color: string; message: string; cta: string }> = {
-    result_required: { label: "Required", color: "text-brand", message: "Based on your answers, VAT registration is mandatory for your business under KRA rules. You must register on iTax as soon as possible to avoid the KES 100,000 non-registration penalty.", cta: "Register Now — KES 5,000" },
-    result_recommended: { label: "Strongly Recommended", color: "text-[#b07a00]", message: "You may be below the KES 5 million threshold, but as a registered business you can voluntarily register to claim input VAT. KRA is also expanding mandatory registration — and if you sell to VAT-registered clients, they need eTIMS invoices from you. Early registration is advisable.", cta: "Ask us about voluntary registration" },
+    result_required: { label: "Required", color: "text-brand", message: "Based on your answers, VAT registration is mandatory for your business under KRA rules. You must register on iTax as soon as possible to avoid the KES 100,000 non-registration penalty.", cta: "Register Now - KES 5,000" },
+    result_recommended: { label: "Strongly Recommended", color: "text-[#b07a00]", message: "You may be below the KES 5 million threshold, but as a registered business you can voluntarily register to claim input VAT. KRA is also expanding mandatory registration - and if you sell to VAT-registered clients, they need eTIMS invoices from you. Early registration is advisable.", cta: "Ask us about voluntary registration" },
     result_optional: { label: "Optional for Now", color: "text-ink-muted", message: "You may not yet be required to register for VAT. However, monitor your turnover. If you approach KES 5 million, or if KRA expands mandatory registration, you will need to comply. Consider getting a KRA PIN first if you do not have one.", cta: "Ask us a question" },
   }
 
@@ -90,12 +90,12 @@ export default function ToolsPage() {
     <div className="bg-canvas min-h-[100dvh]">
       <div className="bg-canvas-dark px-6 lg:px-10 py-16">
         <div className="max-w-[1400px] mx-auto">
-          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">Free tools — no sign-up required</p>
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">Free tools - no sign-up required</p>
           <p className="font-mono text-[0.7rem] text-brand mb-6">
             Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
-          <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">Free Kenya Tax Tools — Calculators, Checklists &amp; Guides</h1>
-          <p className="text-[0.95rem] text-canvas/70 max-w-[60ch] leading-relaxed">VAT calculator, PAYE salary calculator, KRA penalty calculator for all 6 tax regimes, eTIMS penalty calculator, amnesty savings calculator, withholding tax calculator, eTIMS checklist, and more — all free, no sign-up required.</p>
+          <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">Free Kenya Tax Tools - Calculators, Checklists &amp; Guides</h1>
+          <p className="text-[0.95rem] text-canvas/70 max-w-[60ch] leading-relaxed">VAT calculator, PAYE salary calculator, KRA penalty calculator for all 6 tax regimes, eTIMS penalty calculator, amnesty savings calculator, withholding tax calculator, eTIMS checklist, and more - all free, no sign-up required.</p>
         </div>
       </div>
 
@@ -105,7 +105,7 @@ export default function ToolsPage() {
           <section aria-labelledby="vat-calc-heading">
             <div className="flex items-center gap-2.5 mb-6">
               <Calculator size={17} weight="duotone" className="text-brand" aria-hidden="true" />
-              <h2 id="vat-calc-heading" className="font-display text-[0.88rem] sm:text-[1rem] font-semibold text-ink">Kenya VAT Calculator 2026 — 16% Standard Rate</h2>
+              <h2 id="vat-calc-heading" className="font-display text-[0.88rem] sm:text-[1rem] font-semibold text-ink">Kenya VAT Calculator 2026 - 16% Standard Rate</h2>
             </div>
             <div className="border border-hairline rounded-lg overflow-hidden divide-y divide-hairline bg-canvas">
               <div className="p-3 sm:p-5">
@@ -132,7 +132,7 @@ export default function ToolsPage() {
                 {rateType === "exempt" ? (
                   <div className="flex items-start gap-2.5 text-[0.82rem] text-ink-muted"><Info size={14} className="shrink-0 mt-0.5" aria-hidden="true" />Exempt supplies carry no VAT charge and do not qualify for input VAT credit.</div>
                 ) : rateType === "zero" ? (
-                  <div className="flex items-start gap-2.5 text-[0.82rem] text-ink-muted"><Info size={14} className="shrink-0 mt-0.5" aria-hidden="true" />Zero-rated at 0% — VAT is charged but at nil. Input VAT is still claimable.</div>
+                  <div className="flex items-start gap-2.5 text-[0.82rem] text-ink-muted"><Info size={14} className="shrink-0 mt-0.5" aria-hidden="true" />Zero-rated at 0% - VAT is charged but at nil. Input VAT is still claimable.</div>
                 ) : (
                   <dl className="space-y-3">
                     <div className="flex items-baseline justify-between"><dt className="text-[0.78rem] text-ink-muted">{direction === "add" ? "Net (excl. VAT)" : "Net extracted"}</dt><dd className="font-mono text-[0.88rem] text-ink tabular-nums">{formatKES(net)}</dd></div>
@@ -147,7 +147,7 @@ export default function ToolsPage() {
 
           {/* KRA Penalty Calculator */}
           <section aria-labelledby="penalty-heading">
-            <div className="flex items-center gap-2.5 mb-6"><WarningCircle size={17} weight="duotone" className="text-brand" aria-hidden="true" /><h2 id="penalty-heading" className="font-display text-[0.88rem] sm:text-[1rem] font-semibold text-ink">KRA Penalty Calculator — All 6 Tax Regimes</h2></div>
+            <div className="flex items-center gap-2.5 mb-6"><WarningCircle size={17} weight="duotone" className="text-brand" aria-hidden="true" /><h2 id="penalty-heading" className="font-display text-[0.88rem] sm:text-[1rem] font-semibold text-ink">KRA Penalty Calculator - All 6 Tax Regimes</h2></div>
             <div className="border border-hairline rounded-lg overflow-hidden divide-y divide-hairline bg-canvas">
               <div className="p-3 sm:p-5">
                 <label htmlFor="pen-tax-type" className="block text-[0.78rem] font-medium text-ink-muted mb-2">Tax Type</label>
@@ -156,7 +156,7 @@ export default function ToolsPage() {
                 </select>
               </div>
               <div className="p-3 sm:p-5">
-                <label htmlFor="pen-taxdue" className="block text-[0.78rem] font-medium text-ink-muted mb-2">{regime.label} — principal tax due (KES)</label>
+                <label htmlFor="pen-taxdue" className="block text-[0.78rem] font-medium text-ink-muted mb-2">{regime.label} - principal tax due (KES)</label>
                 <input id="pen-taxdue" type="text" inputMode="decimal" placeholder="80,000" value={penTaxDue} onChange={(e) => setPenTaxDue(e.target.value)} className="w-full font-display text-[1.25rem] sm:text-[1.6rem] font-semibold text-ink bg-transparent focus:outline-none placeholder:text-ink-muted/30 placeholder:font-normal placeholder:text-xl" />
               </div>
               <div className="p-3 sm:p-5">
@@ -197,7 +197,7 @@ export default function ToolsPage() {
 
         {/* iTax Error Diagnosis */}
         <section className="mt-14 border-t border-hairline pt-12" aria-labelledby="error-heading">
-          <div className="flex items-center gap-2.5 mb-6"><Wrench size={17} weight="duotone" className="text-brand" aria-hidden="true" /><h2 id="error-heading" className="font-display text-[1rem] font-semibold text-ink">iTax Portal Error Diagnosis — What is Happening and How to Fix It</h2></div>
+          <div className="flex items-center gap-2.5 mb-6"><Wrench size={17} weight="duotone" className="text-brand" aria-hidden="true" /><h2 id="error-heading" className="font-display text-[1rem] font-semibold text-ink">iTax Portal Error Diagnosis - What is Happening and How to Fix It</h2></div>
           <div className="border border-hairline rounded-lg overflow-hidden max-w-3xl">
             <div className="p-5">
               <label htmlFor="error-select" className="block text-[0.78rem] font-medium text-ink-muted mb-3">Select your iTax error:</label>
@@ -212,7 +212,7 @@ export default function ToolsPage() {
                 <div className="space-y-4">
                   <div><p className="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted mb-1.5">Why it happens</p><p className="text-[0.85rem] text-ink-soft leading-relaxed">{errorDetail.cause}</p></div>
                   <div><p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-1.5">How to fix it</p><p className="text-[0.85rem] text-ink leading-relaxed">{errorDetail.fix}</p></div>
-                  <a href={`${WA_BASE}?text=Hi%2C%20I%27m%20getting%20the%20following%20iTax%20error%3A%20${encodeURIComponent(errorDetail.title)}.%20Can%20you%20help%20me%20file%20my%20VAT%20return%20so%20I%20don%27t%20have%20to%20deal%20with%20this%3F`} target="_blank" rel="noopener noreferrer" className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">Let us file for you instead — KES 3,500/month <ArrowRight size={13} weight="bold" aria-hidden="true" /></a>
+                  <a href={`${WA_BASE}?text=Hi%2C%20I%27m%20getting%20the%20following%20iTax%20error%3A%20${encodeURIComponent(errorDetail.title)}.%20Can%20you%20help%20me%20file%20my%20VAT%20return%20so%20I%20don%27t%20have%20to%20deal%20with%20this%3F`} target="_blank" rel="noopener noreferrer" className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">Let us file for you instead - KES 3,500/month <ArrowRight size={13} weight="bold" aria-hidden="true" /></a>
                 </div>
               </div>
             )}
@@ -265,10 +265,10 @@ export default function ToolsPage() {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
             {[
               { href: "/tools/pin-checker/", icon: WarningCircle, label: "KRA PIN Checker", desc: "Verify a Kenyan KRA PIN format and status instantly", badge: "New" },
-              { href: "/resources/vat-rates-kenya/", icon: CurrencyCircleDollar, label: "VAT Rates & Calculator Guide", desc: "Standard 16%, zero-rated, exempt — rates and how to apply them" },
+              { href: "/resources/vat-rates-kenya/", icon: CurrencyCircleDollar, label: "VAT Rates & Calculator Guide", desc: "Standard 16%, zero-rated, exempt - rates and how to apply them" },
               { href: "/resources/vat-vs-turnover-tax/", icon: Scales, label: "VAT vs Turnover Tax", desc: "Decision guide for choosing the right tax regime" },
               { href: "/resources/etims-compliance-checklist/", icon: ListChecks, label: "eTIMS Compliance Checklist", desc: "Daily, monthly, and annual eTIMS obligations" },
-              { href: "/resources/withholding-vat-kenya/", icon: HandCoins, label: "Withholding Tax Guide", desc: "2% withholding VAT — how it works for agents and suppliers" },
+              { href: "/resources/withholding-vat-kenya/", icon: HandCoins, label: "Withholding Tax Guide", desc: "2% withholding VAT - how it works for agents and suppliers" },
               { href: "/resources/etims-penalty-50000-per-month-kenya/", icon: WarningCircle, label: "eTIMS Penalty Guide", desc: "What TPA s.86 and s.59A(5) actually provide" },
               { href: "/resources/kra-tax-amnesty-2026/", icon: WarningCircle, label: "Tax Amnesty Savings Guide", desc: "How to save 100% on penalties and interest before Dec 31", badge: "Deadline Dec 31" },
             ].map((t) => (
@@ -291,7 +291,7 @@ export default function ToolsPage() {
               { href: "/resources/how-to-calculate-vat-in-kenya/", label: "How to Calculate 16% VAT in Kenya" },
               { href: "/resources/how-to-file-vat-return-on-itax/", label: "How to File VAT Return on iTax" },
               { href: "/resources/do-i-need-to-register-for-vat-kenya/", label: "Do I Need to Register for VAT?" },
-              { href: "/resources/itax-portal-not-working/", label: "iTax Errors — Diagnosis + Fixes" },
+              { href: "/resources/itax-portal-not-working/", label: "iTax Errors - Diagnosis + Fixes" },
               { href: "/resources/etims-onboarding-guide/", label: "eTIMS Onboarding Guide 2026" },
               { href: "/resources/vat-vs-turnover-tax/", label: "VAT vs Turnover Tax Decision Guide" },
               { href: "/resources/kra-vat-penalties-reference/", label: "KRA VAT Penalties Reference Table" },

@@ -8,7 +8,7 @@ import { ObligationCode } from "./types.js"
  * Design: a filing is a provider implementing FilingProvider. Today we support
  * NIL and TOT. When KRA lands the VAT return API on GavaConnect it will follow
  * the same envelope (taxpayer details + period + transaction data validated
- * against eTIMS) — so "VAT return" becomes one more provider behind the same
+ * against eTIMS) - so "VAT return" becomes one more provider behind the same
  * interface, nothing in the deadline engine changes.
  */
 

@@ -16,7 +16,7 @@ const breadcrumbSchema = {
 
 <BaseLayout
   title="KRA System Status: iTax, eTIMS and VAT"
-  description="KRA system status: check if iTax, eTIMS and VAT returns are operational. Live troubleshooting links and WhatsApp help."
+  description="KRA system status: check if iTax, eTIMS and VAT returns are operational. Troubleshooting links and WhatsApp help."
   canonical="/kra-status/"
   breadcrumbSchema={breadcrumbSchema}
 >
@@ -26,14 +26,14 @@ const breadcrumbSchema = {
         ← Back to Home
       </a>
       <div class="flex flex-wrap gap-2 mb-5">
-        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/60 px-2.5 py-1 rounded-sm">Live Status</span>
-        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded-sm">Updated {displayTime} EAT</span>
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/60 px-2.5 py-1 rounded-sm">Status</span>
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/50 px-2.5 py-1 rounded-sm">Checked {displayTime} EAT</span>
       </div>
       <h1 class="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
         KRA System Status
       </h1>
       <p class="text-[0.9rem] text-canvas/60 max-w-[60ch] leading-relaxed">
-        KRA down? See live status for iTax & eTIMS — plus the workaround so you don't miss the 20th. WhatsApp us for instant help. Last checked: <time datetime={lastChecked} class="font-mono text-canvas/80">{displayTime} EAT</time>
+        KRA down? Check the latest status for iTax and eTIMS - plus the workaround so you don't miss the 20th. WhatsApp us for help. Last checked: <time datetime={lastChecked} class="font-mono text-canvas/80">{displayTime} EAT</time>
       </p>
     </div>
   </div>
@@ -65,7 +65,7 @@ const breadcrumbSchema = {
     <div class="border border-amber-200 bg-amber-50/60 rounded-xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-10">
       <div>
         <p class="font-semibold text-ink text-[0.95rem] mb-1">Experiencing a KRA issue right now?</p>
-        <p class="text-[0.83rem] text-ink-muted">Send us a screenshot on WhatsApp — we diagnose it in minutes and tell you the fix.</p>
+        <p class="text-[0.83rem] text-ink-muted">Send us a screenshot on WhatsApp - we diagnose it and tell you the fix.</p>
       </div>
       <a href="https://wa.me/254717344440?text=Hi%2C%20KRA%20seems%20down%20right%20now%20-%20need%20help" target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex items-center gap-2 bg-brand text-white font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">
         Report an Issue on WhatsApp
@@ -86,7 +86,7 @@ const breadcrumbSchema = {
     <!-- CTA -->
     <div class="border-2 border-brand/30 rounded-xl p-6 sm:p-8 bg-brand-muted text-center">
       <p class="font-display text-[1.2rem] font-semibold text-ink mb-2">Don't want to monitor KRA yourself?</p>
-      <p class="text-[0.85rem] text-ink-muted mb-5 max-w-[50ch] mx-auto">We file on the 17th — before the rush — and handle any portal errors for you. KES 3,500/month.</p>
+      <p class="text-[0.85rem] text-ink-muted mb-5 max-w-[50ch] mx-auto">We file on the 17th - before the rush - and handle any portal errors for you. KES 3,500/month.</p>
       <a href="https://wa.me/254717344440?text=I%20want%20monthly%20VAT%20filing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-sm px-6 py-3 rounded-md hover:bg-brand-hover transition-colors">
         Start Monthly Filing
       </a>

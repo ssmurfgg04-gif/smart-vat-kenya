@@ -44,7 +44,7 @@ const faqSchema = {
       name: "What is the VAT registration threshold for digital services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "It depends on whether you are a resident or non-resident supplier. Resident suppliers (Kenyan businesses) must register for VAT when annual taxable turnover exceeds KES 5 million. Non-resident suppliers (foreign businesses) must register regardless of turnover — there is no threshold. The first sale to a Kenyan customer triggers the registration requirement.",
+        text: "It depends on whether you are a resident or non-resident supplier. Resident suppliers (Kenyan businesses) must register for VAT when annual taxable turnover exceeds KES 5 million. Non-resident suppliers (foreign businesses) must register regardless of turnover - there is no threshold. The first sale to a Kenyan customer triggers the registration requirement.",
       },
     },
     {
@@ -99,13 +99,13 @@ export default function DigitalServicesPage() {
 
         <article>
           <header className="mb-10">
-            <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide — Digital Services</p>
+            <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide - Digital Services</p>
             <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-semibold text-ink tracking-tight leading-tight mb-4 text-balance">
               VAT on Digital Services in Kenya 2026
             </h1>
             <p className="text-[0.9rem] text-ink-muted leading-relaxed max-w-[65ch]">
-              If you sell software, streaming, online courses, or any digital service to Kenyan customers — or if you
-              are a Kenyan business buying from foreign digital platforms — VAT applies. The rules differ for resident
+              If you sell software, streaming, online courses, or any digital service to Kenyan customers - or if you
+              are a Kenyan business buying from foreign digital platforms - VAT applies. The rules differ for resident
               and non-resident suppliers. This guide covers everything you need to know.
             </p>
             <div className="flex items-center gap-4 text-[0.75rem] text-ink-muted">
@@ -115,7 +115,7 @@ export default function DigitalServicesPage() {
           </header>
 
           <div className="space-y-10">
-            {/* Section 1 — What Counts */}
+            {/* Section 1 - What Counts */}
             <section id="what-counts" aria-labelledby="what-counts-h">
               <h2 id="what-counts-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 What Counts as a Digital Service?
@@ -153,7 +153,7 @@ export default function DigitalServicesPage() {
               </div>
             </section>
 
-            {/* Section 2 — Resident vs Non-Resident */}
+            {/* Section 2 - Resident vs Non-Resident */}
             <section id="resident-vs-non-resident" aria-labelledby="resident-vs-non-resident-h">
               <h2 id="resident-vs-non-resident-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Resident vs Non-Resident Rules
@@ -194,7 +194,7 @@ export default function DigitalServicesPage() {
                     <ul className="space-y-2 text-[0.83rem]">
                       <li className="flex gap-2">
                         <CheckCircle size={12} weight="fill" className="text-brand shrink-0 mt-1" aria-hidden="true" />
-                        <span className="text-ink-soft">Register from the first sale — no threshold</span>
+                        <span className="text-ink-soft">Register from the first sale - no threshold</span>
                       </li>
                       <li className="flex gap-2">
                         <CheckCircle size={12} weight="fill" className="text-brand shrink-0 mt-1" aria-hidden="true" />
@@ -222,7 +222,7 @@ export default function DigitalServicesPage() {
               </div>
             </section>
 
-            {/* Section 3 — VAT vs DST */}
+            {/* Section 3 - VAT vs DST */}
             <section id="vat-vs-dst" aria-labelledby="vat-vs-dst-h">
               <h2 id="vat-vs-dst-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 VAT vs Digital Service Tax (DST)
@@ -263,7 +263,7 @@ export default function DigitalServicesPage() {
               </div>
             </section>
 
-            {/* Section 4 — Compliance for Residents */}
+            {/* Section 4 - Compliance for Residents */}
             <section id="compliance-residents" aria-labelledby="compliance-residents-h">
               <h2 id="compliance-residents-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Compliance for Kenyan Digital Businesses
@@ -289,7 +289,7 @@ export default function DigitalServicesPage() {
                   </li>
                   <li className="text-ink-soft">
                     <strong className="text-ink">Charge VAT correctly</strong> on all sales to Kenyan customers.
-                    If your customer provides a KRA PIN, they are VAT-registered — issue an eTIMS invoice and
+                    If your customer provides a KRA PIN, they are VAT-registered - issue an eTIMS invoice and
                     charge 16% VAT. If they are a consumer without a PIN, charge 16% VAT and declare as B2C.
                   </li>
                   <li className="text-ink-soft">
@@ -303,7 +303,7 @@ export default function DigitalServicesPage() {
               </div>
             </section>
 
-            {/* Section 5 — Compliance for Non-Residents */}
+            {/* Section 5 - Compliance for Non-Residents */}
             <section id="compliance-non-residents" aria-labelledby="compliance-non-residents-h">
               <h2 id="compliance-non-residents-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Compliance for Non-Resident Digital Suppliers
@@ -316,7 +316,7 @@ export default function DigitalServicesPage() {
                 <div className="space-y-3">
                   {[
                     { step: "1. Register for a KRA PIN as a non-resident", detail: "Go to itax.kra.go.ke and register as a non-resident individual or entity. You will receive a KRA PIN that starts with a specific prefix for non-residents." },
-                    { step: "2. Register for VAT under the simplified regime", detail: "Select 'Digital Marketplace Supply' as your VAT category. There is no KES 5 million threshold — you register from the first sale." },
+                    { step: "2. Register for VAT under the simplified regime", detail: "Select 'Digital Marketplace Supply' as your VAT category. There is no KES 5 million threshold - you register from the first sale." },
                     { step: "3. Charge 16% VAT on all sales", detail: "On your invoices to Kenyan customers, clearly show 16% VAT. For B2B customers, capture their KRA PIN. For B2C, no PIN is required." },
                     { step: "4. File monthly VAT returns", detail: "File a simplified VAT return by the 20th of each month showing total sales and VAT collected. Remit the VAT through the iTax payment options." },
                     { step: "5. Consider DST obligations", detail: "You may also be liable for Digital Service Tax at 1.5% on gross transaction value from Kenyan customers. This is filed separately." },
@@ -330,7 +330,7 @@ export default function DigitalServicesPage() {
               </div>
             </section>
 
-            {/* Section 6 — Input VAT for Digital Businesses */}
+            {/* Section 6 - Input VAT for Digital Businesses */}
             <section id="input-vat" aria-labelledby="input-vat-h">
               <h2 id="input-vat-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Claiming Input VAT as a Digital Business
@@ -342,7 +342,7 @@ export default function DigitalServicesPage() {
                 </p>
                 <ul className="space-y-2">
                   {[
-                    "Cloud hosting (AWS, Google Cloud, Azure) — with eTIMS invoice from a Kenyan reseller or the supplier's VAT-registered entity",
+                    "Cloud hosting (AWS, Google Cloud, Azure) - with eTIMS invoice from a Kenyan reseller or the supplier's VAT-registered entity",
                     "Software subscriptions (tools, platforms, APIs) used for business",
                     "Laptops, computers, and office equipment",
                     "Office rent (if the landlord is VAT-registered and issues eTIMS invoices)",

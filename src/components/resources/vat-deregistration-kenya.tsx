@@ -55,7 +55,7 @@ export default function VatDeregistrationPost() {
           <p>
             If your business no longer meets the VAT registration threshold, you are closing down, or you
             simply no longer wish to be VAT-registered, you need to go through the KRA VAT deregistration
-            process. Cancelling your VAT registration is not as simple as stopping your filings — there are
+            process. Cancelling your VAT registration is not as simple as stopping your filings - there are
             specific forms, final returns, stock adjustments, and eTIMS deactivation steps that must be
             completed in order.
           </p>
@@ -86,9 +86,9 @@ export default function VatDeregistrationPost() {
           </p>
           <ul className="space-y-1.5">
             {[
-              "Your taxable turnover falls below KES 5 million per year (or KES 8 million if you registered under the higher threshold introduced by the Finance Act 2025 — though this increase has not yet taken effect as of July 2026).",
-              "You have permanently ceased to carry on business — this includes closure, insolvency, or retirement.",
-              "Your business structure has changed — for example, you converted from a sole proprietorship to a company, or you merged with another entity.",
+              "Your taxable turnover falls below KES 5 million per year (or KES 8 million if you registered under the higher threshold introduced by the Finance Act 2025 - though this increase has not yet taken effect as of July 2026).",
+              "You have permanently ceased to carry on business - this includes closure, insolvency, or retirement.",
+              "Your business structure has changed - for example, you converted from a sole proprietorship to a company, or you merged with another entity.",
               "You wish to deregister voluntarily (for example, you are below the threshold and do not expect to exceed it again).",
               "The business has been sold or transferred to another person.",
               "The sole proprietor has passed away."
@@ -101,7 +101,7 @@ export default function VatDeregistrationPost() {
           </ul>
           <p>
             Crucially, KRA must approve your deregistration application. You cannot simply stop filing
-            returns and assume your registration has lapsed — if you do, you will continue accruing
+            returns and assume your registration has lapsed - if you do, you will continue accruing
             late-filing penalties and the eTIMS non-compliance exposure (TPA s.86: the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals).
           </p>
 
@@ -170,10 +170,10 @@ export default function VatDeregistrationPost() {
           <ul className="space-y-1.5">
             {[
               "KRA PIN and registered business name.",
-              "Contact details — postal address, email, phone number, and physical location.",
+              "Contact details - postal address, email, phone number, and physical location.",
               "VAT registration number (the 9-digit number assigned when you registered).",
-              "Reason for deregistration — select from the dropdown options (turnover below threshold, ceased trading, change of business structure, voluntary, or other).",
-              "Proposed effective date of deregistration — this should be the date from which you want the cancellation to take effect.",
+              "Reason for deregistration - select from the dropdown options (turnover below threshold, ceased trading, change of business structure, voluntary, or other).",
+              "Proposed effective date of deregistration - this should be the date from which you want the cancellation to take effect.",
               "Declaration that all outstanding VAT returns have been filed and all taxes paid.",
               "Details of any VAT refunds claimed or pending.",
               "Stock on hand and capital goods held at the date of deregistration."
@@ -186,7 +186,7 @@ export default function VatDeregistrationPost() {
           </ul>
           <p>
             You must also upload supporting documents depending on your reason for deregistration. A
-            cover letter explaining the circumstances is strongly recommended — it speeds up the review
+            cover letter explaining the circumstances is strongly recommended - it speeds up the review
             process by giving the KRA officer a clear picture of your situation.
           </p>
 
@@ -194,7 +194,7 @@ export default function VatDeregistrationPost() {
             Final VAT Return and Stock Adjustments
           </h2>
           <p>
-            One of the most important — and most often overlooked — steps in VAT deregistration is the
+            One of the most important - and most often overlooked - steps in VAT deregistration is the
             final VAT return. This return must cover the period up to the effective date of deregistration
             and must include special adjustments that a normal monthly return does not:
           </p>
@@ -250,7 +250,7 @@ export default function VatDeregistrationPost() {
           </h2>
           <p>
             Once KRA approves your VAT deregistration, your eTIMS registration must also be cancelled.
-            This is not automatic — you need to apply separately for eTIMS deactivation.
+            This is not automatic - you need to apply separately for eTIMS deactivation.
           </p>
           <p>
             The eTIMS cancellation process involves:
@@ -259,7 +259,7 @@ export default function VatDeregistrationPost() {
             {[
               "Notifying KRA through the eTIMS portal that you no longer require the system.",
               "Returning or deactivating your eTIMS device (if you use a dedicated eTIMS device rather than the mobile app or web portal).",
-              "Deactivation of your QR code — your customers will no longer be able to scan and verify your invoices.",
+              "Deactivation of your QR code - your customers will no longer be able to scan and verify your invoices.",
               "Confirmation that no eTIMS invoices are pending transmission to KRA."
             ].map((item) => (
               <li key={item} className="flex gap-3">
@@ -271,7 +271,7 @@ export default function VatDeregistrationPost() {
           <p className="font-semibold text-ink">Record retention after deregistration</p>
           <p>
             Even after your eTIMS registration is cancelled, you are required to retain all tax records
-            — including eTIMS invoices, VAT returns, and supporting documents — for a period of five
+            - including eTIMS invoices, VAT returns, and supporting documents - for a period of five
             years from the end of the tax year to which they relate. This is a legal requirement under
             Section 43 of the VAT Act and applies even after your VAT registration has been cancelled.
           </p>
@@ -305,7 +305,7 @@ export default function VatDeregistrationPost() {
           <p>
             Before KRA deregisters you involuntarily, they are required to notify you in writing and give
             you an opportunity to show cause why the registration should not be cancelled. If you receive
-            such a notice, you should respond promptly — either by filing outstanding returns or by
+            such a notice, you should respond promptly - either by filing outstanding returns or by
             demonstrating that you are still carrying on business.
           </p>
           <p>
@@ -320,7 +320,7 @@ export default function VatDeregistrationPost() {
           </h2>
           <p>
             If your circumstances change after deregistration and you again meet the VAT registration
-            threshold, you can re-register. The process is the same as registering for the first time —
+            threshold, you can re-register. The process is the same as registering for the first time -
             you submit an application through iTax with your business details and turnover projections.
           </p>
           <p>
@@ -331,7 +331,7 @@ export default function VatDeregistrationPost() {
               "If you deregistered voluntarily because your turnover fell below the threshold, you must re-register as soon as your turnover exceeds KES 5 million (or KES 8 million if the proposed higher threshold takes effect).",
               "If you were deregistered involuntarily for non-compliance, KRA may scrutinise your re-registration application more closely.",
               "You will need to apply for a new eTIMS registration and obtain a new QR code.",
-              "Your old VAT registration number will not be reinstated — you will receive a new one."
+              "Your old VAT registration number will not be reinstated - you will receive a new one."
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <CheckCircle size={14} weight="fill" className="text-brand shrink-0 mt-1" />
@@ -375,7 +375,7 @@ export default function VatDeregistrationPost() {
                 <a href={slug} className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   {title}
                 </a>
-                <span className="text-ink-muted"> — {desc}</span>
+                <span className="text-ink-muted"> - {desc}</span>
               </li>
             ))}
           </ul>

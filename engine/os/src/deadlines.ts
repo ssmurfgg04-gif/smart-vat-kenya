@@ -4,8 +4,8 @@ import { ObligationPeriod } from "./types.js"
  * The "17th Guarantee" deadline engine.
  *
  * KRA VAT returns for period M are due on the 20th of month M+1. SmartVAT files
- * on the 17th by default — three whole working days of buffer before the KRA
- * deadline — so a portal outage or a rejection still has room to resubmit
+ * on the 17th by default - three whole working days of buffer before the KRA
+ * deadline - so a portal outage or a rejection still has room to resubmit
  * before the 20th.
  *
  * Date math is done in UTC days; holiday adjustments are supplied by the caller
@@ -94,7 +94,7 @@ export function dueWithin(
 }
 
 /**
- * Periods whose *target* (17th) falls within the next `days` — the lead-up window
+ * Periods whose *target* (17th) falls within the next `days` - the lead-up window
  * the reminder scheduler cares about. Also includes periods whose target has just
  * passed (`graceDays` back) so recently-filed returns can be confirmed. Scoped on
  * the target date rather than the due date so a lead nudge fires well before the

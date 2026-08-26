@@ -108,12 +108,12 @@ export default function WhatHappensIfIDontRegisterForVAT() {
           <div className="space-y-5 text-[0.9rem] text-ink-soft leading-[1.75]">
             <p>
               You've heard it before: "VAT registration is mandatory in Kenya." But what does that really mean?
-              And more importantly — <strong>what happens if you ignore it?</strong>
+              And more importantly - <strong>what happens if you ignore it?</strong>
             </p>
 
             <p>
               If your business turnover exceeds KES 5 million annually and you haven't registered for VAT,
-              you're not just breaking the law — you're exposing yourself to penalties that can crush your business.
+              you're not just breaking the law - you're exposing yourself to penalties that can crush your business.
             </p>
 
             <p>
@@ -234,7 +234,7 @@ export default function WhatHappensIfIDontRegisterForVAT() {
             </h2>
 
             <p>
-              Failure to register for VAT is not just a civil matter — it's a <strong>criminal offense</strong>.
+              Failure to register for VAT is not just a civil matter - it's a <strong>criminal offense</strong>.
             </p>
 
             <p>
@@ -258,7 +258,7 @@ export default function WhatHappensIfIDontRegisterForVAT() {
 
             <p>
               KRA actively looks for non-registered businesses. When they find one, a full tax audit is triggered.
-              During an audit, KRA doesn't just look at VAT — they scrutinize your entire tax position:
+              During an audit, KRA doesn't just look at VAT - they scrutinize your entire tax position:
             </p>
 
             <ul className="list-disc pl-6 space-y-2 my-4">
@@ -289,7 +289,7 @@ export default function WhatHappensIfIDontRegisterForVAT() {
             </ul>
 
             <p>
-              This is an ongoing penalty — every month you don't register, you bleed money on input VAT that could have
+              This is an ongoing penalty - every month you don't register, you bleed money on input VAT that could have
               been recovered.
             </p>
 
@@ -441,7 +441,7 @@ export default function WhatHappensIfIDontRegisterForVAT() {
             </h2>
 
             <p>
-              Not registering for VAT in Kenya when required is not a gray area — it's a clear violation with severe consequences:
+              Not registering for VAT in Kenya when required is not a gray area - it's a clear violation with severe consequences:
             </p>
 
             <ul className="list-disc pl-6 space-y-2 my-4">

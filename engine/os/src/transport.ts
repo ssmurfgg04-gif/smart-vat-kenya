@@ -1,5 +1,5 @@
 /**
- * HTTP transport — a tiny port so external SaaS transports (WhatsApp Cloud,
+ * HTTP transport - a tiny port so external SaaS transports (WhatsApp Cloud,
  * M-PESA Daraja, an LLM provider) can be exercised offline and mocked in tests.
  * The real Node implementation uses fetch; tests inject a fake.
  */

@@ -33,9 +33,9 @@ const breadcrumbSchema = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Smart VAT Kenya — Kisumu",
+  name: "Smart VAT Kenya - Kisumu",
   description:
-    "Professional VAT registration services in Kisumu — KES 5,000 flat fee. KRA iTax registration for Kisumu businesses.",
+    "Professional VAT registration services in Kisumu - KES 5,000 flat fee. KRA iTax registration for Kisumu businesses.",
   url: "https://smartvatkenya.co.ke/services/vat-registration-kisumu",
   telephone: "+254717344440",
   areaServed: [
@@ -74,7 +74,7 @@ const faqSchema = {
       name: "Can you handle KRA matters for my Kisumu business?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. KRA iTax is a fully online portal — there is no physical office requirement. We handle your VAT registration, and any ongoing VAT filing, entirely remotely. Whether your business is in Kisumu CBD, Milimani, Nyawita, or anywhere in Kisumu County, you get the same service as any Nairobi-based client.",
+        text: "Yes. KRA iTax is a fully online portal - there is no physical office requirement. We handle your VAT registration, and any ongoing VAT filing, entirely remotely. Whether your business is in Kisumu CBD, Milimani, Nyawita, or anywhere in Kisumu County, you get the same service as any Nairobi-based client.",
       },
     },
     {
@@ -97,7 +97,7 @@ const serviceSchema = {
   "@id": "https://smartvatkenya.co.ke/services/vat-registration-kisumu#service",
   name: "VAT Registration Services Kisumu",
   description:
-    "Professional KRA VAT registration in Kisumu — KES 5,000 flat fee, done in 1–3 working days. iTax VAT Form 1, PIN generation, and eTIMS guidance included. Fully remote via WhatsApp. M-PESA accepted.",
+    "Professional KRA VAT registration in Kisumu - KES 5,000 flat fee, done in 1–3 working days. iTax VAT Form 1, PIN generation, and eTIMS guidance included. Fully remote via WhatsApp. M-PESA accepted.",
   provider: { "@type": "Organization", name: "Smart VAT Kenya" },
   areaServed: { "@type": "City", name: "Kisumu" },
 }
@@ -114,7 +114,7 @@ const inclusions = [
 ]
 
 const whyKisumu = [
-  { Icon: CurrencyDollar, label: "KES 5,000 flat fee — no hidden costs" },
+  { Icon: CurrencyDollar, label: "KES 5,000 flat fee - no hidden costs" },
   { Icon: Clock, label: "1–3 working days, not weeks" },
   { Icon: ChatCircle, label: "Full service delivered over WhatsApp" },
   { Icon: Prohibit, label: "No need to travel to Nairobi" },
@@ -142,7 +142,7 @@ const steps = [
     Icon: ChatCircle,
     title: "WhatsApp Us from Kisumu",
     description:
-      "Send your business name, KRA PIN, and a copy of your national ID over WhatsApp. No need to visit any office — do it from your phone in Kisumu.",
+      "Send your business name, KRA PIN, and a copy of your national ID over WhatsApp. No need to visit any office - do it from your phone in Kisumu.",
     details: [
       "Send KRA PIN certificate",
       "Share a copy of your national ID",
@@ -157,7 +157,7 @@ const steps = [
     description:
       "We log into the KRA iTax portal from our end, update your profile, complete VAT Form 1, and submit your application. You get WhatsApp updates at every stage.",
     details: [
-      "KRA iTax portal — fully handled",
+      "KRA iTax portal - fully handled",
       "Profile update completed",
       "VAT Form 1 submitted",
       "WhatsApp updates throughout",
@@ -181,7 +181,7 @@ const steps = [
 const kisumuBusinessTypes = [
   { emoji: "🐟", title: "Fish Processing & Lake Victoria Trade", desc: "Kisumu's fish processing and lake transport businesses must charge VAT on taxable supplies. Input VAT claims on boats, cooling equipment, and packaging materials can significantly reduce net VAT payable." },
   { emoji: "🌾", title: "Agriculture & Agro-Processing", desc: "Agricultural produce is generally exempt from VAT, but processed and packaged products attract 16% VAT. Milling, drying, and packaging operations in Kisumu County must be VAT-registered." },
-  { emoji: "🛂", title: "Cross-Border Trade (Uganda & Tanzania)", desc: "Kisumu's proximity to the Busia and Isebania border crossings means many businesses trade across East Africa. Exports of goods are zero-rated — you charge 0% VAT and claim input VAT refunds." },
+  { emoji: "🛂", title: "Cross-Border Trade (Uganda & Tanzania)", desc: "Kisumu's proximity to the Busia and Isebania border crossings means many businesses trade across East Africa. Exports of goods are zero-rated - you charge 0% VAT and claim input VAT refunds." },
 ]
 
 const faqs = [
@@ -191,7 +191,7 @@ const faqs = [
   },
   {
     q: "Can you handle KRA matters for my Kisumu business?",
-    a: "Yes. KRA iTax is a fully online portal — there is no physical office requirement. We handle your VAT registration, and any ongoing VAT filing, entirely remotely. Whether your business is in Kisumu CBD, Milimani, Nyawita, or anywhere in Kisumu County, you get the same service as any Nairobi-based client.",
+    a: "Yes. KRA iTax is a fully online portal - there is no physical office requirement. We handle your VAT registration, and any ongoing VAT filing, entirely remotely. Whether your business is in Kisumu CBD, Milimani, Nyawita, or anywhere in Kisumu County, you get the same service as any Nairobi-based client.",
   },
   {
     q: "How do I pay for VAT registration from Kisumu?",
@@ -203,7 +203,7 @@ const faqs = [
   },
   {
     q: "How long does KRA VAT registration take for Kisumu businesses?",
-    a: "VAT registration in Kenya typically takes 1–3 working days once all required documents are submitted. KRA's processing time is the same regardless of location — Kisumu businesses get the same turnaround as Nairobi businesses.",
+    a: "VAT registration in Kenya typically takes 1–3 working days once all required documents are submitted. KRA's processing time is the same regardless of location - Kisumu businesses get the same turnaround as Nairobi businesses.",
   },
   {
     q: "Do I need to log into iTax myself?",
@@ -227,13 +227,13 @@ export default function VATRegistrationKisumuPage() {
       <div className="bg-canvas-dark px-6 lg:px-10 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
-            Kisumu — Western Kenya
+            Kisumu - Western Kenya
           </p>
           <p className="font-mono text-[0.7rem] text-brand mb-6">
             Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
-            VAT Registration Services Kisumu — KES 5,000
+            VAT Registration Services Kisumu - KES 5,000
           </h1>
           <p className="text-[0.95rem] text-canvas/70 max-w-[50ch] leading-relaxed mb-4">
             Professional KRA VAT registration for Kisumu businesses at a flat fee.
@@ -286,7 +286,7 @@ export default function VATRegistrationKisumuPage() {
             </h2>
             <p className="text-[0.93rem] text-ink-muted leading-relaxed max-w-[44ch]">
               Your KES 5,000 covers end-to-end handling of the iTax VAT registration
-              process. No add-ons, no upsells — just a complete service delivered to your
+              process. No add-ons, no upsells - just a complete service delivered to your
               WhatsApp, anywhere in Kisumu.
             </p>
           </div>
@@ -321,7 +321,7 @@ export default function VATRegistrationKisumuPage() {
             </h2>
             <p className="text-[0.93rem] text-ink-muted leading-relaxed max-w-[44ch]">
               Most VAT facilitators are Nairobi-based and expect you to visit their office.
-              We deliver the entire service over WhatsApp — no travel, no waiting, no extra costs.
+              We deliver the entire service over WhatsApp - no travel, no waiting, no extra costs.
             </p>
           </div>
           <ul className="space-y-3.5" role="list">
@@ -451,7 +451,7 @@ export default function VATRegistrationKisumuPage() {
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.1rem] font-semibold text-ink">
-              KES 5,000 — VAT registration for Kisumu
+              KES 5,000 - VAT registration for Kisumu
             </p>
             <p className="text-[0.85rem] text-ink-muted mt-1">
               Fully remote via WhatsApp. No travel needed. Done in 1–3 working days.
@@ -482,7 +482,7 @@ export default function VATRegistrationKisumuPage() {
             id="faq-heading"
             className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-10 text-balance"
           >
-            VAT registration in Kisumu — questions answered.
+            VAT registration in Kisumu - questions answered.
           </h2>
 
           <div className="space-y-6">
@@ -505,10 +505,10 @@ export default function VATRegistrationKisumuPage() {
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <h2 className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-canvas mb-2 text-balance">
-              Register for VAT in Kisumu — KES 5,000.
+              Register for VAT in Kisumu - KES 5,000.
             </h2>
             <p className="text-[0.88rem] text-canvas/65 max-w-[40ch]">
-              Send a WhatsApp message now. No commitment required — we will confirm we can help before any payment.
+              Send a WhatsApp message now. No commitment required - we will confirm we can help before any payment.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">

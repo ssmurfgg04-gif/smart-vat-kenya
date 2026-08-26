@@ -28,7 +28,7 @@ export interface GavaClientOptions {
 }
 
 /**
- * KRA GavaConnect portal client — 22 APIs across checkers, returns,
+ * KRA GavaConnect portal client - 22 APIs across checkers, returns,
  * payments, compliance, registration and customs. One app per API product.
  */
 export class GavaClient {

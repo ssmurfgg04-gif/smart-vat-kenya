@@ -69,7 +69,7 @@ export class EtimsResultError extends GavaError {
     readonly resultMsg: string,
   ) {
     super(
-      `eTIMS resultCd ${resultCd} — ${ETIMS_RESULT_CODES[resultCd] ?? "unknown"} (${resultMsg})`,
+      `eTIMS resultCd ${resultCd} - ${ETIMS_RESULT_CODES[resultCd] ?? "unknown"} (${resultMsg})`,
       "ETIMS_RESULT_ERROR",
     )
     this.name = "EtimsResultError"

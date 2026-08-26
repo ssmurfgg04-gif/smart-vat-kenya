@@ -3,7 +3,7 @@ import { ClientStore, StoredClient } from "./store.js"
 import { SpecialTableChecker } from "./exposure.js"
 
 /**
- * Portal adapter — the client workflow's real-KRA data gates:
+ * Portal adapter - the client workflow's real-KRA data gates:
  *   · active obligations → what periods to file
  *   · TCC validity → gates tenders / health score
  *   · a supplier / invoice Special Table check → input-VAT exposure

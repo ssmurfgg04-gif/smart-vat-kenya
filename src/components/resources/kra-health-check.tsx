@@ -44,7 +44,7 @@ export default function KraHealthCheckPage() {
         <div className="border-l-[3px] border-brand pl-5">
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
             You've been avoiding the letter. The TCC request. The supplier asking for your PIN. 
-            The fear isn't KRA — it's not knowing. 
+            The fear isn't KRA - it's not knowing. 
             We'll check your iTax ledger. Tell you exactly where you stand. 
             Free. No obligation.
           </p>

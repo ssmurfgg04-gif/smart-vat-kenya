@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------ */
-/* SmartVAT Client layer — M-PESA (Lipa na M-Pesa STK Push) billing.    */
+/* SmartVAT Client layer - M-PESA (Lipa na M-Pesa STK Push) billing.    */
 /*                                                                      */
 /* Models a request to initiate a STK push and the async confirmation   */
 /* that Safaricom posts back (Callback) as a payment event. The actual   */

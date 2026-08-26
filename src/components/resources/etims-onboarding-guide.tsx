@@ -38,7 +38,7 @@ const faqSchema = {
       name: "Do I need eTIMS if my business is not VAT-registered?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The Finance Act 2023 (Section 23A of the Tax Procedures Act) requires ALL persons engaged in business to use eTIMS — not only VAT-registered businesses. This includes turnover tax payers, rental income earners, informal sector businesses, and professionals. If you sell goods or services in Kenya, you must issue eTIMS-compliant invoices.",
+        text: "Yes. The Finance Act 2023 (Section 23A of the Tax Procedures Act) requires ALL persons engaged in business to use eTIMS - not only VAT-registered businesses. This includes turnover tax payers, rental income earners, informal sector businesses, and professionals. If you sell goods or services in Kenya, you must issue eTIMS-compliant invoices.",
       },
     },
     {
@@ -46,7 +46,7 @@ const faqSchema = {
       name: "What is the difference between eTIMS Lite and eTIMS Client?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "eTIMS Lite is a free web-based solution accessed through a browser — ideal for small businesses issuing fewer than 50 invoices per month. eTIMS Client is a downloadable desktop application for Windows with more features, suitable for medium-volume businesses that need offline capability, inventory management, and customer records. Both transmit invoices to KRA in real time.",
+        text: "eTIMS Lite is a free web-based solution accessed through a browser - ideal for small businesses issuing fewer than 50 invoices per month. eTIMS Client is a downloadable desktop application for Windows with more features, suitable for medium-volume businesses that need offline capability, inventory management, and customer records. Both transmit invoices to KRA in real time.",
       },
     },
     {
@@ -138,11 +138,11 @@ export default function ETIMSOnboardingPage() {
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
             eTIMS (Electronic Tax Invoice Management System) is KRA's mandatory platform for real-time invoice transmission. From January 2026,{" "}
-            <strong className="text-ink">every business in Kenya</strong> — whether VAT-registered or not — must issue invoices through eTIMS. Choose from{" "}
+            <strong className="text-ink">every business in Kenya</strong> - whether VAT-registered or not - must issue invoices through eTIMS. Choose from{" "}
             <strong className="text-ink">eTIMS Lite</strong> (free, web-based), <strong className="text-ink">eTIMS Client</strong> (desktop app),{" "}
             <strong className="text-ink">eTIMS Trader</strong> (importers), or <strong className="text-ink">VSCU/OSCU</strong> (POS integration). Registration is done on the{" "}
             <strong className="text-ink">KRA iTax portal</strong>, and failing to issue compliant invoices attracts penalties under the
-            ETI Regulations (which refer breaches to TPA s.86 — the higher of <strong className="text-ink">5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals)</strong> since 1 July 2026) and TPA s.86.
+            ETI Regulations (which refer breaches to TPA s.86 - the higher of <strong className="text-ink">5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals)</strong> since 1 July 2026) and TPA s.86.
           </p>
         </div>
 
@@ -165,7 +165,7 @@ export default function ETIMSOnboardingPage() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — What Is eTIMS? */}
+          {/* Section 1 - What Is eTIMS? */}
           <section id="what-is-etims" aria-labelledby="what-is-etims-h">
             <h2 id="what-is-etims-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What Is eTIMS?
@@ -175,7 +175,7 @@ export default function ETIMSOnboardingPage() {
                 eTIMS stands for the <strong className="text-ink">Electronic Tax Invoice Management System</strong>. It is a KRA platform that requires every business in Kenya to issue, transmit, and store tax invoices electronically in real time. Unlike the old system where you could issue handwritten or typed invoices and submit them later, eTIMS sends each invoice to KRA's servers the moment you create it.
               </p>
               <p>
-                The system generates a <strong className="text-ink">unique QR code</strong> and an <strong className="text-ink">eTIMS server confirmation code</strong> for every invoice. This allows KRA, your customers, and any auditor to verify the invoice instantly by scanning the QR code. It also means KRA can see your sales in real time — there is no gap between when you make a sale and when KRA knows about it.
+                The system generates a <strong className="text-ink">unique QR code</strong> and an <strong className="text-ink">eTIMS server confirmation code</strong> for every invoice. This allows KRA, your customers, and any auditor to verify the invoice instantly by scanning the QR code. It also means KRA can see your sales in real time - there is no gap between when you make a sale and when KRA knows about it.
               </p>
               <p>
                 eTIMS is <strong className="text-ink">not optional</strong>. The Finance Act 2023 amended the Tax Procedures Act to make eTIMS mandatory for all persons engaged in business. Enforcement began in earnest from January 2026, and KRA has been conducting nationwide compliance checks. Businesses that have not onboarded face escalating penalties.
@@ -189,7 +189,7 @@ export default function ETIMSOnboardingPage() {
             </div>
           </section>
 
-          {/* Section 2 — Legal Basis */}
+          {/* Section 2 - Legal Basis */}
           <section id="legal-basis" aria-labelledby="legal-basis-h">
             <h2 id="legal-basis-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Legal Basis: Finance Act 2023
@@ -218,7 +218,7 @@ export default function ETIMSOnboardingPage() {
             </div>
           </section>
 
-          {/* Section 3 — Who Must Register */}
+          {/* Section 3 - Who Must Register */}
           <section id="who-must-register" aria-labelledby="who-must-register-h">
             <h2 id="who-must-register-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Which Businesses Must Register for eTIMS?
@@ -229,13 +229,13 @@ export default function ETIMSOnboardingPage() {
               </p>
               <ul className="space-y-3">
                 {[
-                  "VAT-registered businesses — mandatory under any circumstances.",
+                  "VAT-registered businesses - mandatory under any circumstances.",
                   "Turnover tax (TOT) payers with turnover below KES 5 million.",
-                  "Rental income earners — including landlords with residential or commercial properties.",
-                  "Informal sector businesses — kiosks, market vendors, mechanics, salons, and boda boda operators if they supply goods or services.",
-                  "Professionals — lawyers, accountants, consultants, doctors, and architects issuing invoices for services.",
-                  "Wholesalers and distributors — especially those dealing with fast-moving consumer goods (FMCG).",
-                  "Importers and exporters — eTIMS Trader solution integrates with customs data.",
+                  "Rental income earners - including landlords with residential or commercial properties.",
+                  "Informal sector businesses - kiosks, market vendors, mechanics, salons, and boda boda operators if they supply goods or services.",
+                  "Professionals - lawyers, accountants, consultants, doctors, and architects issuing invoices for services.",
+                  "Wholesalers and distributors - especially those dealing with fast-moving consumer goods (FMCG).",
+                  "Importers and exporters - eTIMS Trader solution integrates with customs data.",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[0.88rem] text-ink-soft">
                     <CheckCircle size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -246,14 +246,14 @@ export default function ETIMSOnboardingPage() {
               <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
                 <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
-                  <strong className="text-ink">Important:</strong> If you issue an invoice that is not transmitted through eTIMS, your customer cannot claim input VAT on that invoice. This means your B2B customers will insist on eTIMS invoices — otherwise they lose their VAT deduction. Market pressure alone is driving many businesses to register.
+                  <strong className="text-ink">Important:</strong> If you issue an invoice that is not transmitted through eTIMS, your customer cannot claim input VAT on that invoice. This means your B2B customers will insist on eTIMS invoices - otherwise they lose their VAT deduction. Market pressure alone is driving many businesses to register.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Section 4 — eTIMS Solution Types */}
-          <Flowchart caption="eTIMS solution selector — find the right option for your business">
+          {/* Section 4 - eTIMS Solution Types */}
+          <Flowchart caption="eTIMS solution selector - find the right option for your business">
             <ETIMSSolutionFlow />
           </Flowchart>
           <section id="solution-types" aria-labelledby="solution-types-h">
@@ -266,7 +266,7 @@ export default function ETIMSOnboardingPage() {
             <div className="space-y-5">
               {[
                 {
-                  name: "eTIMS Lite (Free — Web-Based)",
+                  name: "eTIMS Lite (Free - Web-Based)",
                   ideal: "Small businesses, sole traders, informal sector",
                   detail: "eTIMS Lite is a free web application you access through any browser at etims.kra.go.ke. You log in, create invoices manually, and print or email them to your customers. Suitable for businesses issuing fewer than 50 invoices per month. No installation required. Ideal for non-VAT-registered businesses and turnover tax payers.",
                 },
@@ -288,7 +288,7 @@ export default function ETIMSOnboardingPage() {
                 {
                   name: "Buyer Initiated Invoicing (BII)",
                   ideal: "Buyers who purchase from small suppliers not yet on eTIMS",
-                  detail: "Under this model, a VAT-registered buyer can generate and transmit an eTIMS invoice on behalf of a small supplier who is not yet on the system. This allows the buyer to still claim input VAT while giving the supplier time to onboard. The supplier gets a notification and must accept or reject the invoice. BII is a transitional solution — the supplier is expected to register for eTIMS within a reasonable period.",
+                  detail: "Under this model, a VAT-registered buyer can generate and transmit an eTIMS invoice on behalf of a small supplier who is not yet on the system. This allows the buyer to still claim input VAT while giving the supplier time to onboard. The supplier gets a notification and must accept or reject the invoice. BII is a transitional solution - the supplier is expected to register for eTIMS within a reasonable period.",
                 },
               ].map(({ name, ideal, detail }) => (
                 <div key={name} className="border border-hairline rounded-lg p-5">
@@ -314,11 +314,11 @@ export default function ETIMSOnboardingPage() {
             </div>
           </section>
 
-          <Flowchart caption="eTIMS onboarding process — 4 stages from registration to first invoice">
+          <Flowchart caption="eTIMS onboarding process - 4 stages from registration to first invoice">
             <ETIMSOnboardingFlow />
           </Flowchart>
 
-          {/* Section 5 — Step-by-Step Onboarding */}
+          {/* Section 5 - Step-by-Step Onboarding */}
           <section id="step-by-step" aria-labelledby="step-by-step-h">
             <h2 id="step-by-step-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Step-by-Step eTIMS Onboarding Process
@@ -342,7 +342,7 @@ export default function ETIMSOnboardingPage() {
                 {
                   step: 3,
                   title: "Select your eTIMS solution type",
-                  detail: "Choose from eTIMS Lite, eTIMS Client, eTIMS Trader, or VSCU/OSCU. Read the descriptions carefully — selecting the wrong type may require a fresh application. If unsure, start with eTIMS Lite.",
+                  detail: "Choose from eTIMS Lite, eTIMS Client, eTIMS Trader, or VSCU/OSCU. Read the descriptions carefully - selecting the wrong type may require a fresh application. If unsure, start with eTIMS Lite.",
                 },
                 {
                   step: 4,
@@ -395,13 +395,13 @@ export default function ETIMSOnboardingPage() {
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
               >
-                Start eTIMS Onboarding — WhatsApp Us
+                Start eTIMS Onboarding - WhatsApp Us
                 <ArrowRight size={14} weight="bold" aria-hidden="true" />
               </a>
             </div>
           </section>
 
-          {/* Section 6 — Mandatory Invoice Fields */}
+          {/* Section 6 - Mandatory Invoice Fields */}
           <section id="invoice-fields" aria-labelledby="invoice-fields-h">
             <h2 id="invoice-fields-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Mandatory eTIMS Invoice Fields
@@ -439,7 +439,7 @@ export default function ETIMSOnboardingPage() {
             </div>
           </section>
 
-          {/* Section 7 — Penalties */}
+          {/* Section 7 - Penalties */}
           <section id="penalties" aria-labelledby="penalties-h">
             <h2 id="penalties-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Penalties for eTIMS Non-Compliance
@@ -480,7 +480,7 @@ export default function ETIMSOnboardingPage() {
                     Cumulative effect
                   </p>
                   <p className="text-[0.83rem] text-[#8a6500] dark:text-[#ccaa33] leading-relaxed">
-                    The penalties stack. If you have been operating without eTIMS for 6 months, you owe KES 300,000 just for the non-registration penalty, plus 50% surcharge on any audit adjustments, plus interest. Do not wait for KRA to find you — onboard now.
+                    The penalties stack. If you have been operating without eTIMS for 6 months, you owe KES 300,000 just for the non-registration penalty, plus 50% surcharge on any audit adjustments, plus interest. Do not wait for KRA to find you - onboard now.
                   </p>
                 </div>
               </div>
@@ -508,7 +508,7 @@ export default function ETIMSOnboardingPage() {
               KRA eTIMS Official Resources
             </h2>
             <p className="text-[0.9rem] text-ink-soft leading-relaxed mb-5">
-              KRA publishes detailed guides for each eTIMS solution. These are the official PDFs — we have summarised
+              KRA publishes detailed guides for each eTIMS solution. These are the official PDFs - we have summarised
               the key takeaways for each below. Click to expand and download the full guide.
             </p>
             <Accordion
@@ -516,7 +516,7 @@ export default function ETIMSOnboardingPage() {
               items={[
                 {
                   summary: (
-                    <span><strong className="text-ink">eTIMS Application Procedure</strong> <span className="text-ink-muted font-normal">— 8 pages</span></span>
+                    <span><strong className="text-ink">eTIMS Application Procedure</strong> <span className="text-ink-muted font-normal">- 8 pages</span></span>
                   ),
                   content: (
                     <div className="text-[0.83rem] text-ink-muted space-y-2 leading-relaxed">
@@ -538,7 +538,7 @@ export default function ETIMSOnboardingPage() {
                 },
                 {
                   summary: (
-                    <span><strong className="text-ink">eTIMS Online Portal User Guide</strong> <span className="text-ink-muted font-normal">— 11 pages</span></span>
+                    <span><strong className="text-ink">eTIMS Online Portal User Guide</strong> <span className="text-ink-muted font-normal">- 11 pages</span></span>
                   ),
                   content: (
                     <div className="text-[0.83rem] text-ink-muted space-y-2 leading-relaxed">
@@ -560,7 +560,7 @@ export default function ETIMSOnboardingPage() {
                 },
                 {
                   summary: (
-                    <span><strong className="text-ink">eTIMS Lite (VAT) User Guide</strong> <span className="text-ink-muted font-normal">— 29 pages</span></span>
+                    <span><strong className="text-ink">eTIMS Lite (VAT) User Guide</strong> <span className="text-ink-muted font-normal">- 29 pages</span></span>
                   ),
                   content: (
                     <div className="text-[0.83rem] text-ink-muted space-y-2 leading-relaxed">
@@ -582,7 +582,7 @@ export default function ETIMSOnboardingPage() {
                 },
                 {
                   summary: (
-                    <span><strong className="text-ink">OSCU / VSCU Sign-Up Guide</strong> <span className="text-ink-muted font-normal">— 13 pages</span></span>
+                    <span><strong className="text-ink">OSCU / VSCU Sign-Up Guide</strong> <span className="text-ink-muted font-normal">- 13 pages</span></span>
                   ),
                   content: (
                     <div className="text-[0.83rem] text-ink-muted space-y-2 leading-relaxed">
@@ -604,7 +604,7 @@ export default function ETIMSOnboardingPage() {
                 },
                 {
                   summary: (
-                    <span><strong className="text-ink">eTIMS PayPoint Guides</strong> <span className="text-ink-muted font-normal">— Windows (34pp) + Android (30pp)</span></span>
+                    <span><strong className="text-ink">eTIMS PayPoint Guides</strong> <span className="text-ink-muted font-normal">- Windows (34pp) + Android (30pp)</span></span>
                   ),
                   content: (
                     <div className="text-[0.83rem] text-ink-muted space-y-2 leading-relaxed">
@@ -613,7 +613,7 @@ export default function ETIMSOnboardingPage() {
                         <li className="list-disc">Installing eTIMS PayPoint on Windows POS terminals and Android phones</li>
                         <li className="list-disc">Configuring taxes, printers, and receipt templates</li>
                         <li className="list-disc">Daily sales reconciliation and Z-report generation</li>
-                        <li className="list-disc">Offline mode — invoices are queued and synced when connectivity returns</li>
+                        <li className="list-disc">Offline mode - invoices are queued and synced when connectivity returns</li>
                       </ul>
                       <div className="flex gap-4 pt-2">
                         <a href="/forms/kra-etims-paypoint-windows-guide.pdf" target="_blank" rel="noopener noreferrer"
@@ -630,7 +630,7 @@ export default function ETIMSOnboardingPage() {
                 },
                 {
                   summary: (
-                    <span><strong className="text-ink">eTIMS Onboarding Guidelines</strong> <span className="text-ink-muted font-normal">— 4 pages</span></span>
+                    <span><strong className="text-ink">eTIMS Onboarding Guidelines</strong> <span className="text-ink-muted font-normal">- 4 pages</span></span>
                   ),
                   content: (
                     <div className="text-[0.83rem] text-ink-muted space-y-2 leading-relaxed">
@@ -665,7 +665,7 @@ export default function ETIMSOnboardingPage() {
             <p className="text-[0.83rem] text-ink-muted leading-relaxed">
               Looking further ahead?{" "}
               <a href="/resources/cetis-kenya-2027/" className="text-brand underline underline-offset-2 hover:text-brand-hover">CETIS Kenya 2027</a>{" "}
-              is KRA&apos;s planned pre-clearance e-invoicing system (in procurement for 2027&ndash;28) — get the current eTIMS base right first, and you skip the scramble when it lands.
+              is KRA&apos;s planned pre-clearance e-invoicing system (in procurement for 2027&ndash;28) - get the current eTIMS base right first, and you skip the scramble when it lands.
             </p>
           </div>
           <ArticleGrid currentSlug="etims-onboarding-guide" />

@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "KRA iTax Maintenance Schedule 2026 — Plan Around Portal Downtime | kra itax system maintenance schedule",
+  headline: "KRA iTax Maintenance Schedule 2026 - Plan Around Portal Downtime | kra itax system maintenance schedule",
   description:
     "When does KRA take iTax down for maintenance? Learn the typical monthly maintenance patterns, where to check upcoming downtime, and how to plan your VAT filing so a maintenance window never costs you a penalty.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -110,10 +110,10 @@ export default function KraItaxMaintenanceSchedulePage() {
             Guide &middot; 6 min read
           </p>
           <h1 className="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-semibold tracking-tight text-ink leading-tight mb-4 text-balance">
-            KRA iTax Maintenance Schedule 2026 — Plan Around Portal Downtime | kra itax system maintenance schedule
+            KRA iTax Maintenance Schedule 2026 - Plan Around Portal Downtime | kra itax system maintenance schedule
           </h1>
           <p className="text-[0.92rem] text-ink-muted leading-relaxed max-w-[58ch]">
-            KRA does not publish a fixed maintenance calendar — but it doesn&apos;t have to be a
+            KRA does not publish a fixed maintenance calendar - but it doesn&apos;t have to be a
             guessing game. Maintenance outages follow <strong className="text-ink">patterns</strong>,
             and knowing those patterns lets you schedule your filing around them instead of racing them.
             This page tracks the <strong className="text-ink">kra itax system maintenance schedule</strong>
@@ -125,7 +125,7 @@ export default function KraItaxMaintenanceSchedulePage() {
           </div>
         </header>
 
-        {/* Section 1 — the honest truth */}
+        {/* Section 1 - the honest truth */}
         <section className="mb-16" aria-labelledby="truth-h">
           <h2 id="truth-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             The Honest Truth: There Is No Official Maintenance Calendar
@@ -133,7 +133,7 @@ export default function KraItaxMaintenanceSchedulePage() {
           <div className="text-[0.9rem] text-ink-muted leading-relaxed space-y-4">
             <p>
               KRA generally does not announce scheduled maintenance in advance on a public calendar.
-              Maintenance windows are communicated ad hoc — through the iTax login banner, on
+              Maintenance windows are communicated ad hoc - through the iTax login banner, on
               KRA&apos;s X account (@KRAAfrica), or sometimes not at all.
             </p>
             <p>
@@ -151,13 +151,13 @@ export default function KraItaxMaintenanceSchedulePage() {
               <p className="text-[0.83rem] leading-relaxed">
                 <strong className="text-ink">Net effect:</strong> the best-performing assumption is that
                 iTax will be unreliable at night, on weekends, and in the last 5 days before the 20th.
-                Plan filings for weekday mornings — and never plan a same-day filing for the 20th.
+                Plan filings for weekday mornings - and never plan a same-day filing for the 20th.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Section 2 — where to check */}
+        {/* Section 2 - where to check */}
         <section className="mb-16" aria-labelledby="where-h">
           <h2 id="where-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             Where to Check if iTax Is Up Before You File
@@ -174,7 +174,7 @@ export default function KraItaxMaintenanceSchedulePage() {
               },
               {
                 source: "downdetector.co.ke",
-                note: "Shows real-time 'is it down' spikes from user reports. Useful for congestion — a spike in reports often means server overload, not maintenance.",
+                note: "Shows real-time 'is it down' spikes from user reports. Useful for congestion - a spike in reports often means server overload, not maintenance.",
               },
               {
                 source: "Our iTax traffic update page",
@@ -192,7 +192,7 @@ export default function KraItaxMaintenanceSchedulePage() {
           </div>
         </section>
 
-        {/* Section 3 — best times table */}
+        {/* Section 3 - best times table */}
         <section className="mb-16" aria-labelledby="best-times-h">
           <h2 id="best-times-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             Best and Worst Times to Log into iTax in 2026
@@ -225,7 +225,7 @@ export default function KraItaxMaintenanceSchedulePage() {
                 <tr>
                   <td className="p-3 text-ink font-semibold">19th–20th (deadline crunch)</td>
                   <td className="p-3 text-amber-500 font-semibold">Highest outage/crash risk</td>
-                  <td className="p-3 text-ink-muted">Avoid entirely — this is when outages bite hardest.</td>
+                  <td className="p-3 text-ink-muted">Avoid entirely - this is when outages bite hardest.</td>
                 </tr>
                 <tr>
                   <td className="p-3 text-ink font-semibold">Friday night / Saturday / Sunday night</td>
@@ -240,7 +240,7 @@ export default function KraItaxMaintenanceSchedulePage() {
             <p className="text-[0.83rem] leading-relaxed">
               <strong className="text-ink">The maintenance trap:</strong> a filing that fails during
               a maintenance window does not extend your deadline. If you tried and failed on the 19th
-              or 20th, screenshot the error with a timestamp and apply for a penalty waiver — don&apos;t
+              or 20th, screenshot the error with a timestamp and apply for a penalty waiver - don&apos;t
               wait for KRA to fix it. See our{" "}
               <a href="/resources/kra-status-code-500-itax-errors/" className="text-brand underline underline-offset-2 hover:text-brand-hover">iTax status code 500 guide</a>{" "}
               and{" "}
@@ -249,7 +249,7 @@ export default function KraItaxMaintenanceSchedulePage() {
           </div>
         </section>
 
-        {/* Section 4 — what to do when caught in maintenance */}
+        {/* Section 4 - what to do when caught in maintenance */}
         <section className="mb-16" aria-labelledby="caught-h">
           <h2 id="caught-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             Caught in a Maintenance Window? Do This
@@ -299,7 +299,7 @@ export default function KraItaxMaintenanceSchedulePage() {
             Never gamble with a maintenance window again.
           </p>
           <p className="text-[0.85rem] text-ink-muted mb-6 max-w-[48ch] mx-auto">
-            We file on the 17th — before the congestion and far from maintenance windows.
+            We file on the 17th - before the congestion and far from maintenance windows.
             Monthly VAT filing from KES 3,500. Deadlines handled, receipts provided.
           </p>
           <a
@@ -308,7 +308,7 @@ export default function KraItaxMaintenanceSchedulePage() {
             rel="noopener noreferrer"
             className="btn-fill inline-flex items-center justify-center gap-2 bg-brand text-canvas font-semibold px-6 py-3 rounded-md text-sm transition-colors hover:bg-brand-hover"
           >
-            Hand Me My Filing — KES 3,500
+            Hand Me My Filing - KES 3,500
             <ArrowRight size={16} weight="bold" aria-hidden="true" />
           </a>
         </section>
@@ -330,7 +330,7 @@ export default function KraItaxMaintenanceSchedulePage() {
               },
               {
                 q: "If iTax is down on the 20th, do I get an extension?",
-                a: "No — not automatically. Extensions are rare and only announced officially. Screenshot the outage and apply for a Section 35 penalty waiver proactively.",
+                a: "No - not automatically. Extensions are rare and only announced officially. Screenshot the outage and apply for a Section 35 penalty waiver proactively.",
               },
               {
                 q: "How is maintenance different from congestion?",

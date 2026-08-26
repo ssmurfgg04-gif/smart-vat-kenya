@@ -21,7 +21,7 @@ const serviceSchema = {
     "Free iTax ledger check to identify which 2026 KRA tax amnesty path you qualify for, filing outstanding returns to unlock automatic penalty waivers, and structuring payment plans for pre-2026 principal.",
   provider: { "@type": "Organization", name: "Smart VAT Kenya" },
   areaServed: { "@type": "Country", name: "Kenya" },
-  priceRange: "Free check — cleanup at a flat fee",
+  priceRange: "Free check - cleanup at a flat fee",
 }
 
 const WA_BASE = "https://wa.me/254717344440"
@@ -46,7 +46,7 @@ const steps = [
   {
     num: "01",
     title: "Send us your KRA PIN",
-    desc: "Message us your PIN and any penalty notices you have — we confirm what we need within minutes.",
+    desc: "Message us your PIN and any penalty notices you have - we confirm what we need within minutes.",
   },
   {
     num: "02",
@@ -63,11 +63,11 @@ const steps = [
 const faqs = [
   {
     q: "Do I need to apply for the KRA tax amnesty?",
-    a: "Not always. If you fully paid your principal by 31 December 2025, the waiver is automatic — no application. If you only have late-filing penalties and no principal, the waiver is also automatic once all outstanding returns are filed. That is why we recommend a free ledger check before filing anything.",
+    a: "Not always. If you fully paid your principal by 31 December 2025, the waiver is automatic - no application. If you only have late-filing penalties and no principal, the waiver is also automatic once all outstanding returns are filed. That is why we recommend a free ledger check before filing anything.",
   },
   {
     q: "What is the KRA Tax Amnesty 2026?",
-    a: "The Finance Act 2026 amnesty waives 100% of penalties, interest and fines on liabilities accrued up to 31 December 2025. The window runs from 1 July to 31 December 2026. It does not forgive principal — that part must still be paid.",
+    a: "The Finance Act 2026 amnesty waives 100% of penalties, interest and fines on liabilities accrued up to 31 December 2025. The window runs from 1 July to 31 December 2026. It does not forgive principal - that part must still be paid.",
   },
   {
     q: "What documents do I need to provide?",
@@ -75,7 +75,7 @@ const faqs = [
   },
   {
     q: "What is excluded from the amnesty?",
-    a: "Anything that arose on or after 1 January 2026 is not covered. Active tax disputes are also excluded — those should be settled via Alternative Dispute Resolution first. And the principal itself is never forgiven; it must be cleared before the window closes.",
+    a: "Anything that arose on or after 1 January 2026 is not covered. Active tax disputes are also excluded - those should be settled via Alternative Dispute Resolution first. And the principal itself is never forgiven; it must be cleared before the window closes.",
   },
   {
     q: "What does the free ledger check cost?",
@@ -127,7 +127,7 @@ export default function KRAPenaltyWaiverPage() {
             Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4.5vw,3.2rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
-            Tax Amnesty Cleanup —{" "}
+            Tax Amnesty Cleanup -{" "}
             <span className="text-canvas/80 font-normal">free ledger check</span>
           </h1>
           <p className="text-[0.95rem] text-canvas/70 max-w-[52ch] leading-relaxed mb-6">
@@ -159,7 +159,7 @@ export default function KRAPenaltyWaiverPage() {
             Start your free ledger check
           </a>
           <p className="mt-4 text-[0.82rem] text-canvas/70 max-w-[52ch] leading-relaxed">
-            New — KRA&apos;s 2026 Tax Amnesty can waive 100% of penalties and interest on debt
+            New - KRA&apos;s 2026 Tax Amnesty can waive 100% of penalties and interest on debt
             accrued up to 2025, automatically in many cases.{" "}
             <a href="/tax-amnesty-2026/" className="underline underline-offset-2 hover:text-canvas transition-colors">
               See if you qualify for the free amnesty ledger check
@@ -193,7 +193,7 @@ export default function KRAPenaltyWaiverPage() {
               </div>
               <p className="text-[0.82rem] text-ink-muted mt-4 leading-relaxed">
                 These penalties and interest accrue automatically in the KRA iTax system. If your
-                debt accrued before 2026, the amnesty can wipe them out in full — the faster you
+                debt accrued before 2026, the amnesty can wipe them out in full - the faster you
                 act, the less you pay.
               </p>
             </div>
@@ -256,7 +256,7 @@ export default function KRAPenaltyWaiverPage() {
           </h2>
           <p className="text-[0.9rem] text-ink-muted max-w-[52ch] leading-relaxed mb-10">
             If you have any of the following on your iTax ledger from before 2026, the amnesty can
-            waive them in full — we&apos;ll confirm your exact position with the free check.
+            waive them in full - we&apos;ll confirm your exact position with the free check.
           </p>
           <div className="grid grid-cols-2 gap-4 lg:gap-5">
             {[
@@ -268,7 +268,7 @@ export default function KRAPenaltyWaiverPage() {
               {
                 icon: FileText,
                 title: "Non-registration penalties",
-                desc: "Did not register for VAT when you crossed the KES 5 million threshold? The penalty can reach KES 100,000 — waivable under the amnesty for pre-2026 debt.",
+                desc: "Did not register for VAT when you crossed the KES 5 million threshold? The penalty can reach KES 100,000 - waivable under the amnesty for pre-2026 debt.",
               },
               {
                 icon: SealCheck,
@@ -300,7 +300,7 @@ export default function KRAPenaltyWaiverPage() {
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.1rem] font-semibold text-ink">
-              Free check — clean up before 31 December 2026
+              Free check - clean up before 31 December 2026
             </p>
             <p className="text-[0.85rem] text-ink-muted mt-1">
               Free ledger check. Flat fee for any cleanup. M-PESA accepted.
@@ -353,7 +353,7 @@ export default function KRAPenaltyWaiverPage() {
             Ready to clear your KRA penalties before the deadline?
           </h2>
           <p className="text-[0.93rem] text-canvas/65 max-w-[44ch] mx-auto leading-relaxed mb-8">
-            Send us a WhatsApp message and we will start your free ledger check — the window closes
+            Send us a WhatsApp message and we will start your free ledger check - the window closes
             on 31 December 2026.
           </p>
           <a

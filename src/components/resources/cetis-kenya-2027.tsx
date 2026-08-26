@@ -15,7 +15,7 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "CETIS Kenya 2027: KRA's Pre-Clearance e-Invoicing — What It Means for Your Business",
+  headline: "CETIS Kenya 2027: KRA's Pre-Clearance e-Invoicing - What It Means for Your Business",
   description:
     "KRA's Comprehensive Electronic Tax Invoicing System (CETIS) is in procurement for 2027–2028. Every invoice validated and cryptographically signed by KRA before it reaches your buyer. What it means, what Uganda's EFRIS taught us, and how to prepare now.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -33,11 +33,11 @@ const faqs = [
   },
   {
     q: "How is CETIS different from eTIMS?",
-    a: "eTIMS is post-issuance reporting — you issue the invoice, then sync it to KRA. CETIS is pre-issuance authorization — the invoice must pass KRA validation before it counts. Think of it as the difference between telling KRA what you sold after the fact, versus KRA approving the transaction first. This is the same model Brazil (NF-e) and Turkey (e-Fatura) use.",
+    a: "eTIMS is post-issuance reporting - you issue the invoice, then sync it to KRA. CETIS is pre-issuance authorization - the invoice must pass KRA validation before it counts. Think of it as the difference between telling KRA what you sold after the fact, versus KRA approving the transaction first. This is the same model Brazil (NF-e) and Turkey (e-Fatura) use.",
   },
   {
     q: "When is CETIS coming to Kenya?",
-    a: "KRA has CETIS in active procurement for the 2027–2028 window. No confirmed go-live date has been published. The system is expected to roll out in phases — as eTIMS did — starting with the largest taxpayers before extending down the chain.",
+    a: "KRA has CETIS in active procurement for the 2027–2028 window. No confirmed go-live date has been published. The system is expected to roll out in phases - as eTIMS did - starting with the largest taxpayers before extending down the chain.",
   },
   {
     q: "What happened when Uganda rolled out EFRIS (a similar system)?",
@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     q: "Do I need to do anything about CETIS right now?",
-    a: "Yes — two things. First, get fully eTIMS-compliant today: every invoice issued through an eTIMS-compliant channel, synced, and correct. A clean eTIMS base is the fastest on-ramp to CETIS. Second, keep your customer and invoice data clean and digital, because pre-clearance systems reject invoices with mismatched supplier PINs, wrong amounts, or missing metadata — and a rejected invoice means a delayed sale.",
+    a: "Yes - two things. First, get fully eTIMS-compliant today: every invoice issued through an eTIMS-compliant channel, synced, and correct. A clean eTIMS base is the fastest on-ramp to CETIS. Second, keep your customer and invoice data clean and digital, because pre-clearance systems reject invoices with mismatched supplier PINs, wrong amounts, or missing metadata - and a rejected invoice means a delayed sale.",
   },
   {
     q: "Will CETIS reject my invoices?",
@@ -82,7 +82,7 @@ export default function CetisKenya2027() {
           <header className="mb-8">
             <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">CETIS / e-Invoicing</p>
             <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.4rem)] font-semibold text-ink tracking-tight leading-tight mb-3 text-balance">
-              CETIS Kenya 2027: KRA&apos;s Pre-Clearance e-Invoicing Is Coming — Here&apos;s What to Do Now
+              CETIS Kenya 2027: KRA&apos;s Pre-Clearance e-Invoicing Is Coming - Here&apos;s What to Do Now
             </h1>
             <p className="text-[0.9rem] text-ink-muted leading-relaxed">
               <time dateTime="2026-08-06">6 August 2026</time> &middot; Pre-positioning guide
@@ -109,17 +109,17 @@ export default function CetisKenya2027() {
               It is KRA&apos;s planned replacement-level e-invoicing infrastructure. The defining feature
               is <strong>pre-clearance</strong>: each invoice is <em>validated, approved, and cryptographically signed
               by KRA before it is sent to the buyer</em>. An invoice that fails validation is not simply
-              flagged — it does not exist for tax purposes until KRA clears it.
+              flagged - it does not exist for tax purposes until KRA clears it.
             </p>
             <p>
               This is the same authorization model that transformed Brazil and Turkey. Under Brazil&apos;s
               NF-e, every invoice is authorized in real time before dispatch; under Turkey&apos;s e-Fatura,
               thresholds were ratcheted down over a decade from voluntary to near-mandatory for all
-              businesses. KRA is copying that playbook — and it has said the filings themselves move
+              businesses. KRA is copying that playbook - and it has said the filings themselves move
               toward web-based real-time validation, with Excel-based filing scrapped by 2027.
             </p>
 
-            <h2>eTIMS vs CETIS — the shift in one line</h2>
+            <h2>eTIMS vs CETIS - the shift in one line</h2>
             <div className="border border-hairline rounded-lg overflow-hidden not-prose">
               <table className="w-full text-[0.83rem]">
                 <thead>
@@ -137,13 +137,13 @@ export default function CetisKenya2027() {
                   </tr>
                   <tr>
                     <td className="p-3 font-medium text-ink">Failure mode</td>
-                    <td className="p-3 text-ink-muted">Late sync or pending invoices — penalties after the fact</td>
-                    <td className="p-3 text-ink-muted">Rejected at the gate — the sale is delayed until cleared</td>
+                    <td className="p-3 text-ink-muted">Late sync or pending invoices - penalties after the fact</td>
+                    <td className="p-3 text-ink-muted">Rejected at the gate - the sale is delayed until cleared</td>
                   </tr>
                   <tr>
                     <td className="p-3 font-medium text-ink">Data checked</td>
                     <td className="p-3 text-ink-muted">eTIMS invoice data against returns</td>
-                    <td className="p-3 text-ink-muted">Supplier/buyer PINs, amounts, rates, metadata — pre-approval</td>
+                    <td className="p-3 text-ink-muted">Supplier/buyer PINs, amounts, rates, metadata - pre-approval</td>
                   </tr>
                   <tr>
                     <td className="p-3 font-medium text-ink">Compare to</td>
@@ -154,7 +154,7 @@ export default function CetisKenya2027() {
               </table>
             </div>
 
-            <h2>What Uganda&apos;s EFRIS Taught Us — the Bug List to Prepare For</h2>
+            <h2>What Uganda&apos;s EFRIS Taught Us - the Bug List to Prepare For</h2>
             <p>
               Uganda went first with a comparable mandate (EFRIS), and the failure data is now public
               enough to plan against. Kenya will not repeat all of it, but pre-clearance systems are
@@ -162,14 +162,14 @@ export default function CetisKenya2027() {
             </p>
             <ul>
               <li><strong>Invoices rejected for compatibility:</strong> 51% of surveyed Ugandan enterprises reported negative EFRIS impact (Oct 2024 procurement-sector report)</li>
-              <li><strong>Credit notes rejected outright:</strong> the system flagged them as "conflicting with accounting principles" — a known EFRIS bug</li>
+              <li><strong>Credit notes rejected outright:</strong> the system flagged them as "conflicting with accounting principles" - a known EFRIS bug</li>
               <li><strong>Offline failure:</strong> receipts issued offline without QR codes were rejected when the system came back online</li>
               <li><strong>Refund lockouts:</strong> some taxpayers were locked out of claiming refunds entirely while errors persisted</li>
-              <li><strong>The support vacuum:</strong> taxpayers described "waiting for eternity" for help — the single biggest opening for a human-backed service</li>
+              <li><strong>The support vacuum:</strong> taxpayers described "waiting for eternity" for help - the single biggest opening for a human-backed service</li>
             </ul>
             <p>
               The comparative literature (Tanzania, Ethiopia, Rwanda) is unanimous: e-invoicing success
-              depends on <strong>taxpayer sensitization, gradual rollout, and infrastructure readiness</strong> —
+              depends on <strong>taxpayer sensitization, gradual rollout, and infrastructure readiness</strong> -
               the three things Uganda skipped. The businesses that survive the transition are the ones
               that sort their invoicing <em>before</em> the panic.
             </p>
@@ -177,16 +177,16 @@ export default function CetisKenya2027() {
             <h2>What You Should Do Now (Before It Goes Live)</h2>
             <ol>
               <li>
-                <strong>Get eTIMS-clean today.</strong> Every sale issued through an eTIMS-compliant channel, synced on time, with correct supplier details. A clean eTIMS history is the fastest path to CETIS readiness — KRA grades on your existing ledger.
+                <strong>Get eTIMS-clean today.</strong> Every sale issued through an eTIMS-compliant channel, synced on time, with correct supplier details. A clean eTIMS history is the fastest path to CETIS readiness - KRA grades on your existing ledger.
               </li>
               <li>
-                <strong>Fix your customer master data.</strong> Pre-clearance systems reject invoices where the buyer&apos;s PIN doesn&apos;t match KRA&apos;s register. One wrong digit and your invoice stalls at the gate. Verify buyer PINs before you invoice — not after.
+                <strong>Fix your customer master data.</strong> Pre-clearance systems reject invoices where the buyer&apos;s PIN doesn&apos;t match KRA&apos;s register. One wrong digit and your invoice stalls at the gate. Verify buyer PINs before you invoice - not after.
               </li>
               <li>
                 <strong>Go fully digital on invoices.</strong> Paper, Excel, and manual journals will not survive pre-clearance. Every invoice needs structured data: correct VAT rate, correct amounts, clean metadata.
               </li>
               <li>
-                <strong>Plan for offline mode.</strong> When CETIS validates online and your internet drops, you need an offline queue that retries automatically and stores the correct payload — not hand-written substitutes.
+                <strong>Plan for offline mode.</strong> When CETIS validates online and your internet drops, you need an offline queue that retries automatically and stores the correct payload - not hand-written substitutes.
               </li>
               <li>
                 <strong>Get a human who answers.</strong> Uganda&apos;s defining failure was the support vacuum. The businesses that survive enforcement waves have a named contact who picks up WhatsApp when the system rejects an invoice at 9pm on a deadline day.
@@ -201,7 +201,7 @@ export default function CetisKenya2027() {
                   <p className="text-sm text-ink-muted leading-relaxed">
                     You don&apos;t need to guess when CETIS lands. You need your invoicing correct
                     enough that <em>when</em> it does, nothing you send gets rejected. That is a
-                    discipline today — not a panic in 2028. Need a compliance check on how your
+                    discipline today - not a panic in 2028. Need a compliance check on how your
                     invoices and eTIMS setup look right now?{" "}
                     <a href="https://wa.me/254717344440?text=Hi%2C%20I%20want%20a%20CETIS-readiness%20check" target="_blank" rel="noopener noreferrer" className="text-brand font-semibold underline underline-offset-2 hover:text-brand-hover">
                       Message us on WhatsApp
@@ -214,10 +214,10 @@ export default function CetisKenya2027() {
 
             <h2>Related Guides</h2>
             <ul>
-              <li><a href="/resources/etims-onboarding-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Kenya Onboarding Guide 2026</a> — get the current system right first</li>
-              <li><a href="/resources/etims-invoicing-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Compliant Invoice Guide</a> — what a valid invoice contains</li>
-              <li><a href="/resources/kra-vat-penalties-reference/" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA VAT Penalties Reference</a> — what non-compliance costs</li>
-              <li><a href="/resources/kra-tax-amnesty-2026/" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA Tax Amnesty 2026</a> — clear old penalties before the December window closes</li>
+              <li><a href="/resources/etims-onboarding-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Kenya Onboarding Guide 2026</a> - get the current system right first</li>
+              <li><a href="/resources/etims-invoicing-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS Compliant Invoice Guide</a> - what a valid invoice contains</li>
+              <li><a href="/resources/kra-vat-penalties-reference/" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA VAT Penalties Reference</a> - what non-compliance costs</li>
+              <li><a href="/resources/kra-tax-amnesty-2026/" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA Tax Amnesty 2026</a> - clear old penalties before the December window closes</li>
             </ul>
           </div>
         </article>

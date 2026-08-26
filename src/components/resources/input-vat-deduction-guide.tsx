@@ -99,13 +99,13 @@ export default function InputVatPage() {
 
         <article>
           <header className="mb-10">
-            <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide — Input VAT</p>
+            <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide - Input VAT</p>
             <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-semibold text-ink tracking-tight leading-tight mb-4 text-balance">
               Input VAT Deduction Kenya Guide 2026
             </h1>
             <p className="text-[0.9rem] text-ink-muted leading-relaxed max-w-[65ch]">
               Input VAT deduction is how VAT-registered businesses recover the VAT they pay on business purchases.
-              Get it right and you reduce your monthly VAT bill. Get it wrong and you lose the deduction entirely —
+              Get it right and you reduce your monthly VAT bill. Get it wrong and you lose the deduction entirely -
               or face penalties. This guide covers everything from eligibility to the 6-month deadline.
             </p>
             <div className="flex items-center gap-4 text-[0.75rem] text-ink-muted">
@@ -115,7 +115,7 @@ export default function InputVatPage() {
           </header>
 
           <div className="space-y-10">
-            {/* Section 1 — What is Input VAT */}
+            {/* Section 1 - What is Input VAT */}
             <section id="what-is-input-vat" aria-labelledby="what-is-input-vat-h">
               <h2 id="what-is-input-vat-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 What Is Input VAT?
@@ -143,7 +143,7 @@ export default function InputVatPage() {
               </div>
             </section>
 
-            {/* Section 2 — 7 Conditions */}
+            {/* Section 2 - 7 Conditions */}
             <section id="conditions" aria-labelledby="conditions-h">
               <h2 id="conditions-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 7 Conditions for Claiming Input VAT
@@ -173,7 +173,7 @@ export default function InputVatPage() {
               </div>
             </section>
 
-            {/* Section 3 — Prohibited Claims */}
+            {/* Section 3 - Prohibited Claims */}
             <section id="prohibited" aria-labelledby="prohibited-h">
               <h2 id="prohibited-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Prohibited Input VAT Claims
@@ -202,7 +202,7 @@ export default function InputVatPage() {
               </div>
             </section>
 
-            {/* Section 4 — Apportionment */}
+            {/* Section 4 - Apportionment */}
             <section id="apportionment" aria-labelledby="apportionment-h">
               <h2 id="apportionment-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Apportionment for Mixed Supplies
@@ -245,7 +245,7 @@ export default function InputVatPage() {
               </div>
             </section>
 
-            {/* Section 5 — Documentation Requirements */}
+            {/* Section 5 - Documentation Requirements */}
             <section id="documentation" aria-labelledby="documentation-h">
               <h2 id="documentation-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Documents Required for Input VAT Claims
@@ -269,7 +269,7 @@ export default function InputVatPage() {
               </div>
             </section>
 
-            {/* Section 6 — Carry Forward vs Refund */}
+            {/* Section 6 - Carry Forward vs Refund */}
             <section id="carry-forward" aria-labelledby="carry-forward-h">
               <h2 id="carry-forward-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Excess Input VAT: Carry Forward or Refund?

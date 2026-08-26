@@ -44,7 +44,7 @@ if (!canonicalProp && !path) {
 }
 const canonicalClean = canonical.replace(/(?<!\/)$/, "/")
 const pageTitle = title ? `${title} | ${SITE_NAME}` : "VAT Registration Services Kenya | KRA VAT Calculator | Smart VAT Kenya"
-const pageDesc = description ?? "Professional VAT registration services in Kenya — KES 5,000 flat fee, done in 1–3 working days."
+const pageDesc = description ?? "Professional VAT registration services in Kenya - KES 5,000 flat fee, done in 1–3 working days."
 const pageUrl = `${SITE_URL}${canonicalClean}`
 const imageUrl = image.startsWith("http") ? image : `${SITE_URL}${image}`
 const socialTitle = pageTitle.includes(SITE_NAME) ? pageTitle : `${pageTitle} | ${SITE_NAME}`
@@ -227,7 +227,7 @@ const localBusinessSchema = {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="//wa.me" />
 
-  <!-- Fonts — optimized loading with fallback for no-JS and better mobile experience -->
+  <!-- Fonts - optimized loading with fallback for no-JS and better mobile experience -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" />
 
   <!-- Speculation Rules -->
@@ -318,7 +318,7 @@ const localBusinessSchema = {
   <WhatsAppButton />
   <BackToTop client:load />
   <script is:inline>
-    // Query-to-service conversion tracking — WhatsApp CTA clicks
+    // Query-to-service conversion tracking - WhatsApp CTA clicks
     document.addEventListener('click', function(e){
       var a = e.target.closest('a[href*="wa.me"]');
       if(!a) return;

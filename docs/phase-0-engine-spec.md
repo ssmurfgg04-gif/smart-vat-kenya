@@ -1,8 +1,8 @@
-# Phase 0 — SmartVAT OS: Internal Engine Spec
+# Phase 0 - SmartVAT OS: Internal Engine Spec
 
-**Purpose:** Automate our own agency first. Every manual step in the current operation (200+ clients: registrations, monthly filings, amnesty/waiver work, refunds) is a spec. Phase 0 is internal-only — client-facing tiers come in Phase 1 on the same engine.
+**Purpose:** Automate our own agency first. Every manual step in the current operation (200+ clients: registrations, monthly filings, amnesty/waiver work, refunds) is a spec. Phase 0 is internal-only - client-facing tiers come in Phase 1 on the same engine.
 
-**North star of Phase 0:** cut cost-to-serve and error rate so the KES 3,500/month filing approaches software margin — while building the **golden dataset** (real filings, Special Table incidents, waiver outcomes) that trains the risk engine and AI later. The data is worth more than the software.
+**North star of Phase 0:** cut cost-to-serve and error rate so the KES 3,500/month filing approaches software margin - while building the **golden dataset** (real filings, Special Table incidents, waiver outcomes) that trains the risk engine and AI later. The data is worth more than the software.
 
 **Recipe for success:** design privacy-by-default from the first schema (DPIA-triggering health score coming later), host on Kenya infrastructure (serving copy per localization rule), and encode the intervention we already know works: remind → simplify → deterrence-framed.
 
@@ -59,7 +59,7 @@ AmnestyCase                   // three-path triage, this quarter
   status: 'checking' | 'filing' | 'planning' | 'waived' | 'excluded'
   ledgerCheckAt, waivedAt, deadline (2026-12-31)
 
-RecoveryCase                  // the sleeper market — refunds
+RecoveryCase                  // the sleeper market - refunds
   id, client_id -> Client
   kind: 'refund' | 'objection' | 'audit-defence'
   amountClaimed, amountRecovered
@@ -85,13 +85,13 @@ Payment
 
 ## 2. Core workflows
 
-### 2.1 Deadline engine (the 17th — the product's soul, made mechanical)
+### 2.1 Deadline engine (the 17th - the product's soul, made mechanical)
 - Rule: `filingTargetDate = 17th of the period corpus month` for every VAT filing.
 - Timer: daily job that enumerates all `FilingPeriod.status IN (pending, collected)` due within 3 days of the 17th.
-- Outbound: WhatsApp (Cloud Business API) reminder with a **deterrence-framed** message — lead with the consequence, per Kenya's RCTs:
+- Outbound: WhatsApp (Cloud Business API) reminder with a **deterrence-framed** message - lead with the consequence, per Kenya's RCTs:
   > "Your July 2026 VAT return is due in 3 days. A missed deadline costs KES 10,000 automatically. Ready to file?" 
 - Log: every reminder + every filing + every KRA confirmation receipt → audit trail.
-- Guarantee trigger: any `status='filed-late'` where the delay is on us → route to 17th-Guarantee case: dispute with KRA on the client's behalf + cover any fee caused by our error (process guarantee — no blanket financial payout).
+- Guarantee trigger: any `status='filed-late'` where the delay is on us → route to 17th-Guarantee case: dispute with KRA on the client's behalf + cover any fee caused by our error (process guarantee - no blanket financial payout).
 
 ### 2.2 Amnesty triage (three-path decision logic)
 Input: KRA PIN → iTax ledger check.
@@ -110,7 +110,7 @@ Input: KRA PIN → iTax ledger check.
 
 ### 2.4 M-PESA billing (Daraja) + receipts
 - Paybill integration: registration `listens` to STK / C2B; upon confirmation, mark client paid and email/WhatsApp the receipt.
-- Receipts generated and stored for every payment (already a claim on the site — make it mechanical).
+- Receipts generated and stored for every payment (already a claim on the site - make it mechanical).
 
 ---
 
@@ -126,7 +126,7 @@ Input: KRA PIN → iTax ledger check.
 ## 4. Stack recommendation (techie-first)
 - Backend + DB: Postgres (structural compliance, Kenya-hosted).
 - Object store: Kenya-region storage for docs (localization).
-- WhatsApp: Cloud Business API (on-prem deprecated Oct 2025) — service conversations free.
+- WhatsApp: Cloud Business API (on-prem deprecated Oct 2025) - service conversations free.
 - Payments: Safaricom Daraja (M-PESA) + receipts.
 - Jobs/cron: the deadline engine and Trends-RSS monitor (geo=KE, category=b, tax-keyword filters: KRA, tax, eTIMS, Finance Bill, amnesty).
 - GavaConnect: PIN check, TCC checker, NIL filing, e-Slip checker now; tie into eTIMS/VAT APIs when they land.

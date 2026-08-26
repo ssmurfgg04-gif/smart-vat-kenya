@@ -10,7 +10,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "VAT on Labour Outsourcing and Staff Costs in Kenya 2026",
   description:
-    "Finance Act 2026 introduced Section 13(5A) of the VAT Act — outsourced employee salaries and statutory deductions are now disbursements not subject to VAT. Only the service fee is taxable at 16%. Guide for HR firms, security companies, EOR providers, and businesses that outsource staff.",
+    "Finance Act 2026 introduced Section 13(5A) of the VAT Act - outsourced employee salaries and statutory deductions are now disbursements not subject to VAT. Only the service fee is taxable at 16%. Guide for HR firms, security companies, EOR providers, and businesses that outsource staff.",
   author: personSchema(),
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-25",
@@ -78,7 +78,7 @@ export default function VatLabourOutsourcingPage() {
 
         <header className="mb-8">
           <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">
-            Industry Guide — Outsourcing
+            Industry Guide - Outsourcing
           </p>
           <h1 className="font-display text-[clamp(1.5rem,3vw,2rem)] font-semibold text-ink tracking-tight leading-tight mb-4 text-balance">
             VAT on Labour Outsourcing and Staff Costs in Kenya 2026
@@ -92,7 +92,7 @@ export default function VatLabourOutsourcingPage() {
 
         <div className="space-y-5 text-[0.9rem] text-ink-soft leading-[1.75]">
           <p>
-            The <a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026</a> introduced <strong className="text-ink">Section 13(5A)</strong> into the VAT Act, one of the most welcome changes for Kenya&apos;s outsourcing and staffing industry. From <strong className="text-ink">1 July 2026</strong>, employee costs — salaries, wages, NSSF, SHIF, NITA, housing levy — paid through outsourcing providers are deemed <strong className="text-ink">disbursements</strong> and excluded from the taxable value. Only the service fee or management margin attracts 16% VAT.
+            The <a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026</a> introduced <strong className="text-ink">Section 13(5A)</strong> into the VAT Act, one of the most welcome changes for Kenya&apos;s outsourcing and staffing industry. From <strong className="text-ink">1 July 2026</strong>, employee costs - salaries, wages, NSSF, SHIF, NITA, housing levy - paid through outsourcing providers are deemed <strong className="text-ink">disbursements</strong> and excluded from the taxable value. Only the service fee or management margin attracts 16% VAT.
           </p>
           <p>
             This guide explains the change, which sectors benefit, how to restructure contracts, and what it means for your <a href="/resources/input-vat-deduction-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">input VAT recovery</a>.
@@ -108,15 +108,15 @@ export default function VatLabourOutsourcingPage() {
             </div>
           </div>
 
-          {/* Section 1 — What Changed */}
+          {/* Section 1 - What Changed */}
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             What Changed Under the Finance Act 2026
           </h2>
           <p>
-            Before the Finance Act 2026, Section 13(5) of the VAT Act allowed disbursements to be excluded from the taxable value only if the supplier could satisfy the Commissioner that it was acting as a <strong className="text-ink">principal-agent</strong> and had made a disbursement to a <strong className="text-ink">third party</strong>. The High Court in <em>Techsavana</em> and <em>Stratostaff</em> held that outsourcing firms are the legal employers, not agents — meaning the full invoice (salaries + margin) was subject to VAT at 16%.
+            Before the Finance Act 2026, Section 13(5) of the VAT Act allowed disbursements to be excluded from the taxable value only if the supplier could satisfy the Commissioner that it was acting as a <strong className="text-ink">principal-agent</strong> and had made a disbursement to a <strong className="text-ink">third party</strong>. The High Court in <em>Techsavana</em> and <em>Stratostaff</em> held that outsourcing firms are the legal employers, not agents - meaning the full invoice (salaries + margin) was subject to VAT at 16%.
           </p>
           <p>
-            The Finance Act 2026 introduces <strong className="text-ink">Section 13(5A)</strong>, which provides that where a supplier provides labour, outsourcing, or employee-placement services and incurs employee-related costs, those costs are <strong className="text-ink">deemed to be disbursements</strong> made on behalf of the client. This removes the need to prove a principal-agent relationship — the treatment is automatic by statute.
+            The Finance Act 2026 introduces <strong className="text-ink">Section 13(5A)</strong>, which provides that where a supplier provides labour, outsourcing, or employee-placement services and incurs employee-related costs, those costs are <strong className="text-ink">deemed to be disbursements</strong> made on behalf of the client. This removes the need to prove a principal-agent relationship - the treatment is automatic by statute.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-5 mt-4">
@@ -164,7 +164,7 @@ export default function VatLabourOutsourcingPage() {
             </div>
           </div>
 
-          {/* Section 2 — Employee-Related Costs Defined */}
+          {/* Section 2 - Employee-Related Costs Defined */}
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             What Counts as Employee-Related Costs
           </h2>
@@ -193,12 +193,12 @@ export default function VatLabourOutsourcingPage() {
             <div>
               <p className="font-semibold text-ink text-[0.9rem]">Disbursement vs taxable service</p>
               <p className="text-[0.83rem] text-blue-700 dark:text-blue-400 leading-relaxed">
-                Salaries, statutory deductions, and other employee costs passed through at cost — these are disbursements (no VAT). The management fee, service fee, administration fee, recruitment fee, or any margin or mark-up — these are taxable at 16%. The key test: is the charge cost-to-cost, or does it include a profit element?
+                Salaries, statutory deductions, and other employee costs passed through at cost - these are disbursements (no VAT). The management fee, service fee, administration fee, recruitment fee, or any margin or mark-up - these are taxable at 16%. The key test: is the charge cost-to-cost, or does it include a profit element?
               </p>
             </div>
           </div>
 
-          {/* Section 3 — Who Benefits */}
+          {/* Section 3 - Who Benefits */}
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             Every Sector Affected
           </h2>
@@ -225,7 +225,7 @@ export default function VatLabourOutsourcingPage() {
             ))}
           </div>
 
-          {/* Section 4 — Comparison Table */}
+          {/* Section 4 - Comparison Table */}
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             Before vs After: Worked Example
           </h2>
@@ -243,11 +243,11 @@ export default function VatLabourOutsourcingPage() {
               </thead>
               <tbody className="divide-y divide-hairline">
                 {[
-                  { item: "Salaries (disbursement)", before: "KES 450,000 + 16% VAT = KES 522,000", after: "KES 450,000 — no VAT" },
+                  { item: "Salaries (disbursement)", before: "KES 450,000 + 16% VAT = KES 522,000", after: "KES 450,000 - no VAT" },
                   { item: "Management fee (taxable)", before: "KES 50,000 + 16% VAT = KES 58,000", after: "KES 50,000 + 16% VAT = KES 58,000" },
                   { item: "Total invoice", before: "KES 580,000", after: "KES 508,000" },
                   { item: "VAT charged", before: "KES 80,000", after: "KES 8,000" },
-                  { item: "Client's VAT saving", before: "—", after: "KES 72,000/month" },
+                  { item: "Client's VAT saving", before: "-", after: "KES 72,000/month" },
                 ].map((row) => (
                   <tr key={row.item}>
                     <td className="py-3 pr-4 text-ink font-medium">{row.item}</td>
@@ -259,10 +259,10 @@ export default function VatLabourOutsourcingPage() {
             </table>
           </div>
           <p>
-            The client saves KES 72,000 per month in VAT — and the security company&apos;s compliance burden is simplified.
+            The client saves KES 72,000 per month in VAT - and the security company&apos;s compliance burden is simplified.
           </p>
 
-          {/* Section 5 — Input VAT */}
+          {/* Section 5 - Input VAT */}
           <p>
             If your clients are appointed withholding VAT agents, see our{" "}
             <a href="/resources/withholding-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">withholding VAT guide</a>{" "}
@@ -282,8 +282,8 @@ export default function VatLabourOutsourcingPage() {
               <tbody className="divide-y divide-hairline">
                 {[
                   { s: "Client receives invoice with VAT on service fee only", iv: "Can claim input VAT on the service fee portion" },
-                  { s: "Client receives invoice — salary disbursement has no VAT", iv: "No input VAT to claim on salary portion" },
-                  { s: "Outsourcing provider pays salaries, NSSF, SHIF", iv: "Cannot claim input VAT — these are disbursements, not the provider's own costs" },
+                  { s: "Client receives invoice - salary disbursement has no VAT", iv: "No input VAT to claim on salary portion" },
+                  { s: "Outsourcing provider pays salaries, NSSF, SHIF", iv: "Cannot claim input VAT - these are disbursements, not the provider's own costs" },
                   { s: "Outsourcing provider incurs own overheads", iv: "Claims input VAT in the normal way, offset against output VAT on service fee" },
                 ].map(({ s, iv }) => (
                   <tr key={s}>
@@ -295,25 +295,25 @@ export default function VatLabourOutsourcingPage() {
             </table>
           </div>
 
-          {/* Section 6 — Compliance */}
+          {/* Section 6 - Compliance */}
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             Compliance Requirements
           </h2>
           <ol className="space-y-3 list-decimal list-inside">
             <li className="text-ink-soft">
-              <strong className="text-ink">Review and restructure contracts</strong> — Service Level Agreements must clearly distinguish the service fee from salary disbursements. Vague contracts risk reclassification by KRA.
+              <strong className="text-ink">Review and restructure contracts</strong> - Service Level Agreements must clearly distinguish the service fee from salary disbursements. Vague contracts risk reclassification by KRA.
             </li>
             <li className="text-ink-soft">
-              <strong className="text-ink">Update invoicing</strong> — Invoices must itemise employee costs (as disbursements) separately from the service fee. Use <a href="/resources/etims-invoicing-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS-compliant invoices</a>.
+              <strong className="text-ink">Update invoicing</strong> - Invoices must itemise employee costs (as disbursements) separately from the service fee. Use <a href="/resources/etims-invoicing-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS-compliant invoices</a>.
             </li>
             <li className="text-ink-soft">
-              <strong className="text-ink">Classify correctly</strong> — Service contracts (e.g., a consultancy delivering a project) remain fully taxable. Only genuine labour outsourcing contracts qualify for the disbursement treatment.
+              <strong className="text-ink">Classify correctly</strong> - Service contracts (e.g., a consultancy delivering a project) remain fully taxable. Only genuine labour outsourcing contracts qualify for the disbursement treatment.
             </li>
             <li className="text-ink-soft">
-              <strong className="text-ink">Align accounting treatment</strong> — Salary pass-through should be treated as disbursements, not revenue, in your books.
+              <strong className="text-ink">Align accounting treatment</strong> - Salary pass-through should be treated as disbursements, not revenue, in your books.
             </li>
             <li className="text-ink-soft">
-              <strong className="text-ink">No retrospective application</strong> — If you have a pre-July 2026 VAT dispute with KRA, it remains governed by the old law and court rulings. Seek professional advice.
+              <strong className="text-ink">No retrospective application</strong> - If you have a pre-July 2026 VAT dispute with KRA, it remains governed by the old law and court rulings. Seek professional advice.
             </li>
             <li className="text-ink-soft">
               <strong className="text-ink">File monthly VAT returns</strong> via iTax by the 20th of each following month. See our <a href="/resources/how-to-file-vat-return-on-itax/" className="text-brand underline underline-offset-2 hover:text-brand-hover">filing guide</a>.
@@ -335,7 +335,7 @@ export default function VatLabourOutsourcingPage() {
             </a>
           </div>
 
-          {/* Section 7 — FAQ */}
+          {/* Section 7 - FAQ */}
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             Frequently Asked Questions
           </h2>
@@ -363,7 +363,7 @@ export default function VatLabourOutsourcingPage() {
                 <a href={slug} className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   {title}
                 </a>
-                <span className="text-ink-muted"> — {desc}</span>
+                <span className="text-ink-muted"> - {desc}</span>
               </li>
             ))}
           </ul>

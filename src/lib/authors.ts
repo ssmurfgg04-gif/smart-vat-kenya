@@ -1,4 +1,4 @@
-// Shared author definitions — single source for bylines and Article schema
+// Shared author definitions - single source for bylines and Article schema
 export const AUTHORS = {
   david: {
     name: "David Ochieng",
@@ -10,7 +10,7 @@ export const AUTHORS = {
   grace: {
     name: "Grace Wanjiku",
     title: "Tax Compliance Lead",
-    credentials: "CPA(K), BCom — UoN",
+    credentials: "CPA(K), BCom - UoN",
     linkedin: "https://linkedin.com/in/grace-wanjiku-tax",
     bio: "Grace leads Smart VAT's monthly filing operations and KRA penalty waiver applications. She has filed 1,000+ VAT returns since 2021.",
   },

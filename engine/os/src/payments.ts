@@ -76,7 +76,7 @@ export function createInMemoryPaymentGateway(log: PaymentLog = { requests: [] })
 }
 
 /* ------------------------------------------------------------------ */
-/* M-PESA adapter — keeps existing BillingGateway as a drop-in rail     */
+/* M-PESA adapter - keeps existing BillingGateway as a drop-in rail     */
 /* ------------------------------------------------------------------ */
 
 /**
@@ -145,7 +145,7 @@ export class PaystackError extends Error {
  * Paystack gateway. `initiate` creates a transaction and returns the reference
  * plus hosted authorization_url; `verify` hits the verify endpoint and maps
  * Paystack statuses onto our PaymentStatus. Amount is converted to minor units
- * (KES cents) as the Paystack API requires — a classic 100x bug, handled here.
+ * (KES cents) as the Paystack API requires - a classic 100x bug, handled here.
  */
 export function createPaystackGateway(cfg: PaystackConfig): PaymentGateway {
   const base = cfg.baseUrl ?? PAYSTACK_BASE
@@ -167,7 +167,7 @@ export function createPaystackGateway(cfg: PaystackConfig): PaymentGateway {
     async initiate(req: PaymentRequest): Promise<PaymentInitiation> {
       if (!isValidPaystackReference(req.accountReference)) {
         throw new PaystackError(
-          `Invalid Paystack reference "${req.accountReference}" — only alphanumerics and - . _ = are allowed`,
+          `Invalid Paystack reference "${req.accountReference}" - only alphanumerics and - . _ = are allowed`,
         )
       }
       const res = await post("/transaction/initialize", {

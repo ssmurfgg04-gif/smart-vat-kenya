@@ -1,4 +1,4 @@
-/** Minimal TTL cache — used for OAuth tokens and hot checker responses. */
+/** Minimal TTL cache - used for OAuth tokens and hot checker responses. */
 
 export interface CacheOptions {
   /** Time-to-live in ms. */

@@ -43,7 +43,7 @@ const faqSchema = {
       name: "Is the VAT threshold KES 5 million or KES 8 million?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "KES 5 million is the operative threshold as of 2026. The KES 8 million figure comes from Finance Act 2025 proposals to raise the threshold, but that change has not been brought into effect — KRA's own VAT guidance, the amended statute as printed by law firms, and PwC's worldwide tax summaries all still reflect KES 5 million. Treat any claim that KES 8 million is currently law as incorrect.",
+        text: "KES 5 million is the operative threshold as of 2026. The KES 8 million figure comes from Finance Act 2025 proposals to raise the threshold, but that change has not been brought into effect - KRA's own VAT guidance, the amended statute as printed by law firms, and PwC's worldwide tax summaries all still reflect KES 5 million. Treat any claim that KES 8 million is currently law as incorrect.",
       },
     },
     {
@@ -51,7 +51,7 @@ const faqSchema = {
       name: "Can I register for VAT voluntarily if my turnover is below KES 5 million?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Kenya permits voluntary (optional) VAT registration, and the Commissioner may allow registration even below the compulsory threshold under section 34(3) of the VAT Act. Voluntary registration is often worthwhile if your customers are VAT-registered businesses that need to claim input VAT on your invoices. If you do register voluntarily, you take on the same obligations — monthly returns, eTIMS, and 16% VAT on your invoices.",
+        text: "Yes. Kenya permits voluntary (optional) VAT registration, and the Commissioner may allow registration even below the compulsory threshold under section 34(3) of the VAT Act. Voluntary registration is often worthwhile if your customers are VAT-registered businesses that need to claim input VAT on your invoices. If you do register voluntarily, you take on the same obligations - monthly returns, eTIMS, and 16% VAT on your invoices.",
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       name: "When did the KES 5 million threshold come in? Was it ever KES 8 million?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The KES 5 million threshold for VAT registration in Kenya has applied since VAT (Amendment) changes over the years. The Finance Act 2025 did not bring the KES 8 million threshold into force — some blog and SEO articles claim a raise of the Finance Act 2024 or Finance Act 2026 was effective 1 September 2024, but the operative threshold remains KES 5 million. In 2026 KRA is instead proposing to remove the threshold entirely, so monitor official KRA announcements.",
+        text: "The KES 5 million threshold for VAT registration in Kenya has applied since VAT (Amendment) changes over the years. The Finance Act 2025 did not bring the KES 8 million threshold into force - some blog and SEO articles claim a raise of the Finance Act 2024 or Finance Act 2026 was effective 1 September 2024, but the operative threshold remains KES 5 million. In 2026 KRA is instead proposing to remove the threshold entirely, so monitor official KRA announcements.",
       },
     },
     {
@@ -83,7 +83,7 @@ const faqSchema = {
       name: "Do goods and services use the same threshold?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes — the KES 5 million taxable-turnover test applies to both goods and services. The one exception is digital services supplied by non-residents, which must register for VAT from their first sale regardless of turnover.",
+        text: "Yes - the KES 5 million taxable-turnover test applies to both goods and services. The one exception is digital services supplied by non-residents, which must register for VAT from their first sale regardless of turnover.",
       },
     },
   ],
@@ -116,7 +116,7 @@ export default function VatThresholdKenya() {
 
           <div className="prose prose-gray max-w-none">
             <p>
-              The <strong>mandatory VAT registration threshold in Kenya is KES 5 million</strong> in annual taxable turnover. That is the law per section 34 of the VAT Act and KRA's own guidance (as confirmed through 2026). Some online articles say the threshold is <strong>KES 8 million</strong> — that figure comes from a Finance Act 2025 proposal that has not yet been brought into effect. Here is how the rule actually works, whether you should register voluntarily, and how turnover is counted.
+              The <strong>mandatory VAT registration threshold in Kenya is KES 5 million</strong> in annual taxable turnover. That is the law per section 34 of the VAT Act and KRA's own guidance (as confirmed through 2026). Some online articles say the threshold is <strong>KES 8 million</strong> - that figure comes from a Finance Act 2025 proposal that has not yet been brought into effect. Here is how the rule actually works, whether you should register voluntarily, and how turnover is counted.
             </p>
 
             <div className="bg-brand/5 border border-brand/15 rounded-lg p-5 my-6 not-prose">
@@ -125,7 +125,7 @@ export default function VatThresholdKenya() {
                 <div>
                   <p className="text-sm font-semibold text-ink mb-1">Quick Answer</p>
                   <p className="text-sm text-ink-muted leading-relaxed">
-                    If your annual taxable turnover reaches or exceeds <strong>KES 5 million</strong>, you must register for VAT within 30 days. Below KES 5 million, registration is not mandatory but you may register <strong>voluntarily</strong>. The KES 8 million figure is only a Finance Act 2025 proposal — not yet law.
+                    If your annual taxable turnover reaches or exceeds <strong>KES 5 million</strong>, you must register for VAT within 30 days. Below KES 5 million, registration is not mandatory but you may register <strong>voluntarily</strong>. The KES 8 million figure is only a Finance Act 2025 proposal - not yet law.
                   </p>
                 </div>
               </div>
@@ -133,10 +133,10 @@ export default function VatThresholdKenya() {
 
             <h2>What Is the Current Threshold?</h2>
             <p>
-              The VAT registration threshold is <strong>KES 5 million in taxable turnover</strong> in any period of twelve months (VAT Act, s.34). You must apply for registration within <strong>30 days</strong> of crossing the threshold. KRA's publicly available VAT guidance — together with PwC's worldwide tax summaries and law firms printing the amended VAT Act — all list 5 million as the number in force.
+              The VAT registration threshold is <strong>KES 5 million in taxable turnover</strong> in any period of twelve months (VAT Act, s.34). You must apply for registration within <strong>30 days</strong> of crossing the threshold. KRA's publicly available VAT guidance - together with PwC's worldwide tax summaries and law firms printing the amended VAT Act - all list 5 million as the number in force.
             </p>
             <p>
-              Confusion creeps in because the <strong>Finance Act 2025 proposed raising the threshold to KES 8 million</strong>. As at July 2026 the change has not been brought into force. Several SEO/blog articles present the 8 million figure as already effective (some even date it back to "Finance Act 2024" or to 1 September 2024) — those are incorrect. Work from the KES 5 million threshold and check KRA's guidance before acting on anything that says otherwise.
+              Confusion creeps in because the <strong>Finance Act 2025 proposed raising the threshold to KES 8 million</strong>. As at July 2026 the change has not been brought into force. Several SEO/blog articles present the 8 million figure as already effective (some even date it back to "Finance Act 2024" or to 1 September 2024) - those are incorrect. Work from the KES 5 million threshold and check KRA's guidance before acting on anything that says otherwise.
             </p>
 
             <div className="border border-hairline rounded-lg overflow-hidden not-prose">
@@ -150,7 +150,7 @@ export default function VatThresholdKenya() {
                 </thead>
                 <tbody className="divide-y divide-hairline">
                   {[
-                    { t: "Below KES 5 million", s: "Not mandatory — voluntary available", a: "No obligation to register. May register voluntarily (e.g. to let B2B customers claim input VAT). Pay turnover tax or income tax as applicable." },
+                    { t: "Below KES 5 million", s: "Not mandatory - voluntary available", a: "No obligation to register. May register voluntarily (e.g. to let B2B customers claim input VAT). Pay turnover tax or income tax as applicable." },
                     { t: "KES 5 million and above", s: "Mandatory registration", a: "Must register within 30 days of crossing. Charge 16% VAT, file monthly returns, use eTIMS." },
                   ].map(({ t, s, a }) => (
                     <tr key={t}>
@@ -167,7 +167,7 @@ export default function VatThresholdKenya() {
               <div className="flex items-start gap-3">
                 <Warning size={18} className="text-amber-600 shrink-0 mt-0.5" weight="fill" />
                 <div>
-                  <p className="text-sm font-semibold text-ink mb-1">Important — the &ldquo;KES 8 million&quot; claim</p>
+                  <p className="text-sm font-semibold text-ink mb-1">Important - the &ldquo;KES 8 million&quot; claim</p>
                   <p className="text-sm text-ink-muted leading-relaxed">
                     The Finance Act 2025 <em>proposed</em> raising the VAT threshold from KES 5 million to KES 8 million. It has not been brought into effect. Register for VAT at KES 5 million to stay compliant; if your accountant or a blog cites 8 million, ask for a Gazette notice showing the effective date.
                   </p>
@@ -178,7 +178,7 @@ export default function VatThresholdKenya() {
             <h2>How Is Turnover Counted?</h2>
             <ol>
               <li><strong>Taxable supplies only:</strong> Standard-rated (16%) and zero-rated (0%) supplies count; exempt supplies do not.</li>
-              <li><strong>Over twelve months:</strong> The test is total taxable value in any period of 12 months — watch rolling 12-month totals, not just a single year.</li>
+              <li><strong>Over twelve months:</strong> The test is total taxable value in any period of 12 months - watch rolling 12-month totals, not just a single year.</li>
               <li><strong>Excluding VAT:</strong> Turnover is measured excluding the VAT itself.</li>
               <li><strong>Projections matter:</strong> if it is apparent your supplies will exceed the threshold in the next 12 months on goods or services, you must register even before the actual crossing.</li>
             </ol>
@@ -189,30 +189,30 @@ export default function VatThresholdKenya() {
               You may apply for voluntary registration even under the threshold. The Commissioner has discretion under section 34(3) of the VAT Act. It is typically a good idea if:
             </p>
             <ul>
-              <li><strong>Your customers are VAT-registered businesses</strong> — they can claim input VAT on your invoices, making you a preferred (input-claimable) supplier in the chain</li>
-              <li><strong>Your input VAT on purchases is significant</strong> — if you pay VAT on rent, stock, equipment, or services, you can recover it once registered</li>
-              <li><strong>Industry norms favour it</strong> — construction, IT services, and professional services sometimes prefer VAT status</li>
+              <li><strong>Your customers are VAT-registered businesses</strong> - they can claim input VAT on your invoices, making you a preferred (input-claimable) supplier in the chain</li>
+              <li><strong>Your input VAT on purchases is significant</strong> - if you pay VAT on rent, stock, equipment, or services, you can recover it once registered</li>
+              <li><strong>Industry norms favour it</strong> - construction, IT services, and professional services sometimes prefer VAT status</li>
             </ul>
-            <p>It is often less worthwhile when your customers are individuals (B2C — VAT just makes you more expensive) or you buy mostly from non-registered suppliers (little input VAT to reclaim).</p>
+            <p>It is often less worthwhile when your customers are individuals (B2C - VAT just makes you more expensive) or you buy mostly from non-registered suppliers (little input VAT to reclaim).</p>
 
             <h2>What Happens If You Cross KES 5 Million</h2>
             <ol>
               <li><strong>Register within 30 days</strong> of the month you cross the threshold. Late registration attracts penalties.</li>
               <li><strong>Start charging 16% VAT</strong> from the date of registration. If you delay, KRA can charge VAT back to the date you should have registered.</li>
-              <li><strong>Onboard eTIMS</strong> — mandatory for all VAT-registered businesses, with penalties for late onboarding.</li>
+              <li><strong>Onboard eTIMS</strong> - mandatory for all VAT-registered businesses, with penalties for late onboarding.</li>
               <li><strong>File monthly returns</strong> by the 20th of each month, nil returns included.</li>
             </ol>
             <p>
-              <a href="/services/vat-registration/" className="text-brand underline underline-offset-2 hover:text-brand-hover">We handle the full registration for KES 5,000</a> — iTax application, and eTIMS onboarding guidance.
+              <a href="/services/vat-registration/" className="text-brand underline underline-offset-2 hover:text-brand-hover">We handle the full registration for KES 5,000</a> - iTax application, and eTIMS onboarding guidance.
             </p>
 
             <h2>Related Resources</h2>
             <ul>
-              <li><a href="/resources/how-to-register-for-vat-in-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">How to Register for VAT in Kenya</a> — Step-by-step registration guide</li>
-              <li><a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Do I Need to Register for VAT?</a> — Decision guide for SMEs</li>
-              <li><a href="/resources/vat-vs-turnover-tax/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT vs Turnover Tax</a> — Comparison for small businesses</li>
-              <li><a href="/resources/small-taxpayer-regime-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Small Taxpayer Regime Guide</a> — 8% turnover-inclusive option</li>
-              <li><a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026 VAT Changes</a> — All VAT changes including threshold updates</li>
+              <li><a href="/resources/how-to-register-for-vat-in-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">How to Register for VAT in Kenya</a> - Step-by-step registration guide</li>
+              <li><a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Do I Need to Register for VAT?</a> - Decision guide for SMEs</li>
+              <li><a href="/resources/vat-vs-turnover-tax/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT vs Turnover Tax</a> - Comparison for small businesses</li>
+              <li><a href="/resources/small-taxpayer-regime-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Small Taxpayer Regime Guide</a> - 8% turnover-inclusive option</li>
+              <li><a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026 VAT Changes</a> - All VAT changes including threshold updates</li>
             </ul>
           </div>
         </article>

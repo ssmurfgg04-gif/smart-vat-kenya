@@ -1,17 +1,17 @@
 const WA_BASE = "https://wa.me/254717344440"
 
 const collected = [
-  { what: "Business and contact details", why: "Your business name, physical address, phone number, and email — needed to set up your iTax profile and communicate with you." },
+  { what: "Business and contact details", why: "Your business name, physical address, phone number, and email - needed to set up your iTax profile and communicate with you." },
   { what: "KRA PIN", why: "Your individual or company KRA PIN is used only for the tax filings and registrations you ask us to complete on iTax." },
   { what: "Identification documents", why: "A copy of your national ID or passport (and director details for companies) is required by KRA to process VAT registration and filings." },
-  { what: "Business registration documents", why: "CR12, certificate of incorporation, or business license — required where KRA asks for proof of entity structure." },
+  { what: "Business registration documents", why: "CR12, certificate of incorporation, or business license - required where KRA asks for proof of entity structure." },
   { what: "Payment information", why: "Payment references from M-PESA so we can match your payment to your filing and issue you a receipt." },
 ]
 
 const sharing = [
-  "Kenya Revenue Authority (KRA) — the data you provide is submitted to KRA's iTax portal, which is the sole reason we collect most of it.",
-  "Safaricom / M-PESA — payment references are shared with your mobile money provider to process and confirm payments.",
-  "WhatsApp / Meta — messages sent over WhatsApp are subject to WhatsApp's own privacy policy. We cannot control or be liable for WhatsApp's data handling.",
+  "Kenya Revenue Authority (KRA) - the data you provide is submitted to KRA's iTax portal, which is the sole reason we collect most of it.",
+  "Safaricom / M-PESA - payment references are shared with your mobile money provider to process and confirm payments.",
+  "WhatsApp / Meta - messages sent over WhatsApp are subject to WhatsApp's own privacy policy. We cannot control or be liable for WhatsApp's data handling.",
 ]
 
 const rights = [
@@ -106,7 +106,7 @@ export default function PrivacyPolicyPage() {
             <p>
               We do not sell your data. We do not use your KRA PIN or documents for anything other
               than the tax work you approve, and we never share your credentials with third parties
-              except where required to complete the service — as described below.
+              except where required to complete the service - as described below.
             </p>
           </div>
         </section>

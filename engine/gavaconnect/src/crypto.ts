@@ -40,7 +40,7 @@ export function decryptSecret(payload: string, masterKeyHex: string): string {
  * NOTE: KRA's OSCU spec v2.0 defines the exact envelope field names and key
  * derivation. The implementation below follows the widely-documented pattern
  * (cmcKey = 32-byte key). Before going live, diff against your approved
- * sandbox app's Postman collection — field names have changed before.
+ * sandbox app's Postman collection - field names have changed before.
  */
 export interface OscuEnvelope {
   data: string

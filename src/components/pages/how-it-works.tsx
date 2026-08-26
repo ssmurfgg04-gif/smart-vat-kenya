@@ -23,7 +23,7 @@ const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
   name: "How to Get VAT Registration in Kenya via WhatsApp",
-  description: "Register for KRA VAT or file monthly returns in 3 simple steps — all via WhatsApp. No iTax login required.",
+  description: "Register for KRA VAT or file monthly returns in 3 simple steps - all via WhatsApp. No iTax login required.",
   step: [
     {
       "@type": "HowToStep",
@@ -55,7 +55,7 @@ const steps = [
     Icon: ChatCircle,
     title: "WhatsApp Us",
     description:
-      "Send us your business name, KRA PIN, and a copy of your national ID over WhatsApp. No forms to fill, no portals to navigate — just a single message.",
+      "Send us your business name, KRA PIN, and a copy of your national ID over WhatsApp. No forms to fill, no portals to navigate - just a single message.",
     details: [
       "Send your KRA PIN certificate",
       "Send a copy of your national ID",
@@ -70,7 +70,7 @@ const steps = [
     description:
       "Our team logs into the KRA iTax portal and processes your VAT registration or monthly return on your behalf. You get WhatsApp updates at every stage.",
     details: [
-      "KRA iTax portal — handled for you",
+      "KRA iTax portal - handled for you",
       "WhatsApp updates at every stage",
       "Secure credential handling",
       "Completed within agreed timeline",
@@ -81,7 +81,7 @@ const steps = [
     Icon: SealCheck,
     title: "You Get Peace of Mind",
     description:
-      "Your VAT PIN or filing receipt is delivered straight to your WhatsApp — along with your M-PESA receipt for our fee. You stay compliant without lifting a finger.",
+      "Your VAT PIN or filing receipt is delivered straight to your WhatsApp - along with your M-PESA receipt for our fee. You stay compliant without lifting a finger.",
     details: [
       "PIN or filing receipt via WhatsApp",
       "M-PESA receipt for our fee",
@@ -105,7 +105,7 @@ const guarantees = [
   {
     Icon: CurrencyDollar,
     title: "M-PESA Only",
-    desc: "We accept M-PESA for all payments. You pay only after we confirm we can help — and you always get a receipt.",
+    desc: "We accept M-PESA for all payments. You pay only after we confirm we can help - and you always get a receipt.",
   },
   {
     Icon: ChatCircle,
@@ -135,7 +135,7 @@ export default function HowItWorksPage() {
             Three steps. Zero portal headaches.
           </h1>
           <p className="text-[0.95rem] text-canvas/70 max-w-[48ch] leading-relaxed">
-            From WhatsApp message to VAT PIN — or filed return — without you ever logging
+            From WhatsApp message to VAT PIN - or filed return - without you ever logging
             into KRA iTax.
           </p>
         </div>
@@ -144,7 +144,7 @@ export default function HowItWorksPage() {
       {/* Steps */}
       <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="steps-heading">
         <div className="max-w-[1400px] mx-auto">
-          <h2 id="steps-heading" className="sr-only">How it works — 3 steps</h2>
+          <h2 id="steps-heading" className="sr-only">How it works - 3 steps</h2>
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
             {steps.map(({ number, Icon, title, description, details }) => (
@@ -211,7 +211,7 @@ export default function HowItWorksPage() {
               Ready to get started?
             </h2>
             <p className="text-[0.88rem] text-canvas/65 max-w-[40ch]">
-              Send a WhatsApp message now. No commitment required — free advice first.
+              Send a WhatsApp message now. No commitment required - free advice first.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">

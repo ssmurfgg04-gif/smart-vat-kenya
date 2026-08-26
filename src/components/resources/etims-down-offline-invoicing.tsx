@@ -68,7 +68,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "eTIMS Down — Offline Invoicing Guide", item: "https://smartvatkenya.co.ke/resources/etims-down-offline-invoicing/" },
+    { "@type": "ListItem", position: 3, name: "eTIMS Down - Offline Invoicing Guide", item: "https://smartvatkenya.co.ke/resources/etims-down-offline-invoicing/" },
   ],
 }
 
@@ -95,7 +95,7 @@ const faqSchema = {
       name: "Can I issue invoices when eTIMS is down?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "It depends on your eTIMS solution. eTIMS Client (desktop application) has an offline mode that queues invoices locally and syncs them when connectivity is restored. eTIMS Lite (web-based) does not work offline — you must wait for the portal to come back. If you use eTIMS Lite, you should keep a manual record of sales made during the outage and create the invoices in eTIMS Lite once the system is back online. We recommend eTIMS Client if your business cannot afford to stop invoicing during outages.",
+        text: "It depends on your eTIMS solution. eTIMS Client (desktop application) has an offline mode that queues invoices locally and syncs them when connectivity is restored. eTIMS Lite (web-based) does not work offline - you must wait for the portal to come back. If you use eTIMS Lite, you should keep a manual record of sales made during the outage and create the invoices in eTIMS Lite once the system is back online. We recommend eTIMS Client if your business cannot afford to stop invoicing during outages.",
       },
     },
     {
@@ -103,7 +103,7 @@ const faqSchema = {
       name: "How do I use eTIMS Client offline mode?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "eTIMS Client automatically switches to offline mode when it detects no internet connection. In offline mode, you can still create invoices, credit notes, and debit notes normally. The invoices are saved locally with a 'Pending Sync' status. When your internet connection is restored, eTIMS Client automatically transmits all pending invoices to KRA. You can also manually trigger a sync by clicking the 'Sync' button in the application. KRA assigns server confirmation codes during the sync process — offline invoices get their confirmation codes at that point.",
+        text: "eTIMS Client automatically switches to offline mode when it detects no internet connection. In offline mode, you can still create invoices, credit notes, and debit notes normally. The invoices are saved locally with a 'Pending Sync' status. When your internet connection is restored, eTIMS Client automatically transmits all pending invoices to KRA. You can also manually trigger a sync by clicking the 'Sync' button in the application. KRA assigns server confirmation codes during the sync process - offline invoices get their confirmation codes at that point.",
       },
     },
     {
@@ -111,7 +111,7 @@ const faqSchema = {
       name: "What do I do if eTIMS Lite is not loading?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "If eTIMS Lite (the web-based solution at etims.kra.go.ke) is not loading, first check if the problem is on your end or KRA's side. Try loading other websites, clear your browser cache, and try a different browser or network. If eTIMS is down for everyone, you cannot create invoices through eTIMS Lite until it is restored. Keep a manual log of all sales during the outage — customer name, items sold, amount, and date — and create the eTIMS invoices retroactively when the system is back. Some businesses use this as a trigger to upgrade to eTIMS Client, which has offline capability.",
+        text: "If eTIMS Lite (the web-based solution at etims.kra.go.ke) is not loading, first check if the problem is on your end or KRA's side. Try loading other websites, clear your browser cache, and try a different browser or network. If eTIMS is down for everyone, you cannot create invoices through eTIMS Lite until it is restored. Keep a manual log of all sales during the outage - customer name, items sold, amount, and date - and create the eTIMS invoices retroactively when the system is back. Some businesses use this as a trigger to upgrade to eTIMS Client, which has offline capability.",
       },
     },
     {
@@ -127,7 +127,7 @@ const faqSchema = {
       name: "Can eTIMS Client generate invoices with QR codes when offline?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. eTIMS Client generates a local QR code for offline invoices. However, this QR code is provisional — it does not contain the server confirmation code that KRA assigns during sync. The QR code becomes fully valid only after the invoice has been synced with KRA. Your customer can scan the provisional QR code, but it will not verify against KRA's server until the sync is complete. For B2B customers who need to claim input VAT, inform them that the invoice was created offline and will be fully confirmed once synced.",
+        text: "Yes. eTIMS Client generates a local QR code for offline invoices. However, this QR code is provisional - it does not contain the server confirmation code that KRA assigns during sync. The QR code becomes fully valid only after the invoice has been synced with KRA. Your customer can scan the provisional QR code, but it will not verify against KRA's server until the sync is complete. For B2B customers who need to claim input VAT, inform them that the invoice was created offline and will be fully confirmed once synced.",
       },
     },
     {
@@ -135,7 +135,7 @@ const faqSchema = {
       name: "How do I check if eTIMS is down right now?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Check social media for reports — search X (Twitter) for 'eTIMS down' or 'KRA eTIMS'. Check downdetector.co.ke for KRA portal status. Try accessing etims.kra.go.ke from a different browser or network to confirm the issue is on KRA's side rather than your connection. KRA sometimes posts outage updates on their official X account (@KRANews). For extended outages, call KRA on 020 499 9999.",
+        text: "Check social media for reports - search X (Twitter) for 'eTIMS down' or 'KRA eTIMS'. Check downdetector.co.ke for KRA portal status. Try accessing etims.kra.go.ke from a different browser or network to confirm the issue is on KRA's side rather than your connection. KRA sometimes posts outage updates on their official X account (@KRANews). For extended outages, call KRA on 020 499 9999.",
       },
     },
   ],
@@ -176,7 +176,7 @@ export default function ETIMSDownPage() {
           </h1>
           <div className="flex flex-wrap items-center gap-3 mt-4">
             <span className="font-mono text-[0.62rem] uppercase tracking-widest bg-brand/20 text-brand px-2.5 py-1 rounded-sm">Last updated: July 25, 2026</span>
-            <span className="text-[0.78rem] text-canvas/50">Smart VAT Kenya — KRA-registered VAT agents</span>
+            <span className="text-[0.78rem] text-canvas/50">Smart VAT Kenya - KRA-registered VAT agents</span>
           </div>
         </div>
       </div>
@@ -192,7 +192,7 @@ export default function ETIMSDownPage() {
         <div className="border-l-[3px] border-brand pl-5 mb-10">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            KRA eTIMS goes down regularly, especially during peak periods. If you use <strong className="text-ink">eTIMS Client</strong> (desktop app), you can continue invoicing offline — invoices are queued locally and synced automatically when the connection returns. If you use <strong className="text-ink">eTIMS Lite</strong> (web-based), you cannot invoice during an outage; keep a manual sales log and create the invoices retroactively when the portal is back. The <strong className="text-ink">eTIMS non-compliance penalties</strong> apply (TPA s.86 — the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals), but KRA may exercise discretion if you can demonstrate the outage prevented compliance. Keep outage evidence. The only guaranteed solution is to <strong className="text-ink">upgrade to eTIMS Client</strong>, which has full offline capability.
+            KRA eTIMS goes down regularly, especially during peak periods. If you use <strong className="text-ink">eTIMS Client</strong> (desktop app), you can continue invoicing offline - invoices are queued locally and synced automatically when the connection returns. If you use <strong className="text-ink">eTIMS Lite</strong> (web-based), you cannot invoice during an outage; keep a manual sales log and create the invoices retroactively when the portal is back. The <strong className="text-ink">eTIMS non-compliance penalties</strong> apply (TPA s.86 - the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals), but KRA may exercise discretion if you can demonstrate the outage prevented compliance. Keep outage evidence. The only guaranteed solution is to <strong className="text-ink">upgrade to eTIMS Client</strong>, which has full offline capability.
           </p>
         </div>
 
@@ -215,7 +215,7 @@ export default function ETIMSDownPage() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — How to Check */}
+          {/* Section 1 - How to Check */}
           <section id="is-etims-down" aria-labelledby="is-etims-down-h">
             <h2 id="is-etims-down-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Is eTIMS Down? How to Check Before You Panic
@@ -240,7 +240,7 @@ export default function ETIMSDownPage() {
                   },
                   {
                     title: "Check KRA's official communications",
-                    desc: "KRA sometimes posts outage notices on kra.go.ke or their X account (@KRANews). If they have acknowledged the issue, no action is needed on your end — wait for restoration.",
+                    desc: "KRA sometimes posts outage notices on kra.go.ke or their X account (@KRANews). If they have acknowledged the issue, no action is needed on your end - wait for restoration.",
                   },
                   {
                     title: "Try KRA's alternative eTIMS access",
@@ -269,7 +269,7 @@ export default function ETIMSDownPage() {
             </div>
           </section>
 
-          {/* Section 2 — eTIMS Client Offline */}
+          {/* Section 2 - eTIMS Client Offline */}
           <section id="etims-client-offline" aria-labelledby="etims-client-offline-h">
             <h2 id="etims-client-offline-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Using eTIMS Client Offline Mode
@@ -279,7 +279,7 @@ export default function ETIMSDownPage() {
                 If you use <strong className="text-ink">eTIMS Client</strong> (the downloadable Windows desktop application), you have a significant advantage during outages: <strong className="text-ink">offline invoicing</strong>. This is one of the main reasons KRA recommends eTIMS Client for medium-volume businesses.
               </p>
               <p>
-                eTIMS Client detects when there is no internet connection and automatically switches to offline mode. You continue working exactly as normal — creating invoices, credit notes, and debit notes. The only difference is that invoices carry a <strong className="text-ink">"Pending Sync"</strong> status instead of a confirmed server confirmation code.
+                eTIMS Client detects when there is no internet connection and automatically switches to offline mode. You continue working exactly as normal - creating invoices, credit notes, and debit notes. The only difference is that invoices carry a <strong className="text-ink">"Pending Sync"</strong> status instead of a confirmed server confirmation code.
               </p>
               <div className="space-y-3">
                 {[
@@ -297,7 +297,7 @@ export default function ETIMSDownPage() {
                   },
                   {
                     title: "No limit on offline invoices",
-                    desc: "There is no cap on how many invoices you can create offline. The local queue handles unlimited invoices until storage runs out — which is effectively never for normal business volumes.",
+                    desc: "There is no cap on how many invoices you can create offline. The local queue handles unlimited invoices until storage runs out - which is effectively never for normal business volumes.",
                   },
                   {
                     title: "Security during offline mode",
@@ -316,13 +316,13 @@ export default function ETIMSDownPage() {
               <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
                 <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
-                  <strong className="text-ink">Important:</strong> eTIMS Client must be connected to the internet at least once every 7 days. If the application cannot sync for more than 7 days, it will lock you out and require a KRA reactivation. This applies even if the outage is on KRA's side — so if eTIMS has been down for more than 5 days, contact KRA proactively.
+                  <strong className="text-ink">Important:</strong> eTIMS Client must be connected to the internet at least once every 7 days. If the application cannot sync for more than 7 days, it will lock you out and require a KRA reactivation. This applies even if the outage is on KRA's side - so if eTIMS has been down for more than 5 days, contact KRA proactively.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Section 3 — eTIMS Lite Down */}
+          {/* Section 3 - eTIMS Lite Down */}
           <section id="etims-lite-down" aria-labelledby="etims-lite-down-h">
             <h2 id="etims-lite-down-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               What to Do When eTIMS Lite Is Down
@@ -383,7 +383,7 @@ export default function ETIMSDownPage() {
             </div>
           </section>
 
-          {/* Section 4 — Sync Process */}
+          {/* Section 4 - Sync Process */}
           <section id="sync-process" aria-labelledby="sync-process-h">
             <h2 id="sync-process-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Syncing Offline Invoices When eTIMS Comes Back
@@ -397,7 +397,7 @@ export default function ETIMSDownPage() {
                   {
                     step: 1,
                     title: "Connect to a stable internet connection",
-                    desc: "Use a reliable internet connection — preferably not mobile data if the file queue is large. A minimum of 2 Mbps is recommended for syncing. If possible, connect via Ethernet for stability.",
+                    desc: "Use a reliable internet connection - preferably not mobile data if the file queue is large. A minimum of 2 Mbps is recommended for syncing. If possible, connect via Ethernet for stability.",
                   },
                   {
                     step: 2,
@@ -407,7 +407,7 @@ export default function ETIMSDownPage() {
                   {
                     step: 3,
                     title: "Verify each invoice has a server confirmation code",
-                    desc: "After sync completes, check that every invoice now displays a 'Confirmed' status and has a valid server confirmation code. Invoices that failed to sync will still show 'Pending Sync' — these need to be retried manually.",
+                    desc: "After sync completes, check that every invoice now displays a 'Confirmed' status and has a valid server confirmation code. Invoices that failed to sync will still show 'Pending Sync' - these need to be retried manually.",
                   },
                   {
                     step: 4,
@@ -435,7 +435,7 @@ export default function ETIMSDownPage() {
             </div>
           </section>
 
-          {/* Section 5 — Prevention */}
+          {/* Section 5 - Prevention */}
           <section id="prevention" aria-labelledby="prevention-h">
             <h2 id="prevention-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Prevention: Never Be Blocked by an eTIMS Outage
@@ -456,7 +456,7 @@ export default function ETIMSDownPage() {
                   },
                   {
                     title: "Monitor eTIMS status",
-                    desc: "Follow KRA on X (@KRANews) and check downdetector.co.ke for real-time outage information. If a major outage is announced, plan your invoicing around it — invoice early in the day before peak traffic hits the servers.",
+                    desc: "Follow KRA on X (@KRANews) and check downdetector.co.ke for real-time outage information. If a major outage is announced, plan your invoicing around it - invoice early in the day before peak traffic hits the servers.",
                   },
                   {
                     title: "Invoice early, not on deadline",

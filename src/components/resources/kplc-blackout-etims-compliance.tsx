@@ -9,7 +9,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "KPLC Blackout — eTIMS & VAT Compliance", item: "https://smartvatkenya.co.ke/resources/kplc-blackout-etims-compliance/" },
+    { "@type": "ListItem", position: 3, name: "KPLC Blackout - eTIMS & VAT Compliance", item: "https://smartvatkenya.co.ke/resources/kplc-blackout-etims-compliance/" },
   ],
 }
 
@@ -41,7 +41,7 @@ const faqSchema = {
       name: "Can I issue eTIMS invoices during a KPLC blackout?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Only if your equipment has power. eTIMS Client runs on a desktop/laptop — a blackout stops it unless you are on a UPS, laptop battery, or backup generator. eTIMS Client's offline mode queues invoices locally, so if you have a charged laptop you can keep invoicing and the invoices sync when power and internet return. eTIMS Lite (web-based) needs both power and internet and will not work during a blackout. Keep a manual sales log as a backup so no sales are lost.",
+        text: "Only if your equipment has power. eTIMS Client runs on a desktop/laptop - a blackout stops it unless you are on a UPS, laptop battery, or backup generator. eTIMS Client's offline mode queues invoices locally, so if you have a charged laptop you can keep invoicing and the invoices sync when power and internet return. eTIMS Lite (web-based) needs both power and internet and will not work during a blackout. Keep a manual sales log as a backup so no sales are lost.",
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: "Will KRA penalise me if a power cut prevented me from invoicing or filing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "KRA does not automatically excuse non-compliance caused by power cuts. If you miss an eTIMS invoice transmission or a VAT filing deadline because of a blackout, document everything (screenshots, KPLC outage notice if available, photos of the blackout), complete the compliance as soon as power returns, and apply for a penalty waiver proactively with the evidence. KRA exercises discretion case by case — you must demonstrate reasonable effort.",
+        text: "KRA does not automatically excuse non-compliance caused by power cuts. If you miss an eTIMS invoice transmission or a VAT filing deadline because of a blackout, document everything (screenshots, KPLC outage notice if available, photos of the blackout), complete the compliance as soon as power returns, and apply for a penalty waiver proactively with the evidence. KRA exercises discretion case by case - you must demonstrate reasonable effort.",
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: "How does a power cut affect M-Pesa payments to KRA?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A power cut at your premises does not necessarily stop M-Pesa — mobile money runs on Safaricom's network, not your local power. Your phone keeps working on its own battery. However, if you process KRA payments via a bank, POS, or a computer (e.g., for larger payments), a blackout can block them. Use your phone's M-Pesa app or USSD to pay KRA Paybill 572572 during a blackout, and keep a screenshot of any failed attempt as evidence.",
+        text: "A power cut at your premises does not necessarily stop M-Pesa - mobile money runs on Safaricom's network, not your local power. Your phone keeps working on its own battery. However, if you process KRA payments via a bank, POS, or a computer (e.g., for larger payments), a blackout can block them. Use your phone's M-Pesa app or USSD to pay KRA Paybill 572572 during a blackout, and keep a screenshot of any failed attempt as evidence.",
       },
     },
     {
@@ -70,10 +70,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "I lost sales data during a blackout — what do I do?",
+      name: "I lost sales data during a blackout - what do I do?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "If eTIMS Client shut down uncleanly during a blackout, reopen it when power returns and check whether pending invoices were saved. eTIMS Client queues invoices locally as you create them, so most are preserved. If data is corrupted, you may need to delete and re-create specific invoices. Always keep a manual (paper or spreadsheet) sales log — it is your audit trail and the basis for recreating invoices or defending a KRA query.",
+        text: "If eTIMS Client shut down uncleanly during a blackout, reopen it when power returns and check whether pending invoices were saved. eTIMS Client queues invoices locally as you create them, so most are preserved. If data is corrupted, you may need to delete and re-create specific invoices. Always keep a manual (paper or spreadsheet) sales log - it is your audit trail and the basis for recreating invoices or defending a KRA query.",
       },
     },
     {
@@ -133,7 +133,7 @@ export default function KPLCBlackoutPage() {
         <div className="border-l-[3px] border-brand pl-5 mb-10">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            A KPLC blackout does not pause your KRA obligations. To stay compliant during power cuts: run eTIMS Client on a <strong className="text-ink">UPS or charged laptop</strong> so offline invoices keep queuing, keep a <strong className="text-ink">manual sales log</strong> as your audit trail, pay KRA via <strong className="text-ink">M-Pesa on your phone</strong> (it works without mains power), and remember the <strong className="text-ink">7-day eTIMS sync rule</strong> still applies — restore power and sync as soon as possible. If a blackout makes you miss a deadline, <strong className="text-ink">document it and apply for a waiver proactively</strong>.
+            A KPLC blackout does not pause your KRA obligations. To stay compliant during power cuts: run eTIMS Client on a <strong className="text-ink">UPS or charged laptop</strong> so offline invoices keep queuing, keep a <strong className="text-ink">manual sales log</strong> as your audit trail, pay KRA via <strong className="text-ink">M-Pesa on your phone</strong> (it works without mains power), and remember the <strong className="text-ink">7-day eTIMS sync rule</strong> still applies - restore power and sync as soon as possible. If a blackout makes you miss a deadline, <strong className="text-ink">document it and apply for a waiver proactively</strong>.
           </p>
         </div>
 
@@ -156,7 +156,7 @@ export default function KPLCBlackoutPage() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — Blackouts & eTIMS */}
+          {/* Section 1 - Blackouts & eTIMS */}
           <section id="blackout-vs-etims" aria-labelledby="blackout-vs-etims-h">
             <h2 id="blackout-vs-etims-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               How a KPLC Blackout Affects eTIMS Invoicing
@@ -203,7 +203,7 @@ export default function KPLCBlackoutPage() {
             </div>
           </section>
 
-          {/* Section 2 — KRA payments */}
+          {/* Section 2 - KRA payments */}
           <section id="kra-payments" aria-labelledby="kra-payments-h">
             <h2 id="kra-payments-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Paying KRA During a Blackout
@@ -221,7 +221,7 @@ export default function KPLCBlackoutPage() {
                   },
                   {
                     title: "Keep your phone charged",
-                    desc: "A power bank is essential. If your phone dies and mains power is out, you cannot pay via M-Pesa — a power bank costs little and prevents a penalty.",
+                    desc: "A power bank is essential. If your phone dies and mains power is out, you cannot pay via M-Pesa - a power bank costs little and prevents a penalty.",
                   },
                   {
                     title: "Bank and PesaLink as fallbacks",
@@ -255,7 +255,7 @@ export default function KPLCBlackoutPage() {
             </div>
           </section>
 
-          {/* Section 3 — 7-day sync rule */}
+          {/* Section 3 - 7-day sync rule */}
           <section id="7-day-sync" aria-labelledby="7-day-sync-h">
             <h2 id="7-day-sync-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               The 7-Day eTIMS Sync Rule &amp; Power Cuts
@@ -277,7 +277,7 @@ export default function KPLCBlackoutPage() {
                   },
                   {
                     title: "Watch for extended outages",
-                    desc: "If KPLC predicts a long outage (e.g., scheduled maintenance or storm damage), plan ahead — take your eTIMS laptop somewhere with power to sync, or contact KRA about the risk.",
+                    desc: "If KPLC predicts a long outage (e.g., scheduled maintenance or storm damage), plan ahead - take your eTIMS laptop somewhere with power to sync, or contact KRA about the risk.",
                   },
                   {
                     title: "Locked already? See the unlock guide",
@@ -302,7 +302,7 @@ export default function KPLCBlackoutPage() {
             </div>
           </section>
 
-          {/* Section 4 — Power backup */}
+          {/* Section 4 - Power backup */}
           <section id="power-backup" aria-labelledby="power-backup-h">
             <h2 id="power-backup-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
           Power Backup Equipment Worth Having
@@ -316,7 +316,7 @@ export default function KPLCBlackoutPage() {
                   },
                   {
                     title: "Charged laptop as a fallback",
-                    desc: "A laptop with eTIMS Client installed and a full battery is a portable invoicing machine during a blackout — and can be taken to a powered location if needed.",
+                    desc: "A laptop with eTIMS Client installed and a full battery is a portable invoicing machine during a blackout - and can be taken to a powered location if needed.",
                   },
                   {
                     title: "Power banks for phones",
@@ -339,7 +339,7 @@ export default function KPLCBlackoutPage() {
             </div>
           </section>
 
-          {/* Section 5 — Audit trail */}
+          {/* Section 5 - Audit trail */}
           <section id="audit-trail" aria-labelledby="audit-trail-h">
             <h2 id="audit-trail-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Keeping an Audit Trail Through Blackouts
@@ -419,7 +419,7 @@ export default function KPLCBlackoutPage() {
         <div className="mt-10 border border-brand/20 bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-[1rem] font-semibold text-ink mb-1">Power cuts costing you compliance?</p>
           <p className="text-[0.85rem] text-ink-muted mb-4 max-w-[40ch] mx-auto leading-relaxed">
-            We handle your monthly VAT filing so you never miss a deadline — blackout or not.
+            We handle your monthly VAT filing so you never miss a deadline - blackout or not.
           </p>
           <a
             href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT%20filing"

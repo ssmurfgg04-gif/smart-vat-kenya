@@ -126,7 +126,7 @@ export default function DoINeedVATPage() {
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
             You must register for VAT in Kenya if your annual taxable turnover reaches or exceeds{" "}
-            <strong className="text-ink">KES 5 million</strong>. If your turnover is below that, registration is voluntary — but it can still benefit you.             This guide covers the{" "}
+            <strong className="text-ink">KES 5 million</strong>. If your turnover is below that, registration is voluntary - but it can still benefit you.             This guide covers the{" "}
             <strong className="text-ink">KES 5 million threshold rule</strong>, voluntary registration,{" "}
             <a href="/resources/vat-vs-turnover-tax/" className="text-brand underline underline-offset-2 hover:text-brand-hover">turnover tax (ToT)</a>, how VAT changes your pricing, and how to avoid scam agents when you{" "}
             <strong className="text-ink">hire someone to handle your KRA PIN for VAT</strong>.
@@ -159,7 +159,7 @@ export default function DoINeedVATPage() {
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                The short answer: <strong className="text-ink">only if your turnover is KES 5 million or more</strong>. The Kenya VAT Act (Cap. 476) sets this as the mandatory registration threshold. Once your taxable supplies — goods and services that attract 16% or 0% VAT — hit KES 5 million in any rolling twelve-month period, you must apply for a <strong className="text-ink">KRA PIN for VAT</strong> within 30 days.
+                The short answer: <strong className="text-ink">only if your turnover is KES 5 million or more</strong>. The Kenya VAT Act (Cap. 476) sets this as the mandatory registration threshold. Once your taxable supplies - goods and services that attract 16% or 0% VAT - hit KES 5 million in any rolling twelve-month period, you must apply for a <strong className="text-ink">KRA PIN for VAT</strong> within 30 days.
               </p>
               <p>
                 Taxable turnover does not include exempt supplies such as financial services, residential rent, education, or medical services. If your revenue comes mostly from these categories, you may not need to register even if your total income exceeds KES 5 million.
@@ -178,7 +178,7 @@ export default function DoINeedVATPage() {
               <div className="border border-hairline rounded-lg p-5 bg-canvas-alt">
                 <p className="font-semibold text-ink text-[0.88rem] mb-2">How do I know if I have crossed the threshold?</p>
                 <p className="text-[0.85rem] text-ink-muted leading-relaxed">
-                  Add up all your sales from the last 12 months — cash, M-PESA, bank transfers, and card payments. If the total exceeds KES 5 million, you need to register. If you are close to the threshold, monitor your revenue monthly. Once you cross it, you have 30 days to apply on iTax.
+                  Add up all your sales from the last 12 months - cash, M-PESA, bank transfers, and card payments. If the total exceeds KES 5 million, you need to register. If you are close to the threshold, monitor your revenue monthly. Once you cross it, you have 30 days to apply on iTax.
                 </p>
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function DoINeedVATPage() {
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                <strong className="text-ink">Yes — this is called voluntary VAT registration.</strong> KRA allows any business — sole trader, partnership, or company — to register for VAT even if their turnover is below KES 5 million. Once approved, you get the same <strong className="text-ink">KRA PIN for VAT</strong> as a mandatory registrant. The difference? You chose to be here.
+                <strong className="text-ink">Yes - this is called voluntary VAT registration.</strong> KRA allows any business - sole trader, partnership, or company - to register for VAT even if their turnover is below KES 5 million. Once approved, you get the same <strong className="text-ink">KRA PIN for VAT</strong> as a mandatory registrant. The difference? You chose to be here.
               </p>
               <p>
                 Voluntary registration is common among Kenyan SMEs that:
@@ -199,7 +199,7 @@ export default function DoINeedVATPage() {
               <ul className="space-y-2 pl-1">
                 {[
                   "Supply goods or services to large companies that are VAT-registered and insist on VAT invoices.",
-                  "Have significant business expenses with 16% VAT attached — you can claim this back as input VAT.",
+                  "Have significant business expenses with 16% VAT attached - you can claim this back as input VAT.",
                   "Want to appear more established and credible to corporate clients and government tenders.",
                   "Plan to grow and would cross the KES 5 million threshold soon anyway.",
                 ].map((item) => (
@@ -212,7 +212,7 @@ export default function DoINeedVATPage() {
               <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
                 <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
-                  <strong className="text-ink">Note:</strong> Once you register voluntarily, you must follow all VAT rules — monthly returns, eTIMS invoicing, and record-keeping — just like a mandatory registrant. There is no &ldquo;light&rdquo; version of VAT for voluntary businesses.
+                  <strong className="text-ink">Note:</strong> Once you register voluntarily, you must follow all VAT rules - monthly returns, eTIMS invoicing, and record-keeping - just like a mandatory registrant. There is no &ldquo;light&rdquo; version of VAT for voluntary businesses.
                 </p>
               </div>
             </div>
@@ -233,11 +233,11 @@ export default function DoINeedVATPage() {
                 </p>
                 <ul className="space-y-3">
                   {[
-                    "Claim back input VAT on purchases — this can save you thousands per month.",
+                    "Claim back input VAT on purchases - this can save you thousands per month.",
                     "Access corporate and government clients who require VAT invoices.",
                     "Build credibility with suppliers and financial institutions.",
                     "Offset VAT on imports and large capital expenditures.",
-                    "Prepare for growth — no scrambling to register when you hit KES 5 million.",
+                    "Prepare for growth - no scrambling to register when you hit KES 5 million.",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2 text-[0.83rem] text-green-700 dark:text-green-200">
                       <span className="text-green-500 shrink-0 mt-0.5">&#10003;</span>
@@ -252,10 +252,10 @@ export default function DoINeedVATPage() {
                 </p>
                 <ul className="space-y-3">
                   {[
-                    "Must file monthly VAT returns — even nil returns. Late filing costs KES 10,000 per month.",
-                    "Must issue eTIMS invoices for every sale — no exceptions.",
+                    "Must file monthly VAT returns - even nil returns. Late filing costs KES 10,000 per month.",
+                    "Must issue eTIMS invoices for every sale - no exceptions.",
                     "Your prices effectively rise by 16% for non-VAT-registered customers.",
-                    "Ongoing compliance cost — you may need an accountant or agent.",
+                    "Ongoing compliance cost - you may need an accountant or agent.",
                     "KRA can audit your books at any time. Records must be kept for 5 years.",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2 text-[0.83rem] text-red-700 dark:text-red-200">
@@ -304,7 +304,7 @@ export default function DoINeedVATPage() {
                 If most of your customers are <strong className="text-ink">individual consumers</strong> paying via M-PESA or cash, a 16% price increase may reduce sales. Your competitors who are not VAT-registered can offer lower prices because they do not charge VAT.
               </p>
               <p>
-                If most of your customers are <strong className="text-ink">other businesses</strong> — especially large companies or government entities — they typically prefer (or require) VAT invoices. They can claim the VAT back, so the effective cost to them is unchanged. In this case, being VAT-registered is usually an advantage.
+                If most of your customers are <strong className="text-ink">other businesses</strong> - especially large companies or government entities - they typically prefer (or require) VAT invoices. They can claim the VAT back, so the effective cost to them is unchanged. In this case, being VAT-registered is usually an advantage.
               </p>
               <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
                 <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
@@ -322,7 +322,7 @@ export default function DoINeedVATPage() {
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                Many SME owners choose to hire a <strong className="text-ink">VAT agent</strong> to handle registration, filing, and compliance. This is perfectly legal — KRA permits registered tax agents to act on your behalf. The key is finding a <strong className="text-ink">legitimate agent</strong> and avoiding the scams that have become common in Kenya.
+                Many SME owners choose to hire a <strong className="text-ink">VAT agent</strong> to handle registration, filing, and compliance. This is perfectly legal - KRA permits registered tax agents to act on your behalf. The key is finding a <strong className="text-ink">legitimate agent</strong> and avoiding the scams that have become common in Kenya.
               </p>
               <div className="border border-hairline rounded-lg p-5 bg-canvas-alt mb-4">
                 <p className="font-semibold text-ink text-[0.88rem] mb-3">How to Identify a Legitimate VAT Agent</p>
@@ -352,9 +352,9 @@ export default function DoINeedVATPage() {
                   </p>
                   <ul className="text-[0.83rem] text-[#8a6500] dark:text-[#ccaa33] space-y-1 leading-relaxed">
                     <li>&bull; Agents who ask for your iTax password and never return your calls.</li>
-                    <li>&bull; Agents who claim they can &ldquo;fix&rdquo; your KRA PIN for a &ldquo;special fee&rdquo; — there is no special fee.</li>
+                    <li>&bull; Agents who claim they can &ldquo;fix&rdquo; your KRA PIN for a &ldquo;special fee&rdquo; - there is no special fee.</li>
                     <li>&bull; Fake KRA officers who call demanding M-PESA payment for urgent registration.</li>
-                    <li>&bull; Agents who guarantee VAT registration in 1 hour — KRA takes 1–3 working days.</li>
+                    <li>&bull; Agents who guarantee VAT registration in 1 hour - KRA takes 1–3 working days.</li>
                   </ul>
                 </div>
               </div>
@@ -367,14 +367,14 @@ export default function DoINeedVATPage() {
             </div>
           </section>
 
-          {/* Still Not Sure — Conversion */}
+          {/* Still Not Sure - Conversion */}
           <section aria-labelledby="cta-h">
             <div className="border border-brand/30 bg-brand-muted rounded-xl p-6 sm:p-8 text-center">
               <h2 id="cta-h" className="font-display text-[1.3rem] font-semibold text-ink mb-3 tracking-tight">
                 Still Not Sure?
               </h2>
               <p className="text-[0.88rem] text-ink-soft leading-relaxed max-w-lg mx-auto mb-6">
-                Not every business needs to register for VAT right now. Take our free 2-minute quiz to find out whether you should register, wait, or stay exempt — based on your actual revenue, expenses, and customer type.
+                Not every business needs to register for VAT right now. Take our free 2-minute quiz to find out whether you should register, wait, or stay exempt - based on your actual revenue, expenses, and customer type.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a

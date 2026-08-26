@@ -99,7 +99,7 @@ export default function VatRefundPage() {
 
         <article>
           <header className="mb-10">
-            <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide — VAT Refund</p>
+            <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide - VAT Refund</p>
             <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-semibold text-ink tracking-tight leading-tight mb-4 text-balance">
               VAT Refund Guide Kenya 2026
             </h1>
@@ -111,7 +111,7 @@ export default function VatRefundPage() {
           </header>
 
           <div className="space-y-10">
-            {/* Section 1 — Eligibility */}
+            {/* Section 1 - Eligibility */}
             <section id="eligibility" aria-labelledby="eligibility-h">
               <h2 id="eligibility-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Who Can Apply for a VAT Refund?
@@ -120,11 +120,11 @@ export default function VatRefundPage() {
                 <p>You are eligible for a VAT refund if you have excess input VAT and it arose from:</p>
                 <ul className="space-y-2">
                   {[
-                    "Zero-rated supplies — if you export goods or services, your output VAT is 0% but you still have input VAT on costs. This is the most common reason for refund claims.",
-                    "Capital goods purchases — if you made a large capital investment (machinery, equipment, vehicles for business) that created significant input VAT in one period with no corresponding output VAT.",
-                    "Withholding VAT credits — if your customers are appointed withholding VAT agents, your credits may exceed your net VAT payable. See our Withholding VAT Guide.",
-                    "VAT paid in error — if you overpaid VAT on a return or paid VAT on an exempt supply by mistake, you can claim it back.",
-                    "Bad debts — if you accounted for VAT on a sale but the customer never paid, you can claim relief after 3 years.",
+                    "Zero-rated supplies - if you export goods or services, your output VAT is 0% but you still have input VAT on costs. This is the most common reason for refund claims.",
+                    "Capital goods purchases - if you made a large capital investment (machinery, equipment, vehicles for business) that created significant input VAT in one period with no corresponding output VAT.",
+                    "Withholding VAT credits - if your customers are appointed withholding VAT agents, your credits may exceed your net VAT payable. See our Withholding VAT Guide.",
+                    "VAT paid in error - if you overpaid VAT on a return or paid VAT on an exempt supply by mistake, you can claim it back.",
+                    "Bad debts - if you accounted for VAT on a sale but the customer never paid, you can claim relief after 3 years.",
                   ].map((item) => (
                     <li key={item} className="flex gap-3">
                       <CheckCircle size={14} weight="fill" className="text-brand shrink-0 mt-1.5" aria-hidden="true" />
@@ -135,10 +135,10 @@ export default function VatRefundPage() {
               </div>
             </section>
 
-            {/* Section 2 — Deadline */}
+            {/* Section 2 - Deadline */}
             <section id="deadline" aria-labelledby="deadline-h">
               <h2 id="deadline-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
-                The 12-Month Deadline — Critical Update
+                The 12-Month Deadline - Critical Update
               </h2>
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
                 <p>
@@ -153,7 +153,7 @@ export default function VatRefundPage() {
                     </p>
                     <p className="flex gap-3">
                       <Warning size={14} weight="fill" className="text-amber-500 shrink-0 mt-0.5" aria-hidden="true" />
-                      <span>If your excess arose <strong>before July 2025</strong>, the old 24-month window applies, but act now — many pre-2025 claims are expiring.</span>
+                      <span>If your excess arose <strong>before July 2025</strong>, the old 24-month window applies, but act now - many pre-2025 claims are expiring.</span>
                     </p>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ export default function VatRefundPage() {
               </div>
             </section>
 
-            {/* Section 3 — How to Apply */}
+            {/* Section 3 - How to Apply */}
             <section id="how-to-apply" aria-labelledby="how-to-apply-h">
               <h2 id="how-to-apply-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 How to Apply for a VAT Refund on iTax
@@ -204,7 +204,7 @@ export default function VatRefundPage() {
               </div>
             </section>
 
-            {/* Section 4 — Documentation Checklist */}
+            {/* Section 4 - Documentation Checklist */}
             <section id="documentation" aria-labelledby="documentation-h">
               <h2 id="documentation-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Documentation Checklist
@@ -231,7 +231,7 @@ export default function VatRefundPage() {
               </div>
             </section>
 
-            {/* Section 5 — Common Rejection Reasons */}
+            {/* Section 5 - Common Rejection Reasons */}
             <section id="rejection-reasons" aria-labelledby="rejection-reasons-h">
               <h2 id="rejection-reasons-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Why VAT Refunds Get Rejected
@@ -258,7 +258,7 @@ export default function VatRefundPage() {
               </div>
             </section>
 
-            {/* Section 6 — Professional Help */}
+            {/* Section 6 - Professional Help */}
             <section id="professional-help" aria-labelledby="professional-help-h">
               <h2 id="professional-help-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Get Professional Help with Your VAT Refund

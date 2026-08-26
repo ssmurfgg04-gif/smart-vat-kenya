@@ -36,7 +36,7 @@ const faqSchema = {
       name: "Does my Kenyan startup need to register for VAT?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Your startup must register for VAT if your annual taxable turnover exceeds KES 5 million. The Finance Act 2025 proposed raising the threshold to KES 8 million, but this has not yet taken effect. Below that threshold, you can voluntarily register — which lets you claim back input VAT on laptops, cloud services, software subscriptions, and other business costs.",
+        text: "Your startup must register for VAT if your annual taxable turnover exceeds KES 5 million. The Finance Act 2025 proposed raising the threshold to KES 8 million, but this has not yet taken effect. Below that threshold, you can voluntarily register - which lets you claim back input VAT on laptops, cloud services, software subscriptions, and other business costs.",
       },
     },
     {
@@ -44,7 +44,7 @@ const faqSchema = {
       name: "Is SaaS or software sold to Kenyan customers subject to VAT?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Software as a Service (SaaS), mobile apps, web platforms, and digital products sold to Kenyan customers are subject to 16% VAT if you are registered. The supply of digital services, electronically delivered software, and cloud-based subscriptions is treated as a taxable supply under the VAT Act. If you sell to customers outside Kenya, the supply is zero-rated (0%) — you charge no VAT but can still claim input VAT refunds.",
+        text: "Yes. Software as a Service (SaaS), mobile apps, web platforms, and digital products sold to Kenyan customers are subject to 16% VAT if you are registered. The supply of digital services, electronically delivered software, and cloud-based subscriptions is treated as a taxable supply under the VAT Act. If you sell to customers outside Kenya, the supply is zero-rated (0%) - you charge no VAT but can still claim input VAT refunds.",
       },
     },
     {
@@ -52,7 +52,7 @@ const faqSchema = {
       name: "Can I claim input VAT on my laptop and cloud costs?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, provided you are VAT-registered and the goods or services are used for taxable business purposes. You can claim input VAT on laptops, monitors, servers, cloud hosting (AWS, Azure, Google Cloud, Linode), software subscriptions (Figma, Notion, Slack, GitHub, etc.), office rent (commercial only), internet costs, and consultant fees — provided you have valid eTIMS-compliant invoices from your suppliers.",
+        text: "Yes, provided you are VAT-registered and the goods or services are used for taxable business purposes. You can claim input VAT on laptops, monitors, servers, cloud hosting (AWS, Azure, Google Cloud, Linode), software subscriptions (Figma, Notion, Slack, GitHub, etc.), office rent (commercial only), internet costs, and consultant fees - provided you have valid eTIMS-compliant invoices from your suppliers.",
       },
     },
     {
@@ -60,7 +60,7 @@ const faqSchema = {
       name: "Do I need eTIMS as a software developer or tech freelancer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The Finance Act 2023 requires ALL persons engaged in business — including software developers, tech freelancers, and consultants — to issue invoices through eTIMS. This applies regardless of whether you are VAT-registered. As a developer, eTIMS Lite (free, web-based) is usually the right choice. If you build a custom POS or ERP for clients, those clients may need VSCU/OSCU integration, which you could develop using KRA's eTIMS SDK.",
+        text: "Yes. The Finance Act 2023 requires ALL persons engaged in business - including software developers, tech freelancers, and consultants - to issue invoices through eTIMS. This applies regardless of whether you are VAT-registered. As a developer, eTIMS Lite (free, web-based) is usually the right choice. If you build a custom POS or ERP for clients, those clients may need VSCU/OSCU integration, which you could develop using KRA's eTIMS SDK.",
       },
     },
     {
@@ -68,7 +68,7 @@ const faqSchema = {
       name: "What happens if I don't file VAT returns as a startup?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Late filing attracts an automatic penalty of KES 10,000 or 5% of the tax due (whichever is higher), plus 1% monthly interest on any unpaid tax. If you are below the threshold but voluntarily registered and have nil activity, you must still file nil returns every month. Skipping nil returns costs KES 10,000 per month — the same penalty as a normal return. Filing consistently also keeps you off KRA's radar for compliance audits.",
+        text: "Late filing attracts an automatic penalty of KES 10,000 or 5% of the tax due (whichever is higher), plus 1% monthly interest on any unpaid tax. If you are below the threshold but voluntarily registered and have nil activity, you must still file nil returns every month. Skipping nil returns costs KES 10,000 per month - the same penalty as a normal return. Filing consistently also keeps you off KRA's radar for compliance audits.",
       },
     },
     {
@@ -131,10 +131,10 @@ export default function VATForStartupsPage() {
             <strong className="text-ink">KES 5 million</strong> (Finance Act 2025 proposed raising
             this to KES 8 million, but this has not yet taken effect). If you sell{" "}
             <strong className="text-ink">SaaS, software, or digital services</strong> to Kenyan
-            customers, charge 16% VAT. Exports are <strong className="text-ink">zero-rated</strong> — no VAT charged,
+            customers, charge 16% VAT. Exports are <strong className="text-ink">zero-rated</strong> - no VAT charged,
             but you still claim input VAT refunds. You can claim back VAT on{" "}
             <strong className="text-ink">laptops, cloud hosting, and software tools</strong> with valid
-            eTIMS invoices. <strong className="text-ink">Every tech freelancer</strong> needs eTIMS —
+            eTIMS invoices. <strong className="text-ink">Every tech freelancer</strong> needs eTIMS -
             even below the VAT threshold.
           </p>
         </div>
@@ -158,7 +158,7 @@ export default function VATForStartupsPage() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — Threshold */}
+          {/* Section 1 - Threshold */}
           <section id="startup-threshold" aria-labelledby="startup-threshold-h">
             <h2 id="startup-threshold-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Does Your Startup Need VAT Registration?
@@ -170,12 +170,12 @@ export default function VATForStartupsPage() {
                 <strong className="text-ink">KES 5 million</strong> in annual taxable turnover. The
                 Finance Act 2025 proposed raising this to KES 8 million, but this has not yet taken
                 effect. If your startup has been operating for less than 12 months, you estimate your
-                projected turnover — if it will exceed KES 5 million, you must register.
+                projected turnover - if it will exceed KES 5 million, you must register.
               </p>
               <p>
                 However, many tech startups choose to <strong className="text-ink">voluntarily register</strong> even
                 below the threshold. Why? Because voluntary registration lets you claim back input VAT
-                on business expenses — and tech startups tend to have significant expenses in
+                on business expenses - and tech startups tend to have significant expenses in
                 equipment, cloud services, and software that carry 16% VAT.
               </p>
               <div className="border border-hairline rounded-lg overflow-hidden">
@@ -201,7 +201,7 @@ export default function VATForStartupsPage() {
                     <tr>
                     <td className="p-3.5 text-ink-muted">Above KES 8M</td>
                     <td className="p-3.5 text-ink-muted">Mandatory within 30 days (if proposed raise effective)</td>
-                      <td className="p-3.5 font-medium text-ink">Register immediately — late registration risks penalties</td>
+                      <td className="p-3.5 font-medium text-ink">Register immediately - late registration risks penalties</td>
                     </tr>
                   </tbody>
                 </table>
@@ -216,16 +216,16 @@ export default function VATForStartupsPage() {
             </div>
           </section>
 
-          {/* Section 2 — Digital Services */}
+          {/* Section 2 - Digital Services */}
           <section id="digital-services" aria-labelledby="digital-services-h">
             <h2 id="digital-services-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
-              Digital Services, SaaS, and Software — How VAT Applies
+              Digital Services, SaaS, and Software - How VAT Applies
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
                 If your tech startup sells <strong className="text-ink">digital services</strong> to
-                Kenyan customers — SaaS subscriptions, mobile apps, software licences, APIs,
-                cloud-based platforms, or digital content — the supply is generally subject to{" "}
+                Kenyan customers - SaaS subscriptions, mobile apps, software licences, APIs,
+                cloud-based platforms, or digital content - the supply is generally subject to{" "}
                 <strong className="text-ink">16% VAT</strong> under the VAT Act (Cap. 476).
               </p>
               <p>
@@ -256,7 +256,7 @@ export default function VATForStartupsPage() {
             </div>
           </section>
 
-          {/* Section 3 — Input VAT */}
+          {/* Section 3 - Input VAT */}
           <section id="input-vat" aria-labelledby="input-vat-h">
             <h2 id="input-vat-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Input VAT on Tech Equipment and Cloud Costs
@@ -274,7 +274,7 @@ export default function VATForStartupsPage() {
                   { item: "Cloud hosting (AWS, Azure, GCP, Linode)", note: "16% back if you have an eTIMS invoice from the reseller" },
                   { item: "Software subscriptions (Figma, Slack, Notion, GitHub)", note: "Input VAT reclaimable on business subscriptions" },
                   { item: "Office internet and utilities", note: "VAT on business internet, electricity, water" },
-                  { item: "Coworking space or office rent", note: "Commercial rent attracts 16% VAT — reclaimable" },
+                  { item: "Coworking space or office rent", note: "Commercial rent attracts 16% VAT - reclaimable" },
                   { item: "Consultant and developer fees", note: "If they charge VAT on their invoices" },
                   { item: "Marketing and advertising costs", note: "Google Ads, Meta Ads, influencer fees with VAT" },
                 ].map(({ item, note }) => (
@@ -300,7 +300,7 @@ export default function VATForStartupsPage() {
             </div>
           </section>
 
-          {/* Section 4 — eTIMS */}
+          {/* Section 4 - eTIMS */}
           <section id="etims-developers" aria-labelledby="etims-developers-h">
             <h2 id="etims-developers-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               eTIMS for Developers, Freelancers, and Tech Consultants
@@ -308,7 +308,7 @@ export default function VATForStartupsPage() {
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
                 If you are a <strong className="text-ink">software developer, tech freelancer, or
-                IT consultant</strong> in Kenya, you must onboard eTIMS — even if you are not
+                IT consultant</strong> in Kenya, you must onboard eTIMS - even if you are not
                 VAT-registered. The Finance Act 2023 requires <strong className="text-ink">every person
                 engaged in business</strong> to issue eTIMS-compliant invoices.
               </p>
@@ -319,11 +319,11 @@ export default function VATForStartupsPage() {
               </p>
               <ul className="space-y-3">
                 {[
-                  "Your invoices must include a KRA-generated QR code and eTIMS server confirmation code — no more handwritten or Word-document invoices.",
+                  "Your invoices must include a KRA-generated QR code and eTIMS server confirmation code - no more handwritten or Word-document invoices.",
                   "Your clients (especially B2B corporate clients) will insist on eTIMS invoices because they need them to claim input VAT.",
                   "A developer building a custom POS, ERP, or e-commerce platform for a client may need to integrate KRA's eTIMS SDK (VSCU/OSCU) into the system.",
                   "KRA offers a sandbox environment for developers to test eTIMS API integration before going live.",
-                  "Failure to issue eTIMS-compliant invoices means your clients cannot claim input VAT — which makes you less competitive than developers who do provide compliant invoices.",
+                  "Failure to issue eTIMS-compliant invoices means your clients cannot claim input VAT - which makes you less competitive than developers who do provide compliant invoices.",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[0.88rem] text-ink-soft">
                     <CheckCircle size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -344,7 +344,7 @@ export default function VATForStartupsPage() {
             </div>
           </section>
 
-          {/* Section 5 — Exports */}
+          {/* Section 5 - Exports */}
           <section id="exports" aria-labelledby="exports-h">
             <h2 id="exports-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Selling Software Abroad: Zero-Rated VAT
@@ -357,9 +357,9 @@ export default function VATForStartupsPage() {
               </p>
               <ul className="space-y-2">
                 {[
-                  "You charge 0% VAT to customers outside Kenya — your international pricing stays competitive.",
+                  "You charge 0% VAT to customers outside Kenya - your international pricing stays competitive.",
                   "You can still claim input VAT refunds on your business expenses (laptops, cloud, software).",
-                  "Your KRA VAT return will show output VAT of KES 0 on exports but input VAT on your purchases — resulting in a refund from KRA.",
+                  "Your KRA VAT return will show output VAT of KES 0 on exports but input VAT on your purchases - resulting in a refund from KRA.",
                   "You must keep records proving the customer is outside Kenya (IP address, billing address, contract).",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[0.88rem] text-ink-soft">
@@ -387,7 +387,7 @@ export default function VATForStartupsPage() {
             </div>
           </section>
 
-          {/* Section 6 — Penalties */}
+          {/* Section 6 - Penalties */}
           <section id="penalties" aria-labelledby="penalties-h">
             <h2 id="penalties-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Avoiding Penalties: Common Startup Mistakes
@@ -421,7 +421,7 @@ export default function VATForStartupsPage() {
                   },
                   {
                     mistake: "Not applying for the tax amnesty to clean up past non-compliance",
-                    fix: "If you missed returns before getting organised, the KRA Voluntary Tax Disclosure Programme (VTDP) waives all penalties and interest — you only pay the principal tax.",
+                    fix: "If you missed returns before getting organised, the KRA Voluntary Tax Disclosure Programme (VTDP) waives all penalties and interest - you only pay the principal tax.",
                   },
                 ].map(({ mistake, fix }) => (
                   <div key={mistake} className="border border-hairline rounded-lg p-4">
@@ -436,7 +436,7 @@ export default function VATForStartupsPage() {
             </div>
           </section>
 
-          {/* Section 7 — Tax Incentives */}
+          {/* Section 7 - Tax Incentives */}
           <section id="tax-incentives" aria-labelledby="tax-incentives-h">
             <h2 id="tax-incentives-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Tax Incentives for Kenyan Tech Startups
@@ -465,7 +465,7 @@ export default function VATForStartupsPage() {
                   <p className="font-semibold text-ink text-[0.88rem] mb-1">ICT Sector Zero-Rating</p>
                   <p className="text-[0.83rem] text-ink-muted leading-relaxed">
                     Digital services exported outside Kenya are zero-rated for VAT. This is not a
-                    special incentive — it is standard VAT treatment for exports — but it is
+                    special incentive - it is standard VAT treatment for exports - but it is
                     particularly valuable for tech startups with international customers. Combined
                     with input VAT recovery on local expenses, it can result in a net VAT refund
                     from KRA, improving your runway.

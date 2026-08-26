@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "How to File VAT Nil Returns on KRA iTax Kenya 2026 — Plus the Tax Amnesty Programme Explained | vat nil return filing",
+  headline: "How to File VAT Nil Returns on KRA iTax Kenya 2026 - Plus the Tax Amnesty Programme Explained | vat nil return filing",
   description:
     "Complete guide to filing nil VAT returns on KRA iTax and understanding the KRA tax amnesty / voluntary disclosure programme. File in 5 minutes, avoid KES 10,000 penalties, and learn how penalty waivers work.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -34,7 +34,7 @@ const faqSchema = {
       name: "What is a nil return in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A nil return is a VAT return you file when your business had zero sales and zero purchases in a given month. You are declaring to KRA that no VAT is payable and no VAT is recoverable for that period. It is NOT the same as skipping the month — you must still log into iTax and submit it.",
+        text: "A nil return is a VAT return you file when your business had zero sales and zero purchases in a given month. You are declaring to KRA that no VAT is payable and no VAT is recoverable for that period. It is NOT the same as skipping the month - you must still log into iTax and submit it.",
       },
     },
     {
@@ -42,7 +42,7 @@ const faqSchema = {
       name: "What is the penalty for not filing a nil return on iTax?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Failing to file a nil VAT return by the 20th of the month attracts a KES 10,000 late filing penalty — the same penalty as a normal return. Even if you owe zero tax, KRA penalises the late submission itself. You can apply for a waiver if it was a genuine mistake.",
+        text: "Failing to file a nil VAT return by the 20th of the month attracts a KES 10,000 late filing penalty - the same penalty as a normal return. Even if you owe zero tax, KRA penalises the late submission itself. You can apply for a waiver if it was a genuine mistake.",
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       name: "What is the KRA tax amnesty programme in 2026?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The KRA tax amnesty programme (also called the Voluntary Tax Disclosure Programme or VTDP) allows taxpayers to voluntarily disclose unpaid taxes. In exchange, KRA waives all penalties and interest — you only pay the principal tax. The amnesty applies to VAT, income tax, PAYE, and other taxes. You apply through iTax under the voluntary disclosure menu.",
+        text: "The KRA tax amnesty programme (also called the Voluntary Tax Disclosure Programme or VTDP) allows taxpayers to voluntarily disclose unpaid taxes. In exchange, KRA waives all penalties and interest - you only pay the principal tax. The amnesty applies to VAT, income tax, PAYE, and other taxes. You apply through iTax under the voluntary disclosure menu.",
       },
     },
     {
@@ -74,7 +74,7 @@ const faqSchema = {
       name: "Do I need to file nil returns if I made no sales?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Every registered VAT taxpayer must file a return every month — including months with zero activity. KRA does not auto-file nil returns for you. Skipping a month accumulates KES 10,000 penalties per month even if you owe no tax.",
+        text: "Yes. Every registered VAT taxpayer must file a return every month - including months with zero activity. KRA does not auto-file nil returns for you. Skipping a month accumulates KES 10,000 penalties per month even if you owe no tax.",
       },
     },
     {
@@ -163,7 +163,7 @@ export default function NilReturnsTaxAmnestyPage() {
             </p>
             <p>
               What you <strong className="text-ink">cannot</strong> do is stay silent.
-              Skipping the register call — even with nothing to report — gets you a
+              Skipping the register call - even with nothing to report - gets you a
               detention (KES 10,000 penalty). The teacher does not care that you had
               nothing to say. You still have to show up.
             </p>
@@ -174,7 +174,7 @@ export default function NilReturnsTaxAmnestyPage() {
           </div>
         </section>
 
-        {/* Section 1 — What is a nil return */}
+        {/* Section 1 - What is a nil return */}
         <section className="mb-16" aria-labelledby="what-is-nil-h">
           <h2 id="what-is-nil-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             What is a Nil Return in Kenya?
@@ -203,13 +203,13 @@ export default function NilReturnsTaxAmnestyPage() {
                 <strong className="text-ink">Many business owners assume</strong> that if they
                 made no sales, they do not need to file. This is the most expensive mistake in
                 Kenya VAT compliance. KRA charges KES 10,000 per month for every late or missing
-                return — even nil returns.
+                return - even nil returns.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Section 2 — Why bother */}
+        {/* Section 2 - Why bother */}
         <section className="mb-16" aria-labelledby="why-bother-h">
           <h2 id="why-bother-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             Why File a Nil Return? (&ldquo;I Had Zero Sales This Month&rdquo;)
@@ -252,7 +252,7 @@ export default function NilReturnsTaxAmnestyPage() {
           </div>
         </section>
 
-        {/* Section 3 — Step by step nil return */}
+        {/* Section 3 - Step by step nil return */}
         <section className="mb-16" aria-labelledby="how-to-nil-h">
           <h2 id="how-to-nil-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             How to File a Nil VAT Return on iTax (5 Minutes)
@@ -266,7 +266,7 @@ export default function NilReturnsTaxAmnestyPage() {
               {
                 step: 1,
                 title: "Go to itax.kra.go.ke and log in",
-                detail: 'Enter your KRA PIN and password. If the login page shows "System Error" or hangs, use a different browser (Chrome works best) or try Incognito Mode. The portal is notoriously unreliable — see our <a href="/resources/itax-portal-not-working/" className="text-brand underline">iTax portal troubleshooting guide</a> if you get stuck.',
+                detail: 'Enter your KRA PIN and password. If the login page shows "System Error" or hangs, use a different browser (Chrome works best) or try Incognito Mode. The portal is notoriously unreliable - see our <a href="/resources/itax-portal-not-working/" className="text-brand underline">iTax portal troubleshooting guide</a> if you get stuck.',
               },
               {
                 step: 2,
@@ -286,7 +286,7 @@ export default function NilReturnsTaxAmnestyPage() {
               {
                 step: 5,
                 title: "Tick the declaration box and click Submit",
-                detail: 'Find the small checkbox that says "I confirm the information is true and correct." Tick it. Click "Submit." iTax displays a confirmation receipt with a submission ID — screenshot this or save the PDF. That is your proof of filing.',
+                detail: 'Find the small checkbox that says "I confirm the information is true and correct." Tick it. Click "Submit." iTax displays a confirmation receipt with a submission ID - screenshot this or save the PDF. That is your proof of filing.',
               },
             ].map(({ step, title, detail }) => (
               <div key={step} className="flex gap-4">
@@ -304,52 +304,52 @@ export default function NilReturnsTaxAmnestyPage() {
               <strong className="text-ink">Pro tip:</strong> File nil returns before the 10th of
               every month. iTax is fastest early in the month. After the 15th, the portal slows
               down as millions of Kenyans race to meet the 20th deadline. Weekend filing is
-              especially smooth — itax.kra.go.ke works on Saturdays and Sundays.
+              especially smooth - itax.kra.go.ke works on Saturdays and Sundays.
             </p>
           </div>
         </section>
 
-        {/* Section 4 — income tax nil returns (students, unemployed) */}
+        {/* Section 4 - income tax nil returns (students, unemployed) */}
         <section className="mb-16" aria-labelledby="income-nil-h">
           <h2 id="income-nil-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             Income Tax Nil Returns: Students, the Unemployed &amp; Dormant PINs
           </h2>
           <div className="text-[0.9rem] text-ink-muted leading-relaxed space-y-4">
             <p>
-              Most Kenyans searching "how to file nil returns" are <strong className="text-ink">individuals</strong> —
+              Most Kenyans searching "how to file nil returns" are <strong className="text-ink">individuals</strong> -
               students with a KRA PIN, the unemployed, and people whose PIN was issued for a transaction but who earned
               nothing. If that&apos;s you, you file an <strong className="text-ink">annual income tax nil return</strong>,
               not a monthly VAT return.
             </p>
             <ul className="list-disc pl-6 space-y-1.5">
               <li><strong className="text-ink">Deadline:</strong> 30 June each year, for the previous year of income (the 2025 return was due 30 June 2026)</li>
-              <li><strong className="text-ink">Penalty:</strong> KES 2,000 for individuals who file late — even for nil returns. Unfiled returns also block your <a href="/resources/tax-compliance-certificate-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Tax Compliance Certificate (TCC)</a></li>
+              <li><strong className="text-ink">Penalty:</strong> KES 2,000 for individuals who file late - even for nil returns. Unfiled returns also block your <a href="/resources/tax-compliance-certificate-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Tax Compliance Certificate (TCC)</a></li>
               <li><strong className="text-ink">Where:</strong> itax.kra.go.ke → Returns → File Nil Return → Income Tax – Resident Individual → submit, then download the acknowledgement receipt</li>
               <li><strong className="text-ink">Don&apos;t file nil if you actually earned income:</strong> employees, freelancers, landlords, and businesses with any income must file a normal return. Habitual nil filing while earning is a compliance red flag that can trigger a KRA query</li>
             </ul>
             <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
               <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
               <p className="text-[0.83rem] leading-relaxed">
-                <strong className="text-ink">New in 2026 — "No Obligation" PIN status:</strong> as of mid-2026 KRA
+                <strong className="text-ink">New in 2026 - "No Obligation" PIN status:</strong> as of mid-2026 KRA
                 introduced PINs with a <em>No Obligation</em> status for specific categories of taxpayers (notably students and the unemployed),
                 ending the mandatory annual nil return for PINs that qualify. If your PIN shows a No Obligation obligation
                 in iTax, you may no longer need to file each year. Check <strong className="text-ink">iTax → Taxpayer Dashboard →
-                Obligations</strong> to see your current status — and confirm with KRA before assuming you&apos;re exempt.
+                Obligations</strong> to see your current status - and confirm with KRA before assuming you&apos;re exempt.
                 Everyone else must still file their nil return annually.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Section 4b — tax amnesty */}
+        {/* Section 4b - tax amnesty */}
         <section className="mb-16" aria-labelledby="amnesty-h">
           <h2 id="amnesty-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             KRA Tax Amnesty Programme 2026: Clean Up Past Non-Compliance Without Paying Penalties
           </h2>
           <div className="text-[0.9rem] text-ink-muted leading-relaxed space-y-4">
             <p>
-              The <strong className="text-ink">KRA Tax Amnesty</strong> — officially the
-              Voluntary Tax Disclosure Programme (VTDP) — allows you to voluntarily tell KRA
+              The <strong className="text-ink">KRA Tax Amnesty</strong> - officially the
+              Voluntary Tax Disclosure Programme (VTDP) - allows you to voluntarily tell KRA
               about taxes you did not pay on time. In return, KRA waives{" "}
               <strong className="text-ink">100% of penalties and interest</strong>. You only
               pay the principal tax amount.
@@ -364,19 +364,19 @@ export default function NilReturnsTaxAmnestyPage() {
               <a href="/resources/kra-fine-70000/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                 Got a KRA fine around KES 70,000? You may only owe the principal
               </a>{" "}
-              — it walks through how to read your iTax figure and confirm whether the amnesty wipes most of it.
+              - it walks through how to read your iTax figure and confirm whether the amnesty wipes most of it.
             </p>
 
             <h3 className="font-display text-[1.1rem] font-semibold text-ink mt-6 mb-3">
               What the Amnesty Covers
             </h3>
             <ul className="list-disc pl-6 space-y-1.5">
-              <li><strong className="text-ink">VAT returns</strong> — missed months, late filings, under-declared sales</li>
-              <li><strong className="text-ink">Income tax</strong> — unpaid instalment tax, unreported income</li>
-              <li><strong className="text-ink">PAYE</strong> — missed employee tax remittances</li>
-              <li><strong className="text-ink">Withholding tax</strong> — failure to deduct or remit</li>
-              <li><strong className="text-ink">Turnover tax</strong> — missed filings or underpayment</li>
-              <li><strong className="text-ink">Penalties and interest</strong> — on any of the above, if voluntarily disclosed</li>
+              <li><strong className="text-ink">VAT returns</strong> - missed months, late filings, under-declared sales</li>
+              <li><strong className="text-ink">Income tax</strong> - unpaid instalment tax, unreported income</li>
+              <li><strong className="text-ink">PAYE</strong> - missed employee tax remittances</li>
+              <li><strong className="text-ink">Withholding tax</strong> - failure to deduct or remit</li>
+              <li><strong className="text-ink">Turnover tax</strong> - missed filings or underpayment</li>
+              <li><strong className="text-ink">Penalties and interest</strong> - on any of the above, if voluntarily disclosed</li>
             </ul>
 
             <h3 className="font-display text-[1.1rem] font-semibold text-ink mt-6 mb-3">
@@ -393,7 +393,7 @@ export default function NilReturnsTaxAmnestyPage() {
                 <strong className="text-ink">Important:</strong> The amnesty only applies if
                 you disclose <em>before</em> KRA finds you. Once KRA sends an audit notice or
                 compliance letter, you lose eligibility. If you have unfiled returns or unpaid
-                tax, apply now — not after KRA knocks.
+                tax, apply now - not after KRA knocks.
               </p>
             </div>
 
@@ -420,7 +420,7 @@ export default function NilReturnsTaxAmnestyPage() {
                 {
                   step: "4",
                   title: "Enter the correct tax figures",
-                  detail: "State the actual tax that should have been paid. This must be accurate — KRA will verify against their records and eTIMS data.",
+                  detail: "State the actual tax that should have been paid. This must be accurate - KRA will verify against their records and eTIMS data.",
                 },
                 {
                   step: "5",
@@ -443,7 +443,7 @@ export default function NilReturnsTaxAmnestyPage() {
               <p className="text-[0.83rem] leading-relaxed">
                 <strong className="text-ink">Example:</strong> James missed 4 months of VAT
                 returns. He owes KES 80,000 in principal tax but KRA has added KES 40,000 in
-                late-filing penalties and KES 12,000 in interest — total KES 132,000. Under the
+                late-filing penalties and KES 12,000 in interest - total KES 132,000. Under the
                 tax amnesty, James applies for voluntary disclosure, pays only KES 80,000,
                 and KRA waives the KES 52,000 in penalties and interest.
               </p>
@@ -455,7 +455,7 @@ export default function NilReturnsTaxAmnestyPage() {
           </div>
         </section>
 
-        {/* Section 5 — penalty waiver vs amnesty */}
+        {/* Section 5 - penalty waiver vs amnesty */}
         <section className="mb-16" aria-labelledby="waiver-vs-amnesty-h">
           <h2 id="waiver-vs-amnesty-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             Penalty Waiver vs Tax Amnesty: What is the Difference?
@@ -485,8 +485,8 @@ export default function NilReturnsTaxAmnestyPage() {
                 </tr>
                 <tr>
                   <td className="p-3 text-ink font-semibold">Filed return?</td>
-                  <td className="p-3 text-ink-muted">Yes — you already filed but missed the deadline</td>
-                  <td className="p-3 text-ink-muted">No — you are filing late or disclosing previously undeclared amounts</td>
+                  <td className="p-3 text-ink-muted">Yes - you already filed but missed the deadline</td>
+                  <td className="p-3 text-ink-muted">No - you are filing late or disclosing previously undeclared amounts</td>
                 </tr>
                 <tr>
                   <td className="p-3 text-ink font-semibold">Legal basis</td>
@@ -503,7 +503,7 @@ export default function NilReturnsTaxAmnestyPage() {
           </div>
         </section>
 
-        {/* Section 6 — common mistakes */}
+        {/* Section 6 - common mistakes */}
         <section className="mb-16" aria-labelledby="mistakes-h">
           <h2 id="mistakes-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             Common Nil Return Mistakes That Cost Kenyan Business Owners KES 10,000+
@@ -512,7 +512,7 @@ export default function NilReturnsTaxAmnestyPage() {
             {[
               {
                 mistake: '"I had no sales so I did not file."',
-                fix: "This is the #1 mistake. KRA requires a return every month regardless of activity. File a nil return — it takes 5 minutes.",
+                fix: "This is the #1 mistake. KRA requires a return every month regardless of activity. File a nil return - it takes 5 minutes.",
               },
               {
                 mistake: '"I will file two months together next month."',
@@ -524,7 +524,7 @@ export default function NilReturnsTaxAmnestyPage() {
               },
               {
                 mistake: '"I filed a nil return but KRA still charged a penalty."',
-                fix: "Check the date you filed. If it was after the 20th, the penalty is automatic. Also confirm you clicked 'Submit' — saving as draft does not count as filing.",
+                fix: "Check the date you filed. If it was after the 20th, the penalty is automatic. Also confirm you clicked 'Submit' - saving as draft does not count as filing.",
               },
               {
                 mistake: '"My accountant said nil returns are not necessary."',
@@ -543,14 +543,14 @@ export default function NilReturnsTaxAmnestyPage() {
           </div>
         </section>
 
-        {/* Section 7 — when to get help */}
+        {/* Section 7 - when to get help */}
         <section className="mb-16" aria-labelledby="help-h">
           <h2 id="help-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
             When to Get Help
           </h2>
           <div className="text-[0.9rem] text-ink-muted leading-relaxed space-y-4">
             <p>
-              Nil returns are simple — 5 minutes per month. But life gets busy. Deadlines
+              Nil returns are simple - 5 minutes per month. But life gets busy. Deadlines
               slip. The iTax portal crashes on the 19th. Suddenly you have 3 unfiled months,
               KES 30,000 in penalties, and a KRA compliance letter in your iTax inbox.
             </p>
@@ -571,7 +571,7 @@ export default function NilReturnsTaxAmnestyPage() {
             Let us handle your nil returns every month.
           </p>
           <p className="text-[0.85rem] text-ink-muted mb-6 max-w-[48ch] mx-auto">
-            KES 3,500/month. We file on the 17th — before the iTax portal slows down.
+            KES 3,500/month. We file on the 17th - before the iTax portal slows down.
             Nil returns, normal returns, penalty waivers, and tax amnesty applications.
             M-PESA accepted. Receipts provided.
           </p>
@@ -582,7 +582,7 @@ export default function NilReturnsTaxAmnestyPage() {
               rel="noopener noreferrer"
               className="btn-fill inline-flex items-center justify-center gap-2 bg-brand text-canvas font-semibold px-6 py-3 rounded-md text-sm transition-colors hover:bg-brand-hover"
             >
-              Start Monthly Filing — KES 3,500
+              Start Monthly Filing - KES 3,500
               <ArrowRight size={16} weight="bold" aria-hidden="true" />
             </a>
             <a
@@ -591,7 +591,7 @@ export default function NilReturnsTaxAmnestyPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-hairline text-ink-muted hover:text-ink hover:border-ink/30 font-medium px-6 py-3 rounded-md text-sm transition-colors"
             >
-              Penalty Waiver or Amnesty Help — KES 4,000
+              Penalty Waiver or Amnesty Help - KES 4,000
               <ArrowRight size={16} weight="bold" aria-hidden="true" />
             </a>
           </div>
@@ -610,7 +610,7 @@ export default function NilReturnsTaxAmnestyPage() {
               },
               {
                 q: "Do I need a KRA PIN to file a nil return?",
-                a: "Yes. You need an active KRA PIN with VAT registration. If you are not VAT-registered, you do not need to file VAT returns at all — but you may need to file income tax or turnover tax returns depending on your business.",
+                a: "Yes. You need an active KRA PIN with VAT registration. If you are not VAT-registered, you do not need to file VAT returns at all - but you may need to file income tax or turnover tax returns depending on your business.",
               },
               {
                 q: "My business is seasonal. Can I file nil returns for the slow months?",

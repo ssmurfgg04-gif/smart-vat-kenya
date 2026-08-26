@@ -7,7 +7,7 @@ import { GavaClient } from "@smartvat/gavaconnect"
  * sole proprietor, P = company), nine digits, then a terminal letter (A–Z).
  * Format check is instant and offline; a live `pinByPin` resolves against KRA
  * to confirm the PIN is active and returns the registered name. eTIMS B2B
- * invoices require a valid buyer PIN — this is the gate before issuing one.
+ * invoices require a valid buyer PIN - this is the gate before issuing one.
  */
 
 export const KRA_PIN_REGEX = /^[A|P][0-9]{9}[a-zA-Z]$/

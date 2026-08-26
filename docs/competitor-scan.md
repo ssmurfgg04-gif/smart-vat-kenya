@@ -1,4 +1,4 @@
-﻿# KRA / Kenya Tax Filing — Competitor Scan (2026)
+﻿# KRA / Kenya Tax Filing - Competitor Scan (2026)
 
 _Date: 2026-08-08_
 
@@ -18,8 +18,8 @@ SmartVAT Kenya operates in three adjacent competitive layers:
 
 | Competitor | Pricing transparency | Channels | Strengths | Weakness vs SmartVAT |
 |------------|---------------------|----------|-----------|----------------------|
-| **Dennykins & Associates** | "Contact for quote" — no published fees | Website, phone, email | ICPAK certified, broad tax services (audit, ADR, disputes), established brand | Opaque pricing, no flat fee, email/phone only (no WhatsApp-first), no automation engine |
-| **Gichuri & Partners** | "Affordable rates — contact for quote" | Website, contact form | Tax disputes, audits, appeals, payroll, accounting | No published pricing, traditional firm model, no self-serve tools |
+| **Dennykins & Associates** | "Contact for quote" - no published fees | Website, phone, email | ICPAK certified, broad tax services (audit, ADR, disputes), established brand | Opaque pricing, no flat fee, email/phone only (no WhatsApp-first), no automation engine |
+| **Gichuri & Partners** | "Affordable rates - contact for quote" | Website, contact form | Tax disputes, audits, appeals, payroll, accounting | No published pricing, traditional firm model, no self-serve tools |
 | **TaxAgent.co.ke** | Not listed on homepage | Website, WhatsApp link | Simple messaging, KRA-registered | Minimal content, no pricing, no engine |
 | **RSM Kenya / PwC / KPMG** | Enterprise quotes only | Big 4 channels | Multinational capability, transfer pricing, disputes | Wrong segment (enterprise), 10x pricing, no SME focus |
 
@@ -39,7 +39,7 @@ SmartVAT Kenya operates in three adjacent competitive layers:
 | **EliteTeQ** | Not specified | Not specified | Not listed | Restaurants/hospitality | Niche vertical, no public pricing |
 | **Wave** | Manual via eCitizen | Manual | Free / add-ons | Freelancers, micro | No eTIMS automation, manual compliance |
 
-**Our wedge**: We're not a POS — we're an **engine + service + licensing platform**. Agents license our stack; we don't compete with Zoho/Veira on POS features. We provide the **validation engine**, **Tax Alerts content**, **17th Guarantee process**, and **B2B2B licensing** that POS vendors don't have.
+**Our wedge**: We're not a POS - we're an **engine + service + licensing platform**. Agents license our stack; we don't compete with Zoho/Veira on POS features. We provide the **validation engine**, **Tax Alerts content**, **17th Guarantee process**, and **B2B2B licensing** that POS vendors don't have.
 
 ---
 
@@ -49,16 +49,16 @@ SmartVAT Kenya operates in three adjacent competitive layers:
 |--------|--------------|----------|---------------|
 | **AfroTools** | VAT guides, calculators, eTIMS expense validation | Deep technical guides, current (Jun 2026), good SEO | Our content links to **engine-backed validation** (preflight), **Tax Alerts** (not just Special Table), **golden dataset** from real filings |
 | **Veira blog** | eTIMS guides, VAT guides, POS comparisons | KRA-certified authority, product-led content | We're **agent-agnostic** (not selling POS), **content feeds engine** (preflight, classify), **backlink matrix** |
-| **LiveLife.ke** | Accounting software comparisons, VAT guide 2026 | Comprehensive comparisons, buyer's guide | Our **engine is the product** — content is distribution for the engine |
+| **LiveLife.ke** | Accounting software comparisons, VAT guide 2026 | Comprehensive comparisons, buyer's guide | Our **engine is the product** - content is distribution for the engine |
 | **Dennykins blog** | Auto-populated VAT returns, tax agent how-to | Agent credibility, practical steps | We have **engine + service + licensing**; they're service-only |
 | **KRA official site** | Official notices, auto-populated return FAQ, eTIMS notices | Authority, primary source | We **translate** KRA notices into **actionable checklists + engine preflight** |
 | **AfroTools / VATabout / iCMS integration news** | Technical VAT automation coverage | Early on iCMS + VAT pre-fill | We **wire prefill into portal flow** via `preflight()` + `classify()` |
 
 **Our content moat**: 
-- **Tax Alerts** (replaced Special Table) — only player with engine-backed classification
-- **Validation engine preflight** — interactive checklist tied to actual engine
-- **Golden dataset** — 25-query recall guard, real filing outcomes
-- **Backlink matrix** — Special Table ↔ Filing Checklist ↔ Audit Process
+- **Tax Alerts** (replaced Special Table) - only player with engine-backed classification
+- **Validation engine preflight** - interactive checklist tied to actual engine
+- **Golden dataset** - 25-query recall guard, real filing outcomes
+- **Backlink matrix** - Special Table ↔ Filing Checklist ↔ Audit Process
 
 ---
 
@@ -67,7 +67,7 @@ SmartVAT Kenya operates in three adjacent competitive layers:
 ### Threats
 | Threat | Likelihood | Impact | Mitigation |
 |--------|------------|--------|------------|
-| Zoho/QuickBooks add native filing service | Medium | High | B2B2B licensing — make them license our engine instead of building |
+| Zoho/QuickBooks add native filing service | Medium | High | B2B2B licensing - make them license our engine instead of building |
 | KRA launches free filing portal | Low | High | 17th Guarantee = process guarantee (human QC + dispute), not just filing |
 | Veira adds agent network | Medium | Medium | License our engine to them; ODPC + Kenya hosting is our moat |
 | Big 4 move downmarket | Low | Medium | Flat fee + WhatsApp UX + engine automation = structural cost advantage |
@@ -119,13 +119,13 @@ SmartVAT Kenya operates in three adjacent competitive layers:
 
 ## Sources Consulted
 
-- KRA official site (kra.go.ke) — VAT page, auto-populated return FAQ, eTIMS notices
-- Veira (veirahq.com) — eTIMS certification, pricing, blog
-- Zoho Books Kenya — OSCU certification, KES pricing, M-Pesa native
+- KRA official site (kra.go.ke) - VAT page, auto-populated return FAQ, eTIMS notices
+- Veira (veirahq.com) - eTIMS certification, pricing, blog
+- Zoho Books Kenya - OSCU certification, KES pricing, M-Pesa native
 - QuickBooks/Xero/Sage Kenya comparisons (LiveLife.ke, Adamjee Auditors)
-- AfroTools / LiveLife.ke / VATabout — 2026 VAT guides, iCMS integration
-- Dennykins / Gichuri / TaxAgent.co.ke — agent service pages
-- KPMG / RSM / PwC Kenya — tax service pages
-- KRA public notices — eTIMS enforcement, iCMS-VAT integration (May 2026)
+- AfroTools / LiveLife.ke / VATabout - 2026 VAT guides, iCMS integration
+- Dennykins / Gichuri / TaxAgent.co.ke - agent service pages
+- KPMG / RSM / PwC Kenya - tax service pages
+- KRA public notices - eTIMS enforcement, iCMS-VAT integration (May 2026)
 - KPMG Tax Alert "eTIMS and the Shift to Data-Driven Income and Expense Validation" (Jan 2026)
 - TechTrendsKE "KRA Tax Alerts Replace VAT Special Table" (Apr 2026)

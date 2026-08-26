@@ -9,7 +9,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "M-Pesa Error Codes — MR101, MR105 & Fixes", item: "https://smartvatkenya.co.ke/resources/mpesa-error-codes/" },
+    { "@type": "ListItem", position: 3, name: "M-Pesa Error Codes - MR101, MR105 & Fixes", item: "https://smartvatkenya.co.ke/resources/mpesa-error-codes/" },
   ],
 }
 
@@ -41,15 +41,15 @@ const faqSchema = {
       name: "What does M-Pesa error MR101 mean?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "MR101 means 'service is currently unavailable' — a Safaricom-side outage or a scheduled maintenance window. It affects the entire M-Pesa platform, not just your account. Wait 15 to 30 minutes and retry. Check Safaricom's official X account (@SafaricomPLC) for a live status update, or use our Safaricom not working guide for workarounds.",
+        text: "MR101 means 'service is currently unavailable' - a Safaricom-side outage or a scheduled maintenance window. It affects the entire M-Pesa platform, not just your account. Wait 15 to 30 minutes and retry. Check Safaricom's official X account (@SafaricomPLC) for a live status update, or use our Safaricom not working guide for workarounds.",
       },
     },
     {
       "@type": "Question",
-      name: "My M-Pesa says 'transaction failed' — was my money taken?",
+      name: "My M-Pesa says 'transaction failed' - was my money taken?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Not necessarily. The generic 'transaction failed' message is a catch-all for failures before the payment reaches the Safaricom switch — commonly a weak network, a wrong recipient number, or a malformed paybill input. First check your M-Pesa balance via *334#; if the money was deducted but the transaction failed, it will either complete or auto-reverse. Re-check your recipient details and signal, then retry. If it still fails, try *334# instead of the app or *144#.",
+        text: "Not necessarily. The generic 'transaction failed' message is a catch-all for failures before the payment reaches the Safaricom switch - commonly a weak network, a wrong recipient number, or a malformed paybill input. First check your M-Pesa balance via *334#; if the money was deducted but the transaction failed, it will either complete or auto-reverse. Re-check your recipient details and signal, then retry. If it still fails, try *334# instead of the app or *144#.",
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: "Why can't I pay using Lipa na M-Pesa (error MR105)?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "MR105 means the recipient paybill or till number is suspended, misconfigured, or has hit its operator-side daily cap. Verify the paybill number against an official source before retrying. If the number is correct, the issue is with the merchant — contact them directly. Do not retry repeatedly against a suspended till; you will not get through and may confuse reconciliation.",
+        text: "MR105 means the recipient paybill or till number is suspended, misconfigured, or has hit its operator-side daily cap. Verify the paybill number against an official source before retrying. If the number is correct, the issue is with the merchant - contact them directly. Do not retry repeatedly against a suspended till; you will not get through and may confuse reconciliation.",
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: "Can I still pay KRA VAT if M-Pesa is giving errors?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "If M-Pesa is down or failing on your KRA Paybill 572572 payment, try the alternate USSD code *334# or the M-Pesa app if one is down. If the whole platform is down, do not keep retrying — screenshot the error with the date and time, and pay as soon as the service returns. If this pushes you past the 20th filing deadline, file your return and pay immediately after, then apply for a late-payment penalty waiver citing the network outage with your evidence.",
+        text: "If M-Pesa is down or failing on your KRA Paybill 572572 payment, try the alternate USSD code *334# or the M-Pesa app if one is down. If the whole platform is down, do not keep retrying - screenshot the error with the date and time, and pay as soon as the service returns. If this pushes you past the 20th filing deadline, file your return and pay immediately after, then apply for a late-payment penalty waiver citing the network outage with your evidence.",
       },
     },
     {
@@ -73,7 +73,7 @@ const faqSchema = {
       name: "What does MR110 mean on M-Pesa?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "MR110 means 'your request cannot be processed at this time' — typically a KYC or account-status flag that needs a manual review. Visit a Safaricom shop with your national ID so staff can review your account, clear any flags, or re-verify your identity. This usually resolves the issue on the spot.",
+        text: "MR110 means 'your request cannot be processed at this time' - typically a KYC or account-status flag that needs a manual review. Visit a Safaricom shop with your national ID so staff can review your account, clear any flags, or re-verify your identity. This usually resolves the issue on the spot.",
       },
     },
     {
@@ -89,10 +89,10 @@ const faqSchema = {
 
 const toc = [
   { id: "error-table", label: "M-Pesa Error Code Quick Reference" },
-  { id: "mr101", label: "MR101 — Service Unavailable" },
-  { id: "mr102", label: "MR102 — Unable to Complete" },
-  { id: "mr105", label: "MR105 — Lipa na M-Pesa Blocked" },
-  { id: "mr110", label: "MR110 — Request Cannot Be Processed" },
+  { id: "mr101", label: "MR101 - Service Unavailable" },
+  { id: "mr102", label: "MR102 - Unable to Complete" },
+  { id: "mr105", label: "MR105 - Lipa na M-Pesa Blocked" },
+  { id: "mr110", label: "MR110 - Request Cannot Be Processed" },
   { id: "generic-fail", label: "'Transaction Failed' (No Code)" },
   { id: "pin-locked", label: "PIN Locked / Wrong PIN" },
   { id: "kra-vat", label: "M-Pesa Errors & Paying KRA VAT" },
@@ -101,10 +101,10 @@ const toc = [
 
 const errorTable = [
   { code: "MR101", meaning: "Service is currently unavailable", cause: "Safaricom-side outage or scheduled maintenance. Affects the whole platform, not your account.", fix: "Wait 15–30 minutes and retry. Check @SafaricomPLC for live status." },
-  { code: "MR102", meaning: "Unable to complete transaction", cause: "Temporary network or switch issue with no specific error returned.", fix: "Retry after 5 minutes. Check your balance first — it may have completed despite the error." },
+  { code: "MR102", meaning: "Unable to complete transaction", cause: "Temporary network or switch issue with no specific error returned.", fix: "Retry after 5 minutes. Check your balance first - it may have completed despite the error." },
   { code: "MR105", meaning: "Sorry, you cannot pay using Lipa na M-Pesa", cause: "Recipient paybill/till suspended, misconfigured, or over its daily cap.", fix: "Verify the paybill against an official source, then contact the merchant." },
   { code: "MR110", meaning: "Your request cannot be processed at this time", cause: "KYC or account-status flag needing manual review.", fix: "Visit a Safaricom shop with your national ID for a manual review." },
-  { code: "No code", meaning: "Sorry, transaction failed", cause: "Weak network, wrong recipient, or malformed paybill input.", fix: "Check signal and details, retry — or switch to *334# instead of the app." },
+  { code: "No code", meaning: "Sorry, transaction failed", cause: "Weak network, wrong recipient, or malformed paybill input.", fix: "Check signal and details, retry - or switch to *334# instead of the app." },
   { code: "No code", meaning: "PIN locked. Please reset", cause: "Too many wrong PIN attempts.", fix: "*334# > My Account > Forgot PIN, or visit a Safaricom shop with ID." },
 ]
 
@@ -134,7 +134,7 @@ export default function MpesaErrorCodesPage() {
           </h1>
           <div className="flex flex-wrap items-center gap-3 mt-4">
             <span className="font-mono text-[0.62rem] uppercase tracking-widest bg-brand/20 text-brand px-2.5 py-1 rounded-sm">Last updated: August 2, 2026</span>
-            <span className="text-[0.78rem] text-canvas/50">Smart VAT Kenya — KRA-registered VAT agents</span>
+            <span className="text-[0.78rem] text-canvas/50">Smart VAT Kenya - KRA-registered VAT agents</span>
           </div>
         </div>
       </div>
@@ -145,11 +145,11 @@ export default function MpesaErrorCodesPage() {
         <div className="border-l-[3px] border-brand pl-5 mb-10">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            <strong className="text-ink">MR101</strong> = M-Pesa is down or in maintenance — wait 15–30 minutes and retry.{" "}
-            <strong className="text-ink">MR102</strong> = transient error — check your balance before retrying (it may have gone through).{" "}
-            <strong className="text-ink">MR105</strong> = the till/paybill is suspended or capped — verify the number, don't keep retrying.{" "}
-            <strong className="text-ink">MR110</strong> = a KYC flag — visit a Safaricom shop with your national ID.{" "}
-            <strong className="text-ink">"Transaction failed"</strong> (no code) = usually network or wrong details — re-check and retry via <strong className="text-ink">*334#</strong>.
+            <strong className="text-ink">MR101</strong> = M-Pesa is down or in maintenance - wait 15–30 minutes and retry.{" "}
+            <strong className="text-ink">MR102</strong> = transient error - check your balance before retrying (it may have gone through).{" "}
+            <strong className="text-ink">MR105</strong> = the till/paybill is suspended or capped - verify the number, don't keep retrying.{" "}
+            <strong className="text-ink">MR110</strong> = a KYC flag - visit a Safaricom shop with your national ID.{" "}
+            <strong className="text-ink">"Transaction failed"</strong> (no code) = usually network or wrong details - re-check and retry via <strong className="text-ink">*334#</strong>.
           </p>
         </div>
 
@@ -172,7 +172,7 @@ export default function MpesaErrorCodesPage() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — Error table */}
+          {/* Section 1 - Error table */}
           <section id="error-table" aria-labelledby="error-table-h">
             <h2 id="error-table-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               M-Pesa Error Code Quick Reference
@@ -205,16 +205,16 @@ export default function MpesaErrorCodesPage() {
             </div>
           </section>
 
-          {/* Section 2 — MR101 */}
+          {/* Section 2 - MR101 */}
           <section id="mr101" aria-labelledby="mr101-h">
             <h2 id="mr101-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
-              MR101 — "Service Is Currently Unavailable"
+              MR101 - "Service Is Currently Unavailable"
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <div className="space-y-3">
                 {[
-                  { title: "What it means", desc: "A Safaricom-side outage or a scheduled maintenance window. It affects the entire M-Pesa platform — not just your account or SIM. Everyone is getting it." },
-                  { title: "What to do", desc: "Wait 15 to 30 minutes and retry. Check @SafaricomPLC on X (Twitter) for an official acknowledgement — major outages get one within 30–60 minutes. Do not keep retrying every minute; you are just adding load." },
+                  { title: "What it means", desc: "A Safaricom-side outage or a scheduled maintenance window. It affects the entire M-Pesa platform - not just your account or SIM. Everyone is getting it." },
+                  { title: "What to do", desc: "Wait 15 to 30 minutes and retry. Check @SafaricomPLC on X (Twitter) for an official acknowledgement - major outages get one within 30–60 minutes. Do not keep retrying every minute; you are just adding load." },
                   { title: "If it's urgent", desc: "For money-at-stake payments, consider an Airtel Money or bank-app transfer as a fallback. For KRA VAT payments, see the KRA section below." },
                 ].map(({ title, desc }) => (
                   <div key={title} className="flex items-start gap-3">
@@ -229,16 +229,16 @@ export default function MpesaErrorCodesPage() {
             </div>
           </section>
 
-          {/* Section 3 — MR102 */}
+          {/* Section 3 - MR102 */}
           <section id="mr102" aria-labelledby="mr102-h">
             <h2 id="mr102-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
-              MR102 — "Unable to Complete Transaction"
+              MR102 - "Unable to Complete Transaction"
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <div className="space-y-3">
                 {[
-                  { title: "What it means", desc: "A generic Safaricom-side failure — usually a temporary network or switch issue that did not return a specific error code." },
-                  { title: "What to do", desc: "Retry after 5 minutes. Before retrying, check your M-Pesa balance via *334# — the transaction may have actually completed despite the error. If money left your account but you got no confirmation, it will either complete or auto-reverse." },
+                  { title: "What it means", desc: "A generic Safaricom-side failure - usually a temporary network or switch issue that did not return a specific error code." },
+                  { title: "What to do", desc: "Retry after 5 minutes. Before retrying, check your M-Pesa balance via *334# - the transaction may have actually completed despite the error. If money left your account but you got no confirmation, it will either complete or auto-reverse." },
                 ].map(({ title, desc }) => (
                   <div key={title} className="flex items-start gap-3">
                     <CheckCircle size={15} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -252,16 +252,16 @@ export default function MpesaErrorCodesPage() {
             </div>
           </section>
 
-          {/* Section 4 — MR105 */}
+          {/* Section 4 - MR105 */}
           <section id="mr105" aria-labelledby="mr105-h">
             <h2 id="mr105-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
-              MR105 — "Sorry, You Cannot Pay Using Lipa na M-Pesa"
+              MR105 - "Sorry, You Cannot Pay Using Lipa na M-Pesa"
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <div className="space-y-3">
                 {[
                   { title: "What it means", desc: "The recipient paybill or till is suspended, has an invalid configuration, or has hit its operator-side cap for the day. This is usually a merchant-side problem, not yours." },
-                  { title: "What to do", desc: "Verify the paybill or till number against an official source (a receipt, the merchant's website, or their social media). If it is correct, contact the merchant directly. Do not retry repeatedly against a suspended till — it will not go through and it complicates reconciliation." },
+                  { title: "What to do", desc: "Verify the paybill or till number against an official source (a receipt, the merchant's website, or their social media). If it is correct, contact the merchant directly. Do not retry repeatedly against a suspended till - it will not go through and it complicates reconciliation." },
                 ].map(({ title, desc }) => (
                   <div key={title} className="flex items-start gap-3">
                     <Warning size={15} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -275,10 +275,10 @@ export default function MpesaErrorCodesPage() {
             </div>
           </section>
 
-          {/* Section 5 — MR110 */}
+          {/* Section 5 - MR110 */}
           <section id="mr110" aria-labelledby="mr110-h">
             <h2 id="mr110-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
-              MR110 — "Your Request Cannot Be Processed at This Time"
+              MR110 - "Your Request Cannot Be Processed at This Time"
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <div className="space-y-3">
@@ -298,7 +298,7 @@ export default function MpesaErrorCodesPage() {
             </div>
           </section>
 
-          {/* Section 6 — Generic fail */}
+          {/* Section 6 - Generic fail */}
           <section id="generic-fail" aria-labelledby="generic-fail-h">
             <h2 id="generic-fail-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               "Sorry, Transaction Failed" (No Error Code)
@@ -307,8 +307,8 @@ export default function MpesaErrorCodesPage() {
               <div className="space-y-3">
                 {[
                   { title: "What it means", desc: "A catch-all for transactions that fail before reaching the Safaricom switch. Common causes: weak network signal, a wrong recipient number, a malformed paybill input, or temporary congestion." },
-                  { title: "What to do", desc: "Check your phone signal, re-enter the recipient details carefully, and retry. If it still fails, switch from the M-Pesa app (or *144#) to the older *334# menu — it sometimes succeeds when newer flows fail." },
-                  { title: "Money deducted but no confirmation?", desc: "Check your balance via *334# > My Account. If the money is gone, the transaction is in suspense — most complete or auto-reverse within 30–60 minutes. If it is still unresolved after 24 hours, call 100 (free from a Safaricom line) or 0722 002 100 with the approximate time and amount." },
+                  { title: "What to do", desc: "Check your phone signal, re-enter the recipient details carefully, and retry. If it still fails, switch from the M-Pesa app (or *144#) to the older *334# menu - it sometimes succeeds when newer flows fail." },
+                  { title: "Money deducted but no confirmation?", desc: "Check your balance via *334# > My Account. If the money is gone, the transaction is in suspense - most complete or auto-reverse within 30–60 minutes. If it is still unresolved after 24 hours, call 100 (free from a Safaricom line) or 0722 002 100 with the approximate time and amount." },
                 ].map(({ title, desc }) => (
                   <div key={title} className="flex items-start gap-3">
                     <CheckCircle size={15} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -322,14 +322,14 @@ export default function MpesaErrorCodesPage() {
               <p>
                 Related:{" "}
                 <a href="/resources/safaricom-not-working/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
-                  Safaricom not working — status &amp; fixes
+                  Safaricom not working - status &amp; fixes
                 </a>{" "}
                 for network-level outages.
               </p>
             </div>
           </section>
 
-          {/* Section 7 — PIN locked */}
+          {/* Section 7 - PIN locked */}
           <section id="pin-locked" aria-labelledby="pin-locked-h">
             <h2 id="pin-locked-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               PIN Locked / "Wrong PIN"
@@ -338,7 +338,7 @@ export default function MpesaErrorCodesPage() {
               <div className="space-y-3">
                 {[
                   { title: "How to reset", desc: "Dial *334# > My Account > Forgot PIN, then follow the prompts. You will be asked for your national ID number, date of birth, and recent M-Pesa transaction details. The reset completes within minutes and the new PIN arrives via SMS." },
-                  { title: "In person", desc: "Visit any Safaricom shop with your original national ID. Staff can reset your PIN and re-verify your KYC data — useful if you've forgotten the security answers." },
+                  { title: "In person", desc: "Visit any Safaricom shop with your original national ID. Staff can reset your PIN and re-verify your KYC data - useful if you've forgotten the security answers." },
                 ].map(({ title, desc }) => (
                   <div key={title} className="flex items-start gap-3">
                     <Info size={15} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
@@ -352,7 +352,7 @@ export default function MpesaErrorCodesPage() {
             </div>
           </section>
 
-          {/* Section 8 — KRA VAT */}
+          {/* Section 8 - KRA VAT */}
           <section id="kra-vat" aria-labelledby="kra-vat-h">
             <h2 id="kra-vat-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               M-Pesa Errors &amp; Paying KRA VAT on Time
@@ -360,7 +360,7 @@ export default function MpesaErrorCodesPage() {
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
                 Kenyan businesses pay VAT via <strong className="text-ink">M-Pesa Paybill 572572</strong> (your
-                KRA PIN is the account number). An M-Pesa error near the 20th deadline is stressful — here is the
+                KRA PIN is the account number). An M-Pesa error near the 20th deadline is stressful - here is the
                 correct play.
               </p>
               <div className="space-y-3">

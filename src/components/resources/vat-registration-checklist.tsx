@@ -46,7 +46,7 @@ const faqSchema = {
       name: "Can I apply for VAT registration without a CR12?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "If you are a registered company, the CR12 (dated within 90 days) is mandatory. KRA will reject your application if the CR12 is missing or expired. Sole proprietors and partnerships do not need a CR12 — they submit director/partner IDs instead. If you need a CR12, obtain it from e-Citizen under the Business Registration Service (BRS) portal.",
+        text: "If you are a registered company, the CR12 (dated within 90 days) is mandatory. KRA will reject your application if the CR12 is missing or expired. Sole proprietors and partnerships do not need a CR12 - they submit director/partner IDs instead. If you need a CR12, obtain it from e-Citizen under the Business Registration Service (BRS) portal.",
       },
     },
     {
@@ -54,7 +54,7 @@ const faqSchema = {
       name: "What file format and size does KRA accept for document uploads?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "KRA iTax accepts PDF and JPG file formats only. Each file must be under 1MB. Large scans or high-resolution photos will cause upload errors. Use a PDF compressor or reduce image resolution before uploading. Documents must be legible — blurry scans and photos with glare are the top reasons for rejection.",
+        text: "KRA iTax accepts PDF and JPG file formats only. Each file must be under 1MB. Large scans or high-resolution photos will cause upload errors. Use a PDF compressor or reduce image resolution before uploading. Documents must be legible - blurry scans and photos with glare are the top reasons for rejection.",
       },
     },
     {
@@ -118,7 +118,7 @@ export default function VATRegistrationChecklistPage() {
         <div className="border-l-[3px] border-brand pl-5 mb-10">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Why This Checklist Matters</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            Applying for VAT registration on KRA iTax requires uploading <strong className="text-ink">5–10 documents</strong> depending on your business structure. Missing just one document — or uploading the wrong format — can delay your application by <strong className="text-ink">days or even weeks</strong>. This checklist covers every single document KRA will ask for, the most common rejection reasons, and what you need <strong className="text-ink">after</strong> your VAT PIN is approved.
+            Applying for VAT registration on KRA iTax requires uploading <strong className="text-ink">5–10 documents</strong> depending on your business structure. Missing just one document - or uploading the wrong format - can delay your application by <strong className="text-ink">days or even weeks</strong>. This checklist covers every single document KRA will ask for, the most common rejection reasons, and what you need <strong className="text-ink">after</strong> your VAT PIN is approved.
           </p>
         </div>
 
@@ -141,7 +141,7 @@ export default function VATRegistrationChecklistPage() {
 
         <article className="space-y-14">
 
-          {/* Section 1 — Mandatory Documents */}
+          {/* Section 1 - Mandatory Documents */}
           <section id="must-have" aria-labelledby="must-have-h">
             <h2 id="must-have-h" className="font-display text-[1.4rem] font-semibold text-ink mb-2 tracking-tight">
               Documents You MUST Have for VAT Registration
@@ -183,7 +183,7 @@ export default function VATRegistrationChecklistPage() {
                 <div className="border-t border-hairline pt-3 mt-1">
                   <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/80 mb-1.5">Requirements</p>
                   <ul className="space-y-1">
-                    {["Both sides of the ID must be scanned and merged into one PDF.", "Passports: ensure the bio-data page and signature page are included.", "IDs must be valid — expired IDs will be rejected immediately.", "File size must be under 1MB per upload."].map((r) => (
+                    {["Both sides of the ID must be scanned and merged into one PDF.", "Passports: ensure the bio-data page and signature page are included.", "IDs must be valid - expired IDs will be rejected immediately.", "File size must be under 1MB per upload."].map((r) => (
                       <li key={r} className="flex items-start gap-2 text-[0.82rem] text-ink-soft">
                         <span className="text-brand shrink-0 mt-0.5">&#10003;</span>
                         <span>{r}</span>
@@ -204,7 +204,7 @@ export default function VATRegistrationChecklistPage() {
                 <div className="border-t border-hairline pt-3 mt-1">
                   <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/80 mb-1.5">Tips</p>
                   <ul className="space-y-1">
-                    {["Download the latest copy from e-Citizen — older PDFs may have expired.", "The business name on the certificate must match your KRA PIN name exactly.", "If your business is a branch of a foreign company, include the foreign registration cert too."].map((tip) => (
+                    {["Download the latest copy from e-Citizen - older PDFs may have expired.", "The business name on the certificate must match your KRA PIN name exactly.", "If your business is a branch of a foreign company, include the foreign registration cert too."].map((tip) => (
                       <li key={tip} className="flex items-start gap-2 text-[0.82rem] text-ink-soft">
                         <span className="text-brand shrink-0 mt-0.5">&#10003;</span>
                         <span>{tip}</span>
@@ -225,7 +225,7 @@ export default function VATRegistrationChecklistPage() {
                 <div className="border-t border-hairline pt-3 mt-1">
                   <p className="text-[0.75rem] font-mono uppercase tracking-widest text-ink-muted/80 mb-1.5">Tips</p>
                   <ul className="space-y-1">
-                    {["Download your CR12 from e-Citizen (Business Registration Service).", "A CR12 older than 90 days will be rejected — get a fresh copy.", "Ensure all current directors are listed. KRA cross-checks against your registration cert.", "Sole proprietors and partnerships skip this — submit IDs instead."].map((tip) => (
+                    {["Download your CR12 from e-Citizen (Business Registration Service).", "A CR12 older than 90 days will be rejected - get a fresh copy.", "Ensure all current directors are listed. KRA cross-checks against your registration cert.", "Sole proprietors and partnerships skip this - submit IDs instead."].map((tip) => (
                       <li key={tip} className="flex items-start gap-2 text-[0.82rem] text-ink-soft">
                         <span className="text-brand shrink-0 mt-0.5">&#10003;</span>
                         <span>{tip}</span>
@@ -279,7 +279,7 @@ export default function VATRegistrationChecklistPage() {
             </div>
           </section>
 
-          {/* Section 2 — Business Details */}
+          {/* Section 2 - Business Details */}
           <section id="business-details" aria-labelledby="business-details-h">
             <h2 id="business-details-h" className="font-display text-[1.4rem] font-semibold text-ink mb-2 tracking-tight">
               Business Details You Need to Provide
@@ -292,18 +292,18 @@ export default function VATRegistrationChecklistPage() {
               {[
                 {
                   label: "Physical Business Address",
-                  note: "KRA requires a physical location — not a P.O. Box. Provide building name, street, floor, room number, and nearest landmark. Your address must match where you actually operate.",
-                  tips: ["Include GPS coordinates if available — some KRA officers verify physically.", "If you work from home, provide your home address and note it is a home office.", "A P.O. Box alone is not accepted as a physical address."],
+                  note: "KRA requires a physical location - not a P.O. Box. Provide building name, street, floor, room number, and nearest landmark. Your address must match where you actually operate.",
+                  tips: ["Include GPS coordinates if available - some KRA officers verify physically.", "If you work from home, provide your home address and note it is a home office.", "A P.O. Box alone is not accepted as a physical address."],
                 },
                 {
                   label: "Nature of Business Activities",
                   note: "Describe what your business actually does in detail. &ldquo;General trade&rdquo; is not enough. KRA wants specifics: &ldquo;wholesale distribution of electronics,&rdquo; &ldquo;restaurant and catering services,&rdquo; &ldquo;IT consultancy and software development.&rdquo;",
-                  tips: ["List each distinct business activity separately.", "Be honest — KRA uses this to determine your VAT category and audit risk.", "If you have multiple activities that fall under different VAT treatments, mention them all."],
+                  tips: ["List each distinct business activity separately.", "Be honest - KRA uses this to determine your VAT category and audit risk.", "If you have multiple activities that fall under different VAT treatments, mention them all."],
                 },
                 {
                   label: "Estimated Monthly / Annual Turnover",
                   note: "KRA asks for your projected turnover. If you have been in business, use your actual revenue. If you are pre-revenue, provide a realistic estimate based on your business plan.",
-                  tips: ["Do not understate your turnover to avoid VAT — KRA cross-checks with bank and M-PESA data.", "If your turnover exceeds KES 5 million, be honest. Voluntary registration below the threshold is fine too.", "Provide figures in KES and specify whether they are inclusive or exclusive of VAT."],
+                  tips: ["Do not understate your turnover to avoid VAT - KRA cross-checks with bank and M-PESA data.", "If your turnover exceeds KES 5 million, be honest. Voluntary registration below the threshold is fine too.", "Provide figures in KES and specify whether they are inclusive or exclusive of VAT."],
                 },
                 {
                   label: "List of Products / Services with KRA HS Codes",
@@ -340,7 +340,7 @@ export default function VATRegistrationChecklistPage() {
             </div>
           </section>
 
-          {/* Section 3 — Post-Registration Setup */}
+          {/* Section 3 - Post-Registration Setup */}
           <section id="post-registration" aria-labelledby="post-registration-h">
             <h2 id="post-registration-h" className="font-display text-[1.4rem] font-semibold text-ink mb-2 tracking-tight">
               Post-Registration Setup Checklist
@@ -368,7 +368,7 @@ title: "Monthly Filing Calendar Setup",
                 },
                 {
                   icon: <Gear size={18} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />,
-                   title: "KRA Paybill 572572 — VAT Payment Guidance",
+                   title: "KRA Paybill 572572 - VAT Payment Guidance",
                    body: <>All VAT payments to KRA are made via M-PESA Paybill 572572 (business number) or through bank transfer to KRA's collection account. See the{" "}<a href="/resources/how-to-file-vat-return-on-itax/#payment" className="text-brand underline underline-offset-2 hover:text-brand-hover">payment section in our filing guide</a>{" "}for the exact M-PESA steps. Your account number on Paybill 572572 is your KRA PIN followed by the payment type code. For VAT, the format is: PIN000V (e.g., P0123456789V). Payments reflect on iTax within minutes.</>,
                 },
               ].map((step) => (
@@ -391,7 +391,7 @@ title: "Monthly Filing Calendar Setup",
                   Don&apos;t Forget eTIMS
                 </p>
                 <p className="text-[0.83rem] text-[#8a6500] dark:text-[#ccaa33] leading-relaxed">
-                  KRA has been aggressively enforcing eTIMS compliance in 2026. Businesses that issue manual invoices after the 30-day eTIMS window face penalties of up to KES 100,000. See the{" "}<a href="/resources/etims-penalty-50000-per-month-kenya/" className="underline underline-offset-2 hover:text-[#ccaa33]">eTIMS penalty guide</a>{" "}for full details. Complete your eTIMS onboarding as soon as your VAT PIN is approved — not on the last day.
+                  KRA has been aggressively enforcing eTIMS compliance in 2026. Businesses that issue manual invoices after the 30-day eTIMS window face penalties of up to KES 100,000. See the{" "}<a href="/resources/etims-penalty-50000-per-month-kenya/" className="underline underline-offset-2 hover:text-[#ccaa33]">eTIMS penalty guide</a>{" "}for full details. Complete your eTIMS onboarding as soon as your VAT PIN is approved - not on the last day.
                 </p>
               </div>
             </div>
@@ -408,7 +408,7 @@ title: "Monthly Filing Calendar Setup",
             </div>
           </section>
 
-          {/* Section 4 — Rejection Reasons */}
+          {/* Section 4 - Rejection Reasons */}
           <section id="rejection-reasons" aria-labelledby="rejection-reasons-h">
             <h2 id="rejection-reasons-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
               Common Document Rejection Reasons and Fixes
@@ -426,7 +426,7 @@ title: "Monthly Filing Calendar Setup",
                 </thead>
                 <tbody className="divide-y divide-hairline">
                   {[
-                    { r: "Illegible or blurry document scan", f: "Re-scan at 300 DPI minimum. Ensure even lighting — no shadows or glare. Use a scanner app (Adobe Scan, CamScanner) instead of a phone camera." },
+                    { r: "Illegible or blurry document scan", f: "Re-scan at 300 DPI minimum. Ensure even lighting - no shadows or glare. Use a scanner app (Adobe Scan, CamScanner) instead of a phone camera." },
                     { r: "CR12 is older than 90 days", f: "Download a fresh CR12 from e-Citizen (Business Registration Service). It costs approximately KES 100 and is available immediately." },
                     { r: "File size exceeds 1MB limit", f: "Compress PDFs using ilovepdf.com or SmallPDF. For JPGs, reduce resolution to 1024×768 before uploading." },
                     { r: "Business name mismatch between documents", f: "Your KRA PIN name, business registration name, and bank account name must all match. Update any that are inconsistent before applying." },
@@ -445,7 +445,7 @@ title: "Monthly Filing Calendar Setup",
             </div>
           </section>
 
-          {/* Section 5 — Interactive Help / Lead Magnet CTA */}
+          {/* Section 5 - Interactive Help / Lead Magnet CTA */}
           <section aria-labelledby="help-cta-h">
             <div className="border border-brand/30 bg-brand-muted rounded-xl p-6 sm:p-8 text-center">
               <h2 id="help-cta-h" className="font-display text-[1.3rem] font-semibold text-ink mb-3 tracking-tight">
@@ -480,12 +480,12 @@ title: "Monthly Filing Calendar Setup",
             </div>
           </section>
 
-          {/* CTA — Let Us Handle It */}
+          {/* CTA - Let Us Handle It */}
           <section aria-labelledby="cta-h">
             <div className="border border-hairline rounded-xl p-6 sm:p-8 text-center">
-              <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Flat Fee — No Surprises</p>
+              <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Flat Fee - No Surprises</p>
               <h2 id="cta-h" className="font-display text-[1.3rem] font-semibold text-ink mb-3 tracking-tight">
-                Let Us Handle It — KES 5,000 Flat Fee
+                Let Us Handle It - KES 5,000 Flat Fee
               </h2>
               <p className="text-[0.88rem] text-ink-soft leading-relaxed max-w-lg mx-auto mb-6">
                 We collect your documents, review them for errors, submit on iTax, and follow up until your VAT PIN is approved. If KRA rejects, we resubmit at <strong className="text-ink">no extra cost</strong>. Pay via M-PESA Paybill to a registered business number.

@@ -44,7 +44,7 @@ const faqSchema = {
       name: "What documents do I need to file a VAT return?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You need: (1) Sales summary for the month — total sales, zero-rated sales, exempt sales, and VAT-exclusive sales. (2) Purchase summary — total purchases, input VAT claimed, and capital goods purchases. (3) eTIMS invoice register to reconcile sales figures. (4) Bank statements or M-PESA statements to confirm receipts. (5) Withholding VAT certificates if you have been subject to withholding VAT. Our checklist below covers every item you need.",
+        text: "You need: (1) Sales summary for the month - total sales, zero-rated sales, exempt sales, and VAT-exclusive sales. (2) Purchase summary - total purchases, input VAT claimed, and capital goods purchases. (3) eTIMS invoice register to reconcile sales figures. (4) Bank statements or M-PESA statements to confirm receipts. (5) Withholding VAT certificates if you have been subject to withholding VAT. Our checklist below covers every item you need.",
       },
     },
     {
@@ -80,7 +80,7 @@ const toc = [
   { id: "purchases-input-vat", label: "Purchases and Input VAT" },
   { id: "itax-entry",          label: "iTax Entry: Step by Step" },
   { id: "validation",          label: "Pre-Submission Validation Check" },
-  { id: "validation-engine",   label: "KRA's 2026 Validation Engine — Invoice-Level Checks" },
+  { id: "validation-engine",   label: "KRA's 2026 Validation Engine - Invoice-Level Checks" },
   { id: "after-submission",    label: "After Submission: Confirm and Pay" },
   { id: "common-mistakes",     label: "Common Mistakes That Cause Rejection" },
   { id: "faq",                 label: "Frequently Asked Questions" },
@@ -118,7 +118,7 @@ export default function VATReturnFilingChecklistPage() {
         <div className="border-l-[3px] border-brand pl-5 mb-10">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Why This Checklist Matters</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            Filing a VAT return on iTax requires precise data entry. A single error — wrong decimal format, missing field, or mismatched total — can cause a <strong className="text-ink">return validation failure</strong> that wastes hours and risks a late filing penalty. This checklist covers every document you need, every field you must complete, and the validation checks to run <strong className="text-ink">before</strong> you hit submit.
+            Filing a VAT return on iTax requires precise data entry. A single error - wrong decimal format, missing field, or mismatched total - can cause a <strong className="text-ink">return validation failure</strong> that wastes hours and risks a late filing penalty. This checklist covers every document you need, every field you must complete, and the validation checks to run <strong className="text-ink">before</strong> you hit submit.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ export default function VATReturnFilingChecklistPage() {
               {[
                 {
                   label: "Sales Register / eTIMS Invoice Summary",
-                  detail: "Your eTIMS-issued invoices for the month. The total sales figure on your return must match your eTIMS invoice register. Do not guess — run a report from eTIMS.",
+                  detail: "Your eTIMS-issued invoices for the month. The total sales figure on your return must match your eTIMS invoice register. Do not guess - run a report from eTIMS.",
                 },
                 {
                   label: "Purchase Register / Supplier Invoices",
@@ -312,7 +312,7 @@ export default function VATReturnFilingChecklistPage() {
                 {
                   step: "02",
                   title: "Enter sales figures from your prepared data",
-                  body: "Enter all sales fields: total sales, standard-rated (16%), zero-rated (0%), and exempt sales. Do not enter thousand separators — type '100000' not '100,000'. Use a dot (.) not a comma (,) for decimals.",
+                  body: "Enter all sales fields: total sales, standard-rated (16%), zero-rated (0%), and exempt sales. Do not enter thousand separators - type '100000' not '100,000'. Use a dot (.) not a comma (,) for decimals.",
                 },
                 {
                   step: "03",
@@ -364,10 +364,10 @@ export default function VATReturnFilingChecklistPage() {
                 "VAT-exclusive figures are entered correctly (not VAT-inclusive in the wrong field).",
                 "Input VAT claimed matches 16% of your standard-rated purchases (unless partially exempt).",
                 "Withholding VAT amounts are entered in the correct field.",
-                "Nil returns have zeros in every field — no blank fields.",
+                "Nil returns have zeros in every field - no blank fields.",
                 "The VAT payable/refundable amount looks reasonable for your business.",
                 "You have saved a copy of your source data (in case iTax times out).",
-                "Internet connection is stable — use a wired connection if possible.",
+                "Internet connection is stable - use a wired connection if possible.",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-[0.88rem] text-ink-soft">
                   <CheckCircle size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -379,12 +379,12 @@ export default function VATReturnFilingChecklistPage() {
 
           <section id="validation-engine" aria-labelledby="validation-engine-h">
             <h2 id="validation-engine-h" className="font-display text-[1.4rem] font-semibold text-ink mb-2 tracking-tight">
-              KRA&apos;s 2026 Validation Engine — Invoice-Level Checks
+              KRA&apos;s 2026 Validation Engine - Invoice-Level Checks
             </h2>
             <p className="text-[0.85rem] text-ink-muted mb-6">
               Since January 2026, KRA runs a real-time income & expense validation engine that
               cross-checks every figure on your filed return against eTIMS invoice data
-              month-to-month — not only at audit. If your declared figures fall outside the
+              month-to-month - not only at audit. If your declared figures fall outside the
               tolerance band, KRA issues a query letter with a 14-day response window before
               escalating to audit. Run these checks on every invoice before you file.
             </p>
@@ -395,8 +395,8 @@ export default function VATReturnFilingChecklistPage() {
                 <p className="font-semibold text-ink text-[0.88rem] mb-2">What the engine checks</p>
                 <ul className="space-y-2 text-[0.83rem] text-ink-soft">
                   {[
-                    "<strong className=\"text-ink\">Sales — upward only:</strong> Your declared sales must be &ge; eTIMS transmissions for the period. The auto-populated iTax return only allows upward adjustments; you cannot declare below what eTIMS recorded.",
-                    "<strong className=\"text-ink\">Expenses — eTIMS invoice + buyer PIN required:</strong> Every input VAT claim must be backed by a transmitted eTIMS invoice that carries YOUR KRA PIN. Un-transmitted invoices or invoices without your PIN will be flagged as unsupported and risk disallowance.",
+                    "<strong className=\"text-ink\">Sales - upward only:</strong> Your declared sales must be &ge; eTIMS transmissions for the period. The auto-populated iTax return only allows upward adjustments; you cannot declare below what eTIMS recorded.",
+                    "<strong className=\"text-ink\">Expenses - eTIMS invoice + buyer PIN required:</strong> Every input VAT claim must be backed by a transmitted eTIMS invoice that carries YOUR KRA PIN. Un-transmitted invoices or invoices without your PIN will be flagged as unsupported and risk disallowance.",
                     "<strong className=\"text-ink\">14-day query window:</strong> If the engine flags a gap outside the ~5% tolerance, KRA issues a query letter. You have <strong className=\"text-ink\">14 days</strong> to respond with evidence (eTIMS control numbers, PINs, original invoices).",
                     "<strong className=\"text-ink\">6-month late transmission window:</strong> Purchases transmitted late to eTIMS remain claimable if filed within 6 months of the tax period.",
                     "<strong className=\"text-ink\">120-day refund processing:</strong> Valid refund applications are processed within 120 days by KRA (Finance Act 2025).",
@@ -420,7 +420,7 @@ export default function VATReturnFilingChecklistPage() {
                   <tr>
                     <td className="p-3.5 text-ink-muted">eTIMS transmitted + your KRA PIN present</td>
                     <td className="p-3.5 text-ink"><span className="text-brand font-semibold">Yes</span></td>
-                    <td className="p-3.5 text-ink-muted">Claim normally — engine will validate clean</td>
+                    <td className="p-3.5 text-ink-muted">Claim normally - engine will validate clean</td>
                   </tr>
                   <tr>
                     <td className="p-3.5 text-ink-muted">eTIMS transmitted but NO buyer PIN</td>
@@ -540,7 +540,7 @@ export default function VATReturnFilingChecklistPage() {
                   target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-6 py-3 rounded-md hover:bg-brand-hover transition-colors"
                 >
-                  Start Monthly Filing — KES 3,500/month
+                  Start Monthly Filing - KES 3,500/month
                   <ArrowRight size={14} weight="bold" aria-hidden="true" />
                 </a>
               </div>
@@ -565,7 +565,7 @@ export default function VATReturnFilingChecklistPage() {
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
-            Start Filing — KES 3,500/month
+            Start Filing - KES 3,500/month
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">

@@ -76,7 +76,7 @@ export default function VatFintechPage() {
 
         <header className="mb-8">
           <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">
-            Industry Guide — Fintech
+            Industry Guide - Fintech
           </p>
           <h1 className="font-display text-[clamp(1.5rem,3vw,2rem)] font-semibold text-ink tracking-tight leading-tight mb-4 text-balance">
             VAT on Fintech and Digital Payments in Kenya 2026
@@ -90,7 +90,7 @@ export default function VatFintechPage() {
 
         <div className="space-y-5 text-[0.9rem] text-ink-soft leading-[1.75]">
           <p>
-            The <a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026</a> made one of the most significant changes to Kenya&apos;s VAT landscape in years: digital payment processing, gateway, merchant acquiring, settlement, and aggregation services are now subject to <strong className="text-ink">16% VAT</strong> effective <strong className="text-ink">1 July 2026</strong>. If your business uses M-Pesa till numbers, Pesapal, iPay, Flutterwave, or any payment gateway, the fees you pay just got 16% more expensive — and the compliance landscape has shifted.
+            The <a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026</a> made one of the most significant changes to Kenya&apos;s VAT landscape in years: digital payment processing, gateway, merchant acquiring, settlement, and aggregation services are now subject to <strong className="text-ink">16% VAT</strong> effective <strong className="text-ink">1 July 2026</strong>. If your business uses M-Pesa till numbers, Pesapal, iPay, Flutterwave, or any payment gateway, the fees you pay just got 16% more expensive - and the compliance landscape has shifted.
           </p>
           <p>
             This guide explains exactly what changed, which services are affected, what remains exempt, and how to handle input VAT recovery on payment processing fees.
@@ -110,7 +110,7 @@ export default function VatFintechPage() {
             </div>
           </div>
 
-          {/* Section 1 — What Changed */}
+          {/* Section 1 - What Changed */}
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             What Changed Under the Finance Act 2026
           </h2>
@@ -165,7 +165,7 @@ export default function VatFintechPage() {
             </div>
           </div>
 
-          {/* Section 2 — Which Services Are Affected */}
+          {/* Section 2 - Which Services Are Affected */}
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             Which Services Are Now Taxable at 16%
           </h2>
@@ -174,11 +174,11 @@ export default function VatFintechPage() {
           </p>
           <ul className="space-y-2">
             {[
-              "Payment processing — transaction routing, authorisation, and clearing of digital payments",
-              "Payment gateway services — technology that authorises payments for e-commerce and mobile transactions",
-              "Merchant acquiring — services enabling merchants to accept card and digital payments",
-              "Settlement services — final transfer of funds between acquirer and issuer",
-              "Payment aggregation — bundling multiple merchants under one account (iPay, Pesapal model)",
+              "Payment processing - transaction routing, authorisation, and clearing of digital payments",
+              "Payment gateway services - technology that authorises payments for e-commerce and mobile transactions",
+              "Merchant acquiring - services enabling merchants to accept card and digital payments",
+              "Settlement services - final transfer of funds between acquirer and issuer",
+              "Payment aggregation - bundling multiple merchants under one account (iPay, Pesapal model)",
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <CheckCircle size={14} weight="fill" className="text-brand shrink-0 mt-1.5" aria-hidden="true" />
@@ -197,7 +197,7 @@ export default function VatFintechPage() {
             </div>
           </div>
 
-          {/* Section 3 — Providers Affected */}
+          {/* Section 3 - Providers Affected */}
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             Every Provider Affected
           </h2>
@@ -236,7 +236,7 @@ export default function VatFintechPage() {
             </table>
           </div>
 
-          {/* Section 4 — Transactions */}
+          {/* Section 4 - Transactions */}
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             Transaction-by-Transaction Guide
           </h2>
@@ -252,15 +252,15 @@ export default function VatFintechPage() {
               <tbody className="divide-y divide-hairline">
                 {[
                   { tx: "M-Pesa P2P send money", vat: "No", note: "Core money transfer remains exempt" },
-                  { tx: "M-Pesa till/paybill merchant fee", vat: "Yes — 16%", note: "PSP fee is now taxable" },
-                  { tx: "Pesapal / iPay gateway commission", vat: "Yes — 16%", note: "MDR / transaction fee taxable" },
-                  { tx: "Card payment merchant service fee", vat: "Yes — 16%", note: "Acquiring fee now taxable" },
-                  { tx: "Flutterwave cross-border fee", vat: "Yes — 16%", note: "Gateway fee taxable" },
-                  { tx: "Kenswitch switch fee", vat: "Yes — 16%", note: "ATM/payment switch fee taxable" },
+                  { tx: "M-Pesa till/paybill merchant fee", vat: "Yes - 16%", note: "PSP fee is now taxable" },
+                  { tx: "Pesapal / iPay gateway commission", vat: "Yes - 16%", note: "MDR / transaction fee taxable" },
+                  { tx: "Card payment merchant service fee", vat: "Yes - 16%", note: "Acquiring fee now taxable" },
+                  { tx: "Flutterwave cross-border fee", vat: "Yes - 16%", note: "Gateway fee taxable" },
+                  { tx: "Kenswitch switch fee", vat: "Yes - 16%", note: "ATM/payment switch fee taxable" },
                   { tx: "ATM withdrawal fee", vat: "No", note: "Conventional banking remains exempt" },
                   { tx: "Bank transfer (PesaLink) fee", vat: "No", note: "Inter-bank transfer likely exempt" },
                   { tx: "Forex service fee", vat: "No", note: "Foreign exchange remains exempt" },
-                  { tx: "Digital wallet platform fee", vat: "Yes — 16%", note: "Processing/aggregation fee taxable" },
+                  { tx: "Digital wallet platform fee", vat: "Yes - 16%", note: "Processing/aggregation fee taxable" },
                   { tx: "Transactions under KES 100", vat: "Zero-rated", note: "Small transactions remain zero-rated" },
                 ].map((row) => (
                   <tr key={row.tx}>
@@ -273,7 +273,7 @@ export default function VatFintechPage() {
             </table>
           </div>
 
-          {/* Section 5 — Input VAT */}
+          {/* Section 5 - Input VAT */}
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             Can You Claim Input VAT on Payment Processing Fees?
           </h2>
@@ -282,10 +282,10 @@ export default function VatFintechPage() {
           </p>
           <ul className="space-y-2">
             {[
-              "Businesses making taxable supplies (selling goods at 16% or 0%) — can claim full input VAT on PSP fees with a valid eTIMS invoice",
-              "Businesses making mixed supplies — must apportion input VAT, claiming only the portion attributable to taxable supplies",
-              "Banks, insurers, and other exempt-sector businesses — cannot claim input VAT. The 16% VAT on PSP fees is a net cost",
-              "Non-resident PSPs without a fixed place in Kenya — cannot deduct input VAT incurred from Kenyan suppliers",
+              "Businesses making taxable supplies (selling goods at 16% or 0%) - can claim full input VAT on PSP fees with a valid eTIMS invoice",
+              "Businesses making mixed supplies - must apportion input VAT, claiming only the portion attributable to taxable supplies",
+              "Banks, insurers, and other exempt-sector businesses - cannot claim input VAT. The 16% VAT on PSP fees is a net cost",
+              "Non-resident PSPs without a fixed place in Kenya - cannot deduct input VAT incurred from Kenyan suppliers",
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <CheckCircle size={14} weight="fill" className="text-brand shrink-0 mt-1.5" aria-hidden="true" />
@@ -304,7 +304,7 @@ export default function VatFintechPage() {
             </div>
           </div>
 
-          {/* Section 6 — Compliance */}
+          {/* Section 6 - Compliance */}
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             Compliance Requirements for Fintech Companies
           </h2>
@@ -313,26 +313,26 @@ export default function VatFintechPage() {
           </p>
           <ol className="space-y-3 list-decimal list-inside">
             <li className="text-ink-soft">
-              <strong className="text-ink">Reassess VAT treatment</strong> — Review all commissions, transaction fees, and merchant discount rates to determine which are now taxable at 16%. Get professional advice if uncertain.
+              <strong className="text-ink">Reassess VAT treatment</strong> - Review all commissions, transaction fees, and merchant discount rates to determine which are now taxable at 16%. Get professional advice if uncertain.
             </li>
             <li className="text-ink-soft">
               <a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover"><strong className="text-ink">Register for VAT</strong></a> if not already registered. The standard KES 5 million threshold applies for domestic PSPs. Non-resident digital suppliers must register regardless of turnover.
             </li>
             <li className="text-ink-soft">
-              <strong className="text-ink">Update billing systems</strong> — Configure invoicing to charge and collect 16% VAT on affected services. All invoices must be eTIMS-compliant.
+              <strong className="text-ink">Update billing systems</strong> - Configure invoicing to charge and collect 16% VAT on affected services. All invoices must be eTIMS-compliant.
             </li>
             <li className="text-ink-soft">
-              <strong className="text-ink">Review contracts</strong> — Determine whether VAT will be absorbed, passed to merchants, or passed to end-consumers. Update your terms and conditions accordingly.
+              <strong className="text-ink">Review contracts</strong> - Determine whether VAT will be absorbed, passed to merchants, or passed to end-consumers. Update your terms and conditions accordingly.
             </li>
             <li className="text-ink-soft">
               <a href="/resources/how-to-file-vat-return-on-itax/" className="text-brand underline underline-offset-2 hover:text-brand-hover"><strong className="text-ink">File monthly VAT returns</strong></a> via iTax by the 20th of each following month. Late filing attracts a penalty of KES 10,000 or 5% of the tax due (whichever is higher) plus 1% monthly interest.
             </li>
             <li className="text-ink-soft">
-              <strong className="text-ink">Onboard eTIMS</strong> — All VAT-registered persons must use the electronic tax invoice management system. See our <a href="/resources/etims-onboarding-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS onboarding guide</a>.
+              <strong className="text-ink">Onboard eTIMS</strong> - All VAT-registered persons must use the electronic tax invoice management system. See our <a href="/resources/etims-onboarding-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS onboarding guide</a>.
             </li>
           </ol>
 
-          {/* Section 7 — Related WHT Changes */}
+          {/* Section 7 - Related WHT Changes */}
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             Related Withholding Tax Changes
           </h2>
@@ -367,7 +367,7 @@ export default function VatFintechPage() {
             These changes override the Supreme Court decision in <em>Barclays Bank v Commissioner of Domestic Taxes</em> (2022) which had held that interchange and network fees were not royalties. See our <a href="/resources/withholding-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">withholding VAT guide</a> for more.
           </p>
 
-          {/* Section 8 — Estimated Costs */}
+          {/* Section 8 - Estimated Costs */}
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             Estimated Cost Impact
           </h2>
@@ -376,10 +376,10 @@ export default function VatFintechPage() {
           </p>
           <ul className="space-y-2">
             {[
-              "Business accepting M-Pesa payments — the merchant fee (typically 0.5-1.5%) now has 16% VAT added. If your monthly M-Pesa fees are KES 10,000, expect an extra KES 1,600 in VAT",
-              "E-commerce store using Pesapal — the gateway commission now attracts 16% VAT. If you pay KES 50,000/month in gateway fees, expect KES 8,000 extra in VAT",
-              "PSP passing VAT to merchants — merchants see a direct cost increase. PSPs absorbing VAT — margin is compressed",
-              "Banks and insurers — cannot recover the VAT, making this a permanent cost increase for the financial sector",
+              "Business accepting M-Pesa payments - the merchant fee (typically 0.5-1.5%) now has 16% VAT added. If your monthly M-Pesa fees are KES 10,000, expect an extra KES 1,600 in VAT",
+              "E-commerce store using Pesapal - the gateway commission now attracts 16% VAT. If you pay KES 50,000/month in gateway fees, expect KES 8,000 extra in VAT",
+              "PSP passing VAT to merchants - merchants see a direct cost increase. PSPs absorbing VAT - margin is compressed",
+              "Banks and insurers - cannot recover the VAT, making this a permanent cost increase for the financial sector",
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <Info size={14} className="text-brand shrink-0 mt-1.5" aria-hidden="true" />
@@ -403,7 +403,7 @@ export default function VatFintechPage() {
             </a>
           </div>
 
-          {/* Section 9 — FAQ */}
+          {/* Section 9 - FAQ */}
           <h2 className="font-display text-[1.2rem] font-semibold text-ink mt-8 mb-3">
             Frequently Asked Questions
           </h2>
@@ -431,7 +431,7 @@ export default function VatFintechPage() {
                 <a href={slug} className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   {title}
                 </a>
-                <span className="text-ink-muted"> — {desc}</span>
+                <span className="text-ink-muted"> - {desc}</span>
               </li>
             ))}
           </ul>

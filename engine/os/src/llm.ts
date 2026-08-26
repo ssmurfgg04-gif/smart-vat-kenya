@@ -5,7 +5,7 @@ import { HttpTransport, createFetchTransport } from "./transport.js"
  * Remote LLM provider, OpenAI-compatible (OpenAI, Azure, Together, Ollama,
  * local vLLM...). Sends the retrieved rule context as the system message so the
  * answer is grounded in the KB. Fallback behaviour is intentionally the same as
- * `localFallbackLlm` — retrieve first, this completes the loop.
+ * `localFallbackLlm` - retrieve first, this completes the loop.
  */
 
 export interface RemoteLlmConfig {

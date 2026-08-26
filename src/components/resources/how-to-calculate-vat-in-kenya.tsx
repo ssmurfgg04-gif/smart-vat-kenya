@@ -60,7 +60,7 @@ const faqSchema = {
       name: "What is the difference between VAT-inclusive and VAT-exclusive pricing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "VAT-inclusive means the displayed price already includes the 16% VAT — what the customer pays is final. VAT-exclusive means the price is shown before VAT is added — the customer pays the displayed amount plus 16% VAT. Most Kenyan retail prices are VAT-inclusive. Business-to-business invoices typically show VAT-exclusive amounts.",
+        text: "VAT-inclusive means the displayed price already includes the 16% VAT - what the customer pays is final. VAT-exclusive means the price is shown before VAT is added - the customer pays the displayed amount plus 16% VAT. Most Kenyan retail prices are VAT-inclusive. Business-to-business invoices typically show VAT-exclusive amounts.",
       },
     },
     {
@@ -68,7 +68,7 @@ const faqSchema = {
       name: "What goods are zero-rated vs exempt from VAT in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Zero-rated goods (0% VAT) include exports, maize flour, bread, milk, and goods sold to diplomats or aid organisations — you can still claim input VAT on your costs. Exempt goods (no VAT at all) include financial services, insurance, residential rent, education, and passenger transport — you cannot claim input VAT on related costs.",
+        text: "Zero-rated goods (0% VAT) include exports, maize flour, bread, milk, and goods sold to diplomats or aid organisations - you can still claim input VAT on your costs. Exempt goods (no VAT at all) include financial services, insurance, residential rent, education, and passenger transport - you cannot claim input VAT on related costs.",
       },
     },
     {
@@ -76,7 +76,7 @@ const faqSchema = {
       name: "Do I charge VAT on M-PESA sales?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. M-PESA sales are taxable supplies under Kenyan law. If you are VAT-registered, every M-PESA transaction — whether from Till Number, Paybill, or Lipa Na M-PESA — must be recorded in your VAT return. The 16% VAT applies exactly the same way as cash or bank transfers.",
+        text: "Yes. M-PESA sales are taxable supplies under Kenyan law. If you are VAT-registered, every M-PESA transaction - whether from Till Number, Paybill, or Lipa Na M-PESA - must be recorded in your VAT return. The 16% VAT applies exactly the same way as cash or bank transfers.",
       },
     },
     {
@@ -148,9 +148,9 @@ export default function HowToCalculateVATPage() {
 
         {/* Quick Answer / BLUF */}
         <div className="border-l-[3px] border-brand pl-5 mb-10">
-          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer — Instant VAT</p>
+          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer - Instant VAT</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            Need the number now? <strong className="text-ink">Use the calculator below — instant VAT, no sign-up.</strong> For reference: exclusive price × <strong className="text-ink">0.16</strong> = VAT; inclusive price × <strong className="text-ink">16 ÷ 116</strong> = VAT. Details and examples follow.
+            Need the number now? <strong className="text-ink">Use the calculator below - instant VAT, no sign-up.</strong> For reference: exclusive price × <strong className="text-ink">0.16</strong> = VAT; inclusive price × <strong className="text-ink">16 ÷ 116</strong> = VAT. Details and examples follow.
           </p>
         </div>
 

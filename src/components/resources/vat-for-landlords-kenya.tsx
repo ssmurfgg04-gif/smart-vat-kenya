@@ -55,7 +55,7 @@ export default function VatForLandlordsPost() {
           <div className="border border-amber-200 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-800/40 rounded-lg p-4 flex items-start gap-3">
             <Warning size={17} weight="fill" className="text-amber-600 shrink-0 mt-0.5" />
             <div>
-              <p className="font-semibold text-ink text-[0.9rem]">Residential vs commercial — different rules</p>
+              <p className="font-semibold text-ink text-[0.9rem]">Residential vs commercial - different rules</p>
               <p className="text-[0.83rem] text-amber-700 dark:text-amber-400 leading-relaxed">
                 Residential rent is exempt from VAT. Commercial rent is taxable if you exceed the
                 threshold. Getting this wrong can mean penalties or missed input VAT claims.
@@ -67,7 +67,7 @@ export default function VatForLandlordsPost() {
             Do Landlords Charge VAT on Rental Income in Kenya?
           </h2>
           <p>
-            The short answer: it depends entirely on whether you are letting residential or commercial property —
+            The short answer: it depends entirely on whether you are letting residential or commercial property -
             and on your total taxable turnover.
           </p>
           <p>
@@ -79,7 +79,7 @@ export default function VatForLandlordsPost() {
           <p>
             <strong>Commercial rental income is generally subject to VAT</strong> if the landlord&apos;s total annual
             taxable turnover exceeds the registration threshold. Under the Finance Act 2025 amendments, the threshold
-            was proposed to increase to KES 8 million per year, but this has not yet taken effect — the current
+            was proposed to increase to KES 8 million per year, but this has not yet taken effect - the current
             operational threshold remains KES 5 million. This covers rent from shops, offices,
             warehouses, industrial buildings, and any property let for business purposes.
           </p>
@@ -89,7 +89,7 @@ export default function VatForLandlordsPost() {
             eTIMS invoices, and file VAT returns.
           </p>
           <p>
-            The complication arises with <strong>mixed-use properties</strong> — a building with shops on the ground
+            The complication arises with <strong>mixed-use properties</strong> - a building with shops on the ground
             floor and flats above. In that case, rental income must be apportioned between the exempt residential
             portion and the taxable commercial portion. We cover the apportionment formula in detail below.
           </p>
@@ -115,7 +115,7 @@ export default function VatForLandlordsPost() {
           <p>
             A landlord must <a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">register for VAT</a> if their <strong>taxable turnover</strong> (not total rental income)
             exceeds the VAT threshold (currently KES 5 million, with proposed rise to KES 8 million not yet effective) in any period of twelve months. Taxable turnover means income from commercial
-            rent, service charges, parking fees, and any other taxable supplies — but not residential rent.
+            rent, service charges, parking fees, and any other taxable supplies - but not residential rent.
           </p>
           <p>
             The KRA looks at your actual income over a rolling twelve-month window. If you sign a commercial
@@ -128,7 +128,7 @@ export default function VatForLandlordsPost() {
             Aggregating rental income with other business income
           </h3>
           <p>
-            If you run a separate business — a shop, a consultancy, a logistics company — that income counts toward
+            If you run a separate business - a shop, a consultancy, a logistics company - that income counts toward
             the VAT threshold (currently KES 5 million) alongside your commercial rental income. The KRA aggregates all taxable
             supplies across all your activities under the same PIN. A landlord who owns three shops and also runs
             a hardware store must add both income streams together to determine whether registration is required.
@@ -140,7 +140,7 @@ export default function VatForLandlordsPost() {
           <p>
             A landlord who has not crossed the VAT threshold (currently KES 5 million) may still <strong>voluntarily register</strong>
             for VAT. This is a strategic decision: once registered, you must charge VAT on commercial rent, file
-            returns, and comply with eTIMS — but you also unlock the right to claim input VAT on property expenses.
+            returns, and comply with eTIMS - but you also unlock the right to claim input VAT on property expenses.
           </p>
           <p>
             For a landlord making significant capital improvements or paying large service fees, voluntary
@@ -167,12 +167,12 @@ export default function VatForLandlordsPost() {
             The VAT Act 2013 exempts &ldquo;the letting of residential accommodation&rdquo; from VAT. The KRA
             interprets this narrowly. A property is &ldquo;residential&rdquo; if it is used primarily as a
             dwelling by individuals. Serviced apartments, hostels, student accommodation, staff quarters, and
-            care homes all qualify — provided the primary purpose is providing a place to live.
+            care homes all qualify - provided the primary purpose is providing a place to live.
           </p>
           <p>
             A property is <strong>commercial</strong> if it is let for business, trade, or professional purposes.
             Shops, offices, warehouses, factories, workshops, showrooms, storage units, and event spaces are
-            commercial. Short-term holiday letting (Airbnb) is a grey area — the KRA has sometimes treated it
+            commercial. Short-term holiday letting (Airbnb) is a grey area - the KRA has sometimes treated it
             as commercial accommodation and sometimes as exempt residential, depending on duration and services.
           </p>
 
@@ -188,7 +188,7 @@ export default function VatForLandlordsPost() {
             The standard approach is floor-area apportionment. If a building has 1,000 square metres, of which
             300 square metres is commercial space and 700 square metres is residential, then 30% of the rental
             income is treated as taxable turnover and 70% as exempt. The same ratio applies to shared expenses
-            — electricity for common areas, security, cleaning, and maintenance.
+            - electricity for common areas, security, cleaning, and maintenance.
           </p>
 
           <h3 className="font-display text-[1.05rem] font-semibold text-ink mt-6 mb-2">
@@ -215,7 +215,7 @@ export default function VatForLandlordsPost() {
                   James owns a four-storey building. The ground floor is a shop (KES 200,000/month). The
                   three upper floors are flats (KES 450,000/month total). His total monthly income is
                   KES 650,000 (KES 7.8 million per year). The commercial portion is KES 200,000/month
-                  (KES 2.4 million/year) — below the VAT threshold. He does not need to register.
+                  (KES 2.4 million/year) - below the VAT threshold. He does not need to register.
                   But if he spends KES 1 million on a new roof, he cannot claim the input VAT because he
                   is not registered (and would not want to, since 76% of the expense relates to exempt
                   residential lettings).
@@ -255,7 +255,7 @@ export default function VatForLandlordsPost() {
           <p>
             If you let residential property exclusively and are not VAT-registered, you do not issue eTIMS
             invoices for rent. However, you are still required to issue <strong>ETR receipts</strong> if you
-            operate a rental office where tenants pay cash over the counter — but this is uncommon for
+            operate a rental office where tenants pay cash over the counter - but this is uncommon for
             residential lettings.
           </p>
 
@@ -265,7 +265,7 @@ export default function VatForLandlordsPost() {
           <p>
             Commercial tenants who are VAT-registered need an eTIMS invoice from you to claim input VAT on
             their rent. If you fail to issue a proper eTIMS invoice, your tenant cannot deduct the VAT, which
-            makes you an unattractive landlord. Expect tenants to request their eTIMS rent receipt — and to
+            makes you an unattractive landlord. Expect tenants to request their eTIMS rent receipt - and to
             report you to KRA if you refuse.
           </p>
           <p>
@@ -330,9 +330,9 @@ export default function VatForLandlordsPost() {
           </h3>
           <p>
             A common source of confusion is the distinction between capital improvements and revenue expenditure.
-            <strong>Revenue expenditure</strong> — day-to-day repairs, maintenance, and management costs — is
-            deductible for input VAT in the period incurred. <strong>Capital improvements</strong> — a new roof,
-            an extension, a new lift, rewiring the entire building — are treated as capital goods.
+            <strong>Revenue expenditure</strong> - day-to-day repairs, maintenance, and management costs - is
+            deductible for input VAT in the period incurred. <strong>Capital improvements</strong> - a new roof,
+            an extension, a new lift, rewiring the entire building - are treated as capital goods.
           </p>
           <p>
             Capital goods adjustment means the input VAT is spread over several years (typically five years for
@@ -377,7 +377,7 @@ export default function VatForLandlordsPost() {
                 <a href={slug} className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   {title}
                 </a>
-                <span className="text-ink-muted"> — {desc}</span>
+                <span className="text-ink-muted"> - {desc}</span>
               </li>
             ))}
           </ul>

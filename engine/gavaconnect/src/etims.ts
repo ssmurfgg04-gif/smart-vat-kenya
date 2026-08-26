@@ -110,7 +110,7 @@ export class EtimsClient {
    * POST /saveTrnsSalesOsdc with AES-256-encrypted payload signed by cmcKey.
    */
   async saveSalesOsdc(transaction: SalesTransaction): Promise<SaveSalesResponse> {
-    if (!this._cmcKey) throw new Error("cmcKey required — call initOsdcInfo() or loadCmcKey() first")
+    if (!this._cmcKey) throw new Error("cmcKey required - call initOsdcInfo() or loadCmcKey() first")
     const envelope = signAndEncryptOscuPayload({ salesTrans: transaction }, this._cmcKey)
     const res = (await this.call("/saveTrnsSalesOsdc", {
       tin: this.config.tin,
@@ -128,9 +128,9 @@ export class EtimsClient {
     return res
   }
 
-  /** VSCU step 1 — save the sale. Must precede saveInvoice. */
+  /** VSCU step 1 - save the sale. Must precede saveInvoice. */
   async vscuSaveSales(transaction: SalesTransaction): Promise<SaveSalesResponse> {
-    if (!this._cmcKey) throw new Error("cmcKey required — call initOsdcInfo() or loadCmcKey() first")
+    if (!this._cmcKey) throw new Error("cmcKey required - call initOsdcInfo() or loadCmcKey() first")
     const envelope = signAndEncryptOscuPayload({ salesTrans: transaction }, this._cmcKey)
     const res = (await this.call("/trnsSales/saveSales", {
       tin: this.config.tin,
@@ -145,11 +145,11 @@ export class EtimsClient {
     return res
   }
 
-  /** VSCU step 2 — save the invoice. Fails with 921 if order mixed. */
+  /** VSCU step 2 - save the invoice. Fails with 921 if order mixed. */
   async vscuSaveInvoice(transaction: SalesTransaction): Promise<SaveSalesResponse> {
-    if (!this._cmcKey) throw new Error("cmcKey required — call initOsdcInfo() or loadCmcKey() first")
+    if (!this._cmcKey) throw new Error("cmcKey required - call initOsdcInfo() or loadCmcKey() first")
     if (!this.vscuState.hasSaved) {
-      throw new EtimsResultError("921", "vscuSaveInvoice called before vscuSaveSales — sequence violation")
+      throw new EtimsResultError("921", "vscuSaveInvoice called before vscuSaveSales - sequence violation")
     }
     const envelope = signAndEncryptOscuPayload({ salesTrans: transaction }, this._cmcKey)
     const res = (await this.call("/trnsSales/saveInvoice", {

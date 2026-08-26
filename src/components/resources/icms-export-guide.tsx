@@ -35,7 +35,7 @@ const faqSchema = {
       name: "What is the iCMS export declaration change in 2026?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Effective May 2026, export data validated through the Integrated Customs Management System (iCMS) is now automatically prefilled into the zero-rated supply declaration section of your VAT return. This applies to exports to the Single Customs Territory (Uganda, Tanzania, Rwanda, Burundi, South Sudan), other countries, Export Processing Zones (EPZs), and Special Economic Zones (SEZs). The change means KRA already has your export data before you file — your VAT return must match the iCMS records.",
+        text: "Effective May 2026, export data validated through the Integrated Customs Management System (iCMS) is now automatically prefilled into the zero-rated supply declaration section of your VAT return. This applies to exports to the Single Customs Territory (Uganda, Tanzania, Rwanda, Burundi, South Sudan), other countries, Export Processing Zones (EPZs), and Special Economic Zones (SEZs). The change means KRA already has your export data before you file - your VAT return must match the iCMS records.",
       },
     },
     {
@@ -43,7 +43,7 @@ const faqSchema = {
       name: "Do I need to manually enter export values on my VAT return?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. Since May 2026, export values validated in iCMS are automatically prefilled on your VAT return. You should verify the prefilled amounts against your records before submitting. If you spot discrepancies, reconcile with your customs documentation before filing — KRA cross-references the return against iCMS data.",
+        text: "No. Since May 2026, export values validated in iCMS are automatically prefilled on your VAT return. You should verify the prefilled amounts against your records before submitting. If you spot discrepancies, reconcile with your customs documentation before filing - KRA cross-references the return against iCMS data.",
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       name: "How does this affect input VAT claims on export-related purchases?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Exporters making zero-rated supplies can claim input VAT on related purchases. The iCMS integration does not change this — you still claim input VAT on the standard sections of the return. However, the automatic prefilling of exports means KRA has a clearer picture of your zero-rated supply ratio, which may trigger questions if your input VAT claims appear disproportionately high relative to declared exports.",
+        text: "Exporters making zero-rated supplies can claim input VAT on related purchases. The iCMS integration does not change this - you still claim input VAT on the standard sections of the return. However, the automatic prefilling of exports means KRA has a clearer picture of your zero-rated supply ratio, which may trigger questions if your input VAT claims appear disproportionately high relative to declared exports.",
       },
     },
     {
@@ -75,7 +75,7 @@ const faqSchema = {
       name: "I am a small exporter. Is this relevant to me?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "If you export goods or services and are VAT-registered, yes. The iCMS integration affects every VAT-registered exporter. Even if you export infrequently, the auto-prefilled data on your return must match iCMS records. The change primarily affects goods exporters who use customs clearance — pure service exporters may not see iCMS data on their returns unless they also export goods.",
+        text: "If you export goods or services and are VAT-registered, yes. The iCMS integration affects every VAT-registered exporter. Even if you export infrequently, the auto-prefilled data on your return must match iCMS records. The change primarily affects goods exporters who use customs clearance - pure service exporters may not see iCMS data on their returns unless they also export goods.",
       },
     },
   ],
@@ -123,21 +123,21 @@ export default function IcmsExportGuide() {
             </ul>
 
             <h2>Who Is Affected</h2>
-            <p>This change affects <strong>VAT-registered exporters</strong> whose exports pass through iCMS customs clearance. Pure service exporters who do not use customs clearance may not see iCMS data on their returns — the integration is primarily designed for goods exports. Service exporters claiming zero-rating based on documentation (rather than customs clearance) should continue filing as before.</p>
+            <p>This change affects <strong>VAT-registered exporters</strong> whose exports pass through iCMS customs clearance. Pure service exporters who do not use customs clearance may not see iCMS data on their returns - the integration is primarily designed for goods exports. Service exporters claiming zero-rating based on documentation (rather than customs clearance) should continue filing as before.</p>
 
             <h2>Recommended Actions</h2>
             <ol>
-              <li><strong>Review your first auto-populated return</strong> carefully — compare the prefilled export values against your own shipping and invoicing records</li>
+              <li><strong>Review your first auto-populated return</strong> carefully - compare the prefilled export values against your own shipping and invoicing records</li>
               <li><strong>Establish a reconciliation process</strong> between your export documentation, iCMS records, and VAT return data before each filing cycle</li>
-              <li><strong>Document discrepancies</strong> — if iCMS data differs from your records, identify the root cause (timing differences, data entry errors, classification issues)</li>
+              <li><strong>Document discrepancies</strong> - if iCMS data differs from your records, identify the root cause (timing differences, data entry errors, classification issues)</li>
               <li><strong>Consult a tax advisor</strong> if you export frequently or operate across multiple customs regimes (SCT, EPZ, general exports)</li>
             </ol>
 
             <h2>Related Resources</h2>
             <ul>
-              <li><a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026 VAT Changes</a> — All VAT changes including the new mandatory export declaration regime effective 1 September 2026 for importers</li>
-              <li><a href="/resources/vat-auto-populated-return/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Auto-Populated Return Guide</a> — How KRA's automated return system works across eTIMS, iCMS, and iTax</li>
-              <li><a href="/services/monthly-vat-filing/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Monthly VAT Filing Service (KES 3,500/month)</a> — We handle your return filing including iCMS data reconciliation</li>
+              <li><a href="/resources/finance-act-vat-changes-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Finance Act 2026 VAT Changes</a> - All VAT changes including the new mandatory export declaration regime effective 1 September 2026 for importers</li>
+              <li><a href="/resources/vat-auto-populated-return/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Auto-Populated Return Guide</a> - How KRA's automated return system works across eTIMS, iCMS, and iTax</li>
+              <li><a href="/services/monthly-vat-filing/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Monthly VAT Filing Service (KES 3,500/month)</a> - We handle your return filing including iCMS data reconciliation</li>
             </ul>
           </div>
         </article>
@@ -170,7 +170,7 @@ export default function IcmsExportGuide() {
               href="/services/monthly-vat-filing/"
               className="inline-flex items-center justify-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
             >
-              Monthly VAT Filing — KES 3,500/month
+              Monthly VAT Filing - KES 3,500/month
               <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
             </a>
           </div>

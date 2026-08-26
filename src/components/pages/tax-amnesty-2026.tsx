@@ -28,7 +28,7 @@ const serviceSchema = {
   serviceType: "Tax Amnesty Consultation",
   provider: { "@type": "Organization", name: "Smart VAT Kenya" },
   areaServed: { "@type": "Country", name: "Kenya" },
-  priceRange: "Free check — cleanup at a flat fee",
+  priceRange: "Free check - cleanup at a flat fee",
 }
 
 const paths = [
@@ -36,11 +36,11 @@ const paths = [
     icon: CalendarCheck,
     title: "Paid your principal by 31 Dec 2025?",
     tag: "Automatic waiver",
-    detail: "Your penalties, interest and fines are waived automatically under the Finance Act 2026 amnesty — no application needed. We just confirm it on your iTax ledger.",
+    detail: "Your penalties, interest and fines are waived automatically under the Finance Act 2026 amnesty - no application needed. We just confirm it on your iTax ledger.",
   },
   {
     icon: ShieldCheck,
-    title: "Late-filing penalties only — no principal owed?",
+    title: "Late-filing penalties only - no principal owed?",
     tag: "Automatic waiver",
     detail: "Once all outstanding returns are filed, penalties are waived automatically. We file the returns and record the exact waiver date.",
   },
@@ -55,23 +55,23 @@ const paths = [
 const faqs = [
   {
     q: "What is the KRA tax amnesty 2026?",
-    a: "The Finance Act 2026 amnesty waives 100% of penalties, interest and fines on liabilities accrued up to 31 December 2025. The waiver window runs from 1 July 2026 to 31 December 2026. It does not forgive principal — that part must still be paid.",
+    a: "The Finance Act 2026 amnesty waives 100% of penalties, interest and fines on liabilities accrued up to 31 December 2025. The waiver window runs from 1 July 2026 to 31 December 2026. It does not forgive principal - that part must still be paid.",
   },
   {
     q: "Do I need to apply for the amnesty?",
-    a: "Not always. If you fully paid your principal by 31 December 2025, the waiver is automatic — no application. If you only have late-filing penalties and no principal, the waiver is also automatic once all outstanding returns are filed. That is why we recommend a free ledger check before filing anything.",
+    a: "Not always. If you fully paid your principal by 31 December 2025, the waiver is automatic - no application. If you only have late-filing penalties and no principal, the waiver is also automatic once all outstanding returns are filed. That is why we recommend a free ledger check before filing anything.",
   },
   {
     q: "What is excluded from the amnesty?",
-    a: "Anything that arose on or after 1 January 2026 is not covered. Active tax disputes are also excluded — those should be settled via Alternative Dispute Resolution first so the principal can qualify. And the principal itself is never forgiven; it must be cleared before the window closes.",
+    a: "Anything that arose on or after 1 January 2026 is not covered. Active tax disputes are also excluded - those should be settled via Alternative Dispute Resolution first so the principal can qualify. And the principal itself is never forgiven; it must be cleared before the window closes.",
   },
   {
     q: "What does the free ledger check cost?",
-    a: "It is free. We review your outstanding returns and tell you which of the three amnesty paths you qualify for. If you need outstanding returns filed or a payment plan structured, that is charged at a flat published fee — never a hidden percentage of any waiver.",
+    a: "It is free. We review your outstanding returns and tell you which of the three amnesty paths you qualify for. If you need outstanding returns filed or a payment plan structured, that is charged at a flat published fee - never a hidden percentage of any waiver.",
   },
   {
     q: "Why do it before 31 December 2026?",
-    a: "The window closes on 31 December 2026 and no extension has been announced. The longer you wait, the harder it is to clear principal inside the window. KRA has run similar amnesties before — early phases recovered over KES 80 billion in principal.",
+    a: "The window closes on 31 December 2026 and no extension has been announced. The longer you wait, the harder it is to clear principal inside the window. KRA has run similar amnesties before - early phases recovered over KES 80 billion in principal.",
   },
   {
     q: "Is Smart VAT Kenya licensed to do this?",
@@ -98,7 +98,7 @@ const steps = [
   {
     num: "02",
     title: "Get your free readout",
-    desc: "We return your position — amnesty path, outstanding returns, and rough penalty balance — with no obligation.",
+    desc: "We return your position - amnesty path, outstanding returns, and rough penalty balance - with no obligation.",
   },
   {
     num: "03",
@@ -108,9 +108,9 @@ const steps = [
 ]
 
 const excluded = [
-  "Debt that arose on or after 1 January 2026 — not covered.",
-  "The principal itself — it must be paid or structured to get the waiver.",
-  "Active disputes — settle the principal via ADR first.",
+  "Debt that arose on or after 1 January 2026 - not covered.",
+  "The principal itself - it must be paid or structured to get the waiver.",
+  "Active disputes - settle the principal via ADR first.",
   "The window is hard-capped at 31 December 2026.",
 ]
 
@@ -189,12 +189,12 @@ export default function TaxAmnesty2026Page() {
               Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
             </p>
             <h1 className="font-display text-[clamp(2.2rem,5vw,3.6rem)] font-semibold text-canvas tracking-tight leading-tight mb-5 text-balance">
-              KRA is wiping out penalties —{" "}
+              KRA is wiping out penalties -{" "}
               <span className="text-canvas/80 font-normal">but only until 31 December 2026.</span>
             </h1>
             <p className="text-[1rem] text-canvas/70 max-w-[56ch] leading-relaxed mb-6">
               Most Kenyan SMEs don&apos;t know they qualify for a 100% waiver of VAT penalties,
-              interest and fines on debt accrued up to the end of 2025. Get a free iTax ledger check —
+              interest and fines on debt accrued up to the end of 2025. Get a free iTax ledger check -
               we tell you exactly which of the three amnesty paths applies to you.
             </p>
             <div className="flex flex-wrap gap-2 mb-6" role="list" aria-label="Trust signals">
@@ -259,7 +259,7 @@ export default function TaxAmnesty2026Page() {
             Which amnesty path are you on?
           </h2>
           <p className="text-[0.9rem] text-ink-muted max-w-[52ch] leading-relaxed mb-10">
-            Most penalties are waived automatically — no application required. The one thing you need
+            Most penalties are waived automatically - no application required. The one thing you need
             to know first is which bucket your business is in. We&apos;ll tell you for free.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -276,7 +276,7 @@ export default function TaxAmnesty2026Page() {
           </div>
           <div className="mt-8 flex items-center gap-3 text-[0.82rem] text-ink-muted">
             <ShieldCheck size={16} weight="fill" className="text-brand shrink-0" aria-hidden="true" />
-            <span>Not sure? That is exactly what the free check figures out for you — live, against your real iTax position.</span>
+            <span>Not sure? That is exactly what the free check figures out for you - live, against your real iTax position.</span>
           </div>
         </div>
       </section>
@@ -302,7 +302,7 @@ export default function TaxAmnesty2026Page() {
               </ul>
               <p className="text-[0.82rem] text-ink-muted mt-4 leading-relaxed">
                 That&apos;s why rushing to file an amnesty application is a mistake. First know your
-                path — then act. One free check tells you the fastest way to clear it.
+                path - then act. One free check tells you the fastest way to clear it.
               </p>
             </div>
           </div>
@@ -319,7 +319,7 @@ export default function TaxAmnesty2026Page() {
             We look at your iTax position, so you don&apos;t guess.
           </h2>
           <p className="text-[0.9rem] text-ink-muted max-w-[48ch] leading-relaxed mb-10">
-            No commitment. Send us your KRA PIN and we tell you your position — with numbers.
+            No commitment. Send us your KRA PIN and we tell you your position - with numbers.
           </p>
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 lg:gap-4">
             {included.map((item) => (
@@ -358,7 +358,7 @@ export default function TaxAmnesty2026Page() {
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.1rem] font-semibold text-ink">
-              Free ledger check — find out your amnesty path today
+              Free ledger check - find out your amnesty path today
             </p>
             <p className="text-[0.85rem] text-ink-muted mt-1">
               The window closes 31 December 2026. Fees for follow-on work stay flat.
