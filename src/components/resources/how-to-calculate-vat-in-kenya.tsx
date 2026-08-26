@@ -178,10 +178,10 @@ export default function HowToCalculateVATPage() {
                 />
               </div>
               <div className="flex gap-3">
-                <button className="flex-1 bg-brand text-canvas text-sm font-semibold py-2.5 rounded-md hover:bg-brand-hover transition-colors">
+                <button data-track="calculator-used" data-cta-type="calc-exclusive" className="flex-1 bg-brand text-canvas text-sm font-semibold py-2.5 rounded-md hover:bg-brand-hover transition-colors">
                   Price Excl. VAT
                 </button>
-                <button className="flex-1 border border-hairline text-ink-muted text-sm font-semibold py-2.5 rounded-md hover:border-brand/40 hover:text-ink transition-colors">
+                <button data-track="calculator-used" data-cta-type="calc-inclusive" className="flex-1 border border-hairline text-ink-muted text-sm font-semibold py-2.5 rounded-md hover:border-brand/40 hover:text-ink transition-colors">
                   Price Inc. VAT
                 </button>
               </div>

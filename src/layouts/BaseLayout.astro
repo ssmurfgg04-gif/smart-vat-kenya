@@ -318,17 +318,29 @@ const localBusinessSchema = {
   <WhatsAppButton />
   <BackToTop client:load />
   <script is:inline>
-    // Query-to-service conversion tracking - WhatsApp CTA clicks
     document.addEventListener('click', function(e){
       var a = e.target.closest('a[href*="wa.me"]');
       if(!a) return;
-      var label = a.getAttribute('data-track') || a.textContent.trim().slice(0,40) || 'whatsapp';
+      var cta = a.getAttribute('data-cta-type') || a.getAttribute('data-track') || 'whatsapp';
+      var service = a.getAttribute('data-service') || 'general';
       var href = a.getAttribute('href') || '';
-      // GA4 / dataLayer
-      if(window.dataLayer) window.dataLayer.push({event:'whatsapp_click', label: label, href: href, page: location.pathname});
-      if(window.gtag) window.gtag('event','whatsapp_click',{event_label: label, page_path: location.pathname});
-      // console for debug
-      // console.log('[track] whatsapp_click', label);
+      var payload = {event:'whatsapp_click', cta_type: cta, service: service, page: location.pathname, href: href};
+      if(window.dataLayer) window.dataLayer.push(payload);
+      if(window.gtag) window.gtag('event','whatsapp_click',{cta_type: cta, service: service, page_path: location.pathname});
+      // track other key actions
+      var calc = e.target.closest('[data-track="calculator-used"]');
+      if(calc && window.dataLayer) window.dataLayer.push({event:'calculator_used', page: location.pathname});
+    });
+    // track calculator usage, service CTA, calendar add via data-track
+    document.addEventListener('click', function(e){
+      var t = e.target.closest('[data-track]');
+      if(!t) return;
+      var track = t.getAttribute('data-track');
+      if(track==='calculator-used' || track==='service-cta' || track==='calendar-add'){
+        var p={event: track, page: location.pathname, cta: t.getAttribute('data-cta-type')||track};
+        if(window.dataLayer) window.dataLayer.push(p);
+        if(window.gtag) window.gtag('event', track, {page_path: location.pathname});
+      }
     });
   </script>
 </body>

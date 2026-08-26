@@ -211,7 +211,7 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
               <a
-                href={`${WA_BASE}?text=Hi%2C%20my%20eTIMS%20invoice%20isn%27t%20going%20through`} data-track="whatsapp-cta"
+                href={`${WA_BASE}?text=Hi%2C%20my%20eTIMS%20invoice%20isn%27t%20going%20through`} data-track="whatsapp-cta" data-cta-type="hero-etims" data-service="eTIMS Rescue"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex w-full sm:w-auto flex-col items-center justify-center bg-red-600 hover:bg-red-700 text-white px-7 py-3 rounded-lg shadow-[0_10px_24px_-10px_rgba(220,38,38,0.6)] transition-colors"
@@ -225,7 +225,7 @@ export default function HomePage() {
                 </span>
               </a>
               <a
-                href="/services/vat-registration/"
+                href="/services/vat-registration/" data-track="service-cta" data-cta-type="hero-vat-registration" data-service="VAT Registration"
                 className="inline-flex w-full sm:w-auto flex-col items-center justify-center border border-[#14243e] text-[#14243e] hover:bg-slate-50 px-7 py-3 rounded-lg transition-colors"
               >
                 <span className="inline-flex items-center gap-2.5 font-semibold text-[0.95rem]">
@@ -632,7 +632,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <a
-                href={`${WA_BASE}?text=I%20need%20eTIMS%20help`} data-track="whatsapp-cta"
+                href={`${WA_BASE}?text=I%20need%20eTIMS%20help`} data-track="whatsapp-cta" data-cta-type="pricing-etims" data-service="eTIMS Rescue"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-fill block text-center bg-brand text-canvas text-sm font-semibold py-3 rounded-md transition-colors hover:bg-brand-hover"
@@ -670,7 +670,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <a
-                href={`${WA_BASE}?text=I%20want%20the%20KES%205000%20VAT%20Registration`} data-track="whatsapp-cta"
+                href={`${WA_BASE}?text=I%20want%20the%20KES%205000%20VAT%20Registration`} data-track="whatsapp-cta" data-cta-type="pricing-vat-registration" data-service="VAT Registration"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-fill block text-center border border-ink text-ink text-sm font-semibold py-3 rounded-md transition-colors hover:bg-ink hover:text-canvas"
@@ -711,7 +711,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <a
-                href={`${WA_BASE}?text=I%20want%20the%20KES%203500%20Monthly%20Filing`} data-track="whatsapp-cta"
+                href={`${WA_BASE}?text=I%20want%20the%20KES%203500%20Monthly%20Filing`} data-track="whatsapp-cta" data-cta-type="pricing-monthly" data-service="Monthly Filing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-fill block text-center border border-ink text-ink text-sm font-semibold py-3 rounded-md transition-colors hover:bg-ink hover:text-canvas"
