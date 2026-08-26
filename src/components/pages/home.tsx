@@ -338,7 +338,7 @@ export default function HomePage() {
         <section className="bg-[#0f1f3d] px-6 lg:px-10 py-8" aria-label="Why businesses trust Smart VAT Kenya">
           <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6">
             {[
-              { Icon: Lightning, title: "Fast Resolution", body: "Most issues fixed in under 24 hours." },
+              { Icon: Lightning, title: "Fast Resolution", body: "Most eTIMS issues diagnosed the same day." },
               { Icon: ShieldCheck, title: "Penalty Protection", body: "We help you qualify for the Tax Amnesty." },
               { Icon: UsersThree, title: "Human Support", body: "Real people. Real solutions." },
               { Icon: ChatCircle, title: "WhatsApp Support", body: "Send us a screenshot. We'll tell you exactly what's wrong.", whatsapp: true },
@@ -365,7 +365,7 @@ export default function HomePage() {
             <p className="text-[0.9rem] text-ink-muted max-w-[48ch] mx-auto leading-relaxed">
               It was built for KRA. The crashes, the OTP failures, the 11:47pm timeout — that's the system 
               telling you it wasn't built for small business owners. We handle registration, eTIMS and monthly filing 
-              for KES 5,000 + KES 3,500/month. M-PESA accepted. Replies in minutes on WhatsApp.
+              for KES 5,000 + KES 3,500/month. M-PESA accepted. Fast replies on WhatsApp — typically within business hours.
             </p>
           </div>
         </section>
@@ -388,9 +388,9 @@ export default function HomePage() {
       <section className="bg-canvas-alt border-y border-hairline py-5 px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-4">
           {[
-            "KRA iTax Registered Agents",
-            "200+ Businesses Registered",
-            "98% On-Time Filing Rate",
+            "KRA-Compliant VAT Services",
+            "200+ Businesses Supported",
+            "On-Time Filing by the 17th",
             "eTIMS Onboarding Included",
             "M-PESA Payment Records Provided",
             "WhatsApp Support — Not Email Tickets",
@@ -434,7 +434,7 @@ export default function HomePage() {
               {
                 number: "02",
                 problem: "The iTax portal keeps returning errors",
-                fix: "We navigate it for you — you send your KRA PIN and details over WhatsApp, we handle the rest. 100% first-attempt success rate.",
+                fix: "We navigate it for you — you send your KRA PIN and details over WhatsApp, we handle the rest. High first-attempt success — if KRA rejects a filing we fix and resubmit free.",
                 Icon: FileText,
               },
               {

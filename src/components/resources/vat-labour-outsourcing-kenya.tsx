@@ -1,4 +1,6 @@
-import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info } from "@phosphor-icons/react/dist/ssr"
+import { User,  ArrowLeft, ArrowRight, Warning, CheckCircle, Info } from "@phosphor-icons/react/dist/ssr"
+
+import { DEFAULT_AUTHOR, LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
 import { ArticleGrid } from "@/lib/resources"
@@ -9,10 +11,10 @@ const articleSchema = {
   headline: "VAT on Labour Outsourcing and Staff Costs in Kenya 2026",
   description:
     "Finance Act 2026 introduced Section 13(5A) of the VAT Act — outsourced employee salaries and statutory deductions are now disbursements not subject to VAT. Only the service fee is taxable at 16%. Guide for HR firms, security companies, EOR providers, and businesses that outsource staff.",
-  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  author: personSchema(),
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-25",
-  dateModified: "2026-07-25",
+  dateModified: LAST_VERIFIED,
   url: "https://smartvatkenya.co.ke/resources/vat-labour-outsourcing-kenya",
   mainEntityOfPage: "https://smartvatkenya.co.ke/resources/vat-labour-outsourcing-kenya",
 }

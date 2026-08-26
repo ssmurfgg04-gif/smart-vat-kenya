@@ -1,5 +1,7 @@
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, FileText, Bank, Buildings, Users, Gear } from "@phosphor-icons/react/dist/ssr"
 
+
+import { DEFAULT_AUTHOR, LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
@@ -19,10 +21,10 @@ const articleSchema = {
   headline: "VAT Registration Kenya Checklist 2026: Documents You Need",
   description:
     "Complete document checklist for KRA VAT registration in Kenya 2026. Everything you need: KRA PIN, ID, bank details, business registration, eTIMS requirements. Free printable checklist.",
-  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  author: personSchema(),
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-01",
-  dateModified: "2026-07-25",
+  dateModified: LAST_VERIFIED,
   url: "https://smartvatkenya.co.ke/resources/vat-registration-checklist",
   mainEntityOfPage: "https://smartvatkenya.co.ke/resources/vat-registration-checklist",
 }

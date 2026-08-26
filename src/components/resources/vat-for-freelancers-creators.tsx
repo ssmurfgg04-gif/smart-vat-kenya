@@ -1,4 +1,6 @@
-import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
+import { User,  ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
+
+import { DEFAULT_AUTHOR, LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 import { FACTS } from "@/src/lib/vat-facts"
@@ -10,9 +12,9 @@ const articleSchema = {
   "@type": "Article",
   headline: "VAT for Freelancers & Creators in Kenya 2026",
   description: "Do digital creators, freelance developers, and remote consultants in Kenya need a KRA PIN and VAT registration? Threshold rules, digital services, and eTIMS compliance.",
-  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  author: personSchema(),
   datePublished: "2026-08-08",
-  dateModified: "2026-08-08",
+  dateModified: LAST_VERIFIED,
 }
 
 const faqSchema = {

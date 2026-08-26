@@ -1,0 +1,138 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "KRA Problem Solver", item: "https://smartvatkenya.co.ke/kra-help/" },
+  ],
+}
+
+const categories = [
+  {
+    title: "eTIMS Problems",
+    desc: "Invoice, sync, and account issues",
+    links: [
+      { label: "eTIMS Down / Offline Invoicing", href: "/resources/etims-down-offline-invoicing/" },
+      { label: "Pending eTIMS Sync Error", href: "/resources/etims-pending-sync/" },
+      { label: "eTIMS Account Locked", href: "/resources/etims-account-locked/" },
+      { label: "eTIMS Invoice Rejected", href: "/resources/etims-invoice-rejected/" },
+      { label: "eTIMS Compliance Checklist", href: "/resources/etims-compliance-checklist/" },
+      { label: "eTIMS Mandate Guide 2026", href: "/resources/etims-mandate-guide/" },
+      { label: "eTIMS Penalty: KES 50K/Month", href: "/resources/etims-penalty-50000-per-month-kenya/" },
+      { label: "What KRA Sees via eTIMS", href: "/resources/etims-what-does-kra-see/" },
+    ],
+  },
+  {
+    title: "iTax Problems",
+    desc: "Portal, login, and filing errors",
+    links: [
+      { label: "iTax Portal Not Working", href: "/resources/itax-portal-not-working/" },
+      { label: "KRA Status Code 500", href: "/resources/kra-status-code-500-itax-errors/" },
+      { label: "KRA iTax Traffic & Congestion", href: "/resources/kra-itax-traffic-update/" },
+      { label: "KRA iTax Maintenance Schedule", href: "/resources/kra-itax-maintenance-schedule/" },
+      { label: "KRA PIN Not Working", href: "/resources/kra-pin-not-working/" },
+      { label: "Safaricom / M-Pesa Down", href: "/resources/safaricom-not-working/" },
+      { label: "How to File VAT Return on iTax", href: "/resources/how-to-file-vat-return-on-itax/" },
+      { label: "VAT Return Filing Checklist", href: "/resources/vat-return-filing-checklist/" },
+    ],
+  },
+  {
+    title: "VAT Problems",
+    desc: "Registration, penalties, and returns",
+    links: [
+      { label: "How to Calculate VAT (with Calculator)", href: "/resources/how-to-calculate-vat-in-kenya/" },
+      { label: "VAT Penalties Reference Table", href: "/resources/kra-vat-penalties-reference/" },
+      { label: "Late VAT Filing Penalty", href: "/resources/kra-penalty-for-late-vat-filing/" },
+      { label: "VAT Registration Checklist", href: "/resources/vat-registration-checklist/" },
+      { label: "How to Register for VAT", href: "/resources/how-to-register-for-vat-in-kenya/" },
+      { label: "VAT Deregistration Kenya", href: "/resources/vat-deregistration-kenya/" },
+      { label: "VAT Special Table Risks", href: "/resources/vat-special-table-risks/" },
+      { label: "VAT Refund & Audit Defense", href: "/resources/vat-refund-audit-defense/" },
+    ],
+  },
+  {
+    title: "Tax Amnesty & Compliance",
+    desc: "Deadlines, waivers, and certificates",
+    links: [
+      { label: "KRA Tax Amnesty 2026", href: "/resources/kra-tax-amnesty-2026/" },
+      { label: "KRA Fine of KES 70,000?", href: "/resources/kra-fine-70000/" },
+      { label: "How to File Nil Returns", href: "/resources/how-to-file-nil-returns-2026/" },
+      { label: "Tax Compliance Certificate", href: "/resources/tax-compliance-certificate-kenya/" },
+      { label: "KRA VAT Audit Process", href: "/resources/kra-vat-audit-process/" },
+      { label: "Withholding VAT Kenya", href: "/resources/withholding-vat-kenya/" },
+      { label: "M-Pesa Error Codes (Paying KRA)", href: "/resources/mpesa-error-codes/" },
+      { label: "KRA System Status", href: "/kra-status/" },
+    ],
+  },
+]
+---
+
+<BaseLayout
+  title="KRA Help: Fix eTIMS, iTax and VAT"
+  description="Fix eTIMS down, pending sync, account locked, iTax not working and VAT penalties. Diagnose your issue and get the fix or let Smart VAT handle it."
+  canonical="/kra-help/"
+  breadcrumbSchema={breadcrumbSchema}
+>
+  <div class="bg-canvas-dark px-6 lg:px-10 py-14">
+    <div class="max-w-5xl mx-auto">
+      <a href="/" class="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
+        ← Back to Home
+      </a>
+      <div class="flex flex-wrap gap-2 mb-5">
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/60 px-2.5 py-1 rounded-sm">Problem Solver</span>
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-brand/20 text-brand px-2.5 py-1 rounded-sm">32 Common Issues</span>
+      </div>
+      <h1 class="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
+        What's wrong with KRA?
+      </h1>
+      <p class="text-[0.9rem] text-canvas/60 max-w-[60ch] leading-relaxed mb-6">
+        Pick the category that matches your problem. Each guide gives you the quick fix, the explanation, and — if you want us to handle it — a flat-fee rescue.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20a%20KRA%20issue" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-brand text-white font-semibold text-sm px-6 py-3 rounded-md hover:bg-brand-hover transition-colors">
+          Describe Your Problem on WhatsApp →
+        </a>
+        <a href="/tools/" class="inline-flex items-center justify-center gap-2 border border-canvas/20 text-canvas font-semibold text-sm px-6 py-3 rounded-md hover:bg-canvas/10 transition-colors">
+          Use Free KRA Tools
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-6 py-10">
+    <div class="grid gap-6 sm:grid-cols-2">
+      {categories.map((cat) => (
+        <div class="border border-hairline rounded-xl p-6 bg-canvas">
+          <h2 class="font-display text-[1.05rem] font-semibold text-ink mb-1">{cat.title}</h2>
+          <p class="text-[0.78rem] text-ink-muted mb-4">{cat.desc}</p>
+          <ul class="space-y-2">
+            {cat.links.map((l) => (
+              <li>
+                <a href={l.href} class="text-[0.85rem] text-ink-soft hover:text-brand underline underline-offset-2 leading-snug">
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10 border-2 border-brand/30 rounded-xl p-6 sm:p-8 bg-brand-muted flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div>
+        <p class="font-display text-[1.1rem] font-semibold text-ink mb-1">Can't find your issue?</p>
+        <p class="text-[0.85rem] text-ink-muted">Send us a screenshot. We diagnose it over WhatsApp, typically the same day.</p>
+      </div>
+      <a href="https://wa.me/254717344440?text=Hi%2C%20I%20have%20a%20KRA%20issue%20not%20listed%20on%20your%20site" target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex items-center gap-2 bg-brand text-white font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">
+        WhatsApp Us
+      </a>
+    </div>
+
+    <p class="text-center text-[0.78rem] text-ink-muted mt-6">
+      Also see: <a href="/kra-status/" class="text-brand underline underline-offset-2 hover:text-brand-hover">KRA System Status</a> · <a href="/tax-deadlines/" class="text-brand underline underline-offset-2 hover:text-brand-hover">Tax Deadline Calendar</a> · <a href="/resources/" class="text-brand underline underline-offset-2 hover:text-brand-hover">All Resources</a>
+    </p>
+  </div>
+</BaseLayout>

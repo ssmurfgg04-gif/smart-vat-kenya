@@ -1,5 +1,7 @@
-import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
+import { User,  ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
+
+import { DEFAULT_AUTHOR, LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
@@ -76,10 +78,10 @@ const articleSchema = {
   headline: "Pending eTIMS Sync in Kenya — Why Invoices Are Stuck and How to Fix It (2026)",
   description:
     "Your eTIMS invoices are stuck on 'Pending Sync'. Learn what Pending Sync means, why invoices stay stuck on eTIMS Client, how long KRA sync takes, and the exact steps to force a successful sync before the deadline.",
-  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  author: personSchema(),
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-02",
-  dateModified: "2026-08-02",
+  dateModified: LAST_VERIFIED,
   url: "https://smartvatkenya.co.ke/resources/etims-pending-sync",
   mainEntityOfPage: "https://smartvatkenya.co.ke/resources/etims-pending-sync",
 }

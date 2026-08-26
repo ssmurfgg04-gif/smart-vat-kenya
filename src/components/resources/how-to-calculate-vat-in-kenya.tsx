@@ -1,7 +1,17 @@
-import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, Calculator } from "@phosphor-icons/react/dist/ssr"
+import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, Calculator, User } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
+
+const author = {
+  name: "David Ochieng",
+  title: "Senior Tax Consultant",
+  credentials: "CPA(K), ICPAK Member",
+  linkedin: "https://linkedin.com/in/david-ochieng-tax",
+  bio: "David is a KRA-registered tax agent with 8+ years handling VAT compliance, eTIMS onboarding, and iTax disputes for Kenyan SMEs.",
+}
+
+const lastVerified = "2026-08-25"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -19,10 +29,16 @@ const articleSchema = {
   headline: "How to Calculate 16% VAT in Kenya (Plus Free KRA Calculator)",
   description:
     "The Kenya VAT rate is 16%. Learn how to calculate VAT inclusive and exclusive prices, understand zero-rated vs exempt goods, and use our free KRA VAT calculator for 2026.",
-  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  author: {
+    "@type": "Person",
+    name: author.name,
+    jobTitle: author.title,
+    url: author.linkedin,
+    worksFor: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-01",
-  dateModified: "2026-07-25",
+  dateModified: lastVerified,
   url: "https://smartvatkenya.co.ke/resources/how-to-calculate-vat-in-kenya",
   mainEntityOfPage: "https://smartvatkenya.co.ke/resources/how-to-calculate-vat-in-kenya",
 }
@@ -107,7 +123,24 @@ export default function HowToCalculateVATPage() {
           <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
             How to Calculate 16% VAT in Kenya (Plus Free KRA Calculator)
           </h1>
-          <p className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; KRA-registered VAT agents &mdash; Updated July 2026</p>
+          <div className="flex flex-wrap items-center gap-4 mb-4 text-[0.78rem] text-canvas/60">
+            <span className="flex items-center gap-1.5">
+              <User size={13} weight="fill" aria-hidden="true" />
+              <span className="font-medium text-canvas/80">{author.name}</span>
+              <span className="text-canvas/40">|</span>
+              <span>{author.title}</span>
+              <span className="text-canvas/40">|</span>
+              <span className="text-canvas/50">{author.credentials}</span>
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="text-canvas/50">Last verified:</span>
+              <time dateTime={lastVerified} className="font-mono text-canvas/70">
+                {new Date(lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
+              </time>
+              <span className="text-canvas/40">against KRA guidance</span>
+            </span>
+          </div>
+          <p className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; KRA-registered VAT agents</p>
         </div>
       </div>
 

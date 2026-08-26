@@ -1,0 +1,101 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Kenya Tax Deadline Calendar 2026", item: "https://smartvatkenya.co.ke/tax-deadlines/" },
+  ],
+}
+
+const deadlines = [
+  { name: "VAT Return & Payment", due: "20th of every month", next: "20 September 2026", note: "For the August 2026 tax period. File via iTax; pay via Paybill 572572.", urgent: true },
+  { name: "PAYE (Pay As You Earn)", due: "9th of every month", next: "9 September 2026", note: "For August 2026 payroll. Withholding agents must remit via iTax.", urgent: false },
+  { name: "Withholding VAT", due: "20th of every month", next: "20 September 2026", note: "Withholding VAT agents remit VAT deducted from suppliers.", urgent: false },
+  { name: "Withholding Tax (General)", due: "20th of every month", next: "20 September 2026", note: "Rent, professional fees, dividends — as applicable.", urgent: false },
+  { name: "Turnover Tax (TOT)", due: "20th of every month", next: "20 September 2026", note: "For small businesses under the TOT regime.", urgent: false },
+  { name: "Excise Duty", due: "20th of every month", next: "20 September 2026", note: "Manufacturers and licensed excise taxpayers.", urgent: false },
+  { name: "Annual Income Tax (Individual)", due: "30 June annually", next: "30 June 2027", note: "For the year ending 31 Dec 2026. Individual filers via iTax.", urgent: false },
+  { name: "Annual Income Tax (Companies - Dec year-end)", due: "30 June annually", next: "30 June 2027", note: "Companies with Dec year-end. Six months after year-end.", urgent: false },
+  { name: "KRA Tax Amnesty Window Closes", due: "31 December 2026 (one-off)", next: "31 December 2026", note: "Last day to qualify for 100% waiver of qualifying pre-2026 penalties, interest & fines.", urgent: true },
+]
+---
+
+<BaseLayout
+  title="Kenya Tax Deadlines 2026"
+  description="Kenya tax deadlines 2026: VAT 20th monthly, PAYE 9th, withholding VAT and the 31 Dec tax amnesty deadline. Add reminders or let Smart VAT file for you."
+  canonical="/tax-deadlines/"
+  breadcrumbSchema={breadcrumbSchema}
+>
+  <div class="bg-canvas-dark px-6 lg:px-10 py-14">
+    <div class="max-w-4xl mx-auto">
+      <a href="/" class="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
+        ← Back to Home
+      </a>
+      <div class="flex flex-wrap gap-2 mb-5">
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/60 px-2.5 py-1 rounded-sm">Calendar 2026</span>
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-red-500/20 text-red-300 px-2.5 py-1 rounded-sm">Amnesty ends 31 Dec</span>
+      </div>
+      <h1 class="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
+        Kenya Tax Deadline Calendar 2026
+      </h1>
+      <p class="text-[0.9rem] text-canvas/60 max-w-[60ch] leading-relaxed">
+        Every KRA deadline in one place. We file client VAT returns on the 17th — three working days before the 20th — so you never pay a late penalty.
+      </p>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-6 py-10">
+    <div class="border border-hairline rounded-xl overflow-hidden mb-8">
+      <div class="overflow-x-auto">
+        <table class="w-full text-[0.85rem]">
+          <thead>
+            <tr class="bg-canvas-alt border-b border-hairline">
+              <th class="text-left p-3.5 font-semibold text-ink">Tax</th>
+              <th class="text-left p-3.5 font-semibold text-ink">Due</th>
+              <th class="text-left p-3.5 font-semibold text-ink">Next deadline</th>
+              <th class="text-left p-3.5 font-semibold text-ink">Notes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-hairline">
+            {deadlines.map((d) => (
+              <tr class={d.urgent ? "bg-red-50/40" : ""}>
+                <td class="p-3.5 font-medium text-ink">{d.name} {d.urgent && <span class="ml-1 inline-flex font-mono text-[0.6rem] uppercase tracking-wide bg-red-600 text-white px-1.5 py-0.5 rounded">Due soon</span>}</td>
+                <td class="p-3.5 text-ink-muted whitespace-nowrap">{d.due}</td>
+                <td class="p-3.5 text-ink font-mono text-[0.82rem] whitespace-nowrap">{d.next}</td>
+                <td class="p-3.5 text-ink-muted text-[0.82rem] leading-snug max-w-[32ch]">{d.note}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-3 mb-8">
+      <div class="border border-hairline rounded-xl p-5 bg-canvas">
+        <p class="font-display text-[0.95rem] font-semibold text-ink mb-1">Add to calendar</p>
+        <p class="text-[0.82rem] text-ink-muted mb-3">Get a Google Calendar reminder for the 20th every month.</p>
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=KRA+VAT+Deadline&dates=20260920T000000Z/20260920T000000Z&details=VAT+return+due+via+iTax.+Pay+via+Paybill+572572&location=iTax+Portal" target="_blank" rel="noopener noreferrer" class="text-[0.82rem] font-medium text-brand underline underline-offset-2 hover:text-brand-hover">Add 20 Sept VAT deadline →</a>
+      </div>
+      <div class="border border-hairline rounded-xl p-5 bg-canvas">
+        <p class="font-display text-[0.95rem] font-semibold text-ink mb-1">WhatsApp reminders</p>
+        <p class="text-[0.82rem] text-ink-muted mb-3">We nudge you on the 15th — before the portal gets busy.</p>
+        <a href="https://wa.me/254717344440?text=Remind+me+about+KRA+deadlines+every+month" target="_blank" rel="noopener noreferrer" class="text-[0.82rem] font-medium text-brand underline underline-offset-2 hover:text-brand-hover">Get WhatsApp reminders →</a>
+      </div>
+      <div class="border border-brand/20 rounded-xl p-5 bg-brand-muted">
+        <p class="font-display text-[0.95rem] font-semibold text-ink mb-1">Let us file it</p>
+        <p class="text-[0.82rem] text-ink-muted mb-3">KES 3,500/month. Filed on the 17th. No portal stress.</p>
+        <a href="https://wa.me/254717344440?text=I+want+monthly+VAT+filing" target="_blank" rel="noopener noreferrer" class="text-[0.82rem] font-medium text-brand underline underline-offset-2 hover:text-brand-hover">Start filing →</a>
+      </div>
+    </div>
+
+    <div class="border border-hairline rounded-xl p-6 bg-canvas-alt">
+      <p class="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted mb-3">Sources & verification</p>
+      <p class="text-[0.83rem] text-ink-muted leading-relaxed">
+        Dates per KRA iTax guidance and the Tax Procedures Act. Last verified <time datetime="2026-08-25" class="font-mono">25 Aug 2026</time> against KRA. Tax amnesty deadline per KRA's 2026 Tax Amnesty Programme (penalties, interest & fines on liabilities accrued up to 31 Dec 2025, window 1 Jul–31 Dec 2026; principal must be settled where due). Always confirm via <a href="https://www.kra.go.ke" target="_blank" rel="noopener noreferrer" class="text-brand underline">kra.go.ke</a> or 020 499 9999.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

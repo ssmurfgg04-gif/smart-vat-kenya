@@ -1,4 +1,6 @@
-import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
+import { User,  ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
+
+import { DEFAULT_AUTHOR, LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 import { ArticleGrid } from "@/lib/resources"
 import { Flowchart, AmnestyEligibilityFlow } from "@/components/flowcharts"
@@ -19,10 +21,10 @@ const articleSchema = {
   headline: "KRA Tax Amnesty 2026: Full Penalty and Interest Waiver — Complete Guide",
   description:
     "The KRA tax amnesty 2026 waives 100% of penalties and interest on tax debt accumulated up to December 31, 2025. Running from July 1 to December 31, 2026. How to qualify, apply on iTax, and clear your ledger.",
-  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  author: personSchema(),
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-27",
-  dateModified: "2026-07-28",
+  dateModified: LAST_VERIFIED,
   url: "https://smartvatkenya.co.ke/resources/kra-tax-amnesty-2026",
   mainEntityOfPage: "https://smartvatkenya.co.ke/resources/kra-tax-amnesty-2026",
 }

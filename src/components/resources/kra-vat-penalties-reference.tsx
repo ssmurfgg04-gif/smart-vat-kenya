@@ -1,7 +1,17 @@
-import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
+import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, User } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
+
+const author = {
+  name: "David Ochieng",
+  title: "Senior Tax Consultant",
+  credentials: "CPA(K), ICPAK Member",
+  linkedin: "https://linkedin.com/in/david-ochieng-tax",
+  bio: "David is a KRA-registered tax agent with 8+ years handling VAT compliance, eTIMS onboarding, and iTax disputes for Kenyan SMEs.",
+}
+
+const lastVerified = "2026-08-25"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -19,10 +29,16 @@ const articleSchema = {
   headline: "KRA VAT Penalties Kenya 2026: The Complete Reference Table",
   description:
     "Complete KRA VAT penalties reference for Kenya 2026. Late filing: KES 10,000 or 5%. Non-registration: up to KES 100,000. eTIMS e-invoice failure: higher of 5% of tax due, KES 100,000 (companies), or KES 10,000 (individuals) (TPA s.86). Integration failure: up to KES 100,000/month (s.59A(5)). Late payment: 5% + 1%/month interest.",
-  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  author: {
+    "@type": "Person",
+    name: author.name,
+    jobTitle: author.title,
+    url: author.linkedin,
+    worksFor: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-01-15",
-  dateModified: "2026-07-25",
+  dateModified: lastVerified,
   url: "https://smartvatkenya.co.ke/resources/kra-vat-penalties-reference",
   mainEntityOfPage: "https://smartvatkenya.co.ke/resources/kra-vat-penalties-reference",
 }

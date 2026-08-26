@@ -1,5 +1,7 @@
-import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
+import { User,  ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
+
+import { DEFAULT_AUTHOR, LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
@@ -19,10 +21,10 @@ const articleSchema = {
   headline: "KRA Auto-Populated VAT Return Guide 2026",
   description:
     "How KRA's auto-populated VAT return works, what to verify, how to add missing invoices, and what to do when your purchases do not appear. Step-by-step filing guide for 2026.",
-  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  author: personSchema(),
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-25",
-  dateModified: "2026-07-25",
+  dateModified: LAST_VERIFIED,
   url: "https://smartvatkenya.co.ke/resources/vat-auto-populated-return",
   mainEntityOfPage: "https://smartvatkenya.co.ke/resources/vat-auto-populated-return",
 }

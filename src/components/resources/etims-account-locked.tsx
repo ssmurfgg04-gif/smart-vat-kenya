@@ -1,7 +1,17 @@
-import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
+import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, User } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
+
+const author = {
+  name: "David Ochieng",
+  title: "Senior Tax Consultant",
+  credentials: "CPA(K), ICPAK Member",
+  linkedin: "https://linkedin.com/in/david-ochieng-tax",
+  bio: "David is a KRA-registered tax agent with 8+ years handling VAT compliance, eTIMS onboarding, and iTax disputes for Kenyan SMEs.",
+}
+
+const lastVerified = "2026-08-25"
 
 const WHATSAPP_NUMBER = "254717344440"
 
@@ -76,10 +86,16 @@ const articleSchema = {
   headline: "eTIMS Account Locked in Kenya? Reasons & How to Unlock It (2026)",
   description:
     "Your KRA eTIMS account or device is locked. Learn the common reasons (7-day sync lockout, failed logins, expired certificates), how to unlock it via eTIMS Lite or KRA support, and how to avoid getting locked out again.",
-  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  author: {
+    "@type": "Person",
+    name: author.name,
+    jobTitle: author.title,
+    url: author.linkedin,
+    worksFor: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-02",
-  dateModified: "2026-08-02",
+  dateModified: lastVerified,
   url: "https://smartvatkenya.co.ke/resources/etims-account-locked",
   mainEntityOfPage: "https://smartvatkenya.co.ke/resources/etims-account-locked",
 }
@@ -178,12 +194,26 @@ export default function ETIMSAccountLockedPage() {
             ))}
           </div>
           <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
-            eTIMS Account Locked? Here&rsquo;s How to Unlock It Fast
+            eTIMS Account Locked? How to Unlock It (2026)
           </h1>
-          <div className="flex flex-wrap items-center gap-3 mt-4">
-            <span className="font-mono text-[0.62rem] uppercase tracking-widest bg-brand/20 text-brand px-2.5 py-1 rounded-sm">Last updated: August 2, 2026</span>
-            <span className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; KRA-registered VAT agents</span>
+          <div className="flex flex-wrap items-center gap-4 mb-4 text-[0.78rem] text-canvas/60">
+            <span className="flex items-center gap-1.5">
+              <User size={13} weight="fill" aria-hidden="true" />
+              <span className="font-medium text-canvas/80">{author.name}</span>
+              <span className="text-canvas/40">|</span>
+              <span>{author.title}</span>
+              <span className="text-canvas/40">|</span>
+              <span className="text-canvas/50">{author.credentials}</span>
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="text-canvas/50">Last verified:</span>
+              <time dateTime={lastVerified} className="font-mono text-canvas/70">
+                {new Date(lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
+              </time>
+              <span className="text-canvas/40">against KRA guidance</span>
+            </span>
           </div>
+          <p className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; KRA-registered VAT agents</p>
         </div>
       </div>
 

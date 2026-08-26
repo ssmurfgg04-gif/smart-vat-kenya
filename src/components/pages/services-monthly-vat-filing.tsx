@@ -20,7 +20,7 @@ const WA_BASE = "https://wa.me/254717344440"
 const WA_TEXT = "Hi%2C%20I%20want%20the%20KES%203500%20Monthly%20VAT%20Filing%20service"
 
 const features = [
-  { Icon: CalendarBlank, label: "Filed by the 20th — always" },
+  { Icon: CalendarBlank, label: "Filed before the 20th — every month" },
   { Icon: CheckCircle, label: "We file on the 17th, not the 20th" },
   { Icon: ShieldCheck, label: "Avoids KES 10,000 late penalty" },
   { Icon: CurrencyDollar, label: "M-PESA payment guidance" },
@@ -38,7 +38,7 @@ const steps = [
 const comparisons = [
   { criterion: "Time spent on iTax portal", us: "2 minutes on WhatsApp", them: "Hours navigating iTax" },
   { criterion: "Stress of deadline", us: "We handle it", them: "You chase the 20th" },
-  { criterion: "Risk of KES 10,000 penalty", us: "Filed on 17th — zero risk", them: "Always at risk" },
+  { criterion: "Risk of KES 10,000 penalty", us: "Filed on 17th — protected", them: "At risk near the 20th" },
   { criterion: "Portal errors & downtime", us: "We deal with iTax", them: "You deal with it" },
   { criterion: "Payment", us: "M-PESA — 30 seconds", them: "Filing fees + bank charges" },
   { criterion: "Filing confirmation", us: "Sent to you on WhatsApp", them: "You download from iTax" },
@@ -47,7 +47,7 @@ const comparisons = [
 const faqs = [
   {
     q: "What if I miss the 20th?",
-    a: "We never miss it. We file on the 17th, three full working days before the KRA deadline — that buffer is our process, not a hope. If KRA rejects a return for any reason, we fix it and resubmit at no extra cost. That's a process we control, which is a better promise than paying a fine after the fact.",
+    a: "Our process is to file on the 17th — three full working days before KRA's 20th deadline — so you have a buffer against outages. If KRA rejects a return, we fix it and resubmit at no extra cost the same day.",
   },
   {
     q: "Can I cancel anytime?",
@@ -243,7 +243,7 @@ export default function MonthlyVatFilingPage() {
               KES 3,500/month — filed before the 20th
             </p>
             <p className="text-[0.85rem] text-ink-muted mt-1">
-              No lock-in. Cancel anytime. We file on the 17th so you never miss the deadline.
+              No lock-in. Cancel anytime. We file on the 17th to keep you ahead of the deadline.
             </p>
           </div>
           <a

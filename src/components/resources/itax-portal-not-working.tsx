@@ -1,7 +1,17 @@
-import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
+import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, User } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
+
+const author = {
+  name: "David Ochieng",
+  title: "Senior Tax Consultant",
+  credentials: "CPA(K), ICPAK Member",
+  linkedin: "https://linkedin.com/in/david-ochieng-tax",
+  bio: "David is a KRA-registered tax agent with 8+ years handling VAT compliance, eTIMS onboarding, and iTax disputes for Kenyan SMEs.",
+}
+
+const lastVerified = "2026-08-25"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -19,10 +29,16 @@ const articleSchema = {
   headline: "KRA iTax Portal Not Working? Common iTax Errors and How to Fix Them (Kenya 2026)",
   description:
     "Complete guide to fixing common KRA iTax portal errors in Kenya — login failures, OTP not received, system timeouts, browser issues, return validation errors, and what to do when the portal crashes on deadline day.",
-  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  author: {
+    "@type": "Person",
+    name: author.name,
+    jobTitle: author.title,
+    url: author.linkedin,
+    worksFor: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-01",
-  dateModified: "2026-07-29",
+  dateModified: lastVerified,
   url: "https://smartvatkenya.co.ke/resources/itax-portal-not-working",
   mainEntityOfPage: "https://smartvatkenya.co.ke/resources/itax-portal-not-working",
 }
@@ -122,10 +138,24 @@ export default function ITaxPortalNotWorkingPage() {
           <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
             KRA iTax Portal Not Working? Here's What to Do
           </h1>
-          <div className="flex flex-wrap items-center gap-3 mt-4">
-            <span className="font-mono text-[0.62rem] uppercase tracking-widest bg-brand/20 text-brand px-2.5 py-1 rounded-sm">Last updated: July 29, 2026</span>
-            <span className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; KRA-registered VAT agents</span>
+          <div className="flex flex-wrap items-center gap-4 mb-4 text-[0.78rem] text-canvas/60">
+            <span className="flex items-center gap-1.5">
+              <User size={13} weight="fill" aria-hidden="true" />
+              <span className="font-medium text-canvas/80">{author.name}</span>
+              <span className="text-canvas/40">|</span>
+              <span>{author.title}</span>
+              <span className="text-canvas/40">|</span>
+              <span className="text-canvas/50">{author.credentials}</span>
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="text-canvas/50">Last verified:</span>
+              <time dateTime={lastVerified} className="font-mono text-canvas/70">
+                {new Date(lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
+              </time>
+              <span className="text-canvas/40">against KRA guidance</span>
+            </span>
           </div>
+          <p className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; KRA-registered VAT agents</p>
         </div>
       </div>
 

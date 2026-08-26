@@ -1,5 +1,7 @@
-import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
+import { User,  ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
+
+import { DEFAULT_AUTHOR, LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
@@ -76,10 +78,10 @@ const articleSchema = {
   headline: "KRA eTIMS Down? Invoice Offline Now and Sync When It Recovers",
   description:
     "KRA eTIMS down or offline? Keep issuing invoices in offline mode, sync when the portal recovers, and avoid the 7-day device lockout and eTIMS non-compliance penalties (TPA s.86: higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals).",
-  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  author: personSchema(),
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-25",
-  dateModified: "2026-07-25",
+  dateModified: LAST_VERIFIED,
   url: "https://smartvatkenya.co.ke/resources/etims-down-offline-invoicing",
   mainEntityOfPage: "https://smartvatkenya.co.ke/resources/etims-down-offline-invoicing",
 }

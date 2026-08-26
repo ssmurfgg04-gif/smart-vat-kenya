@@ -1,4 +1,6 @@
-import { ArrowLeft, ArrowRight, Warning, CheckCircle, Info } from "@phosphor-icons/react/dist/ssr"
+import { User,  ArrowLeft, ArrowRight, Warning, CheckCircle, Info } from "@phosphor-icons/react/dist/ssr"
+
+import { DEFAULT_AUTHOR, LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
 import { ArticleGrid } from "@/lib/resources"
@@ -9,10 +11,10 @@ const articleSchema = {
   headline: "KRA VAT Audit Process Kenya 2026: What to Expect and How to Prepare",
   description:
     "What happens during a KRA VAT audit in Kenya? Notice, document requests, site visits, assessment, objection, and appeal. How to prepare your records and avoid adverse findings. Complete guide for registered VAT persons.",
-  author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
+  author: personSchema(),
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-07-26",
-  dateModified: "2026-07-26",
+  dateModified: LAST_VERIFIED,
   url: "https://smartvatkenya.co.ke/resources/kra-vat-audit-process",
   mainEntityOfPage: "https://smartvatkenya.co.ke/resources/kra-vat-audit-process",
 }
