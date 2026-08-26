@@ -255,8 +255,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/icms-export-guide/",
   },
   "how-to-calculate-vat-in-kenya": {
-    title: "Formula for Calculating VAT in Kenya 2026",
-    description: "Learn how to calculate 16% VAT in Kenya — including VAT exclusive, inclusive, and reverse calculations. Free formula guide with KES examples.",
+    title: "How to Calculate VAT Kenya: 16% Formula",
+    description: "Learn how to calculate 16% VAT in Kenya — VAT exclusive vs inclusive formulas, zero-rated vs exempt, and a free KRA VAT calculator you can use instantly.",
     canonical: "/resources/how-to-calculate-vat-in-kenya/",
   },
   "how-to-file-nil-returns-2026": {
@@ -335,8 +335,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/kra-vat-filing-deadline-august-2026/",
   },
   "kra-vat-penalties-reference": {
-    title: "KRA VAT Penalties: Filing & Payment",
-    description: "KRA VAT penalties reference table for 2026: late filing (5%), late payment (1%/month), eTIMS non-compliance (KES 50K/mo), and waiver eligibility.",
+    title: "VAT Penalties Kenya 2026: Late Filing",
+    description: "KRA VAT penalties for 2026: late filing, late payment and eTIMS fines. See how much is due and when you can apply for a waiver under the Tax Amnesty.",
     canonical: "/resources/kra-vat-penalties-reference/",
   },
   "kra-data-sources": {
