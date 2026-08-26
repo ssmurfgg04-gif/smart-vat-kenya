@@ -386,7 +386,7 @@ export default function HomePage() {
             </div>
             <div className="mt-8 text-center">
               <a href="/kra-help/" className="inline-flex items-center gap-2 bg-brand text-white font-semibold text-sm px-7 py-3.5 rounded-md hover:bg-brand-hover transition-colors">
-                View All 32 KRA Problem Guides
+                View All KRA Fixes
                 <ArrowRight size={14} weight="bold" aria-hidden="true" />
               </a>
             </div>
@@ -522,7 +522,7 @@ KRA's{" "}
             Free isn't free
           </p>
           <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-tight text-ink mb-6 text-balance">
-            Doing it yourself on iTax is free. It's also three weeks, fourteen portal errors, and one penalty.
+            Doing it yourself on iTax is free. It's also three weeks, frequent portal errors, and one penalty.
           </h2>
           <p className="text-[0.9rem] text-ink-muted max-w-[52ch] mb-16 leading-relaxed">
             The real enemy isn't accountants who charge KES 15,000–30,000. It's the <em>free</em> path that

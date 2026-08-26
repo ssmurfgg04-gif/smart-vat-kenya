@@ -17,3 +17,10 @@
 # Note: /about and /how-it-works are directory-based in Astro output (trailingSlash: "always")
 # Netlify natively handles /foo -> /foo/ for directory-based content
 # No catch-all rules needed - they cause redirect loops
+
+# Explicit trailing-slash redirects for resource pages (overrides any cached CDN rules)
+# Pattern: match non-slash URLs and redirect to slash version
+# Using splat with explicit path segments to avoid matching already-slashed URLs
+/resources/:slug  /resources/:slug/  301!
+/services/:slug  /services/:slug/  301!
+/tools/:slug  /tools/:slug/  301!
