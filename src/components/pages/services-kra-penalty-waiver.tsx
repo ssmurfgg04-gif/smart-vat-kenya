@@ -150,7 +150,7 @@ export default function KRAPenaltyWaiverPage() {
             </span>
           </div>
           <a
-            href={`${WA_BASE} data-track="whatsapp-cta"?text=${WA_TEXT}`}
+            href={`${WA_BASE}?text=${WA_TEXT}`} data-track="whatsapp-cta"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
@@ -307,7 +307,7 @@ export default function KRAPenaltyWaiverPage() {
             </p>
           </div>
           <a
-            href={`${WA_BASE} data-track="whatsapp-cta"?text=${WA_TEXT}`}
+            href={`${WA_BASE}?text=${WA_TEXT}`} data-track="whatsapp-cta"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
@@ -357,7 +357,7 @@ export default function KRAPenaltyWaiverPage() {
             on 31 December 2026.
           </p>
           <a
-            href={`${WA_BASE} data-track="whatsapp-cta"?text=${WA_TEXT}`}
+            href={`${WA_BASE}?text=${WA_TEXT}`} data-track="whatsapp-cta"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3.5 rounded-md hover:bg-brand-hover transition-colors"

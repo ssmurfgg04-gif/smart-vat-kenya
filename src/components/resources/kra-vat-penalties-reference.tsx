@@ -199,10 +199,9 @@ export default function KRAPenaltiesReferencePage() {
 
         {/* Quick Answer / BLUF */}
         <div className="border-l-[3px] border-brand pl-5 mb-10">
-          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">At a Glance</p>
+          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">At a Glance — What You Owe & How to Waive It</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            KRA imposes <strong className="text-ink">nine distinct categories</strong> of VAT penalties ranging from{" "}
-            <strong className="text-ink">KES 10,000</strong> fixed fines to <strong className="text-ink">KES 100,000 per month</strong> for eTIMS integration failures (TPA s.59A(5)) and up to <strong className="text-ink">KES 100,000</strong> or <strong className="text-ink">5% of the tax due</strong> for e-invoicing failures (TPA s.86). Late filing, late payment, non-registration, evasion, eTIMS non-compliance, blocked input VAT, and withholding agent defaults are all penalised at different rates. Most penalties carry <strong className="text-ink">1% monthly interest</strong> and can be <strong className="text-ink">waived</strong> through a formal application on iTax. This guide lists every penalty, explains how they stack, and shows you how to get help.
+            Facing a KES 10,000+ bill? KRA has <strong className="text-ink">nine penalty categories</strong> — from <strong className="text-ink">KES 10,000</strong> fixed to <strong className="text-ink">KES 100,000/month</strong> (eTIMS, TPA s.59A(5)) and <strong className="text-ink">5% of tax due</strong> (s.86), plus <strong className="text-ink">1% monthly interest</strong>. Good news: most can be <strong className="text-ink">waived via iTax or the 2026 Tax Amnesty</strong> if you act before 31 Dec. This table shows exactly what you owe — and <a href="https://wa.me/254717344440?text=Need%20help%20with%20KRA%20VAT%20penalties" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">we check waiver eligibility free</a>.
           </p>
         </div>
 

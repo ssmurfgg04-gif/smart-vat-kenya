@@ -163,12 +163,9 @@ export default function ITaxPortalNotWorkingPage() {
 
         {/* Quick Answer / BLUF */}
         <div className="border-l-[3px] border-brand pl-5 mb-10">
-          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
+          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer — 60-Second Workaround</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            The KRA iTax portal crashes <strong className="text-ink">2-3 times per week</strong> on average, with outages spiking dramatically around the 20th monthly deadline. Most errors &mdash; login failures, timeouts, OTP delays, and Error 500 pages &mdash; can be fixed by clearing your cache, switching to{" "}
-            <strong className="text-ink">Chrome or Edge</strong>, logging in during off-peak hours, or resetting your credentials. But if you are tired of wrestling with iTax every month,{" "}
-            <strong className="text-ink">Smart VAT Kenya</strong> can file your VAT returns for you at{" "}
-            <strong className="text-ink">KES 3,500/month</strong> &mdash; you never touch the portal again.
+            iTax down again? Don&apos;t keep refreshing. Most failures are <strong className="text-ink">cache, OTP delay, or 20th rush</strong> — fixed in 60 seconds: clear cache, switch to <strong className="text-ink">Chrome/Edge</strong>, try before 8am or after 10pm, or reset credentials. Or skip iTax entirely — <strong className="text-ink">we file via the agent portal (no queues)</strong> for <strong className="text-ink">KES 3,500/month</strong> and you never log in again. <a href="https://wa.me/254717344440?text=iTax%20not%20working%20-%20need%20help%20filing" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">WhatsApp us, we file it today</a>.
           </p>
         </div>
 

@@ -190,13 +190,12 @@ export default function HomePage() {
               <span className="block text-red-600">Your VAT return is due.</span>
             </h1>
               <p className="text-[1.08rem] lg:text-[1.2rem] font-semibold text-[#2c3a52] leading-snug mb-5">
-              We handle both — before you have to think about either.
+              Send a screenshot on WhatsApp — get the fix in minutes, not days.
             </p>
 
             <p className="text-[0.92rem] leading-relaxed text-[#3f4f68] mb-5 max-w-[54ch]">
               <span className="font-semibold text-red-600">Rejected invoices. Pending sync. Locked accounts.</span>{" "}
-              An overdue VAT registration. Send us what&apos;s wrong on WhatsApp and we tell you the fix. If it
-              needs doing, we do it.
+              Overdue VAT registration. We diagnose on WhatsApp and handle the KRA work — you get back to business.
             </p>
 
             {/* 17th Guarantee */}
@@ -212,7 +211,7 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
               <a
-                href={`${WA_BASE} data-track="whatsapp-cta"?text=Hi%2C%20my%20eTIMS%20invoice%20isn%27t%20going%20through`}
+                href={`${WA_BASE}?text=Hi%2C%20my%20eTIMS%20invoice%20isn%27t%20going%20through`} data-track="whatsapp-cta"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex w-full sm:w-auto flex-col items-center justify-center bg-red-600 hover:bg-red-700 text-white px-7 py-3 rounded-lg shadow-[0_10px_24px_-10px_rgba(220,38,38,0.6)] transition-colors"
@@ -633,7 +632,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <a
-                href={`${WA_BASE} data-track="whatsapp-cta"?text=I%20need%20eTIMS%20help`}
+                href={`${WA_BASE}?text=I%20need%20eTIMS%20help`} data-track="whatsapp-cta"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-fill block text-center bg-brand text-canvas text-sm font-semibold py-3 rounded-md transition-colors hover:bg-brand-hover"
@@ -671,7 +670,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <a
-                href={`${WA_BASE} data-track="whatsapp-cta"?text=I%20want%20the%20KES%205000%20VAT%20Registration`}
+                href={`${WA_BASE}?text=I%20want%20the%20KES%205000%20VAT%20Registration`} data-track="whatsapp-cta"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-fill block text-center border border-ink text-ink text-sm font-semibold py-3 rounded-md transition-colors hover:bg-ink hover:text-canvas"
@@ -712,7 +711,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <a
-                href={`${WA_BASE} data-track="whatsapp-cta"?text=I%20want%20the%20KES%203500%20Monthly%20Filing`}
+                href={`${WA_BASE}?text=I%20want%20the%20KES%203500%20Monthly%20Filing`} data-track="whatsapp-cta"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-fill block text-center border border-ink text-ink text-sm font-semibold py-3 rounded-md transition-colors hover:bg-ink hover:text-canvas"
@@ -1037,7 +1036,7 @@ export default function HomePage() {
               <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
             <a
-              href={`${WA_BASE} data-track="whatsapp-cta"?text=Hi%2C%20I%20want%20a%20FREE%20KRA%20Tax%20Amnesty%20ledger%20check`}
+              href={`${WA_BASE}?text=Hi%2C%20I%20want%20a%20FREE%20KRA%20Tax%20Amnesty%20ledger%20check`} data-track="whatsapp-cta"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-medium text-ink-muted hover:text-ink transition-colors whitespace-nowrap"
@@ -1102,7 +1101,7 @@ export default function HomePage() {
           </div>
           <div className="flex flex-col sm:flex-row lg:justify-end gap-3">
             <a
-              href={`${WA_BASE} data-track="whatsapp-cta"?text=Hi%2C%20I%20want%20to%20register%20for%20VAT%20with%20Smart%20VAT%20Kenya`}
+              href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20register%20for%20VAT%20with%20Smart%20VAT%20Kenya`} data-track="whatsapp-cta"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-fill inline-flex items-center justify-center gap-2 bg-brand text-canvas font-semibold px-6 py-3.5 rounded-md text-sm hover:bg-brand-hover transition-colors"

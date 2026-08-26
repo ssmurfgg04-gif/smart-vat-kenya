@@ -226,9 +226,9 @@ export default function ETIMSAccountLockedPage() {
 
         {/* Quick Answer / BLUF */}
         <div className="border-l-[3px] border-brand pl-5 mb-10">
-          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
+          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer — Fix It in 3 Minutes</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            A locked eTIMS account is almost always caused by the <strong className="text-ink">7-day sync rule</strong> &mdash; KRA auto-locks any device that has not synced for 7 consecutive days. The fix is usually quick: log in to <strong className="text-ink">eTIMS Lite</strong> (etims.kra.go.ke) &rarr; <strong className="text-ink">Device Management</strong> &rarr; reactivate the device &rarr; reopen eTIMS Client and sync. If the lock is from failed logins or an expired certificate, reset your password or renew the certificate. <strong className="text-ink">Do not reinstall eTIMS Client or create a new device</strong> to bypass the lock &mdash; that orphans your queued invoices. For compliance-related locks, contact KRA directly on 020 499 9999.
+            Locked mid-sale? <strong className="text-ink">Don&apos;t reinstall eTIMS</strong> — that orphans your queued invoices. 90% of locks are the <strong className="text-ink">7-day sync rule</strong> and unlock in 3 minutes: <strong className="text-ink">eTIMS Lite</strong> → <strong className="text-ink">Device Management</strong> → Reactivate → Sync. Password or certificate lock? Reset or renew. Compliance flag? Call KRA 020 499 9999 — or <a href="https://wa.me/254717344440?text=My%20eTIMS%20is%20locked%20-%20need%20help%20unlocking" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">send us a screenshot, we unlock it for you</a>.
           </p>
         </div>
 

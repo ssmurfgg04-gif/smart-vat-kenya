@@ -178,7 +178,7 @@ export default function VATRegistrationPage() {
             </span>
           </div>
           <a
-            href={`${WA_BASE} data-track="whatsapp-cta"?text=Hi%2C%20I%20want%20the%20KES%205000%20VAT%20Registration%20service`}
+            href={`${WA_BASE}?text=Hi%2C%20I%20want%20the%20KES%205000%20VAT%20Registration%20service`} data-track="whatsapp-cta"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3 rounded-md hover:bg-brand-hover transition-colors"
@@ -317,7 +317,7 @@ export default function VATRegistrationPage() {
             </p>
           </div>
           <a
-            href={`${WA_BASE} data-track="whatsapp-cta"?text=Hi%2C%20I%20want%20the%20KES%205000%20VAT%20Registration%20service`}
+            href={`${WA_BASE}?text=Hi%2C%20I%20want%20the%20KES%205000%20VAT%20Registration%20service`} data-track="whatsapp-cta"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
@@ -429,7 +429,7 @@ export default function VATRegistrationPage() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a
-              href={`${WA_BASE} data-track="whatsapp-cta"?text=Hi%2C%20I%20want%20the%20KES%205000%20VAT%20Registration%20service`}
+              href={`${WA_BASE}?text=Hi%2C%20I%20want%20the%20KES%205000%20VAT%20Registration%20service`} data-track="whatsapp-cta"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"

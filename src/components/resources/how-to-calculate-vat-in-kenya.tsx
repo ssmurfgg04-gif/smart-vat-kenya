@@ -148,9 +148,9 @@ export default function HowToCalculateVATPage() {
 
         {/* Quick Answer / BLUF */}
         <div className="border-l-[3px] border-brand pl-5 mb-10">
-          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer</p>
+          <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer — Instant VAT</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            To calculate 16% VAT in Kenya, multiply the price by <strong className="text-ink">0.16</strong> for VAT-exclusive amounts (price before VAT). For VAT-inclusive prices (the price already includes VAT), multiply the total by <strong className="text-ink">16 &divide; 116</strong> to extract the VAT. Use the free calculator below &mdash; no sign-up required.
+            Need the number now? <strong className="text-ink">Use the calculator below — instant VAT, no sign-up.</strong> For reference: exclusive price × <strong className="text-ink">0.16</strong> = VAT; inclusive price × <strong className="text-ink">16 ÷ 116</strong> = VAT. Details and examples follow.
           </p>
         </div>
 
