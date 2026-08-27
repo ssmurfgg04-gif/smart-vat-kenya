@@ -36,7 +36,7 @@ export function Navbar() {
           <a href="/" className="flex items-center gap-2 font-display text-ink font-semibold text-lg" aria-label="Smart VAT Kenya Home">
             <span className="text-brand font-bold">Smart</span> VAT Kenya
           </a>
-          <nav className="hidden md:flex items-center gap-8">
+<nav className="hidden lg:flex items-center gap-8">
             <a href="/services/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">Services</a>
             <a href="/resources/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">Resources</a>
             <a href="/kra-help/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">KRA Help</a>
@@ -47,7 +47,7 @@ export function Navbar() {
             <button className="p-2 rounded-lg text-ink-muted hover:text-ink hover:bg-canvas-warm transition-colors" aria-label="Toggle dark mode">
               <Sun size={20} aria-hidden="true" />
             </button>
-            <a href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT" target="_blank" rel="noopener noreferrer" className="btn-fill bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors hidden sm:inline-flex items-center gap-2">
+            <a href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT" target="_blank" rel="noopener noreferrer" className="btn-fill bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors hidden lg:inline-flex items-center gap-2">
               Get Started
               <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
             </a>

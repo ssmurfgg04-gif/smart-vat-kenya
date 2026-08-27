@@ -374,14 +374,14 @@ html.dark {
     }
 
     /* Navy tint alternating backgrounds */
-    main > section:nth-of-type(2) { background-color: var(--navy-tint); } /* Trust badges / dashboard */
+    main > section:nth-of-type(2) { background-color: transparent; } /* Trust - has own dark bg */
     main > section:nth-of-type(3) { background-color: transparent; }      /* Hub cards */
     main > section:nth-of-type(4) { background-color: var(--navy-tint); } /* Problem-first */
     main > section:nth-of-type(5) { background-color: transparent; }      /* Comparison table */
-    main > section:nth-of-type(6) { background-color: var(--navy-tint); } /* Upside cards */
+    main > section:nth-of-type(6) { background-color: transparent; } /* VAT unlocks - has own dark bg */
     main > section:nth-of-type(7) { background-color: transparent; }      /* Pricing (keep white) */
     main > section:nth-of-type(7) > div > div > div:first-child { background-color: transparent !important; }
-    main > section:nth-of-type(8) { background-color: var(--navy-tint); } /* VAT education */
+    main > section:nth-of-type(8) { background-color: transparent; } /* VAT education - has own dark bg */
     main > section:nth-of-type(9) { background-color: transparent; }      /* Process steps */
     main > section:nth-of-type(10) { background-color: var(--navy-tint); } /* Testimonials */
     main > section:nth-of-type(11) { background-color: transparent; }     /* FAQ */
@@ -393,23 +393,13 @@ html.dark {
     .border-red-600, .border-red-500 {
       /* These are allowed - keep as-is */
     }
-    /* Audit: prevent red from leaking into decorative backgrounds */
+/* Audit: prevent red from leaking into decorative backgrounds */
     section:not([id*="deadline"]):not([id*="penalty"]) > .bg-red-600,
     section:not([id*="deadline"]):not([id*="penalty"]) > .bg-red-500 {
       background-color: transparent !important;
     }
-
-    /* WCAG AA contrast for navy tint backgrounds */
-    main > section[style*="navy-tint"],
-    main > section[style*="rgba(27, 42, 59"] {
-      color: var(--ink) !important;
-    }
-    .dark main > section[style*="navy-tint"],
-    .dark main > section[style*="rgba(255, 255, 255"] {
-      color: var(--ink) !important;
-    }
   }
-}
+  }
 
 /* ─── Utility classes ─── */
 @layer utilities {
@@ -534,6 +524,13 @@ html.dark {
     }
   }
 
+  @media (max-width: 640px) {
+    .card-grid,
+    .bento-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
   /* ─── Responsive utilities (Conde Nast inspired) ─── */
   .container {
     width: 100%;
@@ -554,6 +551,12 @@ html.dark {
     }
   }
 
+  @media (max-width: 640px) {
+    .stack-mobile > * + * {
+      margin-top: var(--gap-md, 1.125rem);
+    }
+  }
+
   @media (max-width: 430px) {
     .stack-mobile > * + * {
       margin-top: var(--gap-md, 1rem);
@@ -568,6 +571,15 @@ html.dark {
 
   /* Stack elements on mobile - "stack stack stack" pattern */
   @media (max-width: 768px) {
+    .stack-on-mobile {
+      flex-direction: column;
+    }
+    .stack-on-mobile > * {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 640px) {
     .stack-on-mobile {
       flex-direction: column;
     }
@@ -617,6 +629,13 @@ html.dark {
     }
   }
 
+  @media (max-width: 640px) {
+    .section {
+      padding-top: var(--section-pt, 3.25rem);
+      padding-bottom: var(--section-pb, 3.25rem);
+    }
+  }
+
   @media (max-width: 430px) {
     .section {
       padding-top: var(--section-pt, 3rem);
@@ -635,6 +654,12 @@ html.dark {
     }
   }
 
+  @media (max-width: 640px) {
+    .card {
+      padding: var(--card-padding, 1.125rem);
+    }
+  }
+
   @media (max-width: 430px) {
     .card {
       padding: var(--card-padding, 1rem);
@@ -645,6 +670,16 @@ html.dark {
   .btn {
     padding: 0.75rem 1.5rem;
     font-size: 0.875rem;
+  }
+
+  @media (max-width: 640px) {
+    .btn {
+      padding: 0.6875rem 1.375rem;
+      font-size: 0.84375rem;
+    }
+    .btn + .btn {
+      margin-top: 0.625rem;
+    }
   }
 
   @media (max-width: 430px) {
@@ -662,6 +697,13 @@ html.dark {
   .text-responsive {
     font-size: clamp(0.875rem, 2vw, 1rem);
     line-height: 1.6;
+  }
+
+  @media (max-width: 640px) {
+    .text-responsive {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+    }
   }
 
   @media (max-width: 430px) {

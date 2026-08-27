@@ -323,7 +323,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── TRUST SECTION ─── */}
-        <section className="bg-[#0f1f3d] px-6 lg:px-10 py-8" aria-label="Why businesses trust Smart VAT Kenya">
+        <section className="bg-canvas-dark px-6 lg:px-10 py-8" aria-label="Why businesses trust Smart VAT Kenya">
           <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6">
             {[
               { Icon: Lightning, title: "Fast Resolution", body: "Most eTIMS issues diagnosed the same day." },
@@ -332,12 +332,12 @@ export default function HomePage() {
               { Icon: ChatCircle, title: "WhatsApp Support", body: "Send us a screenshot. We'll tell you exactly what's wrong.", whatsapp: true },
             ].map(({ Icon, title, body, whatsapp }) => (
               <div key={title} className="flex items-start gap-4">
-                <span className={`shrink-0 rounded-lg p-2.5 ${whatsapp ? "bg-[#25D366]/15 text-[#25D366]" : "bg-blue-400/15 text-blue-300"}`}>
+                <span className={`shrink-0 rounded-lg p-2.5 ${whatsapp ? "bg-[#25D366]/15 text-[#25D366]" : "bg-brand/15 text-brand"}`}>
                   <Icon size={22} weight="bold" aria-hidden="true" />
                 </span>
                 <div>
-                  <h3 className="font-display text-[0.98rem] font-semibold text-white mb-1">{title}</h3>
-                  <p className="text-[0.83rem] text-blue-100/70 leading-relaxed">{body}</p>
+                  <h3 className="font-display text-[0.98rem] font-semibold text-canvas mb-1">{title}</h3>
+                  <p className="text-[0.83rem] text-canvas/70 leading-relaxed">{body}</p>
                 </div>
               </div>
             ))}
@@ -577,7 +577,7 @@ KRA's{" "}
             Registration is the door. Filling unlocks what most small businesses never hear about - the upside
             that makes VAT worth it.
           </p>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
             {[
               { Icon: Briefcase, title: "Win tenders & contracts", body: "Government and corporate clients require a valid VAT number and tax compliance certificate. Without it, you cannot bid." },
               { Icon: CheckCircle, title: "Sell to big buyers", body: "Corporate clients and importers want eTIMS-compliant VAT invoices. A VAT number makes your business credible." },
@@ -611,7 +611,7 @@ KRA's{" "}
             KRA VAT services with published prices. No discovery calls required.
           </h2>
 
-          <div className="grid grid-cols-2 gap-4 lg:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5">
             {/* Card 1 - eTIMS Rescue */}
             <article className="bg-canvas-dark rounded-lg p-4 sm:p-8 flex flex-col relative overflow-hidden">
               <span className="absolute top-0 right-0 font-mono text-[0.6rem] uppercase tracking-widest bg-brand text-canvas px-3 py-1.5 rounded-bl-lg">
