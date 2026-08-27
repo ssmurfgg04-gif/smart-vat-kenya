@@ -131,9 +131,9 @@ html.dark {
 @media (max-width: 430px) {
   :root {
     /* Taste Skill Dials - Mobile (1-10 scale) */
-    --variance: 3;        /* Layout experimentation (1-10) */
-    --motion: 4;          /* Animation depth (1-10) */
-    --density: 3;         /* Information density (1-10) */
+    --variance: 3;        /* Layout experimentation (1-10) - Low: trust-first */
+    --motion: 3;          /* Animation depth (1-10) - Low: utility site */
+    --density: 7;         /* Information density (1-10) - High: tax/compliance data */
     
     /* Density-based spacing scale */
     --space-3xs: calc(0.125rem * var(--density) / 5);
@@ -143,7 +143,6 @@ html.dark {
     --space-md: calc(0.5rem * var(--density) / 5);
     --space-lg: calc(1rem * var(--density) / 5);
     --space-xl: calc(1.5rem * var(--density) / 5);
-    --space-2xl: calc(2rem * var(--density) / 5);
     --space-2xl: calc(2rem * var(--density) / 5);
     --space-3xl: calc(2.5rem * var(--density) / 5);
     --space-4xl: calc(3rem * var(--density) / 5);
@@ -182,40 +181,9 @@ html.dark {
     --container-px: 1rem;
     --gap-md: 1rem;
     --gap-lg: 1.25rem;
-    --body-line-height: 1.75;
-    --para-margin: 1rem;
-    --heading-para-margin: 0.75rem;
-    --heading-margin-bottom: 0.75rem;
-    --navy-tint: rgba(27, 42, 59, 0.04);
-    --navy-tint-hover: rgba(27, 42, 59, 0.06);
-    --container-px: 1rem;
-    --gap-md: 1rem;
-    --gap-lg: 1.25rem;
   }
   .dark {
     /* Dark mode adjustments */
-  }
-}
-
-/* Tablet breakpoint */
-@media (max-width: 768px) {
-  :root {
-    --space-scale: 0.9;
-  }
-}
-
-/* Tablet breakpoint */
-@media (max-width: 768px) {
-  :root {
-    --space-scale: 0.9;
-    --container-px: 1rem;
-    --section-pt: 3.5rem;
-    --section-pb: 3.5rem;
-    --first-section-pt: 2.5rem;
-    --first-section-pb: 2.5rem;
-    --card-padding: 1.25rem;
-    --gap-md: 1.25rem;
-    --gap-lg: 1.5rem;
   }
 }
 
@@ -336,6 +304,7 @@ html.dark {
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
     line-height: 1.6;
+    max-width: 65ch;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -443,45 +412,6 @@ html.dark {
   }
 }
 
-/* ─── Base layer ─── */
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-
-  html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    scroll-behavior: smooth;
-  }
-
-  body {
-    @apply bg-background text-foreground font-sans;
-    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-    line-height: 1.6;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
-    line-height: 1.15;
-    font-weight: 600;
-    text-wrap: balance;
-  }
-
-  h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); letter-spacing: -0.03em; }
-  h2 { font-size: clamp(1.75rem, 3.5vw, 2.75rem); letter-spacing: -0.02em; }
-  h3 { font-size: clamp(1.375rem, 2.5vw, 2rem); letter-spacing: -0.01em; }
-  h4 { font-size: clamp(1.125rem, 1.5vw, 1.375rem); }
-  h5 { font-size: clamp(1rem, 1.25vw, 1.125rem); }
-  h6 { font-size: clamp(0.875rem, 1vw, 1rem); }
-
-  .dark body {
-    background-color: var(--background);
-    color: var(--foreground);
-  }
-}
-
 /* ─── Utility classes ─── */
 @layer utilities {
   .font-display {
@@ -581,13 +511,29 @@ html.dark {
   .bg-canvas\/10 { background-color: rgba(255, 255, 255, 0.1); }
   .bg-canvas\/15 { background-color: rgba(255, 255, 255, 0.15); }
   .bg-canvas\/20 { background-color: rgba(255, 255, 255, 0.2); }
-  .bg-canvas\/[0\.06] { background-color: rgba(255, 255, 255, 0.06); }
+  .bg-canvas\/06 { background-color: rgba(255, 255, 255, 0.06); }
 
   .border-canvas\/10 { border-color: rgba(255, 255, 255, 0.1); }
   .border-canvas\/15 { border-color: rgba(255, 255, 255, 0.15); }
   .border-canvas\/20 { border-color: rgba(255, 255, 255, 0.2); }
   .border-canvas\/25 { border-color: rgba(255, 255, 255, 0.25); }
   .border-brand\/40 { border-color: color-mix(in srgb, var(--brand) 40%, transparent); }
+
+  /* ─── Gapless Bento Grid (taste-skill §4) ─── */
+  .card-grid,
+  .bento-grid {
+    display: grid;
+    gap: var(--gap-md, 1.5rem);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-flow: dense;
+  }
+
+  @media (max-width: 768px) {
+    .card-grid,
+    .bento-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 
   /* ─── Responsive utilities (Conde Nast inspired) ─── */
   .container {
@@ -647,14 +593,14 @@ html.dark {
   }
 
   /* Card grid responsive */
-  .card-grid {
+  .card-grid-legacy {
     display: grid;
     gap: var(--gap-md, 1.5rem);
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
   @media (max-width: 768px) {
-    .card-grid {
+    .card-grid-legacy {
       grid-template-columns: 1fr;
     }
   }

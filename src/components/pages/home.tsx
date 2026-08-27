@@ -177,7 +177,7 @@ export default function HomePage() {
 
       {/* ─── HERO ─── */}
       <section className="bg-white overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-8 lg:pt-10 pb-10 lg:pb-12">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-6 lg:pt-8 pb-8 lg:pb-10">
           <div className="grid lg:grid-cols-[1fr_minmax(0,520px)] gap-10 lg:gap-14 items-center">
             <div className="max-w-[560px]">
               <p className="font-mono text-[0.7rem] font-semibold text-blue-600 mb-4 inline-flex items-center gap-2">
@@ -185,12 +185,12 @@ export default function HomePage() {
                 Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
               </p>
 
-              <h1 className="font-display text-[1.95rem] sm:text-[2.35rem] lg:text-[2.85rem] font-bold leading-[1.08] tracking-tight text-[#14243e] mb-2 text-balance">
-              Your eTIMS invoice just failed.
-              <span className="block text-red-600">Your VAT return is due.</span>
+              <h1 className="font-display text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight text-[#14243e] mb-2 text-balance max-w-[52ch]">
+              Your eTIMS invoice failed.
+              <span className="block text-red-600">VAT return is due.</span>
             </h1>
-              <p className="text-[1.08rem] lg:text-[1.2rem] font-semibold text-[#2c3a52] leading-snug mb-5">
-              Send a screenshot on WhatsApp - get the fix in minutes, not days.
+              <p className="text-[1.08rem] lg:text-[1.15rem] font-semibold text-[#2c3a52] leading-snug mb-5 max-w-[54ch]">
+              Send a screenshot on WhatsApp — fix in minutes, not days.
             </p>
 
             <p className="text-[0.92rem] leading-relaxed text-[#3f4f68] mb-5 max-w-[54ch]">

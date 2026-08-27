@@ -78,7 +78,7 @@ export function ResourceSearch({ pillars }: { pillars: Pillar[] }) {
           </button>
         </div>
       ) : (
-        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">
+        <div className="bento-grid gap-5">
           {filtered.map((pillar) => (
             <article
               key={pillar.slug}
