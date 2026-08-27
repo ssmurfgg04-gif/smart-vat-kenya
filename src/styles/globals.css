@@ -304,7 +304,6 @@ html.dark {
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
     line-height: 1.6;
-    max-width: 65ch;
   }
 
   h1, h2, h3, h4, h5, h6 {

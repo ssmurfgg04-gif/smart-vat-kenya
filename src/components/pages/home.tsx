@@ -185,7 +185,7 @@ export default function HomePage() {
                 Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
               </p>
 
-              <h1 className="font-display text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight text-[#14243e] mb-2 text-balance max-w-[52ch]">
+              <h1 className="font-display text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight text-[#14243e] mb-2 max-w-[52ch] sm:text-wrap-balance">
               Your eTIMS invoice failed.
               <span className="block text-red-600">VAT return is due.</span>
             </h1>
