@@ -3,15 +3,10 @@ import { useEffect, useState } from "react"
 import { SiteSearch } from "./site-search"
 
 const navLinks = [
-  { href: "/tax-amnesty-2026/", label: "Tax Amnesty", urgent: true },
   { href: "/tools/", label: "VAT Calculator" },
   { href: "/services/", label: "Services" },
   { href: "/how-it-works/", label: "How It Works" },
   { href: "/resources/", label: "Resources" },
-  { href: "/kra-help/", label: "KRA Help" },
-  { href: "/kra-status/", label: "KRA Status" },
-  { href: "/tax-deadlines/", label: "Tax Deadlines" },
-  { href: "/about/", label: "About" },
 ]
 
 const WA_LINK =
@@ -112,6 +107,9 @@ export function Navbar() {
           >
             Get Started
           </a>
+          <span className="hidden sm:block text-[0.7rem] text-ink-muted/60 font-medium whitespace-nowrap">
+            WhatsApp diagnosis is FREE
+          </span>
         </div>
 
         <button

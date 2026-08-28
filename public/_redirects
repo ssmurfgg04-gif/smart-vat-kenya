@@ -3,9 +3,6 @@
 # (Astro outputs /resources/foo/index.html -> served at /resources/foo/)
 # These explicit rules are only for pages that are NOT directory-based
 
-# Tax amnesty page (single file, not a directory)
-/tax-amnesty-2026  /tax-amnesty-2026/  301!
-
 # Blog (may be single page, not directory)
 /blog  /blog/  301!
 
@@ -14,13 +11,10 @@
 /partners  /partners/  301!
 /privacy-policy  /privacy-policy/  301!
 
-# Note: /about and /how-it-works are directory-based in Astro output (trailingSlash: "always")
+# Note: /about, /how-it-works, /tax-amnesty-2026 are directory-based in Astro output (trailingSlash: "always")
 # Netlify natively handles /foo -> /foo/ for directory-based content
 # No catch-all rules needed - they cause redirect loops
 
-# Explicit trailing-slash redirects for resource pages (overrides any cached CDN rules)
-# Pattern: match non-slash URLs and redirect to slash version
-# Using splat with explicit path segments to avoid matching already-slashed URLs
-/resources/:slug  /resources/:slug/  301!
-/services/:slug  /services/:slug/  301!
-/tools/:slug  /tools/:slug/  301!
+# NOTE: Do NOT add explicit trailing-slash redirects for /resources/:slug, /services/:slug, /tools/:slug
+# Astro's trailingSlash: "always" already generates all pages with trailing slashes
+# Adding explicit redirects here causes redirect loops on Netlify

@@ -70,7 +70,7 @@ html {
   --brand-hover: #b02e24;
   --brand-muted: #f5e9e8;
   --accent-kra:  #1b2a3b;
-  --hairline:    #c8c2b6;
+  --hairline:    #dedad2;
 
   --background:             #faf8f3;
   --foreground:             #141311;
@@ -370,10 +370,6 @@ html.dark {
   .text-canvas { color: #faf8f3; }
   .dark .text-canvas { color: #f5f2eb; }
 
-  /* Text on dark backgrounds - ensures proper contrast */
-  .text-on-dark { color: #faf8f3; }
-  .dark .text-on-dark { color: #f5f2eb; }
-
   .text-canvas-alt { color: var(--canvas-alt); }
   .text-brand { color: var(--brand); }
   .text-brand-hover { color: var(--brand-hover); }
@@ -388,22 +384,6 @@ html.dark {
   /* Fix hairline border contrast - darker in light mode for visibility */
   .border-hairline-strong { border-color: var(--ink-muted); }
   .dark .border-hairline-strong { border-color: var(--ink-soft); }
-
-  /* Ensure text on bg-canvas-dark uses light colors */
-  .bg-canvas-dark,
-  .bg-canvas-dark * {
-    color: inherit;
-  }
-  .bg-canvas-dark .text-ink,
-  .bg-canvas-dark .text-ink-soft,
-  .bg-canvas-dark .text-ink-muted {
-    color: var(--ink);
-  }
-  .dark .bg-canvas-dark .text-ink,
-  .dark .bg-canvas-dark .text-ink-soft,
-  .dark .bg-canvas-dark .text-ink-muted {
-    color: var(--ink);
-  }
 
   /* Opacity utilities for semantic colors */
   .text-ink\/50 { color: color-mix(in srgb, var(--ink) 50%, transparent); }
