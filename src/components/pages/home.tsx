@@ -403,9 +403,7 @@ export default function HomePage() {
               The tender said "attach a Tax Compliance Certificate."
             </p>
             <p className="text-[0.9rem] text-ink-muted max-w-[48ch] mx-auto leading-relaxed">
-              That's when the VAT number stopped being optional. TCCs require a clean VAT record, 
-              and clean records require eTIMS + on-time filing. Get registered in 1–3 working days, 
-              filed by the 17th, and never wonder what KRA sees again.
+              TCCs require a clean VAT record — eTIMS + on-time filing gets you there.
             </p>
           </div>
         </section>

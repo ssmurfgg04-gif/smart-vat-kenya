@@ -7,7 +7,7 @@ const navLinks = [
   { href: "/services/", label: "Services" },
   { href: "/how-it-works/", label: "How It Works" },
   { href: "/resources/", label: "Resources" },
-]
+] as const
 
 const WA_LINK =
   "https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT%20registration%20or%20filing."
@@ -67,17 +67,7 @@ export function Navbar() {
                       : "text-ink-muted hover:text-ink dark:hover:text-canvas"
                   }`}
                 >
-                  {link.urgent ? (
-                    <span className="text-brand inline-flex items-center gap-1.5">
-                      <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-60" />
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-brand" />
-                      </span>
-                      {link.label}
-                    </span>
-                  ) : (
-                    link.label
-                  )}
+                  {link.label}
                 </a>
               </li>
             )
@@ -131,10 +121,12 @@ export function Navbar() {
         href="/tax-amnesty-2026/"
         className="block bg-brand px-4 py-1.5 text-center"
       >
-        <p className="max-w-[1400px] mx-auto text-[0.82rem] text-white font-medium leading-snug text-center">
-          <strong>Most Kenyan businesses don&apos;t know this:</strong> KRA is waiving 100% of
-          pre-2026 penalties and interest - but only until 31 Dec 2026.{" "}
-          <span className="underline underline-offset-2 font-semibold hover:opacity-80 whitespace-nowrap">
+        <p className="max-w-[1400px] mx-auto text-[0.82rem] text-white font-medium leading-snug text-center flex flex-col sm:flex-row items-center justify-center gap-3">
+          <span className="flex-1 text-left sm:text-center">
+            <strong>Most Kenyan businesses don&apos;t know this:</strong> KRA is waiving 100% of
+            pre-2026 penalties and interest - but only until 31 Dec 2026.
+          </span>
+          <span className="btn-fill inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 text-white font-semibold text-sm px-4 py-2 rounded-md transition-colors shrink-0 whitespace-nowrap">
             Check if you qualify &rarr;
           </span>
         </p>
@@ -155,17 +147,7 @@ export function Navbar() {
                     active ? "text-ink dark:text-canvas font-semibold" : "text-ink-muted dark:text-canvas/70 hover:text-ink dark:hover:text-canvas"
                   }`}
                 >
-                  {link.urgent ? (
-                    <span className="text-brand inline-flex items-center gap-2">
-                      <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-60" />
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-brand" />
-                      </span>
-                      {link.label}
-                    </span>
-                  ) : (
-                    link.label
-                  )}
+                  {link.label}
                 </a>
               )
             })}
