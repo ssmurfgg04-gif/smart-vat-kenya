@@ -31,61 +31,61 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do I need eTIMS if my business is not VAT-registered?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. The Finance Act 2023 (Section 23A of the Tax Procedures Act) requires ALL persons engaged in business to use eTIMS - not only VAT-registered businesses. This includes turnover tax payers, rental income earners, informal sector businesses, and professionals. If you sell goods or services in Kenya, you must issue eTIMS-compliant invoices.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the difference between eTIMS Lite and eTIMS Client?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "eTIMS Lite is a free web-based solution accessed through a browser - ideal for small businesses issuing fewer than 50 invoices per month. eTIMS Client is a downloadable desktop application for Windows with more features, suitable for medium-volume businesses that need offline capability, inventory management, and customer records. Both transmit invoices to KRA in real time.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the penalty for not registering for eTIMS in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The eTIMS penalties with clear legal footing are: since the Finance Act 2026 (in force 1 July 2026), the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals) for failing to issue compliant electronic tax invoices or to file/pay electronically (TPA s.86; previously two times the tax due); and up to KES 100,000 per month for failing to integrate a data-management system once notified (TPA s.59A(5), for taxpayers with turnover above KES 5 million). Additionally, input VAT claims are blocked for invoices not transmitted through eTIMS. Figures like KES 1,000,000 or 10% of the tax per invoice, KES 500,000 per month, or KES 50,000 per month circulate in some guidance but are not standalone statutory penalties under the enacted law.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I register for eTIMS on iTax?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Log in to itax.kra.go.ke, go to the eTIMS menu under Returns, select the eTIMS solution that fits your business (Lite, Client, Trader, or VSCU/OSCU), complete the registration form, and submit. KRA will approve your application and send login credentials to your registered email. You can then access the system at etims.kra.go.ke.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What information must appear on an eTIMS invoice?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Every eTIMS invoice must include: the seller's registered business name and KRA PIN, the buyer's KRA PIN (for B2B transactions above KES 10,000), a sequentially numbered eTIMS invoice number, the invoice date, a full description of goods or services, the quantity and unit price, the tax rate (16%, 8%, or 1.5%), the VAT amount in both words and figures, a unique QR code, and the eTIMS server confirmation code.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I integrate eTIMS with my existing POS system?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. KRA provides the Virtual Sales Control Unit (VSCU) and Online Sales Control Unit (OSCU) API for businesses with existing POS or ERP systems. Your software developer integrates the KRA eTIMS SDK into your system so that every sale automatically generates an eTIMS-compliant invoice. If integration fails or you operate without it after the deadline, you face up to KES 100,000 per month under TPA s.59A(5) (for turnover above KES 5 million, on conviction) plus the TPA s.86 e-invoice penalties.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Does Smart VAT Kenya help with eTIMS onboarding?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Smart VAT Kenya includes eTIMS onboarding guidance as part of our KES 5,000 VAT registration package. We help you identify the correct eTIMS solution for your business, assist with the iTax registration, and walk you through issuing your first eTIMS invoice. For businesses that already have a VAT PIN but need eTIMS help, we offer standalone eTIMS onboarding support at a flat rate.",
       },
     },

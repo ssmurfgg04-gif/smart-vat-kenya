@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "Safaricom Not Working? Current Outage Status & Fixes (Kenya 2026)",
   description:
@@ -33,54 +33,54 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is Safaricom down right now?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Safaricom network outages are usually localised or short-lived. To check the current status: call 0722 000 000 (the free Safaricom customer care number) to hear if there is a recorded outage notice, check downdetector.co.ke for real-time user reports, and search X (Twitter) for 'Safaricom down' or 'M-Pesa down'. If other users are reporting the same issue, it is a Safaricom-side outage. If only your line is affected, the problem is likely on your device, SIM, or coverage area.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How does Safaricom downtime affect M-Pesa payments?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "During a Safaricom network outage, M-Pesa transactions (send money, pay bill, Lipa na M-Pesa, till payments) can fail, delay, or be held in a 'pending' state. Money is only debited from your M-Pesa balance once the transaction is confirmed by Safaricom's systems. If a payment fails with an error, do not resend immediately - check whether the money left your account first, otherwise you can double-pay. For VAT remittance via the KRA Paybill 572572, wait for the network to stabilise, then confirm the payment was received before re-sending.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "My M-Pesa payment to KRA failed - will I be penalised for late VAT payment?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If you attempted to pay KRA VAT via M-Pesa Paybill 572572 before the deadline but the transaction failed due to a Safaricom or M-Pesa outage, take a screenshot of the failure message with the date and time. File your return and pay as soon as the network is restored, then apply for a late-payment penalty waiver citing the network outage. KRA does not automatically waive penalties for third-party network failures - you must apply proactively with evidence.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What can I do when Safaricom is not working?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Try these steps: toggle airplane mode on and off to force a network re-registration, restart your phone, move to a different location (outages are often coverage-based), and use Wi-Fi calling if your phone supports it. To reach customer care, call 0722 000 000 or 100 (free from Safaricom lines). For urgent M-Pesa needs, consider a short-term fallback - many businesses keep a second SIM on Airtel or Telkom for resilience, and KRA payment can also be made via bank or PesaLink once the network recovers.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Why does Safaricom keep going down?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Safaricom outages are typically caused by fibre cuts (especially in Nairobi and major corridors), scheduled maintenance (usually overnight between midnight and 5 AM), power failures at base stations, or software/network upgrades. Fibre cuts from roadworks and vandalism are the most common cause of regional outages. Safaricom usually communicates large outages through their official X account and SMS to affected customers.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How does Safaricom downtime affect my business's eTIMS and VAT compliance?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "A Safaricom network outage can block eTIMS invoice transmission (if you rely on mobile data), M-Pesa Paybill payments to KRA, and WhatsApp communication with your tax agent. eTIMS Client queues invoices in offline mode and syncs automatically when connectivity returns. For iTax filing and KRA payments, wait for the network to stabilise, then complete the transaction and verify it went through before retrying. Document any outage that prevents you from meeting a KRA deadline and apply for a waiver proactively.",
       },
     },

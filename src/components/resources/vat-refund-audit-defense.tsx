@@ -6,7 +6,7 @@ import { FACTS } from "@/src/lib/vat-facts"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "VAT Refund & Audit Defense in Kenya - How to Win",
   description: "Navigate KRA VAT audits, survive the Special Table / Tax Alerts review, and recover excess input VAT within the 12-month refund window under Finance Act rules.",
@@ -16,13 +16,13 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I defend my business against a KRA VAT audit?",
-      acceptedAnswer: { "@type": "Answer", text: "Maintain strict eTIMS invoice records, ensure buyer PINs match on all purchase documents, respond to KRA query letters within the 14-day window, and engage a registered KRA agent early." }
+      acceptedAnswer: { "@type": "Answer" as const, text: "Maintain strict eTIMS invoice records, ensure buyer PINs match on all purchase documents, respond to KRA query letters within the 14-day window, and engage a registered KRA agent early." }
     }
   ]
 }

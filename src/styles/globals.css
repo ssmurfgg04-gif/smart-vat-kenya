@@ -70,7 +70,7 @@ html {
   --brand-hover: #b02e24;
   --brand-muted: #f5e9e8;
   --accent-kra:  #1b2a3b;
-  --hairline:    #dedad2;
+  --hairline:    #c8c2b6;
 
   --background:             #faf8f3;
   --foreground:             #141311;
@@ -268,25 +268,10 @@ html.dark {
       padding: var(--card-padding);
     }
 
-    /* Ensure sticky WhatsApp CTA doesn't overlap content */
+/* Ensure sticky WhatsApp CTA doesn't overlap content */
     .fixed.bottom-0 {
       padding-bottom: env(safe-area-inset-bottom, 1rem);
     }
-
-    /* Navy tint alternating backgrounds */
-    main > section:nth-of-type(2) { background-color: transparent; } /* Trust - has own dark bg */
-    main > section:nth-of-type(3) { background-color: transparent; }      /* Hub cards */
-    main > section:nth-of-type(4) { background-color: var(--navy-tint); } /* Problem-first */
-    main > section:nth-of-type(5) { background-color: transparent; }      /* Comparison table */
-    main > section:nth-of-type(6) { background-color: transparent; } /* VAT unlocks - has own dark bg */
-    main > section:nth-of-type(7) { background-color: transparent; }      /* Pricing (keep white) */
-    main > section:nth-of-type(7) > div > div > div:first-child { background-color: transparent !important; }
-    main > section:nth-of-type(8) { background-color: transparent; } /* VAT education - has own dark bg */
-    main > section:nth-of-type(9) { background-color: transparent; }      /* Process steps */
-    main > section:nth-of-type(10) { background-color: var(--navy-tint); } /* Testimonials */
-    main > section:nth-of-type(11) { background-color: transparent; }     /* FAQ */
-    /* Amnesty / deadline banners: keep existing treatment */
-    /* Final CTA: keep existing treatment */
 
     /* Ensure red is only used for specific cases */
     .bg-red-600, .bg-red-500, .text-red-600, .text-red-500,
@@ -297,12 +282,29 @@ html.dark {
     section:not([id*="deadline"]):not([id*="penalty"]) > .bg-red-600,
     section:not([id*="deadline"]):not([id*="penalty"]) > .bg-red-500 {
       background-color: transparent !important;
-    }
   }
   }
+}
 
 /* ─── Utility classes ─── */
 @layer utilities {
+  /* Mobile section backgrounds (high priority - override Tailwind utilities) */
+  @media (max-width: 430px) {
+    main > section:nth-of-type(2) { background-color: transparent !important; } /* Trust - has own dark bg */
+    main > section:nth-of-type(3) { background-color: transparent !important; }      /* Hub cards */
+    main > section:nth-of-type(4) { background-color: var(--navy-tint) !important; } /* Problem-first */
+    main > section:nth-of-type(5) { background-color: transparent !important; }      /* Comparison table */
+    main > section:nth-of-type(6) { background-color: transparent !important; } /* VAT unlocks - has own dark bg */
+    main > section:nth-of-type(7) { background-color: transparent !important; }      /* Pricing (keep white) */
+    main > section:nth-of-type(7) > div > div > div:first-child { background-color: transparent !important; }
+    main > section:nth-of-type(8) { background-color: transparent !important; } /* VAT education - has own dark bg */
+    main > section:nth-of-type(9) { background-color: transparent !important; }      /* Process steps */
+    main > section:nth-of-type(10) { background-color: var(--navy-tint) !important; } /* Testimonials */
+    main > section:nth-of-type(11) { background-color: transparent !important; }     /* FAQ */
+    /* Amnesty / deadline banners: keep existing treatment */
+    /* Final CTA: keep existing treatment */
+  }
+
   .font-display {
     font-family: var(--font-display);
   }
@@ -368,6 +370,10 @@ html.dark {
   .text-canvas { color: #faf8f3; }
   .dark .text-canvas { color: #f5f2eb; }
 
+  /* Text on dark backgrounds - ensures proper contrast */
+  .text-on-dark { color: #faf8f3; }
+  .dark .text-on-dark { color: #f5f2eb; }
+
   .text-canvas-alt { color: var(--canvas-alt); }
   .text-brand { color: var(--brand); }
   .text-brand-hover { color: var(--brand-hover); }
@@ -378,6 +384,26 @@ html.dark {
   .bg-canvas-dark { background-color: var(--canvas-dark); }
   .bg-brand-muted { background-color: var(--brand-muted); }
   .border-hairline { border-color: var(--hairline); }
+
+  /* Fix hairline border contrast - darker in light mode for visibility */
+  .border-hairline-strong { border-color: var(--ink-muted); }
+  .dark .border-hairline-strong { border-color: var(--ink-soft); }
+
+  /* Ensure text on bg-canvas-dark uses light colors */
+  .bg-canvas-dark,
+  .bg-canvas-dark * {
+    color: inherit;
+  }
+  .bg-canvas-dark .text-ink,
+  .bg-canvas-dark .text-ink-soft,
+  .bg-canvas-dark .text-ink-muted {
+    color: var(--ink);
+  }
+  .dark .bg-canvas-dark .text-ink,
+  .dark .bg-canvas-dark .text-ink-soft,
+  .dark .bg-canvas-dark .text-ink-muted {
+    color: var(--ink);
+  }
 
   /* Opacity utilities for semantic colors */
   .text-ink\/50 { color: color-mix(in srgb, var(--ink) 50%, transparent); }

@@ -28,53 +28,53 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the iCMS export declaration change in 2026?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Effective May 2026, export data validated through the Integrated Customs Management System (iCMS) is now automatically prefilled into the zero-rated supply declaration section of your VAT return. This applies to exports to the Single Customs Territory (Uganda, Tanzania, Rwanda, Burundi, South Sudan), other countries, Export Processing Zones (EPZs), and Special Economic Zones (SEZs). The change means KRA already has your export data before you file - your VAT return must match the iCMS records.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do I need to manually enter export values on my VAT return?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "No. Since May 2026, export values validated in iCMS are automatically prefilled on your VAT return. You should verify the prefilled amounts against your records before submitting. If you spot discrepancies, reconcile with your customs documentation before filing - KRA cross-references the return against iCMS data.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Does this apply to all types of exports?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. The automatic prefilling covers exports to the Single Customs Territory (EAC partner states), exports to other countries outside the EAC, supplies to Export Processing Zones (EPZs), and supplies to Special Economic Zones (SEZs). Any zero-rated export that passes through iCMS validation is included.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if my iCMS data does not match my VAT return?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA's system cross-references your filed VAT return against iCMS export data. Discrepancies trigger automatic reviews and may lead to audits. You should reconcile your export records with iCMS data before each VAT return filing, especially for the first few months after the change takes effect.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How does this affect input VAT claims on export-related purchases?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Exporters making zero-rated supplies can claim input VAT on related purchases. The iCMS integration does not change this - you still claim input VAT on the standard sections of the return. However, the automatic prefilling of exports means KRA has a clearer picture of your zero-rated supply ratio, which may trigger questions if your input VAT claims appear disproportionately high relative to declared exports.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "I am a small exporter. Is this relevant to me?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If you export goods or services and are VAT-registered, yes. The iCMS integration affects every VAT-registered exporter. Even if you export infrequently, the auto-prefilled data on your return must match iCMS records. The change primarily affects goods exporters who use customs clearance - pure service exporters may not see iCMS data on their returns unless they also export goods.",
       },
     },

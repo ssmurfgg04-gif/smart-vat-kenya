@@ -88,53 +88,53 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I issue invoices when eTIMS is down?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "It depends on your eTIMS solution. eTIMS Client (desktop application) has an offline mode that queues invoices locally and syncs them when connectivity is restored. eTIMS Lite (web-based) does not work offline - you must wait for the portal to come back. If you use eTIMS Lite, you should keep a manual record of sales made during the outage and create the invoices in eTIMS Lite once the system is back online. We recommend eTIMS Client if your business cannot afford to stop invoicing during outages.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I use eTIMS Client offline mode?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "eTIMS Client automatically switches to offline mode when it detects no internet connection. In offline mode, you can still create invoices, credit notes, and debit notes normally. The invoices are saved locally with a 'Pending Sync' status. When your internet connection is restored, eTIMS Client automatically transmits all pending invoices to KRA. You can also manually trigger a sync by clicking the 'Sync' button in the application. KRA assigns server confirmation codes during the sync process - offline invoices get their confirmation codes at that point.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What do I do if eTIMS Lite is not loading?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If eTIMS Lite (the web-based solution at etims.kra.go.ke) is not loading, first check if the problem is on your end or KRA's side. Try loading other websites, clear your browser cache, and try a different browser or network. If eTIMS is down for everyone, you cannot create invoices through eTIMS Lite until it is restored. Keep a manual log of all sales during the outage - customer name, items sold, amount, and date - and create the eTIMS invoices retroactively when the system is back. Some businesses use this as a trigger to upgrade to eTIMS Client, which has offline capability.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Will KRA penalize me if eTIMS was down and I could not issue invoices?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If the eTIMS outage was on KRA's side and you can demonstrate that you made reasonable efforts to comply, KRA may exercise discretion. However, KRA does not automatically waive penalties for eTIMS outages. You should: (1) take screenshots of the outage, (2) document your attempts to access the system, (3) create all missing invoices as soon as the system is back, and (4) proactively contact KRA if the outage affected your compliance. Businesses using eTIMS Client with offline mode are better protected because the system continues working during outages.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can eTIMS Client generate invoices with QR codes when offline?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. eTIMS Client generates a local QR code for offline invoices. However, this QR code is provisional - it does not contain the server confirmation code that KRA assigns during sync. The QR code becomes fully valid only after the invoice has been synced with KRA. Your customer can scan the provisional QR code, but it will not verify against KRA's server until the sync is complete. For B2B customers who need to claim input VAT, inform them that the invoice was created offline and will be fully confirmed once synced.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I check if eTIMS is down right now?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Check social media for reports - search X (Twitter) for 'eTIMS down' or 'KRA eTIMS'. Check downdetector.co.ke for KRA portal status. Try accessing etims.kra.go.ke from a different browser or network to confirm the issue is on KRA's side rather than your connection. KRA sometimes posts outage updates on their official X account (@KRANews). For extended outages, call KRA on 020 499 9999.",
       },
     },

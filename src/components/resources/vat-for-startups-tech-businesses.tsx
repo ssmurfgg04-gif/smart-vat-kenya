@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "VAT for Startups and Tech Businesses in Kenya 2026",
   description:
@@ -28,54 +28,54 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Does my Kenyan startup need to register for VAT?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Your startup must register for VAT if your annual taxable turnover exceeds KES 5 million. The Finance Act 2025 proposed raising the threshold to KES 8 million, but this has not yet taken effect. Below that threshold, you can voluntarily register - which lets you claim back input VAT on laptops, cloud services, software subscriptions, and other business costs.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is SaaS or software sold to Kenyan customers subject to VAT?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Software as a Service (SaaS), mobile apps, web platforms, and digital products sold to Kenyan customers are subject to 16% VAT if you are registered. The supply of digital services, electronically delivered software, and cloud-based subscriptions is treated as a taxable supply under the VAT Act. If you sell to customers outside Kenya, the supply is zero-rated (0%) - you charge no VAT but can still claim input VAT refunds.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I claim input VAT on my laptop and cloud costs?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes, provided you are VAT-registered and the goods or services are used for taxable business purposes. You can claim input VAT on laptops, monitors, servers, cloud hosting (AWS, Azure, Google Cloud, Linode), software subscriptions (Figma, Notion, Slack, GitHub, etc.), office rent (commercial only), internet costs, and consultant fees - provided you have valid eTIMS-compliant invoices from your suppliers.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do I need eTIMS as a software developer or tech freelancer?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. The Finance Act 2023 requires ALL persons engaged in business - including software developers, tech freelancers, and consultants - to issue invoices through eTIMS. This applies regardless of whether you are VAT-registered. As a developer, eTIMS Lite (free, web-based) is usually the right choice. If you build a custom POS or ERP for clients, those clients may need VSCU/OSCU integration, which you could develop using KRA's eTIMS SDK.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if I don't file VAT returns as a startup?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Late filing attracts an automatic penalty of KES 10,000 or 5% of the tax due (whichever is higher), plus 1% monthly interest on any unpaid tax. If you are below the threshold but voluntarily registered and have nil activity, you must still file nil returns every month. Skipping nil returns costs KES 10,000 per month - the same penalty as a normal return. Filing consistently also keeps you off KRA's radar for compliance audits.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What tax incentives exist for Kenyan tech startups?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Kenya offers several tax incentives relevant to tech startups. The Startup Act 2022 provides tax relief for qualifying startups, including reduced corporate tax rates and exemptions on certain capital gains. Additionally, the ICT sector benefits from zero-rating on exported digital services, making software sales to overseas clients VAT-free while preserving input VAT recovery. The KRA tax amnesty programme (VTDP) allows startups with past unpaid taxes to disclose voluntarily and have penalties and interest waived. Local tech hubs and incubators may also qualify for tax exemptions under specific regulations.",
       },
     },

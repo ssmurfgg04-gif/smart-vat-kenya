@@ -29,53 +29,53 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the VAT registration threshold in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The mandatory VAT registration threshold in Kenya is KES 5 million in annual taxable turnover. Any business whose taxable supplies reach or exceed KES 5 million in a twelve-month period must register for VAT within 30 days. Taxable turnover excludes exempt supplies like financial services, residential rent, and education.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can a small business with turnover below KES 5 million register for VAT?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Businesses with turnover below KES 5 million can apply for voluntary VAT registration. This allows you to charge VAT on your sales and claim back input VAT on your purchases. It is common among businesses that supply to VAT-registered companies or have high operating costs with significant VAT on their expenses.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if I don't register for VAT when I exceed KES 5 million?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Failing to register for VAT within 30 days of exceeding KES 5 million attracts a penalty of KES 100,000 or the tax that would have been due (whichever is higher). KRA can also backdate your registration and demand VAT on all sales made after you crossed the threshold, plus interest and penalties.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How does VAT registration affect my pricing?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Once VAT-registered, you must add 16% VAT to your prices and issue tax invoices showing the VAT amount. If your customers are end consumers, your prices effectively rise by 16%. If your customers are other VAT-registered businesses, they can claim the VAT back, so the net cost to them does not change.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What documents do I need to register for VAT in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "You need: KRA PIN certificate, national ID or passport (for all directors/partners), business name and physical address, bank account details, Certificate of Incorporation (for companies), CR12 dated within 90 days (for companies), and a business permit where applicable. All uploads must be under 1MB in PDF or JPG format.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I find a reliable VAT agent in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Look for a KRA-registered tax agent with a verified physical address, a KRA PIN, and a track record of successful VAT registrations. Avoid agents who ask you to pay in cash with no receipt, guarantee unrealistic timelines, or request your iTax password. Smart VAT Kenya charges a flat KES 5,000 fee and is fully registered with KRA.",
       },
     },

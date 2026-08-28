@@ -29,53 +29,53 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is input VAT in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Input VAT is the VAT you pay when you buy goods or services for your business. If you are VAT-registered and the purchase is used to make taxable supplies, you can deduct this input VAT from the output VAT you collect on your sales. You pay KRA only the difference. For example, if you collected KES 50,000 in output VAT and paid KES 30,000 in input VAT, you remit KES 20,000 to KRA.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What are the conditions for claiming input VAT in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "You must meet all of these conditions: (1) You must be VAT-registered. (2) The purchase must be for business use in making taxable supplies. (3) You must hold a valid eTIMS-compliant electronic tax invoice or customs entry. (4) Your KRA PIN must appear on the supplier's eTIMS invoice. (5) The invoice must have been transmitted to KRA by your supplier. (6) The supplier must have declared the sale in their VAT return. (7) The deduction must be claimed within 6 months from the date of supply or importation.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       "name": "Can I claim input VAT without an eTIMS invoice?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "No. For all local purchases, you must have a valid eTIMS-compliant invoice transmitted to KRA with your KRA PIN. Manual invoices, receipts, or pro-forma invoices do not qualify. For imports, you need a valid customs entry from iCMS. Without these, the input VAT claim will be disallowed on audit, and you may face a penalty of 75-200% of the tax evaded.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the 6-month rule for input VAT deduction?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "You must claim input VAT within 6 months after the end of the tax period in which the supply or importation occurred. For example, if you made a purchase in January 2026, you have until July 2026 to claim the input VAT. After 6 months, the claim window closes permanently. This applies to both local purchases and imports. If your supplier transmits the invoice late, you can still claim it within 6 months of the invoice date.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What purchases are NOT eligible for input VAT deduction?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Input VAT cannot be claimed on: (1) Purchases not related to the business. (2) Purchases used for exempt supplies (e.g., if you sell exempt goods like basic food items, you cannot claim input VAT on related costs). (3) Passenger cars (unless you are in the business of selling or hiring cars). (4) Entertainment expenses (unless provided in the ordinary course of business). (5) Goods or services where you do not have a valid eTIMS invoice. (6) Purchases from non-VAT-registered suppliers.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       "name": "What happens if input VAT exceeds output VAT?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If your input VAT exceeds output VAT in a tax period, you have a VAT credit position. You can carry forward the excess to the next tax period and offset it against future output VAT. Alternatively, if the excess arises from zero-rated supplies, exports, or certain qualifying circumstances, you can apply for a refund. The refund application must be lodged within 12 months of the tax becoming due (reduced from 24 months by the Finance Act 2025).",
       },
     },

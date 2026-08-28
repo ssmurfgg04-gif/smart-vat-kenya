@@ -3,8 +3,8 @@ import { ArrowLeft, ArrowRight, Info, Warning } from "@phosphor-icons/react/dist
 import { ArticleGrid } from "@/lib/resources"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const as const as const as const,
-  "@type": "BreadcrumbList",
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList" as const,
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
@@ -13,8 +13,8 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const as const as const as const,
-  "@type": "Article",
+  "@context": "https://schema.org",
+  "@type": "Article" as const,
   headline: "VAT Threshold Kenya 2026: The KES 5 Million Mandatory Threshold (Is 8 Million Law?)",
   description:
     "The Kenya VAT registration threshold is KES 5 million in annual taxable turnover. The Finance Act 2025 proposed raising it to KES 8 million, but this has not yet taken effect. Complete guide to who must register, voluntary registration, and how turnover is calculated.",
@@ -27,62 +27,62 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the mandatory VAT registration threshold in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KES 5 million in annual taxable turnover. Under section 34 of the VAT Act and KRA's published VAT guidance (updated 2026), you must register for VAT within 30 days once your taxable turnover reaches or exceeds KES 5 million in any period of twelve months.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is the VAT threshold KES 5 million or KES 8 million?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KES 5 million is the operative threshold as of 2026. The KES 8 million figure comes from Finance Act 2025 proposals to raise the threshold, but that change has not been brought into effect - KRA's own VAT guidance, the amended statute as printed by law firms, and PwC's worldwide tax summaries all still reflect KES 5 million. Treat any claim that KES 8 million is currently law as incorrect.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I register for VAT voluntarily if my turnover is below KES 5 million?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Kenya permits voluntary (optional) VAT registration, and the Commissioner may allow registration even below the compulsory threshold under section 34(3) of the VAT Act. Voluntary registration is often worthwhile if your customers are VAT-registered businesses that need to claim input VAT on your invoices. If you do register voluntarily, you take on the same obligations - monthly returns, eTIMS, and 16% VAT on your invoices.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What counts toward the KES 5 million threshold?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The total value of your taxable supplies in any 12-month period, excluding VAT itself. Standard-rated (16%) supplies count, zero-rated supplies count even though no VAT is charged on them, and exempt supplies do not count. Does not include capital goods or sale of a business as a going concern, and the value of a capital asset is counted when it is supplied.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "When did the KES 5 million threshold come in? Was it ever KES 8 million?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The KES 5 million threshold for VAT registration in Kenya has applied since VAT (Amendment) changes over the years. The Finance Act 2025 did not bring the KES 8 million threshold into force - some blog and SEO articles claim a raise of the Finance Act 2024 or Finance Act 2026 was effective 1 September 2024, but the operative threshold remains KES 5 million. In 2026 KRA is instead proposing to remove the threshold entirely, so monitor official KRA announcements.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if I exceed the threshold but do not register?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Failure to register within 30 days of exceeding the threshold is an offence. KRA can charge VAT on your supplies from the date you should have registered, impose late registration penalties, and charge interest on the unpaid VAT. You may also be ineligible to claim input VAT for the period before registration, which means you bear the full VAT cost on your purchases.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do goods and services use the same threshold?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes - the KES 5 million taxable-turnover test applies to both goods and services. The one exception is digital services supplied by non-residents, which must register for VAT from their first sale regardless of turnover.",
       },
     },

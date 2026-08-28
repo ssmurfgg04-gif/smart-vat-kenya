@@ -29,53 +29,53 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the VAT registration threshold in Kenya for 2026?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The VAT registration threshold is KES 5 million in annual taxable turnover. The Finance Act 2025 proposed raising the threshold to KES 8 million, but this has not yet taken effect as of July 2026. Always check the latest KRA guidance, as the effective date may be announced via a Gazette notice. If your turnover exceeds KES 5 million, you are required to register for VAT.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the VAT refund application deadline for 2026?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The deadline is 12 months from the date the tax became due and payable. The Finance Act 2025 reduced this from 24 months, effective 1 July 2025. The Finance Act 2026 did not change this further. Any refund not applied for within 12 months is forfeited. Check your iTax portal now - if you have excess input VAT older than 12 months, you may have lost the right to claim it.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Are payment processing services now subject to VAT?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. The Finance Act 2026 reclassified payment processing, settlement, merchant acquiring, gateway, and aggregation services supplied over a software platform from VAT exempt to vatable at the standard rate of 16%, effective 1 July 2026. This means fintech companies and payment service providers must now charge 16% VAT on their fees. Businesses using these services will see increased costs.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the bad debt relief timeline for VAT purposes?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Under the Finance Act 2026, the minimum qualifying period for VAT relief on bad debts is 3 years (reverted from 2 years, effective 1 July 2026). If you supplied goods or services and accounted for the VAT, but the customer has not paid after 3 years, you can apply for a refund of the VAT. You must demonstrate the debt is genuinely irrecoverable.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Was the 90:10 input VAT apportionment rule removed?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. The Finance Act 2025 deleted the 90:10 rule that previously allowed businesses with exempt supplies under 10% of total turnover to claim full input VAT deduction. All businesses with mixed supplies must now apportion input VAT based on the ratio of taxable to total turnover. Update your accounting processes if you were relying on the 90:10 rule.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I claim input VAT on supplies made to the Kenya Defence Forces?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. The Finance Act 2026 introduced full input VAT deduction and refunds for input relating to exempt supplies made to the Kenya Defence Forces (KDF), Defence Forces Welfare Services (DEFWES), National Intelligence Service (NIS), and National Police Service (NPS). This is an exception to the general rule that input VAT on exempt supplies is not deductible. You need supporting documents showing the supplies were directly related to these entities.",
       },
     },

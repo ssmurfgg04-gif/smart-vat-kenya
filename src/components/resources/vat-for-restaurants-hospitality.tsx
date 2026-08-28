@@ -4,7 +4,7 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 import { ArticleGrid } from "@/lib/resources"
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "VAT for Restaurants & Hospitality in Kenya 2026: Complete Guide",
   description:
@@ -41,17 +41,17 @@ const faqs = [
 ]
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: faqs.map((f) => ({
-    "@type": "Question",
+    "@type": "Question" as const,
     name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
+    acceptedAnswer: { "@type": "Answer" as const, text: f.a },
   })),
 }
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },

@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "VAT on Digital Services in Kenya 2026 Guide",
   description:
@@ -28,54 +28,54 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Are digital services subject to VAT in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Digital services supplied in Kenya are subject to VAT at the standard rate of 16%. This includes software as a service (SaaS), streaming, e-learning, online advertising, downloadable content, and marketplace facilitation services. The VAT (Electronic, Internet and Digital Marketplace Supply) Regulations, 2023 govern how VAT applies to these services.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the VAT registration threshold for digital services?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "It depends on whether you are a resident or non-resident supplier. Resident suppliers (Kenyan businesses) must register for VAT when annual taxable turnover exceeds KES 5 million. Non-resident suppliers (foreign businesses) must register regardless of turnover - there is no threshold. The first sale to a Kenyan customer triggers the registration requirement.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the difference between VAT and Digital Service Tax (DST)?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "VAT is a 16% consumption tax charged to the customer on the value of the supply. Digital Service Tax (DST) is a 1.5% income-based tax on gross transaction value, primarily targeting non-resident digital platforms. VAT is charged to customers and remitted to KRA. DST is paid by the platform itself. A business can be liable for both VAT and DST on the same transaction, but DST does not apply to Kenyan resident businesses already paying income tax.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do non-resident digital suppliers need to use eTIMS?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Non-resident suppliers of digital services are exempt from the eTIMS invoicing requirements under the VAT (Electronic, Internet and Digital Marketplace Supply) Regulations. However, they must register for VAT under the simplified regime, charge 16% VAT on B2C and B2B transactions, and file monthly returns. Kenyan customers of non-resident suppliers can claim input VAT if the supplier has declared their KRA PIN in the return.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What digital services are taxable in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Taxable digital services include: SaaS (software as a service), streaming services (video, music, podcasts), downloadable software and apps, e-books and digital publications, online courses and e-learning, online advertising services, marketplace facilitation, cloud computing services, domain name registration, subscription-based content platforms, and internet radio or television broadcasting (added by Finance Act 2025).",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How does a non-resident company register for VAT in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Non-resident digital suppliers register under the simplified VAT regime. The process involves: (1) applying for a KRA PIN through the iTax portal as a non-resident, (2) registering for VAT by selecting the digital marketplace supply category, (3) providing details of the digital services offered and the platform used, (4) appointing a tax representative in Kenya (recommended but not mandatory in all cases). Once registered, you must charge 16% VAT on all B2B and B2C transactions, file monthly VAT returns, and remit the VAT collected by the 20th of each month.",
       },
     },

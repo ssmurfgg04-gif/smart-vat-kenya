@@ -6,7 +6,7 @@ import { FAQSection } from "@/components/faq-section"
 const WHATSAPP_NUMBER = "254717344440"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -16,7 +16,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "Got a KRA Fine Around KES 70,000? You May Only Owe the Principal",
   description:
@@ -30,54 +30,54 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Why is my KRA fine so high?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA bills are almost never a single charge. A seemingly huge fine is usually the original tax (if any) plus late-filing penalties plus monthly interest (commonly cited around 1%, compounding) that has grown over many months. A company that misses seven months of VAT nil returns at KES 10,000 per month lands on exactly KES 70,000 in penalties alone.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can the 2026 KRA tax amnesty wipe my penalties?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If your debt relates to a period up to 31 December 2025, yes. The Finance Act 2026 amnesty (running 1 July to 31 December 2026) waives 100% of penalties and interest - you only pay the principal tax. If the bill is pure late-filing penalties with no principal owed, filing the outstanding returns triggers the waiver automatically and you owe nothing extra.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do I still have to pay the principal tax under the amnesty?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. The amnesty waives penalties, interest, and fines - not the original tax. The principal must be paid in full (or cleared via a KRA-approved payment plan) by 31 December 2026. What gets wiped is everything on top of it.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "My KRA debt is from 2026. Does the amnesty apply?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "No. Only liabilities accumulated up to 31 December 2025 qualify. Anything arising on or after 1 January 2026 falls entirely outside the amnesty and stays fully payable. For 2026 debt you must apply for a discretionary penalty waiver on iTax - a case-by-case decision that is not guaranteed.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the late VAT nil-return penalty in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Reported figures vary by source and by whether tax was actually due - commonly KES 10,000 per month for a nil VAT return filed late, alongside 5% or a per-tax figure when tax was due. Individual income tax nil returns carry a KES 2,000 late penalty, and company income tax nil returns KES 20,000 (or 5% of tax due, whichever is higher). Always check your actual iTax ledger for the amount KRA applied to your account.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Will unpaid penalties block my TCC?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Unfiled returns and outstanding penalties block your KRA Tax Compliance Certificate (TCC), which you need for government tenders, work permits, licences, and many bank/financing processes. Resolving the debt through the amnesty is the fastest way to get a clean ledger and release your TCC.",
       },
     },

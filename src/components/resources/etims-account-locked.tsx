@@ -92,61 +92,61 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Why is my eTIMS account locked?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The most common reason is the 7-day sync rule: if your eTIMS device does not sync with KRA for 7 consecutive days, KRA locks it automatically. Other causes include too many failed login attempts, an expired or deactivated device certificate, or KRA flagging the account during a compliance review. The unlock process differs by cause, so identify the reason first - check your email for a KRA notice and the eTIMS Client error message.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I unlock my eTIMS account?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "For a sync-related lockout, log in to eTIMS Lite (etims.kra.go.ke), go to Device Management, and reactivate the device, then sync eTIMS Client. For a password lockout, use the 'Forgot Password' option on eTIMS Lite. For an expired certificate, renew it through Device Management. If the account is locked by KRA for compliance reasons, you must contact KRA eTIMS support directly - do not try to reinstall the application or create a new device, as that can orphan your queued invoices.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How long does an eTIMS lockout last?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "A temporary login lockout from failed attempts typically clears after 30-60 minutes. A sync-related lockout lasts until you reactivate the device through eTIMS Lite or KRA support - it does not clear on its own. A compliance-related lockout is indefinite until KRA resolves it, which can take days. Do not wait if you suspect a compliance lockout; contact KRA early.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Will I lose my pending invoices if my account is locked?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "No. Pending invoices are stored locally on your eTIMS Client device and survive a lockout. Once the device is reactivated, click Sync and the queued invoices transmit in order. However, do not reinstall eTIMS Client or register a new device before unlocking the existing one - that can orphan the local queue and lose the invoice data.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I invoice while my eTIMS account is locked?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "No. A locked device or account blocks invoice creation entirely. You must unlock it before you can issue eTIMS invoices. In the meantime, keep a manual sales log so no sales are lost - create the invoices retroactively once you are unlocked. If the lockout is close to a KRA deadline, document everything and contact KRA promptly.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I stop my eTIMS account from locking again?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Sync your device at least once every 7 days - ideally daily. Keep your login credentials saved securely, use the correct portal (eTIMS vs iTax have separate passwords), keep the device certificate active, and update eTIMS Client when KRA releases new versions. A daily 5-minute sync check prevents the most common lockout cause.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Why do I see \"wrong obligation ID\" or \"NONVAT only\" when I try to create an eTIMS invoice?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "This error means your iTax obligations and your eTIMS registration are out of sync - for example, a NONVAT invoice type selected while no matching NONVAT obligation is active, or e-invoicing not activated on that PIN yet (the activation error reads 'inactive/invalid PIN number'). Fix it by reviewing your tax obligations in iTax, registering the correct obligation (VAT / Income Tax – Business), and activating eTIMS for that PIN. If it persists, contact KRA eTIMS support (+254 711 099 999 / etims-support@kra.go.ke) - they activate or adjust the obligation, usually within 1–2 working days.",
       },
     },

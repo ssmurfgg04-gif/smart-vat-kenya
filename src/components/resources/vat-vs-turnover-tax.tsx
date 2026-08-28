@@ -4,8 +4,8 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const as const as const as const,
-  "@type": "BreadcrumbList",
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList" as const,
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
@@ -14,8 +14,8 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const as const as const as const,
-  "@type": "Article",
+  "@context": "https://schema.org",
+  "@type": "Article" as const,
   headline: "Turnover Tax vs VAT in Kenya: Which One Applies to Your Business?",
   description:
     "Confused about Turnover Tax vs VAT in Kenya? Compare KRA turnover tax (1-3% on gross sales, under KES 8M turnover) vs VAT (16% on value-add, over KES 5M, with proposed rise to KES 8M). Decision guide for Kenyan SMEs.",
@@ -28,54 +28,54 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the difference between Turnover Tax and VAT in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Turnover Tax (ToT) is a simplified 1-3% tax on gross sales for businesses with annual turnover under KES 8 million. VAT is a 16% consumption tax - currently mandatory once turnover exceeds KES 5 million (the Finance Act 2025 proposed raising this to KES 8 million, but this has not yet taken effect). Unlike ToT, VAT allows you to claim input VAT on business purchases and requires monthly eTIMS filings.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "At what turnover threshold must I register for VAT in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Under current KRA rules, VAT registration is mandatory once your annual taxable turnover exceeds KES 5 million. The Finance Act 2025 proposed raising this threshold to KES 8 million, but this has not yet taken effect. You may also voluntarily register for VAT even if your turnover is below the threshold, which can be beneficial if you supply goods to VAT-registered businesses that need to claim input VAT on your invoices.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can a Turnover Tax payer voluntarily switch to VAT?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. A business registered for Turnover Tax may voluntarily register for VAT at any time under the Voluntary VAT Registration provisions. This is commonly done when the business starts supplying VAT-registered customers who need VAT invoices to claim input VAT. Once you switch to VAT, you remain a VAT-registered taxpayer and cannot revert to Turnover Tax for at least 24 months.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do I need eTIMS if I pay Turnover Tax?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Turnover Tax payers are not legally required to use eTIMS for invoicing, but KRA strongly recommends it. Using eTIMS even under ToT helps build a clean compliance record, makes it easier to transition to VAT later, and reduces the risk of an audit. That said, you must still file monthly Turnover Tax returns through iTax.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I claim input VAT if I am on Turnover Tax?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "No. Businesses registered for Turnover Tax cannot claim input VAT on their purchases. The 1-3% tax is applied on gross sales with no deduction for input costs. This is a key disadvantage of ToT compared to VAT, where claiming input VAT on business expenses can significantly reduce your overall tax liability.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I know which tax regime applies to my Kenyan business?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The primary factor is your annual turnover. If your turnover is under KES 8 million, Turnover Tax is the default regime. VAT registration is mandatory once turnover exceeds KES 5 million (the Finance Act 2025 proposed raising this to KES 8 million, but this has not yet taken effect). Secondary factors include whether your customers need VAT invoices, your business expense levels, and your industry. A business with high expenses and B2B customers often benefits more from VAT even below the threshold.",
       },
     },

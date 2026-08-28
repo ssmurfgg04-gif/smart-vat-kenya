@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq-section"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "VAT 2027: KRA Pre-Filled Returns Are Coming - Prepare Now",
   description: "KRA's transition to pre-filled (auto-populated) VAT returns starting January 2027. How eTIMS data and iCMS customs integration will assemble your return automatically.",
@@ -15,13 +15,13 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What are KRA pre-filled VAT returns for 2027?",
-      acceptedAnswer: { "@type": "Answer", text: "Starting January 2027, KRA is moving to pre-populated returns where sales data from eTIMS and export data from iCMS are automatically assembled by the system, shifting the taxpayer's role from data entry to reconciliation." }
+      acceptedAnswer: { "@type": "Answer" as const, text: "Starting January 2027, KRA is moving to pre-populated returns where sales data from eTIMS and export data from iCMS are automatically assembled by the system, shifting the taxpayer's role from data entry to reconciliation." }
     }
   ]
 }

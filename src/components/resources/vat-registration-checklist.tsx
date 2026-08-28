@@ -6,7 +6,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -16,7 +16,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "VAT Registration Kenya Checklist 2026: Documents You Need",
   description:
@@ -30,46 +30,46 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How long does KRA take to approve a VAT registration application?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA typically processes VAT registration applications within 1–3 working days after all documents are correctly uploaded to iTax. However, if your documents are rejected or incomplete, the clock resets every time you resubmit. Applications with missing signatures, illegible scans, or expired CR12 certificates are the most common cause of delays.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I apply for VAT registration without a CR12?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If you are a registered company, the CR12 (dated within 90 days) is mandatory. KRA will reject your application if the CR12 is missing or expired. Sole proprietors and partnerships do not need a CR12 - they submit director/partner IDs instead. If you need a CR12, obtain it from e-Citizen under the Business Registration Service (BRS) portal.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What file format and size does KRA accept for document uploads?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA iTax accepts PDF and JPG file formats only. Each file must be under 1MB. Large scans or high-resolution photos will cause upload errors. Use a PDF compressor or reduce image resolution before uploading. Documents must be legible - blurry scans and photos with glare are the top reasons for rejection.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do I need eTIMS before or after VAT registration?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "eTIMS onboarding happens after your VAT registration is approved. Once KRA issues your VAT PIN, you must register for eTIMS (Electronic Tax Invoice Management System) within 30 days. eTIMS is mandatory for all VAT-registered businesses and is used to generate compliant tax invoices for every sale.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if my VAT application is rejected?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If KRA rejects your application, they will indicate the reason in iTax. Common reasons include illegible documents, expired CR12, mismatched business names, or missing director details. You can correct and resubmit immediately. If you are using an agent, they should handle the resubmission at no extra cost. Smart VAT Kenya includes free resubmissions in our KES 5,000 fee.",
       },
     },

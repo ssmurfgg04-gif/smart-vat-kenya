@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "VAT Rates in Kenya 2026 - Standard (16%), Zero-Rated & Exempt",
   description:
@@ -28,78 +28,78 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the standard VAT rate in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The standard VAT rate in Kenya is 16%. This rate applies to most supplies of goods and services unless they are specifically classified as zero-rated (0%) or exempt under the VAT Act. Examples include electronics, motor vehicles, hotel accommodation, professional services, construction materials, and processed foods.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the difference between zero-rated and exempt supplies in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The key difference is input VAT recovery. Zero-rated supplies (0%) are taxable at 0% - you still charge VAT on your invoice but at 0%, and you CAN claim input VAT on related costs and apply for refunds if you have excess input tax. Exempt supplies have no VAT charged at all, but you CANNOT claim input VAT on costs related to exempt supplies, making it a true cost to your business. This distinction is crucial for pricing and profitability.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I claim input VAT on zero-rated supplies?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Zero-rated supplies are taxable supplies at 0%. This means you must still issue a tax invoice, include the supply in your VAT return, and you can claim input VAT on purchases related to making zero-rated supplies. If your input VAT exceeds your output VAT, you can apply for a VAT refund from KRA.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What goods are zero-rated in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The VAT Act First Schedule lists zero-rated supplies, including: exports of goods and services, unprocessed agricultural products (maize, wheat, rice, fresh milk, potatoes, beans), agricultural inputs (fertilisers, pesticides, seeds, animal feeds), pharmaceuticals and medical supplies, books and educational materials, goods supplied to EPZ and SEZ enterprises, tea and coffee packaging materials, aircraft and spare parts, goods supplied to diplomatic missions, and international transport services.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is food zero-rated or exempt in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "It depends on the type of food. Unprocessed agricultural products (raw maize flour, fresh milk, fresh fruits and vegetables, unprocessed meat and fish) are generally zero-rated. Processed and packaged foods (bottled drinks, packaged snacks, confectionery, restaurant meals) are subject to the standard 16% VAT rate. Food supplied as part of restaurant or catering services is subject to 16% VAT.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Are financial services exempt from VAT in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Most financial services are exempt from VAT, including insurance, lending, and banking services. However, payment processing, settlement, merchant acquiring, gateway, and aggregation services supplied over a software platform were reclassified from exempt to taxable at 16% effective 1 July 2026. Fintech companies and payment service providers must now charge 16% VAT on their fees.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do I charge VAT on exports from Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Exports of goods and services from Kenya are zero-rated (0%). This means you do not charge your customer 16% VAT, but you can still claim input VAT on costs related to the exported goods. This ensures Kenyan exporters are competitive internationally while still recovering VAT on their costs.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is residential rent subject to VAT?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Residential rent (letting of residential premises for dwelling purposes) is exempt from VAT. Landlords receiving residential rental income do not charge VAT on rent, but also cannot claim input VAT on expenses related to the property. Commercial rent (rental of commercial property) is generally subject to 16% VAT if the landlord is VAT-registered.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I know if my supply is zero-rated or exempt?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Consult the VAT Act Schedules. Zero-rated supplies are listed in the First Schedule (Section 6 of the VAT Act). Exempt supplies are listed in the Second Schedule (Section 7 of the VAT Act). If your supply is not listed in either schedule, it is subject to the standard rate of 16%. When in doubt, seek professional advice - misclassifying a supply can lead to penalties, interest, and KRA audit adjustments.",
       },
     },

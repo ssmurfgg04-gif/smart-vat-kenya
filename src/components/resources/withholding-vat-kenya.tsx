@@ -4,8 +4,8 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "BreadcrumbList",
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList" as const,
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
@@ -14,8 +14,8 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "Article",
+  "@context": "https://schema.org",
+  "@type": "Article" as const,
   headline: "Withholding VAT Kenya Guide 2026",
   description:
     "Complete guide to 2% withholding VAT in Kenya: how it works, who is an appointed agent, how suppliers claim credits, refund process, and practical compliance tips for both agents and suppliers.",
@@ -28,54 +28,54 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is withholding VAT in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Withholding VAT is a system where appointed agents (typically large companies, government entities, and specified institutions) deduct 2% VAT at the point of paying a supplier and remit it directly to KRA. The supplier receives a withholding VAT credit note that they use to reduce their monthly VAT remittance. It is similar to withholding tax but applies to VAT rather than income tax.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the withholding VAT rate in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The withholding VAT rate is 2% of the value of taxable supplies. This rate has been effective since 7 November 2019. It applies to the taxable value (excluding VAT). For example, on a KES 100,000 supply plus KES 16,000 VAT (total KES 116,000), the withholding VAT is 2% of KES 100,000 = KES 2,000.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Who are appointed withholding VAT agents in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Withholding VAT agents are appointed by the Commissioner and typically include: large companies with significant turnover, government ministries and departments, county governments, state corporations, NGOs registered under specific provisions, and other institutions specified in the Kenya Gazette. KRA publishes and updates the list of appointed agents on the iTax portal. If you are unsure whether your customer is an appointed agent, ask them to confirm or check the KRA list.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How does withholding VAT affect my VAT return as a supplier?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "When you sell to an appointed agent, you issue a normal eTIMS invoice including full VAT (16%). The agent pays you the invoice amount minus the 2% withholding VAT and remits the 2% directly to KRA. They give you a withholding VAT certificate. When you file your VAT return, you declare the full output VAT on the sale and also declare the withholding VAT credit as a payment. This reduces your net VAT payable. If the withholding VAT credits exceed your net VAT payable, you have a credit position that can be carried forward or refunded.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       "name": "What is the deadline for remitting withholding VAT?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Appointed withholding VAT agents must remit the deducted VAT to KRA by the 20th day of the month following the deduction. This is the same deadline as the regular VAT return filing and payment deadline. Late remittance attracts penalties of 5% of the tax due plus 1% interest per month. Agents who fail to remit may be delisted or face compliance action.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       "name": "How can I claim a refund of excess withholding VAT credits?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If your withholding VAT credits consistently exceed your net VAT payable, you can apply for a refund through the iTax portal. You will need to provide: (1) withholding VAT certificates from your customers, (2) eTIMS invoices for the related supplies, (3) proof of payment, and (4) a reconciliation schedule. KRA may audit before processing. Applications must be made within 12 months of the tax becoming due. See our VAT Refund Guide for the full process.",
       },
     },

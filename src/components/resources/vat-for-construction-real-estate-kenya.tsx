@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "VAT for Construction & Real Estate in Kenya 2026: Court Rulings, Contractor Rules, and Mixed-Use Apportionment",
   description:
@@ -28,46 +28,46 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is VAT charged on the sale of commercial property in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Following the Court of Appeal 2025 ruling in KRA v David Mwangi Ndegwa, VAT at 16% applies to the sale of commercial property. Residential premises remain exempt from VAT. The ruling confirmed that the supply of a commercial building is a taxable supply under the VAT Act, and developers must charge VAT on the sale price.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is land subject to VAT in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "No. The sale of land (bare land without buildings) is exempt from VAT under the First Schedule to the VAT Act 2013. However, if you sell land with a commercial building on it, the building portion is subject to 16% VAT. Developers should apportion the sale price between the land (exempt) and the building (taxable).",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the withholding VAT rate for construction services?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Withholding VAT on construction services is 2% for resident contractors and 6% for non-resident contractors. The person receiving the construction service must withhold the VAT and remit it to KRA within 5 working days. The contractor can claim the withheld amount as input VAT when filing their monthly return.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do subcontractors need to register for VAT?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes, if a subcontractor's annual turnover exceeds KES 5 million. Subcontractors must be VAT-registered and charge 16% VAT to main contractors. Main contractors should verify that their subcontractors are VAT-registered before engaging them, as input VAT on invoices from unregistered subcontractors may be disallowed on audit.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How is VAT handled for mixed-use developments with residential and commercial units?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Mixed-use developments require apportionment between the exempt residential portion and the taxable commercial portion. The developer must calculate input VAT on construction costs and apportion it based on the ratio of commercial to total floor area. Output VAT is charged only on the sale or rental of commercial units. The apportionment method should be consistently applied and disclosed to KRA.",
       },
     },

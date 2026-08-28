@@ -3,7 +3,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "VAT Input Tax in Kenya: Complete Claim & eTIMS Guide (2026)",
   description: "Learn how input VAT works in Kenya, eTIMS invoice requirements, buyer PIN matching, and the 6-month claim window under current KRA rules.",
@@ -13,13 +13,13 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is VAT input tax?",
-      acceptedAnswer: { "@type": "Answer", text: "Input VAT is the 16% tax you pay on business purchases and expenses, which can be offset against your output VAT collected from sales." }
+      acceptedAnswer: { "@type": "Answer" as const, text: "Input VAT is the 16% tax you pay on business purchases and expenses, which can be offset against your output VAT collected from sales." }
     }
   ]
 }

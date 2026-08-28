@@ -6,7 +6,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -16,7 +16,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "KRA Auto-Populated VAT Return Guide 2026",
   description:
@@ -30,54 +30,54 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the KRA auto-populated VAT return?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The auto-populated VAT return is a simplified filing process where KRA pre-fills your VAT return with data from iTax, eTIMS/TIMS, and customs systems. Sales invoices transmitted through eTIMS appear automatically in your return. Purchases from VAT-registered suppliers also appear if they transmitted valid eTIMS invoices with your KRA PIN. You review, adjust, and confirm - rather than entering every line manually.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Why are some of my sales invoices missing from the auto-populated return?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Missing sales invoices are usually caused by transmission issues. If your device was offline when the invoice was issued, it may not have reached KRA's servers. Check your internet connection and ensure your eTIMS device is consistently online. Invoices transmitted late will not appear in the original tax period - they go to the period when they were actually transmitted. You can add missing sales manually by declaring them under lump sum sales or adding them as line items in the return.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I reduce or adjust auto-populated sales values downward?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "No, you cannot reduce pre-populated sales values that came from your eTIMS/TIMS device. If the system shows KES 500,000 in sales, you cannot change that to KES 400,000. You can only add or adjust sales values upward if you made sales outside eTIMS (e.g., manual invoices to non-VAT customers). If you believe the auto-populated figure is wrong, contact your eTIMS device supplier to investigate the transmission issue.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I add missing purchases to my auto-populated return?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "First, contact your supplier and ask them to transmit the eTIMS invoice with your correct KRA PIN. Once they do, the purchase will appear in the CSV file when you download the return the next day. If the supplier cannot or will not transmit, you have two options: (1) declare the purchase manually if you have a valid eTIMS-compliant invoice, or (2) accept that you cannot claim input VAT on that purchase and request your supplier to transmit it in a subsequent period. Purchases transmitted late can be claimed within 6 months of the invoice date.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if my supplier captured my KRA PIN incorrectly?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If your supplier entered your KRA PIN incorrectly, the invoice will not appear in your auto-populated purchases CSV because KRA matched it against the wrong PIN. Ask your supplier to issue a credit note through eTIMS for the incorrect invoice, then issue a new eTIMS invoice with the correct KRA PIN. Once transmitted, the corrected invoice will appear in your purchases CSV. This is why you should always verify your KRA PIN on every invoice you receive from suppliers.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What are the benefits of the auto-populated VAT return?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The auto-populated return reduces manual data entry, minimizes calculation errors, ensures that your declared sales match what KRA already has on record, and flags discrepancies early. It also makes the filing faster - instead of entering every invoice line by line, you download the pre-filled return, verify the figures, add any missing entries, and submit. The system updates daily, so downloading the latest version just before filing ensures the most complete data.",
       },
     },

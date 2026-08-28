@@ -29,45 +29,45 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Why does eTIMS keep rejecting my invoices?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The most common reasons are: (1) Wrong signature type - you selected ITAX but the customer is a DIGITAL user, or vice versa. (2) Duplicate invoice serial number - the number has already been used. (3) Customer's KRA PIN is invalid or not found. (4) Control unit malfunction or connection timeout. (5) Invoice total does not match the line item breakdown. Check the rejection message carefully - eTIMS usually tells you exactly what is wrong.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the difference between ITAX and DIGITAL signatures in eTIMS?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "ITAX signature means the customer is a VAT-registered business that files returns on iTax and will claim input VAT on your invoice. DIGITAL signature means the customer is not VAT-registered (e.g. an individual consumer or a non-VAT business). Selecting the wrong signature type is the most common cause of invoice rejection. If your customer is an ordinary consumer, always select DIGITAL.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I edit a rejected eTIMS invoice and resubmit it?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "No. Rejected invoices cannot be edited. You must cancel the rejected invoice in the eTIMS system and create a new one with a fresh serial number. The old serial number cannot be reused. Always double-check your entries before submitting to avoid wasting serial numbers.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I fix a duplicate invoice number error in eTIMS?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "A duplicate serial number error means that number has already been used in the system. eTIMS assigns serial numbers sequentially. If you are getting this error, check: (1) You may have skipped a number - find the last successfully issued invoice and continue from the next number. (2) The serial number was already used in a draft or cancelled invoice. (3) Your eTIMS device serial number range needs resetting - contact KRA eTIMS support.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What should I do if my eTIMS control unit stops working?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If your eTIMS control unit (the physical device or software) fails, you cannot issue compliant invoices until it is fixed. Contact KRA eTIMS support immediately on 020 4 999 999 or etims@kra.go.ke. In the meantime, issue manual pro-forma invoices and note that they will be entered into eTIMS once the system is restored. KRA allows a grace period for system failures, but you must have evidence of the fault.",
       },
     },

@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
 headline: "KRA VAT Special Table - How It Works and How to Avoid Being Flagged",
   description:
@@ -28,62 +28,62 @@ headline: "KRA VAT Special Table - How It Works and How to Avoid Being Flagged",
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the KRA VAT Special Table?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The VAT Special Table is a term that has circulated for a KRA list of suppliers flagged for non-compliance. Note: our August 2026 review of KRA sources did not find an official register literally named 'Special Table'. What operates in practice is RAIS 'Tax Alerts' plus eTIMS-level validation - an un-transmitted or unverified invoice loses you the input VAT claim even if your return is otherwise correct.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can filing nil returns put me on the Special Table?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Filing consecutive nil returns over 6 to 12 months can trigger a KRA compliance review, which can result in you being added to the VAT Special Table. KRA reasons that a business filing consistent nil returns may be under-reporting sales. To avoid this, ensure your nil returns are legitimate - and if you do have activity, file a normal return.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I check if a supplier is on the VAT Special Table?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "There is no public list. You can only find out when you file your VAT return on iTax and your input VAT claim is rejected with a warning referencing the Special Table. However, KRA compliance officers may inform you during an audit. The best defence is to verify your suppliers are eTIMS-compliant and actively filing returns.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I get my business removed from the VAT Special Table?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Removal from the Special Table requires filing all outstanding returns, paying any penalties, and demonstrating consistent compliance - usually 3 to 6 months of on-time, accurate returns. In serious cases, you may need to meet with a KRA compliance officer. Smart VAT Kenya can help draft a compliance letter and manage the removal process.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if I buy from a supplier on the Special Table?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Your input VAT claim is automatically rejected. You cannot claim that input VAT on your return. If you have already claimed it and KRA audits your return, you will face an additional assessment plus penalties and interest. The Buyer-Initiated Invoicing (BII) mechanism can help: you can generate an eTIMS-compliant invoice on behalf of the supplier, which may allow your input claim to go through while pressuring the supplier to regularise their status.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is the VAT Special Table the same as a KRA blacklist?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Not exactly. The Special Table is specifically a VAT compliance flag - it blocks input VAT claims from that supplier. A KRA blacklist is a broader designation that can affect your ability to clear goods at customs, get tax compliance certificates, or bid for government tenders. Being on the Special Table can escalate to a broader blacklist if non-compliance continues.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How does eTIMS relate to the VAT Special Table?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "eTIMS and the Special Table are connected. Suppliers who fail to onboard eTIMS or who issue non-compliant invoices are prime candidates for the Special Table. Conversely, being eTIMS-compliant and filing regular returns is the best way to avoid being flagged. KRA's real-time invoice data from eTIMS is used to cross-check returns - discrepancies can trigger a Special Table review.",
       },
     },

@@ -27,69 +27,69 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is a nil return in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "A nil return is a VAT return you file when your business had zero sales and zero purchases in a given month. You are declaring to KRA that no VAT is payable and no VAT is recoverable for that period. It is NOT the same as skipping the month - you must still log into iTax and submit it.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the penalty for not filing a nil return on iTax?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Failing to file a nil VAT return by the 20th of the month attracts a KES 10,000 late filing penalty - the same penalty as a normal return. Even if you owe zero tax, KRA penalises the late submission itself. You can apply for a waiver if it was a genuine mistake.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the KRA tax amnesty programme in 2026?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The KRA tax amnesty programme (also called the Voluntary Tax Disclosure Programme or VTDP) allows taxpayers to voluntarily disclose unpaid taxes. In exchange, KRA waives all penalties and interest - you only pay the principal tax. The amnesty applies to VAT, income tax, PAYE, and other taxes. You apply through iTax under the voluntary disclosure menu.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I get a penalty waiver for late nil returns?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Under Section 35 of the Tax Procedures Act, KRA may waive late-filing penalties even for nil returns if you have a valid reason: first-time offence, genuine mistake, iTax system error, illness, or natural disaster. Submit the waiver through iTax under Penalty and Interest Waiver. Smart VAT Kenya handles penalty waiver applications for KES 4,000.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I file a nil return on KRA iTax?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Log into itax.kra.go.ke, go to Returns → VAT Returns, select the filing period, enter KES 0.00 in all amount fields, tick the declaration, and click Submit. It takes about 5 minutes. Save the confirmation receipt as proof.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do I need to file nil returns if I made no sales?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Every registered VAT taxpayer must file a return every month - including months with zero activity. KRA does not auto-file nil returns for you. Skipping a month accumulates KES 10,000 penalties per month even if you owe no tax.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the difference between nil return and tax amnesty?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "A nil return is a monthly filing declaring zero activity. Tax amnesty is a programme that waives penalties and interest on previously unpaid taxes. You use nil returns to stay compliant going forward. You use the tax amnesty to clean up past non-compliance without paying penalties.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is nil return only for VAT or other taxes too?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Nil returns apply to VAT (monthly), income tax (annual), and turnover tax (monthly). This guide focuses on VAT nil returns, which are the most common because VAT is filed every month. Income tax nil returns are filed once per year.",
       },
     },

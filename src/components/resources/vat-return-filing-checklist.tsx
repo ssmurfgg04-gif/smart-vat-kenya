@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "VAT Return Filing Checklist Kenya 2026: Monthly Filing Guide",
   description:
@@ -28,46 +28,46 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the deadline for filing VAT returns in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "VAT returns must be filed on or before the 20th day of every month for the preceding month. For example, the January return is due by 20 February. If the 20th falls on a weekend or public holiday, the deadline moves to the next working day. Late filing attracts a penalty of KES 10,000 per month or part of a month.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What documents do I need to file a VAT return?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "You need: (1) Sales summary for the month - total sales, zero-rated sales, exempt sales, and VAT-exclusive sales. (2) Purchase summary - total purchases, input VAT claimed, and capital goods purchases. (3) eTIMS invoice register to reconcile sales figures. (4) Bank statements or M-PESA statements to confirm receipts. (5) Withholding VAT certificates if you have been subject to withholding VAT. Our checklist below covers every item you need.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I file a nil VAT return if I had no sales?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. If you had no sales or purchases in a given month, you must still file a nil return. Filing nil returns is mandatory for all VAT-registered businesses every month, even if there is no activity. Failure to file a nil return attracts the same KES 10,000 penalty as a late return. See our nil returns guide for step-by-step instructions.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if I make a mistake on my submitted VAT return?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Once submitted, a VAT return cannot be edited. If you discover an error, you must wait for the next period and correct it in that return, or contact KRA to request an amendment. To avoid errors, always use this checklist before submitting. Most errors involve incorrect decimal formats, missing fields, or mismatched totals.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I pay VAT after filing the return?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "VAT can be paid via M-PESA Paybill 572572 (business number). Your account number is your KRA PIN followed by the payment code 000V (e.g. P0123456789V). Alternatively, you can pay via bank transfer to KRA's collection account. Payment must be made by the same 20th deadline. Late payment attracts interest at 2% per month on the unpaid amount.",
       },
     },

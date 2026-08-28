@@ -27,53 +27,53 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I file a nil return on KRA iTax in 2026?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Log into itax.kra.go.ke, go to Returns → VAT Returns, select the filing period, leave all amounts at KES 0.00, tick the declaration box, and click Submit. Save the confirmation receipt. For income tax nil returns, use Returns → File Nil Return → Income Tax – Resident Individual.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do I need to file a nil return if I made no sales this month?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Every VAT-registered business must file a return every month, even with zero activity. Skipping a month attracts a KES 10,000 late-filing penalty regardless of whether you owe tax.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the penalty for not filing a nil return in 2026?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KES 10,000 per month for late or missing VAT returns, including nil returns. Income tax nil returns carry a KES 2,000 penalty for individuals. Penalties accumulate monthly and also block your Tax Compliance Certificate.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do students and the unemployed have to file nil returns in 2026?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "As of mid-2026, KRA introduced a 'No Obligation' PIN status for certain categories like students and the unemployed. If your PIN shows No Obligation in iTax → Taxpayer Dashboard → Obligations, you may no longer need to file annually. Everyone else must still file their nil return by 30 June each year.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "When is the income tax nil return deadline in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "30 June every year for the previous year of income. The 2025 income tax nil return was due 30 June 2026. Late filing attracts a KES 2,000 penalty for individuals.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I file a nil return on my phone in 2026?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes, but a laptop is recommended. Open itax.kra.go.ke in Chrome or Safari, zoom in if the submit button is hard to see, and enable pop-ups. Mobile screens often cut off the submit button.",
       },
     },

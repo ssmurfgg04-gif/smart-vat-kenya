@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq-section"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "Free KRA Status & Ledger Health Check (2026)",
   description: "Check your KRA iTax profile status, outstanding filing gaps, and Special Table / Tax Alert exposures before KRA flags you. Free check by Smart VAT Kenya.",
@@ -15,13 +15,13 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is a KRA ledger health check?",
-      acceptedAnswer: { "@type": "Answer", text: "A ledger health check is a review of your iTax profile and historical filing records to identify unfiled returns, unpaid penalties, or eTIMS data mismatches before KRA issues an assessment." }
+      acceptedAnswer: { "@type": "Answer" as const, text: "A ledger health check is a review of your iTax profile and historical filing records to identify unfiled returns, unpaid penalties, or eTIMS data mismatches before KRA issues an assessment." }
     }
   ]
 }

@@ -29,45 +29,45 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if I don't comply with eTIMS requirements?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Non-compliance with eTIMS can be expensive. Issuing a non-compliant electronic tax invoice attracts the TPA s.86 penalty - since the Finance Act 2026 (in force 1 July 2026) the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals); before then, two times the tax due. A business notified to integrate its data-management system with KRA's electronic system that fails to comply faces up to KES 100,000 per month under TPA s.59A(5) (turnover above KES 5 million). Additionally, input VAT claims are denied for purchases that are not eTIMS-compliant. Figures like KES 1,000,000 or 10% of the tax per invoice, KES 50,000 per month, or KES 500,000 per month circulate in guidance but are not standalone statutory penalties.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do I need to submit data to eTIMS every day?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "eTIMS transmits invoice data to KRA in real time as invoices are generated. There is no separate 'daily submission' step - every invoice you issue through eTIMS is automatically sent to KRA. However, you should reconcile your eTIMS data daily to ensure all invoices were transmitted successfully and no rejections occurred.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I reconcile my stock in eTIMS?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "eTIMS requires you to maintain a stock register that matches your physical inventory. To reconcile: (1) Run a stock report from eTIMS. (2) Physically count your inventory. (3) Investigate and correct any discrepancies. (4) Document the reconciliation with date and sign-off. Stock discrepancies are a red flag for KRA audit teams and can trigger a full investigation.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I use a third-party POS system with eTIMS?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes, but the system must be KRA-approved and integrated with eTIMS. Many POS providers in Kenya offer eTIMS integration. Before purchasing a POS system, verify with the provider that it is eTIMS-compliant and capable of transmitting invoice data to KRA in real time. Using a non-integrated POS alongside eTIMS creates a reconciliation nightmare.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What records must I keep for eTIMS compliance?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA requires you to maintain: (1) A register of all e-invoices issued (sequential, unbroken series). (2) A register of all credit and debit notes. (3) A stock register reconciled monthly. (4) eTIMS device maintenance logs. (5) Records of any manual invoices issued during system downtime. (6) Monthly eTIMS compliance reports. These records must be retained for at least 5 years.",
       },
     },

@@ -30,45 +30,45 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Who needs to register for VAT in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Any business with annual taxable turnover of KES 5 million or more must register for VAT in Kenya. This includes sole traders, partnerships, and companies. You must apply within 30 days of reaching the threshold. Businesses below KES 5 million can register voluntarily.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What documents are required for KRA VAT registration?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "You need: KRA PIN certificate, national ID or passport (for all directors or partners), business name and physical address, bank account details (account number and bank name), and for companies, a Certificate of Incorporation and CR12.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I apply for VAT on the iTax portal?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Log in to itax.kra.go.ke using your KRA PIN and password. Navigate to Registration, then select VAT Registration. Fill in your business details, upload the required documents (PDF or JPG, under 1MB each), and submit. KRA will review your application within 1–3 working days.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How long does KRA take to issue a VAT PIN?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA typically approves a VAT registration application within 1 to 3 working days if all documents are correct. Complex cases or applications with missing information can take up to 5 working days. Smart VAT Kenya has a 100% first-attempt success rate because we ensure everything is correct before submission.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How much does VAT registration cost in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA does not charge a government fee for VAT registration. However, if you hire an agent or consultant, fees vary. Smart VAT Kenya charges a flat KES 5,000 fee, which includes iTax filing, document preparation, and eTIMS onboarding guidance.",
       },
     },

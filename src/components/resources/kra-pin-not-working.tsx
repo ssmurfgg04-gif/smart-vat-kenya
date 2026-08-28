@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "KRA PIN Not Working? Why Your KRA PIN Application Is Stuck & How to Fix It (Kenya 2026)",
   description:
@@ -28,46 +28,46 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How long does KRA take to issue a KRA PIN?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Online KRA PIN applications on iTax are processed immediately - your PIN is issued on the spot after successful submission. Huduma Centre applications typically take 2-5 working days. If your application is taking longer, check your iTax dashboard for rejection reasons or visit the Huduma Centre where you applied.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What does it mean when iTax says 'KRA PIN already exists'?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "This means a KRA PIN has already been issued under your ID number. You cannot have two KRA PINs. If you have lost your PIN, use the 'Forgot PIN' feature on iTax to retrieve it. If someone else registered a PIN using your ID without your knowledge, visit a KRA Huduma Centre with your original ID to investigate and take control of the account.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Why is my KRA PIN not found on iTax?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "This error typically occurs when: (1) The PIN was recently issued and has not yet synced across KRA systems - wait 24-48 hours. (2) You are entering the PIN in the wrong format - use uppercase, no spaces, exactly 11 characters (e.g. A0123456789Z). (3) The PIN application is still being processed and is not yet active. (4) The PIN was deactivated due to non-compliance or inactivity.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I get a KRA PIN without going to a Huduma Centre?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Individual KRA PIN applications can be completed entirely online through the iTax portal at itax.kra.go.ke. You need your national ID number and a valid phone number. The system issues your PIN immediately upon successful registration. Business PIN applications may require additional documentation uploaded through iTax. Huduma Centre visits are only necessary if the online system fails or if you need to resolve specific issues like updating contact details.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What documents do I need to apply for a KRA PIN?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "For individual PIN: your national ID card or passport. For business PIN: the individual PIN of the proprietor/directors, business registration certificate (CR12 for companies, business name registration for sole proprietors), and a valid phone number and email address. All documents must be uploaded as PDF or JPG files under 1MB each on the iTax portal.",
       },
     },

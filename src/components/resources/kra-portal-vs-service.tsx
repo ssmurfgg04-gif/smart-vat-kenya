@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq-section"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "Register for VAT Yourself on iTax or Pay KES 5,000? The Honest Math",
   description: "An honest comparison of DIY VAT registration on KRA iTax vs hiring Smart VAT Kenya. Portal crashes, 14+ error codes, time cost, and penalty risk.",
@@ -15,18 +15,18 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is KRA iTax registration really free if I do it myself?",
-      acceptedAnswer: { "@type": "Answer", text: "Yes, KRA does not charge a filing fee for registration. However, DIY costs you 3 weeks of portal errors, potential late registration penalties, and lost business hours." }
+      acceptedAnswer: { "@type": "Answer" as const, text: "Yes, KRA does not charge a filing fee for registration. However, DIY costs you 3 weeks of portal errors, potential late registration penalties, and lost business hours." }
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if the iTax portal crashes while I am registering?",
-      acceptedAnswer: { "@type": "Answer", text: "You lose your session data and have to start over. Smart VAT Kenya handles portal friction for you entirely via WhatsApp." }
+      acceptedAnswer: { "@type": "Answer" as const, text: "You lose your session data and have to start over. Smart VAT Kenya handles portal friction for you entirely via WhatsApp." }
     }
   ]
 }

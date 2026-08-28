@@ -14,7 +14,7 @@ const author = {
 const lastVerified = "2026-08-25"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -24,7 +24,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "KRA VAT Penalties Kenya 2026: The Complete Reference Table",
   description:
@@ -44,62 +44,62 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What are the KRA VAT penalties for late filing in 2026?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The penalty for late filing of a VAT return is KES 10,000 fixed penalty or 5% of the tax due - whichever is higher - charged per month the return is outstanding. In addition, KRA charges 1% monthly interest on the unpaid tax. Even nil returns filed late attract the KES 10,000 fixed penalty.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How much is the KRA penalty for not registering for VAT?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Failure to register for VAT within 30 days of exceeding the KES 5 million annual turnover threshold carries a penalty of KES 100,000 or the tax that would have been due (whichever is higher). KRA will also backdate your registration and demand VAT for all taxable supplies made while you were unregistered.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the KRA eTIMS penalty for non-compliance?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA imposes eTIMS penalties on several bases. Since the Finance Act 2026 (in force 1 July 2026), failing to issue compliant electronic tax invoices or to file/pay electronically attracts the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals under TPA s.86 (before then, two times the tax due applied per the Finance Act 2023). The Tax Procedures (Electronic Tax Invoice) Regulations, LN 64/2024, refer breaches to s.86. Separately, a notified business with turnover above KES 5 million that fails to integrate its data-management system faces up to KES 100,000 per month under TPA s.59A(5). Figures like KES 500,000 per month or KES 1M/10% per invoice circulate in some guidance but are not enacted law. A KES 50,000-per-month figure is also not a standalone penalty under the ETI Regulations.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I apply for a KRA VAT penalty waiver?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Under Section 35 of the Tax Procedures Act, KRA may waive or remit penalties and interest if you demonstrate a valid reason - first-time offence, genuine mistake, system error, illness, or natural disaster. You submit the waiver application through iTax under the 'Penalty and Interest Waiver' menu. KRA typically responds within 7 to 30 working days.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is blocked input VAT and why does KRA deny it?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Blocked input VAT refers to VAT on certain expenses that KRA does not allow you to claim as input tax, even if you are VAT-registered. These include: entertainment expenses (unless provided to staff), passenger vehicles (unless the business is in transport or vehicle sales), and goods or services acquired for personal use. Claiming blocked input VAT can result in your entire input claim being rejected.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How does KRA calculate late payment interest on VAT?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA charges late payment interest at 1% per month (approximately 12% per annum) on the unpaid VAT amount. The interest is calculated from the due date (20th of the month) until the date of full payment. It is simple interest, not compound, but it accrues every month regardless of whether KRA sends you a reminder.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the penalty for withholding VAT agents who default?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "A withholding VAT agent who fails to remit VAT deducted from a supplier to KRA faces a penalty of 5% of the amount not remitted. The agent is also liable for the unpaid principal amount plus interest at 1% per month. KRA aggressively pursues defaulting withholding VAT agents through agency notices and enforcement.",
       },
     },

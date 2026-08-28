@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "Small Taxpayer Regime Kenya - VAT, Turnover Tax, and Simplified Compliance Guide 2026",
   description:
@@ -28,54 +28,54 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the small taxpayer regime in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The small taxpayer regime refers to the tax rules that apply to businesses with annual turnover below KES 5 million. These businesses are not required to register for VAT, but they must register for Turnover Tax (TOT) at 1-3% of gross sales. However, since January 2026, ALL businesses regardless of size must register for eTIMS and issue electronic invoices. Small businesses can also voluntarily register for VAT if it benefits them.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the turnover threshold for VAT registration in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The mandatory VAT registration threshold is KES 5 million in annual taxable turnover. Once your turnover reaches or exceeds this amount in any 12-month period, you must register for VAT. The Finance Act 2025 proposed raising the threshold to KES 8 million, but this has not yet taken effect as of July 2026. Voluntary registration is available below the threshold.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "If I am a small taxpayer, do I still need eTIMS?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. The Finance Act 2023 amended the Tax Procedures Act to require ALL persons engaged in business to use eTIMS, regardless of turnover. This means even if you pay turnover tax and are not VAT-registered, you must issue eTIMS-compliant invoices. Small businesses should use eTIMS Lite, which is free and accessed through a web browser. Issuing a non-compliant invoice attracts the TPA s.86 penalty - since 1 July 2026, the higher of 5% of the tax due, KES 100,000 (companies), or KES 10,000 (individuals) - and non-integration after notice costs up to KES 100,000 per month (TPA s.59A(5), turnover above KES 5 million).",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can a small business voluntarily register for VAT below the KES 5 million threshold?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Voluntary VAT registration allows businesses below the KES 5 million threshold to register for VAT. The main benefit is that you can claim input VAT on your purchases - laptops, software, rent, professional fees, etc. This can improve your cash flow if you sell to VAT-registered customers who can claim input VAT on purchases from you. However, you must charge 16% VAT on your sales, which may make your prices less competitive for non-VAT customers.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the difference between Turnover Tax and VAT?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Turnover Tax (TOT) is 1-3% on gross sales, paid monthly or annually. It is simpler - no input VAT claims, no complex returns. VAT is 16% on the value added, with input VAT deductions on purchases. VAT requires monthly filing on iTax and full eTIMS compliance. The decision between the two depends on your turnover, profit margins, customer type (B2B vs B2C), and whether you want to claim input VAT.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "As a small taxpayer, should I register for VAT voluntarily?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "It depends on your customer base and margins. If most of your customers are VAT-registered businesses (B2B), voluntary registration allows them to claim input VAT on purchases from you, which can increase your sales. You also get to claim input VAT on your own purchases. If most customers are individual consumers (B2C), adding 16% VAT makes your prices higher - staying on turnover tax is usually better. We recommend speaking with a KRA-registered agent to run the numbers for your specific business.",
       },
     },

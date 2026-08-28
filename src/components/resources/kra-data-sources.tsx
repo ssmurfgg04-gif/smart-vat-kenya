@@ -5,8 +5,8 @@ import { FAQSection } from "@/components/faq-section"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "Article",
+  "@context": "https://schema.org",
+  "@type": "Article" as const,
   headline: "KRA Data Sources Kenya - Where to Get Official VAT & Revenue Data Free",
   description:
     "Where analysts and journalists source official KRA data: KRA Publications, iKESRA, GavaConnect APIs, openAFRICA, KNBS, National Treasury and more - all free, all direct download pages.",
@@ -16,30 +16,30 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is KRA revenue data available to the public for free?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. KRA publishes Annual Revenue Performance reports and policy documents on its Publications page (kra.go.ke/publications), its research library is on iKESRA (ikesra.kra.go.ke), and openAFRICA hosts KRA revenue performance already converted to CSV. All are free and directly downloadable.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Does KRA provide an API for checking PINs or Tax Compliance Certificates?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. GavaConnect is KRA's developer platform with 16+ APIs including the PIN checker, Tax Compliance Certificate checker, NIL return and e-Slip checker. Free developer accounts are available.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Why does Smart VAT Kenya link out instead of hosting the data?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The official sources are free and authoritative. Linking to the actual download pages keeps our site lean and fast, and guarantees you always see the latest figures straight from KRA, KNBS and the National Treasury.",
       },
     },
@@ -110,7 +110,7 @@ export default function KraDataSourcesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org" as const as const as const as const as const,
+            "@context": "https://schema.org" as const,
             "@type": "Dataset",
             name: "Official KRA, KNBS & Treasury data sources for Kenya VAT and revenue analysis",
             description:

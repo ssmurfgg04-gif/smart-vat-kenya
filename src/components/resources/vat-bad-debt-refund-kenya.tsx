@@ -28,53 +28,53 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is VAT bad debt relief in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "VAT bad debt relief allows a supplier to claim a refund of VAT paid to KRA on supplies where the customer never paid. If you issued an invoice, charged VAT, and remitted that VAT to KRA, but the customer defaulted on payment, you can claim back the VAT portion after a specified waiting period.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How long must I wait before claiming bad debt VAT relief?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The waiting period was extended from 2 years to 3 years by the Finance Act 2026. However, if the customer enters statutory management, receivership, or liquidation before the 3-year period ends, you can claim immediately - you do not need to wait the full 3 years.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What qualifies as a bad debt for VAT purposes?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The debt must arise from a taxable supply of goods or services where: (1) you have issued an eTIMS-compliant invoice and accounted for the VAT, (2) the customer has not paid the full consideration within the waiting period, (3) you have taken reasonable steps to recover the debt, and (4) the debt has been written off in your accounting records as irrecoverable.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I claim bad debt VAT relief if my customer is a related party?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "No. Bad debt relief does not apply to debts arising from supplies between related parties. KRA treats related-party transactions as potentially structured to create artificial bad debt claims. You must be dealing at arm's length with an independent customer.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if I later receive payment after claiming the refund?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If you receive payment (or part payment) from the customer after successfully claiming the bad debt VAT refund, you must repay the refunded VAT to KRA on your next VAT return. You effectively reverse the bad debt claim in proportion to the amount recovered.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I apply for VAT bad debt relief?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The claim is submitted through the KRA iTax portal. You file an application with supporting documentation: the original eTIMS invoice, evidence of VAT remittance, proof of recovery attempts (demand letters, legal notices), evidence that the debt has been written off, and a declaration that the customer is not a related party. The application is reviewed by KRA and approved or rejected within a statutory period.",
       },
     },

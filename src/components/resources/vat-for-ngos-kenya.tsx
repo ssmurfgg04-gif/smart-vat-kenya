@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "VAT for NGOs in Kenya 2026: Exemptions, Compliance, and Common Mistakes",
   description:
@@ -28,46 +28,46 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do NGOs have to register for VAT in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes, if your NGO's annual taxable turnover exceeds KES 5 million. The VAT exemption on certain supplies does not remove the obligation to register. Many NGOs registered as VAT persons must still file monthly returns - even if all their supplies are exempt - to report their exempt status.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can NGOs claim back VAT on purchases?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Only if the NGO is registered for VAT and makes taxable (not exempt) supplies. NGOs that make wholly exempt supplies cannot register for VAT and cannot claim input VAT. However, NGOs can apply for VAT and import duty exemptions on donated goods through KRA's exemption certificate process.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What goods are VAT-exempt for NGOs?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Medicines, medical equipment, educational materials, agricultural inputs, and certain food items donated to registered charities can qualify for VAT exemption. The NGO must obtain an exemption certificate from KRA before importing or purchasing these goods. Without the certificate, standard VAT rates apply.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Are donations to NGOs subject to VAT?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Cash donations are not subject to VAT. Donations-in-kind (goods) may qualify for VAT exemption if the NGO holds a valid exemption certificate and the goods fall under the approved categories. Grants from donors are treated as income, not taxable supplies, and do not attract VAT.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the penalty for an NGO claiming VAT exemption incorrectly?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA can impose penalties of up to KES 100,000 per instance plus recovery of the VAT evaded, plus a 50% surcharge on audit adjustments. NGOs found to have misapplied exemptions risk losing their exemption certificate and being placed under enhanced compliance monitoring.",
       },
     },

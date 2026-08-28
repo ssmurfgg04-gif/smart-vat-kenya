@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "KRA Penalty for Late VAT Filing: How Much is it and How to Apply for a Waiver",
   description:
@@ -28,46 +28,46 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How much is the KRA penalty for late VAT filing?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The KRA penalty for late VAT filing is KES 10,000 or 5% of the total tax payable (whichever is higher). Additionally, KRA charges 1% monthly interest on the unpaid tax amount until it is fully paid. A nil return filed late still attracts the KES 10,000 penalty.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I get a KRA penalty waiver?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. You can apply for a KRA penalty waiver if you have a valid reason - first-time offence, system error, illness, or natural disaster. The waiver application is submitted through the iTax portal under the Penalty and Interest Waiver menu. KRA typically responds within 7 to 30 working days.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I check my KRA penalties on iTax?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Log in to itax.kra.go.ke, click 'Returns', then select 'File VAT Return'. Expand the overdue period to view the penalty breakdown. You can also go to 'Penalties and Interest' under the 'Query' menu to see all outstanding penalties across all tax obligations.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can KRA blacklist you for unpaid VAT penalties?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA does not publicly blacklist businesses for unpaid VAT penalties. However, KRA can issue an agency notice to your bank to freeze your accounts, deduct the amount owed, and remit it to KRA. This happens without a court order. Unpaid penalties also block you from getting a tax compliance certificate (TCC), which means you cannot bid for government tenders or access certain business licences.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if I file a nil VAT return late?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Even a nil VAT return - where you made no sales and owe no tax - attracts the KES 10,000 fixed penalty if filed after the 20th of the month. This is because KRA penalises the late filing itself, not the tax owed. You can apply for a waiver of this penalty if it was a genuine mistake or a first-time offence.",
       },
     },

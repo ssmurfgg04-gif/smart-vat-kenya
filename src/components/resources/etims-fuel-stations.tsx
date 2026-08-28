@@ -28,69 +28,69 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is eTIMS mandatory for fuel stations in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. KRA required all petroleum product retailers to implement the eTIMS Fuel Station System by June 30, 2025, with enforcement beginning after December 31, 2025. Stations that still issue ordinary ETR receipts instead of eTIMS invoices are in breach of the mandate and face penalties and enforcement action.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Why won't my petrol station give me an eTIMS receipt?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Most likely the station has not yet integrated the eTIMS Fuel Station System, because integration can cost KES 400,000–1,000,000 depending on the number of pumps and the level of automation. A station that cannot issue an eTIMS invoice is not yet compliant, regardless of what its ordinary receipt says.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the difference between an ETR receipt and an eTIMS receipt at a fuel station?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "An ETR (Electronic Tax Register) receipt is the old-style fiscal receipt and does not satisfy the eTIMS mandate for fuel stations. A valid eTIMS invoice carries a QR code and a KRA server confirmation code. If your receipt has neither, it is not an eTIMS invoice.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What should I do if a fuel station refuses to give me an eTIMS receipt?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Ask for an eTIMS invoice with a QR code and confirmation code. If the station cannot provide one, note the station name, location, and date, then report it to KRA on 0711 099 999 or via KRA's social channels. KRA is actively enforcing the fuel station mandate and wants these reports.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do fuel stations face penalties for not using eTIMS?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Failure to comply with the eTIMS mandate attracts the standard eTIMS penalties - the TPA s.86 e-invoice penalty (since 1 July 2026, the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals) and the up-to-KES 100,000-per-month system non-integration penalty under TPA s.59A(5) - along with enforcement action. KRA has also linked eTIMS compliance to Tax Compliance Certificate (TCC) issuance, so non-compliant stations get blocked on multiple fronts.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How much does it cost a fuel station to integrate eTIMS?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Integration costs typically range from KES 400,000 to KES 1,000,000 depending on the number of pumps, existing POS and fuel management systems, and whether the station self-integrates or uses a KRA-certified third-party integrator. This upfront cost is the main reason many independent dealers are still not compliant.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do fleet and fuel card purchases need eTIMS invoices?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. Fleet cards, fuel cards, and credit accounts for corporate customers must generate a compliant B2B eTIMS invoice carrying the buyer's KRA PIN. Without it, the buyer cannot claim input VAT, and the station is issuing non-compliant invoices.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is the convenience shop attached to a fuel station also covered?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. The shop attached to a fuel station (snacks, drinks, motor oil, and similar retail sales) falls under the same eTIMS requirements as any other retail business - it must issue eTIMS invoices for every sale.",
       },
     },

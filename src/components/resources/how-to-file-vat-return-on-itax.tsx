@@ -29,45 +29,45 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the penalty for filing a nil VAT return late on iTax?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Filing a nil VAT return after the 20th of the month still attracts a KES 10,000 late filing penalty. Even if you owe no tax, KRA penalises the late submission itself. You can apply for a penalty waiver through the iTax portal by submitting a waiver request explaining the reason for the delay.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I file my VAT return on iTax using my phone?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes, you can access itax.kra.go.ke from a mobile browser, but the portal is not fully optimised for small screens. Many users report issues with dropdown menus and the submit button on phones. Use a desktop or laptop browser - preferably Google Chrome - for a reliable filing experience.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I correct a mistake on a VAT return already submitted on iTax?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "You cannot edit a submitted VAT return on iTax. You must file an amended return for the same period. Go to Returns → VAT Returns → Select the period → Amended Return. Enter the correct figures. KRA will replace your original return with the amended version. Do this before the deadline if possible to avoid penalties on the corrected amount.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the difference between a nil return and a normal return on iTax?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "A nil return means you had zero sales and zero purchases in that month - you declare no VAT payable and no VAT recoverable. A normal return means you had sales, purchases, or both. In a normal return, you enter your total taxable sales (output VAT) and total purchases with VAT (input VAT). The difference is what you pay or claim as a refund.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How long does KRA take to process a VAT refund after filing?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA aims to process VAT refund applications within 30 to 60 days from the date of filing. In practice, refunds often take longer due to manual verification. Ensure your eTIMS invoices are compliant and your bank details on iTax are up to date - incorrect bank details are the most common reason for refund delays.",
       },
     },

@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "VAT Refund Guide Kenya 2026",
   description:
@@ -28,54 +28,54 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Who is eligible for a VAT refund in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "You are eligible for a VAT refund if you have excess input VAT that arose from: (1) zero-rated supplies (e.g., exports of goods or digital services), (2) purchases of capital goods where no corresponding output VAT was generated, (3) withholding VAT credits exceeding your net VAT payable, (4) VAT paid on imports where the goods were subsequently exported, or (5) VAT paid in error or overpaid. The excess must have been declared in your VAT return before you apply for a refund.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the deadline for applying for a VAT refund?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "You must apply within 12 months from the date the tax became due and payable. This was reduced from 24 months by the Finance Act 2025, effective 1 July 2025. If you have unclaimed refunds older than 12 months, they are forfeited. Check your iTax portal for any pending refunds you may have missed.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What documents are needed for a VAT refund application?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "You typically need: (1) a formal refund application letter addressed to the Commissioner, (2) the VAT returns for the period showing the excess, (3) eTIMS-compliant invoices supporting the input VAT claimed, (4) proof of payment for the purchases (bank statements, M-Pesa statements), (5) a detailed reconciliation schedule showing how the excess arose, (6) customs import entries (if the excess is from imports), (7) proof of export (if the excess is from zero-rated exports), and (8) withholding VAT certificates (if the excess is from withholding VAT credits).",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How long does a VAT refund take in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA does not publish a guaranteed processing timeline. In practice, straightforward refunds can take 30-90 days, while complex claims may take 6-12 months. KRA typically conducts an audit before approving a refund, which adds to the processing time. To speed things up, ensure your application is complete, your eTIMS records are up to date, and you have reconciled your bank and M-Pesa statements against your declared sales.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Why do VAT refund applications get rejected?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Common rejection reasons include: (1) applying after the 12-month deadline, (2) incomplete documentation (missing eTIMS invoices, no proof of payment), (3) the excess arose from exempt supplies where refunds are not allowed, (4) the refund amount does not reconcile with your VAT returns, (5) supplier invoices were not transmitted to KRA through eTIMS, (6) your KRA PIN does not appear on the supplier invoices, (7) the input VAT was claimed outside the 6-month window, or (8) KRA's audit found discrepancies in your declared sales.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       "name": "Can I get a refund of VAT on bad debts?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes, you can claim a refund of VAT on bad debts where you supplied goods or services, accounted for the VAT, but never received payment from the customer. Under the Finance Act 2026, the minimum qualifying period is now 3 years (increased from 2 years by the Finance Act 2025 but reverted to 3 years by the Finance Act 2026, effective 1 July 2026). You must demonstrate that the debt is genuinely irrecoverable and that you have taken reasonable steps to recover it.",
       },
     },

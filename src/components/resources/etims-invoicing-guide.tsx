@@ -29,53 +29,53 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What makes an invoice eTIMS-compliant in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "An eTIMS-compliant invoice must be generated through KRA's eTIMS system (Lite, Client, Trader, or VSCU/OSCU). It must include the seller's registered name and KRA PIN, the buyer's KRA PIN for B2B transactions above KES 10,000, a sequential eTIMS invoice number, the invoice date, a full description of goods/services, quantity and unit price, the tax rate and VAT amount (words and figures), the total amount including VAT, a KRA-generated QR code, and the eTIMS server confirmation code.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       "name": "Can I issue an eTIMS invoice without the buyer's KRA PIN?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes, for B2C sales (sales to individual consumers). For B2B transactions above KES 10,000, the buyer's KRA PIN is mandatory. If you are selling to a business customer and they refuse to provide their KRA PIN, inform them that without it, they cannot claim input VAT on the purchase. For sales below KES 10,000 to un registered persons, you can record the buyer's name and ID number instead.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       "name": "How do I verify an eTIMS invoice is genuine?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Scan the QR code on the eTIMS invoice using KRA's free eTIMS verification app (available on Google Play and the App Store). The app will display the invoice details from KRA's server. If the QR code fails to scan or returns different details, the invoice may not have been transmitted to KRA and is not valid for input VAT claims. You can also manually verify by checking that the invoice has a valid eTIMS server confirmation code and sequential invoice number.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       "name": "What if my supplier does not issue eTIMS invoices?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If your supplier is not using eTIMS, you have three options. First, ask them to register for eTIMS (send them KRA's eTIMS onboarding guide). Second, use Buyer-Initiated Invoicing (BII) on the eTIMS system - you generate the invoice on their behalf, they receive a notification, and you can claim your input VAT. Third, if neither works, consider switching to a compliant supplier, because you cannot claim input VAT on non-eTIMS invoices from that supplier.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       "name": "Do I need to print eTIMS invoices on special paper?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "No special paper is required. You can print eTIMS invoices on plain A4 paper, as long as the QR code is clearly printed and scannable. However, for high-value transactions, KRA recommends printing on paper that preserves the QR code legibility for at least 5 years (the statutory record-keeping period). Thermal paper that fades over time is not recommended.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       "name": "What is the penalty for issuing a non-compliant eTIMS invoice?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Issuing invoices outside eTIMS carries escalating penalties. First, the buyer cannot claim input VAT on that invoice. Second, if KRA finds you issued non-compliant invoices during an audit, you face a penalty of up to KES 10,000 per invoice plus a 50% surcharge on any additional tax assessment. For businesses with high invoice volumes, this adds up very quickly. Using eTIMS correctly is both a compliance requirement and a financial protection.",
       },
     },

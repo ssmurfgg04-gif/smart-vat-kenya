@@ -27,45 +27,45 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Why is KRA iTax so slow at the end of the month?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Because the deadline falls on the 20th, tens of thousands of taxpayers log in in the final days - especially the 19th and 20th - and the portal slows or times out under load. Most 'iTax is down' reports are actually congestion, not a server failure.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I know if iTax is slow because of traffic or a real outage?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Check downdetector.co.ke for a spike in user reports, the iTax login banner for maintenance notices, and @KRAAfrica on X. If the homepage loads but filing hangs, it's almost always congestion.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What time of day is iTax fastest?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Weekday mornings (8am–11am), especially between the 1st and 10th of the month. Avoid the 15th–20th entirely when possible.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What do I do if iTax times out while I'm filing?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Screenshot the error with a timestamp, try Incognito Mode or a different browser, wait 30–60 minutes for a lull, and retry. Verify whether the return actually submitted before re-filing to avoid duplicates.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if congestion blocks me past the 20th deadline?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "You can apply for a Section 35 penalty waiver citing the system outage, with screenshots as evidence. KRA does not automatically extend deadlines, so file with evidence immediately and apply proactively.",
       },
     },

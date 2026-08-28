@@ -45,53 +45,53 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Why is the KRA iTax portal not working today?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "The iTax portal frequently experiences downtime due to server overload, especially around the 20th monthly deadline when millions of taxpayers log in simultaneously. Scheduled maintenance on weekends and unexpected system upgrades also cause outages. If the portal is down, wait 30-60 minutes and try again during off-peak hours (early morning or after 10 PM).",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I fix 'Invalid PIN or Password' on iTax?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Check that Caps Lock is off - iTax passwords are case-sensitive. Ensure you are entering your KRA PIN in the correct format (e.g., A0123456789Z, all uppercase, no spaces). If you have forgotten your password, click 'Forgot Password' to receive a reset link via your registered email. If you cannot access that email, visit a KRA Huduma Centre in person with your ID.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What should I do if iTax says 'System Timeout'?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Clear your browser cache and cookies, then restart your browser. Use Google Chrome or Microsoft Edge (version 120 or newer) - Firefox sometimes has compatibility issues. Switch from 3G to 4G or Wi-Fi if you are on mobile data, or try a different internet connection. Finally, try logging in during off-peak hours (before 8 AM or after 10 PM) when the iTax servers are less congested.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Why am I not receiving the iTax OTP?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "SMS delays are common during peak periods. Wait at least 5 minutes and check your spam or blocked messages. If the SMS still does not arrive, try the email OTP option instead - the one-time password is sent to your registered email address. If neither works, your phone number or email may need updating. Visit a KRA Huduma Centre to update your contact details, or log in to iTax and update your profile if you can access your account through the agent portal.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is eTIMS the same thing as iTax?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "No. eTIMS (Electronic Tax Invoice Management System) and iTax are separate KRA systems with different logins and different passwords. eTIMS is for generating and managing tax invoices and sending sales data to KRA in real time. iTax is for filing returns, checking penalties, and managing your overall tax account. Make sure you are on the correct portal and using the correct password for each system.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if I cannot file my VAT return because iTax is down on the 20th?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If the iTax portal is down on the deadline, take a screenshot of the error or downtime message as evidence. File as soon as the portal is back up. If KRA later imposes a late filing penalty, you can apply for a penalty waiver citing system downtime. However, KRA does not automatically excuse late filings due to portal issues - you must proactively apply for the waiver. To avoid this stress entirely, consider using a KRA-registered VAT agent like Smart VAT Kenya who can file on your behalf without you ever needing to log in to iTax.",
       },
     },

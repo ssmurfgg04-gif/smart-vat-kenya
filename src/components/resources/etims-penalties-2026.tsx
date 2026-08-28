@@ -17,12 +17,12 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What are the exact eTIMS penalties under Kenyan law in 2026?",
-      acceptedAnswer: { "@type": "Answer", text: `Under TPA s.86 (amended by Finance Act 2026), issuing a non-compliant invoice attracts ${FACTS.etimsNonCompliance}. Failing to integrate systems after notice costs ${FACTS.etimsIntegrationFailure}.` }
+      acceptedAnswer: { "@type": "Answer" as const, text: `Under TPA s.86 (amended by Finance Act 2026), issuing a non-compliant invoice attracts ${FACTS.etimsNonCompliance}. Failing to integrate systems after notice costs ${FACTS.etimsIntegrationFailure}.` }
     }
   ]
 }

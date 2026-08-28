@@ -6,7 +6,7 @@ import { FACTS } from "@/src/lib/vat-facts"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "VAT Threshold Kenya 2026 - KES 5M or 8M? The Real Answer",
   description: "Resolving the confusion between the operative KES 5 million VAT registration threshold and the proposed KES 8 million Finance Act 2025 rule. Official KRA guidance verified.",
@@ -16,13 +16,13 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is the VAT threshold in Kenya 5 million or 8 million?",
-      acceptedAnswer: { "@type": "Answer", text: `The operative mandatory threshold is ${FACTS.mandatoryThreshold}. While the Finance Act 2025 proposed raising it to KES 8 million, KRA's official iTax guidance and tax professional summaries confirm 5 million remains the enforced law.` }
+      acceptedAnswer: { "@type": "Answer" as const, text: `The operative mandatory threshold is ${FACTS.mandatoryThreshold}. While the Finance Act 2025 proposed raising it to KES 8 million, KRA's official iTax guidance and tax professional summaries confirm 5 million remains the enforced law.` }
     }
   ]
 }

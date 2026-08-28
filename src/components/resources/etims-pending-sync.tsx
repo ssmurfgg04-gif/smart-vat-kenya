@@ -88,53 +88,53 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What does 'Pending Sync' mean in eTIMS?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "A 'Pending Sync' status means the invoice was created locally on eTIMS Client (or your ERP) but has not yet been transmitted to and confirmed by KRA's servers. This is normal in offline mode - invoices queue locally and sync when connectivity returns. The invoice only becomes fully valid for input VAT claims once KRA confirms it during the sync and assigns a server confirmation code.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How long does an eTIMS sync take?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "A normal eTIMS Client sync takes between a few seconds and a few minutes for a typical batch of invoices. If the queue is large (hundreds of invoices) or the connection is slow, it can take longer. If invoices stay 'Pending Sync' for hours or days, there is usually a connection, certificate, or KRA-side issue that needs troubleshooting.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Why are my eTIMS invoices stuck on Pending Sync?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Common causes: no stable internet connection, the eTIMS Client certificate has expired or is not activated, a firewall or VPN blocking the KRA endpoint, eTIMS Client needs an update, or KRA's eTIMS servers are down. Less commonly, invoice data is corrupted and needs to be deleted and re-created. Work through the connection checks first, then certificate checks.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Will KRA penalise me for Pending Sync invoices?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Invoices stuck on Pending Sync are not yet counted as transmitted to KRA. If they stay unsynced, KRA may treat the sales as not declared under eTIMS, which can trigger a non-compliant-invoice penalty (TPA s.86 - the higher of 5% of the tax due, KES 100,000 for companies, or KES 10,000 for individuals) or a VAT audit. Fix the sync promptly and keep evidence (sync logs, screenshots) if a KRA outage caused the delay. eTIMS Client also locks you out if it cannot sync for more than 7 consecutive days - so resolve pending syncs before that threshold.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I force eTIMS Client to sync pending invoices?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Open eTIMS Client with a stable connection, click the 'Sync' button (or 'Transmit' depending on your version), and wait for the progress bar to complete. Verify each invoice now shows a 'Confirmed' status with a server confirmation code. If sync fails, check your internet, restart eTIMS Client, verify the device certificate is active, and try again after clearing the failed items.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Does Pending Sync affect my customer's input VAT claim?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. A B2B customer cannot claim input VAT on an eTIMS invoice that is still 'Pending Sync' because it does not yet have a valid server confirmation code. Inform B2B customers that the invoice is pending, and re-issue or re-send the confirmed version once the sync completes, so their input VAT deduction is not delayed.",
       },
     },

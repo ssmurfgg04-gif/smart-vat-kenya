@@ -34,53 +34,53 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I issue eTIMS invoices during a KPLC blackout?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Only if your equipment has power. eTIMS Client runs on a desktop/laptop - a blackout stops it unless you are on a UPS, laptop battery, or backup generator. eTIMS Client's offline mode queues invoices locally, so if you have a charged laptop you can keep invoicing and the invoices sync when power and internet return. eTIMS Lite (web-based) needs both power and internet and will not work during a blackout. Keep a manual sales log as a backup so no sales are lost.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Will KRA penalise me if a power cut prevented me from invoicing or filing?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA does not automatically excuse non-compliance caused by power cuts. If you miss an eTIMS invoice transmission or a VAT filing deadline because of a blackout, document everything (screenshots, KPLC outage notice if available, photos of the blackout), complete the compliance as soon as power returns, and apply for a penalty waiver proactively with the evidence. KRA exercises discretion case by case - you must demonstrate reasonable effort.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How does a power cut affect M-Pesa payments to KRA?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "A power cut at your premises does not necessarily stop M-Pesa - mobile money runs on Safaricom's network, not your local power. Your phone keeps working on its own battery. However, if you process KRA payments via a bank, POS, or a computer (e.g., for larger payments), a blackout can block them. Use your phone's M-Pesa app or USSD to pay KRA Paybill 572572 during a blackout, and keep a screenshot of any failed attempt as evidence.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What equipment should I have for a blackout?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "A UPS (uninterruptible power supply) for your eTIMS computer, a fully charged laptop as a fallback, and a backup way to charge your phone (power bank). For businesses that rely on eTIMS Client, a UPS that gives 15-30 minutes of runtime lets you save and queue invoices gracefully. Consider a generator if your business cannot stop selling during extended outages. Keep your router on a UPS too so internet survives short blackouts.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "I lost sales data during a blackout - what do I do?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If eTIMS Client shut down uncleanly during a blackout, reopen it when power returns and check whether pending invoices were saved. eTIMS Client queues invoices locally as you create them, so most are preserved. If data is corrupted, you may need to delete and re-create specific invoices. Always keep a manual (paper or spreadsheet) sales log - it is your audit trail and the basis for recreating invoices or defending a KRA query.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Does a KPLC blackout count as an eTIMS outage for the 7-day sync rule?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "No. The 7-day eTIMS sync rule is based on calendar days, not business days, and KRA does not pause it for power cuts. If a blackout or series of outages prevents your eTIMS device from syncing for 7 consecutive days, KRA locks the device. Restore power and internet and sync as soon as possible, and contact KRA if an extended outage puts you close to the 7-day window.",
       },
     },

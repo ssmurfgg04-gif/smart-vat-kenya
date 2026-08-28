@@ -14,12 +14,12 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is needed for an individual KRA PIN?",
-      acceptedAnswer: { "@type": "Answer", text: "You need your Kenyan National ID card and a mobile phone registered in your name." }
+      acceptedAnswer: { "@type": "Answer" as const, text: "You need your Kenyan National ID card and a mobile phone registered in your name." }
     }
   ]
 }

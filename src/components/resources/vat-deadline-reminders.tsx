@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq-section"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "Free KRA VAT Deadline Reminders on WhatsApp",
   description: "Never miss the 20th KRA VAT filing deadline again. Get automated WhatsApp reminders on the 17th of every month. Free service by Smart VAT Kenya.",
@@ -15,13 +15,13 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Are these WhatsApp deadline reminders truly free?",
-      acceptedAnswer: { "@type": "Answer", text: "Yes, our monthly VAT deadline reminders sent via WhatsApp are 100% free with no obligation to sign up for paid filing." }
+      acceptedAnswer: { "@type": "Answer" as const, text: "Yes, our monthly VAT deadline reminders sent via WhatsApp are 100% free with no obligation to sign up for paid filing." }
     }
   ]
 }

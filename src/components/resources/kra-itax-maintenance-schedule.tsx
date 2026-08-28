@@ -27,45 +27,45 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "When does KRA iTax go down for maintenance?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA does not publish a fixed maintenance calendar, but outages historically cluster late at night (7pm–6am) on weekends and in the days just before and after the 20th filing deadline. Always check iTax status pages and KRA's social media before planning to file.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I know if iTax is really down for maintenance?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA main console shows a status banner on itax.kra.go.ke, KRA post on X (@KRAAfrica), and status aggregator sites like downdetector.co.ke track spikes. If the site loads but only that action fails, it's likely congestion rather than full maintenance.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I file VAT during a maintenance window?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "It is not recommended. There is risk the submission fails part-way and you cannot confirm a receipt. File on or before the 10th of the month to avoid both maintenance windows and end-filled deadline congestion entirely. See our iTax traffic update guide.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Does KRA extend the VAT deadline if the portal is down?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Not routinely. Extensions are rare and announced officially via KRA Gazette and iTax banners. Assume the 20th is final. Screenshot any outage evidence and apply for a penalty waiver proactively if an outage blocks you.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the best time to file VAT to avoid maintenance?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Weekday mornings (8am–11am) from the 1st to the 10th of the month are the smoothest. Avoid Friday nights, weekend nights, and the 19th–20th entirely.",
       },
     },

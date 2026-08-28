@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "M-Pesa Error Codes 2026: MR101, MR105 & 'Transaction Failed' Fixes",
   description:
@@ -33,54 +33,54 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What does M-Pesa error MR101 mean?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "MR101 means 'service is currently unavailable' - a Safaricom-side outage or a scheduled maintenance window. It affects the entire M-Pesa platform, not just your account. Wait 15 to 30 minutes and retry. Check Safaricom's official X account (@SafaricomPLC) for a live status update, or use our Safaricom not working guide for workarounds.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "My M-Pesa says 'transaction failed' - was my money taken?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Not necessarily. The generic 'transaction failed' message is a catch-all for failures before the payment reaches the Safaricom switch - commonly a weak network, a wrong recipient number, or a malformed paybill input. First check your M-Pesa balance via *334#; if the money was deducted but the transaction failed, it will either complete or auto-reverse. Re-check your recipient details and signal, then retry. If it still fails, try *334# instead of the app or *144#.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Why can't I pay using Lipa na M-Pesa (error MR105)?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "MR105 means the recipient paybill or till number is suspended, misconfigured, or has hit its operator-side daily cap. Verify the paybill number against an official source before retrying. If the number is correct, the issue is with the merchant - contact them directly. Do not retry repeatedly against a suspended till; you will not get through and may confuse reconciliation.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I still pay KRA VAT if M-Pesa is giving errors?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "If M-Pesa is down or failing on your KRA Paybill 572572 payment, try the alternate USSD code *334# or the M-Pesa app if one is down. If the whole platform is down, do not keep retrying - screenshot the error with the date and time, and pay as soon as the service returns. If this pushes you past the 20th filing deadline, file your return and pay immediately after, then apply for a late-payment penalty waiver citing the network outage with your evidence.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What does MR110 mean on M-Pesa?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "MR110 means 'your request cannot be processed at this time' - typically a KYC or account-status flag that needs a manual review. Visit a Safaricom shop with your national ID so staff can review your account, clear any flags, or re-verify your identity. This usually resolves the issue on the spot.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I fix a locked M-Pesa PIN?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Dial *334# > My Account > Forgot PIN, then follow the prompts. You will be asked for your national ID number, date of birth, and recent M-Pesa transaction details. The reset completes within minutes and the new PIN arrives via SMS. Alternatively, visit any Safaricom shop with your national ID to reset the PIN in person.",
       },
     },

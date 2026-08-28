@@ -45,45 +45,45 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How do I calculate VAT on a price in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Multiply the price by 16% (0.16) to get the VAT amount. For VAT-exclusive prices (price before VAT): VAT = Price × 0.16, Total = Price × 1.16. For VAT-inclusive prices (price already includes VAT): VAT = Price × (16 ÷ 116), Amount before VAT = Price × (100 ÷ 116).",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the difference between VAT-inclusive and VAT-exclusive pricing?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "VAT-inclusive means the displayed price already includes the 16% VAT - what the customer pays is final. VAT-exclusive means the price is shown before VAT is added - the customer pays the displayed amount plus 16% VAT. Most Kenyan retail prices are VAT-inclusive. Business-to-business invoices typically show VAT-exclusive amounts.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What goods are zero-rated vs exempt from VAT in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Zero-rated goods (0% VAT) include exports, maize flour, bread, milk, and goods sold to diplomats or aid organisations - you can still claim input VAT on your costs. Exempt goods (no VAT at all) include financial services, insurance, residential rent, education, and passenger transport - you cannot claim input VAT on related costs.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do I charge VAT on M-PESA sales?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. M-PESA sales are taxable supplies under Kenyan law. If you are VAT-registered, every M-PESA transaction - whether from Till Number, Paybill, or Lipa Na M-PESA - must be recorded in your VAT return. The 16% VAT applies exactly the same way as cash or bank transfers.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if I calculate VAT incorrectly on my KRA return?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Errors in VAT calculation on your iTax return can trigger a KRA audit. If you underpaid VAT, you will owe the difference plus a 5% penalty and 1% interest per month. If you overpaid, KRA will credit your account but the refund process takes 30–90 days. Always double-check your calculations before submitting.",
       },
     },

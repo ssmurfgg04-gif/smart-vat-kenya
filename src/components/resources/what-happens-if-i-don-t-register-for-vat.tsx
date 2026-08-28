@@ -29,37 +29,37 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is VAT registration mandatory in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. VAT registration is mandatory in Kenya when your annual taxable turnover exceeds KES 5 million. Failure to register when required is a criminal offense under the VAT Act.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the penalty for not registering for VAT in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "KRA imposes a penalty of KES 100,000 or the tax that would have been due on your sales (whichever is higher) for failure to register for VAT when required.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can KRA audit a business that hasn't registered for VAT?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. KRA actively audits non-registered businesses, especially those with high sales turnover. During an audit, the KRA can demand payment of all unpaid VAT dating back several years, plus penalties and interest.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What happens if I am caught not registered for VAT in Kenya?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "You face: (1) KES 100,000 penalty or higher, (2) Back-dated VAT liability, (3) Interest charges at 1% per month, (4) Possible business license suspension, (5) Criminal prosecution in extreme cases.",
       },
     },

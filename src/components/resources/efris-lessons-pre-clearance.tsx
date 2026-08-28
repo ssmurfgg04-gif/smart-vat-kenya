@@ -14,12 +14,12 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What is the core operational risk of real-time pre-clearance e-invoicing?",
-      acceptedAnswer: { "@type": "Answer", text: "When every invoice must be cryptographically approved by the tax authority's server before a customer can be served, internet latency, server timeouts, and API downtime directly halt business cash flow." }
+      acceptedAnswer: { "@type": "Answer" as const, text: "When every invoice must be cryptographically approved by the tax authority's server before a customer can be served, internet latency, server timeouts, and API downtime directly halt business cash flow." }
     }
   ]
 }

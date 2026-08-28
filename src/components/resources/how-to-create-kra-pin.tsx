@@ -14,12 +14,12 @@ const articleSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is creating a KRA PIN free?",
-      acceptedAnswer: { "@type": "Answer", text: "Yes, creating a KRA PIN directly on the iTax portal is completely free of charge." }
+      acceptedAnswer: { "@type": "Answer" as const, text: "Yes, creating a KRA PIN directly on the iTax portal is completely free of charge." }
     }
   ]
 }

@@ -4,7 +4,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 }
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "KRA Status Code 500 iTax Errors - Causes, Fixes, and What to Do When the Portal Is Down (Kenya 2026)",
   description:
@@ -28,46 +28,46 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What does KRA iTax Error 500 mean?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Error 500 (Internal Server Error) means the iTax portal server encountered an unexpected condition that prevented it from fulfilling the request. It is a server-side error - not a problem with your computer, browser, or internet connection. KRA's servers are either overloaded, undergoing maintenance, or experiencing a technical fault. You cannot fix Error 500 from your end - you must wait for KRA to resolve it.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Is iTax Error 500 the same as a portal outage?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Not always. Error 500 can appear intermittently even when the portal is technically 'up' - it usually means a specific server process crashed. But if the error persists for more than 30-60 minutes, it indicates a broader outage. A full outage typically shows a blank white page, an infinite loading spinner, or the message 'Service Unavailable'. KRA usually publishes outage notices on their official X (Twitter) account and website.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "How long does iTax Error 500 usually last?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Most iTax Error 500 occurrences resolve within 30 minutes to 2 hours. During peak periods (the 15th-20th of each month), recovery can take longer because server load remains high. KRA typically performs emergency restarts during off-peak hours. If the error has persisted for more than 4 hours during a business day, it is a major outage and you should contact KRA on 020 499 9999 for an update.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can I lose my VAT return data when iTax shows Error 500?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "Yes. iTax does not auto-save your form data. If you are in the middle of filling a VAT return and the portal crashes with Error 500, all unsaved data is lost. Always prepare your VAT return figures in a spreadsheet first, then copy them into iTax in one go. This is the number one reason business owners switch to having a KRA-registered agent file on their behalf.",
       },
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What do I do if Error 500 appears on the 20th deadline?",
       acceptedAnswer: {
-        "@type": "Answer",
+        "@type": "Answer" as const,
         text: "First, take a screenshot showing the error and the date/time. This is your evidence. Second, keep trying every 30-60 minutes - do not refresh every 30 seconds as this can get your IP blocked. Third, if the error persists past the deadline, file as soon as the portal is back. Then apply for a penalty waiver citing the system downtime. KRA may reject the waiver - having a KRA-registered agent file through the agent portal (which has better uptime) is the only way to guarantee deadline compliance.",
       },
     },

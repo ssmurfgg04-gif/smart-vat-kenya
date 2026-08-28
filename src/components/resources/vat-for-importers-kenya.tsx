@@ -4,7 +4,7 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 import { ArticleGrid } from "@/lib/resources"
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "VAT for Importers in Kenya 2026: Import VAT, Customs & Compliance",
   description:
@@ -18,7 +18,7 @@ const articleSchema = {
 }
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },

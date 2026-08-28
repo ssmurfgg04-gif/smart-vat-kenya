@@ -24,11 +24,11 @@ const FAQs = [
 
 const faqSchema = {
   "@context": "https://schema.org" as const,
-  "@type": "FAQPage",
+  "@type": "FAQPage" as const,
   mainEntity: FAQs.map((f) => ({
-    "@type": "Question",
+    "@type": "Question" as const,
     name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
+    acceptedAnswer: { "@type": "Answer" as const, text: f.a },
   })),
 }
 

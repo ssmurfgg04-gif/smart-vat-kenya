@@ -8,7 +8,7 @@ import { FACTS } from "@/src/lib/vat-facts"
 const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "VAT for Freelancers & Creators in Kenya 2026",
   description: "Do digital creators, freelance developers, and remote consultants in Kenya need a KRA PIN and VAT registration? Threshold rules, digital services, and eTIMS compliance.",
@@ -18,13 +18,13 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Do freelance digital creators in Kenya need to register for VAT?",
-      acceptedAnswer: { "@type": "Answer", text: `If your taxable turnover from freelance work reaches or exceeds ${FACTS.mandatoryThreshold} annually, VAT registration is mandatory. Below that, you can operate under Turnover Tax or register voluntarily.` }
+      acceptedAnswer: { "@type": "Answer" as const, text: `If your taxable turnover from freelance work reaches or exceeds ${FACTS.mandatoryThreshold} annually, VAT registration is mandatory. Below that, you can operate under Turnover Tax or register voluntarily.` }
     }
   ]
 }

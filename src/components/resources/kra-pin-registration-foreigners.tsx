@@ -3,7 +3,7 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
 const articleSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
+  "@context": "https://schema.org" as const,
   "@type": "Article",
   headline: "KRA PIN Registration for Foreigners in Kenya (2026 Guide)",
   description: "Complete guide for non-citizens and expatriates on how to get a KRA PIN in Kenya. Requirements, passport upload, work permits, and online iTax steps.",
@@ -13,18 +13,18 @@ const articleSchema = {
 }
 
 const faqSchema = {
-  "@context": "https://schema.org" as const as const as const as const as const,
-  "@type": "FAQPage",
+  "@context": "https://schema.org" as const,
+  "@type": "FAQPage" as const,
   mainEntity: [
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "Can a foreigner get a KRA PIN in Kenya?",
-      acceptedAnswer: { "@type": "Answer", text: "Yes. Any non-citizen living, working, or earning income in Kenya or engaging in business requires a KRA PIN, just like citizens." }
+      acceptedAnswer: { "@type": "Answer" as const, text: "Yes. Any non-citizen living, working, or earning income in Kenya or engaging in business requires a KRA PIN, just like citizens." }
     },
     {
-      "@type": "Question",
+      "@type": "Question" as const,
       name: "What documents does a foreigner need for a KRA PIN?",
-      acceptedAnswer: { "@type": "Answer", text: "You need a valid passport, a valid work permit or alien card (if applicable), and proof of physical address or employer details in Kenya." }
+      acceptedAnswer: { "@type": "Answer" as const, text: "You need a valid passport, a valid work permit or alien card (if applicable), and proof of physical address or employer details in Kenya." }
     }
   ]
 }
