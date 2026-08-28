@@ -1,118 +1,208 @@
 ﻿import { Sun, Moon, List, X } from "@phosphor-icons/react/dist/ssr"
 import { useEffect, useState } from "react"
+import { SiteSearch } from "./site-search"
+
+const navLinks = [
+  { href: "/tax-amnesty-2026/", label: "Tax Amnesty", urgent: true },
+  { href: "/tools/", label: "VAT Calculator" },
+  { href: "/services/", label: "Services" },
+  { href: "/how-it-works/", label: "How It Works" },
+  { href: "/resources/", label: "Resources" },
+  { href: "/kra-help/", label: "KRA Help" },
+  { href: "/kra-status/", label: "KRA Status" },
+  { href: "/tax-deadlines/", label: "Tax Deadlines" },
+  { href: "/about/", label: "About" },
+]
+
+const WA_LINK =
+  "https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT%20registration%20or%20filing."
 
 export function Navbar() {
-  const [isDark, setIsDark] = useState(false)
-  const [mounted, setMounted] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [pathname, setPathname] = useState("/")
+  const [open, setOpen] = useState(false)
+  const [theme, setTheme] = useState<"light" | "dark">("light")
 
   useEffect(() => {
-    setMounted(true)
-    const stored = localStorage.getItem("theme")
-    const initialDark = stored === "dark"
-    setIsDark(initialDark)
-    if (initialDark) {
-      document.documentElement.classList.add("dark")
-    }
+    setPathname(window.location.pathname)
+    const isDark = document.documentElement.classList.contains("dark")
+    setTheme(isDark ? "dark" : "light")
   }, [])
 
   const toggleTheme = () => {
-    const newDark = !isDark
-    setIsDark(newDark)
-    localStorage.setItem("theme", newDark ? "dark" : "light")
-    if (newDark) {
-      document.documentElement.classList.add("dark")
-      document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#0d1218")
-    } else {
-      document.documentElement.classList.remove("dark")
-      document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#faf8f3")
+    const newTheme = theme === "light" ? "dark" : "light"
+    setTheme(newTheme)
+    localStorage.setItem("theme", newTheme)
+    document.documentElement.classList.toggle("dark", newTheme === "dark")
+    const metaTheme = document.querySelector('meta[name="theme-color"]')
+    if (metaTheme) {
+      metaTheme.setAttribute("content", newTheme === "dark" ? "#0d1218" : "#faf8f3")
     }
   }
 
-  if (!mounted) {
-    return (
-      <header className="sticky top-0 z-50 w-full border-b border-hairline bg-canvas/95 backdrop-blur supports-[backdrop-filter]:bg-canvas/80">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-10">
-          <a href="/" className="flex items-center gap-2 font-display text-ink font-semibold text-lg" aria-label="Smart VAT Kenya Home">
-            <span className="text-brand font-bold">Smart</span> VAT Kenya
-          </a>
-<nav className="hidden lg:flex items-center gap-8">
-            <a href="/services/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">Services</a>
-            <a href="/resources/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">Resources</a>
-            <a href="/kra-help/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">KRA Help</a>
-            <a href="/tools/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">Tools</a>
-            <a href="/about/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">About</a>
-          </nav>
-          <div className="flex items-center gap-4">
-            <button className="p-2 rounded-lg text-ink-muted hover:text-ink hover:bg-canvas-warm transition-colors" aria-label="Toggle dark mode">
-              <Sun size={20} aria-hidden="true" />
-            </button>
-            <a href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT" target="_blank" rel="noopener noreferrer" className="btn-fill bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors hidden lg:inline-flex items-center gap-2">
-              Get Started
-              <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
-            </a>
-          </div>
-        </div>
-      </header>
-    )
-  }
-
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-hairline bg-canvas/95 backdrop-blur supports-[backdrop-filter]:bg-canvas/80">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-10">
-        <a href="/" className="flex items-center gap-2 font-display text-ink font-semibold text-lg" aria-label="Smart VAT Kenya Home">
-          <span className="text-brand font-bold">Smart</span> VAT Kenya
+    <header
+      className={`sticky top-0 z-50 w-full border-b border-hairline bg-canvas/95 backdrop-blur supports-[backdrop-filter]:bg-canvas/80 ${
+        open ? "z-[90]" : ""
+      }`}
+    >
+      <nav
+        className="max-w-[1400px] mx-auto px-6 lg:px-10 flex items-center justify-between h-[60px]"
+        aria-label="Main navigation"
+      >
+        <a
+          href="/"
+          className="font-display text-[1.15rem] font-semibold tracking-tight text-ink dark:text-canvas hover:text-brand transition-colors"
+          aria-label="Smart VAT Kenya - Home"
+        >
+          Smart<span className="text-brand font-bold">VAT</span>
+          <span className="text-ink-muted dark:text-canvas/50 font-normal text-sm ml-1">Kenya</span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
-          <a href="/services/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">Services</a>
-          <a href="/resources/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">Resources</a>
-          <a href="/tools/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">Tools</a>
-          <a href="/about/" className="text-ink-muted hover:text-ink transition-colors text-sm font-medium">About</a>
-        </nav>
+        <ul className="hidden lg:flex items-center gap-7" role="list">
+          {navLinks.map((link) => {
+            const active = pathname === link.href || pathname.startsWith(link.href + "/")
+            return (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  aria-current={active ? "page" : undefined}
+                  className={`text-sm font-medium transition-colors ${
+                    active
+                      ? "text-ink dark:text-canvas border-b-2 border-ink dark:border-canvas pb-0.5 font-semibold"
+                      : "text-ink-muted hover:text-ink dark:hover:text-canvas"
+                  }`}
+                >
+                  {link.urgent ? (
+                    <span className="text-brand inline-flex items-center gap-1.5">
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-60" />
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-brand" />
+                      </span>
+                      {link.label}
+                    </span>
+                  ) : (
+                    link.label
+                  )}
+                </a>
+              </li>
+            )
+          })}
+        </ul>
 
-        <div className="flex items-center gap-4">
-          <button onClick={toggleTheme} className="p-2 rounded-lg text-ink-muted hover:text-ink hover:bg-canvas-warm transition-colors" aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}>
-            {isDark ? <Sun size={20} aria-hidden="true" /> : <Moon size={20} aria-hidden="true" />}
+        <div className="hidden lg:flex items-center gap-3">
+          <SiteSearch />
+
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-lg text-ink-muted hover:text-ink hover:bg-canvas-warm transition-colors"
+            aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+          >
+            {theme === "light" ? (
+              <Moon size={20} className="text-ink-muted" aria-hidden="true" />
+            ) : (
+              <Sun size={20} className="text-canvas/70" aria-hidden="true" />
+            )}
           </button>
 
-          <a href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT" target="_blank" rel="noopener noreferrer" className="btn-fill bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors hidden sm:inline-flex items-center gap-2">
+          <a
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-fill inline-flex items-center gap-2 bg-emerald-600 text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors hover:bg-emerald-700"
+          >
             Get Started
-            <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
-
-          <button className="md:hidden p-2 rounded-lg text-ink-muted hover:text-ink hover:bg-canvas-warm transition-colors" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label={mobileMenuOpen ? "Close menu" : "Open menu"} aria-expanded={mobileMenuOpen}>
-            {mobileMenuOpen ? <X size={24} aria-hidden="true" /> : <List size={24} aria-hidden="true" />}
-          </button>
         </div>
-      </div>
 
-      {mobileMenuOpen && (
-        <nav aria-label="Mobile" className="md:hidden border-t border-hairline bg-canvas">
+        <button
+          onClick={() => setOpen(!open)}
+          className="lg:hidden text-ink dark:text-canvas p-2 -mr-2 rounded-lg text-ink-muted hover:text-ink hover:bg-canvas-warm transition-colors"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="mobile-nav"
+        >
+          {open ? (
+            <X size={22} weight="regular" aria-hidden="true" />
+          ) : (
+            <List size={22} weight="regular" aria-hidden="true" />
+          )}
+        </button>
+      </nav>
+
+      <a
+        href="/tax-amnesty-2026/"
+        className="block bg-brand px-4 py-1.5 text-center"
+      >
+        <p className="max-w-[1400px] mx-auto text-[0.82rem] text-white font-medium leading-snug text-center">
+          <strong>Most Kenyan businesses don&apos;t know this:</strong> KRA is waiving 100% of
+          pre-2026 penalties and interest - but only until 31 Dec 2026.{" "}
+          <span className="underline underline-offset-2 font-semibold hover:opacity-80 whitespace-nowrap">
+            Check if you qualify &rarr;
+          </span>
+        </p>
+      </a>
+
+      {open && (
+        <div id="mobile-nav" className="lg:hidden border-t border-hairline bg-canvas">
           <div className="flex flex-col px-6 py-4 gap-1">
-            {[
-              { href: "/services/", label: "Services" },
-              { href: "/resources/", label: "Resources" },
-              { href: "/kra-help/", label: "KRA Help" },
-              { href: "/kra-status/", label: "KRA Status" },
-              { href: "/tax-deadlines/", label: "Tax Deadlines" },
-              { href: "/tools/", label: "Tools" },
-              { href: "/tax-amnesty-2026/", label: "Tax Amnesty 2026" },
-              { href: "/about/", label: "About" },
-            ].map((l) => (
-              <a key={l.href} href={l.href}
-                 className="py-3 text-[0.95rem] text-ink hover:text-brand border-b border-hairline/60 last:border-0"
-                 onClick={() => setMobileMenuOpen(false)}>
-                {l.label}
-              </a>
-            ))}
-            <a href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
-               target="_blank" rel="noopener noreferrer"
-               className="mt-3 btn-fill bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md text-center">
+            {navLinks.map((link) => {
+              const active = pathname === link.href || pathname.startsWith(link.href + "/")
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  aria-current={active ? "page" : undefined}
+                  className={`block py-3 text-[0.95rem] text-ink hover:text-brand border-b border-hairline/60 last:border-0 transition-colors ${
+                    active ? "text-ink dark:text-canvas font-semibold" : "text-ink-muted dark:text-canvas/70 hover:text-ink dark:hover:text-canvas"
+                  }`}
+                >
+                  {link.urgent ? (
+                    <span className="text-brand inline-flex items-center gap-2">
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-60" />
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-brand" />
+                      </span>
+                      {link.label}
+                    </span>
+                  ) : (
+                    link.label
+                  )}
+                </a>
+              )
+            })}
+
+            <button
+              onClick={toggleTheme}
+              className="flex items-center gap-3 w-full py-2.5 text-sm font-medium text-ink-muted hover:text-ink transition-colors border-b border-hairline"
+            >
+              {theme === "light" ? (
+                <>
+                  <Moon size={18} aria-hidden="true" />
+                  <span>Dark mode</span>
+                </>
+              ) : (
+                <>
+                  <Sun size={18} aria-hidden="true" />
+                  <span>Light mode</span>
+                </>
+              )}
+            </button>
+
+            <div className="border-b border-hairline py-2.5">
+              <SiteSearch />
+            </div>
+
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-fill block mt-4 text-center bg-brand text-white text-sm font-semibold px-4 py-3 rounded-md"
+            >
               Get Started on WhatsApp
             </a>
           </div>
-        </nav>
+        </div>
       )}
     </header>
   )

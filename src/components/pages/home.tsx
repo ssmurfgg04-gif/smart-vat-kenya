@@ -311,7 +311,7 @@ export default function HomePage() {
             </div>
 
             {/* Amnesty status */}
-            <div className="absolute -top-9 -right-3 sm:-right-6 rounded-lg bg-emerald-600 text-white px-4 py-3 shadow-[0_12px_30px_-8px_rgba(16,185,129,0.55)] ring-4 ring-white rotate-2">
+            <div className="absolute -top-9 right-0 sm:right-0 rounded-lg bg-emerald-600 text-white px-4 py-3 shadow-[0_12px_30px_-8px_rgba(16,185,129,0.55)] ring-4 ring-white rotate-2">
               <p className="text-[0.62rem] font-semibold uppercase tracking-[0.12em] leading-tight">Tax Amnesty Active</p>
               <p className="text-[0.95rem] font-bold leading-tight mt-1">
                 Ends 31 Dec 2026
