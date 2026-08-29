@@ -170,8 +170,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/cetis-kenya-2027/",
   },
   "etims-account-locked": {
-    title: "eTIMS Account Locked? How to Unlock (2026)",
-    description: "Your eTIMS device is locked after 7 days without syncing. Learn why KRA locks accounts, how to unlock via Device Management, and avoid future lockouts.",
+    title: "How to Unlock eTIMS Account (Fast, 2026)",
+    description: "eTIMS account locked? 7-day device lockout, failed logins, expired certificate - here are the exact steps to unlock via eTIMS Lite or KRA support, and how to stop it happening again.",
     canonical: "/resources/etims-account-locked/",
   },
   "etims-can-i-claim-my-expenses": {
@@ -190,8 +190,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/etims-corporate-client-invoice-requirement/",
   },
   "etims-down-offline-invoicing": {
-    title: "Is eTIMS Down? Invoice Offline Now",
-    description: "KRA eTIMS down or offline? Keep issuing invoices now, sync when the portal recovers, and avoid the 7-day device lockout and eTIMS penalties.",
+    title: "Is eTIMS Down? How to Invoice Now & Sync Later",
+    description: "eTIMS down or offline right now? Issue invoices in offline mode immediately, sync when KRA recovers, and avoid the 7-day device lockout and non-compliance penalties. WhatsApp us if stuck.",
     canonical: "/resources/etims-down-offline-invoicing/",
   },
   "etims-fuel-stations": {
@@ -220,8 +220,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/etims-onboarding-guide/",
   },
   "etims-pending-sync": {
-    title: "Pending eTIMS Sync Error? Fix It Fast",
-    description: "eTIMS stuck on pending etims sync? Learn why invoices don't upload to KRA, how to force a manual sync, and how to avoid the 7-day device lockout.",
+    title: "Pending eTIMS Sync? 4 Fixes That Work (2026)",
+    description: "eTIMS invoice stuck on 'Pending Sync'? Here's exactly why KRA invoices don't upload, how to force a manual sync in 2 minutes, and how to dodge the 7-day device lockout.",
     canonical: "/resources/etims-pending-sync/",
   },
   "etims-penalty-50000-per-month-kenya": {
@@ -280,8 +280,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/input-vat-deduction-guide/",
   },
   "itax-portal-not-working": {
-    title: "KRA iTax Not Working? 7 Fixes (2026)",
-    description: "Is KRA iTax down? Check current portal status, fix common errors (status code 500, OTP not received, login failed), and workarounds for outages.",
+    title: "KRA iTax Not Working? 7 Quick Fixes (2026)",
+    description: "iTax down or returning status code 500? Live portal status, OTP-not-received fixes, login-error solutions, and workarounds for KRA outages near the VAT deadline. WhatsApp us if urgent.",
     canonical: "/resources/itax-portal-not-working/",
   },
   "kplc-blackout-etims-compliance": {
@@ -295,8 +295,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/kra-fine-70000/",
   },
   "kra-itax-maintenance-schedule": {
-    title: "KRA iTax Maintenance Schedule 2026",
-    description: "KRA iTax scheduled maintenance windows for 2026: typical monthly patterns, how to check downtime, and how to plan VAT filing around outages.",
+    title: "KRA iTax Maintenance Schedule 2026: Live",
+    description: "When is iTax down for scheduled maintenance? The 2026 KRA maintenance windows, real-time portal status, and how to file returns before the system goes offline.",
     canonical: "/resources/kra-itax-maintenance-schedule/",
   },
   "kra-itax-traffic-update": {
@@ -335,8 +335,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/kra-vat-filing-deadline-august-2026/",
   },
   "kra-vat-penalties-reference": {
-    title: "VAT Penalties Kenya 2026: Late Filing",
-    description: "KRA VAT penalties for 2026: late filing, late payment and eTIMS fines. See how much is due and when you can apply for a waiver under the Tax Amnesty.",
+    title: "KRA VAT Penalties Kenya 2026: Full Reference",
+    description: "Late filing, late payment, non-registration, eTIMS fines - every KRA VAT penalty for 2026 with the exact amount, when it triggers, and how to apply for the 2026 Tax Amnesty waiver. Free check.",
     canonical: "/resources/kra-vat-penalties-reference/",
   },
   "kra-data-sources": {
@@ -370,8 +370,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/tax-compliance-certificate-kenya/",
   },
   "vat-auto-populated-return": {
-    title: "KRA Auto-Populated VAT Return 2026",
-    description: "KRA auto-populates VAT returns with eTIMS sales data. Learn what's included, how to verify accuracy, correct errors, and avoid penalties for mismatched figures.",
+    title: "KRA Auto-Populated VAT Return 2026 Explained",
+    description: "Why is your VAT return pre-populated? Missing eTIMS invoices, wrong figures, blocked input VAT - here's what KRA auto-fills, why it's wrong, and how to correct it before the 20th.",
     canonical: "/resources/vat-auto-populated-return/",
   },
   "vat-bad-debt-refund-kenya": {
@@ -425,8 +425,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/vat-for-startups-tech-businesses/",
   },
   "vat-labour-outsourcing-kenya": {
-    title: "VAT on Labour Outsourcing Kenya 2026",
-    description: "VAT on labour outsourcing and staff costs in Kenya: the distinction between supply of staff vs supply of services, with KRA guidance and tribunal cases.",
+    title: "VAT on Labour Outsourcing in Kenya 2026",
+    description: "How does VAT apply to labour outsourcing and manpower services in Kenya? 16% standard rate, zero-rated scenarios, input VAT on staff costs, and eTIMS invoicing rules for HR firms.",
     canonical: "/resources/vat-labour-outsourcing-kenya/",
   },
   "vat-rates-kenya": {
@@ -445,8 +445,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/vat-refund-guide-kenya/",
   },
   "vat-registration-checklist": {
-    title: "VAT Registration Checklist Kenya 2026",
-    description: "Complete VAT registration checklist for Kenya: required documents, business details, tax agent appointment letter, and common application mistakes to avoid.",
+    title: "VAT Registration Checklist Kenya 2026 (PDF)",
+    description: "Everything you need to register for VAT in Kenya on iTax: KRA PIN, ID, CR12, bank details, eTIMS onboarding - the complete checklist with exact document requirements.",
     canonical: "/resources/vat-registration-checklist/",
   },
   "vat-return-filing-checklist": {

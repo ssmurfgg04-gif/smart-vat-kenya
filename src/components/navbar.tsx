@@ -121,12 +121,12 @@ export function Navbar() {
         href="/tax-amnesty-2026/"
         className="block bg-brand px-4 py-1.5 text-center"
       >
-        <p className="max-w-[1400px] mx-auto text-[0.82rem] text-white font-medium leading-snug text-center flex flex-col sm:flex-row items-center justify-center gap-3">
+        <p className="max-w-[1400px] mx-auto text-[0.78rem] sm:text-[0.82rem] text-white font-medium leading-snug text-center flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
           <span className="flex-1 text-left sm:text-center">
             <strong>Most Kenyan businesses don&apos;t know this:</strong> KRA is waiving 100% of
-            pre-2026 penalties and interest - but only until 31 Dec 2026.
+            pre-2026 penalties and interest - until 31 Dec 2026.
           </span>
-          <span className="btn-fill inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 text-white font-semibold text-sm px-4 py-2 rounded-md transition-colors shrink-0 whitespace-nowrap">
+          <span className="btn-fill inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 text-white font-semibold text-[0.78rem] sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-md transition-colors shrink-0 whitespace-nowrap">
             Check if you qualify &rarr;
           </span>
         </p>

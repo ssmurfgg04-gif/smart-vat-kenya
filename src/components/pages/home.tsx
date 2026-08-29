@@ -176,24 +176,24 @@ export default function HomePage() {
       />
 
       {/* ─── HERO ─── */}
-      <section className="bg-white overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-6 lg:pt-8 pb-8 lg:pb-10">
-          <div className="grid lg:grid-cols-[1fr_minmax(0,520px)] gap-10 lg:gap-14 items-center">
+      <section className="bg-white overflow-hidden m-hero">
+        <div className="max-w-[1400px] mx-auto px-5 sm:px-6 lg:px-10 pt-4 sm:pt-6 lg:pt-8 pb-6 sm:pb-8 lg:pb-10">
+          <div className="grid lg:grid-cols-[1fr_minmax(0,520px)] gap-8 sm:gap-10 lg:gap-14 items-center">
             <div className="max-w-[560px]">
               <p className="font-mono text-[0.7rem] font-semibold text-blue-600 mb-4 inline-flex items-center gap-2">
                 <ShieldCheck size={14} weight="bold" aria-hidden="true" />
                 Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
               </p>
 
-              <h1 className="font-display text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight text-ink mb-2 max-w-[52ch] sm:text-wrap-balance">
+              <h1 className="font-display text-[1.85rem] sm:text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.1] sm:leading-[1.05] tracking-tight text-ink mb-2 max-w-[52ch] sm:text-wrap-balance">
               Your eTIMS invoice failed.
               <span className="block text-red-600">VAT return is due.</span>
             </h1>
-              <p className="text-[1.08rem] lg:text-[1.15rem] font-semibold text-ink leading-snug mb-5 max-w-[54ch]">
+              <p className="text-[1rem] sm:text-[1.08rem] lg:text-[1.15rem] font-semibold text-ink leading-snug mb-4 sm:mb-5 max-w-[54ch]">
               Send a screenshot on WhatsApp — fix in minutes, not days.
             </p>
 
-            <p className="text-[0.92rem] leading-relaxed text-ink mb-5 max-w-[54ch]">
+            <p className="text-[0.85rem] sm:text-[0.92rem] leading-relaxed text-ink mb-4 sm:mb-5 max-w-[54ch]">
               <span className="font-semibold text-red-600">Rejected invoices. Pending sync. Locked accounts.</span>{" "}
               Overdue VAT registration. We diagnose on WhatsApp and handle the KRA work — you get back to business.
             </p>
@@ -249,9 +249,9 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* RIGHT - compliance overview */}
-          <div className="relative w-full max-w-[520px] mx-auto lg:mx-0 lg:justify-self-end">
-            <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_24px_60px_-24px_rgba(15,32,70,0.35)] overflow-hidden">
+          {/* RIGHT - compliance overview — hidden on mobile to keep first viewport compact & action-oriented (m-hero-hide-on-mobile) */}
+          <div className="relative w-full max-w-[520px] mx-auto lg:mx-0 lg:justify-self-end m-hero-hide-on-mobile">
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_24px_60px_-24px_rgba(15,32,70,0.35)] overflow-hidden m-dashboard">
               <div className="flex items-center justify-between px-5 py-3.5 border-b border-slate-100">
                 <div className="flex items-center gap-2.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-600" aria-hidden="true" />
@@ -323,8 +323,8 @@ export default function HomePage() {
       </section>
 
       {/* ─── TRUST SECTION ─── */}
-        <section className="bg-[#0f1f3d] px-6 lg:px-10 py-8" aria-label="Why businesses trust Smart VAT Kenya">
-          <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6">
+        <section className="bg-[#0f1f3d] px-5 sm:px-6 lg:px-10 py-6 sm:py-8 m-section-tight" aria-label="Why businesses trust Smart VAT Kenya">
+          <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4 sm:gap-y-6">
             {[
               { Icon: Lightning, title: "Fast Resolution", body: "Most eTIMS issues diagnosed the same day." },
               { Icon: ShieldCheck, title: "Penalty Protection", body: "We help you qualify for the Tax Amnesty." },
@@ -345,20 +345,20 @@ export default function HomePage() {
         </section>
 
         {/* ─── KRA PROBLEM SOLVER - Featured Hub ─── */}
-        <section className="bg-canvas py-16 px-6 lg:px-10 border-y border-hairline">
+        <section className="bg-canvas py-12 sm:py-16 px-5 sm:px-6 lg:px-10 border-y border-hairline m-section-normal">
           <div className="max-w-[1400px] mx-auto">
-            <div className="text-center mb-12">
-              <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
+            <div className="text-center mb-8 sm:mb-12">
+              <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-3 sm:mb-4">
                 KRA Help Center
               </p>
-              <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-tight text-ink mb-4 text-balance">
+              <h2 className="font-display text-[clamp(1.6rem,3.5vw,2.8rem)] font-semibold tracking-tight text-ink mb-3 sm:mb-4 text-balance">
                 Something broken with KRA?
               </h2>
-              <p className="text-[0.95rem] text-ink-muted max-w-[60ch] mx-auto leading-relaxed mb-8">
+              <p className="text-[0.9rem] sm:text-[0.95rem] text-ink-muted max-w-[60ch] mx-auto leading-relaxed mb-6 sm:mb-8">
                 Pick your problem - get the fix in 3 minutes, or send us a screenshot and we'll handle it.
               </p>
             </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-3 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4 m-problem-grid">
               {[
                 { href: "/kra-help/", title: "eTIMS Problems", desc: "Invoice rejected, account locked, pending sync, offline invoicing", Icon: ChatCircle },
                 { href: "/kra-help/", title: "iTax Problems", desc: "Portal down, OTP not received, login errors, return rejected", Icon: ShieldCheck },
@@ -383,12 +383,12 @@ export default function HomePage() {
         </section>
 
         {/* ─── SHAME BLOCK ─── */}
-        <section className="bg-canvas py-12 px-6 lg:px-10">
+        <section className="bg-canvas py-8 sm:py-12 px-5 sm:px-6 lg:px-10 m-section-tight">
           <div className="max-w-[1400px] mx-auto text-center">
-            <p className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-ink tracking-tight mb-2">
+            <p className="font-display text-[clamp(1.2rem,2.5vw,1.8rem)] font-semibold text-ink tracking-tight mb-2">
               You're not behind. KRA's portal was never built for you.
             </p>
-            <p className="text-[0.9rem] text-ink-muted max-w-[48ch] mx-auto leading-relaxed">
+            <p className="text-[0.85rem] sm:text-[0.9rem] text-ink-muted max-w-[48ch] mx-auto leading-relaxed">
               It was built for KRA. The crashes, the OTP failures, the 11:47pm timeout - that's the system 
               telling you it wasn't built for small business owners. We handle registration, eTIMS and monthly filing 
               for KES 5,000 + KES 3,500/month. M-PESA accepted. Fast replies on WhatsApp - typically within business hours.
@@ -397,20 +397,20 @@ export default function HomePage() {
         </section>
 
         {/* ─── STATUS BLOCK ─── */}
-        <section className="bg-canvas-alt py-12 px-6 lg:px-10">
+        <section className="bg-canvas-alt py-8 sm:py-12 px-5 sm:px-6 lg:px-10 m-section-tight">
           <div className="max-w-[1400px] mx-auto text-center">
-            <p className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-ink tracking-tight mb-2">
+            <p className="font-display text-[clamp(1.2rem,2.5vw,1.8rem)] font-semibold text-ink tracking-tight mb-2">
               The tender said "attach a Tax Compliance Certificate."
             </p>
-            <p className="text-[0.9rem] text-ink-muted max-w-[48ch] mx-auto leading-relaxed">
+            <p className="text-[0.85rem] sm:text-[0.9rem] text-ink-muted max-w-[48ch] mx-auto leading-relaxed">
               TCCs require a clean VAT record — eTIMS + on-time filing gets you there.
             </p>
           </div>
         </section>
 
         {/* ─── TRUST BAND ─── */}
-      <section className="bg-canvas-alt border-y border-hairline py-5 px-6 lg:px-10">
-        <div className="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-4">
+      <section className="bg-canvas-alt border-y border-hairline py-4 sm:py-5 px-5 sm:px-6 lg:px-10">
+        <div className="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-3 sm:gap-4 m-trust-row">
           {[
             "KRA-Compliant VAT Services",
             "200+ Businesses Supported",
@@ -431,15 +431,15 @@ export default function HomePage() {
       </section>
 
       {/* ─── PROBLEM ─── */}
-      <section className="bg-canvas py-24 px-6 lg:px-10">
+      <section className="bg-canvas py-12 sm:py-16 lg:py-24 px-5 sm:px-6 lg:px-10 m-section-spacious">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             Why Kenyan SMEs struggle with VAT
           </p>
-          <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-tight text-ink max-w-[40ch] leading-tight mb-4 text-balance">
+          <h2 className="font-display text-[clamp(1.5rem,3.5vw,2.8rem)] font-semibold tracking-tight text-ink max-w-[40ch] leading-tight mb-3 sm:mb-4 text-balance">
             Why eTIMS and iTax filing is hard for Kenyan SME owners.
           </h2>
-          <p className="text-[0.9rem] text-ink-muted max-w-[52ch] mb-16 leading-relaxed">
+          <p className="text-[0.85rem] sm:text-[0.9rem] text-ink-muted max-w-[52ch] mb-8 sm:mb-12 lg:mb-16 leading-relaxed">
 KRA's{" "}
               <a href="/resources/itax-portal-not-working/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                 portal frequently crashes near deadlines
@@ -477,24 +477,24 @@ KRA's{" "}
             ].map(({ number, problem, fix, Icon }, i) => (
               <div
                 key={number}
-                className={`grid lg:grid-cols-2 gap-8 py-10 border-t border-hairline ${
+                className={`grid lg:grid-cols-2 gap-4 sm:gap-8 py-6 sm:py-8 lg:py-10 border-t border-hairline ${
                   i % 2 !== 0 ? "lg:direction-rtl" : ""
                 }`}
               >
-                <div className="flex gap-5 items-start">
+                <div className="flex gap-3 sm:gap-5 items-start">
                   <span className="font-mono text-[0.65rem] text-ink-muted mt-1 shrink-0 w-5">
                     {number}
                   </span>
                   <div className="flex gap-3 items-start">
                     <Icon size={20} weight="duotone" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
-                    <p className="font-display text-[1.05rem] font-medium text-ink leading-snug">
+                    <p className="font-display text-[0.95rem] sm:text-[1.05rem] font-medium text-ink leading-snug">
                       {problem}
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 lg:pl-8">
                   <CheckCircle size={18} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
-                  <p className="text-[0.9rem] text-ink-soft leading-relaxed">{fix}</p>
+                  <p className="text-[0.85rem] sm:text-[0.9rem] text-ink-soft leading-relaxed">{fix}</p>
                 </div>
               </div>
             ))}
@@ -503,20 +503,20 @@ KRA's{" "}
       </section>
 
       {/* ─── DIY VS YOU ─── */}
-      <section className="bg-canvas-alt py-24 px-6 lg:px-10">
+      <section className="bg-canvas-alt py-12 sm:py-16 lg:py-24 px-5 sm:px-6 lg:px-10 m-section-spacious">
         <div className="max-w-[1400px] mx-auto">
-          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-3 sm:mb-4">
             Free isn't free
           </p>
-          <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-tight text-ink mb-6 text-balance">
+          <h2 className="font-display text-[clamp(1.4rem,3.5vw,2.8rem)] font-semibold tracking-tight text-ink mb-4 sm:mb-6 text-balance">
             Doing it yourself on iTax is free. It's also three weeks, frequent portal errors, and one penalty.
           </h2>
-          <p className="text-[0.9rem] text-ink-muted max-w-[52ch] mb-16 leading-relaxed">
+          <p className="text-[0.85rem] sm:text-[0.9rem] text-ink-muted max-w-[52ch] mb-8 sm:mb-12 lg:mb-16 leading-relaxed">
             The real enemy isn't accountants who charge KES 15,000–30,000. It's the <em>free</em> path that
             quietly costs more in your time, your sanity, and KES 10,000 penalties.
           </p>
 
-          <div className="grid grid-cols-2 gap-4 lg:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-5 m-comparison-grid">
             <div className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8">
               <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-4">Doing it yourself</p>
               <div className="space-y-4">
@@ -563,29 +563,29 @@ KRA's{" "}
       </section>
 
       {/* ─── VAT UNLOCKS ─── */}
-      <section className="bg-canvas-dark py-24 px-6 lg:px-10">
+      <section className="bg-canvas-dark py-12 sm:py-16 lg:py-24 px-5 sm:px-6 lg:px-10 m-section-spacious">
         <div className="max-w-[1400px] mx-auto">
-          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-3 sm:mb-4">
             The upside
           </p>
-          <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
+          <h2 className="font-display text-[clamp(1.5rem,3.5vw,2.8rem)] font-semibold text-canvas tracking-tight leading-tight mb-3 sm:mb-4 text-balance">
             A VAT number isn't a cost. It's your licence to grow.
           </h2>
-          <p className="text-[0.9rem] text-canvas/70 max-w-[52ch] mb-16 leading-relaxed">
+          <p className="text-[0.85rem] sm:text-[0.9rem] text-canvas/70 max-w-[52ch] mb-8 sm:mb-12 lg:mb-16 leading-relaxed">
             Registration is the door. Filling unlocks what most small businesses never hear about - the upside
             that makes VAT worth it.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-5">
             {[
               { Icon: Briefcase, title: "Win tenders & contracts", body: "Government and corporate clients require a valid VAT number and tax compliance certificate. Without it, you cannot bid." },
               { Icon: CheckCircle, title: "Sell to big buyers", body: "Corporate clients and importers want eTIMS-compliant VAT invoices. A VAT number makes your business credible." },
               { Icon: CurrencyDollar, title: "Claim input VAT back", body: "Money back on the VAT you pay on purchases - cash flow most unregistered businesses simply lose." },
               { Icon: TrendUp, title: "Import & grow", body: "Importing stock, expanding capacity, and qualifying for refunds all open up once you're VAT-registered." },
             ].map(({ Icon, title, body }) => (
-              <article key={title} className="bg-canvas/[0.06] border border-canvas/15 rounded-lg p-5 lg:p-7">
-                <Icon size={26} weight="duotone" className="text-brand mb-5" aria-hidden="true" />
-                <h3 className="font-display text-[1.02rem] font-semibold text-canvas mb-2">{title}</h3>
-                <p className="text-[0.83rem] text-canvas/70 leading-relaxed">{body}</p>
+              <article key={title} className="bg-canvas/[0.06] border border-canvas/15 rounded-lg p-4 sm:p-5 lg:p-7">
+                <Icon size={24} weight="duotone" className="text-brand mb-3 sm:mb-5" aria-hidden="true" />
+                <h3 className="font-display text-[0.95rem] sm:text-[1.02rem] font-semibold text-canvas mb-1.5 sm:mb-2">{title}</h3>
+                <p className="text-[0.8rem] sm:text-[0.83rem] text-canvas/70 leading-relaxed">{body}</p>
               </article>
             ))}
           </div>
@@ -594,46 +594,46 @@ KRA's{" "}
 
       {/* ─── PRICING ─── */}
       <section
-        className="bg-canvas-alt py-24 px-6 lg:px-10"
+        className="bg-canvas-alt py-12 sm:py-16 lg:py-24 px-5 sm:px-6 lg:px-10 m-section-spacious"
         id="pricing"
         aria-labelledby="pricing-heading"
       >
         <div className="max-w-[1400px] mx-auto">
-          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-3 sm:mb-4">
             Services &amp; pricing
           </p>
           <h2
             id="pricing-heading"
-            className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-tight text-ink mb-14 text-balance"
+            className="font-display text-[clamp(1.5rem,3.5vw,2.8rem)] font-semibold tracking-tight text-ink mb-8 sm:mb-14 text-balance"
           >
             KRA VAT services with published prices. No discovery calls required.
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-5">
             {/* Card 1 - eTIMS Rescue */}
-            <article className="bg-canvas-dark rounded-lg p-4 sm:p-8 flex flex-col relative overflow-hidden">
+            <article className="bg-canvas-dark rounded-lg p-4 sm:p-8 flex flex-col relative overflow-hidden m-pricing-card">
               <span className="absolute top-0 right-0 font-mono text-[0.6rem] uppercase tracking-widest bg-brand text-canvas px-3 py-1.5 rounded-bl-lg">
                 Most Common
               </span>
-              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-canvas/65 mb-4">
+              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-canvas/65 mb-3 sm:mb-4">
                 Per incident
               </p>
-              <h3 className="font-display text-xl font-semibold text-canvas mb-1">eTIMS Troubleshooting &amp; Rescue</h3>
-              <p className="text-[0.85rem] text-canvas/80 mb-6 leading-relaxed">
+              <h3 className="font-display text-base sm:text-xl font-semibold text-canvas mb-1">eTIMS Troubleshooting &amp; Rescue</h3>
+              <p className="text-[0.82rem] sm:text-[0.85rem] text-canvas/80 mb-4 sm:mb-6 leading-relaxed">
                 Invoice rejected, account locked, stuck on pending sync - we diagnose it over WhatsApp and fix it, usually same-day.
               </p>
-              <p className="font-display text-[1.75rem] sm:text-[2.5rem] font-semibold text-canvas leading-none mb-1 tabular-nums">
+              <p className="font-display text-[1.5rem] sm:text-[2.5rem] font-semibold text-canvas leading-none mb-1 tabular-nums m-pricing-price">
                 KES 1,500
               </p>
-              <p className="text-[0.78rem] text-canvas/65 mb-5 sm:mb-8">per incident</p>
-              <ul className="space-y-2.5 flex-1 mb-8" role="list">
+              <p className="text-[0.75rem] sm:text-[0.78rem] text-canvas/65 mb-4 sm:mb-8">per incident</p>
+              <ul className="space-y-2 sm:space-y-2.5 flex-1 mb-4 sm:mb-8 m-pricing-features" role="list">
                 {[
                   "Diagnosed over WhatsApp",
                   "Fixed or escalated same-day",
                   "Applies whether or not you're VAT-registered",
                   "M-PESA receipt provided",
                 ].map((f) => (
-                  <li key={f} className="flex items-start gap-2.5 text-[0.85rem] text-canvas/85">
+                  <li key={f} className="flex items-start gap-2.5 text-[0.82rem] sm:text-[0.85rem] text-canvas/85">
                     <CheckCircle size={14} weight="fill" className="text-canvas/55 shrink-0 mt-0.5" aria-hidden="true" />
                     {f}
                   </li>
@@ -647,8 +647,26 @@ KRA's{" "}
               >
                 Get eTIMS Help Now
               </a>
-              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-canvas/50 mt-5 mb-2">What happens next</p>
-              <ol className="space-y-1.5 text-[0.8rem] text-canvas/70" role="list">
+              {/* Mobile-only: collapsible "What happens next" via <details> to reduce vertical length */}
+              <details className="m-pricing-details sm:hidden">
+                <summary>What happens next</summary>
+                <ol className="space-y-1.5 text-[0.8rem] text-canvas/70 mt-2" role="list">
+                  {[
+                    "You WhatsApp us the error screenshot",
+                    "We diagnose the exact issue in minutes",
+                    "We guide you through the fix or handle it for you",
+                    "You get back to invoicing",
+                  ].map((step, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <span className="font-mono text-[0.65rem] text-canvas/40 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                      <span>{step}</span>
+                    </li>
+                  ))}
+                </ol>
+              </details>
+              {/* Desktop: visible ordered list */}
+              <p className="hidden sm:block font-mono text-[0.65rem] uppercase tracking-widest text-canvas/50 mt-5 mb-2">What happens next</p>
+              <ol className="hidden sm:block space-y-1.5 text-[0.8rem] text-canvas/70" role="list">
                 {[
                   "You WhatsApp us the error screenshot",
                   "We diagnose the exact issue in minutes",
@@ -664,19 +682,19 @@ KRA's{" "}
             </article>
 
             {/* Card 2 - VAT Registration */}
-            <article className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8 flex flex-col">
-              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-4">
+            <article className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8 flex flex-col m-pricing-card">
+              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-3 sm:mb-4">
                 One-time
               </p>
-              <h3 className="font-display text-xl font-semibold text-ink mb-1">VAT Registration Kenya</h3>
-              <p className="text-[0.85rem] text-ink-muted mb-6 leading-relaxed">
+              <h3 className="font-display text-base sm:text-xl font-semibold text-ink mb-1">VAT Registration Kenya</h3>
+              <p className="text-[0.82rem] sm:text-[0.85rem] text-ink-muted mb-4 sm:mb-6 leading-relaxed">
                 Full iTax VAT registration - we handle the portal, you get the PIN in 1–3 days.
               </p>
-              <p className="font-display text-[1.75rem] sm:text-[2.5rem] font-semibold text-ink leading-none mb-1 tabular-nums">
+              <p className="font-display text-[1.5rem] sm:text-[2.5rem] font-semibold text-ink leading-none mb-1 tabular-nums m-pricing-price">
                 KES 5,000
               </p>
-              <p className="text-[0.78rem] text-ink-muted mb-5 sm:mb-8">flat fee, paid once</p>
-              <ul className="space-y-2.5 flex-1 mb-8" role="list">
+              <p className="text-[0.75rem] sm:text-[0.78rem] text-ink-muted mb-4 sm:mb-8">flat fee, paid once</p>
+              <ul className="space-y-2 sm:space-y-2.5 flex-1 mb-4 sm:mb-8 m-pricing-features" role="list">
                 {[
                   "iTax profile update",
                   "VAT Form 1 completion",
@@ -685,7 +703,7 @@ KRA's{" "}
                   "M-PESA receipt provided",
                   "Taxpayer education session",
                 ].map((f) => (
-                  <li key={f} className="flex items-start gap-2.5 text-[0.85rem] text-ink-soft">
+                  <li key={f} className="flex items-start gap-2.5 text-[0.82rem] sm:text-[0.85rem] text-ink-soft">
                     <CheckCircle size={14} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
                     {f}
                   </li>
@@ -699,8 +717,24 @@ KRA's{" "}
               >
                 Start Registration
               </a>
-              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mt-5 mb-2">What happens next</p>
-              <ol className="space-y-1.5 text-[0.8rem] text-ink-muted" role="list">
+              <details className="m-pricing-details sm:hidden">
+                <summary>What happens next</summary>
+                <ol className="space-y-1.5 text-[0.8rem] text-ink-muted mt-2" role="list">
+                  {[
+                    "You send KRA PIN + ID copy + business name on WhatsApp",
+                    "We handle iTax Form VAT 1 and profile update",
+                    "You receive VAT PIN + M-PESA receipt in 1-3 days",
+                    "We guide you through eTIMS onboarding",
+                  ].map((step, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <span className="font-mono text-[0.63rem] text-ink-muted/40 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                      <span>{step}</span>
+                    </li>
+                  ))}
+                </ol>
+              </details>
+              <p className="hidden sm:block font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mt-5 mb-2">What happens next</p>
+              <ol className="hidden sm:block space-y-1.5 text-[0.8rem] text-ink-muted" role="list">
                 {[
                   "You send KRA PIN + ID copy + business name on WhatsApp",
                   "We handle iTax Form VAT 1 and profile update",
@@ -716,22 +750,22 @@ KRA's{" "}
             </article>
 
             {/* Card 3 - Monthly Filing */}
-            <article className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8 flex flex-col relative overflow-hidden">
+            <article className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8 flex flex-col relative overflow-hidden m-pricing-card">
               <span className="absolute top-0 right-0 font-mono text-[0.6rem] uppercase tracking-widest bg-brand text-canvas px-3 py-1.5 rounded-bl-lg">
                 Most Popular
               </span>
-              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-4">
+              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-3 sm:mb-4">
                 Recurring
               </p>
-              <h3 className="font-display text-xl font-semibold text-ink mb-1">Monthly VAT Filing</h3>
-              <p className="text-[0.85rem] text-ink-muted mb-6 leading-relaxed">
+              <h3 className="font-display text-base sm:text-xl font-semibold text-ink mb-1">Monthly VAT Filing</h3>
+              <p className="text-[0.82rem] sm:text-[0.85rem] text-ink-muted mb-4 sm:mb-6 leading-relaxed">
                 Filed before the 20th. Every month. Without you having to think about it.
               </p>
-              <p className="font-display text-[1.75rem] sm:text-[2.5rem] font-semibold text-ink leading-none mb-1 tabular-nums">
+              <p className="font-display text-[1.5rem] sm:text-[2.5rem] font-semibold text-ink leading-none mb-1 tabular-nums m-pricing-price">
                 KES 3,500
               </p>
-              <p className="text-[0.78rem] text-ink-muted mb-5 sm:mb-8">per month</p>
-              <ul className="space-y-2.5 flex-1 mb-8" role="list">
+              <p className="text-[0.75rem] sm:text-[0.78rem] text-ink-muted mb-4 sm:mb-8">per month</p>
+              <ul className="space-y-2 sm:space-y-2.5 flex-1 mb-4 sm:mb-8 m-pricing-features" role="list">
                 {[
                   "Filed by the 20th - always",
                   "We file on the 17th, not the 20th",
@@ -740,7 +774,7 @@ KRA's{" "}
                   "Dedicated WhatsApp support",
                   "Monthly confirmation receipt",
                 ].map((f) => (
-                  <li key={f} className="flex items-start gap-2.5 text-[0.85rem] text-ink-soft">
+                  <li key={f} className="flex items-start gap-2.5 text-[0.82rem] sm:text-[0.85rem] text-ink-soft">
                     <CheckCircle size={14} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
                     {f}
                   </li>
@@ -754,8 +788,24 @@ KRA's{" "}
               >
                 Start Filing
               </a>
-              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mt-5 mb-2">What happens next</p>
-              <ol className="space-y-1.5 text-[0.8rem] text-ink-muted" role="list">
+              <details className="m-pricing-details sm:hidden">
+                <summary>What happens next</summary>
+                <ol className="space-y-1.5 text-[0.8rem] text-ink-muted mt-2" role="list">
+                  {[
+                    "You send sales & purchase invoices each month",
+                    "We calculate VAT, file on iTax by the 17th",
+                    "You get filing confirmation + M-PESA payment guide",
+                    "We handle any KRA queries or rejections free",
+                  ].map((step, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <span className="font-mono text-[0.63rem] text-ink-muted/40 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                      <span>{step}</span>
+                    </li>
+                  ))}
+                </ol>
+              </details>
+              <p className="hidden sm:block font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mt-5 mb-2">What happens next</p>
+              <ol className="hidden sm:block space-y-1.5 text-[0.8rem] text-ink-muted" role="list">
                 {[
                   "You send sales & purchase invoices each month",
                   "We calculate VAT, file on iTax by the 17th",
@@ -771,27 +821,43 @@ KRA's{" "}
             </article>
 
             {/* Card 4 - Amnesty Cleanup */}
-            <article className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8 flex flex-col">
-              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-brand mb-4">
+            <article className="bg-canvas rounded-lg border border-hairline p-4 sm:p-8 flex flex-col m-pricing-card">
+              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-brand mb-3 sm:mb-4">
                 Ends 31 Dec 2026
               </p>
-              <h3 className="font-display text-lg font-semibold text-ink mb-1">Tax Amnesty Cleanup</h3>
-              <p className="text-[0.85rem] text-ink-muted mb-5 leading-relaxed">
+              <h3 className="font-display text-[0.95rem] sm:text-lg font-semibold text-ink mb-1">Tax Amnesty Cleanup</h3>
+              <p className="text-[0.82rem] sm:text-[0.85rem] text-ink-muted mb-4 sm:mb-5 leading-relaxed">
                 Free iTax ledger check. We tell you which amnesty path you&apos;re on, file the
                 returns that unlock the waiver, and structure the payment plan if you owe principal.
               </p>
-              <p className="font-display text-[1.5rem] sm:text-[2rem] font-semibold text-ink leading-none mb-1 tabular-nums">
+              <p className="font-display text-[1.35rem] sm:text-[2rem] font-semibold text-ink leading-none mb-1 tabular-nums m-pricing-price">
                 Free check
               </p>
-              <p className="text-[0.78rem] text-ink-muted mb-7">cleanup at a flat fee</p>
+              <p className="text-[0.75rem] sm:text-[0.78rem] text-ink-muted mb-5 sm:mb-7">cleanup at a flat fee</p>
               <a
                 href="/tax-amnesty-2026/"
                 className="btn-fill block text-center bg-brand text-canvas text-sm font-semibold py-3 rounded-md transition-colors hover:bg-brand-hover"
               >
                 Get the free check
               </a>
-              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mt-5 mb-2">What happens next</p>
-              <ol className="space-y-1.5 text-[0.8rem] text-ink-muted" role="list">
+              <details className="m-pricing-details sm:hidden">
+                <summary>What happens next</summary>
+                <ol className="space-y-1.5 text-[0.8rem] text-ink-muted mt-2" role="list">
+                  {[
+                    "You request a free iTax ledger check on WhatsApp",
+                    "We identify which amnesty path applies to you",
+                    "We file the returns that unlock the waiver",
+                    "If you owe principal, we structure a payment plan",
+                  ].map((step, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <span className="font-mono text-[0.63rem] text-ink-muted/40 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                      <span>{step}</span>
+                    </li>
+                  ))}
+                </ol>
+              </details>
+              <p className="hidden sm:block font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mt-5 mb-2">What happens next</p>
+              <ol className="hidden sm:block space-y-1.5 text-[0.8rem] text-ink-muted" role="list">
                 {[
                   "You request a free iTax ledger check on WhatsApp",
                   "We identify which amnesty path applies to you",
@@ -814,13 +880,13 @@ KRA's{" "}
       </section>
 
       {/* ─── SEO PROSE - KRA VAT 16% 2026 ─── */}
-      <section className="bg-canvas-dark py-24 px-6 lg:px-10">
-        <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-24 lg:grid-cols-[480px_1fr]">
+      <section className="bg-canvas-dark py-12 sm:py-16 lg:py-24 px-5 sm:px-6 lg:px-10 m-section-spacious">
+        <div className="max-w-[1400px] mx-auto grid gap-6 sm:gap-8 lg:gap-24 lg:grid-cols-[480px_1fr]">
           <div>
-            <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/65 mb-4">
+            <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/65 mb-3 sm:mb-4">
               Kenya VAT 2026
             </p>
-            <h2 className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-canvas tracking-tight leading-tight mb-6 text-balance">
+            <h2 className="font-display text-[clamp(1.3rem,3vw,2.4rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 sm:mb-6 text-balance">
               Kenya VAT Standard Rate 16%: what every registered business must know
             </h2>
             <a
@@ -832,7 +898,7 @@ KRA's{" "}
               <ArrowRight size={13} weight="bold" aria-hidden="true" />
             </a>
           </div>
-          <div className="space-y-5 text-[0.93rem] text-canvas/80 leading-[1.75]">
+          <div className="space-y-4 sm:space-y-5 text-[0.85rem] sm:text-[0.93rem] text-canvas/80 leading-[1.6] sm:leading-[1.75] m-prose">
             <p>
               As per the latest Kenya Revenue Authority (KRA) guidelines, the{" "}
               <a href="/resources/vat-rates-kenya/" className="text-canvas font-medium underline underline-offset-4 decoration-canvas/40 hover:decoration-brand">
@@ -908,12 +974,12 @@ KRA's{" "}
       </section>
 
       {/* ─── HOW IT WORKS ─── */}
-      <section className="bg-canvas py-24 px-6 lg:px-10">
+      <section className="bg-canvas py-12 sm:py-16 lg:py-24 px-5 sm:px-6 lg:px-10 m-section-spacious">
         <div className="max-w-[1400px] mx-auto">
-          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-3 sm:mb-4">
             The process
           </p>
-          <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-tight text-ink mb-16 text-balance">
+          <h2 className="font-display text-[clamp(1.4rem,3.5vw,2.8rem)] font-semibold tracking-tight text-ink mb-8 sm:mb-12 lg:mb-16 text-balance">
             How to register for VAT in Kenya: no portal, no forms, just WhatsApp.
           </h2>
 
@@ -940,14 +1006,14 @@ KRA's{" "}
             ].map(({ step, Icon, title, body }, i) => (
               <div
                 key={step}
-                className={`p-8 ${i < 2 ? "border-b sm:border-b-0 sm:border-r border-hairline" : ""}`}
+                className={`p-5 sm:p-8 ${i < 2 ? "border-b sm:border-b-0 sm:border-r border-hairline" : ""}`}
               >
-                <div className="flex items-start justify-between mb-6">
-                  <Icon size={28} weight="duotone" className="text-brand" aria-hidden="true" />
+                <div className="flex items-start justify-between mb-4 sm:mb-6">
+                  <Icon size={24} weight="duotone" className="text-brand" aria-hidden="true" />
                   <span className="font-mono text-[0.65rem] text-ink-muted">{step}</span>
                 </div>
-                <h3 className="font-display text-[1rem] font-semibold text-ink mb-2">{title}</h3>
-                <p className="text-[0.875rem] text-ink-muted leading-relaxed">{body}</p>
+                <h3 className="font-display text-[0.95rem] sm:text-[1rem] font-semibold text-ink mb-2">{title}</h3>
+                <p className="text-[0.82rem] sm:text-[0.875rem] text-ink-muted leading-relaxed">{body}</p>
               </div>
             ))}
           </div>
@@ -969,12 +1035,12 @@ KRA's{" "}
       </section>
 
       {/* ─── SOCIAL PROOF ─── */}
-      <section className="bg-canvas-alt py-20 px-6 lg:px-10">
+      <section className="bg-canvas-alt py-10 sm:py-12 lg:py-20 px-5 sm:px-6 lg:px-10 m-section-spacious">
         <div className="max-w-[1400px] mx-auto">
-          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-10">
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-6 sm:mb-10">
             What our clients say
           </p>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5">
             {[
               {
                 quote:
@@ -997,19 +1063,19 @@ KRA's{" "}
             ].map(({ quote, name, business }) => (
               <article
                 key={name}
-                className="bg-canvas rounded-lg border border-hairline p-5 lg:p-7 flex flex-col"
+                className="bg-canvas rounded-lg border border-hairline p-4 sm:p-5 lg:p-7 flex flex-col"
               >
-                <div className="flex gap-0.5 mb-4" role="img" aria-label="5 out of 5 stars">
+                <div className="flex gap-0.5 mb-3 sm:mb-4" role="img" aria-label="5 out of 5 stars">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={13} weight="fill" className="text-brand" aria-hidden="true" />
+                    <Star key={i} size={12} weight="fill" className="text-brand" aria-hidden="true" />
                   ))}
                 </div>
-                <p className="text-[0.88rem] text-ink-soft leading-relaxed flex-1 mb-5 italic">
+                <p className="text-[0.82rem] sm:text-[0.88rem] text-ink-soft leading-relaxed flex-1 mb-3 sm:mb-5 italic">
                   &ldquo;{quote}&rdquo;
                 </p>
                 <div>
-                  <p className="text-[0.82rem] font-semibold text-ink">{name}</p>
-                  <p className="text-[0.75rem] text-ink-muted">{business}</p>
+                  <p className="text-[0.8rem] sm:text-[0.82rem] font-semibold text-ink">{name}</p>
+                  <p className="text-[0.72rem] sm:text-[0.75rem] text-ink-muted">{business}</p>
                 </div>
               </article>
             ))}
@@ -1018,20 +1084,20 @@ KRA's{" "}
       </section>
 
       {/* ─── FAQ ─── */}
-      <section className="bg-canvas py-24 px-6 lg:px-10" aria-labelledby="faq-heading">
-        <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-16 lg:grid-cols-[360px_1fr]">
+      <section className="bg-canvas py-12 sm:py-16 lg:py-24 px-5 sm:px-6 lg:px-10 m-section-spacious" aria-labelledby="faq-heading">
+        <div className="max-w-[1400px] mx-auto grid gap-6 sm:gap-8 lg:gap-16 lg:grid-cols-[360px_1fr]">
           <div>
-            <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
+            <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-3 sm:mb-4">
               FAQ
             </p>
             <h2
               id="faq-heading"
-              className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold tracking-tight text-ink leading-tight text-balance"
+              className="font-display text-[clamp(1.3rem,3vw,2.4rem)] font-semibold tracking-tight text-ink leading-tight text-balance"
             >
               Questions we get every week on WhatsApp
             </h2>
           </div>
-          <div className="divide-y divide-hairline">
+          <div className="divide-y divide-hairline m-faq-list">
             {faqSchema.mainEntity.map((q) => (
               <details key={q.name} className="group py-5">
                 <summary className="flex items-start justify-between gap-4 cursor-pointer list-none">
@@ -1073,8 +1139,8 @@ KRA's{" "}
       </section>
 
       {/* ─── AMNESTY BAND ─── */}
-      <section className="bg-brand-muted py-16 px-6 lg:px-10" aria-labelledby="amnesty-heading">
-        <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+      <section className="bg-brand-muted py-10 sm:py-12 lg:py-16 px-5 sm:px-6 lg:px-10 m-section-normal m-cta-block" aria-labelledby="amnesty-heading">
+        <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6 lg:gap-8">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-brand mb-3">
               KRA Tax Amnesty 2026
@@ -1112,8 +1178,8 @@ KRA's{" "}
       </section>
 
       {/* ─── DEADLINE COUNTDOWN ─── */}
-      <section className="bg-canvas-alt py-16 px-6 lg:px-10" aria-labelledby="deadline-heading">
-        <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+      <section className="bg-canvas-alt py-10 sm:py-12 lg:py-16 px-5 sm:px-6 lg:px-10 m-section-normal m-cta-block" aria-labelledby="deadline-heading">
+        <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6 lg:gap-8">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-3">
               KRA VAT deadline
@@ -1152,13 +1218,13 @@ KRA's{" "}
       </section>
 
       {/* ─── FINAL CTA ─── */}
-      <section className="bg-canvas-dark py-24 px-6 lg:px-10">
-        <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-12 lg:grid-cols-2 items-center">
+      <section className="bg-canvas-dark py-12 sm:py-16 lg:py-24 px-5 sm:px-6 lg:px-10 m-section-spacious m-bottom-clearance">
+        <div className="max-w-[1400px] mx-auto grid gap-6 sm:gap-8 lg:gap-12 lg:grid-cols-2 items-center">
           <div>
-            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
+            <h2 className="font-display text-[clamp(1.6rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-3 sm:mb-4 text-balance">
               Ready to get your VAT number?
             </h2>
-            <p className="text-[0.95rem] text-canvas/80 leading-relaxed max-w-[42ch] text-pretty">
+            <p className="text-[0.85rem] sm:text-[0.95rem] text-canvas/80 leading-relaxed max-w-[42ch] text-pretty">
               Message us on WhatsApp and we will have your KRA VAT registration started
               within the hour. Flat fee. M-PESA accepted. No hidden costs.
             </p>

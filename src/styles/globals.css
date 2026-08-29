@@ -1,4 +1,4 @@
-﻿@import 'tailwindcss';
+@import 'tailwindcss';
 @import 'shadcn/tailwind.css';
 
 /* Dark mode using class-based approach */
@@ -29,21 +29,21 @@
 
   /* ─── Shadcn mapping ─── */
   --color-background:           var(--background);
-  --color-foreground:           var(--foreground);
-  --color-card:                 var(--card);
-  --color-card-foreground:      var(--card-foreground);
-  --color-popover:              var(--popover);
-  --color-popover-foreground:   var(--popover-foreground);
-  --color-primary:              var(--primary);
-  --color-primary-foreground:   var(--primary-foreground);
-  --color-secondary:            var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted:                var(--muted);
-  --color-muted-foreground:     var(--muted-foreground);
-  --color-destructive:          var(--destructive);
-  --color-border:               var(--border);
+  --color-foreground:          var(--foreground);
+  --color-card:                var(--card);
+  --color-card-foreground:     var(--card-foreground);
+  --color-popover:             var(--popover);
+  --color-popover-foreground:  var(--popover-foreground);
+  --color-primary:             var(--primary);
+  --color-primary-foreground:  var(--primary-foreground);
+  --color-secondary:           var(--secondary);
+  --color-secondary-foreground:var(--secondary-foreground);
+  --color-muted:               var(--muted);
+  --color-muted-foreground:    var(--muted-foreground);
+  --color-destructive:         var(--destructive);
+  --color-border:              var(--border);
   --color-input:                var(--input);
-  --color-ring:                var(--ring);
+  --color-ring:                 var(--ring);
 
   --radius-sm:  calc(var(--radius) * 0.5);
   --radius-md:  var(--radius);
@@ -126,66 +126,26 @@ html.dark {
   --ring:                   #3b82f6;
 }
 
-/* ─── Taste Skill - Anti-Slop Design Tokens ─── */
-/* Based on Leonxlnx/taste-skill principles */
-@media (max-width: 430px) {
-  :root {
-    /* Taste Skill Dials - Mobile (1-10 scale) */
-    --variance: 3;        /* Layout experimentation (1-10) - Low: trust-first */
-    --motion: 3;          /* Animation depth (1-10) - Low: utility site */
-    --density: 7;         /* Information density (1-10) - High: tax/compliance data */
-    
-    /* Density-based spacing scale */
-    --space-3xs: calc(0.125rem * var(--density) / 5);
-    --space-2xs: calc(0.1875rem * var(--density) / 5);
-    --space-xs: calc(0.25rem * var(--density) / 5);
-    --space-sm: calc(0.375rem * var(--density) / 5);
-    --space-md: calc(0.5rem * var(--density) / 5);
-    --space-lg: calc(1rem * var(--density) / 5);
-    --space-xl: calc(1.5rem * var(--density) / 5);
-    --space-2xl: calc(2rem * var(--density) / 5);
-    --space-3xl: calc(2.5rem * var(--density) / 5);
-    --space-4xl: calc(3rem * var(--density) / 5);
-    
-    /* Motion duration scale (lower = faster) */
-    --duration-instant: 0ms;
-    --duration-fast: 100ms;
-    --duration-normal: 200ms;
-    --duration-slow: 300ms;
-    --duration-slower: 400ms;
-    
-    /* Easing curves - taste-skill spring feel */
-    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-    --ease-snappy: cubic-bezier(0.2, 0, 0.2, 1);
-    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-    --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
-    
-    /* Container padding scale */
-    --container-padding: 1rem;
-    --card-padding: 1rem;
-    --section-gap: 2rem;
-    --card-gap: 1rem;
-    
-    /* Legacy compat */
-    --section-pt: 3rem;
-    --section-pb: 3rem;
-    --first-section-pt: 2rem;
-    --first-section-pb: 2rem;
-    --card-padding: 1rem;
-    --body-line-height: 1.75;
-    --para-margin: 1rem;
-    --heading-para-margin: 0.75rem;
-    --heading-margin-bottom: 0.75rem;
-    --navy-tint: rgba(27, 42, 59, 0.04);
-    --navy-tint-hover: rgba(27, 42, 59, 0.06);
-    --container-px: 1rem;
-    --gap-md: 1rem;
-    --gap-lg: 1.25rem;
-  }
-  .dark {
-    /* Dark mode adjustments */
-  }
-}
+/* ════════════════════════════════════════════════════════════════════
+   SMART-VAT MOBILE REDESIGN (Component-Specific, Not Global)
+   ════════════════════════════════════════════════════════════════════
+   The previous implementation applied broad rules like:
+     • section:not(:first-child) { padding-top: 3rem; padding-bottom: 3rem; }
+     • .rounded-xl, .rounded-lg, .rounded-2xl, [class*="bg-canvas"] { padding: 1rem; }
+     • p, li, td, th { line-height: 1.75; }
+
+   These global selectors caused:
+     - Hundreds of pixels of unwanted vertical space on the homepage
+     - Inconsistent component behavior (a pricing card, a dashboard,
+       an alert, and a modal all getting the same padding)
+     - Visual geometry (rounded-xl) dictating spacing globally
+     - Excessive vertical scrolling for information-dense tax content
+
+   This new approach treats spacing as a component-specific design
+   decision. Mobile breakpoints are explicitly 320px / 360px /
+   390px / 430px. Mobile should feel like a purpose-built fintech/
+   help-center mobile app, not a desktop layout with stacked blocks.
+   ════════════════════════════════════════════════════════════════════ */
 
 /* ─── Base layer ─── */
 @layer base {
@@ -204,6 +164,8 @@ html.dark {
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
     line-height: 1.6;
+    /* Prevent horizontal page overflow on mobile */
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -225,110 +187,503 @@ html.dark {
     color: var(--foreground);
   }
 
-  /* ─── Mobile spacing & density (320px–430px) ─── */
-  @media (max-width: 430px) {
-    /* Increase vertical spacing between major sections */
-    section:not(:first-child) {
-      padding-top: var(--section-pt);
-      padding-bottom: var(--section-pb);
+  /* ─── Mobile touch-target baseline ───
+     Every interactive element must be at least 44px tall on mobile
+     to be comfortably tappable. This applies only on small screens
+     and only to interactive elements, NOT to all divs. */
+  @media (max-width: 768px) {
+    a, button, summary, [role="button"], input[type="submit"], input[type="button"] {
+      min-height: 44px;
     }
-    section:first-child {
-      padding-top: var(--first-section-pt);
-      padding-bottom: var(--first-section-pb);
+    /* Allow inline links in body copy to be smaller (text density matters) */
+    p a, li a, p button, li button {
+      min-height: 0;
     }
-
-    /* Increase internal padding inside cards and containers */
-    .rounded-xl,
-    .rounded-lg,
-    .rounded-2xl,
-    article[class*="border"],
-    [class*="bg-canvas"] {
-      padding: var(--card-padding);
-    }
-
-    /* Increase line-height and paragraph margins for body copy */
-    p, li, td, th {
-      line-height: var(--body-line-height);
-    }
-    p + p {
-      margin-top: var(--para-margin);
-    }
-    h2 + p, h3 + p {
-      margin-top: var(--heading-para-margin);
-    }
-    h2, h3 {
-      margin-bottom: var(--heading-margin-bottom);
-    }
-
-    /* Increase internal padding for hub cards, pricing cards, FAQ items */
-    .grid > article,
-    .grid > div[class*="border"],
-    .space-y-4 > *,
-    .space-y-6 > * {
-      padding: var(--card-padding);
-    }
-
-/* Ensure sticky WhatsApp CTA doesn't overlap content */
-    .fixed.bottom-0 {
-      padding-bottom: env(safe-area-inset-bottom, 1rem);
-    }
-
-    /* Ensure red is only used for specific cases */
-    .bg-red-600, .bg-red-500, .text-red-600, .text-red-500,
-    .border-red-600, .border-red-500 {
-      /* These are allowed - keep as-is */
-    }
-/* Audit: prevent red from leaking into decorative backgrounds */
-    section:not([id*="deadline"]):not([id*="penalty"]) > .bg-red-600,
-    section:not([id*="deadline"]):not([id*="penalty"]) > .bg-red-500 {
-      background-color: transparent !important;
   }
+
+  /* ─── Safe-area handling for sticky elements ───
+     Sticky WhatsApp bar + sticky navbar must respect iOS safe areas. */
+  @media (max-width: 768px) {
+    .safe-bottom {
+      padding-bottom: env(safe-area-inset-bottom, 0.75rem);
+    }
+    .safe-top {
+      padding-top: env(safe-area-inset-top, 0px);
+    }
   }
 }
 
-/* ─── Utility classes ─── */
-@layer utilities {
-  /* Mobile section-background alternation was previously done with
-     main > section:nth-of-type(N) rules keyed to a fixed position
-     (e.g. "10 = Testimonials"). The homepage has grown from 11 to 17
-     top-level sections since that mapping was written, so the indices
-     no longer point at the sections the comments describe - notably
-     nth-of-type(10) was hitting the #pricing section, not Testimonials,
-     and was forcing a navy tint across the pricing cards on mobile.
-     Removed rather than re-guessed: every section already carries an
-     explicit bg-canvas / bg-canvas-alt / bg-canvas-dark / bg-brand-muted
-     class in home.tsx, which already provides the intended alternation
-     without relying on fragile DOM position. */
+/* ════════════════════════════════════════════════════════════════════
+   COMPONENT-SPECIFIC MOBILE VARIANTS
+   ════════════════════════════════════════════════════════════════════ */
+@layer components {
 
+  /* ─── 1. HERO — Compact first viewport ───
+     On mobile, the hero should be:
+       • Tight padding (top 16-20px, bottom 24-32px)
+       • Single column (hero text stacks above CTA, no desktop dashboard)
+       • CTA buttons full-width with 44px+ touch targets
+       • One tiny trust row
+     Apply: add class="m-hero" to the hero section. */
+  .m-hero {
+    padding-top: clamp(0.75rem, 2vh, 1.25rem);
+    padding-bottom: clamp(1.5rem, 3vh, 2rem);
+  }
+  @media (max-width: 768px) {
+    .m-hero h1 {
+      font-size: clamp(1.75rem, 7vw, 2.25rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .m-hero p {
+      font-size: 0.9375rem;
+      line-height: 1.5;
+    }
+    /* Hide the desktop "Compliance Overview" card on mobile hero to keep
+       the first viewport compact and action-oriented. The dashboard
+       appears in its own dedicated section lower on the page. */
+    .m-hero .m-hero-hide-on-mobile {
+      display: none !important;
+    }
+  }
+
+  /* ─── 2. PROBLEM SOLVER — Compact list rows instead of cards ───
+     Desktop uses a 4-column card grid. On mobile, those cards become
+     long vertical blocks. We convert them to compact 56-64px rows with
+     icon + title + chevron. */
+  @media (max-width: 640px) {
+    .m-problem-grid {
+      display: flex !important;
+      flex-direction: column;
+      gap: 0.5rem !important;
+    }
+    .m-problem-grid > a,
+    .m-problem-grid > article {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center;
+      gap: 0.875rem;
+      padding: 0.875rem 1rem !important;
+      min-height: 60px;
+      border: 1px solid var(--hairline) !important;
+      border-radius: 0.5rem !important;
+    }
+    .m-problem-grid > a > :first-child,
+    .m-problem-grid > article > :first-child {
+      flex-shrink: 0;
+    }
+    .m-problem-grid > a > p,
+    .m-problem-grid > article > p {
+      font-size: 0.95rem !important;
+      margin: 0 !important;
+      flex: 1;
+      min-width: 0;
+    }
+    .m-problem-grid > a > p:last-of-type,
+    .m-problem-grid > article > p:last-of-type {
+      /* Description text — keep terse on mobile */
+      font-size: 0.78rem !important;
+      color: var(--ink-muted) !important;
+    }
+    .m-problem-grid > a > span:last-child {
+      flex-shrink: 0;
+      margin: 0 !important;
+    }
+  }
+
+  /* ─── 3. COMPLIANCE DASHBOARD — Compact status summary ───
+     Desktop shows a full dashboard card. On mobile, we only show the
+     essential status summary as compact rows (icon + label + status
+     pill), with a single "View compliance details →" link. */
+  @media (max-width: 640px) {
+    .m-dashboard {
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    .m-dashboard .m-dashboard-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem !important;
+      min-height: 56px;
+    }
+    .m-dashboard .m-dashboard-row > :first-child {
+      flex-shrink: 0;
+    }
+    .m-dashboard .m-dashboard-row .m-dashboard-label {
+      font-size: 0.7rem !important;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin: 0 !important;
+    }
+    .m-dashboard .m-dashboard-row .m-dashboard-value {
+      font-size: 0.9rem !important;
+      font-weight: 500;
+      margin: 0 !important;
+    }
+    .m-dashboard .m-dashboard-row > :last-child {
+      flex-shrink: 0;
+      margin: 0 !important;
+    }
+    /* On mobile, hide the secondary "File Now" pill button in the VAT
+       Returns row — keep just the status pill. The WhatsApp bar at the
+       bottom of the screen is the primary CTA. */
+    .m-dashboard .m-dashboard-row .m-dashboard-secondary {
+      display: none !important;
+    }
+  }
+
+  /* ─── 4. TRUST STRIPES — Compact inline items ───
+     Don't stack 7 trust badges vertically on mobile. Compact them into
+     a flex-wrap row of small inline items. */
+  @media (max-width: 640px) {
+    .m-trust-row {
+      display: flex !important;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.875rem !important;
+      justify-content: flex-start !important;
+    }
+    .m-trust-row > * {
+      font-size: 0.7rem !important;
+      margin: 0 !important;
+    }
+    .m-trust-row svg {
+      width: 0.625rem !important;
+      height: 0.625rem !important;
+    }
+  }
+
+  /* ─── 5. PRICING CARDS — Compact with collapsible details ───
+     Instead of forcing 4 cards with all details visible on mobile
+     (which becomes half-page monsters), we:
+       • Reduce internal padding (1rem instead of 2rem)
+       • Make the "What happens next" list collapsible via <details>
+       • Make feature lists more compact
+       • Hide the "Most Common" / "Most Popular" badges on the
+         smallest screens to reduce visual clutter */
+  @media (max-width: 640px) {
+    .m-pricing-card {
+      padding: 1.125rem !important;
+    }
+    .m-pricing-card .m-pricing-price {
+      font-size: 1.5rem !important;
+    }
+    .m-pricing-card .m-pricing-features li {
+      font-size: 0.8rem !important;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+    /* Convert "What happens next" ordered list into a collapsible
+       <details> block to reduce vertical length on mobile. The wrapper
+       is added in JSX, but this ensures compact styling. */
+    .m-pricing-card details.m-pricing-details {
+      margin-top: 0.75rem !important;
+      border: 1px solid var(--hairline);
+      border-radius: 0.5rem;
+      padding: 0.5rem 0.75rem !important;
+      background: rgba(0,0,0,0.02);
+    }
+    .m-pricing-card details.m-pricing-details summary {
+      font-size: 0.7rem !important;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.25rem 0 !important;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .m-pricing-card details.m-pricing-details summary::-webkit-details-marker {
+      display: none;
+    }
+    .m-pricing-card details.m-pricing-details[open] summary {
+      margin-bottom: 0.5rem;
+    }
+    .m-pricing-card details.m-pricing-details summary::after {
+      content: "+";
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .m-pricing-card details.m-pricing-details[open] summary::after {
+      content: "−";
+    }
+    .m-pricing-card details.m-pricing-details ol {
+      font-size: 0.78rem !important;
+      gap: 0.25rem !important;
+    }
+  }
+
+  /* ─── 6. DIY vs SmartVAT COMPARISON — No horizontal scroll ───
+     On desktop it's a 2-column table. On mobile, we collapse it to
+     single-column stacked comparison instead of horizontal scroll. */
+  @media (max-width: 640px) {
+    .m-comparison-grid {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 0.75rem !important;
+    }
+    .m-comparison-grid > div {
+      padding: 1rem !important;
+    }
+    .m-comparison-grid > div > div {
+      gap: 0.5rem !important;
+    }
+    .m-comparison-grid > div > div > div {
+      padding: 0.5rem 0 !important;
+    }
+    .m-comparison-grid p {
+      font-size: 0.78rem !important;
+    }
+  }
+
+  /* ─── 7. FAQ — Native accordion already in place ───
+     The existing FAQ component uses <details>. We just tighten spacing
+     on mobile so 17 questions don't dominate the homepage. */
+  @media (max-width: 640px) {
+    .m-faq-list details {
+      padding: 0.875rem 0 !important;
+    }
+    .m-faq-list details summary span {
+      font-size: 0.875rem !important;
+    }
+    .m-faq-list details > div {
+      margin-top: 0.5rem !important;
+    }
+    .m-faq-list details > div p {
+      font-size: 0.8125rem !important;
+      line-height: 1.55;
+    }
+  }
+
+  /* ─── 8. FOOTER — Accordion on mobile ───
+     Desktop 4-column footer. On mobile, each column becomes a
+     <details> accordion. Add class="m-footer-accordion" on the
+     footer container, and wrap each column in <details>. */
+  @media (max-width: 768px) {
+    .m-footer-accordion {
+      display: block !important;
+      gap: 0 !important;
+    }
+    .m-footer-accordion details {
+      border-top: 1px solid var(--hairline);
+    }
+    .m-footer-accordion details:last-of-type {
+      border-bottom: 1px solid var(--hairline);
+    }
+    .m-footer-accordion details summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.875rem 0 !important;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      min-height: 48px;
+    }
+    .m-footer-accordion details summary::-webkit-details-marker {
+      display: none;
+    }
+    .m-footer-accordion details summary p {
+      margin: 0 !important;
+      font-size: 0.75rem !important;
+    }
+    .m-footer-accordion details summary::after {
+      content: "+";
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      color: var(--muted-foreground);
+    }
+    .m-footer-accordion details[open] summary::after {
+      content: "−";
+    }
+    .m-footer-accordion details ul {
+      padding-bottom: 0.75rem !important;
+      gap: 0.625rem !important;
+    }
+    .m-footer-accordion details ul li {
+      padding: 0.25rem 0;
+    }
+    .m-footer-accordion details ul li a {
+      font-size: 0.85rem !important;
+    }
+  }
+
+  /* ─── 9. SECTION SPACING — Tight transitions, generous gaps ───
+     Use tighter spacing inside dense informational sections and more
+     generous spacing only around major transitions (Hero → Problem,
+     Pricing → FAQ, Final CTA). Section-level spacing is controlled
+     via the .m-section-* utilities below, NOT by a global rule. */
+  .m-section-tight   { padding-top: 2rem;    padding-bottom: 2rem; }
+  .m-section-normal  { padding-top: 3rem;    padding-bottom: 3rem; }
+  .m-section-spacious{ padding-top: 4rem;    padding-bottom: 4rem; }
+
+  @media (max-width: 640px) {
+    .m-section-tight    { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .m-section-normal   { padding-top: 2.25rem; padding-bottom: 2.25rem; }
+    .m-section-spacious { padding-top: 2.75rem; padding-bottom: 2.75rem; }
+  }
+
+  /* ─── 10. STATUS CARDS — Compact pill rows ───
+     For status rows (eTIMS operational, VAT due, etc.), use compact
+     56px rows on mobile. */
+  @media (max-width: 640px) {
+    .m-status-card {
+      padding: 0.75rem 1rem !important;
+      min-height: 56px;
+    }
+    .m-status-card .m-status-icon {
+      width: 2.25rem !important;
+      height: 2.25rem !important;
+    }
+    .m-status-card .m-status-label {
+      font-size: 0.7rem !important;
+    }
+    .m-status-card .m-status-value {
+      font-size: 0.875rem !important;
+    }
+  }
+
+  /* ─── 11. DEADLINE CARDS — Compact reminder pills ─── */
+  @media (max-width: 640px) {
+    .m-deadline-card {
+      padding: 0.875rem 1rem !important;
+      min-height: 64px;
+    }
+    .m-deadline-card .m-deadline-label {
+      font-size: 0.7rem !important;
+    }
+    .m-deadline-card .m-deadline-value {
+      font-size: 1rem !important;
+    }
+  }
+
+  /* ─── 12. SERVICE / RESOURCE GRID — Compact list rows ───
+     On mobile, 3-col service grids become compact list rows rather
+     than half-page cards. */
+  @media (max-width: 640px) {
+    .m-service-list,
+    .m-resource-grid {
+      display: flex !important;
+      flex-direction: column;
+      gap: 0.5rem !important;
+    }
+    .m-service-list > a,
+    .m-service-list > article,
+    .m-resource-grid > a,
+    .m-resource-grid > article {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center;
+      gap: 0.875rem;
+      padding: 0.875rem 1rem !important;
+      min-height: 64px;
+      border: 1px solid var(--hairline);
+      border-radius: 0.5rem;
+    }
+  }
+
+  /* ─── 13. CALCULATOR — Single column on mobile ─── */
+  @media (max-width: 640px) {
+    .m-calculator {
+      padding: 1rem !important;
+    }
+    .m-calculator input,
+    .m-calculator select,
+    .m-calculator button {
+      width: 100%;
+      font-size: 1rem;
+      min-height: 44px;
+    }
+    .m-calculator .m-calculator-result {
+      font-size: 1.5rem !important;
+    }
+  }
+
+  /* ─── 14. CTA BLOCKS — Compact action card ─── */
+  @media (max-width: 640px) {
+    .m-cta-block {
+      padding: 1.5rem 1.125rem !important;
+      text-align: left !important;
+    }
+    .m-cta-block h2,
+    .m-cta-block h3 {
+      font-size: 1.25rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+    .m-cta-block p {
+      font-size: 0.875rem !important;
+      margin-bottom: 1rem !important;
+    }
+    .m-cta-block a,
+    .m-cta-block button {
+      width: 100%;
+      min-height: 48px;
+    }
+  }
+
+  /* ─── 15. PROSE / ARTICLE — Optimized reading width ───
+     Body copy in articles gets a comfortable max-width but tighter
+     spacing on mobile, so users move through dense tax content
+     quickly without endless scrolling. */
+  @media (max-width: 640px) {
+    .m-prose {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+    }
+    .m-prose p {
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .m-prose h2 {
+      font-size: 1.25rem !important;
+      margin-top: 1.5rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+    .m-prose h3 {
+      font-size: 1.05rem !important;
+      margin-top: 1.25rem !important;
+      margin-bottom: 0.375rem !important;
+    }
+    .m-prose ul,
+    .m-prose ol {
+      margin-top: 0.75rem !important;
+      margin-bottom: 0.75rem !important;
+      padding-left: 1.25rem !important;
+    }
+    .m-prose li {
+      margin-top: 0.25rem !important;
+      margin-bottom: 0.25rem !important;
+    }
+  }
+
+  /* ─── 16. MOBILE TOP PADDING — WhatsApp bar clearance ───
+     The mobile sticky WhatsApp bar at the bottom (~64px tall) must
+     not cover the last CTA on the page. Apply .m-bottom-clearance
+     on the last section of every page. */
+  @media (max-width: 768px) {
+    .m-bottom-clearance {
+      padding-bottom: 100px !important;
+    }
+  }
+}
+
+/* ─── Utility classes (preserved from previous version) ─── */
+@layer utilities {
   .font-display {
     font-family: var(--font-display);
   }
 
-  .text-tight {
-    line-height: 1.2;
-  }
-  .text-relaxed {
-    line-height: 1.7;
-  }
-  .text-loose {
-    line-height: 2;
-  }
-
-  .leading-tight {
-    line-height: 1.25;
-  }
-  .leading-snug {
-    line-height: 1.375;
-  }
-  .leading-normal {
-    line-height: 1.5;
-  }
-  .leading-relaxed {
-    line-height: 1.625;
-  }
-  .leading-loose {
-    line-height: 2;
-  }
+  .text-tight    { line-height: 1.2; }
+  .text-relaxed  { line-height: 1.7; }
+  .text-loose    { line-height: 2;   }
+  .leading-tight { line-height: 1.25; }
+  .leading-snug  { line-height: 1.375; }
+  .leading-normal{ line-height: 1.5; }
+  .leading-relaxed{ line-height: 1.625; }
+  .leading-loose { line-height: 2; }
 
   .btn-fill {
     position: relative;
@@ -345,42 +700,29 @@ html.dark {
     z-index: -1;
     border-radius: inherit;
   }
-  .btn-fill:hover::before {
-    transform: translateX(0);
-  }
-  .btn-fill:active {
-    transform: scale(0.98);
-  }
-
-  .dark .btn-fill::before {
-    background: rgba(255,255,255,0.08);
-  }
+  .btn-fill:hover::before { transform: translateX(0); }
+  .btn-fill:active { transform: scale(0.98); }
+  .dark .btn-fill::before { background: rgba(255,255,255,0.08); }
 
   /* Robust explicit color classes for both modes */
-  .text-ink { color: var(--ink); }
-  .text-ink-soft { color: var(--ink-soft); }
-  .text-ink-muted { color: var(--ink-muted); }
-  
-  /* In dark mode, text-canvas on dark backgrounds must be light text */
-  .text-canvas { color: #faf8f3; }
+  .text-ink        { color: var(--ink); }
+  .text-ink-soft   { color: var(--ink-soft); }
+  .text-ink-muted  { color: var(--ink-muted); }
+  .text-canvas     { color: #faf8f3; }
   .dark .text-canvas { color: #f5f2eb; }
-
   .text-canvas-alt { color: var(--canvas-alt); }
-  .text-brand { color: var(--brand); }
-  .text-brand-hover { color: var(--brand-hover); }
+  .text-brand      { color: var(--brand); }
+  .text-brand-hover{ color: var(--brand-hover); }
 
-  .bg-canvas { background-color: var(--canvas); }
-  .bg-canvas-alt { background-color: var(--canvas-alt); }
-  .bg-canvas-warm { background-color: var(--canvas-warm); }
-  .bg-canvas-dark { background-color: var(--canvas-dark); }
-  .bg-brand-muted { background-color: var(--brand-muted); }
+  .bg-canvas       { background-color: var(--canvas); }
+  .bg-canvas-alt   { background-color: var(--canvas-alt); }
+  .bg-canvas-warm  { background-color: var(--canvas-warm); }
+  .bg-canvas-dark  { background-color: var(--canvas-dark); }
+  .bg-brand-muted  { background-color: var(--brand-muted); }
   .border-hairline { border-color: var(--hairline); }
-
-  /* Fix hairline border contrast - darker in light mode for visibility */
   .border-hairline-strong { border-color: var(--ink-muted); }
   .dark .border-hairline-strong { border-color: var(--ink-soft); }
 
-  /* Opacity utilities for semantic colors */
   .text-ink\/50 { color: color-mix(in srgb, var(--ink) 50%, transparent); }
   .text-ink\/60 { color: color-mix(in srgb, var(--ink) 60%, transparent); }
   .text-ink\/70 { color: color-mix(in srgb, var(--ink) 70%, transparent); }
@@ -388,7 +730,7 @@ html.dark {
   .text-ink-soft\/50 { color: color-mix(in srgb, var(--ink-soft) 50%, transparent); }
   .text-ink-muted\/50 { color: color-mix(in srgb, var(--ink-muted) 50%, transparent); }
   .text-ink-muted\/70 { color: color-mix(in srgb, var(--ink-muted) 70%, transparent); }
-  
+
   .text-canvas\/50 { color: rgba(255, 255, 255, 0.5); }
   .text-canvas\/55 { color: rgba(255, 255, 255, 0.55); }
   .text-canvas\/60 { color: rgba(255, 255, 255, 0.6); }
@@ -409,210 +751,52 @@ html.dark {
   .border-canvas\/25 { border-color: rgba(255, 255, 255, 0.25); }
   .border-brand\/40 { border-color: color-mix(in srgb, var(--brand) 40%, transparent); }
 
-  /* ─── Gapless Bento Grid (taste-skill §4) ─── */
+  /* ─── Gapless Bento Grid ─── */
   .card-grid,
   .bento-grid {
     display: grid;
-    gap: var(--gap-md, 1.5rem);
+    gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-auto-flow: dense;
   }
-
   @media (max-width: 768px) {
-    .card-grid,
-    .bento-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    .card-grid, .bento-grid { grid-template-columns: repeat(2, 1fr); }
   }
-
   @media (max-width: 480px) {
-    .card-grid,
-    .bento-grid {
-      grid-template-columns: 1fr;
-    }
+    .card-grid, .bento-grid { grid-template-columns: 1fr; }
   }
 
-  /* ─── Responsive utilities (Conde Nast inspired) ─── */
+  /* ─── Container ─── */
   .container {
     width: 100%;
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: var(--container-px, 1.5rem);
-    padding-right: var(--container-px, 1.5rem);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @media (max-width: 640px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
 
-  .stack-mobile > * + * {
-    margin-top: var(--gap-md, 1.5rem);
-  }
-
+  /* Stack on mobile */
   @media (max-width: 768px) {
-    .stack-mobile > * + * {
-      margin-top: var(--gap-md, 1.25rem);
-    }
+    .stack-on-mobile { flex-direction: column; }
+    .stack-on-mobile > * { width: 100%; }
   }
-
   @media (max-width: 640px) {
-    .stack-mobile > * + * {
-      margin-top: var(--gap-md, 1.125rem);
-    }
+    .stack-on-mobile { flex-direction: column; }
+    .stack-on-mobile > * { width: 100%; }
   }
-
   @media (max-width: 430px) {
-    .stack-mobile > * + * {
-      margin-top: var(--gap-md, 1rem);
-    }
+    .stack-on-mobile-sm { flex-direction: column; }
+    .stack-on-mobile-sm > * { width: 100%; }
   }
 
-  /* Fluid images - Conde Nast pattern */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Stack elements on mobile - "stack stack stack" pattern */
-  @media (max-width: 768px) {
-    .stack-on-mobile {
-      flex-direction: column;
-    }
-    .stack-on-mobile > * {
-      width: 100%;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .stack-on-mobile {
-      flex-direction: column;
-    }
-    .stack-on-mobile > * {
-      width: 100%;
-    }
-  }
-
-  @media (max-width: 430px) {
-    .stack-on-mobile-sm {
-      flex-direction: column;
-    }
-    .stack-on-mobile-sm > * {
-      width: 100%;
-    }
-  }
-
-  /* Fluid container widths */
-  .fluid-width {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  /* Card grid responsive */
-  .card-grid-legacy {
-    display: grid;
-    gap: var(--gap-md, 1.5rem);
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-
-  @media (max-width: 768px) {
-    .card-grid-legacy {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  /* Section spacing responsive */
-  .section {
-    padding-top: var(--section-pt, 4rem);
-    padding-bottom: var(--section-pb, 4rem);
-  }
-
-  @media (max-width: 768px) {
-    .section {
-      padding-top: var(--section-pt, 3.5rem);
-      padding-bottom: var(--section-pb, 3.5rem);
-    }
-  }
-
-  @media (max-width: 640px) {
-    .section {
-      padding-top: var(--section-pt, 3.25rem);
-      padding-bottom: var(--section-pb, 3.25rem);
-    }
-  }
-
-  @media (max-width: 430px) {
-    .section {
-      padding-top: var(--section-pt, 3rem);
-      padding-bottom: var(--section-pb, 3rem);
-    }
-  }
-
-  /* Card padding responsive */
-  .card {
-    padding: var(--card-padding, 1.5rem);
-  }
-
-  @media (max-width: 768px) {
-    .card {
-      padding: var(--card-padding, 1.25rem);
-    }
-  }
-
-  @media (max-width: 640px) {
-    .card {
-      padding: var(--card-padding, 1.125rem);
-    }
-  }
-
-  @media (max-width: 430px) {
-    .card {
-      padding: var(--card-padding, 1rem);
-    }
-  }
-
-  /* Button responsive */
-  .btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.875rem;
-  }
-
-  @media (max-width: 640px) {
-    .btn {
-      padding: 0.6875rem 1.375rem;
-      font-size: 0.84375rem;
-    }
-    .btn + .btn {
-      margin-top: 0.625rem;
-    }
-  }
-
-  @media (max-width: 430px) {
-    .btn {
-      padding: 0.625rem 1.25rem;
-      font-size: 0.8125rem;
-      width: 100%;
-    }
-    .btn + .btn {
-      margin-top: 0.75rem;
-    }
-  }
-
-  /* Text responsive */
-  .text-responsive {
-    font-size: clamp(0.875rem, 2vw, 1rem);
-    line-height: 1.6;
-  }
-
-  @media (max-width: 640px) {
-    .text-responsive {
-      font-size: 0.9375rem;
-      line-height: 1.65;
-    }
-  }
-
-  @media (max-width: 430px) {
-    .text-responsive {
-      font-size: 0.875rem;
-      line-height: 1.75;
-    }
-  }
+  .fluid-width { width: 100%; max-width: 100%; }
 
   /* Skeleton shimmer */
   .shimmer {
@@ -620,11 +804,9 @@ html.dark {
     background-size: 200% 100%;
     animation: shimmer 1.6s ease-in-out infinite;
   }
-
   .dark .shimmer {
     background: linear-gradient(90deg, #1e2a3a 0%, #2a3d52 50%, #1e2a3a 100%);
   }
-
   @keyframes shimmer {
     0%   { background-position: 200% 0; }
     100% { background-position: -200% 0; }
@@ -638,7 +820,6 @@ html.dark {
   .stagger > *:nth-child(3) { animation-delay: 160ms; }
   .stagger > *:nth-child(4) { animation-delay: 240ms; }
   .stagger > *:nth-child(5) { animation-delay: 320ms; }
-
   @keyframes fade-up {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
