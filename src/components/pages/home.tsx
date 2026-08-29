@@ -198,30 +198,30 @@ export default function HomePage() {
               Overdue VAT registration. We diagnose on WhatsApp and handle the KRA work — you get back to business.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
+            <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-row items-center sm:gap-4 mb-4">
               <a
                 href={`${WA_BASE}?text=Hi%2C%20my%20eTIMS%20invoice%20isn%27t%20going%20through`} data-track="whatsapp-cta" data-cta-type="hero-etims" data-service="eTIMS Rescue"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full sm:w-auto flex-col items-center justify-center bg-red-600 hover:bg-red-700 text-white px-7 py-3 rounded-lg shadow-[0_10px_24px_-10px_rgba(220,38,38,0.6)] transition-colors"
+                className="inline-flex w-full sm:w-auto flex-col items-center justify-center bg-red-600 hover:bg-red-700 text-white px-3 sm:px-7 py-3 rounded-lg shadow-[0_10px_24px_-10px_rgba(220,38,38,0.6)] transition-colors min-h-[52px]"
               >
-                <span className="inline-flex items-center gap-2.5 font-semibold text-[0.95rem]">
-                  Fix My eTIMS Issue
-                  <ArrowRight size={17} weight="bold" aria-hidden="true" />
+                <span className="inline-flex items-center gap-1.5 sm:gap-2.5 font-semibold text-[0.78rem] sm:text-[0.95rem] leading-tight text-center">
+                  Fix eTIMS Issue
+                  <ArrowRight size={15} sm:scale-110 weight="bold" aria-hidden="true" />
                 </span>
-                <span className="text-[0.68rem] text-white/85 font-medium mt-0.5">
+                <span className="hidden sm:block text-[0.68rem] text-white/85 font-medium mt-0.5">
                   We&apos;ll tell you exactly what&apos;s wrong.
                 </span>
               </a>
               <a
                 href="/services/vat-registration/" data-track="service-cta" data-cta-type="hero-vat-registration" data-service="VAT Registration"
-                className="inline-flex w-full sm:w-auto flex-col items-center justify-center border border-ink text-ink hover:bg-canvas-alt px-7 py-3 rounded-lg transition-colors"
+                className="inline-flex w-full sm:w-auto flex-col items-center justify-center border border-ink text-ink hover:bg-canvas-alt px-3 sm:px-7 py-3 rounded-lg transition-colors min-h-[52px]"
               >
-                <span className="inline-flex items-center gap-2.5 font-semibold text-[0.95rem]">
-                  Register for VAT - KES 5,000
-                  <ArrowRight size={17} weight="bold" aria-hidden="true" />
+                <span className="inline-flex items-center gap-1.5 sm:gap-2.5 font-semibold text-[0.78rem] sm:text-[0.95rem] leading-tight text-center">
+                  VAT Reg - KES 5K
+                  <ArrowRight size={15} sm:scale-110 weight="bold" aria-hidden="true" />
                 </span>
-                <span className="text-[0.68rem] text-ink/80 font-medium mt-0.5">
+                <span className="hidden sm:block text-[0.68rem] text-ink/80 font-medium mt-0.5">
                   We handle the iTax work. 1-3 working days.
                 </span>
               </a>
@@ -1157,21 +1157,21 @@ KRA's{" "}
               check and find out which path you&apos;re on.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+          <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-row sm:items-center sm:gap-4 shrink-0">
             <a
               href="/tax-amnesty-2026/"
-              className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3.5 rounded-md hover:bg-brand-hover transition-colors whitespace-nowrap"
+              className="btn-fill inline-flex items-center justify-center gap-2 bg-brand text-canvas text-sm font-semibold px-3 sm:px-6 py-3.5 rounded-md hover:bg-brand-hover transition-colors whitespace-normal sm:whitespace-nowrap text-center"
             >
-              Free amnesty ledger check
-              <ArrowRight size={14} weight="bold" aria-hidden="true" />
+              Free amnesty check
+              <ArrowRight size={14} weight="bold" aria-hidden="true" className="shrink-0" />
             </a>
             <a
               href={`${WA_BASE}?text=Hi%2C%20I%20want%20a%20FREE%20KRA%20Tax%20Amnesty%20ledger%20check`} data-track="whatsapp-cta"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-ink-muted hover:text-ink transition-colors whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 text-sm font-medium text-ink-muted hover:text-ink transition-colors whitespace-normal sm:whitespace-nowrap text-center px-3 sm:px-0"
             >
-              Check on WhatsApp instead
+              Or on WhatsApp
             </a>
           </div>
         </div>
@@ -1195,23 +1195,23 @@ KRA's{" "}
               Get a WhatsApp reminder 3 days before every deadline.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+          <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-row sm:items-center sm:gap-4 shrink-0">
             <a
               href={`https://wa.me/254717344440?text=Hi%2C%20I%20want%20VAT%20deadline%20reminders%20on%20WhatsApp`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3.5 rounded-md hover:bg-brand-hover transition-colors whitespace-nowrap"
+              className="btn-fill inline-flex items-center justify-center gap-2 bg-brand text-canvas text-sm font-semibold px-3 sm:px-6 py-3.5 rounded-md hover:bg-brand-hover transition-colors whitespace-normal sm:whitespace-nowrap text-center"
             >
-              Get WhatsApp Reminders
-              <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
+              Get Reminders
+              <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current shrink-0" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
             </a>
             <a
               href={`https://wa.me/254717344440?text=Hi%2C%20I%20want%20the%20KES%203500%20Monthly%20VAT%20Filing%20service`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-ink-muted hover:text-ink transition-colors whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 text-sm font-medium text-ink-muted hover:text-ink transition-colors whitespace-normal sm:whitespace-nowrap text-center px-3 sm:px-0"
             >
-              Let us file for you - KES 3,500/month
+              Or file for me - KES 3,500
             </a>
           </div>
         </div>
@@ -1229,21 +1229,21 @@ KRA's{" "}
               within the hour. Flat fee. M-PESA accepted. No hidden costs.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row lg:justify-end gap-3">
+          <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-row lg:justify-end sm:gap-3">
             <a
               href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20register%20for%20VAT%20with%20Smart%20VAT%20Kenya`} data-track="whatsapp-cta"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-fill inline-flex items-center justify-center gap-2 bg-brand text-canvas font-semibold px-6 py-3.5 rounded-md text-sm hover:bg-brand-hover transition-colors"
+              className="btn-fill inline-flex items-center justify-center gap-2 bg-brand text-canvas font-semibold px-3 sm:px-6 py-3.5 rounded-md text-sm hover:bg-brand-hover transition-colors whitespace-normal sm:whitespace-nowrap text-center"
             >
-              Start My VAT Registration
-              <ArrowRight size={15} weight="bold" aria-hidden="true" />
+              Start Registration
+              <ArrowRight size={15} weight="bold" aria-hidden="true" className="shrink-0" />
             </a>
             <a
               href="/services/"
-              className="inline-flex items-center justify-center gap-2 border border-canvas/25 text-canvas/70 hover:text-canvas hover:border-canvas/50 font-medium px-6 py-3.5 rounded-md text-sm transition-colors"
+              className="inline-flex items-center justify-center gap-2 border border-canvas/25 text-canvas/70 hover:text-canvas hover:border-canvas/50 font-medium px-3 sm:px-6 py-3.5 rounded-md text-sm transition-colors whitespace-normal sm:whitespace-nowrap text-center"
             >
-              View all services
+              All services
             </a>
           </div>
         </div>

@@ -57,3 +57,24 @@
 - [VAT Input Tax in Kenya: Complete Claim & eTIMS Guide](https://smartvatkenya.co.ke/resources/vat-input-guide/)
 - [KRA VAT FAQ — Common Questions Answered 2026](https://smartvatkenya.co.ke/resources/faq/)
 - [KRA Tax Amnesty 2026: 100% Penalty Waiver](https://smartvatkenya.co.ke/resources/kra-tax-amnesty-2026/)
+
+## eTIMS Problem-Graph Cluster (one deep page per distinct eTIMS error)
+
+- [Pending eTIMS Sync — Why Invoices Are Stuck & How to Fix](https://smartvatkenya.co.ke/resources/etims-pending-sync/)
+- [Is eTIMS Down? How to Invoice Now & Sync Later](https://smartvatkenya.co.ke/resources/etims-down-offline-invoicing/)
+- [How to Unlock eTIMS Account (Fast, 2026)](https://smartvatkenya.co.ke/resources/etims-account-locked/)
+- [eTIMS Invoice Rejected? Fix It Fast](https://smartvatkenya.co.ke/resources/etims-invoice-rejected/)
+- [eTIMS Device Not Registered — How to Activate on KRA](https://smartvatkenya.co.ke/resources/etims-device-not-registered/)
+- [eTIMS CU PIN Invalid or Blocked — How to Reset](https://smartvatkenya.co.ke/resources/etims-cu-pin-invalid/)
+- [eTIMS Duplicate Invoice Error — Why & How to Fix](https://smartvatkenya.co.ke/resources/etims-duplicate-invoice/)
+- [eTIMS Buyer PIN Missing or Invalid — B2B Invoicing Guide](https://smartvatkenya.co.ke/resources/etims-buyer-pin-missing/)
+
+## Auto-Populated VAT Return Authority Cluster
+
+- [KRA Auto-Populated VAT Return 2026 Explained](https://smartvatkenya.co.ke/resources/vat-auto-populated-return/)
+- [VAT 2027: KRA Pre-Filled Returns Are Coming](https://smartvatkenya.co.ke/resources/vat-2027-auto-filled-returns/)
+- [How to Dispute a Wrong Auto-Populated VAT Return](https://smartvatkenya.co.ke/resources/vat-return-dispute-auto-populated/)
+- [KRA VAT Ledger Explained — What KRA Sees on Your Account](https://smartvatkenya.co.ke/resources/vat-ledger-explained-kenya/)
+- [Auto-Populated Input VAT — How to Claim Your Full Credit](https://smartvatkenya.co.ke/resources/vat-auto-population-input-tax-credit/)
+- [VAT Return Filing Checklist Kenya 2026](https://smartvatkenya.co.ke/resources/vat-return-filing-checklist/)
+- [How to File a VAT Return on iTax — Step by Step](https://smartvatkenya.co.ke/resources/how-to-file-vat-return-on-itax/)
