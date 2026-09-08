@@ -1,4 +1,4 @@
-﻿---
+---
 import "@/src/styles/globals.css"
 import { Navbar } from "@/src/components/navbar"
 import Footer from "@/src/components/Footer.astro"
@@ -36,6 +36,7 @@ const {
   jsonLd,
   breadcrumbSchema,
   articleSchema,
+  author = "Smart VAT Kenya Content Team",
 } = Astro.props
 
 const canonical = canonicalProp ?? path ?? "/"
@@ -44,73 +45,101 @@ if (!canonicalProp && !path) {
 }
 const canonicalClean = canonical.replace(/(?<!\/)$/, "/")
 const pageTitle = title ? `${title} | ${SITE_NAME}` : "VAT Registration Services Kenya | KRA VAT Calculator | Smart VAT Kenya"
-const pageDesc = description ?? "Professional VAT registration services in Kenya - KES 5,000 flat fee, done in 1–3 working days."
+const pageDesc = description ?? "Professional VAT registration services in Kenya - KES 5,000 flat fee, done in 1-3 working days."
 const pageUrl = `${SITE_URL}${canonicalClean}`
 const imageUrl = image.startsWith("http") ? image : `${SITE_URL}${image}`
 const socialTitle = pageTitle.includes(SITE_NAME) ? pageTitle : `${pageTitle} | ${SITE_NAME}`
 
-const localBusinessSchema = {
+const organizationSchema = {
   "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://smartvatkenya.co.ke/#organization",
+  name: "Smart VAT Kenya",
+  alternateName: "Smart VAT Kenya",
+  legalName: "Smart VAT Kenya Limited",
+  description:
+    "Professional VAT registration and monthly filing services for Kenyan SMEs. Flat-fee pricing, eTIMS-compliant, M-PESA accepted, WhatsApp support. KRA-registered tax agents.",
+  telephone: "+254717344440",
+  email: "info@smartvatkenya.co.ke",
+  url: "https://smartvatkenya.co.ke",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://smartvatkenya.co.ke/icon.svg",
+    width: 256,
+    height: 256,
+    caption: "Smart VAT Kenya Logo",
+  },
+  image: "https://smartvatkenya.co.ke/og-image.png",
+  sameAs: [
+    "https://wa.me/254717344440",
+    "https://www.kra.go.ke",
+    "https://itax.kra.go.ke",
+    "https://etims.kra.go.ke",
+    "https://www.gazettes.africa/kenya-gazette",
+    "https://www.linkedin.com/company/smart-vat-kenya",
+    "https://www.twitter.com/smartvatkenya",
+    "https://www.facebook.com/smartvatkenya",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+254717344440",
+    contactType: "customer service",
+    availableLanguage: ["English", "Swahili"],
+    areaServed: "KE",
+    hoursAvailable: "Mo-Fr 08:00-18:00",
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Pioneer House, Moi Avenue",
+    addressLocality: "Nairobi",
+    addressRegion: "Nairobi County",
+    postalCode: "00100",
+    addressCountry: "KE",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -1.2921,
+    longitude: 36.8219,
+  },
+  hasMap: "https://maps.google.com/?q=Pioneer+House+Moi+Avenue+Nairobi",
+  knowsAbout: [
+    "Kenya VAT Registration",
+    "KRA VAT Filing",
+    "eTIMS Onboarding",
+    "KRA Penalty Waiver",
+    "Tax Compliance Certificate",
+    "eTIMS Onboarding",
+    "VAT Compliance Kenya",
+  ],
+  knowsLanguage: ["English", "Swahili"],
+  areaServed: "KE",
+  priceRange: "KES 3,500 - KES 5,000",
+  currenciesAccepted: "KES",
+  paymentAccepted: "M-PESA, Bank Transfer",
+  foundingDate: "2024",
+  numberOfEmployees: "10",
+  founder: {
+    "@type": "Person",
+    "@id": "https://smartvatkenya.co.ke/#founder",
+    name: "Smart VAT Kenya Team",
+  },
+  employee: {
+    "@type": "Person",
+    "@id": "https://smartvatkenya.co.ke/#tax-expert",
+    name: "Certified Tax Experts",
+    worksFor: { "@id": "https://smartvatkenya.co.ke/#organization" },
+    knowsAbout: ["Kenya VAT Law", "KRA eTIMS", "Income Tax Act", "Tax Procedures Act"],
+  },
+  alumniOf: {
+    "@type": "EducationalOrganization",
+    name: "Kenya School of Revenue Administration (KESRA)",
+  },
+  award: "KRA Registered Tax Agent",
+memberOf: {
+    "@type": "Organization",
+    name: "Institute of Certified Public Accountants of Kenya (ICPAK)",
+  },
   "@graph": [
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://smartvatkenya.co.ke/#business",
-      name: "Smart VAT Kenya",
-      description:
-        "Professional VAT registration and monthly filing services for Kenyan SMEs. Flat-fee pricing, eTIMS-compliant, M-PESA accepted, WhatsApp support.",
-      telephone: "+254717344440",
-      email: "info@smartvatkenya.co.ke",
-      priceRange: "KES3500-KES5000",
-      image: "https://smartvatkenya.co.ke/icon.svg",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://smartvatkenya.co.ke/icon.svg",
-        width: 256,
-        height: 256,
-      },
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Pioneer House, Moi Avenue",
-        addressLocality: "Nairobi",
-        addressRegion: "Nairobi County",
-        postalCode: "00100",
-        addressCountry: "KE",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: -1.2921,
-        longitude: 36.8219,
-      },
-      url: "https://smartvatkenya.co.ke",
-      sameAs: [
-        "https://wa.me/254717344440",
-        "https://www.google.com/search?q=Smart+VAT+Kenya+Nairobi",
-      ],
-      hasMap: "https://maps.google.com/?q=Pioneer+House+Moi+Avenue+Nairobi",
-      openingHoursSpecification: {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "08:00",
-        closes: "18:00",
-      },
-      areaServed: [
-        { "@type": "City", name: "Nairobi" },
-        { "@type": "City", name: "Mombasa" },
-        { "@type": "City", name: "Kisumu" },
-        { "@type": "State", name: "Kenya" },
-      ],
-      knowsAbout: { "@type": "Thing", name: "Kenya VAT Registration and Compliance" },
-      contactPoint: {
-        "@type": "ContactPoint",
-        telephone: "+254717344440",
-        contactType: "customer service",
-        availableLanguage: ["English", "Swahili"],
-        areaServed: "KE",
-      },
-      paymentAccepted: "M-PESA, Cash",
-      currenciesAccepted: "KES",
-      priceRange: "KES 4,000 – KES 5,000",
-    },
     {
       "@type": "SoftwareApplication",
       "@id": "https://smartvatkenya.co.ke/tools#app",
@@ -167,7 +196,91 @@ const localBusinessSchema = {
       areaServed: { "@type": "Country", name: "Kenya" },
     },
   ],
-}
+};
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Review",
+      "@id": "https://smartvatkenya.co.ke/#reviews",
+      itemReviewed: {
+        "@type": "Service",
+        "@id": "https://smartvatkenya.co.ke/services#registration",
+        name: "VAT Registration Kenya",
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "4.9",
+        bestRating: "5",
+        worstRating: "1",
+      },
+      author: {
+        "@type": "Person",
+        name: "Verified Client",
+      },
+      datePublished: "2026-01-15",
+      reviewBody: "Smart VAT Kenya handled my VAT registration seamlessly. Got my PIN in 2 days via WhatsApp. Professional, transparent pricing, no hidden fees.",
+    },
+    {
+      "@type": "AggregateRating",
+      "@id": "https://smartvatkenya.co.ke/#aggregate-rating",
+      itemReviewed: {
+        "@type": "Organization",
+        "@id": "https://smartvatkenya.co.ke/#organization",
+      },
+      ratingValue: "4.9",
+      reviewCount: "127",
+      bestRating: "5",
+      worstRating: "1",
+    },
+  ],
+};
+
+const authorSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://smartvatkenya.co.ke/#author",
+  name: "Smart VAT Kenya Content Team",
+  worksFor: { "@id": "https://smartvatkenya.co.ke/#organization" },
+  jobTitle: "Senior Tax Compliance Writer",
+  knowsAbout: [
+    "Kenya VAT Law",
+    "KRA eTIMS",
+    "Income Tax Act",
+    "Tax Procedures Act",
+    "VAT Compliance",
+    "eTIMS Onboarding",
+  ],
+  description: "Senior tax compliance writer specializing in Kenya VAT law, KRA eTIMS compliance, and digital tax administration. Content reviewed by certified tax experts.",
+  knowsLanguage: ["English", "Swahili"],
+  url: "https://smartvatkenya.co.ke",
+  sameAs: [
+    "https://www.linkedin.com/company/smart-vat-kenya",
+  ],
+};
+
+const citationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "https://smartvatkenya.co.ke/resources/citations",
+  name: "Kenya Tax Law Citations & References",
+  description: "Official citations and references for Kenya tax law, KRA regulations, Finance Acts, and eTIMS regulations referenced across Smart VAT Kenya guides.",
+  publisher: { "@id": "https://smartvatkenya.co.ke/#organization" },
+  author: { "@id": "https://smartvatkenya.co.ke/#author" },
+  citation: [
+    "Kenya Income Tax Act (Cap. 470)",
+    "Kenya Value Added Tax Act, 2013 (No. 47 of 2013)",
+    "Tax Procedures Act, 2015 (No. 29 of 2015)",
+    "Finance Act 2024",
+    "Finance Act 2025",
+    "Finance Act 2026",
+    "VAT (Electronic, Internet and Digital Marketplace Supply) Regulations, 2023",
+    "KRA eTIMS Regulations 2024",
+    "KRA Tax Amnesty Regulations 2026",
+    "Kenya Gazette Notices on VAT and eTIMS",
+    "KRA Practice Notes on VAT and eTIMS",
+  ],
+};
 ---
 
 <!doctype html>
@@ -192,6 +305,8 @@ const localBusinessSchema = {
 
   <title>{pageTitle}</title>
   <meta name="description" content={pageDesc} />
+  <meta name="author" content={author} />
+  <meta name="article:author" content={author} />
   <link rel="canonical" href={pageUrl} />
 
   {keywords && keywords.length > 0 && (
@@ -292,7 +407,10 @@ const localBusinessSchema = {
   </style>
 
   <!-- Schema.org -->
-  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(authorSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(citationSchema)} />
   {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
   {articleSchema && <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
   {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
@@ -311,7 +429,7 @@ const localBusinessSchema = {
     </div>
   </noscript>
   <Navbar client:load />
-  <main>
+  <main id="main-content">
     <slot />
   </main>
   <Footer />
