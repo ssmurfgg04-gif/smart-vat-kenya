@@ -16,9 +16,9 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article" as const,
-  headline: "Non-Resident Rental Income Tax Kenya: 30% Withholding Guide (2026)",
+  headline: "Non-Resident Rental Income Tax Kenya Guide 2026",
   description:
-    "Kenya now charges non-resident landlords a 30% final withholding tax on gross rental income under the Finance Act 2026. Who must register, deadlines, and penalties.",
+    "Non-resident landlords in Kenya must now self-declare and pay a 30% final tax on gross rent. Who's affected, how it works, and the exception that avoids double filing.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-09-08",
@@ -65,10 +65,18 @@ const faqSchema = {
     },
     {
       "@type": "Question" as const,
-      name: "Do I need a full KRA PIN to comply?",
+      name: "Do I need eRITS to comply?",
       acceptedAnswer: {
         "@type": "Answer" as const,
-        text: "Non-residents are brought in through a simplified registration framework rather than the standard resident PIN/iTax process — the exact steps depend on current KRA guidance at the time you register.",
+        text: "No. eRITS is the residents-only system for the Monthly Rental Income (MRI) regime (KES 288,000–15 million/year). Non-resident landlords register and file through iTax's non-resident income tax category instead — a separate system under the new Section 6B of the Income Tax Act.",
+      },
+    },
+    {
+      "@type": "Question" as const,
+      name: "What if my property manager already withholds tax on my behalf?",
+      acceptedAnswer: {
+        "@type": "Answer" as const,
+        text: "If a resident agent is appointed to withhold under Section 35(3)(j), you don't also self-declare under the new Section 6B regime — only one mechanism applies at a time. Confirm with your agent which arrangement is actually in place before you register for anything.",
       },
     },
     {
@@ -101,7 +109,7 @@ export default function NonResidentRentalIncomeTaxPage() {
           <header className="mb-10">
             <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide - Non-Resident Tax</p>
             <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-semibold text-ink tracking-tight leading-tight mb-4 text-balance">
-              Non-Resident Rental Income Tax Kenya: 30% Withholding Guide (2026)
+              Non-Resident Rental Income Tax Kenya Guide 2026
             </h1>
             <p className="text-[0.9rem] text-ink-muted leading-relaxed max-w-[65ch]">
               If you&apos;re a non-resident earning rental income from property in Kenya — or you&apos;re a local property manager, agent, or tenant paying rent to one — the Finance Act 2026 introduced a dedicated tax regime you need to know about. This guide explains who it applies to, how registration and filing works, and what happens if you get it wrong.
@@ -176,26 +184,35 @@ export default function NonResidentRentalIncomeTaxPage() {
               </h2>
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
                 <p>
-                  Non-resident landlords are brought into a <strong className="text-ink">simplified registration framework</strong> rather than the full KRA PIN/iTax process used by resident taxpayers. In outline:
+                  The Finance Act 2026 inserted a new <strong className="text-ink">Section 6B into the Income Tax Act</strong>, creating a dedicated non-resident rental income tax regime. Here&apos;s the mechanism and — more importantly — why it exists.
+                </p>
+                <p>
+                  <strong className="text-ink">Why this changed:</strong> Before Section 6B, the law relied on tenants to withhold tax at source when their landlord was non-resident (under Section 35). In practice this was hard to enforce — a tenant often has no reliable way to know whether their landlord is Kenyan-resident or not. Section 6B shifts that burden away from the tenant and onto the landlord directly: non-residents now register and self-declare their own rental income, rather than relying on the tenant to work it out and withhold.
+                </p>
+                <p>
+                  In outline:
                 </p>
                 <ol className="space-y-3 list-decimal list-inside">
                   <li className="text-ink-soft">
-                    <strong className="text-ink">Register</strong> under the simplified non-resident framework (confirm current iTax/eRITS screen flow before publishing — see note below).
+                    <strong className="text-ink">Register</strong> under a simplified framework for non-resident taxpayers (via iTax&apos;s non-resident income tax category — see note below).
                   </li>
                   <li className="text-ink-soft">
-                    <strong className="text-ink">File a monthly return</strong> declaring gross rent received.
+                    <strong className="text-ink">File a monthly return</strong> declaring gross rent received for that month.
                   </li>
                   <li className="text-ink-soft">
-                    <strong className="text-ink">Pay the tax due by the 20th day of the month following</strong> the month the rent was paid — the same monthly deadline pattern used across most Kenyan withholding taxes.
-                  </li>
-                  <li className="text-ink-soft">
-                    <strong className="text-ink">Where a resident agent is appointed</strong> to collect rent on the non-resident&apos;s behalf, that agent may be required to withhold and remit instead of the landlord self-declaring — check current guidance for which route applies to your situation.
+                    <strong className="text-ink">Pay the tax due by the 20th day of the following month</strong> — the same monthly deadline pattern used across most Kenyan withholding and rental taxes.
                   </li>
                 </ol>
+                <p>
+                  <strong className="text-ink">This is not the same system residents use.</strong> Resident landlords under the Monthly Rental Income (MRI) regime register through <strong className="text-ink">eRITS</strong> (Electronic Rental Income Tax System). eRITS applies only to residents earning between KES 288,000 and KES 15 million annually — it is <strong className="text-ink">not</strong> the system non-resident landlords use. Non-residents file through iTax directly under the non-resident income tax return category. If you&apos;re a foreign landlord and someone tells you to use eRITS, that&apos;s incorrect.
+                </p>
+                <p>
+                  <strong className="text-ink">The exception that matters:</strong> if a resident agent or property manager is already appointed to withhold tax on your rent under Section 35(3)(j) — the older mechanism — you do <strong className="text-ink">not</strong> also self-declare under Section 6B. The regime is designed to avoid double compliance: it&apos;s either the resident withholding agent handling it, or the non-resident self-declaring directly, not both. If you&apos;re unsure which situation applies to you, that&apos;s the first thing to establish before you file anything.
+                </p>
                 <div className="border border-brand/25 bg-brand-muted rounded-lg p-4 flex items-start gap-3">
                   <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
                   <p className="text-[0.83rem] text-ink-soft leading-relaxed">
-                    <strong className="text-ink">Editorial note:</strong> KRA&apos;s operational rollout (exact iTax menu path, or whether this runs through the eRITS platform used for resident rental income) may still be settling as of publish date. Verify the live screen flow in iTax before stating exact click-paths in the final copy, and update this section once confirmed.
+                    <strong className="text-ink">Operational note:</strong> Because this regime only took effect 1 July 2026, the exact iTax screen flow for registration is new and may still be settling. The legal obligation and the 30%/15% rates are firmly in force regardless of how smooth the portal experience is on any given day.
                   </p>
                 </div>
               </div>
@@ -235,6 +252,7 @@ export default function NonResidentRentalIncomeTaxPage() {
                     { mistake: "Deducting expenses before calculating the tax", fix: "This is a tax on gross rent. Mortgage interest, repairs, agent commission — none of it reduces the taxable amount." },
                     { mistake: "Confusing it with resident rental income tax", fix: "Resident landlords have their own (different) rental income tax regime. This guide is specifically about non-residents." },
                     { mistake: "Missing the 20th-of-month deadline", fix: "Like most Kenyan withholding taxes, late payment attracts penalties and interest — treat it with the same discipline as a VAT filing deadline." },
+                    { mistake: "Self-declaring when a resident agent already withholds for you", fix: "If your property manager or agent already withholds tax on your rent under Section 35(3)(j), you don't also register and self-declare under Section 6B — that's double compliance, not extra safety. Confirm which mechanism actually applies to your situation first." },
                   ].map(({ mistake, fix }) => (
                     <div key={mistake} className="border border-hairline rounded-lg p-4">
                       <p className="font-semibold text-ink text-[0.88rem] mb-1">

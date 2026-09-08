@@ -16,9 +16,9 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article" as const,
-  headline: "Significant Economic Presence (SEP) Tax Kenya: Who Pays 3% and How (2026)",
+  headline: "Significant Economic Presence (SEP) Tax Kenya Guide 2026",
   description:
-    "Kenya's SEP tax charges non-resident digital platforms an effective 3% of gross Kenyan revenue, with no minimum threshold. Who it hits and what it means for local freelancers and businesses.",
+    "Kenya's SEP tax charges non-resident digital platforms 3% of gross Kenyan revenue with no minimum threshold. Who it hits and what it means if you're paid from abroad.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-09-08",
@@ -101,7 +101,7 @@ export default function SignificantEconomicPresenceTaxPage() {
           <header className="mb-10">
             <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide - Digital Tax</p>
             <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-semibold text-ink tracking-tight leading-tight mb-4 text-balance">
-              Significant Economic Presence (SEP) Tax Kenya: Who Pays 3% and How (2026)
+              Significant Economic Presence (SEP) Tax Kenya Guide 2026
             </h1>
             <p className="text-[0.9rem] text-ink-muted leading-relaxed max-w-[65ch]">
               If you&apos;ve heard that Kenya is now taxing foreign platforms like ride-hailing apps, streaming services, or cross-border e-commerce sellers — this is the tax behind it. SEP replaced the old 1.5% Digital Service Tax, and as of 2026 it applies from the very first shilling of qualifying revenue, with no minimum threshold. Here&apos;s what it actually means, and who it affects.
@@ -157,6 +157,9 @@ export default function SignificantEconomicPresenceTaxPage() {
                     <strong className="text-ink">There is no minimum revenue threshold.</strong> Earlier versions of the rules exempted small amounts; that threshold was removed, so even low-value cross-border transactions are technically in scope.
                   </p>
                 </div>
+                <p>
+                  The tax and the 3% rate are already in force under the Tax Laws (Amendment) Act 2024 and Finance Act 2025 — separate draft regulations published in September 2025 are refining the administrative mechanics (registration and filing details). If you&apos;re implementing compliance around this, confirm those regulations&apos; current finalization status, since the substantive tax itself doesn&apos;t depend on them being finished.
+                </p>
               </div>
             </section>
 

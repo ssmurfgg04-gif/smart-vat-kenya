@@ -479,13 +479,13 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/withholding-vat-kenya/",
   },
   "non-resident-rental-income-tax-kenya": {
-    title: "Non-Resident Rental Income Tax Kenya: 30% Withholding Guide (2026) | Smart VAT Kenya",
-    description: "Kenya now charges non-resident landlords a 30% final withholding tax on gross rental income under the Finance Act 2026. Who must register, deadlines, and penalties.",
+    title: "Non-Resident Rental Tax Kenya: 30% Guide",
+    description: "Non-resident landlords in Kenya must now self-declare and pay a 30% final tax on gross rent. Who's affected, how it works, and the exception that avoids double filing.",
     canonical: "/resources/non-resident-rental-income-tax-kenya/",
   },
   "significant-economic-presence-tax-kenya": {
-    title: "Significant Economic Presence (SEP) Tax Kenya: Who Pays 3% and How (2026) | Smart VAT Kenya",
-    description: "Kenya's SEP tax charges non-resident digital platforms an effective 3% of gross Kenyan revenue, with no minimum threshold. Who it hits and what it means for local freelancers and businesses.",
+    title: "SEP Tax Kenya: 3% Digital Tax Guide",
+    description: "Kenya's SEP tax charges non-resident digital platforms 3% of gross Kenyan revenue with no minimum threshold. Who it hits and what it means if you're paid from abroad.",
     canonical: "/resources/significant-economic-presence-tax-kenya/",
   },
   "kra-pin-registration-foreigners": {
