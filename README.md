@@ -24,6 +24,15 @@ npm run dev      # http://localhost:4321
 npm run build    # static output + sitemap + Pagefind index
 ```
 
+## Repo layout
+
+- `src/` - the Astro site: routes, page components in `src/components/pages`, resource pages in `src/components/resources` (register new ones in `map.ts`)
+- `components/`, `lib/` - shared React widgets (FAQ accordion, WhatsApp button, theme toggle) and metadata helpers like the KRA form list in `lib/forms.ts`
+- `engine/` - standalone TypeScript packages for the iTax/GavaConnect integration work (`gavaconnect`, `os`), each with its own test suite
+- `docs/` - engineering specs and sprint notes
+- `public/` - static assets: `llms.txt`, robots rules, Pagefind bootstrap, social images
+- `scripts/` - utility scripts, e.g. the Google Trends RSS pulse (`trends_pulse.py`)
+
 ## Editing rules (important)
 
 - **One-truth:** legal/commercial figures live in `src/lib/vat-facts.ts`. Never hardcode a number on a page.
