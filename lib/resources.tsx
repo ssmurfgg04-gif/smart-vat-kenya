@@ -73,6 +73,8 @@ const articles: Resource[] = [
   { slug: "kra-portal-vs-service", title: "Register for VAT Yourself or Pay KES 5,000? The Honest Math" },
   { slug: "vat-deadline-reminders", title: "Free KRA VAT Deadline Reminders on WhatsApp" },
   { slug: "kra-data-sources", title: "KRA Data Sources - Official VAT & Revenue Data" },
+  { slug: "non-resident-rental-income-tax-kenya", title: "Non-Resident Rental Income Tax Kenya: 30% Withholding Guide (2026)" },
+  { slug: "significant-economic-presence-tax-kenya", title: "Significant Economic Presence (SEP) Tax Kenya: Who Pays 3% and How (2026)" },
 ]
 
 export function getPrevNext(slug: string) {

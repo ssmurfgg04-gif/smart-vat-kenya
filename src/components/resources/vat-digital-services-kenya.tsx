@@ -371,6 +371,9 @@ export default function DigitalServicesPage() {
                 {/* More Guides */}
         <div className="mt-16 pt-12 border-t border-hairline">
           <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">More Guides</p>
+          <p className="text-[0.85rem] text-ink-muted mb-6 leading-relaxed">
+            Related: <a href="/resources/significant-economic-presence-tax-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Significant Economic Presence (SEP) Tax Kenya (2026)</a> — the separate 3%-effective income tax on non-resident digital platforms.
+          </p>
           <ArticleGrid currentSlug="vat-digital-services-kenya" />
         </div>
 

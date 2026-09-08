@@ -282,6 +282,9 @@ export default function FinanceActVatPage() {
                 Other Notable Changes
               </h2>
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
+                <p>
+                  Beyond VAT, the 2026 Finance Act items also include the <a href="/resources/non-resident-rental-income-tax-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">non-resident rental income tax regime</a> and the removal of the SEP minimum threshold (see our <a href="/resources/significant-economic-presence-tax-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">SEP tax guide</a>).
+                </p>
                 <div className="space-y-3">
                   {[
                     { key: "invoice-reqs", change: "Invoice requirements tightened", detail: "All registered persons must now issue a tax invoice at the time of supply, regardless of whether the supply is taxable or not. Previously, invoices were only required for taxable supplies. This affects exempt suppliers who now need invoicing systems." },
@@ -338,6 +341,9 @@ export default function FinanceActVatPage() {
                 {/* More Guides */}
         <div className="mt-16 pt-12 border-t border-hairline">
           <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">More Guides</p>
+          <p className="text-[0.85rem] text-ink-muted mb-6 leading-relaxed">
+            Related 2026 Finance Act items: <a href="/resources/non-resident-rental-income-tax-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Non-Resident Rental Income Tax Kenya (2026)</a> · <a href="/resources/significant-economic-presence-tax-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Significant Economic Presence (SEP) Tax Kenya (2026)</a>
+          </p>
           <ArticleGrid currentSlug="finance-act-vat-changes-kenya" />
         </div>
 

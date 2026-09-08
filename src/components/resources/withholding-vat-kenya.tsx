@@ -308,6 +308,9 @@ export default function WithholdingVatPage() {
                 {/* More Guides */}
         <div className="mt-16 pt-12 border-t border-hairline">
           <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">More Guides</p>
+          <p className="text-[0.85rem] text-ink-muted mb-6 leading-relaxed">
+            Related: <a href="/resources/non-resident-rental-income-tax-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Non-Resident Rental Income Tax Kenya (2026)</a> — the separate 30% income-tax regime for non-resident landlords.
+          </p>
           <ArticleGrid currentSlug="withholding-vat-kenya" />
         </div>
 
