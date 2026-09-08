@@ -179,7 +179,7 @@ export default function HomePage() {
       <section className="bg-white overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-6 lg:pt-8 pb-8 lg:pb-10">
           <div className="grid lg:grid-cols-[1fr_minmax(0,520px)] gap-10 lg:gap-14 items-center">
-            <div className="max-w-[560px]">
+            <div className="max-w-[560px] min-w-0">
               <p className="font-mono text-[0.7rem] font-semibold text-blue-600 mb-4 inline-flex items-center gap-2">
                 <ShieldCheck size={14} weight="bold" aria-hidden="true" />
                 Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
@@ -250,7 +250,7 @@ export default function HomePage() {
           </div>
 
           {/* RIGHT - compliance overview */}
-          <div className="relative w-full max-w-[520px] mx-auto lg:mx-0 lg:justify-self-end">
+          <div className="relative w-full max-w-[520px] min-w-0 mx-auto lg:mx-0 lg:justify-self-end">
             <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_24px_60px_-24px_rgba(15,32,70,0.35)] overflow-hidden">
               <div className="flex items-center justify-between px-5 py-3.5 border-b border-slate-100">
                 <div className="flex items-center gap-2.5">
@@ -266,13 +266,13 @@ export default function HomePage() {
               </div>
 
               <div className="divide-y divide-slate-100">
-                <div className="flex items-center gap-4 px-5 py-4">
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4 px-4 sm:px-5 py-4">
                   <span className="w-11 h-11 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                     <Invoice size={22} weight="bold" aria-hidden="true" />
                   </span>
-                  <div className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-[55%] sm:min-w-0">
                     <p className="text-[0.72rem] font-medium uppercase tracking-wide text-[#3f4f68]">eTIMS</p>
-                    <p className="text-[0.95rem] font-medium text-[#14243e] truncate">Operational</p>
+                    <p className="text-[0.95rem] font-medium text-[#14243e]">Operational</p>
                   </div>
                   <span className="text-[0.72rem] font-bold uppercase tracking-wide bg-emerald-50 text-emerald-600 border border-emerald-200 rounded-md px-2.5 py-1 shrink-0">
                     Active
@@ -283,7 +283,7 @@ export default function HomePage() {
                   <span className="w-11 h-11 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
                     <FileText size={22} weight="bold" aria-hidden="true" />
                   </span>
-                  <div className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-[55%] sm:min-w-0">
                     <p className="text-[0.72rem] font-medium uppercase tracking-wide text-[#3f4f68]">VAT Returns</p>
                     <p className="text-[0.95rem] font-medium text-[#14243e]">Due in 3 days</p>
                   </div>
@@ -295,11 +295,11 @@ export default function HomePage() {
                   </span>
                 </div>
 
-                <div className="flex items-center gap-4 px-5 py-4">
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4 px-4 sm:px-5 py-4">
                   <span className="w-11 h-11 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                     <ArrowsClockwise size={22} weight="bold" aria-hidden="true" />
                   </span>
-                  <div className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-[55%] sm:min-w-0">
                     <p className="text-[0.72rem] font-medium uppercase tracking-wide text-[#3f4f68]">KRA Sync</p>
                     <p className="text-[0.95rem] font-medium text-emerald-600">Operational</p>
                   </div>
@@ -311,7 +311,7 @@ export default function HomePage() {
             </div>
 
             {/* Amnesty status */}
-            <div className="mb-3 w-fit sm:mb-0 sm:absolute sm:-top-9 sm:right-0 rounded-lg bg-emerald-600 text-white px-4 py-3 shadow-[0_12px_30px_-8px_rgba(16,185,129,0.55)] ring-4 ring-white rotate-2">
+            <div className="mb-3 w-fit ml-auto rounded-lg bg-emerald-600 text-white px-4 py-3 shadow-[0_12px_30px_-8px_rgba(16,185,129,0.55)] ring-4 ring-white rotate-2">
               <p className="text-[0.62rem] font-semibold uppercase tracking-[0.12em] leading-tight">Tax Amnesty Active</p>
               <p className="text-[0.95rem] font-bold leading-tight mt-1">
                 Ends 31 Dec 2026
@@ -552,7 +552,7 @@ KRA's{" "}
                       <p className="text-[0.88rem] font-semibold text-canvas">{r.label}</p>
                       <p className="text-[0.76rem] text-canvas/55">{r.cost}</p>
                     </div>
-                    <p className="text-[0.85rem] text-brand text-left sm:text-right font-semibold">{r.value}</p>
+                    <p className="text-[0.85rem] text-canvas text-left sm:text-right font-semibold">{r.value}</p>
                   </div>
                 ))}
               </div>
