@@ -102,19 +102,29 @@ export function Navbar() {
           </span>
         </div>
 
-        <button
-          onClick={() => setOpen(!open)}
-          className="lg:hidden text-ink dark:text-canvas p-2 -mr-2 rounded-lg text-ink-muted hover:text-ink hover:bg-canvas-warm transition-colors"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-        >
-          {open ? (
-            <X size={22} weight="regular" aria-hidden="true" />
-          ) : (
-            <List size={22} weight="regular" aria-hidden="true" />
-          )}
-        </button>
+        <div className="lg:hidden flex items-center gap-2">
+          <a
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 bg-emerald-600 text-white text-[0.8rem] font-semibold px-3.5 py-2 rounded-md transition-colors hover:bg-emerald-700 whitespace-nowrap"
+          >
+            Get Started
+          </a>
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-ink dark:text-canvas p-2 -mr-2 rounded-lg text-ink-muted hover:text-ink hover:bg-canvas-warm transition-colors"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+          >
+            {open ? (
+              <X size={22} weight="regular" aria-hidden="true" />
+            ) : (
+              <List size={22} weight="regular" aria-hidden="true" />
+            )}
+          </button>
+        </div>
       </nav>
 
       <a
