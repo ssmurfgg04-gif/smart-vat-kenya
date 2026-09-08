@@ -19,7 +19,7 @@ export function WhatsAppButton() {
       </a>
       {/* Mobile: bottom sticky bar with safe-area padding */}
       <div className="sm:hidden fixed bottom-0 inset-x-0 z-50 bg-white border-t border-hairline px-4 py-3 pb-[calc(env(safe-area-inset-bottom,0px)+0.75rem)] flex items-center justify-between gap-3">
-        <p className="text-[0.82rem] font-medium text-ink leading-snug">Need KRA help?</p>
+        <p className="text-[0.82rem] font-medium text-[#14243e] leading-snug">Need KRA help?</p>
         <a
           href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20KRA%20help"
           target="_blank"

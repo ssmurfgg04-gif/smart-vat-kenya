@@ -46,7 +46,7 @@ export function Navbar() {
       >
         <a
           href="/"
-          className="font-display text-[1.15rem] font-semibold tracking-tight text-ink dark:text-canvas hover:text-brand transition-colors"
+          className="font-display text-[1.15rem] font-semibold tracking-tight text-ink hover:text-brand transition-colors"
           aria-label="Smart VAT Kenya - Home"
         >
           Smart<span className="text-brand font-bold">VAT</span>

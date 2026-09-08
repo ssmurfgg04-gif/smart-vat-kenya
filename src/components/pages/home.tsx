@@ -185,15 +185,15 @@ export default function HomePage() {
                 Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
               </p>
 
-              <h1 className="font-display text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight text-ink mb-2 max-w-[52ch] sm:text-wrap-balance">
+              <h1 className="font-display text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight text-[#14243e] mb-2 max-w-[52ch] sm:text-wrap-balance">
               Your eTIMS invoice failed.
               <span className="block text-red-600">VAT return is due.</span>
             </h1>
-              <p className="text-[1.08rem] lg:text-[1.15rem] font-semibold text-ink leading-snug mb-5 max-w-[54ch]">
+              <p className="text-[1.08rem] lg:text-[1.15rem] font-semibold text-[#2c3a52] leading-snug mb-5 max-w-[54ch]">
               Send a screenshot on WhatsApp — fix in minutes, not days.
             </p>
 
-            <p className="text-[0.92rem] leading-relaxed text-ink mb-5 max-w-[54ch]">
+            <p className="text-[0.92rem] leading-relaxed text-[#3f4f68] mb-5 max-w-[54ch]">
               <span className="font-semibold text-red-600">Rejected invoices. Pending sync. Locked accounts.</span>{" "}
               Overdue VAT registration. We diagnose on WhatsApp and handle the KRA work — you get back to business.
             </p>
@@ -215,13 +215,13 @@ export default function HomePage() {
               </a>
               <a
                 href="/services/vat-registration/" data-track="service-cta" data-cta-type="hero-vat-registration" data-service="VAT Registration"
-                className="inline-flex w-full sm:w-auto flex-col items-center justify-center border border-ink text-ink hover:bg-canvas-alt px-7 py-3 rounded-lg transition-colors"
+                className="inline-flex w-full sm:w-auto flex-col items-center justify-center border border-[#14243e] text-[#14243e] hover:bg-slate-50 px-7 py-3 rounded-lg transition-colors"
               >
                 <span className="inline-flex items-center gap-2.5 font-semibold text-[0.95rem]">
                   Register for VAT - KES 5,000
                   <ArrowRight size={17} weight="bold" aria-hidden="true" />
                 </span>
-                <span className="text-[0.68rem] text-ink/80 font-medium mt-0.5">
+                <span className="text-[0.68rem] text-[#14243e]/80 font-medium mt-0.5">
                   We handle the iTax work. 1-3 working days.
                 </span>
               </a>
@@ -229,7 +229,7 @@ export default function HomePage() {
 
             <a
               href="/tools/"
-              className="inline-flex items-center gap-1.5 text-[0.85rem] font-medium text-ink hover:text-ink-muted hover:underline mb-5"
+              className="inline-flex items-center gap-1.5 text-[0.85rem] font-medium text-[#14243e] hover:text-[#3f4f68] hover:underline mb-5"
             >
               <Calculator size={14} aria-hidden="true" />
               Just need to check a number? Free VAT calculator &rarr;
@@ -241,7 +241,7 @@ export default function HomePage() {
                 { Icon: CurrencyDollar, label: "M-PESA Receipts" },
                 { Icon: Prohibit, label: "No Hidden Fees" },
               ].map(({ Icon, label }) => (
-                <div key={label} className="flex items-center gap-2 text-[0.85rem] font-medium text-ink-muted">
+                <div key={label} className="flex items-center gap-2 text-[0.85rem] font-medium text-[#3f4f68]">
                   <Icon size={15} weight="bold" className="text-blue-600 shrink-0" aria-hidden="true" />
                   {label}
                 </div>
@@ -255,11 +255,11 @@ export default function HomePage() {
               <div className="flex items-center justify-between px-5 py-3.5 border-b border-slate-100">
                 <div className="flex items-center gap-2.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-600" aria-hidden="true" />
-                  <p className="font-display text-[1rem] font-semibold text-ink">
-                    Compliance Overview
-                  </p>
+                    <p className="font-display text-[1rem] font-semibold text-[#14243e]">
+                     Compliance Overview
+                    </p>
                 </div>
-                <span className="flex items-center gap-1.5 text-[0.72rem] font-medium text-ink-muted">
+                <span className="flex items-center gap-1.5 text-[0.72rem] font-medium text-[#3f4f68]">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" aria-hidden="true" />
                   Operational
                 </span>
