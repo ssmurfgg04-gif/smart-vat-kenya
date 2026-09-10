@@ -8,7 +8,7 @@
 - **VAT Registration** — KES 5,000 flat fee, completed in 1–3 working days via the KRA iTax portal (we handle the portal; you never touch it).
 - **Monthly VAT Filing** — KES 3,500/month, filed on the 17th (before the 20th KRA deadline).
 - **KRA Penalty Waiver Applications** — KES 4,000 per application, drafted and submitted to KRA on your behalf.
-- **Free Tools** — Kenya VAT Calculator, Penalty Waiver Wizard, iTax Error Diagnosis, VAT Registration Quiz.
+- **Free Tools** — Kenya VAT Calculator, YouTube Tax Calculator, eTIMS Error Diagnostic, Penalty Waiver Wizard, Amnesty Eligibility Checker, VAT Registration Quiz.
 
 ## Kenya VAT Facts (verified 2026-08-08 against KRA guidance and the Tax Procedures Act)
 
@@ -42,6 +42,12 @@
 ## Key Pages
 
 - [Free KRA Tax Tools — VAT, Penalty & eTIMS Calculators](https://smartvatkenya.co.ke/tools/)
+- [VAT Registration Kenya: Compare All 3 Options (2026)](https://smartvatkenya.co.ke/resources/vat-registration-options-kenya/)
+- [eTIMS vs KRA Shuru Chatbot: What Each Does](https://smartvatkenya.co.ke/resources/etims-vs-shuru-comparison/)
+- [The Real Tax on Running a Small Business in Kenya](https://smartvatkenya.co.ke/resources/real-tax-bill-kenyan-sme/)
+- [YouTube 5% Tax Kenya: How Much You'll Actually Lose](https://smartvatkenya.co.ke/resources/youtube-5-percent-tax-kenya/)
+- [Consolidated Cargo Tax Kenya: New Sh2M Benchmark](https://smartvatkenya.co.ke/resources/consolidated-cargo-benchmark-kenya/)
+- [VAT on Commercial Rent Kenya: When 16% Applies](https://smartvatkenya.co.ke/resources/vat-commercial-rent-kenya/)
 - [Register for VAT Yourself on iTax or Pay KES 5,000? The Honest Math](https://smartvatkenya.co.ke/resources/kra-portal-vs-service/)
 - [Free KRA Status & Ledger Health Check](https://smartvatkenya.co.ke/resources/kra-health-check/)
 - [VAT Threshold Kenya 2026 — KES 5M or 8M? The Real Answer](https://smartvatkenya.co.ke/resources/vat-threshold-explainer/)

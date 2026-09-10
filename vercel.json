@@ -11,6 +11,36 @@
       "source": "/resources/kra-vat-filing-deadline-august-2026/",
       "destination": "/tax-deadlines/",
       "permanent": true
+    },
+    {
+      "source": "/resources/vat-registration-kenya-compare-options",
+      "destination": "/resources/vat-registration-options-kenya/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/vat-registration-kenya-compare-options/",
+      "destination": "/resources/vat-registration-options-kenya/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/etims-vs-kra-shuru-chatbot",
+      "destination": "/resources/etims-vs-shuru-comparison/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/etims-vs-kra-shuru-chatbot/",
+      "destination": "/resources/etims-vs-shuru-comparison/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/real-cost-of-taxes-kenyan-sme",
+      "destination": "/resources/real-tax-bill-kenyan-sme/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/real-cost-of-taxes-kenyan-sme/",
+      "destination": "/resources/real-tax-bill-kenyan-sme/",
+      "permanent": true
     }
   ]
 }

@@ -13,7 +13,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "VAT Registration Kenya: Compare All Options", item: "https://smartvatkenya.co.ke/resources/vat-registration-kenya-compare-options/" },
+    { "@type": "ListItem", position: 3, name: "VAT Registration Kenya: Compare All Options", item: "https://smartvatkenya.co.ke/resources/vat-registration-options-kenya/" },
   ],
 }
 
@@ -27,8 +27,8 @@ const articleSchema = {
   publisher: PUBLISHER,
   datePublished: "2026-09-10",
   dateModified: lastVerified,
-  url: "https://smartvatkenya.co.ke/resources/vat-registration-kenya-compare-options/",
-  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/vat-registration-kenya-compare-options/",
+  url: "https://smartvatkenya.co.ke/resources/vat-registration-options-kenya/",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/vat-registration-options-kenya/",
 }
 
 const faqSchema = {
@@ -345,7 +345,7 @@ export default function VatRegistrationCompareOptionsPage() {
         {/* More Guides */}
         <div className="mt-10 pt-12 border-t border-hairline">
           <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">More Guides</p>
-          <ArticleGrid currentSlug="vat-registration-kenya-compare-options" />
+          <ArticleGrid currentSlug="vat-registration-options-kenya" />
         </div>
 
         {/* CTA */}

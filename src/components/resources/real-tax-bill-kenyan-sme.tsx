@@ -13,7 +13,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "The Real Tax on Running a Small Business in Kenya", item: "https://smartvatkenya.co.ke/resources/real-cost-of-taxes-kenyan-sme/" },
+    { "@type": "ListItem", position: 3, name: "The Real Tax on Running a Small Business in Kenya", item: "https://smartvatkenya.co.ke/resources/real-tax-bill-kenyan-sme/" },
   ],
 }
 
@@ -27,8 +27,8 @@ const articleSchema = {
   publisher: PUBLISHER,
   datePublished: "2026-09-10",
   dateModified: lastVerified,
-  url: "https://smartvatkenya.co.ke/resources/real-cost-of-taxes-kenyan-sme/",
-  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/real-cost-of-taxes-kenyan-sme/",
+  url: "https://smartvatkenya.co.ke/resources/real-tax-bill-kenyan-sme/",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/real-tax-bill-kenyan-sme/",
 }
 
 const faqSchema = {
@@ -79,7 +79,7 @@ const toc = [
   { id: "faq", label: "Frequently Asked Questions" },
 ]
 
-export default function RealCostOfTaxesKenyanSmePage() {
+export default function RealTaxBillKenyanSmePage() {
   return (
     <>
       <script id="article-schema" type="application/ld+json"
@@ -344,7 +344,7 @@ export default function RealCostOfTaxesKenyanSmePage() {
         {/* More Guides */}
         <div className="mt-10 pt-12 border-t border-hairline">
           <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">More Guides</p>
-          <ArticleGrid currentSlug="real-cost-of-taxes-kenyan-sme" />
+          <ArticleGrid currentSlug="real-tax-bill-kenyan-sme" />
         </div>
 
         {/* CTA */}

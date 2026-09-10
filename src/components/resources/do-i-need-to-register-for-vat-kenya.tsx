@@ -364,6 +364,12 @@ export default function DoINeedVATPage() {
                   <strong className="text-ink">Smart VAT Kenya</strong> is a fully KRA-registered tax agent. We charge a transparent flat <strong className="text-ink">KES 5,000</strong> fee payable via M-PESA to a business Paybill. You get a written agreement, a dedicated agent, and a 100% first-attempt approval guarantee. No hidden costs, no password harvesting.
                 </p>
               </div>
+              <p>
+                Not sure whether to register yourself on iTax, use a traditional facilitator, or pay a flat-fee
+                online agent? See the honest cost, time and risk breakdown in{" "}
+                <a href="/resources/vat-registration-options-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT Registration Kenya: Compare All 3 Options</a>{" "}
+                before you commit.
+              </p>
             </div>
           </section>
 

@@ -37,4 +37,42 @@
   status = 301
   force = true
 
+# 301 (2026-09-11): three resource pages renamed to match the content plan slugs.
+# Equity from the interim URLs passes to the final URLs.
+[[redirects]]
+  from = "/resources/vat-registration-kenya-compare-options"
+  to = "/resources/vat-registration-options-kenya/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/vat-registration-kenya-compare-options/"
+  to = "/resources/vat-registration-options-kenya/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/etims-vs-kra-shuru-chatbot"
+  to = "/resources/etims-vs-shuru-comparison/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/etims-vs-kra-shuru-chatbot/"
+  to = "/resources/etims-vs-shuru-comparison/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/real-cost-of-taxes-kenyan-sme"
+  to = "/resources/real-tax-bill-kenyan-sme/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/real-cost-of-taxes-kenyan-sme/"
+  to = "/resources/real-tax-bill-kenyan-sme/"
+  status = 301
+  force = true
+
 # redeploy-trigger: 2026-08-04T14:28:00Z - Force Netlify to rebuild main with latest changes

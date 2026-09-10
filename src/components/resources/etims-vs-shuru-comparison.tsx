@@ -13,7 +13,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
     { "@type": "ListItem", position: 2, name: "Resources", item: "https://smartvatkenya.co.ke/resources/" },
-    { "@type": "ListItem", position: 3, name: "eTIMS vs KRA Shuru Chatbot", item: "https://smartvatkenya.co.ke/resources/etims-vs-kra-shuru-chatbot/" },
+    { "@type": "ListItem", position: 3, name: "eTIMS vs KRA Shuru Chatbot", item: "https://smartvatkenya.co.ke/resources/etims-vs-shuru-comparison/" },
   ],
 }
 
@@ -27,8 +27,8 @@ const articleSchema = {
   publisher: PUBLISHER,
   datePublished: "2026-09-10",
   dateModified: lastVerified,
-  url: "https://smartvatkenya.co.ke/resources/etims-vs-kra-shuru-chatbot/",
-  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/etims-vs-kra-shuru-chatbot/",
+  url: "https://smartvatkenya.co.ke/resources/etims-vs-shuru-comparison/",
+  mainEntityOfPage: "https://smartvatkenya.co.ke/resources/etims-vs-shuru-comparison/",
 }
 
 const faqSchema = {
@@ -332,7 +332,7 @@ export default function EtimsVsShuruChatbotPage() {
         {/* More Guides */}
         <div className="mt-10 pt-12 border-t border-hairline">
           <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">More Guides</p>
-          <ArticleGrid currentSlug="etims-vs-kra-shuru-chatbot" />
+          <ArticleGrid currentSlug="etims-vs-shuru-comparison" />
         </div>
 
         {/* CTA */}

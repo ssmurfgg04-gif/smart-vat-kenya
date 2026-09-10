@@ -313,6 +313,25 @@ export default function AutoPopulatedReturnPage() {
 
             {/* FAQ */}
           <FAQSection faqSchema={faqSchema} />
+
+            {/* Authority cluster deep links */}
+            <section className="mt-12">
+              <p className="font-display text-[1.1rem] font-semibold text-ink mb-4">Go Deeper on Auto-Populated Returns</p>
+              <ul className="space-y-3 text-[0.9rem] text-ink-soft leading-relaxed">
+                <li>
+                  <a href="/resources/vat-ledger-explained-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">KRA VAT Ledger Explained</a>{" "}
+                  - the master record of every amount you declared, paid, and owed, and how the return pulls from it.
+                </li>
+                <li>
+                  <a href="/resources/vat-return-dispute-auto-populated/" className="text-brand underline underline-offset-2 hover:text-brand-hover">How to Dispute a Wrong Auto-Populated VAT Return</a>{" "}
+                  - Notice of Objection steps when KRA fills in inflated sales or missing purchases.
+                </li>
+                <li>
+                  <a href="/resources/vat-auto-population-input-tax-credit/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Auto-Populated Input VAT - Claim Your Full Credit</a>{" "}
+                  - the 6-month rule and adding missing eTIMS purchases before the 20th.
+                </li>
+              </ul>
+            </section>
           </div>
         </article>
 

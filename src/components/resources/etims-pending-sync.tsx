@@ -209,6 +209,13 @@ export default function ETIMSPendingSyncPage() {
           serviceLabel="Email us a screenshot"
         />
 
+        <p className="text-[0.85rem] text-ink-muted leading-relaxed">
+          Already tried KRA's free Shuru chatbot and it could not fix the sync? Shuru handles simple filings -
+          stuck syncs, certificates and rejections need more than a chatbot. See{" "}
+          <a href="/resources/etims-vs-shuru-comparison/" className="text-brand underline underline-offset-2 hover:text-brand-hover">eTIMS vs KRA Shuru Chatbot: what each does</a>{" "}
+          for exactly where the bot stops and where you need a human.
+        </p>
+
         {/* Table of contents */}
         <nav aria-label="Table of contents" className="mb-12">
           <div className="border border-hairline rounded-lg p-5 bg-canvas-alt">

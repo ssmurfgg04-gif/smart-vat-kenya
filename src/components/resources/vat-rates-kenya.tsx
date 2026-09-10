@@ -16,7 +16,7 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org" as const,
   "@type": "Article",
-  headline: "VAT Rates in Kenya 2026 - Standard (16%), Zero-Rated & Exempt",
+  headline: "Kenya VAT Rates 2026: 16% Standard + Full Zero-Rated & Exempt List",
   description:
     "Complete guide to Kenya VAT rates 2026 covering the standard rate of 16%, zero-rated supplies (0%), and exempt supplies. Full lists from the VAT Act First and Second Schedules with practical examples and industry guidance.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
@@ -125,7 +125,7 @@ export default function VatRatesKenyaPage() {
           <header className="mb-10">
             <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-brand mb-3">Guide - VAT Rates</p>
             <h1 className="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-semibold text-ink tracking-tight leading-tight mb-4 text-balance">
-              VAT Rates in Kenya 2026 - Standard (16%), Zero-Rated &amp; Exempt
+              Kenya VAT Rates 2026: 16% Standard + Full Zero-Rated &amp; Exempt List
             </h1>
             <p className="text-[0.9rem] text-ink-muted leading-relaxed max-w-[65ch]">
               Kenya operates a three-tier VAT system. Most goods and services attract the standard rate of 16%.

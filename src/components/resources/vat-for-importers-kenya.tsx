@@ -76,6 +76,12 @@ export default function VatForImportersKenyaPost() {
             directly affects your cash flow and working capital.
           </p>
           <p>
+            One 2026 change importers cannot miss: KRA cut the <strong>consolidated cargo benchmark</strong> from
+            Sh3.2M to Sh2M on 2 September - raising the deemed value many small consignments are taxed on. See{" "}
+            <a href="/resources/consolidated-cargo-benchmark-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Consolidated Cargo Tax Kenya: the new Sh2M benchmark</a>{" "}
+            for the exclusion list and what to tell your clearing agent.
+          </p>
+          <p>
             Import VAT applies to all commercial imports regardless of whether you are a VAT-registered
             person. If you are not registered for VAT, you still pay import VAT - but you <strong>cannot</strong>
             claim it back as input VAT. This is why registering for VAT is critical if you import goods

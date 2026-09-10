@@ -89,6 +89,11 @@ export default function VatForLandlordsPost() {
             eTIMS invoices, and file VAT returns.
           </p>
           <p>
+            We break down the commercial-rent rules - the KES 5M threshold, eTIMS invoicing for landlords, and
+            worked examples at three rent levels - in{" "}
+            <a href="/resources/vat-commercial-rent-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT on Commercial Rent Kenya: When 16% Applies</a>.
+          </p>
+          <p>
             The complication arises with <strong>mixed-use properties</strong> - a building with shops on the ground
             floor and flats above. In that case, rental income must be apportioned between the exempt residential
             portion and the taxable commercial portion. We cover the apportionment formula in detail below.

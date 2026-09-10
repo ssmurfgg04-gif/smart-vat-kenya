@@ -53,6 +53,12 @@ export default function VatForFreelancersCreatorsPage() {
         <p className="text-ink-soft leading-relaxed">
           If your gross annual income crosses {FACTS.mandatoryThreshold}, VAT registration is mandatory. If you earn below this threshold from international platforms (export of services), your zero-rated export status may allow tax-free invoicing while letting you claim input VAT.
         </p>
+        <p className="text-ink-soft leading-relaxed">
+          YouTube creators take note: Google began withholding a <strong>5% Digital Services Tax</strong> from Kenyan
+          AdSense payouts, and you need a KRA PIN linked to your payment profile by 1 October. See{" "}
+          <a href="/resources/youtube-5-percent-tax-kenya/" className="text-brand underline underline-offset-2 hover:text-brand-hover">YouTube 5% Tax Kenya: how much you actually lose</a>{" "}
+          - including the free calculator that shows your net at any earning level.
+        </p>
 
         <div className="bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-lg font-semibold text-ink mb-2">Are you a creator or freelancer needing tax registration?</p>

@@ -300,6 +300,11 @@ export default function VatVsTurnoverTaxPage() {
             <p className="text-[0.9rem] text-ink-soft leading-relaxed mb-6">
               Answer these four questions to determine whether Turnover Tax or VAT is right for your business.
             </p>
+            <p className="text-[0.9rem] text-ink-soft leading-relaxed mb-6">
+              For the full picture - every levy a Kenyan SME actually pays, from VAT and PAYE to the housing levy,
+              NSSF and SHIF, in one worked example - read{" "}
+              <a href="/resources/real-tax-bill-kenyan-sme/" className="text-brand underline underline-offset-2 hover:text-brand-hover">The Real Tax on Running a Small Business in Kenya</a>.
+            </p>
             <div className="space-y-5">
               {[
                 {

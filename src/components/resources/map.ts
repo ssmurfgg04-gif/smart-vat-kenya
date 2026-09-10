@@ -15,6 +15,13 @@ import {
   EtimsPendingSync,
   EtimsPenalty50000PerMonthKenya,
   EtimsWhatDoesKraSee,
+  EtimsDeviceNotRegistered,
+  EtimsCuPinInvalid,
+  EtimsDuplicateInvoice,
+  EtimsBuyerPinMissing,
+  VatReturnDisputeAutoPopulated,
+  VatLedgerExplainedKenya,
+  VatAutoPopulationInputTaxCredit,
   Faq,
   FinanceActVatChangesKenya,
   HowToApplyForKraPin,
@@ -77,10 +84,10 @@ import {
   WithholdingVatKenya,
   NonResidentRentalIncomeTaxKenya,
   SignificantEconomicPresenceTaxKenya,
-  EtimsVsKraShuruChatbot,
-  RealCostOfTaxesKenyanSme,
+  EtimsVsShuruComparison,
+  RealTaxBillKenyanSme,
   VatCommercialRentKenya,
-  VatRegistrationKenyaCompareOptions,
+  VatRegistrationOptionsKenya,
   YoutubeFivePercentTaxKenya
 } from "./index"
 
@@ -92,12 +99,12 @@ export interface ResourceMeta {
 
 export const resourceComponents: Record<string, React.ComponentType> = {
   "do-i-need-to-register-for-vat-kenya": DoINeedToRegisterForVatKenya,
-  "vat-registration-kenya-compare-options": VatRegistrationKenyaCompareOptions,
-  "etims-vs-kra-shuru-chatbot": EtimsVsKraShuruChatbot,
+  "vat-registration-options-kenya": VatRegistrationOptionsKenya,
+  "etims-vs-shuru-comparison": EtimsVsShuruComparison,
   "vat-commercial-rent-kenya": VatCommercialRentKenya,
   "youtube-5-percent-tax-kenya": YoutubeFivePercentTaxKenya,
   "consolidated-cargo-benchmark-kenya": ConsolidatedCargoBenchmarkKenya,
-  "real-cost-of-taxes-kenyan-sme": RealCostOfTaxesKenyanSme,
+  "real-tax-bill-kenyan-sme": RealTaxBillKenyanSme,
   "cetis-kenya-2027": CetisKenya2027,
   "etims-account-locked": EtimsAccountLocked,
   "etims-can-i-claim-my-expenses": EtimsCanIClaimMyExpenses,
@@ -172,18 +179,29 @@ export const resourceComponents: Record<string, React.ComponentType> = {
   "withholding-vat-kenya": WithholdingVatKenya,
   "non-resident-rental-income-tax-kenya": NonResidentRentalIncomeTaxKenya,
   "significant-economic-presence-tax-kenya": SignificantEconomicPresenceTaxKenya,
+  "etims-device-not-registered": EtimsDeviceNotRegistered,
+  "etims-cu-pin-invalid": EtimsCuPinInvalid,
+  "etims-duplicate-invoice": EtimsDuplicateInvoice,
+  "etims-buyer-pin-missing": EtimsBuyerPinMissing,
+  "vat-return-dispute-auto-populated": VatReturnDisputeAutoPopulated,
+  "vat-ledger-explained-kenya": VatLedgerExplainedKenya,
+  "vat-auto-population-input-tax-credit": VatAutoPopulationInputTaxCredit,
+  "kra-health-check": KraHealthCheck,
+  "vat-threshold-explainer": VatThresholdExplainer,
+  "how-to-create-kra-pin": HowToCreateKraPin,
+  "vat-input-guide": VatInputGuide,
 }
 
 export const resourceMeta: Record<string, ResourceMeta> = {
-  "vat-registration-kenya-compare-options": {
+  "vat-registration-options-kenya": {
     title: "VAT Registration Kenya: Compare All 3 Options (2026)",
     description: "DIY on iTax (free, ~3 weeks), facilitators (KES 15,000-30,000), or flat-fee agents (KES 5,000, 1-3 days). Compare cost, time and risk before you choose.",
-    canonical: "/resources/vat-registration-kenya-compare-options/",
+    canonical: "/resources/vat-registration-options-kenya/",
   },
-  "etims-vs-kra-shuru-chatbot": {
+  "etims-vs-shuru-comparison": {
     title: "eTIMS vs KRA Shuru Chatbot: What Each Does",
     description: "KRA's Shuru WhatsApp chatbot handles simple filings and FAQs free. It can't fix rejected eTIMS invoices or penalty waivers. See where the line is.",
-    canonical: "/resources/etims-vs-kra-shuru-chatbot/",
+    canonical: "/resources/etims-vs-shuru-comparison/",
   },
   "vat-commercial-rent-kenya": {
     title: "VAT on Commercial Rent Kenya: When 16% Applies",
@@ -200,10 +218,10 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     description: "KRA cut the consolidated cargo benchmark from Sh3.2M to Sh2M on 2 Sept. What changed, the exclusion list, and what to tell your clearing agent.",
     canonical: "/resources/consolidated-cargo-benchmark-kenya/",
   },
-  "real-cost-of-taxes-kenyan-sme": {
+  "real-tax-bill-kenyan-sme": {
     title: "The Real Tax on Running a Small Business in Kenya",
     description: "Every levy a Kenyan SME actually pays - VAT, PAYE, housing levy, NSSF, SHIF, permits, eTIMS - one worked example and the legal ways to shrink the bill.",
-    canonical: "/resources/real-cost-of-taxes-kenyan-sme/",
+    canonical: "/resources/real-tax-bill-kenyan-sme/",
   },
   "do-i-need-to-register-for-vat-kenya": {
     title: "Do I Need to Register for VAT in Kenya?",
@@ -471,7 +489,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/vat-labour-outsourcing-kenya/",
   },
   "vat-rates-kenya": {
-    title: "Kenya VAT Rates 2026: 16% Standard + Zero-Rated & Exempt",
+    title: "Kenya VAT Rates 2026: 16% Standard + Full Zero-Rated & Exempt List",
     description: "Kenya's VAT is 16% on most goods. See the complete list of zero-rated and exempt supplies, plus who must register at KES 5M. Updated Aug 2026.",
     canonical: "/resources/vat-rates-kenya/",
   },
@@ -579,5 +597,50 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     title: "EFRIS Lessons for e-Invoicing",
     description: "What breaks in SME POS systems when tax authorities shift to real-time pre-clearance e-invoicing (like Uganda's EFRIS), and how to prepare.",
     canonical: "/resources/efris-lessons-pre-clearance/",
+  },
+  "kra-health-check": {
+    title: "Free KRA Status & Ledger Health Check",
+    description: "Check your KRA iTax profile status, outstanding filing gaps, and Special Table / Tax Alert exposures before KRA flags you. Free check by Smart VAT Kenya.",
+    canonical: "/resources/kra-health-check/",
+  },
+  "vat-threshold-explainer": {
+    title: "VAT Threshold Kenya 2026: KES 5M or 8M?",
+    description: "KES 5M is the operative VAT registration threshold; the proposed KES 8M Finance Act 2025 rise is not in force. The real answer, verified against KRA guidance.",
+    canonical: "/resources/vat-threshold-explainer/",
+  },
+  "etims-device-not-registered": {
+    title: "eTIMS Device Not Registered - How to Activate on KRA (2026)",
+    description: "If your eTIMS device shows 'Device Not Registered' or 'Device Not Found', it has not been linked to your KRA PIN. Learn why, how to register via eTIMS Lite, and what to do if your PIN is not VAT-registered.",
+    canonical: "/resources/etims-device-not-registered/",
+  },
+  "etims-cu-pin-invalid": {
+    title: "eTIMS CU PIN Invalid or Blocked - How to Reset (2026)",
+    description: "When your eTIMS Control Unit PIN is invalid, expired, or blocked after failed login attempts: how to reset, where to find the original PIN, and how to avoid the permanent lockout.",
+    canonical: "/resources/etims-cu-pin-invalid/",
+  },
+  "etims-duplicate-invoice": {
+    title: "eTIMS Duplicate Invoice Error - Why It Happens & How to Fix",
+    description: "When KRA rejects your eTIMS invoice with 'duplicate invoice number' or 'duplicate coupon', here is what to check, how to re-issue, and how to use multi-device invoice prefixes to prevent future duplicates.",
+    canonical: "/resources/etims-duplicate-invoice/",
+  },
+  "etims-buyer-pin-missing": {
+    title: "eTIMS Buyer PIN Missing or Invalid - How to Invoice B2B (2026)",
+    description: "When KRA rejects your eTIMS invoice with 'buyer PIN required' or 'invalid buyer TIN', here is when the buyer PIN is actually required, how to verify a buyer's KRA PIN, and what to do if the customer has no PIN.",
+    canonical: "/resources/etims-buyer-pin-missing/",
+  },
+  "vat-return-dispute-auto-populated": {
+    title: "How to Dispute a Wrong Auto-Populated VAT Return (2026)",
+    description: "When KRA auto-fills a wrong VAT figure - inflated sales, missing purchases, duplicate invoices - here is exactly how to dispute via Notice of Objection, amend, and document the correction before the 20th deadline.",
+    canonical: "/resources/vat-return-dispute-auto-populated/",
+  },
+  "vat-ledger-explained-kenya": {
+    title: "KRA VAT Ledger Explained - What KRA Sees on Your Account (2026)",
+    description: "The KRA VAT ledger is the master record of every VAT amount you declared, paid, and owed. Understand the four columns - output VAT, input VAT, payments, and credits - and how the auto-populated return pulls from it.",
+    canonical: "/resources/vat-ledger-explained-kenya/",
+  },
+  "vat-auto-population-input-tax-credit": {
+    title: "Auto-Populated Input VAT - How to Claim Your Full Credit (2026)",
+    description: "The auto-populated VAT return credits input VAT only when suppliers transmit eTIMS invoices with your correct PIN. Learn the 6-month rule, how to add missing purchases, and how to maximize your legitimate input VAT claim.",
+    canonical: "/resources/vat-auto-population-input-tax-credit/",
   },
 }

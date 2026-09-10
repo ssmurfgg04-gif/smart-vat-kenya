@@ -17,3 +17,11 @@
 # 301 (2026-09-10): retired stale August 2026 single-month deadline page -> evergreen calendar.
 /resources/kra-vat-filing-deadline-august-2026  /tax-deadlines/  301!
 /resources/kra-vat-filing-deadline-august-2026/ /tax-deadlines/  301!
+
+# 301 (2026-09-11): three resource pages renamed to match the content plan slugs.
+/resources/vat-registration-kenya-compare-options  /resources/vat-registration-options-kenya/  301!
+/resources/vat-registration-kenya-compare-options/ /resources/vat-registration-options-kenya/  301!
+/resources/etims-vs-kra-shuru-chatbot  /resources/etims-vs-shuru-comparison/  301!
+/resources/etims-vs-kra-shuru-chatbot/ /resources/etims-vs-shuru-comparison/  301!
+/resources/real-cost-of-taxes-kenyan-sme  /resources/real-tax-bill-kenyan-sme/  301!
+/resources/real-cost-of-taxes-kenyan-sme/ /resources/real-tax-bill-kenyan-sme/  301!
