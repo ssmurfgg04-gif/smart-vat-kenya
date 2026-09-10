@@ -23,4 +23,18 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# 301 (2026-09-10): the stale single-month August 2026 deadline page was retired.
+# Its ranking equity passes to the evergreen deadline calendar.
+[[redirects]]
+  from = "/resources/kra-vat-filing-deadline-august-2026"
+  to = "/tax-deadlines/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/kra-vat-filing-deadline-august-2026/"
+  to = "/tax-deadlines/"
+  status = 301
+  force = true
+
 # redeploy-trigger: 2026-08-04T14:28:00Z - Force Netlify to rebuild main with latest changes

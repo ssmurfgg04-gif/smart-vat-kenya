@@ -431,7 +431,7 @@ export default function ETimsBuyerPinMissingPage() {
         <div className="mt-10 border border-brand/20 bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-[1rem] font-semibold text-ink mb-1">Buyer PIN errors blocking your invoices?</p>
           <p className="text-[0.85rem] text-ink-muted mb-4 max-w-[40ch] mx-auto leading-relaxed">
-            Send a screenshot of the error and the buyer&rsquo;s PIN on WhatsApp - we will tell you in minutes whether to fix the PIN, change to B2C, or treat as export.
+            Run the free eTIMS diagnostic - it tells you whether to fix the PIN, change to B2C, or treat the sale as an export, with the steps for each.
           </p>
           <a
             href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20buyer%20PIN%20errors"

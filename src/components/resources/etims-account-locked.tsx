@@ -210,7 +210,7 @@ export default function ETIMSAccountLockedPage() {
         <div className="border-l-[3px] border-brand pl-5 mb-10">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer - Fix It in 3 Minutes</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            Locked mid-sale? <strong className="text-ink">Don&apos;t reinstall eTIMS</strong> - that orphans your queued invoices. A common cause is the <strong className="text-ink">7-day sync rule</strong>. Try <strong className="text-ink">eTIMS Lite</strong> &rarr; <strong className="text-ink">Device Management</strong> &rarr; Reactivate &rarr; Sync. Password or certificate lock? Reset or renew. Still stuck? <a href="https://wa.me/254717344440?text=My%20eTIMS%20is%20locked%20-%20need%20help%20unlocking" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">send us a screenshot, we&apos;ll diagnose it</a>.
+            Locked mid-sale? <strong className="text-ink">Don&apos;t reinstall eTIMS</strong> - that orphans your queued invoices. A common cause is the <strong className="text-ink">7-day sync rule</strong>. Try <strong className="text-ink">eTIMS Lite</strong> &rarr; <strong className="text-ink">Device Management</strong> &rarr; Reactivate &rarr; Sync. Password or certificate lock? Reset or renew. Still stuck? <a href="/tools/etims-diagnostic/" className="text-brand underline underline-offset-2 hover:text-brand-hover">run the free eTIMS diagnostic</a> - it covers lockouts, certificates and sync failures with exact fix steps.
           </p>
         </div>
 

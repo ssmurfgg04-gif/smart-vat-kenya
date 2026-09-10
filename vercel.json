@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/resources/kra-vat-filing-deadline-august-2026",
+      "destination": "/tax-deadlines/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/kra-vat-filing-deadline-august-2026/",
+      "destination": "/tax-deadlines/",
+      "permanent": true
+    }
+  ]
+}

@@ -411,7 +411,7 @@ export default function ETimsDuplicateInvoicePage() {
         <div className="mt-10 border border-brand/20 bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-[1rem] font-semibold text-ink mb-1">Repeated duplicate errors?</p>
           <p className="text-[0.85rem] text-ink-muted mb-4 max-w-[40ch] mx-auto leading-relaxed">
-            Send a screenshot of the error and your device serial on WhatsApp - we will tell you in minutes whether it is a numbering, prefix, or counter issue.
+            Run the free eTIMS diagnostic - it identifies whether your case is a numbering, prefix, or counter issue and gives the exact fix steps.
           </p>
           <a
             href="https://wa.me/254717344440?text=Hi%2C%20I%20keep%20getting%20eTIMS%20duplicate%20invoice%20errors"

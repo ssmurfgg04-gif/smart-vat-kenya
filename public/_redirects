@@ -13,8 +13,7 @@
 
 # Note: /about, /how-it-works, /tax-amnesty-2026 are directory-based in Astro output (trailingSlash: "always")
 # Netlify natively handles /foo -> /foo/ for directory-based content
-# No catch-all rules needed - they cause redirect loops
 
-# NOTE: Do NOT add explicit trailing-slash redirects for /resources/:slug, /services/:slug, /tools/:slug
-# Astro's trailingSlash: "always" already generates all pages with trailing slashes
-# Adding explicit redirects here causes redirect loops on Netlify
+# 301 (2026-09-10): retired stale August 2026 single-month deadline page -> evergreen calendar.
+/resources/kra-vat-filing-deadline-august-2026  /tax-deadlines/  301!
+/resources/kra-vat-filing-deadline-august-2026/ /tax-deadlines/  301!

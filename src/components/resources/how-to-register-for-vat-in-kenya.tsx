@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
+import { ServiceCtaBox } from "@/components/service-cta-box"
 import { FAQSection } from "@/components/faq-section"
 import { Flowchart, VATRegistrationFlow } from "@/components/flowcharts"
 
@@ -130,6 +131,20 @@ export default function Pillar1Page() {
         <Flowchart caption="VAT registration decision flowchart - from turnover check to PIN issued">
           <VATRegistrationFlow />
         </Flowchart>
+
+        {/* Flywheel CTA: free eligibility quiz first, priced registration service second */}
+        <ServiceCtaBox
+          page="vat-registration-guide"
+          selfServiceTitle="Check if you even need to register"
+          selfServiceCopy="Take the free 60-second VAT registration quiz - answer five questions about your turnover and customers, and know your exact obligation before you touch iTax."
+          selfServiceHref="/tools/#quiz-heading"
+          selfServiceLabel="Take the free quiz"
+          serviceTitle="Want us to handle your VAT registration?"
+          serviceCopy="Flat fee, done in 1-3 working days. No iTax login required from you - we handle the portal, the follow-ups and the eTIMS onboarding."
+          servicePrice="KES 5,000 flat"
+          serviceHref="https://wa.me/254717344440?text=Hi%2C%20I%20want%20help%20with%20VAT%20registration%20-%20KES%205%2C000%20flat%20fee."
+          serviceLabel="Start on WhatsApp"
+        />
 
         {/* Table of contents */}
         <nav aria-label="Table of contents" className="mb-12">

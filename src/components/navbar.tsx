@@ -98,7 +98,7 @@ export function Navbar() {
             Get Started
           </a>
           <span className="hidden sm:block text-[0.7rem] text-ink-muted/60 font-medium whitespace-nowrap">
-            WhatsApp diagnosis is FREE
+            Free diagnostic tools - no sign-up
           </span>
         </div>
 

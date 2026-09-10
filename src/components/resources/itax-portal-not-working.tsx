@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info, User } from "@phosphor-icons/react/dist/ssr"
 
 import { ArticleGrid } from "@/lib/resources"
+import { ServiceCtaBox } from "@/components/service-cta-box"
 import { FAQSection } from "@/components/faq-section"
 
 const author = {
@@ -169,6 +170,20 @@ export default function ITaxPortalNotWorkingPage() {
           </p>
         </div>
 
+        {/* Flywheel CTA: self-service diagnostic first, priced filing service second */}
+        <ServiceCtaBox
+          page="itax-not-working"
+          selfServiceTitle="Run the free iTax error diagnostic"
+          selfServiceCopy="Pick your exact error - login failures, OTP delays, Error 500, timeouts - and get the tailored fix in 60 seconds. Same steps our agents use, no sign-up."
+          selfServiceHref="/tools/#error-heading"
+          selfServiceLabel="Open the free diagnostic"
+          serviceTitle="Don't have time to fix iTax yourself?"
+          serviceCopy="We file through the KRA agent portal - no queues, no timeouts. You never log in to iTax again."
+          servicePrice="KES 3,500/month"
+          serviceHref="https://wa.me/254717344440?text=Hi%2C%20iTax%20is%20stressing%20me.%20I%20want%20monthly%20filing%20at%20KES%203%2C500%2Fmonth%20via%20the%20agent%20portal."
+          serviceLabel="WhatsApp us"
+        />
+
         {/* Table of contents */}
         <nav aria-label="Table of contents" className="mb-12">
           <div className="border border-hairline rounded-lg p-5 bg-canvas-alt">
@@ -227,7 +242,9 @@ export default function ITaxPortalNotWorkingPage() {
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
                   <strong className="text-ink">Can't afford to wait?</strong> Smart VAT Kenya files returns
                   through the KRA agent portal - a separate system with better reliability. We never experience
-                  the iTax login queues, timeouts, or OTP delays that plague the public portal.
+                  the iTax login queues, timeouts, or OTP delays that plague the public portal. If you're not yet
+                  VAT-registered and need to file, see our <a href="/services/vat-registration/" className="text-brand font-medium underline underline-offset-2 hover:text-brand-hover">VAT registration services in Kenya</a> (KES 5,000 flat).
+                  For ongoing support, our <a href="/services/monthly-vat-filing/" className="text-brand font-medium underline underline-offset-2 hover:text-brand-hover">monthly VAT filing service</a> (KES 3,500/month) uses the agent portal - no iTax outages.
                 </p>
               </div>
             </div>

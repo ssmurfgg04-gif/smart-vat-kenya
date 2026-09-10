@@ -179,7 +179,7 @@ export default function EtimsCanIClaimMyExpenses() {
               <li>Issue using the invoice type that matches the error you saw</li>
               <li>If it persists, raise the ticket with your obligation ID - this resolves in 1–2 working days</li>
             </ol>
-            <p>We see this weekly - if you get stuck, send us a screenshot and we'll walk it through on WhatsApp.</p>
+            <p>We see this weekly - if you get stuck, <a href="/tools/pin-checker/" className="text-brand underline underline-offset-2 hover:text-brand-hover">verify the PIN with the free checker tool</a>, then work the steps above in order.</p>
           </div>
 
           {/* FAQ */}

@@ -9,6 +9,7 @@ export interface Props {
   title?: string
   description?: string
   canonical?: string
+  path?: string
   image?: string
   type?: "website" | "article"
   publishedTime?: string
@@ -17,6 +18,7 @@ export interface Props {
   jsonLd?: Record<string, unknown>
   breadcrumbSchema?: Record<string, unknown>
   articleSchema?: Record<string, unknown>
+  author?: string
 }
 
 const SITE_URL = "https://smartvatkenya.co.ke"
@@ -44,11 +46,20 @@ if (!canonicalProp && !path) {
   console.warn(`[SEO] Page without canonical or path: ${Astro.url.pathname}`)
 }
 const canonicalClean = canonical.replace(/(?<!\/)$/, "/")
-const pageTitle = title ? `${title} | ${SITE_NAME}` : "VAT Registration Services Kenya | KRA VAT Calculator | Smart VAT Kenya"
+// CTR optimization: Google truncates titles around 60 characters.
+// Append the brand suffix only when the combined title stays under that limit;
+// long, intent-matched titles render untruncated in the SERP instead.
+const pageTitle = title
+  ? (title.length + SITE_NAME.length + 3 <= 60 ? `${title} | ${SITE_NAME}` : title)
+  : "VAT Registration Services Kenya | KRA VAT Calculator | Smart VAT Kenya"
 const pageDesc = description ?? "Professional VAT registration services in Kenya - KES 5,000 flat fee, done in 1-3 working days."
 const pageUrl = `${SITE_URL}${canonicalClean}`
 const imageUrl = image.startsWith("http") ? image : `${SITE_URL}${image}`
-const socialTitle = pageTitle.includes(SITE_NAME) ? pageTitle : `${pageTitle} | ${SITE_NAME}`
+const socialTitle = pageTitle.includes(SITE_NAME)
+  ? pageTitle
+  : pageTitle.length + SITE_NAME.length + 3 <= 70
+    ? `${pageTitle} | ${SITE_NAME}`
+    : pageTitle
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -334,8 +345,8 @@ const citationSchema = {
   <meta name="twitter:image" content={imageUrl} />
 
   <!-- Hreflang -->
-  <link rel="alternate" hrefLang="en-KE" href="https://smartvatkenya.co.ke" />
-  <link rel="alternate" hrefLang="x-default" href="https://smartvatkenya.co.ke" />
+  <link rel="alternate" hreflang="en-KE" href="https://smartvatkenya.co.ke" />
+  <link rel="alternate" hreflang="x-default" href="https://smartvatkenya.co.ke" />
 
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />

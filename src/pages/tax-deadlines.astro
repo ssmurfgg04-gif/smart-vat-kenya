@@ -6,13 +6,13 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
-    { "@type": "ListItem", position: 2, name: "Kenya Tax Deadline Calendar 2026", item: "https://smartvatkenya.co.ke/tax-deadlines/" },
+    { "@type": "ListItem", position: 2, name: "Kenya VAT Filing Deadlines 2026", item: "https://smartvatkenya.co.ke/tax-deadlines/" },
   ],
 }
 
 const deadlines = [
   { name: "VAT Return & Payment", due: "20th of every month", next: "20 September 2026", note: "For the August 2026 tax period. File via iTax; pay via Paybill 572572.", urgent: true },
-  { name: "PAYE (Pay As You Earn)", due: "9th of every month", next: "9 September 2026", note: "For August 2026 payroll. Withholding agents must remit via iTax.", urgent: false },
+  { name: "PAYE (Pay As You Earn)", due: "9th of every month", next: "9 October 2026", note: "For September 2026 payroll. Withholding agents must remit via iTax.", urgent: false },
   { name: "Withholding VAT", due: "20th of every month", next: "20 September 2026", note: "Withholding VAT agents remit VAT deducted from suppliers.", urgent: false },
   { name: "Withholding Tax (General)", due: "20th of every month", next: "20 September 2026", note: "Rent, professional fees, dividends - as applicable.", urgent: false },
   { name: "Turnover Tax (TOT)", due: "20th of every month", next: "20 September 2026", note: "For small businesses under the TOT regime.", urgent: false },
@@ -24,8 +24,8 @@ const deadlines = [
 ---
 
 <BaseLayout
-  title="Kenya Tax Deadlines 2026"
-  description="Kenya tax deadlines 2026: VAT 20th monthly, PAYE 9th, withholding VAT and the 31 Dec tax amnesty deadline. Add reminders or let Smart VAT file for you."
+  title="Kenya VAT Filing Deadlines 2026: Next Due 20 September"
+  description="All KRA tax deadlines in one calendar — VAT, PAYE, TOT, and excise. Never miss the 20th again. Get a free WhatsApp reminder on the 15th."
   canonical="/tax-deadlines/"
   breadcrumbSchema={breadcrumbSchema}
 >
@@ -39,11 +39,20 @@ const deadlines = [
         <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-red-500/20 text-red-300 px-2.5 py-1 rounded-sm">Amnesty ends 31 Dec</span>
       </div>
       <h1 class="font-display text-[clamp(1.6rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
-        Kenya Tax Deadline Calendar 2026
+        Kenya Tax Deadlines 2026: VAT, PAYE, TOT &amp; More
       </h1>
       <p class="text-[0.9rem] text-canvas/60 max-w-[60ch] leading-relaxed">
         Never miss the 20th again. All KRA deadlines in one place - add to Google Calendar or let us file on the 17th so you never pay the KES 10,000 late penalty.
       </p>
+
+      <!-- Next deadline callout: time-sensitive urgency for deadline queries -->
+      <div class="mt-6 border border-canvas/15 rounded-lg bg-canvas/5 px-5 py-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-red-500/20 text-red-300 px-2.5 py-1 rounded-sm">Next deadline</span>
+        <p class="text-[0.92rem] text-canvas/85">
+          <strong class="text-canvas">20 September 2026</strong> — VAT return &amp; payment for the August 2026 tax period. File via iTax, pay via Paybill 572572.
+        </p>
+        <a data-track="calendar-add" data-cta-type="vat-deadline" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=KRA+VAT+Deadline&dates=20260920T000000Z/20260920T000000Z&details=VAT+return+due+via+iTax.+Pay+via+Paybill+572572&location=iTax+Portal" target="_blank" rel="noopener noreferrer" class="text-[0.82rem] font-medium text-brand underline underline-offset-2 hover:text-brand-hover">Add to calendar →</a>
+      </div>
     </div>
   </div>
 
@@ -82,7 +91,7 @@ const deadlines = [
       <div class="border border-hairline rounded-xl p-5 bg-canvas">
         <p class="font-display text-[0.95rem] font-semibold text-ink mb-1">WhatsApp reminders</p>
         <p class="text-[0.82rem] text-ink-muted mb-3">We nudge you on the 15th - before the portal gets busy.</p>
-        <a data-track="whatsapp-cta" data-cta-type="deadline-reminder" data-service="Monthly Filing" href="https://wa.me/254717344440?text=Remind+me+about+KRA+deadlines+every+month" target="_blank" rel="noopener noreferrer" class="text-[0.82rem] font-medium text-brand underline underline-offset-2 hover:text-brand-hover">Get WhatsApp reminders " data-track="whatsapp-cta" data-cta-type="deadline-reminder" data-service="Monthly Filing">Get WhatsApp reminders →</a>
+        <a data-track="whatsapp-cta" data-cta-type="deadline-reminder" data-service="Monthly Filing" href="https://wa.me/254717344440?text=Remind+me+about+KRA+deadlines+every+month" target="_blank" rel="noopener noreferrer" class="text-[0.82rem] font-medium text-brand underline underline-offset-2 hover:text-brand-hover">Get WhatsApp reminders →</a>
       </div>
       <div class="border border-brand/20 rounded-xl p-5 bg-brand-muted">
         <p class="font-display text-[0.95rem] font-semibold text-ink mb-1">Let us file it</p>
@@ -94,7 +103,7 @@ const deadlines = [
     <div class="border border-hairline rounded-xl p-6 bg-canvas-alt">
       <p class="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted mb-3">Sources & verification</p>
       <p class="text-[0.83rem] text-ink-muted leading-relaxed">
-        Dates per KRA iTax guidance and the Tax Procedures Act. Last verified <time datetime="2026-08-25" class="font-mono">25 Aug 2026</time> against KRA. Tax amnesty deadline per KRA's 2026 Tax Amnesty Programme (penalties, interest & fines on liabilities accrued up to 31 Dec 2025, window 1 Jul–31 Dec 2026; principal must be settled where due). Always confirm via <a href="https://www.kra.go.ke" target="_blank" rel="noopener noreferrer" class="text-brand underline">kra.go.ke</a> or 020 499 9999.
+        Dates per KRA iTax guidance and the Tax Procedures Act. Last verified <time datetime="2026-09-10" class="font-mono">10 September 2026</time> against KRA. Tax amnesty deadline per KRA's 2026 Tax Amnesty Programme (penalties, interest & fines on liabilities accrued up to 31 Dec 2025, window 1 Jul–31 Dec 2026; principal must be settled where due). Always confirm via <a href="https://www.kra.go.ke" target="_blank" rel="noopener noreferrer" class="text-brand underline">kra.go.ke</a> or 020 499 9999.
       </p>
     </div>
   </div>

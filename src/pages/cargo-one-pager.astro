@@ -1,0 +1,116 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+
+const lastVerified = "2026-09-10"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Cargo Benchmark One-Pager", item: "https://smartvatkenya.co.ke/cargo-one-pager/" },
+  ],
+}
+---
+
+<BaseLayout
+  title="Cargo Benchmark One-Pager (Printable)"
+  description="One printable page for Kenyan traders and clearing agents: the 2 Sept 2026 consolidated cargo benchmark cut to Sh2M, the garment/footwear/fabric exclusion list, and the at-customs checklist."
+  canonical="/cargo-one-pager/"
+  breadcrumbSchema={breadcrumbSchema}
+>
+  <style is:inline>
+    /* Print styles: only the sheet prints, chrome hides */
+    @media print {
+      .no-print { display: none !important; }
+      .print-sheet { box-shadow: none !important; border: none !important; margin: 0 !important; max-width: 100% !important; padding: 0 !important; }
+      body { background: #fff !important; }
+      @page { margin: 12mm; }
+    }
+  </style>
+
+  <div class="bg-canvas-dark px-6 lg:px-10 py-10 no-print">
+    <div class="max-w-3xl mx-auto">
+      <a href="/resources/consolidated-cargo-benchmark-kenya/" class="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-5 transition-colors">
+        &larr; Back to the full article
+      </a>
+      <h1 class="font-display text-[clamp(1.5rem,3.2vw,2.4rem)] font-semibold text-canvas tracking-tight leading-tight mb-3 text-balance">
+        Cargo Benchmark One-Pager
+      </h1>
+      <p class="text-[0.9rem] text-canvas/60 max-w-[60ch] leading-relaxed mb-5">
+        Print this and hand it to your clearing agent, or keep it in your shipment file.
+        Everything on one sheet: what changed, what's excluded, what to check at entry.
+      </p>
+      <button
+        onclick="window.print()"
+        class="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors cursor-pointer"
+      >
+        <svg viewBox="0 0 16 16" class="w-4 h-4 fill-current" aria-hidden="true"><path d="M4 1h8v3H4V1zM2 5h12a1 1 0 011 1v5h-3v3H4v-3H1V6a1 1 0 011-1zm3 6v2h6v-2H5zm8-3a1 1 0 100 2 1 1 0 000-2z"/></svg>
+        Print this page
+      </button>
+    </div>
+  </div>
+
+  <div class="max-w-3xl mx-auto px-6 py-10 print:py-0">
+    <div class="print-sheet border border-hairline rounded-xl bg-white p-7 sm:p-9 text-ink">
+      <!-- Sheet header -->
+      <div class="flex items-start justify-between gap-4 border-b-2 border-ink pb-4 mb-5">
+        <div>
+          <p class="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted mb-1">Kenya Customs - Trader Reference</p>
+          <p class="font-display text-[1.3rem] font-bold text-ink leading-tight">Consolidated Cargo Benchmark Change</p>
+          <p class="text-[0.8rem] text-ink-muted mt-1">Presidential directive of 2 September 2026 &middot; verify against KRA/iCMS at entry</p>
+        </div>
+        <p class="font-mono text-[0.65rem] text-ink-muted text-right shrink-0">Updated<br />10 Sept 2026</p>
+      </div>
+
+      <!-- What changed -->
+      <div class="mb-5">
+        <p class="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted mb-2">1 &middot; What changed</p>
+        <ul class="space-y-1.5 text-[0.85rem] leading-relaxed">
+          <li>&bull; Consolidated cargo benchmark cut from <strong>Sh3.2 million to Sh2 million</strong> per container (2 Sept 2026).</li>
+          <li>&bull; Lower assessed value = lower import duty and 16% import VAT on qualifying consignments at or near the floor.</li>
+          <li>&bull; The benchmark is a <strong>minimum</strong> assessable value, not a fixed price - goods genuinely worth more assess at declared value.</li>
+          <li>&bull; Entries lodged <strong>before</strong> the directive may still assess at the previous benchmark - confirm which date governs your file.</li>
+        </ul>
+      </div>
+
+      <!-- Exclusion list -->
+      <div class="mb-5">
+        <p class="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted mb-2">2 &middot; Excluded from the cut (old assessment continues)</p>
+        <div class="grid grid-cols-3 gap-2 mb-2">
+          <p class="border border-ink/20 rounded-md px-3 py-2 text-center text-[0.85rem] font-semibold">Garments</p>
+          <p class="border border-ink/20 rounded-md px-3 py-2 text-center text-[0.85rem] font-semibold">Footwear</p>
+          <p class="border border-ink/20 rounded-md px-3 py-2 text-center text-[0.85rem] font-semibold">Fabrics</p>
+        </div>
+        <ul class="space-y-1.5 text-[0.85rem] leading-relaxed">
+          <li>&bull; Air cargo: <strong>no change</strong> - existing rates and rules.</li>
+          <li>&bull; Mixed containers: split assessment - part at the new floor, excluded lines at old values. Get the split in writing.</li>
+        </ul>
+      </div>
+
+      <!-- At customs checklist -->
+      <div class="mb-5">
+        <p class="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted mb-2">3 &middot; At customs this month - checklist</p>
+        <ul class="space-y-1.5 text-[0.85rem] leading-relaxed">
+          <li>&#9744; Assessment in writing before release - benchmark value shown per line, excluded categories on old values.</li>
+          <li>&#9744; Entry date confirmed - pre-directive vs post-directive assessment basis noted on the file.</li>
+          <li>&#9744; Mixed consignment split reviewed <strong>before</strong> lodging, not after assessment.</li>
+          <li>&#9744; Entry documents kept for input VAT claims (VAT-registered traders).</li>
+          <li>&#9744; Wrong benchmark? Raise it <strong>at assessment time</strong> as a correction, not after release.</li>
+        </ul>
+      </div>
+
+      <!-- Footer -->
+      <div class="border-t border-ink/20 pt-3 flex flex-wrap items-center justify-between gap-2">
+        <p class="text-[0.7rem] text-ink-muted">
+          Compiled by Smart VAT Kenya (KRA-registered VAT agents) &middot; smartvatkenya.co.ke &middot; Full guide + updates: /resources/consolidated-cargo-benchmark-kenya/
+        </p>
+        <p class="text-[0.7rem] text-ink-muted font-mono">Not legal advice for a specific entry</p>
+      </div>
+    </div>
+
+    <p class="text-[0.75rem] text-ink-muted mt-4 no-print">
+      Tip: the print button uses your browser's print dialog - choose "Save as PDF" there if you want a PDF copy to forward on WhatsApp instead of paper.
+    </p>
+  </div>
+</BaseLayout>

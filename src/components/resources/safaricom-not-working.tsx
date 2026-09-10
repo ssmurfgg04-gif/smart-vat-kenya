@@ -445,8 +445,8 @@ export default function SafaricomNotWorkingPage() {
                   KRA iTax Not Working
                 </a>
                 {" · "}
-                <a href="/resources/kra-vat-filing-deadline-august-2026/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
-                  VAT Filing Deadline
+                <a href="/tax-deadlines/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                  VAT Filing Deadlines
                 </a>
                 .
               </p>

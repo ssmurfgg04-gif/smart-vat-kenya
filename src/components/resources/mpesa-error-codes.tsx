@@ -385,8 +385,8 @@ export default function MpesaErrorCodesPage() {
                   KRA penalty for late VAT filing &amp; waiver
                 </a>{" "}
                 and{" "}
-                <a href="/resources/kra-vat-filing-deadline-august-2026/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
-                  August 2026 filing deadline
+                <a href="/tax-deadlines/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                  Kenya tax deadline calendar
                 </a>.
               </p>
             </div>

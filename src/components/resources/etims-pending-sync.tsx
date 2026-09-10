@@ -3,6 +3,7 @@ import { User,  ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosp
 
 import { DEFAULT_AUTHOR, LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { ArticleGrid } from "@/lib/resources"
+import { ServiceCtaBox } from "@/components/service-cta-box"
 import { FAQSection } from "@/components/faq-section"
 
 const WHATSAPP_NUMBER = "254717344440"
@@ -196,6 +197,20 @@ export default function ETIMSPendingSyncPage() {
             A <strong className="text-ink">pending etims sync</strong> means invoices created on eTIMS Client were saved locally but have not been confirmed by KRA &mdash; they only become fully valid once the sync completes and a <strong className="text-ink">server confirmation code</strong> is assigned. To fix a stuck sync: connect to a stable internet connection, click <strong className="text-ink">Sync</strong>, and check the <strong className="text-ink">device certificate is active</strong>. The critical rule is the <strong className="text-ink">7-day lockout</strong> &mdash; if eTIMS Client cannot sync for more than 7 consecutive days, KRA locks the device and you must be reactivated. Never let pending invoices accumulate past that window.
           </p>
         </div>
+
+        {/* Flywheel CTA: free eTIMS diagnostic first, priced incident service second */}
+        <ServiceCtaBox
+          page="etims-pending-sync"
+          selfServiceTitle="Run the free eTIMS error diagnostic"
+          selfServiceCopy="Select your exact eTIMS error - pending sync, invoice rejected, device locked - and get the automated fix steps in seconds. Free, no sign-up."
+          selfServiceHref="/tools/etims-diagnostic/"
+          selfServiceLabel="Open the eTIMS diagnostic"
+          serviceTitle="eTIMS issue not resolving?"
+          serviceCopy="A KRA-registered agent works it with you - sync failures, certificates, rejections - per incident, no subscription."
+          servicePrice="KES 1,500 per incident"
+          serviceHref="https://wa.me/254717344440?text=Hi%2C%20my%20eTIMS%20is%20stuck%20on%20pending%20sync.%20Screenshot%20attached%20-%20KES%201%2C500%20per%20incident."
+          serviceLabel="Send a screenshot"
+        />
 
         {/* Table of contents */}
         <nav aria-label="Table of contents" className="mb-12">

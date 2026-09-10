@@ -1,6 +1,7 @@
 import {
   DoINeedToRegisterForVatKenya,
   CetisKenya2027,
+  ConsolidatedCargoBenchmarkKenya,
   EtimsAccountLocked,
   EtimsCanIClaimMyExpenses,
   EtimsComplianceChecklist,
@@ -46,7 +47,6 @@ import {
   KraStatusCode500ItaxErrors,
   KraTaxAmnesty2026,
   KraVatAuditProcess,
-  KraVatFilingDeadlineAugust2026,
   KraVatPenaltiesReference,
   KraDataSources,
   MpesaErrorCodes,
@@ -76,7 +76,12 @@ import {
   WhatHappensIfIDonTRegisterForVat,
   WithholdingVatKenya,
   NonResidentRentalIncomeTaxKenya,
-  SignificantEconomicPresenceTaxKenya
+  SignificantEconomicPresenceTaxKenya,
+  EtimsVsKraShuruChatbot,
+  RealCostOfTaxesKenyanSme,
+  VatCommercialRentKenya,
+  VatRegistrationKenyaCompareOptions,
+  YoutubeFivePercentTaxKenya
 } from "./index"
 
 export interface ResourceMeta {
@@ -87,6 +92,12 @@ export interface ResourceMeta {
 
 export const resourceComponents: Record<string, React.ComponentType> = {
   "do-i-need-to-register-for-vat-kenya": DoINeedToRegisterForVatKenya,
+  "vat-registration-kenya-compare-options": VatRegistrationKenyaCompareOptions,
+  "etims-vs-kra-shuru-chatbot": EtimsVsKraShuruChatbot,
+  "vat-commercial-rent-kenya": VatCommercialRentKenya,
+  "youtube-5-percent-tax-kenya": YoutubeFivePercentTaxKenya,
+  "consolidated-cargo-benchmark-kenya": ConsolidatedCargoBenchmarkKenya,
+  "real-cost-of-taxes-kenyan-sme": RealCostOfTaxesKenyanSme,
   "cetis-kenya-2027": CetisKenya2027,
   "etims-account-locked": EtimsAccountLocked,
   "etims-can-i-claim-my-expenses": EtimsCanIClaimMyExpenses,
@@ -129,7 +140,8 @@ export const resourceComponents: Record<string, React.ComponentType> = {
   "kra-status-code-500-itax-errors": KraStatusCode500ItaxErrors,
   "kra-tax-amnesty-2026": KraTaxAmnesty2026,
   "kra-vat-audit-process": KraVatAuditProcess,
-  "kra-vat-filing-deadline-august-2026": KraVatFilingDeadlineAugust2026,
+  // kra-vat-filing-deadline-august-2026 removed 2026-09-10: stale single-month page
+  // 301-redirected to /tax-deadlines/ (netlify.toml [[redirects]], public/_redirects, vercel.json)
   "kra-vat-penalties-reference": KraVatPenaltiesReference,
   "kra-data-sources": KraDataSources,
   "mpesa-error-codes": MpesaErrorCodes,
@@ -163,6 +175,36 @@ export const resourceComponents: Record<string, React.ComponentType> = {
 }
 
 export const resourceMeta: Record<string, ResourceMeta> = {
+  "vat-registration-kenya-compare-options": {
+    title: "VAT Registration Kenya: Compare All 3 Options (2026)",
+    description: "DIY on iTax (free, ~3 weeks), facilitators (KES 15,000-30,000), or flat-fee agents (KES 5,000, 1-3 days). Compare cost, time and risk before you choose.",
+    canonical: "/resources/vat-registration-kenya-compare-options/",
+  },
+  "etims-vs-kra-shuru-chatbot": {
+    title: "eTIMS vs KRA Shuru Chatbot: What Each Does",
+    description: "KRA's Shuru WhatsApp chatbot handles simple filings and FAQs free. It can't fix rejected eTIMS invoices or penalty waivers. See where the line is.",
+    canonical: "/resources/etims-vs-kra-shuru-chatbot/",
+  },
+  "vat-commercial-rent-kenya": {
+    title: "VAT on Commercial Rent Kenya: When 16% Applies",
+    description: "Commercial rent is VAT-able at 16% above KES 5M taxable turnover; residential rent is exempt. Landlord's guide to registration, invoicing and eTIMS.",
+    canonical: "/resources/vat-commercial-rent-kenya/",
+  },
+  "youtube-5-percent-tax-kenya": {
+    title: "YouTube 5% Tax Kenya: How Much You'll Actually Lose",
+    description: "Google is withholding 5% of Kenyan creators' AdSense earnings from October. See what you keep at any earning level - and the 1 Oct KRA PIN deadline.",
+    canonical: "/resources/youtube-5-percent-tax-kenya/",
+  },
+  "consolidated-cargo-benchmark-kenya": {
+    title: "Consolidated Cargo Tax Kenya: New Sh2M Benchmark",
+    description: "KRA cut the consolidated cargo benchmark from Sh3.2M to Sh2M on 2 Sept. What changed, the exclusion list, and what to tell your clearing agent.",
+    canonical: "/resources/consolidated-cargo-benchmark-kenya/",
+  },
+  "real-cost-of-taxes-kenyan-sme": {
+    title: "The Real Tax on Running a Small Business in Kenya",
+    description: "Every levy a Kenyan SME actually pays - VAT, PAYE, housing levy, NSSF, SHIF, permits, eTIMS - one worked example and the legal ways to shrink the bill.",
+    canonical: "/resources/real-cost-of-taxes-kenyan-sme/",
+  },
   "do-i-need-to-register-for-vat-kenya": {
     title: "Do I Need to Register for VAT in Kenya?",
     description: "Unsure if your business needs VAT registration? Learn the KES 5M threshold, penalties for late registration, and how to check your obligation.",
@@ -194,8 +236,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/etims-corporate-client-invoice-requirement/",
   },
   "etims-down-offline-invoicing": {
-    title: "Is eTIMS Down? Invoice Offline Now",
-    description: "KRA eTIMS down or offline? Keep issuing invoices now, sync when the portal recovers, and avoid the 7-day device lockout and eTIMS penalties.",
+    title: "eTIMS Down? Keep Invoicing Offline — Sync Later (2026)",
+    description: "Don't stop selling during an eTIMS outage. Use offline invoicing mode and sync when KRA's system recovers. Step-by-step guide.",
     canonical: "/resources/etims-down-offline-invoicing/",
   },
   "etims-fuel-stations": {
@@ -204,8 +246,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/etims-fuel-stations/",
   },
   "etims-invoice-rejected": {
-    title: "eTIMS Invoice Rejected? Fix It Fast",
-    description: "Your eTIMS invoice was rejected by KRA - here's why and exactly how to fix common errors like invalid PIN, duplicate invoice, and stock mismatch.",
+    title: "eTIMS Invoice Rejected? Fix It in 3 Steps (Sept 2026)",
+    description: "Wrong signature type, duplicate serial, or PIN validation failed? Here's the exact fix for each rejection reason. Cancel and reissue correctly.",
     canonical: "/resources/etims-invoice-rejected/",
   },
   "etims-mandate-guide": {
@@ -249,8 +291,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/finance-act-vat-changes-kenya/",
   },
   "how-to-apply-for-kra-pin": {
-    title: "How to Apply for a KRA PIN in Kenya",
-    description: "Step-by-step guide to applying for a KRA PIN online via iTax. Covers individual and business registration, required documents, and troubleshooting.",
+    title: "How to Apply for a KRA PIN Online (15-Minute Guide, 2026)",
+    description: "Apply for your KRA PIN on iTax in 15 minutes. Documents needed, common rejection reasons, and how to check your PIN status.",
     canonical: "/resources/how-to-apply-for-kra-pin/",
   },
   "icms-export-guide": {
@@ -259,8 +301,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/icms-export-guide/",
   },
   "how-to-calculate-vat-in-kenya": {
-    title: "How to Calculate VAT Kenya: 16% Formula",
-    description: "Learn how to calculate 16% VAT in Kenya - VAT exclusive vs inclusive formulas, zero-rated vs exempt, and a free KRA VAT calculator you can use instantly.",
+    title: "Kenya VAT Calculator — Add or Remove 16% Instantly (Free)",
+    description: "Enter any amount and get instant VAT at Kenya's 16% rate. Works for VAT-inclusive and VAT-exclusive prices. No sign-up. Updated for 2026.",
     canonical: "/resources/how-to-calculate-vat-in-kenya/",
   },
   "how-to-file-nil-returns-2026": {
@@ -284,8 +326,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/input-vat-deduction-guide/",
   },
   "itax-portal-not-working": {
-    title: "KRA iTax Not Working? 7 Fixes (2026)",
-    description: "Is KRA iTax down? Check current portal status, fix common errors (status code 500, OTP not received, login failed), and workarounds for outages.",
+    title: "Is iTax Down Right Now? 7 Fixes That Work in 60 Seconds (2026)",
+    description: "Check if iTax is down for everyone or just you, then fix login errors, OTP delays, and Error 500 in under a minute. Updated September 2026.",
     canonical: "/resources/itax-portal-not-working/",
   },
   "kplc-blackout-etims-compliance": {
@@ -314,8 +356,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/kra-penalty-for-late-vat-filing/",
   },
   "kra-pin-not-working": {
-    title: "KRA PIN Not Working? Fix It Now",
-    description: "Your KRA PIN application is stuck or not working? Common causes include ID number mismatches, system errors, and processing delays. Step-by-step fixes.",
+    title: "KRA PIN Not Working? Fix It Now (5 Common Errors, 2026)",
+    description: "PIN not found, already exists, or SMS not arriving? Here's what each error means and how to fix it today. Free 60-second self-diagnosis.",
     canonical: "/resources/kra-pin-not-working/",
   },
   "kra-status-code-500-itax-errors": {
@@ -324,19 +366,14 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/kra-status-code-500-itax-errors/",
   },
   "kra-tax-amnesty-2026": {
-    title: "KRA Tax Amnesty 2026: Act Before Dec 31",
-    description: "Complete guide to the KRA tax amnesty 2026. Waives 100% of penalties and interest on pre-2026 tax debt. Eligibility, how to apply, deadline December 31.",
+    title: "KRA Tax Amnesty 2026: Check If You Qualify Before Dec 31",
+    description: "100% waiver of pre-2026 penalties, interest and fines - but conditions apply until 31 December 2026. Check eligibility free in 4 questions, then act.",
     canonical: "/resources/kra-tax-amnesty-2026/",
   },
   "kra-vat-audit-process": {
     title: "KRA VAT Audit: What to Expect",
     description: "What happens during a KRA VAT audit? From notification to final assessment. Learn your rights, required documents, and how to survive with minimal penalties.",
     canonical: "/resources/kra-vat-audit-process/",
-  },
-  "kra-vat-filing-deadline-august-2026": {
-    title: "VAT Deadline: August 2026 Filing Dates",
-    description: "KRA VAT return for July 2026 is due August 20, 2026. Late filing triggers a 5% penalty plus 1% monthly interest. File on time with our guide.",
-    canonical: "/resources/kra-vat-filing-deadline-august-2026/",
   },
   "kra-vat-penalties-reference": {
     title: "VAT Penalties Kenya 2026: Late Filing",
@@ -359,8 +396,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/nil-returns-tax-amnesty/",
   },
   "safaricom-not-working": {
-    title: "Safaricom Down? M-Pesa Workarounds",
-    description: "Safaricom network or M-Pesa down? Check the current outage status, how downtime affects M-Pesa payments and KRA VAT remittance, and what to do.",
+    title: "Is Safaricom Down Right Now? Check Status + M-Pesa Fixes",
+    description: "Live Safaricom and M-Pesa status checks. If you're paying KRA VAT via Paybill 572572 during an outage, do this before you resend.",
     canonical: "/resources/safaricom-not-working/",
   },
   "small-taxpayer-regime-kenya": {
@@ -369,13 +406,13 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/small-taxpayer-regime-kenya/",
   },
   "tax-compliance-certificate-kenya": {
-    title: "KRA Tax Compliance Certificate (TCC) Kenya",
-    description: "How to get your KRA Tax Compliance Certificate (TCC) fast via iTax: requirements, eTIMS rules, nil return blocks, amnesty for old debt and validity.",
+    title: "Tax Compliance Certificate Kenya: Apply on iTax (2026)",
+    description: "Get your KRA TCC in minutes if compliant. New eTIMS requirement since Oct 2025 — check eligibility before you apply. Step-by-step guide.",
     canonical: "/resources/tax-compliance-certificate-kenya/",
   },
   "vat-auto-populated-return": {
-    title: "KRA Auto-Populated VAT Return 2026",
-    description: "KRA auto-populates VAT returns with eTIMS sales data. Learn what's included, how to verify accuracy, correct errors, and avoid penalties for mismatched figures.",
+    title: "Auto-Populated VAT Return: Fix Missing eTIMS Invoices (2026)",
+    description: "Why are sales or purchases missing from your pre-filled VAT return? Here's how to reconcile eTIMS data before the 20th deadline.",
     canonical: "/resources/vat-auto-populated-return/",
   },
   "vat-bad-debt-refund-kenya": {
@@ -434,8 +471,8 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/vat-labour-outsourcing-kenya/",
   },
   "vat-rates-kenya": {
-    title: "VAT Rates Kenya: 16%, Zero-Rated, Exempt",
-    description: "Kenya's VAT rates for 2026: 16% standard, zero-rated supplies (food, exports, medicine, agricultural inputs), exempt services (insurance, financial, education).",
+    title: "Kenya VAT Rates 2026: 16% Standard + Zero-Rated & Exempt",
+    description: "Kenya's VAT is 16% on most goods. See the complete list of zero-rated and exempt supplies, plus who must register at KES 5M. Updated Aug 2026.",
     canonical: "/resources/vat-rates-kenya/",
   },
   "vat-threshold-kenya": {

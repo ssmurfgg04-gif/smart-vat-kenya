@@ -190,19 +190,17 @@ export default function HomePage() {
               <span className="block text-red-600">VAT return is due.</span>
             </h1>
               <p className="text-[1.08rem] lg:text-[1.15rem] font-semibold text-[#2c3a52] leading-snug mb-5 max-w-[54ch]">
-              Send a screenshot on WhatsApp — fix in minutes, not days.
+              Run the free error diagnostic — the fix in minutes, not days.
             </p>
 
             <p className="text-[0.92rem] leading-relaxed text-[#3f4f68] mb-5 max-w-[54ch]">
               <span className="font-semibold text-red-600">Rejected invoices. Pending sync. Locked accounts.</span>{" "}
-              Overdue VAT registration. We diagnose on WhatsApp and handle the KRA work — you get back to business.
+              Overdue VAT registration. Free diagnostic tools for every common error — or a KRA-registered agent handles the KRA work while you get back to business.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
               <a
-                href={`${WA_BASE}?text=Hi%2C%20my%20eTIMS%20invoice%20isn%27t%20going%20through`} data-track="whatsapp-cta" data-cta-type="hero-etims" data-service="eTIMS Rescue"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/tools/etims-diagnostic/" data-track="service-cta" data-cta-type="hero-etims-diagnostic" data-service="eTIMS Diagnostic"
                 className="inline-flex w-full sm:w-auto flex-col items-center justify-center bg-red-600 hover:bg-red-700 text-white px-7 py-3 rounded-lg shadow-[0_10px_24px_-10px_rgba(220,38,38,0.6)] transition-colors"
               >
                 <span className="inline-flex items-center gap-2.5 font-semibold text-[0.95rem]">
@@ -210,7 +208,7 @@ export default function HomePage() {
                   <ArrowRight size={17} weight="bold" aria-hidden="true" />
                 </span>
                 <span className="text-[0.68rem] text-white/85 font-medium mt-0.5">
-                  We&apos;ll tell you exactly what&apos;s wrong.
+                  Free diagnostic — exact fix steps in 2 minutes.
                 </span>
               </a>
               <a
@@ -326,10 +324,10 @@ export default function HomePage() {
         <section className="bg-[#0f1f3d] px-6 lg:px-10 py-8" aria-label="Why businesses trust Smart VAT Kenya">
           <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6">
             {[
-              { Icon: Lightning, title: "Fast Resolution", body: "Most eTIMS issues diagnosed the same day." },
+              { Icon: Lightning, title: "Fast Resolution", body: "Free eTIMS diagnostic - the fix in 2 minutes." },
               { Icon: ShieldCheck, title: "Penalty Protection", body: "We help you qualify for the Tax Amnesty." },
-              { Icon: UsersThree, title: "Human Support", body: "Real people. Real solutions." },
-              { Icon: ChatCircle, title: "WhatsApp Support", body: "Send us a screenshot. We'll tell you exactly what's wrong.", whatsapp: true },
+              { Icon: UsersThree, title: "Human Support", body: "Real agents. Priced flat, upfront." },
+              { Icon: ChatCircle, title: "WhatsApp Support", body: "Book services, send figures, get filing done.", whatsapp: true },
             ].map(({ Icon, title, body, whatsapp }) => (
               <div key={title} className="flex items-start gap-4">
                 <span className={`shrink-0 rounded-lg p-2.5 ${whatsapp ? "bg-[#25D366]/15 text-[#25D366]" : "bg-blue-400/15 text-blue-300"}`}>
@@ -355,7 +353,7 @@ export default function HomePage() {
                 Something broken with KRA?
               </h2>
               <p className="text-[0.95rem] text-ink-muted max-w-[60ch] mx-auto leading-relaxed mb-8">
-                Pick your problem - get the fix in 3 minutes, or send us a screenshot and we'll handle it.
+                Pick your problem - get the fix in 3 minutes free, or have a KRA-registered agent handle it.
               </p>
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -453,7 +451,7 @@ KRA's{" "}
               {
                 number: "01",
                 problem: "Your eTIMS invoice won't go through",
-                fix: "Error 500, pending sync, a locked account - usually mid-sale, with a customer waiting. We diagnose it over WhatsApp and tell you exactly what's wrong, often in minutes.",
+                fix: "Error 500, pending sync, a locked account - usually mid-sale, with a customer waiting. The free diagnostic pinpoints the exact cause and walks the fix, often in minutes.",
                 Icon: WarningCircle,
               },
               {
@@ -620,7 +618,7 @@ KRA's{" "}
               </p>
               <h3 className="font-display text-xl font-semibold text-canvas mb-1">eTIMS Troubleshooting &amp; Rescue</h3>
               <p className="text-[0.85rem] text-canvas/80 mb-6 leading-relaxed">
-                Invoice rejected, account locked, stuck on pending sync - we diagnose it over WhatsApp and fix it, usually same-day.
+                Invoice rejected, account locked, stuck on pending sync - a KRA-registered agent works it with you and fixes it, per incident.
               </p>
               <p className="font-display text-[1.75rem] sm:text-[2.5rem] font-semibold text-canvas leading-none mb-1 tabular-nums">
                 KES 1,500
@@ -628,8 +626,8 @@ KRA's{" "}
               <p className="text-[0.78rem] text-canvas/65 mb-5 sm:mb-8">per incident</p>
               <ul className="space-y-2.5 flex-1 mb-8" role="list">
                 {[
-                  "Diagnosed over WhatsApp",
-                  "Fixed or escalated same-day",
+                  "Diagnosed by a KRA-registered agent",
+                  "Free diagnostic first - pay only if you need the human",
                   "Applies whether or not you're VAT-registered",
                   "M-PESA receipt provided",
                 ].map((f) => (
@@ -650,8 +648,9 @@ KRA's{" "}
               <p className="font-mono text-[0.65rem] uppercase tracking-widest text-canvas/50 mt-5 mb-2">What happens next</p>
               <ol className="space-y-1.5 text-[0.8rem] text-canvas/70" role="list">
                 {[
-                  "You WhatsApp us the error screenshot",
-                  "We diagnose the exact issue in minutes",
+                  "Run the free diagnostic first - the fix is often there",
+                  "Still stuck? WhatsApp us the error screenshot",
+                  "An agent diagnoses the exact issue with you",
                   "We guide you through the fix or handle it for you",
                   "You get back to invoicing",
                 ].map((step, i) => (
