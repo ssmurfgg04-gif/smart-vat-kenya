@@ -182,7 +182,7 @@ export default function VatRegistrationCompareOptionsPage() {
                         { label: "Upfront cost", diy: "KES 0", fac: "KES 15,000-30,000", agent: "KES 5,000 flat" },
                         { label: "Typical timeline", diy: "1-3 weeks", fac: "1-2 weeks", agent: "1-3 working days" },
                         { label: "Rejection risk", diy: "High - 14+ error codes", fac: "Medium", agent: "Low - pre-checked" },
-                        { label: "Where it happens", diy: "Your browser, your retries", fac: "Their office + Huduma queues", agent: "WhatsApp + agent portal" },
+                        { label: "Where it happens", diy: "Your browser, your retries", fac: "Their office + Huduma queues", agent: "Email + agent portal" },
                         { label: "eTIMS onboarding", diy: "Self-onboarding", fac: "Often charged extra", agent: "Included" },
                         { label: "Obligation check", diy: "You interpret the rules", fac: "Verbal opinion", agent: "Documented against KRA guidance" },
                       ].map((row) => (
@@ -198,7 +198,7 @@ export default function VatRegistrationCompareOptionsPage() {
                 </div>
               </div>
               <p>
-                One caveat before the detail: <strong className="text-ink">"flat-fee agent" is a category, not a brand</strong>. We (Smart VAT Kenya) charge KES 5,000 and we publish that number everywhere, but the category includes other KRA-registered agents too. The point of this comparison is that you should expect the flat-fee, WhatsApp-first, agent-portal model &mdash; whoever delivers it &mdash; and treat any quote above KES 10,000 as needing a written justification.
+                One caveat before the detail: <strong className="text-ink">"flat-fee agent" is a category, not a brand</strong>. We (Smart VAT Kenya) charge KES 5,000 and we publish that number everywhere, but the category includes other KRA-registered agents too. The point of this comparison is that you should expect the flat-fee, email-first, agent-portal model &mdash; whoever delivers it &mdash; and treat any quote above KES 10,000 as needing a written justification.
               </p>
             </div>
           </section>
@@ -255,10 +255,10 @@ export default function VatRegistrationCompareOptionsPage() {
             </h2>
             <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
               <p>
-                The newest model, and the one this site operates: a KRA-registered agent who works through the <strong className="text-ink">agent portal</strong> (a separate iTax interface for professionals, with better uptime than the public portal), quotes one flat fee before starting, and runs the whole relationship over WhatsApp. Registration is KES 5,000 flat, completed in 1-3 working days, with eTIMS onboarding included because a VAT PIN without working e-invoicing is only half the job since the October 2025 Tax Compliance Certificate changes.
+                The newest model, and the one this site operates: a KRA-registered agent who works through the <strong className="text-ink">agent portal</strong> (a separate iTax interface for professionals, with better uptime than the public portal), quotes one flat fee before starting, and runs the whole relationship over email. Registration is KES 5,000 flat, completed in 1-3 working days, with eTIMS onboarding included because a VAT PIN without working e-invoicing is only half the job since the October 2025 Tax Compliance Certificate changes.
               </p>
               <p>
-                Why is it 3-6x cheaper than facilitators without being slower? Three structural reasons: no physical offices to fund, no paper to move (you send document photos, the agent files digitally), and process discipline &mdash; applications are pre-checked against the known rejection codes before submission, so the 1-3 day KRA turnaround is the real timeline rather than a best case. The trade-off is honest and worth stating plainly: you do not get in-person meetings, and you are trusting a WhatsApp thread and a published price instead of a handshake. That is why flat-fee agents publish their process and let you keep your own iTax login and PIN certificate after registration.
+                Why is it 3-6x cheaper than facilitators without being slower? Three structural reasons: no physical offices to fund, no paper to move (you send document photos, the agent files digitally), and process discipline &mdash; applications are pre-checked against the known rejection codes before submission, so the 1-3 day KRA turnaround is the real timeline rather than a best case. The trade-off is honest and worth stating plainly: you do not get in-person meetings, and you are trusting an email thread and a published price instead of a handshake. That is why flat-fee agents publish their process and let you keep your own iTax login and PIN certificate after registration.
               </p>
               <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
                 <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
@@ -355,8 +355,7 @@ export default function VatRegistrationCompareOptionsPage() {
             Take the free eligibility quiz first - or have a KRA-registered agent do it all for KES 5,000 flat.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20read%20the%20registration%20comparison.%20I%20want%20VAT%20registration%20at%20KES%205%2C000%20flat."
-            target="_blank" rel="noopener noreferrer"
+            href="/services/vat-registration/"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

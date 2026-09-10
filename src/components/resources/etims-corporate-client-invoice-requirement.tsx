@@ -231,17 +231,16 @@ export default function EtimsCorporateClientInvoiceRequirement() {
             If you're reading this with client emails sitting in your inbox:
           </p>
           <ul className="space-y-2 text-[0.85rem] text-ink-soft mb-5">
-            <li className="flex items-start gap-2"><span className="text-brand font-bold mt-px">•</span> Free 15-minute WhatsApp chat - review where your invoices stand and what they need to become</li>
+            <li className="flex items-start gap-2"><span className="text-brand font-bold mt-px">•</span> Free 15-minute call - review where your invoices stand and what they need to become</li>
             <li className="flex items-start gap-2"><span className="text-brand font-bold mt-px">•</span> eTIMS onboarding (KES 3,500) - set up end to end, test invoice included</li>
             <li className="flex items-start gap-2"><span className="text-brand font-bold mt-px">•</span> VAT registration (KES 5,000) - if registration comes first</li>
           </ul>
           <div className="flex flex-wrap gap-3">
             <a
-              href="https://wa.me/254717344440?text=Hi%2C%20my%20client%20is%20asking%20for%20eTIMS%20invoices.%20I%20need%20help."
-              target="_blank" rel="noopener noreferrer"
+              href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20my%20client%20is%20asking%20for%20eTIMS%20invoices.%20I%20need%20help."
               className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
             >
-              WhatsApp Now
+              Contact Us Now
               <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
             <a

@@ -82,7 +82,6 @@ const breadcrumbSchema = {
   ],
 }
 
-const WA_BASE = "https://wa.me/254717344440"
 
 /** Contextual internal links surfaced under the answer of any matching question. */
 const ANSWER_LINKS: { match: RegExp; href: string; label: string }[] = [
@@ -175,14 +174,13 @@ export default function FAQPage() {
             Still have questions?
           </p>
           <p className="text-[0.85rem] text-ink-muted mb-5 max-w-[40ch] mx-auto leading-relaxed">
-            Ask us on WhatsApp. We reply in minutes - and we don&apos;t charge for the first conversation.
+            Email us. We reply fast - and we don&apos;t charge for the first conversation.
           </p>
           <a
-            href={`${WA_BASE}?text=Hi%2C%20I%20have%20a%20VAT%20question`}
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20have%20a%20VAT%20question"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
-            Ask on WhatsApp <ArrowRight size={14} weight="bold" aria-hidden="true" />
+            Ask by Email <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>
         </div>
 

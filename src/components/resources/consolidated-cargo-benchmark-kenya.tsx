@@ -316,8 +316,7 @@ export default function ConsolidatedCargoBenchmarkPage() {
             Get VAT-registered so import VAT becomes an input credit instead of a cost - registration is KES 5,000 flat, done in 1-3 working days.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20import%20goods%20and%20want%20VAT%20registration%20so%20I%20can%20claim%20import%20VAT."
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20import%20goods%20and%20want%20VAT%20registration%20so%20I%20can%20claim%20import%20VAT."
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

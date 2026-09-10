@@ -201,7 +201,7 @@ export default function KRAPenaltiesReferencePage() {
         <div className="border-l-[3px] border-brand pl-5 mb-10">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">At a Glance - What You Owe & How to Waive It</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            Facing a KES 10,000+ bill? KRA has <strong className="text-ink">nine penalty categories</strong> - from <strong className="text-ink">KES 10,000</strong> fixed to <strong className="text-ink">KES 100,000/month</strong> (eTIMS, TPA s.59A(5)) and <strong className="text-ink">5% of tax due</strong> (s.86), plus <strong className="text-ink">1% monthly interest</strong>. Good news: most can be <strong className="text-ink">waived via iTax or the 2026 Tax Amnesty</strong> if you act before 31 Dec. This table shows exactly what you owe - and <a href="https://wa.me/254717344440?text=Need%20help%20with%20KRA%20VAT%20penalties" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">we check waiver eligibility free</a>.
+            Facing a KES 10,000+ bill? KRA has <strong className="text-ink">nine penalty categories</strong> - from <strong className="text-ink">KES 10,000</strong> fixed to <strong className="text-ink">KES 100,000/month</strong> (eTIMS, TPA s.59A(5)) and <strong className="text-ink">5% of tax due</strong> (s.86), plus <strong className="text-ink">1% monthly interest</strong>. Good news: most can be <strong className="text-ink">waived via iTax or the 2026 Tax Amnesty</strong> if you act before 31 Dec. This table shows exactly what you owe - and <a href="mailto:info@smartvatkenya.co.ke?subject=Need%20help%20with%20KRA%20VAT%20penalties" className="text-brand underline underline-offset-2 hover:text-brand-hover">we check waiver eligibility free</a>.
           </p>
         </div>
 
@@ -511,8 +511,7 @@ export default function KRAPenaltiesReferencePage() {
                   <strong className="text-ink">KES 4,000</strong> for a full waiver application.
                 </p>
                 <a
-                  href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20KRA%20VAT%20penalties.%20Can%20you%20review%20my%20iTax%20account%20and%20help%20me%20apply%20for%20a%20waiver%3F"
-                  target="_blank" rel="noopener noreferrer"
+                  href="/services/kra-penalty-waiver/"
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
                   Start Your Waiver Application
@@ -547,8 +546,7 @@ export default function KRAPenaltiesReferencePage() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20VAT"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

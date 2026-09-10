@@ -142,8 +142,8 @@ export default function Pillar1Page() {
           serviceTitle="Want us to handle your VAT registration?"
           serviceCopy="Flat fee, done in 1-3 working days. No iTax login required from you - we handle the portal, the follow-ups and the eTIMS onboarding."
           servicePrice="KES 5,000 flat"
-          serviceHref="https://wa.me/254717344440?text=Hi%2C%20I%20want%20help%20with%20VAT%20registration%20-%20KES%205%2C000%20flat%20fee."
-          serviceLabel="Start on WhatsApp"
+          serviceHref="/services/vat-registration/"
+          serviceLabel="See the service"
         />
 
         {/* Table of contents */}
@@ -289,11 +289,10 @@ export default function Pillar1Page() {
                 Most business owners encounter errors, confusing navigation, or rejection letters on their first iTax attempt. Smart VAT Kenya handles the entire process - document check, iTax submission, and eTIMS onboarding - for a flat fee of <strong className="text-ink">KES 5,000</strong>. We have a 100% first-attempt approval rate.
               </p>
               <a
-                href="https://wa.me/254717344440?text=I%20need%20help%20registering%20for%20VAT%20on%20iTax"
-                target="_blank" rel="noopener noreferrer"
+                href="/services/vat-registration/"
                 className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
               >
-                Register for KES 5,000 - WhatsApp Us
+                Register for KES 5,000
                 <ArrowRight size={14} weight="bold" aria-hidden="true" />
               </a>
             </div>
@@ -419,8 +418,7 @@ export default function Pillar1Page() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20VAT"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

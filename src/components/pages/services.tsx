@@ -88,7 +88,6 @@ const serviceFaqSchema = {
   })),
 }
 
-const WA_BASE = "https://wa.me/254717344440"
 
 const services = [
   {
@@ -127,7 +126,7 @@ const services = [
       "We file on the 17th, not the 20th",
       "Avoids KES 10,000 late penalty",
       "M-PESA payment guidance",
-      "WhatsApp filing confirmation",
+      "Email filing confirmation",
       "Dedicated support line",
     ],
     cta: "Start Filing",
@@ -145,7 +144,7 @@ const services = [
     features: [
       "Penalty waiver letter drafted",
       "KRA portal submission",
-      "WhatsApp status updates",
+      "Email status updates",
       "Expert guidance throughout",
       "No success-fee extras",
     ],
@@ -155,7 +154,7 @@ const services = [
 
 const comparisons = [
   { criterion: "Price",                  us: "KES 3,500–5,000",          them: "KES 15,000–30,000" },
-  { criterion: "Communication",          us: "WhatsApp",                  them: "Email / scheduled calls" },
+  { criterion: "Communication",          us: "Email (fast replies)",     them: "Scheduled calls" },
   { criterion: "Turnaround",             us: "1–3 working days",          them: "1–3 weeks" },
   { criterion: "Payment",                us: "M-PESA",                    them: "Bank transfer / cheque" },
   { criterion: "eTIMS guidance",         us: "Included with registration", them: "Charged separately or not offered" },
@@ -293,9 +292,8 @@ export default function ServicesPage() {
                   ))}
                 </ul>
                 <a
-                  href={`${WA_BASE}?text=${s.waText}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`mailto:info@smartvatkenya.co.ke?subject=${s.waText}`}
+                 
                   className={`btn-fill block text-center text-sm font-semibold py-3 rounded-md transition-colors ${
                     s.featured
                       ? "bg-brand text-canvas hover:bg-brand-hover"
@@ -330,7 +328,7 @@ export default function ServicesPage() {
             {[
               { href: "/services/vat-registration-nairobi/", city: "Nairobi", desc: "KRA VAT registration for Nairobi businesses - flat KES 5,000, done in 1–3 working days." },
               { href: "/services/vat-registration-mombasa/", city: "Mombasa", desc: "VAT registration and filing for Mombasa companies and traders - same flat pricing." },
-              { href: "/services/vat-registration-kisumu/", city: "Kisumu", desc: "VAT registration and filing for Kisumu SMEs - handled end-to-end via WhatsApp." },
+              { href: "/services/vat-registration-kisumu/", city: "Kisumu", desc: "VAT registration and filing for Kisumu SMEs - handled end-to-end by email." },
             ].map((l) => (
               <a
                 key={l.href}
@@ -398,13 +396,13 @@ export default function ServicesPage() {
               Transparency is part of the service.
             </h2>
             <p className="text-[0.93rem] text-canvas/70 leading-relaxed max-w-[44ch]">
-              Every engagement includes a clear WhatsApp paper trail, M-PESA receipts, and delivery
+              Every engagement includes a clear email paper trail, M-PESA receipts, and delivery
               confirmation. Nothing is outsourced or hidden.
             </p>
           </div>
           <ul className="grid grid-cols-2 gap-4" role="list">
             {[
-              { Icon: ChatCircle,     label: "WhatsApp updates throughout" },
+              { Icon: ChatCircle,     label: "Email updates throughout" },
               { Icon: CurrencyDollar, label: "M-PESA receipt every time" },
               { Icon: Prohibit,       label: "No hidden fees, ever" },
               { Icon: Clock,          label: "Deadlines met by default" },
@@ -487,14 +485,13 @@ export default function ServicesPage() {
               Ready to get started?
             </p>
             <p className="text-[0.85rem] text-ink-muted">
-              Send a WhatsApp message and we will have your VAT process running within the hour.
+              Send an email and we will have your VAT process running within the hour.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a
-              href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20get%20started%20with%20VAT%20registration.`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20want%20to%20get%20started%20with%20VAT%20registration."
+             
               className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
             >
               Get started

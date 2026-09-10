@@ -6,9 +6,8 @@ import { ArticleGrid } from "@/lib/resources"
 import { ServiceCtaBox } from "@/components/service-cta-box"
 import { FAQSection } from "@/components/faq-section"
 
-const WHATSAPP_NUMBER = "254717344440"
 
-const StatusBanner = ({ lastUpdated = "August 4, 2026", status = "unknown", whatsappNumber }: { lastUpdated?: string; status?: "operational" | "disrupted" | "unknown"; whatsappNumber?: string }) => {
+const StatusBanner = ({ lastUpdated = "August 4, 2026", status = "unknown" }: { lastUpdated?: string; status?: "operational" | "disrupted" | "unknown" }) => {
   const configs = {
     operational: {
       borderClass: "border-emerald-500",
@@ -49,12 +48,11 @@ const StatusBanner = ({ lastUpdated = "August 4, 2026", status = "unknown", what
           </p>
           <p className={`text-sm ${config.subtextClass} mt-1`}>Last checked: {lastUpdated}</p>
           <a
-            href={`https://wa.me/${whatsappNumber || WHATSAPP_NUMBER}?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20right%20now`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20eTIMS%20right%20now"
+           
             className={`inline-flex items-center gap-2 ${config.buttonClass} text-white font-semibold py-2 px-4 rounded text-sm mt-3 transition-colors`}
           >
-            WhatsApp us for help now
+            Get Help Now
             <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>
         </div>
@@ -187,7 +185,6 @@ export default function ETIMSPendingSyncPage() {
         <StatusBanner 
           lastUpdated="August 4, 2026" 
           status="unknown"
-          whatsappNumber="254717344440"
         />
 
         {/* Quick Answer / BLUF */}
@@ -208,8 +205,8 @@ export default function ETIMSPendingSyncPage() {
           serviceTitle="eTIMS issue not resolving?"
           serviceCopy="A KRA-registered agent works it with you - sync failures, certificates, rejections - per incident, no subscription."
           servicePrice="KES 1,500 per incident"
-          serviceHref="https://wa.me/254717344440?text=Hi%2C%20my%20eTIMS%20is%20stuck%20on%20pending%20sync.%20Screenshot%20attached%20-%20KES%201%2C500%20per%20incident."
-          serviceLabel="Send a screenshot"
+          serviceHref="mailto:info@smartvatkenya.co.ke?subject=eTIMS%20stuck%20on%20pending%20sync%20-%20per-incident%20help"
+          serviceLabel="Email us a screenshot"
         />
 
         {/* Table of contents */}
@@ -507,11 +504,10 @@ export default function ETIMSPendingSyncPage() {
             become penalties.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20pending%20sync%20and%20VAT%20filing"
-            target="_blank" rel="noopener noreferrer"
+            href="/services/monthly-vat-filing/"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
-            Get eTIMS Help on WhatsApp
+            Get eTIMS Help
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">

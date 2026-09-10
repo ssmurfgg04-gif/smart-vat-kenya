@@ -268,7 +268,7 @@ html.dark {
       padding: var(--card-padding);
     }
 
-/* Ensure sticky WhatsApp CTA doesn't overlap content */
+/* Ensure fixed bottom-anchored elements respect the device safe area */
     .fixed.bottom-0 {
       padding-bottom: env(safe-area-inset-bottom, 1rem);
     }

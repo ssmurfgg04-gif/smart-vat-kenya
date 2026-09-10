@@ -345,11 +345,10 @@ export default function EtimsMandateGuide() {
               <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
             </a>
             <a
-              href="https://wa.me/254717344440?text=I%20need%20help%20with%20eTIMS%20compliance"
-              target="_blank" rel="noopener noreferrer"
+              href="mailto:info@smartvatkenya.co.ke?subject=I%20need%20help%20with%20eTIMS%20compliance"
               className="inline-flex items-center justify-center gap-2 border border-brand/30 text-ink text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand/5 transition-colors"
             >
-              Ask a Question on WhatsApp
+              Ask a Question by Email
               <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
             </a>
           </div>

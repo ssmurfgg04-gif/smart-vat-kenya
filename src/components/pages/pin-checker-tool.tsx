@@ -2,7 +2,6 @@ import { useState } from "react"
 import { ArrowRight, CheckCircle, ShieldCheck, MagnifyingGlass, Warning } from "@phosphor-icons/react/dist/ssr"
 import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254717344440"
 
 export default function PinCheckerTool() {
   const [pin, setPin] = useState("")
@@ -98,12 +97,11 @@ export default function PinCheckerTool() {
                   Need a live verification (Active status check & TCC lookup) via our KRA-registered agent portal?
                 </p>
                 <a
-                  href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20verify%20live%20status%20for%20KRA%20PIN%3A%20${encodeURIComponent(pin.trim().toUpperCase())}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20want%20to%20verify%20live%20status%20for%20KRA%20PIN%3A%20%24%7BencodeURIComponent%28pin.trim%28%29.toUpperCase%28"
+                 
                   className="btn-fill shrink-0 inline-flex items-center gap-2 bg-brand text-canvas text-xs font-semibold px-4 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
-                  Verify Live on WhatsApp <ArrowRight size={13} weight="bold" />
+                  Verify With an Agent <ArrowRight size={13} weight="bold" />
                 </a>
               </div>
             )}

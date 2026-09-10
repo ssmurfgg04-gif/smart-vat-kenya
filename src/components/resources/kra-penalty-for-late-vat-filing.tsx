@@ -380,7 +380,7 @@ export default function KRAPenaltyPage() {
               <div className="border border-brand/25 bg-brand-muted rounded-lg p-4 flex items-start gap-3">
                 <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
                 <p className="text-[0.83rem] text-ink-soft leading-relaxed">
-                  <strong className="text-ink">Important:</strong> If you have already received an agency notice, the matter is urgent. KRA can freeze your accounts within days. Contact us immediately on WhatsApp and we will help you respond to KRA and negotiate a resolution.
+                  <strong className="text-ink">Important:</strong> If you have already received an agency notice, the matter is urgent. KRA can freeze your accounts within days. Contact us immediately by email and we will help you respond to KRA and negotiate a resolution.
                 </p>
               </div>
             </div>
@@ -428,8 +428,7 @@ export default function KRAPenaltyPage() {
                   <strong className="text-ink">KES 4,000</strong> payable via M-PESA.
                 </p>
                 <a
-                  href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20a%20KRA%20Penalty%20Waiver"
-                  target="_blank" rel="noopener noreferrer"
+                  href="/services/kra-penalty-waiver/"
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
                   Apply for Waiver - KES 4,000
@@ -456,8 +455,7 @@ export default function KRAPenaltyPage() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20VAT"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

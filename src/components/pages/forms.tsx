@@ -3,7 +3,7 @@ import { KRA_FORMS } from "@/lib/forms"
 import { FACTS } from "@/src/lib/vat-facts"
 
 const WA_LINK =
-  "https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20the%20iTax%20portal%20or%20eTIMS."
+  "mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20the%20iTax%20portal%20or%20eTIMS."
 
 export default function FormsPage() {
   const vatForms = KRA_FORMS.filter((f) => f.category === "VAT")
@@ -113,7 +113,7 @@ export default function FormsPage() {
               Tired of fighting the iTax portal?
             </h2>
             <p className="text-[0.95rem] text-canvas/85 max-w-[50ch] leading-relaxed">
-              Let us handle your registration and filing for a flat KES 5,000. WhatsApp us.
+              Let us handle your registration and filing for a flat KES 5,000. Email us.
             </p>
           </div>
           <a
@@ -123,7 +123,7 @@ export default function FormsPage() {
             className="btn-fill inline-flex items-center gap-2 bg-canvas text-brand text-sm font-semibold px-5 py-3 rounded-md transition-colors hover:bg-canvas/90 shrink-0"
           >
             <ChatCircle size={18} weight="fill" aria-hidden="true" />
-            Chat on WhatsApp
+            Contact Us by Email
           </a>
         </div>
       </section>
@@ -150,8 +150,8 @@ export default function FormsPage() {
               </a>
               . The guides above are the official KRA documents that walk you through each of those
               steps. Need someone to do it for you?{" "}
-              <a href="https://wa.me/254717344440" target="_blank" rel="noopener noreferrer" className="text-brand font-medium hover:underline">
-                Talk to us on WhatsApp
+              <a href="mailto:info@smartvatkenya.co.ke?subject=VAT%20service%20enquiry" className="text-brand font-medium hover:underline">
+                Talk to Us by Email
               </a>
               .
             </p>

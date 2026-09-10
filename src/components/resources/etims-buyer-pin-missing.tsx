@@ -4,7 +4,6 @@ import { LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
-const WHATSAPP_NUMBER = "254717344440"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org" as const,
@@ -434,11 +433,10 @@ export default function ETimsBuyerPinMissingPage() {
             Run the free eTIMS diagnostic - it tells you whether to fix the PIN, change to B2C, or treat the sale as an export, with the steps for each.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20buyer%20PIN%20errors"
-            target="_blank" rel="noopener noreferrer"
+            href="/kra-help/"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
-            Get eTIMS Help on WhatsApp
+            Get eTIMS Help
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">

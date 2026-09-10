@@ -422,8 +422,7 @@ export default function KPLCBlackoutPage() {
             We handle your monthly VAT filing so you never miss a deadline - blackout or not.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT%20filing"
-            target="_blank" rel="noopener noreferrer"
+            href="/services/monthly-vat-filing/"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

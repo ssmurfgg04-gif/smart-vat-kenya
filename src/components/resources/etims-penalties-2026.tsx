@@ -3,7 +3,6 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
   "@context": "https://schema.org" as const,
@@ -56,8 +55,8 @@ export default function EtimsPenalties2026Page() {
 
         <div className="bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-lg font-semibold text-ink mb-2">Worried about eTIMS compliance or penalties?</p>
-          <a href={`${WA_BASE}?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20compliance%20and%20avoiding%20penalties`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold px-6 py-3 rounded-md hover:bg-brand-hover transition-colors">
-            Get eTIMS Help on WhatsApp <ArrowRight size={14} weight="bold" />
+          <a href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20eTIMS%20compliance%20and%20avoiding%20penalties" className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold px-6 py-3 rounded-md hover:bg-brand-hover transition-colors">
+            Get eTIMS Help <ArrowRight size={14} weight="bold" />
           </a>
         </div>
 

@@ -16,7 +16,7 @@ const testimonials = [
   {
     name: "Grace K.",
     role: "SME Owner, Nakuru",
-    text: "The WhatsApp updates made the whole process stress-free. I didn't have to chase anyone - they kept me informed at every stage. My penalty was fully waived in 2 weeks.",
+    text: "The regular updates made the whole process stress-free. I didn't have to chase anyone - they kept me informed at every stage. My penalty was fully waived in 2 weeks.",
     rating: 5,
   },
 ]

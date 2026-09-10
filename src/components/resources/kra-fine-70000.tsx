@@ -3,7 +3,6 @@ import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-ico
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
-const WHATSAPP_NUMBER = "254717344440"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org" as const,
@@ -150,11 +149,10 @@ export default function KraFine70000() {
             , or message us - we&apos;ll tell you if it&apos;s covered.
           </p>
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20got%20a%20KRA%20fine%20around%2070%2C000%20-%20does%20the%20amnesty%20cover%20it%3F`}
-            target="_blank" rel="noopener noreferrer"
+            href={`/services/kra-penalty-waiver/`}
             className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
           >
-            Ask if Your Fine Qualifies on WhatsApp
+            Ask if Your Fine Qualifies
             <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>
         </div>
@@ -422,11 +420,10 @@ export default function KraFine70000() {
                     <ArrowRight size={14} weight="bold" aria-hidden="true" />
                   </a>
                   <a
-                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20need%20help%20with%20my%20KRA%20fine%20-%20is%20it%20covered%20by%20the%20amnesty%3F`}
-                    target="_blank" rel="noopener noreferrer"
+                    href={`/services/kra-penalty-waiver/`}
                     className="inline-flex items-center justify-center gap-2 border border-brand/30 text-ink text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand/5 transition-colors"
                   >
-                    Chat on WhatsApp First
+                    Email Us First
                   </a>
                 </div>
               </div>
@@ -450,11 +447,10 @@ export default function KraFine70000() {
             We reconcile your ledger and handle amnesty or waiver applications so you pay the right amount - and fast.
           </p>
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20need%20help%20with%20a%20KRA%20penalty`}
-            target="_blank" rel="noopener noreferrer"
+            href={`/services/kra-penalty-waiver/`}
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
-            Get Help on WhatsApp
+            Get Help
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">

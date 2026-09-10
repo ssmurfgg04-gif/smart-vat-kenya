@@ -66,7 +66,6 @@ const faqSchema = {
   ],
 }
 
-const WA_BASE = "https://wa.me/254717344440"
 
 export default function WhatHappensIfIDontRegisterForVAT() {
   return (
@@ -467,12 +466,11 @@ export default function WhatHappensIfIDontRegisterForVAT() {
               <p className="font-display font-semibold text-ink mb-3">Ready to register for VAT?</p>
               <p className="text-sm text-ink-soft mb-4">
                 Smart VAT Kenya handles your complete VAT registration in 1–3 working days.
-                Flat fee of KES 5,000. WhatsApp us to get started.
+                Flat fee of KES 5,000. Email us to get started.
               </p>
               <a
-                href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20register%20for%20VAT%20with%20Smart%20VAT%20Kenya`}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/services/vat-registration/"
+               
                 className="inline-flex items-center gap-2 bg-brand text-white text-sm font-semibold px-4 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
               >
                 Start VAT Registration

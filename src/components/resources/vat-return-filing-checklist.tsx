@@ -532,12 +532,11 @@ export default function VATReturnFilingChecklistPage() {
                 Filing Stress? Let Us Handle It
               </h2>
               <p className="text-[0.88rem] text-ink-soft leading-relaxed max-w-lg mx-auto mb-6">
-                Our KRA-registered agents file your VAT return on iTax every month. You send us your sales and purchase figures on WhatsApp &mdash; we handle the rest. <strong className="text-ink">KES 3,500/month. No long-term contract.</strong>
+                Our KRA-registered agents file your VAT return on iTax every month. You send us your sales and purchase figures by email &mdash; we handle the rest. <strong className="text-ink">KES 3,500/month. No long-term contract.</strong>
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
-                  href="https://wa.me/254717344440?text=I%20want%20to%20sign%20up%20for%20monthly%20VAT%20filing%20-%20KES%203,500%2Fmonth.%20Please%20send%20me%20the%20next%20steps."
-                  target="_blank" rel="noopener noreferrer"
+                  href="/services/monthly-vat-filing/"
                   className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-6 py-3 rounded-md hover:bg-brand-hover transition-colors"
                 >
                   Start Monthly Filing - KES 3,500/month
@@ -561,8 +560,7 @@ export default function VATReturnFilingChecklistPage() {
             We file hundreds of VAT returns every month. Let us handle yours for KES 3,500/month.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20filing%20my%20VAT%20return"
-            target="_blank" rel="noopener noreferrer"
+            href="/services/monthly-vat-filing/"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Start Filing - KES 3,500/month

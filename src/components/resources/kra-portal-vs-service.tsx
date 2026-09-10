@@ -2,7 +2,6 @@ import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-ico
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
-const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
   "@context": "https://schema.org" as const,
@@ -26,7 +25,7 @@ const faqSchema = {
     {
       "@type": "Question" as const,
       name: "What happens if the iTax portal crashes while I am registering?",
-      acceptedAnswer: { "@type": "Answer" as const, text: "You lose your session data and have to start over. Smart VAT Kenya handles portal friction for you entirely via WhatsApp." }
+      acceptedAnswer: { "@type": "Answer" as const, text: "You lose your session data and have to start over. Smart VAT Kenya handles portal friction for you entirely by email." }
     }
   ]
 }
@@ -89,7 +88,7 @@ export default function KraPortalVsServicePage() {
               <tr>
                 <td className="p-3.5 text-ink-muted">Support channel</td>
                 <td className="p-3.5 text-ink">KRA call centre queue</td>
-                <td className="p-3.5 text-ink font-semibold">WhatsApp (replies in minutes)</td>
+                <td className="p-3.5 text-ink font-semibold">Email (replies fast)</td>
               </tr>
             </tbody>
           </table>
@@ -97,7 +96,7 @@ export default function KraPortalVsServicePage() {
 
         <div className="bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-lg font-semibold text-ink mb-2">Ready to let us handle the portal?</p>
-          <a href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20register%20for%20VAT%20with%20Smart%20VAT`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold px-6 py-3 rounded-md hover:bg-brand-hover transition-colors">
+          <a href="/services/vat-registration/" className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold px-6 py-3 rounded-md hover:bg-brand-hover transition-colors">
             Start Registration - KES 5,000 <ArrowRight size={14} weight="bold" />
           </a>
         </div>

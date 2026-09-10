@@ -279,7 +279,7 @@ export default function EtimsVsShuruChatbotPage() {
                       {[
                         { need: "General tax questions", shuru: "Yes - fast, 24/7", human: "Yes, but why pay" },
                         { need: "Nil return walkthrough", shuru: "Yes", human: "Included in filing if managed" },
-                        { need: "Deadline reminders", shuru: "Yes", human: "WhatsApp reminders on the 15th" },
+                        { need: "Deadline reminders", shuru: "Yes", human: "Free deadline calendar" },
                         { need: "Rejected eTIMS invoice", shuru: "Defines the error only", human: "Diagnoses your exact case" },
                         { need: "Penalty waiver / amnesty case", shuru: "Points to the form", human: "Drafts grounds, follows up" },
                         { need: "VAT registration done for you", shuru: "No", human: "KES 5,000 flat, 1-3 days" },

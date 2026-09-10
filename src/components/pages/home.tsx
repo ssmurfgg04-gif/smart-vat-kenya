@@ -142,7 +142,7 @@ const faqSchema = {
       name: "How long does VAT registration take in Kenya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "VAT registration through Smart VAT Kenya typically takes 1–3 working days from the time you submit your documents via WhatsApp.",
+        text: "VAT registration through Smart VAT Kenya typically takes 1–3 working days from the time you submit your documents by email.",
       },
     },
     {
@@ -164,7 +164,6 @@ const faqSchema = {
   ],
 }
 
-const WA_BASE = FACTS.contact.whatsappUrl
 
 export default function HomePage() {
   return (
@@ -327,10 +326,10 @@ export default function HomePage() {
               { Icon: Lightning, title: "Fast Resolution", body: "Free eTIMS diagnostic - the fix in 2 minutes." },
               { Icon: ShieldCheck, title: "Penalty Protection", body: "We help you qualify for the Tax Amnesty." },
               { Icon: UsersThree, title: "Human Support", body: "Real agents. Priced flat, upfront." },
-              { Icon: ChatCircle, title: "WhatsApp Support", body: "Book services, send figures, get filing done.", whatsapp: true },
-            ].map(({ Icon, title, body, whatsapp }) => (
+              { Icon: ChatCircle, title: "Email Support", body: "Book services, send figures, get filing done." },
+            ].map(({ Icon, title, body }) => (
               <div key={title} className="flex items-start gap-4">
-                <span className={`shrink-0 rounded-lg p-2.5 ${whatsapp ? "bg-[#25D366]/15 text-[#25D366]" : "bg-blue-400/15 text-blue-300"}`}>
+                <span className={`shrink-0 rounded-lg p-2.5 "bg-blue-400/15 text-blue-300"`}>
                   <Icon size={22} weight="bold" aria-hidden="true" />
                 </span>
                 <div>
@@ -389,7 +388,7 @@ export default function HomePage() {
             <p className="text-[0.9rem] text-ink-muted max-w-[48ch] mx-auto leading-relaxed">
               It was built for KRA. The crashes, the OTP failures, the 11:47pm timeout - that's the system 
               telling you it wasn't built for small business owners. We handle registration, eTIMS and monthly filing 
-              for KES 5,000 + KES 3,500/month. M-PESA accepted. Fast replies on WhatsApp - typically within business hours.
+              for KES 5,000 + KES 3,500/month. M-PESA accepted. Fast email replies - typically within business hours.
             </p>
           </div>
         </section>
@@ -415,7 +414,7 @@ export default function HomePage() {
             "On-Time Filing by the 17th",
             "eTIMS Onboarding Included",
             "M-PESA Payment Records Provided",
-            "WhatsApp Support - Not Email Tickets",
+            "Email Support - Real Replies",
             "Published Flat-Fee Pricing",
           ].map((item) => (
             <span key={item} className="flex items-center gap-2 text-[0.78rem] text-ink-muted">
@@ -457,7 +456,7 @@ KRA's{" "}
               {
                 number: "02",
                 problem: "The iTax portal keeps returning errors",
-                fix: "We navigate it for you - you send your KRA PIN and details over WhatsApp, we handle the rest. Our first-attempt rate is high - if KRA rejects a filing we fix and resubmit free.",
+                fix: "We navigate it for you - you send your KRA PIN and details by email, we handle the rest. Our first-attempt rate is high - if KRA rejects a filing we fix and resubmit free.",
                 Icon: FileText,
               },
               {
@@ -540,7 +539,7 @@ KRA's{" "}
               <p className="font-mono text-[0.65rem] uppercase tracking-widest text-canvas/60 mb-4">With Smart VAT Kenya</p>
               <div className="space-y-4">
                 {[
-                  { label: "Your time", value: "One WhatsApp message", cost: "We do the rest" },
+                  { label: "Your time", value: "One email", cost: "We do the rest" },
                   { label: "Errors encountered", value: "Zero", cost: "We navigate iTax for you" },
                   { label: "Deadline risk", value: "Filed on the 17th", cost: "Never the 20th, never late" },
                   { label: "Input tax protection", value: "eTIMS-ready day one", cost: "Special Table checks included" },
@@ -638,9 +637,8 @@ KRA's{" "}
                 ))}
               </ul>
               <a
-                href={`${WA_BASE}?text=I%20need%20eTIMS%20help`} data-track="whatsapp-cta" data-cta-type="pricing-etims" data-service="eTIMS Rescue"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:info@smartvatkenya.co.ke?subject=I%20need%20eTIMS%20help" data-track="contact-cta" data-cta-type="pricing-etims" data-service="eTIMS Rescue"
+               
                 className="btn-fill block text-center bg-brand text-canvas text-sm font-semibold py-3 rounded-md transition-colors hover:bg-brand-hover"
               >
                 Get eTIMS Help Now
@@ -649,7 +647,7 @@ KRA's{" "}
               <ol className="space-y-1.5 text-[0.8rem] text-canvas/70" role="list">
                 {[
                   "Run the free diagnostic first - the fix is often there",
-                  "Still stuck? WhatsApp us the error screenshot",
+                  "Still stuck? Email us the error screenshot",
                   "An agent diagnoses the exact issue with you",
                   "We guide you through the fix or handle it for you",
                   "You get back to invoicing",
@@ -691,9 +689,8 @@ KRA's{" "}
                 ))}
               </ul>
               <a
-                href={`${WA_BASE}?text=I%20want%20the%20KES%205000%20VAT%20Registration`} data-track="whatsapp-cta" data-cta-type="pricing-vat-registration" data-service="VAT Registration"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/services/vat-registration/" data-track="contact-cta" data-cta-type="pricing-vat-registration" data-service="VAT Registration"
+               
                 className="btn-fill block text-center border border-ink text-ink text-sm font-semibold py-3 rounded-md transition-colors hover:bg-ink hover:text-canvas"
               >
                 Start Registration
@@ -701,7 +698,7 @@ KRA's{" "}
               <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mt-5 mb-2">What happens next</p>
               <ol className="space-y-1.5 text-[0.8rem] text-ink-muted" role="list">
                 {[
-                  "You send KRA PIN + ID copy + business name on WhatsApp",
+                  "You send KRA PIN + ID copy + business name by email",
                   "We handle iTax Form VAT 1 and profile update",
                   "You receive VAT PIN + M-PESA receipt in 1-3 days",
                   "We guide you through eTIMS onboarding",
@@ -736,7 +733,7 @@ KRA's{" "}
                   "We file on the 17th, not the 20th",
                   "Avoids KES 10,000 late penalty",
                   "M-PESA payment guidance",
-                  "Dedicated WhatsApp support",
+                  "Dedicated email support",
                   "Monthly confirmation receipt",
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-2.5 text-[0.85rem] text-ink-soft">
@@ -746,9 +743,8 @@ KRA's{" "}
                 ))}
               </ul>
               <a
-                href={`${WA_BASE}?text=I%20want%20the%20KES%203500%20Monthly%20Filing`} data-track="whatsapp-cta" data-cta-type="pricing-monthly" data-service="Monthly Filing"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/services/monthly-vat-filing/" data-track="contact-cta" data-cta-type="pricing-monthly" data-service="Monthly Filing"
+               
                 className="btn-fill block text-center border border-ink text-ink text-sm font-semibold py-3 rounded-md transition-colors hover:bg-ink hover:text-canvas"
               >
                 Start Filing
@@ -792,7 +788,7 @@ KRA's{" "}
               <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mt-5 mb-2">What happens next</p>
               <ol className="space-y-1.5 text-[0.8rem] text-ink-muted" role="list">
                 {[
-                  "You request a free iTax ledger check on WhatsApp",
+                  "You request a free iTax ledger check by email",
                   "We identify which amnesty path applies to you",
                   "We file the returns that unlock the waiver",
                   "If you owe principal, we structure a payment plan",
@@ -913,7 +909,7 @@ KRA's{" "}
             The process
           </p>
           <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-tight text-ink mb-16 text-balance">
-            How to register for VAT in Kenya: no portal, no forms, just WhatsApp.
+            How to register for VAT in Kenya: no portal, no forms, just email.
           </h2>
 
           <div className="grid sm:grid-cols-3 gap-0 border border-hairline rounded-lg overflow-hidden">
@@ -922,7 +918,7 @@ KRA's{" "}
                 step: "01",
                 Icon: ChatCircle,
                 title: "Message us",
-                body: "Send your KRA PIN, ID copy, and business name to our WhatsApp. That is everything we need to start your VAT application.",
+                body: "Send your KRA PIN, ID copy, and business name to our email. That is everything we need to start your VAT application.",
               },
               {
                 step: "02",
@@ -934,7 +930,7 @@ KRA's{" "}
                 step: "03",
                 Icon: ShieldCheck,
                 title: "You receive confirmation",
-                body: "Your VAT PIN or filing receipt is delivered to your WhatsApp, along with your M-PESA transaction record.",
+                body: "Your VAT PIN or filing receipt is delivered by email, along with your M-PESA transaction record.",
               },
             ].map(({ step, Icon, title, body }, i) => (
               <div
@@ -977,13 +973,13 @@ KRA's{" "}
             {[
               {
                 quote:
-                  "Registered in 2 days. The KRA portal had given me errors for 3 weeks. Smart VAT just handled everything over WhatsApp.",
+                  "Registered in 2 days. The KRA portal had given me errors for 3 weeks. Smart VAT just handled everything by email.",
                 name: "James M.",
                 business: "Retail trader, Nairobi",
               },
               {
                 quote:
-                  "KES 5,000 flat, no surprises. My accountant was quoting KES 20,000. I WhatsApped Smart VAT and had my PIN the next day.",
+                  "KES 5,000 flat, no surprises. My accountant was quoting KES 20,000. I emailed Smart VAT and had my PIN the next day.",
                 name: "Amina W.",
                 business: "Consulting firm, Westlands",
               },
@@ -1027,7 +1023,7 @@ KRA's{" "}
               id="faq-heading"
               className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold tracking-tight text-ink leading-tight text-balance"
             >
-              Questions we get every week on WhatsApp
+              Questions we get every week by email
             </h2>
           </div>
           <div className="divide-y divide-hairline">
@@ -1099,12 +1095,11 @@ KRA's{" "}
               <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
             <a
-              href={`${WA_BASE}?text=Hi%2C%20I%20want%20a%20FREE%20KRA%20Tax%20Amnesty%20ledger%20check`} data-track="whatsapp-cta"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/services/kra-penalty-waiver/" data-track="contact-cta"
+             
               className="inline-flex items-center gap-2 text-sm font-medium text-ink-muted hover:text-ink transition-colors whitespace-nowrap"
             >
-              Check on WhatsApp instead
+              Check if you qualify instead
             </a>
           </div>
         </div>
@@ -1125,23 +1120,21 @@ KRA's{" "}
             </h2>
             <p className="text-[0.85rem] text-ink-muted max-w-[42ch] leading-relaxed">
               Every month, VAT returns are due by the 20th. Miss it and KRA charges KES 10,000 automatically.
-              Get a WhatsApp reminder 3 days before every deadline.
+              Every deadline on one page - never miss the 20th again.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
             <a
-              href={`https://wa.me/254717344440?text=Hi%2C%20I%20want%20VAT%20deadline%20reminders%20on%20WhatsApp`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/tax-deadlines/"
+             
               className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3.5 rounded-md hover:bg-brand-hover transition-colors whitespace-nowrap"
             >
-              Get WhatsApp Reminders
+              See All Deadlines
               <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
             </a>
             <a
-              href={`https://wa.me/254717344440?text=Hi%2C%20I%20want%20the%20KES%203500%20Monthly%20VAT%20Filing%20service`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/services/monthly-vat-filing/"
+             
               className="inline-flex items-center gap-2 text-sm font-medium text-ink-muted hover:text-ink transition-colors whitespace-nowrap"
             >
               Let us file for you - KES 3,500/month
@@ -1158,15 +1151,14 @@ KRA's{" "}
               Ready to get your VAT number?
             </h2>
             <p className="text-[0.95rem] text-canvas/80 leading-relaxed max-w-[42ch] text-pretty">
-              Message us on WhatsApp and we will have your KRA VAT registration started
+              Email us and we will have your KRA VAT registration started
               within the hour. Flat fee. M-PESA accepted. No hidden costs.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row lg:justify-end gap-3">
             <a
-              href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20register%20for%20VAT%20with%20Smart%20VAT%20Kenya`} data-track="whatsapp-cta"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/services/vat-registration/" data-track="contact-cta"
+             
               className="btn-fill inline-flex items-center justify-center gap-2 bg-brand text-canvas font-semibold px-6 py-3.5 rounded-md text-sm hover:bg-brand-hover transition-colors"
             >
               Start My VAT Registration

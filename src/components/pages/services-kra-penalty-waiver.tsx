@@ -3,7 +3,7 @@ import {
   CheckCircle,
   Warning,
   FileText,
-  WhatsappLogo,
+  EnvelopeSimple,
   Headset,
   SealCheck,
   Clock,
@@ -24,7 +24,6 @@ const serviceSchema = {
   priceRange: "Free check - cleanup at a flat fee",
 }
 
-const WA_BASE = "https://wa.me/254717344440"
 const WA_TEXT = "Hi%2C%20I%20want%20a%20FREE%20KRA%20Tax%20Amnesty%20ledger%20check"
 
 const included = [
@@ -150,12 +149,11 @@ export default function KRAPenaltyWaiverPage() {
             </span>
           </div>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`} data-track="whatsapp-cta"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D" data-track="contact-cta"
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
-            <WhatsappLogo size={16} weight="fill" aria-hidden="true" />
+            <EnvelopeSimple size={16} weight="fill" aria-hidden="true" />
             Start your free ledger check
           </a>
           <p className="mt-4 text-[0.82rem] text-canvas/70 max-w-[52ch] leading-relaxed">
@@ -307,9 +305,8 @@ export default function KRAPenaltyWaiverPage() {
             </p>
           </div>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`} data-track="whatsapp-cta"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D" data-track="contact-cta"
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
           >
             Get my free ledger check
@@ -353,16 +350,15 @@ export default function KRAPenaltyWaiverPage() {
             Ready to clear your KRA penalties before the deadline?
           </h2>
           <p className="text-[0.93rem] text-canvas/65 max-w-[44ch] mx-auto leading-relaxed mb-8">
-            Send us a WhatsApp message and we will start your free ledger check - the window closes
+            Send us an email and we will start your free ledger check - the window closes
             on 31 December 2026.
           </p>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`} data-track="whatsapp-cta"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D" data-track="contact-cta"
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3.5 rounded-md hover:bg-brand-hover transition-colors"
           >
-            <WhatsappLogo size={16} weight="fill" aria-hidden="true" />
+            <EnvelopeSimple size={16} weight="fill" aria-hidden="true" />
             Get my free ledger check
             <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>

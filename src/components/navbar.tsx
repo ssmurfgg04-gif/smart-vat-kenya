@@ -9,8 +9,7 @@ const navLinks = [
   { href: "/resources/", label: "Resources" },
 ] as const
 
-const WA_LINK =
-  "https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT%20registration%20or%20filing."
+const CONTACT_URL = "/services/"
 
 export function Navbar() {
   const [pathname, setPathname] = useState("/")
@@ -90,9 +89,7 @@ export function Navbar() {
           </button>
 
           <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={CONTACT_URL}
             className="btn-fill inline-flex items-center gap-2 bg-emerald-600 text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors hover:bg-emerald-700"
           >
             Get Started
@@ -104,9 +101,7 @@ export function Navbar() {
 
         <div className="lg:hidden flex items-center gap-2">
           <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={CONTACT_URL}
             className="inline-flex items-center gap-1.5 bg-emerald-600 text-white text-[0.8rem] font-semibold px-3.5 py-2 rounded-md transition-colors hover:bg-emerald-700 whitespace-nowrap"
           >
             Get Started
@@ -184,12 +179,10 @@ export function Navbar() {
             </div>
 
             <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={CONTACT_URL}
               className="btn-fill block mt-4 text-center bg-brand text-white text-sm font-semibold px-4 py-3 rounded-md"
             >
-              Get Started on WhatsApp
+              Get Started
             </a>
           </div>
         </div>

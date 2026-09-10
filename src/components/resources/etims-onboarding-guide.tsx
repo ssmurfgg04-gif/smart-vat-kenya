@@ -304,8 +304,7 @@ export default function ETIMSOnboardingPage() {
                   Most small businesses should start with eTIMS Lite because it is free and requires no installation. If you outgrow it, KRA allows you to upgrade to eTIMS Client or VSCU later. See our{" "}<a href="/resources/etims-invoicing-guide/" className="text-brand underline underline-offset-2 hover:text-brand-hover">invoicing guide</a>{" "}for mandatory invoice fields and QR code verification. Smart VAT Kenya can help you choose the right solution and complete the registration.
                 </p>
               <a
-                href="https://wa.me/254717344440?text=I%20need%20help%20choosing%20the%20right%20eTIMS%20solution%20for%20my%20business"
-                target="_blank" rel="noopener noreferrer"
+                href="mailto:info@smartvatkenya.co.ke?subject=I%20need%20help%20choosing%20the%20right%20eTIMS%20solution%20for%20my%20business"
                 className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
               >
                 Get Help Choosing
@@ -390,11 +389,10 @@ export default function ETIMSOnboardingPage() {
                 Smart VAT Kenya handles eTIMS onboarding as part of our VAT registration package (KES 5,000 flat fee). If you already have a VAT PIN, we offer standalone eTIMS onboarding at a competitive rate. We identify the right solution, complete your iTax application, and walk you through your first invoice.
               </p>
               <a
-                href="https://wa.me/254717344440?text=I%20need%20help%20with%20eTIMS%20onboarding%20for%20my%20business"
-                target="_blank" rel="noopener noreferrer"
+                href="/services/etims-onboarding/"
                 className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
               >
-                Start eTIMS Onboarding - WhatsApp Us
+                Start eTIMS Onboarding
                 <ArrowRight size={14} weight="bold" aria-hidden="true" />
               </a>
             </div>
@@ -527,7 +525,7 @@ export default function ETIMSOnboardingPage() {
                         <li className="list-disc">Activating your account and setting up your profile</li>
                       </ul>
                       <p className="pt-2">
-                        <a href="/forms/kra-etims-onboarding-procedure-guide.pdf" target="_blank" rel="noopener noreferrer"
+                        <a href="/forms/kra-etims-onboarding-procedure-guide.pdf"
                           className="text-brand font-medium hover:underline inline-flex items-center gap-1">
                           Download PDF <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 0v8M2 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                         </a>
@@ -549,7 +547,7 @@ export default function ETIMSOnboardingPage() {
                         <li className="list-disc">Printing invoices with QR codes and emailing them to customers</li>
                       </ul>
                       <p className="pt-2">
-                        <a href="/forms/kra-etims-online-portal-guide.pdf" target="_blank" rel="noopener noreferrer"
+                        <a href="/forms/kra-etims-online-portal-guide.pdf"
                           className="text-brand font-medium hover:underline inline-flex items-center gap-1">
                           Download PDF <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 0v8M2 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                         </a>
@@ -571,7 +569,7 @@ export default function ETIMSOnboardingPage() {
                         <li className="list-disc">Generating sales reports for your own record-keeping</li>
                       </ul>
                       <p className="pt-2">
-                        <a href="/forms/kra-etims-lite-vat-guide.pdf" target="_blank" rel="noopener noreferrer"
+                        <a href="/forms/kra-etims-lite-vat-guide.pdf"
                           className="text-brand font-medium hover:underline inline-flex items-center gap-1">
                           Download PDF <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 0v8M2 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                         </a>
@@ -593,7 +591,7 @@ export default function ETIMSOnboardingPage() {
                         <li className="list-disc">Penalties for operating without integration after notice: up to KES 100,000 per month (TPA s.59A(5))</li>
                       </ul>
                       <p className="pt-2">
-                        <a href="/forms/kra-etims-oscu-vscu-guide.pdf" target="_blank" rel="noopener noreferrer"
+                        <a href="/forms/kra-etims-oscu-vscu-guide.pdf"
                           className="text-brand font-medium hover:underline inline-flex items-center gap-1">
                           Download PDF <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 0v8M2 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                         </a>
@@ -615,11 +613,11 @@ export default function ETIMSOnboardingPage() {
                         <li className="list-disc">Offline mode - invoices are queued and synced when connectivity returns</li>
                       </ul>
                       <div className="flex gap-4 pt-2">
-                        <a href="/forms/kra-etims-paypoint-windows-guide.pdf" target="_blank" rel="noopener noreferrer"
+                        <a href="/forms/kra-etims-paypoint-windows-guide.pdf"
                           className="text-brand text-[0.8rem] font-medium hover:underline inline-flex items-center gap-1">
                           Windows PDF <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 0v8M2 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                         </a>
-                        <a href="/forms/kra-etims-paypoint-android-guide.pdf" target="_blank" rel="noopener noreferrer"
+                        <a href="/forms/kra-etims-paypoint-android-guide.pdf"
                           className="text-brand text-[0.8rem] font-medium hover:underline inline-flex items-center gap-1">
                           Android PDF <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 0v8M2 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                         </a>
@@ -641,7 +639,7 @@ export default function ETIMSOnboardingPage() {
                         <li className="list-disc">VSCU / OSCU: API integration for businesses with existing POS/ERP</li>
                       </ul>
                       <p className="pt-2">
-                        <a href="/forms/kra-etims-onboarding-guidelines.pdf" target="_blank" rel="noopener noreferrer"
+                        <a href="/forms/kra-etims-onboarding-guidelines.pdf"
                           className="text-brand font-medium hover:underline inline-flex items-center gap-1">
                           Download PDF <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 0v8M2 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                         </a>
@@ -677,8 +675,7 @@ export default function ETIMSOnboardingPage() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20VAT"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

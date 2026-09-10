@@ -5,9 +5,8 @@ import { DEFAULT_AUTHOR, LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
-const WHATSAPP_NUMBER = "254717344440"
 
-const StatusBanner = ({ lastUpdated = "August 25, 2026", status = "unknown", whatsappNumber }: { lastUpdated?: string; status?: "operational" | "disrupted" | "unknown"; whatsappNumber?: string }) => {
+const StatusBanner = ({ lastUpdated = "August 25, 2026", status = "unknown" }: { lastUpdated?: string; status?: "operational" | "disrupted" | "unknown" }) => {
   const configs = {
     operational: {
       borderClass: "border-emerald-500",
@@ -48,12 +47,11 @@ const StatusBanner = ({ lastUpdated = "August 25, 2026", status = "unknown", wha
           </p>
           <p className={`text-sm ${config.subtextClass} mt-1`}>Last checked: {lastUpdated}</p>
           <a
-            href={`https://wa.me/${whatsappNumber || WHATSAPP_NUMBER}?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20right%20now`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20eTIMS%20right%20now"
+           
             className={`inline-flex items-center gap-2 ${config.buttonClass} text-white font-semibold py-2 px-4 rounded text-sm mt-3 transition-colors`}
           >
-            WhatsApp us for help now
+            Get Help Now
             <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>
         </div>
@@ -480,11 +478,10 @@ export default function ETIMSDownPage() {
                   <strong className="text-ink">KES 3,500/month</strong> for monthly filing. Free eTIMS support included.
                 </p>
                 <a
-                  href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20and%20VAT%20filing"
-                  target="_blank" rel="noopener noreferrer"
+                  href="/services/monthly-vat-filing/"
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
-                  Get eTIMS Help on WhatsApp
+                  Get eTIMS Help
                   <ArrowRight size={14} weight="bold" aria-hidden="true" />
                 </a>
               </div>
@@ -508,8 +505,7 @@ export default function ETIMSDownPage() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20VAT"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

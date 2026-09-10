@@ -166,7 +166,7 @@ export default function ITaxPortalNotWorkingPage() {
         <div className="border-l-[3px] border-brand pl-5 mb-10">
           <p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-2">Quick Answer - 60-Second Workaround</p>
           <p className="text-[0.93rem] text-ink-soft leading-relaxed">
-            iTax down again? Don&apos;t keep refreshing. Most failures are <strong className="text-ink">cache, OTP delay, or 20th rush</strong> - fixed in 60 seconds: clear cache, switch to <strong className="text-ink">Chrome/Edge</strong>, try before 8am or after 10pm, or reset credentials. Or skip iTax entirely - <strong className="text-ink">we file via the agent portal (no queues)</strong> for <strong className="text-ink">KES 3,500/month</strong> and you never log in again. <a href="https://wa.me/254717344440?text=iTax%20not%20working%20-%20need%20help%20filing" target="_blank" rel="noopener noreferrer" className="text-brand underline underline-offset-2 hover:text-brand-hover">WhatsApp us, we file it today</a>.
+            iTax down again? Don&apos;t keep refreshing. Most failures are <strong className="text-ink">cache, OTP delay, or 20th rush</strong> - fixed in 60 seconds: clear cache, switch to <strong className="text-ink">Chrome/Edge</strong>, try before 8am or after 10pm, or reset credentials. Or skip iTax entirely - <strong className="text-ink">we file via the agent portal (no queues)</strong> for <strong className="text-ink">KES 3,500/month</strong> and you never log in again. <a href="/services/monthly-vat-filing/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Email us, we file it today</a>.
           </p>
         </div>
 
@@ -180,8 +180,8 @@ export default function ITaxPortalNotWorkingPage() {
           serviceTitle="Don't have time to fix iTax yourself?"
           serviceCopy="We file through the KRA agent portal - no queues, no timeouts. You never log in to iTax again."
           servicePrice="KES 3,500/month"
-          serviceHref="https://wa.me/254717344440?text=Hi%2C%20iTax%20is%20stressing%20me.%20I%20want%20monthly%20filing%20at%20KES%203%2C500%2Fmonth%20via%20the%20agent%20portal."
-          serviceLabel="WhatsApp us"
+          serviceHref="/services/monthly-vat-filing/"
+          serviceLabel="See monthly filing"
         />
 
         {/* Table of contents */}
@@ -443,7 +443,7 @@ export default function ITaxPortalNotWorkingPage() {
                 ))}
               </div>
               <p>
-                If you cannot receive OTPs on either SMS or email, and you need to file a return urgently, contact Smart VAT Kenya on WhatsApp. As KRA-registered agents, we can file VAT returns on your behalf using our agent portal &mdash; no OTP required.
+                If you cannot receive OTPs on either SMS or email, and you need to file a return urgently, contact Smart VAT Kenya by email. As KRA-registered agents, we can file VAT returns on your behalf using our agent portal &mdash; no OTP required.
               </p>
             </div>
           </section>
@@ -731,10 +731,10 @@ export default function ITaxPortalNotWorkingPage() {
                   {[
                     "Monthly VAT return filed on iTax before the 20th deadline - every single month, guaranteed.",
                     "No more login errors, no more OTP delays, no more browser compatibility warnings.",
-                    "We prepare your return from your sales and purchase records - you just send us the figures on WhatsApp.",
+                    "We prepare your return from your sales and purchase records - you just send us the figures by email.",
                     "Penalty monitoring - we alert you if KRA has applied any penalties to your account.",
                     "Free eTIMS support - we help you with invoice generation and eTIMS troubleshooting.",
-                    "Dedicated WhatsApp line - reach us anytime, not when iTax decides to work.",
+                    "Dedicated email line - reach us anytime, not when iTax decides to work.",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-[0.85rem] text-ink-soft">
                       <CheckCircle size={15} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -744,7 +744,7 @@ export default function ITaxPortalNotWorkingPage() {
                 </ul>
               </div>
               <p>
-                No setup fee. No long-term contract. You can cancel anytime. Just send us your sales and purchase figures each month via WhatsApp, and we take care of the rest. You will never see an iTax error screen again.
+                No setup fee. No long-term contract. You can cancel anytime. Just send us your sales and purchase figures each month by email, and we take care of the rest. You will never see an iTax error screen again.
               </p>
 
               {/* Conversion CTA */}
@@ -755,8 +755,7 @@ export default function ITaxPortalNotWorkingPage() {
                   <strong className="text-ink">KES 3,500/month</strong> and your returns are filed on time, every time.
                 </p>
                 <a
-                  href="https://wa.me/254717344440?text=Hi%2C%20I%20want%20to%20stop%20dealing%20with%20iTax%20errors.%20Please%20help%20me%20sign%20up%20for%20auto-filing%20at%20KES%203%2C500%2Fmonth."
-                  target="_blank" rel="noopener noreferrer"
+                  href="/services/monthly-vat-filing/"
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
                   Start Auto-Filing - KES 3,500/month
@@ -794,8 +793,7 @@ export default function ITaxPortalNotWorkingPage() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20VAT"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

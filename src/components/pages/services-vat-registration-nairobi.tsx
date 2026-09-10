@@ -6,7 +6,7 @@ import {
   Building,
   CurrencyDollar,
   DeviceMobile,
-  WhatsappLogo,
+  EnvelopeSimple,
   Clock,
   SealCheck,
 } from "@phosphor-icons/react/dist/ssr"
@@ -37,7 +37,6 @@ const localBusinessSchema = {
   description:
     "Professional VAT registration services in Nairobi - KES 5,000 flat fee. KRA iTax registration, eTIMS guidance, and monthly VAT filing.",
   url: "https://smartvatkenya.co.ke/services/vat-registration-nairobi",
-  telephone: "+254717344440",
   email: "info@smartvatkenya.co.ke",
   areaServed: [
     "Nairobi CBD",
@@ -94,7 +93,7 @@ const faqSchema = {
       name: "Can you pick up documents from my business in Nairobi?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. For clients within Nairobi - including Westlands, Kilimani, Industrial Area, Karen, and other suburbs - we can arrange document pickup. Just let us know your location on WhatsApp.",
+        text: "Yes. For clients within Nairobi - including Westlands, Kilimani, Industrial Area, Karen, and other suburbs - we can arrange document pickup. Just let us know your location by email.",
       },
     },
     {
@@ -102,7 +101,7 @@ const faqSchema = {
       name: "Do you serve businesses outside Nairobi?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely. While we are based in Nairobi CBD, the entire KRA iTax process is handled online. We serve businesses across Kenya, including Mombasa, Kisumu, Nakuru, Eldoret, and all other counties. Everything is done via WhatsApp.",
+        text: "Absolutely. While we are based in Nairobi CBD, the entire KRA iTax process is handled online. We serve businesses across Kenya, including Mombasa, Kisumu, Nakuru, Eldoret, and all other counties. Everything is done by email.",
       },
     },
     {
@@ -132,7 +131,6 @@ const faqSchema = {
   ],
 }
 
-const WA_BASE = "https://wa.me/254717344440"
 const WA_TEXT = "Hi%2C%20I%20need%20VAT%20registration%20in%20Nairobi"
 
 const serviceSchema = {
@@ -154,7 +152,7 @@ const inclusions = [
   "eTIMS onboarding guidance",
   "Taxpayer education session",
   "M-PESA receipt provided",
-  "WhatsApp updates throughout",
+  "Email updates throughout",
 ]
 
 const serviceAreas = [
@@ -177,9 +175,9 @@ const steps = [
   {
     number: "01",
     Icon: ChatCircle,
-    title: "WhatsApp Us",
+    title: "Get Started",
     description:
-      "Send your business name, KRA PIN, and national ID over WhatsApp. We are based in Nairobi and respond within minutes.",
+      "Send your business name, KRA PIN, and national ID by email. We are based in Nairobi and respond within minutes.",
     details: [
       "Send KRA PIN certificate",
       "Share a copy of your national ID",
@@ -197,7 +195,7 @@ const steps = [
       "KRA iTax portal - fully handled",
       "Profile update completed",
       "VAT Form 1 submitted",
-      "WhatsApp updates throughout",
+      "Email updates throughout",
     ],
   },
   {
@@ -205,9 +203,9 @@ const steps = [
     Icon: SealCheck,
     title: "You Get Your PIN",
     description:
-      "Your VAT PIN is delivered to your WhatsApp along with your M-PESA receipt. We also walk you through eTIMS onboarding.",
+      "Your VAT PIN is delivered by email along with your M-PESA receipt. We also walk you through eTIMS onboarding.",
     details: [
-      "VAT PIN via WhatsApp",
+      "VAT PIN by email",
       "M-PESA receipt for our fee",
       "eTIMS onboarding walkthrough",
       "Ongoing support for follow-ups",
@@ -217,7 +215,7 @@ const steps = [
 
 const comparisons = [
   { criterion: "Price", us: "KES 5,000 flat", them: "KES 15,000–30,000" },
-  { criterion: "Communication", us: "WhatsApp - reply in minutes", them: "Email / scheduled calls" },
+  { criterion: "Communication", us: "Email - reply fast", them: "Scheduled calls" },
   { criterion: "Turnaround", us: "1–3 working days", them: "1–3 weeks" },
   { criterion: "Payment", us: "M-PESA", them: "Bank transfer / cheque" },
   { criterion: "Location", us: "Nairobi CBD - Pioneer House", them: "Remote / no physical office" },
@@ -228,15 +226,15 @@ const comparisons = [
 const faqs = [
   {
     q: "Do you meet VAT registration clients in person in Nairobi?",
-    a: "Yes. We are based at Pioneer House, Moi Avenue, Nairobi CBD. You can visit our office during working hours or we can arrange to meet at Huduma Centre Nairobi if you prefer to handle documents in person. WhatsApp us first so we know to expect you.",
+    a: "Yes. We are based at Pioneer House, Moi Avenue, Nairobi CBD. You can visit our office during working hours or we can arrange to meet at Huduma Centre Nairobi if you prefer to handle documents in person. Email us first so we know to expect you.",
   },
   {
     q: "Can you pick up documents from my business in Nairobi?",
-    a: "Yes. For clients within Nairobi - including Westlands, Kilimani, Industrial Area, Karen, Lang'ata, and all other suburbs - we can arrange document pickup. Just let us know your location on WhatsApp and we will coordinate a pickup time.",
+    a: "Yes. For clients within Nairobi - including Westlands, Kilimani, Industrial Area, Karen, Lang'ata, and all other suburbs - we can arrange document pickup. Just let us know your location by email and we will coordinate a pickup time.",
   },
   {
     q: "Do you serve businesses outside Nairobi?",
-    a: "Absolutely. While we are based in Nairobi CBD, the entire KRA iTax process is handled online. We serve businesses across Kenya, including Mombasa, Kisumu, Nakuru, Eldoret, and all other counties. Everything is done via WhatsApp - no need to visit Nairobi.",
+    a: "Absolutely. While we are based in Nairobi CBD, the entire KRA iTax process is handled online. We serve businesses across Kenya, including Mombasa, Kisumu, Nakuru, Eldoret, and all other counties. Everything is done by email - no need to visit Nairobi.",
   },
   {
     q: "How long does VAT registration take in Nairobi?",
@@ -244,7 +242,7 @@ const faqs = [
   },
   {
     q: "What documents do I need for VAT registration in Nairobi?",
-    a: "You need your KRA PIN certificate, a copy of your national ID or passport, and your business name and physical address in Nairobi. If you are registering as a company, we also need the company registration certificate and director details. Send these over WhatsApp and we handle the rest.",
+    a: "You need your KRA PIN certificate, a copy of your national ID or passport, and your business name and physical address in Nairobi. If you are registering as a company, we also need the company registration certificate and director details. Send these by email and we handle the rest.",
   },
   {
     q: "Do I need to visit KRA Times Tower or Huduma Centre to register for VAT?",
@@ -252,7 +250,7 @@ const faqs = [
   },
   {
     q: "Can I pay the KES 5,000 fee via M-PESA for VAT registration in Nairobi?",
-    a: "Yes. M-PESA is our primary payment method. We send you our paybill number and you pay directly. You will receive an M-PESA receipt and we will confirm your payment on WhatsApp within minutes.",
+    a: "Yes. M-PESA is our primary payment method. We send you our paybill number and you pay directly. You will receive an M-PESA receipt and we will confirm your payment by email within minutes.",
   },
 ]
 
@@ -299,9 +297,8 @@ export default function VATRegistrationNairobiPage() {
             </span>
           </div>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D"
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Start your registration
@@ -369,9 +366,9 @@ export default function VATRegistrationNairobiPage() {
                 desc: "We are at Pioneer House, Moi Avenue. Visit us or we come to you within Nairobi.",
               },
               {
-                Icon: WhatsappLogo,
-                title: "WhatsApp-first",
-                desc: "Reply within minutes. No emails, no phone tag - just WhatsApp.",
+                Icon: EnvelopeSimple,
+                title: "Email-first",
+                desc: "Reply within minutes. No phone tag - just a clear email thread.",
               },
               {
                 Icon: CurrencyDollar,
@@ -518,12 +515,11 @@ export default function VATRegistrationNairobiPage() {
             </p>
           </div>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D"
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
           >
-            Get started on WhatsApp
+            Get started
             <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>
         </div>
@@ -568,17 +564,16 @@ export default function VATRegistrationNairobiPage() {
               Register for VAT in Nairobi - KES 5,000.
             </h2>
             <p className="text-[0.88rem] text-canvas/65 max-w-[40ch]">
-              Based in Nairobi CBD. Send a WhatsApp message now. No commitment required.
+              Based in Nairobi CBD. Send an email now. No commitment required.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a
-              href={`${WA_BASE}?text=${WA_TEXT}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D"
+             
               className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
             >
-              WhatsApp us now
+              Email us now
               <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
             <a

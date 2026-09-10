@@ -64,9 +64,7 @@ export function ServiceCtaBox({
           </p>
           <a
             href={serviceHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-track="whatsapp-cta"
+            data-track="contact-cta"
             data-cta-type={`service-${page}`}
             className="inline-flex items-center gap-2 min-h-[44px] bg-brand hover:bg-brand-hover text-canvas font-semibold text-[0.85rem] px-4 py-2.5 rounded-md transition-colors active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >

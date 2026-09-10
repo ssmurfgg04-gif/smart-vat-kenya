@@ -2,7 +2,6 @@
 import { RelatedLinks } from "@/components/related-links"
 import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254717344440"
 
 const team = [
   {
@@ -18,8 +17,8 @@ const team = [
     initials: "CM",
     name: "Christopher Maina",
     role: "Client Success Lead",
-    credential: "Registered KRA Tax Agent. Your first point of contact on WhatsApp. Guides every client from first message to delivered PIN.",
-    bio: "Works directly with clients on WhatsApp, ensuring smooth onboarding and resolution of any filing issues.",
+    credential: "Registered KRA Tax Agent. Your first point of contact by email. Guides every client from first email to delivered PIN.",
+    bio: "Works directly with clients by email, ensuring smooth onboarding and resolution of any filing issues.",
     color: "#e07a2f",
     linkedin: "https://linkedin.com/in/christopher-maina-tax",
   },
@@ -43,7 +42,7 @@ const credentials = [
 ]
 
 const values = [
-  { title: "Your time is money", body: "We do the portal work so you run your business. One WhatsApp message replaces three weeks of iTax." },
+  { title: "Your time is money", body: "We do the portal work so you run your business. One email replaces three weeks of iTax." },
   { title: "Never the 20th", body: "We file on the 17th as a matter of process - not a service you have to chase. The deadline is never you or near." },
   { title: "Total-cost honesty", body: "Published flat fees. No discovery call, no negotiation, no hidden costs. KES 5,000 registration. KES 3,500 monthly filing." },
 ]
@@ -87,7 +86,7 @@ export default function AboutPage() {
                 We spent years watching smart, hardworking business owners treat KRA like an unavoidable tax on their sanity. We saw KES 10,000 penalties levied automatically because the portal froze at 11:47pm. We saw suppliers lose input VAT because their vendors got swept onto unverified lists.
               </p>
               <p>
-                So we built the antidote: an agency that operates with software precision, transparent flat pricing, and zero portal friction. You message us on WhatsApp. We handle the rest.
+                So we built the antidote: an agency that operates with software precision, transparent flat pricing, and zero portal friction. You email us. We handle the rest.
               </p>
             </div>
           </div>
@@ -152,8 +151,7 @@ export default function AboutPage() {
                 outage or payment delay never costs you a KES 10,000 late penalty.
               </p>
               <a
-                href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20talk%20to%20a%20real%20person%20about%20VAT`}
-                target="_blank" rel="noopener noreferrer"
+                href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20want%20to%20talk%20to%20a%20real%20person%20about%20VAT"
                 className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas font-semibold px-5 py-3 rounded-md text-sm hover:bg-brand-hover transition-colors"
               >
                 <ChatCircle size={16} aria-hidden="true" /> Message a real person
@@ -218,13 +216,12 @@ export default function AboutPage() {
               </p>
               <p className="flex items-center gap-3">
                 <Star size={18} weight="fill" className="text-brand shrink-0" aria-hidden="true" />
-                Serving the whole of Kenya via WhatsApp + M-PESA
+                Serving the whole of Kenya online + M-PESA
               </p>
             </div>
             <div className="sm:ml-auto">
               <a
-                href={`${WA_BASE}?text=Hi%2C%20I%20message%20from%20your%20About%20page`}
-                target="_blank" rel="noopener noreferrer"
+                href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20message%20from%20your%20About%20page"
                 className="btn-fill inline-flex items-center gap-2 bg-brand text-white font-semibold px-6 py-3 rounded-md text-sm hover:bg-brand-hover transition-colors"
               >
                 Get Started

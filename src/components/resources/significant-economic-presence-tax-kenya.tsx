@@ -253,8 +253,8 @@ export default function SignificantEconomicPresenceTaxPage() {
                   Whether you&apos;re being paid by a foreign platform or trying to work out your own compliance obligations, we can help you make sense of it.
                 </p>
                 <p>
-                  <a href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20understanding%20SEP%20tax%20and%20my%20tax%20position" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">
-                    Talk to us on WhatsApp →
+                  <a href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20understanding%20SEP%20tax%20and%20my%20tax%20position" className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">
+                    Talk to Us by Email →
                   </a>
                 </p>
               </div>
@@ -275,8 +275,7 @@ export default function SignificantEconomicPresenceTaxPage() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20VAT"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

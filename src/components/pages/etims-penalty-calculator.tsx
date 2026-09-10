@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { ArrowRight, Info, WarningCircle, Scales, HandCoins, ListChecks } from "@phosphor-icons/react/dist/ssr"
 
-const WA_BASE = "https://wa.me/254717344440"
 
 function formatKES(n: number) {
   return "KES " + Math.round(n).toLocaleString("en-KE")
@@ -185,9 +184,8 @@ export function EtimsPenaltyCalculator() {
               )}
 
               <a
-                href={`${WA_BASE}?text=${waText}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`mailto:info@smartvatkenya.co.ke?subject=${waText}`}
+               
                 className="btn-fill mt-5 w-full flex items-center justify-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold py-3 rounded-md hover:bg-brand-hover transition-colors"
               >
                 Fix this before it grows - chat with us <ArrowRight size={13} weight="bold" aria-hidden="true" />

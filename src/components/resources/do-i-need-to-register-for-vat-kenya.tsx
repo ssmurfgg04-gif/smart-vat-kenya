@@ -385,11 +385,10 @@ export default function DoINeedVATPage() {
                   <ArrowRight size={14} weight="bold" aria-hidden="true" />
                 </a>
                 <a
-                  href="https://wa.me/254717344440?text=I%20read%20your%20VAT%20registration%20guide%20and%20I%20have%20a%20question."
-                  target="_blank" rel="noopener noreferrer"
+                  href="mailto:info@smartvatkenya.co.ke?subject=I%20read%20your%20VAT%20registration%20guide%20and%20I%20have%20a%20question."
                   className="inline-flex items-center gap-2 border border-brand text-brand font-semibold text-sm px-6 py-3 rounded-md hover:bg-brand/5 transition-colors"
                 >
-                  Ask Us on WhatsApp
+                  Ask Us by Email
                 </a>
               </div>
             </div>
@@ -412,8 +411,7 @@ export default function DoINeedVATPage() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20VAT"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

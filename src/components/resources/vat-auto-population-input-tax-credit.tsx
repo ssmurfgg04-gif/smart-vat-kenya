@@ -4,7 +4,6 @@ import { LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
-const WHATSAPP_NUMBER = "254717344440"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org" as const,
@@ -365,12 +364,11 @@ export default function VatAutoPopulationInputTaxCreditPage() {
               <div className="border border-brand/20 bg-brand-muted rounded-lg p-5">
                 <p className="font-display text-[0.95rem] font-semibold text-ink mb-2">Suspect fraudulent use of your KRA PIN?</p>
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed mb-4">
-                  We have handled PIN fraud cases for Kenyan SMEs. We coordinate the KRA report, the iTax security reset, and the dispute filing - end to end. Send us the unrecognized purchase lines on WhatsApp.
+                  We have handled PIN fraud cases for Kenyan SMEs. We coordinate the KRA report, the iTax security reset, and the dispute filing - end to end. Send us the unrecognized purchase lines by email.
                 </p>
                 <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20see%20unrecognized%20purchases%20on%20my%20VAT%20return`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`/kra-help/`}
+                 
                   className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
                   Report PIN Fraud

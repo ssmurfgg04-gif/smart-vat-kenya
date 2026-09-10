@@ -16,7 +16,6 @@ import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254717344440"
 const WA_TEXT = "Hi%2C%20I%20want%20the%20KES%203500%20Monthly%20VAT%20Filing%20service"
 
 const features = [
@@ -24,24 +23,24 @@ const features = [
   { Icon: CheckCircle, label: "We file on the 17th, not the 20th" },
   { Icon: ShieldCheck, label: "Avoids KES 10,000 late penalty" },
   { Icon: CurrencyDollar, label: "M-PESA payment guidance" },
-  { Icon: Phone, label: "WhatsApp filing confirmation" },
+  { Icon: Phone, label: "Email filing confirmation" },
   { Icon: ChatCircle, label: "Dedicated support line" },
   { Icon: Clock, label: "Monthly reminder & confirmation" },
 ]
 
 const steps = [
-  { num: "01", title: "Send us your KRA PIN", desc: "Share your KRA PIN and VAT details via WhatsApp. We handle everything from there." },
+  { num: "01", title: "Send us your KRA PIN", desc: "Share your KRA PIN and VAT details by email. We handle everything from there." },
   { num: "02", title: "We file on iTax on the 17th", desc: "Your VAT return is prepared and submitted on iTax before the 17th - three days ahead of the deadline." },
-  { num: "03", title: "You get confirmation", desc: "We send you the KRA filing confirmation receipt via WhatsApp the same day. You are done for the month." },
+  { num: "03", title: "You get confirmation", desc: "We send you the KRA filing confirmation receipt by email the same day. You are done for the month." },
 ]
 
 const comparisons = [
-  { criterion: "Time spent on iTax portal", us: "2 minutes on WhatsApp", them: "Hours navigating iTax" },
+  { criterion: "Time spent on iTax portal", us: "2 minutes by email", them: "Hours navigating iTax" },
   { criterion: "Stress of deadline", us: "We handle it", them: "You chase the 20th" },
   { criterion: "Risk of KES 10,000 penalty", us: "Filed on 17th - protected", them: "At risk near the 20th" },
   { criterion: "Portal errors & downtime", us: "We deal with iTax", them: "You deal with it" },
   { criterion: "Payment", us: "M-PESA - 30 seconds", them: "Filing fees + bank charges" },
-  { criterion: "Filing confirmation", us: "Sent to you on WhatsApp", them: "You download from iTax" },
+  { criterion: "Filing confirmation", us: "Sent to you by email", them: "You download from iTax" },
 ]
 
 const faqs = [
@@ -51,7 +50,7 @@ const faqs = [
   },
   {
     q: "Can I cancel anytime?",
-    a: "Yes. No lock-in contracts. Send us a WhatsApp message and your monthly filings stop from the next cycle. No questions asked.",
+    a: "Yes. No lock-in contracts. Send us an email and your monthly filings stop from the next cycle. No questions asked.",
   },
   {
     q: "How do I pay?",
@@ -149,9 +148,8 @@ export default function MonthlyVatFilingPage() {
             </span>
           </div>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`} data-track="whatsapp-cta"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D" data-track="contact-cta"
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Start Monthly Filing
@@ -247,12 +245,11 @@ export default function MonthlyVatFilingPage() {
             </p>
           </div>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`} data-track="whatsapp-cta"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D" data-track="contact-cta"
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
           >
-            Get started on WhatsApp
+            Get started
             <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>
         </div>
@@ -299,9 +296,8 @@ export default function MonthlyVatFilingPage() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a
-              href={`${WA_BASE}?text=${WA_TEXT}`} data-track="whatsapp-cta"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D" data-track="contact-cta"
+             
               className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
             >
               Get started

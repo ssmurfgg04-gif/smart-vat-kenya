@@ -1,7 +1,6 @@
 import { ArrowRight, CheckCircle, Handshake, ShieldCheck, CurrencyDollar } from "@phosphor-icons/react/dist/ssr"
 import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254717344440"
 
 export default function PartnersPage() {
   return (
@@ -30,7 +29,7 @@ export default function PartnersPage() {
           <ul className="space-y-3 text-ink-soft">
             <li className="flex items-start gap-2.5">
               <CheckCircle size={18} weight="fill" className="text-brand shrink-0 mt-0.5" />
-              <span><strong>Dedicated partner WhatsApp line</strong> for instant ticket escalation.</span>
+              <span><strong>Dedicated partner support line</strong> for instant ticket escalation.</span>
             </li>
             <li className="flex items-start gap-2.5">
               <CheckCircle size={18} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -68,10 +67,10 @@ export default function PartnersPage() {
       <div className="bg-canvas-dark rounded-2xl p-10 text-center text-canvas">
         <h2 className="font-display text-2xl font-semibold mb-3">Join 30+ Accountants & Cyber Cafes</h2>
         <p className="text-canvas/70 max-w-lg mx-auto mb-8 text-sm leading-relaxed">
-          Send us a message on WhatsApp with your business name to get your partner onboarding kit and referral code today.
+          Send us an email with your business name to get your partner onboarding kit and referral code today.
         </p>
-        <a href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20join%20the%20Smart%20VAT%20Partner%20Program`} target="_blank" rel="noopener noreferrer" className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas font-semibold px-8 py-4 rounded-md hover:bg-brand-hover transition-colors">
-          Become a Partner on WhatsApp <ArrowRight size={16} weight="bold" aria-hidden="true" />
+        <a href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20want%20to%20join%20the%20Smart%20VAT%20Partner%20Program" className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas font-semibold px-8 py-4 rounded-md hover:bg-brand-hover transition-colors">
+          Become a Partner <ArrowRight size={16} weight="bold" aria-hidden="true" />
         </a>
       </div>
     </div>

@@ -475,7 +475,7 @@ export default function KRAPinNotWorkingPage() {
                 ))}
               </div>
               <p>
-                If you have a deactivated PIN and need to register for VAT, you must first get your PIN reactivated. Contact Smart VAT Kenya on WhatsApp and we can advise on the reactivation process.
+                If you have a deactivated PIN and need to register for VAT, you must first get your PIN reactivated. Contact Smart VAT Kenya by email and we can advise on the reactivation process.
               </p>
             </div>
           </section>
@@ -494,11 +494,10 @@ export default function KRAPinNotWorkingPage() {
             We help businesses and individuals resolve KRA PIN issues every day. Send us a message and we will guide you through the fix.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20my%20KRA%20PIN"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20my%20KRA%20PIN"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
-            Get Help on WhatsApp
+            Get Help
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">

@@ -488,8 +488,7 @@ export default function ETIMSInvoiceRejectedPage() {
                   Stop wasting time on rejected invoices. Our experts handle your eTIMS invoicing and ensure every single invoice is accepted by KRA. From KES 2,500/month.
                 </p>
                 <a
-                  href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20invoicing.%20Please%20help%20me%20sign%20up."
-                  target="_blank" rel="noopener noreferrer"
+                  href="/services/etims-onboarding/"
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
                   Start eTIMS Management - KES 2,500/month
@@ -510,14 +509,13 @@ export default function ETIMSInvoiceRejectedPage() {
         <div className="mt-10 border border-brand/20 bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-[1rem] font-semibold text-ink mb-1">Need eTIMS support?</p>
           <p className="text-[0.85rem] text-ink-muted mb-4 max-w-[40ch] mx-auto leading-relaxed">
-            We help businesses set up eTIMS, fix invoice rejections, and stay compliant. Message us on WhatsApp for fast support.
+            We help businesses set up eTIMS, fix invoice rejections, and stay compliant. Message us by email for fast support.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20eTIMS"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20eTIMS"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
-            Get eTIMS Help on WhatsApp
+            Get eTIMS Help
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">

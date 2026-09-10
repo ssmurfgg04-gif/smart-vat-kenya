@@ -2,7 +2,6 @@ import { ArrowLeft, ArrowRight, CheckCircle, Warning, Info } from "@phosphor-ico
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
-const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
   "@context": "https://schema.org" as const,
@@ -58,10 +57,10 @@ export default function KraHealthCheckPage() {
         <div className="bg-brand-muted rounded-lg p-8 text-center space-y-4">
           <h3 className="font-display text-xl font-semibold text-ink">Get Your Free KRA Health Check</h3>
           <p className="text-ink-muted text-sm max-w-md mx-auto">
-            Send your KRA PIN via WhatsApp for an immediate status review by our registered agents.
+            Send your KRA PIN by email for an immediate status review by our registered agents.
           </p>
-          <a href={`${WA_BASE}?text=Hi%2C%20I%20want%20a%20FREE%20KRA%20Health%20Check%20for%20my%20PIN`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold px-6 py-3.5 rounded-md hover:bg-brand-hover transition-colors">
-            Request Free Health Check on WhatsApp <ArrowRight size={14} weight="bold" />
+          <a href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20want%20a%20FREE%20KRA%20Health%20Check%20for%20my%20PIN" className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold px-6 py-3.5 rounded-md hover:bg-brand-hover transition-colors">
+            Request a Free Health Check <ArrowRight size={14} weight="bold" />
           </a>
         </div>
 

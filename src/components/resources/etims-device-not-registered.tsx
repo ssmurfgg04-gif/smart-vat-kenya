@@ -4,7 +4,6 @@ import { DEFAULT_AUTHOR, LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
-const WHATSAPP_NUMBER = "254717344440"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org" as const,
@@ -94,7 +93,7 @@ const toc = [
   { id: "faq", label: "Frequently Asked Questions" },
 ]
 
-const StatusBanner = ({ lastUpdated = LAST_VERIFIED, status = "unknown", whatsappNumber }: { lastUpdated?: string; status?: "operational" | "disrupted" | "unknown"; whatsappNumber?: string }) => {
+const StatusBanner = ({ lastUpdated = LAST_VERIFIED, status = "unknown" }: { lastUpdated?: string; status?: "operational" | "disrupted" | "unknown" }) => {
   const configs = {
     operational: {
       borderClass: "border-emerald-500",
@@ -132,17 +131,13 @@ const StatusBanner = ({ lastUpdated = LAST_VERIFIED, status = "unknown", whatsap
         <div className="flex-1 min-w-0">
           <p className={`font-semibold text-[0.9rem] ${config.textClass} mb-1`}>{config.label}</p>
           <p className={`text-[0.82rem] ${config.subtextClass} leading-relaxed mb-2`}>{config.message} Last checked: {lastUpdated}.</p>
-          {whatsappNumber && (
-            <a
-              href={`https://wa.me/${whatsappNumber}?text=Hi%2C%20my%20eTIMS%20device%20shows%20%22Not%20Registered%22`}
-              target="_blank"
-              rel="noopener noreferrer"
+          <a
+              href="mailto:info@smartvatkenya.co.ke?subject=eTIMS%20device%20shows%20%27Not%20Registered%27"
               className={`inline-flex items-center gap-1.5 ${config.buttonClass} text-white text-[0.78rem] font-semibold px-3 py-1.5 rounded-md`}
             >
-              Send device serial on WhatsApp
+              Send the device serial by email
               <ArrowRight size={12} weight="bold" aria-hidden="true" />
             </a>
-          )}
         </div>
       </div>
     </div>
@@ -185,7 +180,6 @@ export default function ETimsDeviceNotRegisteredPage() {
         <StatusBanner
           lastUpdated={LAST_VERIFIED}
           status="unknown"
-          whatsappNumber={WHATSAPP_NUMBER}
         />
 
         {/* Quick Answer / BLUF */}
@@ -481,7 +475,7 @@ export default function ETimsDeviceNotRegisteredPage() {
                     Do not buy a &ldquo;refurbished&rdquo; OSCU off Jumia or social media
                   </p>
                   <p className="text-[0.83rem] text-[#8a6500] dark:text-[#ccaa33] leading-relaxed">
-                    We see businesses weekly who bought a cheap OSCU online only to find the device is deregistered, blacklisted, or registered to a different PIN. Always buy from a KRA-authorised eTIMS integrator and get a proper handover letter. If you are stuck with a bad device, we can help you reset and re-register it - send the serial on WhatsApp.
+                    We see businesses weekly who bought a cheap OSCU online only to find the device is deregistered, blacklisted, or registered to a different PIN. Always buy from a KRA-authorised eTIMS integrator and get a proper handover letter. If you are stuck with a bad device, we can help you reset and re-register it - send the serial by email.
                   </p>
                 </div>
               </div>
@@ -510,14 +504,13 @@ export default function ETimsDeviceNotRegisteredPage() {
         <div className="mt-10 border border-brand/20 bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-[1rem] font-semibold text-ink mb-1">Stuck with an unregistered eTIMS device?</p>
           <p className="text-[0.85rem] text-ink-muted mb-4 max-w-[40ch] mx-auto leading-relaxed">
-            Send the device serial and a screenshot of the error on WhatsApp - we will tell you in minutes whether it is a PIN issue, a supplier issue, or a KRA backlog.
+            Send the device serial and a screenshot of the error by email - we will tell you in minutes whether it is a PIN issue, a supplier issue, or a KRA backlog.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20my%20eTIMS%20device%20shows%20%22Not%20Registered%22"
-            target="_blank" rel="noopener noreferrer"
+            href="/services/vat-registration/"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
-            Get Device Help on WhatsApp
+            Get Device Help
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">

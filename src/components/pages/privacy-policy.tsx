@@ -1,4 +1,3 @@
-const WA_BASE = "https://wa.me/254717344440"
 
 const collected = [
   { what: "Business and contact details", why: "Your business name, physical address, phone number, and email - needed to set up your iTax profile and communicate with you." },
@@ -11,7 +10,6 @@ const collected = [
 const sharing = [
   "Kenya Revenue Authority (KRA) - the data you provide is submitted to KRA's iTax portal, which is the sole reason we collect most of it.",
   "Safaricom / M-PESA - payment references are shared with your mobile money provider to process and confirm payments.",
-  "WhatsApp / Meta - messages sent over WhatsApp are subject to WhatsApp's own privacy policy. We cannot control or be liable for WhatsApp's data handling.",
 ]
 
 const rights = [
@@ -55,7 +53,7 @@ export default function PrivacyPolicyPage() {
               <p>
                 Smart VAT Kenya is a professional VAT registration and tax filing service for Kenyan
                 SMEs, operating from Pioneer House, Moi Avenue, Nairobi CBD. We are registered KRA
-                iTax agents and handle client matters over WhatsApp and email.
+                iTax agents and handle client matters over email.
               </p>
               <p>
                 This policy explains what personal data we collect, why we collect it, and the
@@ -177,8 +175,8 @@ export default function PrivacyPolicyPage() {
           </h2>
           <div className="space-y-3 text-[0.95rem] text-ink-soft leading-relaxed max-w-3xl">
             <p>
-              Message us on{" "}
-              <a href={WA_BASE} target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">WhatsApp at +254 717 344 440</a>,
+              Email us at{" "}
+              <a href="mailto:info@smartvatkenya.co.ke" className="text-brand hover:underline">info@smartvatkenya.co.ke</a>,
               email us at <a href="mailto:info@smartvatkenya.co.ke" className="text-brand hover:underline">info@smartvatkenya.co.ke</a>,
               or visit us at Pioneer House, Moi Avenue, Nairobi CBD.
             </p>

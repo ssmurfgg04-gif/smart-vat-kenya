@@ -4,7 +4,6 @@ import { LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
-const WHATSAPP_NUMBER = "254717344440"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org" as const,
@@ -346,9 +345,8 @@ export default function VatReturnDisputeAutoPopulatedPage() {
                   We have filed 200+ successful VAT disputes with KRA. We handle the documentation, the iTax submission, and the audit correspondence end-to-end. Flat fee per dispute.
                 </p>
                 <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20need%20to%20dispute%20my%20auto-populated%20VAT%20return`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`/kra-help/`}
+                 
                   className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
                   Get Dispute Help
@@ -430,11 +428,10 @@ export default function VatReturnDisputeAutoPopulatedPage() {
         <div className="mt-10 border border-brand/20 bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-[1rem] font-semibold text-ink mb-1">Disputing a VAT return?</p>
           <p className="text-[0.85rem] text-ink-muted mb-4 max-w-[40ch] mx-auto leading-relaxed">
-            Send us the disputed return&rsquo;s iTax receipt number and a brief description of the discrepancy on WhatsApp - we will tell you within hours whether you have a dispute that will hold.
+            Send us the disputed return&rsquo;s iTax receipt number and a brief description of the discrepancy by email - we will tell you within hours whether you have a dispute that will hold.
           </p>
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20want%20to%20dispute%20an%20auto-populated%20VAT%20return%20figure`}
-            target="_blank" rel="noopener noreferrer"
+            href={`/kra-help/`}
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Get VAT Dispute Help

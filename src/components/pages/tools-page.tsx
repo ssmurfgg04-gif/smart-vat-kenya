@@ -5,7 +5,6 @@ import { ArrowRight, Calculator, Info, WarningCircle, Question, Wrench, Clipboar
 import { EtimsPenaltyCalculator } from "@/src/components/pages/etims-penalty-calculator"
 import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254717344440"
 
 function formatKES(n: number) {
   return "KES " + n.toLocaleString("en-KE", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
@@ -142,7 +141,7 @@ export default function ToolsPage() {
                 )}
               </div>
             </div>
-            <p className="mt-3 text-[0.72rem] text-ink-muted leading-relaxed flex items-start gap-1.5"><Info size={12} className="shrink-0 mt-0.5" aria-hidden="true" />Kenya VAT standard rate is 16% (KRA 2026). For indicative purposes only.<a href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20get%20started%20with%20VAT%20registration%20or%20filing.`} target="_blank" rel="noopener noreferrer" className="ml-1 text-brand underline underline-offset-2 hover:text-brand-hover">Need help filing?</a></p>
+            <p className="mt-3 text-[0.72rem] text-ink-muted leading-relaxed flex items-start gap-1.5"><Info size={12} className="shrink-0 mt-0.5" aria-hidden="true" />Kenya VAT standard rate is 16% (KRA 2026). For indicative purposes only.<a href="/services/monthly-vat-filing/" className="ml-1 text-brand underline underline-offset-2 hover:text-brand-hover">Need help filing?</a></p>
           </section>
 
           {/* KRA Penalty Calculator */}
@@ -185,7 +184,7 @@ export default function ToolsPage() {
                   </div>
                 )}
                 {penDue > 0 && (
-                  <a href={`${WA_BASE}?text=${penWaText}`} target="_blank" rel="noopener noreferrer" className="btn-fill mt-5 w-full flex items-center justify-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold py-3 rounded-md hover:bg-brand-hover transition-colors">
+                  <a href={`mailto:info@smartvatkenya.co.ke?subject=${penWaText}`} className="btn-fill mt-5 w-full flex items-center justify-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold py-3 rounded-md hover:bg-brand-hover transition-colors">
                     Need help with a waiver or amnesty? Chat with us. <ArrowRight size={13} weight="bold" aria-hidden="true" />
                   </a>
                 )}
@@ -212,7 +211,7 @@ export default function ToolsPage() {
                 <div className="space-y-4">
                   <div><p className="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted mb-1.5">Why it happens</p><p className="text-[0.85rem] text-ink-soft leading-relaxed">{errorDetail.cause}</p></div>
                   <div><p className="font-mono text-[0.6rem] uppercase tracking-widest text-brand mb-1.5">How to fix it</p><p className="text-[0.85rem] text-ink leading-relaxed">{errorDetail.fix}</p></div>
-                  <a href={`${WA_BASE}?text=Hi%2C%20I%27m%20getting%20the%20following%20iTax%20error%3A%20${encodeURIComponent(errorDetail.title)}.%20Can%20you%20help%20me%20file%20my%20VAT%20return%20so%20I%20don%27t%20have%20to%20deal%20with%20this%3F`} target="_blank" rel="noopener noreferrer" className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">Let us file for you instead - KES 3,500/month <ArrowRight size={13} weight="bold" aria-hidden="true" /></a>
+                  <a href="/services/monthly-vat-filing/" className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">Let us file for you instead - KES 3,500/month <ArrowRight size={13} weight="bold" aria-hidden="true" /></a>
                 </div>
               </div>
             )}
@@ -251,7 +250,7 @@ export default function ToolsPage() {
                 <p className={`font-display text-[1.3rem] font-semibold mb-4 ${resultLabels[quizStep].color}`}>VAT Registration: {resultLabels[quizStep].label}</p>
                 <p className="text-[0.88rem] text-ink-muted leading-relaxed max-w-prose mb-6">{resultLabels[quizStep].message}</p>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <a href={`${WA_BASE}?text=Hi%2C%20I%20used%20the%20VAT%20quiz%20and%20got%20${encodeURIComponent(resultLabels[quizStep].label)}.%20Can%20you%20help%20me%3F`} target="_blank" rel="noopener noreferrer" className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">{resultLabels[quizStep].cta} <ArrowRight size={14} weight="bold" aria-hidden="true" /></a>
+                  <a href={`mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20used%20the%20VAT%20quiz%20and%20got%20${encodeURIComponent(resultLabels[quizStep].label)}.%20Can%20you%20help%20me%3F`} className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">{resultLabels[quizStep].cta} <ArrowRight size={14} weight="bold" aria-hidden="true" /></a>
                   <button onClick={() => setQuizStep("start")} className="inline-flex items-center gap-2 border border-hairline text-ink-muted text-sm font-medium px-5 py-3 rounded-md hover:border-ink-muted hover:text-ink transition-colors">Start over</button>
                 </div>
               </div>
@@ -315,8 +314,8 @@ export default function ToolsPage() {
             <p className="font-display text-[1rem] font-semibold text-ink mb-1">Want us to handle all of this for you?</p>
             <p className="text-[0.85rem] text-ink-muted">VAT registration from KES 5,000. Monthly filing from KES 3,500/month. Avoid the KES 10,000 penalty.</p>
           </div>
-          <a href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20get%20started%20with%20VAT%20registration%20or%20filing.`} target="_blank" rel="noopener noreferrer" className="btn-fill shrink-0 inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">
-            Get started on WhatsApp <ArrowRight size={14} weight="bold" aria-hidden="true" />
+          <a href="/services/monthly-vat-filing/" className="btn-fill shrink-0 inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">
+            Get started <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>
         </div>
       </div>

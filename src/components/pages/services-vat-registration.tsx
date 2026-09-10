@@ -37,7 +37,6 @@ const serviceSchema = {
   provider: { "@type": "Organization", name: "Smart VAT Kenya" },
 }
 
-const WA_BASE = "https://wa.me/254717344440"
 
 const inclusions = [
   "iTax profile update",
@@ -53,9 +52,9 @@ const steps = [
   {
     number: "01",
     Icon: ChatCircle,
-    title: "WhatsApp Us",
+    title: "Get Started",
     description:
-      "Send your business name, KRA PIN, and a copy of your national ID over WhatsApp. We take it from there - no forms, no portals.",
+      "Send your business name, KRA PIN, and a copy of your national ID by email. We take it from there - no forms, no portals.",
     details: [
       "Send KRA PIN certificate",
       "Share a copy of your national ID",
@@ -68,12 +67,12 @@ const steps = [
     Icon: FileText,
     title: "We Handle iTax",
     description:
-      "We log into the KRA iTax portal, update your profile, complete VAT Form 1, and submit your application. You get WhatsApp updates at every stage.",
+      "We log into the KRA iTax portal, update your profile, complete VAT Form 1, and submit your application. You get email updates at every stage.",
     details: [
       "KRA iTax portal - fully handled",
       "Profile update completed",
       "VAT Form 1 submitted",
-      "WhatsApp updates throughout",
+      "Email updates throughout",
     ],
   },
   {
@@ -81,9 +80,9 @@ const steps = [
     Icon: SealCheck,
     title: "You Get Your PIN",
     description:
-      "Your VAT PIN is delivered straight to your WhatsApp along with your M-PESA receipt. We also walk you through eTIMS onboarding so you are fully compliant.",
+      "Your VAT PIN is delivered straight to your email along with your M-PESA receipt. We also walk you through eTIMS onboarding so you are fully compliant.",
     details: [
-      "VAT PIN via WhatsApp",
+      "VAT PIN by email",
       "M-PESA receipt for our fee",
       "eTIMS onboarding walkthrough",
       "Ongoing support for follow-ups",
@@ -93,7 +92,7 @@ const steps = [
 
 const comparisons = [
   { criterion: "Price", us: "KES 5,000 flat", them: "KES 15,000–30,000" },
-  { criterion: "Communication", us: "WhatsApp", them: "Email / scheduled calls" },
+  { criterion: "Communication", us: "Email (fast replies)", them: "Scheduled calls" },
   { criterion: "Turnaround", us: "1–3 working days", them: "1–3 weeks" },
   { criterion: "Payment", us: "M-PESA", them: "Bank transfer / cheque" },
   { criterion: "eTIMS guidance", us: "Included", them: "Charged separately or not offered" },
@@ -103,7 +102,7 @@ const comparisons = [
 const faqs = [
   {
     q: "What documents do I need to register for VAT in Kenya?",
-    a: "You need your KRA PIN certificate, a copy of your national ID or passport, and your business name and physical address. If you are registering as a company, we also need the company registration certificate and director details. Send these over WhatsApp and we handle the rest.",
+    a: "You need your KRA PIN certificate, a copy of your national ID or passport, and your business name and physical address. If you are registering as a company, we also need the company registration certificate and director details. Send these by email and we handle the rest.",
   },
   {
     q: "How long does KRA VAT registration take?",
@@ -111,7 +110,7 @@ const faqs = [
   },
   {
     q: "Do I need to log into iTax myself?",
-    a: "No. You never need to log into the KRA iTax portal. We handle everything on your behalf using your authorised credentials. All you need is WhatsApp.",
+    a: "No. You never need to log into the KRA iTax portal. We handle everything on your behalf using your authorised credentials. All you need is an email address.",
   },
   {
     q: "Is eTIMS registration included in the KES 5,000 fee?",
@@ -178,9 +177,8 @@ export default function VATRegistrationPage() {
             </span>
           </div>
           <a
-            href={`${WA_BASE}?text=Hi%2C%20I%20want%20the%20KES%205000%20VAT%20Registration%20service`} data-track="whatsapp-cta"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20want%20the%20KES%205000%20VAT%20Registration%20service" data-track="contact-cta"
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Start your registration
@@ -205,7 +203,7 @@ export default function VATRegistrationPage() {
             <p className="text-[0.93rem] text-ink-muted leading-relaxed max-w-[44ch]">
               Your KES 5,000 covers end-to-end handling of the iTax VAT registration
               process. No add-ons, no upsells - just a complete service delivered to your
-              WhatsApp.
+              inbox.
             </p>
           </div>
           <ul className="space-y-3.5" role="list">
@@ -317,12 +315,11 @@ export default function VATRegistrationPage() {
             </p>
           </div>
           <a
-            href={`${WA_BASE}?text=Hi%2C%20I%20want%20the%20KES%205000%20VAT%20Registration%20service`} data-track="whatsapp-cta"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20want%20the%20KES%205000%20VAT%20Registration%20service" data-track="contact-cta"
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
           >
-            Get started on WhatsApp
+            Get started
             <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>
         </div>
@@ -355,7 +352,7 @@ export default function VATRegistrationPage() {
                 <li>Business name and physical address (and for companies: certificate of incorporation, CR12, director IDs)</li>
                 <li>Bank account details and nature of business</li>
               </ul>
-              <p className="mt-3">Send these over WhatsApp - we handle the iTax Form VAT 1 and profile update. No portal login needed from you. See the full <a href="/resources/vat-registration-checklist/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT registration checklist</a> for a printable list.</p>
+              <p className="mt-3">Send these by email - we handle the iTax Form VAT 1 and profile update. No portal login needed from you. See the full <a href="/resources/vat-registration-checklist/" className="text-brand underline underline-offset-2 hover:text-brand-hover">VAT registration checklist</a> for a printable list.</p>
             </div>
 
             <div>
@@ -424,17 +421,16 @@ export default function VATRegistrationPage() {
               Register for VAT today - KES 5,000.
             </h2>
             <p className="text-[0.88rem] text-canvas/65 max-w-[40ch]">
-              Send a WhatsApp message now. No commitment required - we will confirm we can help before any payment.
+              Send an email now. No commitment required - we will confirm we can help before any payment.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a
-              href={`${WA_BASE}?text=Hi%2C%20I%20want%20the%20KES%205000%20VAT%20Registration%20service`} data-track="whatsapp-cta"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20want%20the%20KES%205000%20VAT%20Registration%20service" data-track="contact-cta"
+             
               className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
             >
-              WhatsApp us now
+              Email us now
               <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
             <a

@@ -15,7 +15,6 @@ import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254717344440"
 const WA_TEXT = "Hi%2C%20I%20need%20VAT%20registration%20in%20Mombasa"
 
 const breadcrumbSchema = {
@@ -39,9 +38,8 @@ const localBusinessSchema = {
   "@id": "https://smartvatkenya.co.ke/services/vat-registration-mombasa#business",
   name: "Smart VAT Kenya - Mombasa Service",
   description:
-    "Remote VAT registration services for Mombasa businesses. KES 5,000 flat fee. WhatsApp-based service covering Mombasa CBD, Nyali, Bamburi, Changamwe, and all Mombasa County.",
+    "Remote VAT registration services for Mombasa businesses. KES 5,000 flat fee. Email-based service covering Mombasa CBD, Nyali, Bamburi, Changamwe, and all Mombasa County.",
   url: "https://smartvatkenya.co.ke/services/vat-registration-mombasa",
-  telephone: "+254717344440",
   email: "info@smartvatkenya.co.ke",
   areaServed: [
     { "@type": "City", name: "Mombasa" },
@@ -56,7 +54,7 @@ const localBusinessSchema = {
     addressCountry: "KE",
   },
   priceRange: "KES 5,000",
-  sameAs: ["https://wa.me/254717344440"],
+  sameAs: ["mailto:info@smartvatkenya.co.ke?subject=VAT%20service%20enquiry"],
 }
 
 const serviceSchema = {
@@ -65,7 +63,7 @@ const serviceSchema = {
   "@id": "https://smartvatkenya.co.ke/services/vat-registration-mombasa#service",
   name: "VAT Registration Services Mombasa",
   description:
-    "Professional KRA VAT registration in Mombasa - KES 5,000 flat fee, done in 1–3 working days. iTax VAT Form 1, PIN generation, and eTIMS guidance included. WhatsApp-based, no office visit needed. M-PESA accepted.",
+    "Professional KRA VAT registration in Mombasa - KES 5,000 flat fee, done in 1–3 working days. iTax VAT Form 1, PIN generation, and eTIMS guidance included. Fully remote, no office visit needed. M-PESA accepted.",
   provider: { "@type": "Organization", name: "Smart VAT Kenya" },
   areaServed: {
     "@type": "City",
@@ -83,7 +81,7 @@ const faqSchema = {
       name: "Do I need to come to Nairobi for VAT registration?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. You never need to visit Nairobi or any physical office. Smart VAT Kenya serves Mombasa businesses entirely remotely via WhatsApp. Send your documents over WhatsApp, and we handle the entire KRA iTax registration process for you from start to finish.",
+        text: "No. You never need to visit Nairobi or any physical office. Smart VAT Kenya serves Mombasa businesses entirely remotely by email. Send your documents over email, and we handle the entire KRA iTax registration process for you from start to finish.",
       },
     },
     {
@@ -107,7 +105,7 @@ const faqSchema = {
       name: "What if I am in Ukunda, Diani, or other parts of the Coast?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We serve businesses across the entire Kenyan Coast - including Ukunda, Diani, Kwale, Kilifi, Malindi, and Watamu. Since everything is done remotely via WhatsApp, your location does not matter. KES 5,000 flat fee applies to all businesses nationwide.",
+        text: "We serve businesses across the entire Kenyan Coast - including Ukunda, Diani, Kwale, Kilifi, Malindi, and Watamu. Since everything is done remotely, your location does not matter. KES 5,000 flat fee applies to all businesses nationwide.",
       },
     },
     {
@@ -123,7 +121,7 @@ const faqSchema = {
       name: "What documents do I need to register for VAT?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You need your KRA PIN certificate, a copy of your national ID or passport, and your business name and physical address (e.g., your Mombasa business location). Companies also need the registration certificate and director details. Send these over WhatsApp and we handle the rest.",
+        text: "You need your KRA PIN certificate, a copy of your national ID or passport, and your business name and physical address (e.g., your Mombasa business location). Companies also need the registration certificate and director details. Send these by email and we handle the rest.",
       },
     },
   ],
@@ -153,8 +151,8 @@ const areas = [
 ]
 
 const whyUs = [
-  { Icon: Phone, title: "Fully remote - no office visit", desc: "You never need to step into an office. Everything happens over WhatsApp, from document collection to PIN delivery." },
-  { Icon: ChatCircle, title: "WhatsApp-based communication", desc: "Real-time updates, no chasing. You get a clear paper trail of every step we take on your registration." },
+  { Icon: Phone, title: "Fully remote - no office visit", desc: "You never need to step into an office. Everything happens over email, from document collection to PIN delivery." },
+  { Icon: ChatCircle, title: "Email-based communication", desc: "Real-time updates, no chasing. You get a clear paper trail of every step we take on your registration." },
   { Icon: CurrencyDollar, title: "M-PESA payments only", desc: "Pay via M-PESA - no bank transfers, no queuing at a bank, no credit card needed." },
   { Icon: MapPin, title: "Serving the entire Coast", desc: "From Mombasa CBD to Ukunda, Kilifi to Malindi - we serve every business on the Kenyan Coast remotely." },
 ]
@@ -169,9 +167,9 @@ const steps = [
   {
     number: "01",
     Icon: ChatCircle,
-    title: "WhatsApp Us from Mombasa",
+    title: "Get Started from Mombasa",
     description:
-      "Send your business name, KRA PIN, and a copy of your national ID over WhatsApp. No need to visit an office or log into iTax yourself.",
+      "Send your business name, KRA PIN, and a copy of your national ID by email. No need to visit an office or log into iTax yourself.",
     details: [
       "Send KRA PIN certificate",
       "Share a copy of your national ID",
@@ -184,22 +182,22 @@ const steps = [
     Icon: FileText,
     title: "We Handle iTax Remotely",
     description:
-      "We log into KRA iTax, update your profile, complete VAT Form 1, and submit your application - all remotely. You get WhatsApp updates at every stage.",
+      "We log into KRA iTax, update your profile, complete VAT Form 1, and submit your application - all remotely. You get email updates at every stage.",
     details: [
       "KRA iTax portal - fully handled",
       "Profile update completed remotely",
       "VAT Form 1 submitted",
-      "WhatsApp updates throughout",
+      "Email updates throughout",
     ],
   },
   {
     number: "03",
     Icon: SealCheck,
-    title: "PIN Delivered to Your WhatsApp",
+    title: "PIN Delivered to Your Inbox",
     description:
       "Your VAT PIN arrives on your phone along with your M-PESA receipt. We also walk you through eTIMS so you are fully compliant from day one.",
     details: [
-      "VAT PIN via WhatsApp",
+      "VAT PIN by email",
       "M-PESA receipt for our fee",
       "eTIMS onboarding walkthrough",
       "Ongoing support for follow-ups",
@@ -210,7 +208,7 @@ const steps = [
 const faqs = [
   {
     q: "Do I need to come to Nairobi for VAT registration?",
-    a: "No. You never need to visit Nairobi or any physical office. Smart VAT Kenya serves Mombasa businesses entirely remotely via WhatsApp. Send your documents over WhatsApp, and we handle the entire KRA iTax registration process for you from start to finish.",
+    a: "No. You never need to visit Nairobi or any physical office. Smart VAT Kenya serves Mombasa businesses entirely remotely by email. Send your documents over email, and we handle the entire KRA iTax registration process for you from start to finish.",
   },
   {
     q: "Can Smart VAT Kenya handle Mombasa KRA matters?",
@@ -222,7 +220,7 @@ const faqs = [
   },
   {
     q: "What if I am in Ukunda, Diani, or other parts of the Coast?",
-    a: "We serve businesses across the entire Kenyan Coast - including Ukunda, Diani, Kwale, Kilifi, Malindi, and Watamu. Since everything is done remotely via WhatsApp, your location does not matter. KES 5,000 flat fee applies to all businesses nationwide.",
+    a: "We serve businesses across the entire Kenyan Coast - including Ukunda, Diani, Kwale, Kilifi, Malindi, and Watamu. Since everything is done remotely, your location does not matter. KES 5,000 flat fee applies to all businesses nationwide.",
   },
   {
     q: "How long does VAT registration take for a Mombasa business?",
@@ -230,7 +228,7 @@ const faqs = [
   },
   {
     q: "What documents do I need to register for VAT?",
-    a: "You need your KRA PIN certificate, a copy of your national ID or passport, and your business name and physical address (e.g., your Mombasa business location). Companies also need the registration certificate and director details. Send these over WhatsApp and we handle the rest.",
+    a: "You need your KRA PIN certificate, a copy of your national ID or passport, and your business name and physical address (e.g., your Mombasa business location). Companies also need the registration certificate and director details. Send these by email and we handle the rest.",
   },
 ]
 
@@ -261,8 +259,8 @@ export default function VATRegistrationMombasaPage() {
           <div className="flex items-start gap-3 bg-canvas/10 rounded-lg p-4 mb-6 max-w-[550px]">
             <Phone size={18} weight="duotone" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
             <p className="text-[0.88rem] text-canvas/80 leading-relaxed">
-              <strong className="text-canvas font-semibold">We serve Mombasa businesses remotely via WhatsApp.</strong>{" "}
-              No need to visit an office. Send your documents over WhatsApp and we handle everything on KRA iTax.
+              <strong className="text-canvas font-semibold">We serve Mombasa businesses remotely.</strong>{" "}
+              No need to visit an office. Send your documents by email and we handle everything on KRA iTax.
             </p>
           </div>
           <p className="text-[0.95rem] text-canvas/70 max-w-[50ch] leading-relaxed mb-6">
@@ -285,9 +283,8 @@ export default function VATRegistrationMombasaPage() {
             </span>
           </div>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`mailto:info@smartvatkenya.co.ke?subject=${WA_TEXT}`}
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Start your Mombasa registration
@@ -311,7 +308,7 @@ export default function VATRegistrationMombasaPage() {
             </h2>
             <p className="text-[0.93rem] text-ink-muted leading-relaxed max-w-[44ch]">
               Your KES 5,000 covers end-to-end handling of the iTax VAT registration
-              process - fully remote, delivered to your WhatsApp. No add-ons, no upsells.
+              process - fully remote, delivered by email. No add-ons, no upsells.
             </p>
           </div>
           <ul className="space-y-3.5" role="list">
@@ -368,7 +365,7 @@ export default function VATRegistrationMombasaPage() {
           </h2>
           <p className="text-[0.93rem] text-ink-muted leading-relaxed max-w-[50ch] mb-10">
             Based in Mombasa or anywhere on the Coast? We serve the following areas 
-            and beyond - all remotely via WhatsApp.
+            and beyond - all fully remote.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3" role="list">
             {areas.map((area) => (
@@ -471,16 +468,15 @@ export default function VATRegistrationMombasaPage() {
               KES 5,000 - VAT registration for Mombasa
             </p>
             <p className="text-[0.85rem] text-ink-muted mt-1">
-              Fully remote via WhatsApp. No office visit needed. Done in 1–3 working days.
+              Fully remote. No office visit needed. Done in 1–3 working days.
             </p>
           </div>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`mailto:info@smartvatkenya.co.ke?subject=${WA_TEXT}`}
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
           >
-            Get started on WhatsApp
+            Get started
             <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>
         </div>
@@ -525,17 +521,16 @@ export default function VATRegistrationMombasaPage() {
               Register for VAT in Mombasa - KES 5,000.
             </h2>
             <p className="text-[0.88rem] text-canvas/65 max-w-[40ch]">
-              Message us on WhatsApp now. No office visit required. We confirm we can help before any payment.
+              Message us by email now. No office visit required. We confirm we can help before any payment.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a
-              href={`${WA_BASE}?text=${WA_TEXT}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`mailto:info@smartvatkenya.co.ke?subject=${WA_TEXT}`}
+             
               className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
             >
-              WhatsApp us now
+              Email us now
               <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
             <a

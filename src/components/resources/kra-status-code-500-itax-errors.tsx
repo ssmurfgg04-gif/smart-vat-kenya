@@ -406,9 +406,9 @@ export default function KraStatusCode500Page() {
                   {[
                     "Monthly VAT return filed before the 20th - every single month, guaranteed, via the KRA agent portal.",
                     "No more Error 500, no more blank white pages, no more waiting for KRA to restart their servers.",
-                    "We prepare your return from your sales and purchase records - you just send the figures on WhatsApp.",
+                    "We prepare your return from your sales and purchase records - you just send the figures by email.",
                     "Penalty monitoring and waiver applications handled for you.",
-                    "Dedicated WhatsApp line - reach us anytime during business hours.",
+                    "Dedicated email line - reach us anytime during business hours.",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-[0.85rem] text-ink-soft">
                       <CheckCircle size={15} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
@@ -429,8 +429,7 @@ export default function KraStatusCode500Page() {
                   <strong className="text-ink">KES 3,500/month</strong>, filed before the 20th, every month.
                 </p>
                 <a
-                  href="https://wa.me/254717344440?text=Hi%2C%20I%20want%20to%20stop%20dealing%20with%20iTax%20Error%20500.%20Please%20help%20me%20sign%20up%20for%20auto-filing."
-                  target="_blank" rel="noopener noreferrer"
+                  href="/services/monthly-vat-filing/"
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
                   Start Auto-Filing - KES 3,500/month
@@ -457,8 +456,7 @@ export default function KraStatusCode500Page() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20VAT"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

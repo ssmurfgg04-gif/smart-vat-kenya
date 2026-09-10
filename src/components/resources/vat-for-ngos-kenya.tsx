@@ -295,8 +295,7 @@ export default function VATForNGOsPage() {
             We handle VAT registration, exemption certificate applications, and monthly filing for NGOs in Kenya.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20NGO%20VAT%20in%20Kenya"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20NGO%20VAT%20in%20Kenya"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Chat With Our NGO Tax Team

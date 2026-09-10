@@ -6,7 +6,7 @@ import {
   ArrowUpRight,
   CheckCircle,
   Warning,
-  WhatsappLogo,
+  EnvelopeSimple,
   SealCheck,
   ShieldCheck,
   CalendarCheck,
@@ -16,7 +16,6 @@ import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254717344440"
 const WA_TEXT = encodeURIComponent("Hi, I'd like a FREE KRA Tax Amnesty ledger check before 31 Dec 2026")
 
 const serviceSchema = {
@@ -212,12 +211,11 @@ export default function TaxAmnesty2026Page() {
               </span>
             </div>
             <a
-              href={`${WA_BASE}?text=${WA_TEXT}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`mailto:info@smartvatkenya.co.ke?subject=${WA_TEXT}`}
+             
               className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
             >
-              <WhatsappLogo size={16} weight="fill" aria-hidden="true" />
+              <EnvelopeSimple size={16} weight="fill" aria-hidden="true" />
               Get my free ledger check
             </a>
           </div>
@@ -365,9 +363,8 @@ export default function TaxAmnesty2026Page() {
             </p>
           </div>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`mailto:info@smartvatkenya.co.ke?subject=${WA_TEXT}`}
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
           >
             Get my free check
@@ -414,12 +411,11 @@ export default function TaxAmnesty2026Page() {
             before the 31 December 2026 window closes.
           </p>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`mailto:info@smartvatkenya.co.ke?subject=${WA_TEXT}`}
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3.5 rounded-md hover:bg-brand-hover transition-colors"
           >
-            <WhatsappLogo size={16} weight="fill" aria-hidden="true" />
+            <EnvelopeSimple size={16} weight="fill" aria-hidden="true" />
             Get my free ledger check
             <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>

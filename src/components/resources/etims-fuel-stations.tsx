@@ -256,11 +256,10 @@ export default function EtimsFuelStations() {
                 <strong className="text-ink">Free eTIMS support with our monthly VAT filing (KES 3,500/month)</strong>.
               </p>
               <a
-                href="https://wa.me/254717344440?text=Hi%2C%20I%20run%20a%20fuel%20station%20and%20need%20help%20getting%20eTIMS%20compliant"
-                target="_blank" rel="noopener noreferrer"
+                href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20run%20a%20fuel%20station%20and%20need%20help%20getting%20eTIMS%20compliant"
                 className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
               >
-                Get eTIMS Help on WhatsApp
+                Get eTIMS Help
                 <ArrowRight size={14} weight="bold" aria-hidden="true" />
               </a>
             </div>
@@ -308,11 +307,10 @@ export default function EtimsFuelStations() {
             We handle your KRA VAT registration, eTIMS onboarding, and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20VAT"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
-            Chat on WhatsApp
+            Contact Us by Email
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">

@@ -413,20 +413,19 @@ export default function SmallTaxpayerRegimePage() {
                 ))}
               </div>
               <p>
-                Not sure which regime fits your business? <strong className="text-ink">Smart VAT Kenya</strong> offers a free WhatsApp consultation. We can review your numbers and recommend the right approach - no obligation, no sales pressure.
+                Not sure which regime fits your business? <strong className="text-ink">Smart VAT Kenya</strong> offers a free consultation. We can review your numbers and recommend the right approach - no obligation, no sales pressure.
               </p>
               <div className="mt-8 border border-brand/20 bg-brand-muted rounded-lg p-6">
                 <p className="font-display text-[1.15rem] font-semibold text-ink mb-3">Still not sure which regime applies?</p>
                 <p className="text-[0.84rem] text-ink-soft leading-relaxed mb-4">
-                  Send us a message on WhatsApp. We will help you determine whether you should be on Turnover Tax, voluntary VAT, or mandatory VAT - and handle the entire registration process for you.{" "}
+                  Send us a message by email. We will help you determine whether you should be on Turnover Tax, voluntary VAT, or mandatory VAT - and handle the entire registration process for you.{" "}
                   <strong className="text-ink">KES 5,000 flat fee</strong> for VAT registration. No hidden costs.
                 </p>
                 <a
-                  href="https://wa.me/254717344440?text=Hi%2C%20I%20want%20to%20find%20out%20which%20tax%20regime%20is%20right%20for%20my%20small%20business."
-                  target="_blank" rel="noopener noreferrer"
+                  href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20want%20to%20find%20out%20which%20tax%20regime%20is%20right%20for%20my%20small%20business."
                   className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
-                  Ask on WhatsApp - Free
+                  Ask by Email - Free
                   <ArrowRight size={14} weight="bold" aria-hidden="true" />
                 </a>
               </div>
@@ -450,8 +449,7 @@ export default function SmallTaxpayerRegimePage() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20VAT"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

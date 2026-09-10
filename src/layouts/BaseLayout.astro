@@ -2,7 +2,6 @@
 import "@/src/styles/globals.css"
 import { Navbar } from "@/src/components/navbar"
 import Footer from "@/src/components/Footer.astro"
-import { WhatsAppButton } from "@/components/whatsapp-button"
 import { BackToTop } from "@/components/back-to-top"
 
 export interface Props {
@@ -69,8 +68,7 @@ const organizationSchema = {
   alternateName: "Smart VAT Kenya",
   legalName: "Smart VAT Kenya Limited",
   description:
-    "Professional VAT registration and monthly filing services for Kenyan SMEs. Flat-fee pricing, eTIMS-compliant, M-PESA accepted, WhatsApp support. KRA-registered tax agents.",
-  telephone: "+254717344440",
+    "Professional VAT registration and monthly filing services for Kenyan SMEs. Flat-fee pricing, eTIMS-compliant, M-PESA accepted, email support. KRA-registered tax agents.",
   email: "info@smartvatkenya.co.ke",
   url: "https://smartvatkenya.co.ke",
   logo: {
@@ -82,7 +80,6 @@ const organizationSchema = {
   },
   image: "https://smartvatkenya.co.ke/og-image.png",
   sameAs: [
-    "https://wa.me/254717344440",
     "https://www.kra.go.ke",
     "https://itax.kra.go.ke",
     "https://etims.kra.go.ke",
@@ -93,7 +90,7 @@ const organizationSchema = {
   ],
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+254717344440",
+    email: "info@smartvatkenya.co.ke",
     contactType: "customer service",
     availableLanguage: ["English", "Swahili"],
     areaServed: "KE",
@@ -181,7 +178,7 @@ memberOf: {
       "@id": "https://smartvatkenya.co.ke/services#vat-filing-service",
       name: "Monthly VAT Filing Service",
       description:
-        "Monthly iTax VAT return filing before the 20th KRA deadline. We file on the 17th. Includes WhatsApp reminders and M-PESA payment guidance.",
+        "Monthly iTax VAT return filing before the 20th KRA deadline. We file on the 17th. Includes deadline reminders and M-PESA payment guidance.",
       provider: { "@id": "https://smartvatkenya.co.ke/#business" },
       areaServed: { "@type": "Country", name: "Kenya" },
       serviceType: "VAT Filing",
@@ -230,7 +227,7 @@ const reviewSchema = {
         name: "Verified Client",
       },
       datePublished: "2026-01-15",
-      reviewBody: "Smart VAT Kenya handled my VAT registration seamlessly. Got my PIN in 2 days via WhatsApp. Professional, transparent pricing, no hidden fees.",
+      reviewBody: "Smart VAT Kenya handled my VAT registration seamlessly. Got my PIN in 2 days flat. Professional, transparent pricing, no hidden fees.",
     },
     {
       "@type": "AggregateRating",
@@ -351,7 +348,6 @@ const citationSchema = {
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="dns-prefetch" href="//wa.me" />
 
   <!-- Fonts - optimized loading with fallback for no-JS and better mobile experience -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" />
@@ -444,18 +440,17 @@ const citationSchema = {
     <slot />
   </main>
   <Footer />
-  <WhatsAppButton />
   <BackToTop client:load />
   <script is:inline>
     document.addEventListener('click', function(e){
-      var a = e.target.closest('a[href*="wa.me"]');
+      var a = e.target.closest('a[data-track="contact-cta"],a[href^="mailto:"]');
       if(!a) return;
-      var cta = a.getAttribute('data-cta-type') || a.getAttribute('data-track') || 'whatsapp';
+      var cta = a.getAttribute('data-cta-type') || a.getAttribute('data-track') || 'contact';
       var service = a.getAttribute('data-service') || 'general';
       var href = a.getAttribute('href') || '';
-      var payload = {event:'whatsapp_click', cta_type: cta, service: service, page: location.pathname, href: href};
+      var payload = {event:'contact_click', cta_type: cta, service: service, page: location.pathname, href: href};
       if(window.dataLayer) window.dataLayer.push(payload);
-      if(window.gtag) window.gtag('event','whatsapp_click',{cta_type: cta, service: service, page_path: location.pathname});
+      if(window.gtag) window.gtag('event','contact_click',{cta_type: cta, service: service, page_path: location.pathname});
       // track other key actions
       var calc = e.target.closest('[data-track="calculator-used"]');
       if(calc && window.dataLayer) window.dataLayer.push({event:'calculator_used', page: location.pathname});

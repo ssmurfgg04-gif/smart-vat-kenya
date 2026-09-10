@@ -239,7 +239,7 @@ export default function EtimsCanIClaimMyExpenses() {
         <div className="mt-10 border border-brand/20 bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-[1rem] font-semibold text-ink mb-1">Unsure whether your receipts pass?</p>
           <p className="text-[0.85rem] text-ink-muted mb-4 max-w-[42ch] mx-auto leading-relaxed">
-            Send photos of your last three business receipts on WhatsApp - we'll say which ones you can claim. Or
+            Send photos of your last three business receipts by email - we'll say which ones you can claim. Or
             let us handle your eTIMS onboarding end to end.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
@@ -250,11 +250,10 @@ export default function EtimsCanIClaimMyExpenses() {
               eTIMS Onboarding
             </a>
             <a
-              href="https://wa.me/254717344440?text=Hi%2C%20I%20want%20my%20business%20receipts%20reviewed"
-              target="_blank" rel="noopener noreferrer"
+              href="/kra-help/"
               className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
             >
-              Get a Receipt Check on WhatsApp
+              Get a Receipt Check
               <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
           </div>

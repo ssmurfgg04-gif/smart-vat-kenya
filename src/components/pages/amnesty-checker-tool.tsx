@@ -20,7 +20,7 @@ interface ResultSpec {
   verdict: "qualifies" | "action" | "no"
   body: string
   actions: string[]
-  cta?: { label: string; href: string; whatsapp?: boolean }
+  cta?: { label: string; href: string }
 }
 
 const RESULTS: Record<string, ResultSpec> = {
@@ -226,8 +226,6 @@ export default function AmnestyCheckerTool() {
                     {result.cta && (
                       <a
                         href={result.cta.href}
-                        target={result.cta.whatsapp ? "_blank" : undefined}
-                        rel={result.cta.whatsapp ? "noopener noreferrer" : undefined}
                         className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-[0.85rem] px-4 py-2.5 rounded-md hover:bg-brand-hover transition-colors min-h-[44px]"
                       >
                         {result.cta.label}
@@ -264,9 +262,8 @@ export default function AmnestyCheckerTool() {
                 The check above tells you where you stand. A KRA-registered agent can pull the full picture and structure the cleanup - penalty waiver applications included.
               </p>
               <a
-                href="https://wa.me/254717344440?text=Hi%2C%20I%20ran%20the%20amnesty%20eligibility%20check%20and%20want%20help%20with%20the%20cleanup."
-                target="_blank" rel="noopener noreferrer"
-                data-track="whatsapp-cta" data-cta-type="amnesty-cleanup" data-service="Penalty Waiver"
+                href="/services/kra-penalty-waiver/"
+                data-track="contact-cta" data-cta-type="amnesty-cleanup" data-service="Penalty Waiver"
                 className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-[0.85rem] px-4 py-2.5 rounded-md hover:bg-brand-hover transition-colors min-h-[44px]"
               >
                 Discuss the cleanup

@@ -37,7 +37,6 @@ const localBusinessSchema = {
   description:
     "Professional VAT registration services in Kisumu - KES 5,000 flat fee. KRA iTax registration for Kisumu businesses.",
   url: "https://smartvatkenya.co.ke/services/vat-registration-kisumu",
-  telephone: "+254717344440",
   areaServed: [
     { "@type": "City", name: "Kisumu" },
     { "@type": "City", name: "Kisumu CBD" },
@@ -66,7 +65,7 @@ const faqSchema = {
       name: "Do I need to travel to Nairobi for VAT registration?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. You never need to travel to Nairobi. We handle everything remotely via WhatsApp. Send your documents over WhatsApp and we complete your KRA iTax VAT registration from our end. Your VAT PIN is delivered to your phone.",
+        text: "No. You never need to travel to Nairobi. We handle everything remotely. Send your documents by email and we complete your KRA iTax VAT registration from our end. Your VAT PIN is delivered to your phone.",
       },
     },
     {
@@ -88,7 +87,6 @@ const faqSchema = {
   ],
 }
 
-const WA_BASE = "https://wa.me/254717344440"
 const WA_TEXT = "Hi%2C%20I%20need%20VAT%20registration%20in%20Kisumu"
 
 const serviceSchema = {
@@ -97,7 +95,7 @@ const serviceSchema = {
   "@id": "https://smartvatkenya.co.ke/services/vat-registration-kisumu#service",
   name: "VAT Registration Services Kisumu",
   description:
-    "Professional KRA VAT registration in Kisumu - KES 5,000 flat fee, done in 1–3 working days. iTax VAT Form 1, PIN generation, and eTIMS guidance included. Fully remote via WhatsApp. M-PESA accepted.",
+    "Professional KRA VAT registration in Kisumu - KES 5,000 flat fee, done in 1–3 working days. iTax VAT Form 1, PIN generation, and eTIMS guidance included. Fully remote. M-PESA accepted.",
   provider: { "@type": "Organization", name: "Smart VAT Kenya" },
   areaServed: { "@type": "City", name: "Kisumu" },
 }
@@ -105,18 +103,18 @@ const serviceSchema = {
 const inclusions = [
   "iTax profile update",
   "VAT Form 1 completion and submission",
-  "PIN generation and delivery via WhatsApp",
+  "PIN generation and delivery by email",
   "1–3 working days turnaround",
   "eTIMS onboarding guidance included",
   "Taxpayer education session",
   "M-PESA receipt provided",
-  "Dedicated WhatsApp support line",
+  "Dedicated email support line",
 ]
 
 const whyKisumu = [
   { Icon: CurrencyDollar, label: "KES 5,000 flat fee - no hidden costs" },
   { Icon: Clock, label: "1–3 working days, not weeks" },
-  { Icon: ChatCircle, label: "Full service delivered over WhatsApp" },
+  { Icon: ChatCircle, label: "Full service delivered over email" },
   { Icon: Prohibit, label: "No need to travel to Nairobi" },
   { Icon: Phone, label: "M-PESA payment accepted in Kisumu" },
   { Icon: SealCheck, label: "KRA-compliant iTax process" },
@@ -140,9 +138,9 @@ const steps = [
   {
     number: "01",
     Icon: ChatCircle,
-    title: "WhatsApp Us from Kisumu",
+    title: "Get Started from Kisumu",
     description:
-      "Send your business name, KRA PIN, and a copy of your national ID over WhatsApp. No need to visit any office - do it from your phone in Kisumu.",
+      "Send your business name, KRA PIN, and a copy of your national ID by email. No need to visit any office - do it from your phone in Kisumu.",
     details: [
       "Send KRA PIN certificate",
       "Share a copy of your national ID",
@@ -155,12 +153,12 @@ const steps = [
     Icon: FileText,
     title: "We Handle iTax Remotely",
     description:
-      "We log into the KRA iTax portal from our end, update your profile, complete VAT Form 1, and submit your application. You get WhatsApp updates at every stage.",
+      "We log into the KRA iTax portal from our end, update your profile, complete VAT Form 1, and submit your application. You get email updates at every stage.",
     details: [
       "KRA iTax portal - fully handled",
       "Profile update completed",
       "VAT Form 1 submitted",
-      "WhatsApp updates throughout",
+      "Email updates throughout",
     ],
   },
   {
@@ -168,9 +166,9 @@ const steps = [
     Icon: SealCheck,
     title: "VAT PIN Delivered to Your Phone",
     description:
-      "Your VAT PIN is delivered straight to your WhatsApp along with your M-PESA receipt. We also walk you through eTIMS onboarding so you are fully compliant from day one.",
+      "Your VAT PIN is delivered straight to your email along with your M-PESA receipt. We also walk you through eTIMS onboarding so you are fully compliant from day one.",
     details: [
-      "VAT PIN via WhatsApp",
+      "VAT PIN by email",
       "M-PESA receipt for our fee",
       "eTIMS onboarding walkthrough",
       "Ongoing support for follow-ups",
@@ -187,7 +185,7 @@ const kisumuBusinessTypes = [
 const faqs = [
   {
     q: "Do I need to travel to Nairobi for VAT registration?",
-    a: "No. You never need to travel to Nairobi. We handle everything remotely via WhatsApp. Send your documents over WhatsApp and we complete your KRA iTax VAT registration from our end. Your VAT PIN is delivered to your phone.",
+    a: "No. You never need to travel to Nairobi. We handle everything remotely. Send your documents by email and we complete your KRA iTax VAT registration from our end. Your VAT PIN is delivered to your phone.",
   },
   {
     q: "Can you handle KRA matters for my Kisumu business?",
@@ -199,7 +197,7 @@ const faqs = [
   },
   {
     q: "What documents do I need to register for VAT in Kenya?",
-    a: "You need your KRA PIN certificate, a copy of your national ID or passport, and your business name and physical address. If you are registering as a company, we also need the company registration certificate and director details. Send these over WhatsApp and we handle the rest.",
+    a: "You need your KRA PIN certificate, a copy of your national ID or passport, and your business name and physical address. If you are registering as a company, we also need the company registration certificate and director details. Send these by email and we handle the rest.",
   },
   {
     q: "How long does KRA VAT registration take for Kisumu businesses?",
@@ -207,7 +205,7 @@ const faqs = [
   },
   {
     q: "Do I need to log into iTax myself?",
-    a: "No. You never need to log into the KRA iTax portal. We handle everything on your behalf using your authorised credentials. All you need is WhatsApp.",
+    a: "No. You never need to log into the KRA iTax portal. We handle everything on your behalf using your authorised credentials. All you need is an email address.",
   },
 ]
 
@@ -242,7 +240,7 @@ export default function VATRegistrationKisumuPage() {
           <div className="flex items-start gap-3 mb-4 p-4 rounded-lg border border-canvas/15 bg-canvas/5 max-w-[50ch]">
             <MapPin size={16} weight="duotone" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
             <p className="text-[0.83rem] text-canvas/65 leading-relaxed">
-              We serve all Western Kenya businesses remotely via WhatsApp. No office visit needed.
+              We serve all Western Kenya businesses remotely. No office visit needed.
             </p>
           </div>
           <div className="flex flex-wrap gap-2 mb-6" role="list" aria-label="Trust signals">
@@ -260,9 +258,8 @@ export default function VATRegistrationKisumuPage() {
             </span>
           </div>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D"
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Start your registration
@@ -287,7 +284,7 @@ export default function VATRegistrationKisumuPage() {
             <p className="text-[0.93rem] text-ink-muted leading-relaxed max-w-[44ch]">
               Your KES 5,000 covers end-to-end handling of the iTax VAT registration
               process. No add-ons, no upsells - just a complete service delivered to your
-              WhatsApp, anywhere in Kisumu.
+              inbox, anywhere in Kisumu.
             </p>
           </div>
           <ul className="space-y-3.5" role="list">
@@ -321,7 +318,7 @@ export default function VATRegistrationKisumuPage() {
             </h2>
             <p className="text-[0.93rem] text-ink-muted leading-relaxed max-w-[44ch]">
               Most VAT facilitators are Nairobi-based and expect you to visit their office.
-              We deliver the entire service over WhatsApp - no travel, no waiting, no extra costs.
+              We deliver the entire service over email - no travel, no waiting, no extra costs.
             </p>
           </div>
           <ul className="space-y-3.5" role="list">
@@ -353,7 +350,7 @@ export default function VATRegistrationKisumuPage() {
             Serving all Kisumu. No office visit needed.
           </h2>
           <p className="text-[0.88rem] text-ink-muted leading-relaxed max-w-[50ch] mb-8">
-            We provide VAT registration services to businesses across Kisumu County entirely over WhatsApp.
+            We provide VAT registration services to businesses across Kisumu County entirely online.
             Wherever you are in Kisumu, you get the same fast service.
           </p>
           <div className="flex flex-wrap gap-3" role="list">
@@ -454,16 +451,15 @@ export default function VATRegistrationKisumuPage() {
               KES 5,000 - VAT registration for Kisumu
             </p>
             <p className="text-[0.85rem] text-ink-muted mt-1">
-              Fully remote via WhatsApp. No travel needed. Done in 1–3 working days.
+              Fully remote. No travel needed. Done in 1–3 working days.
             </p>
           </div>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D"
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
           >
-            Get started on WhatsApp
+            Get started
             <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>
         </div>
@@ -508,17 +504,16 @@ export default function VATRegistrationKisumuPage() {
               Register for VAT in Kisumu - KES 5,000.
             </h2>
             <p className="text-[0.88rem] text-canvas/65 max-w-[40ch]">
-              Send a WhatsApp message now. No commitment required - we will confirm we can help before any payment.
+              Send an email now. No commitment required - we will confirm we can help before any payment.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a
-              href={`${WA_BASE}?text=${WA_TEXT}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D"
+             
               className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
             >
-              WhatsApp us now
+              Email us now
               <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
             <a

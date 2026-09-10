@@ -552,7 +552,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "vat-deadline-reminders": {
     title: "Free KRA VAT Deadline Reminders",
-    description: "Never miss the 20th KRA VAT filing deadline again. Get automated WhatsApp reminders on the 17th of every month. Free service by Smart VAT Kenya.",
+    description: "Never miss the 20th KRA VAT filing deadline again. Every VAT, PAYE and TOT deadline on one free calendar page. Curated by Smart VAT Kenya.",
     canonical: "/resources/vat-deadline-reminders/",
   },
   "vat-2027-auto-filled-returns": {

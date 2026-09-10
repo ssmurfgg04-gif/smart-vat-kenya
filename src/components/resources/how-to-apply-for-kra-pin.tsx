@@ -341,10 +341,9 @@ export default function KraPinPost() {
               We handle the entire process for KES 5,000 - from PIN application to VAT registration.
               First consultation is free.
             </p>
-            <a href="https://wa.me/254717344440?text=I%20need%20help%20with%20KRA%20PIN%20or%20VAT%20registration"
-              target="_blank" rel="noopener noreferrer"
+            <a href="mailto:info@smartvatkenya.co.ke?subject=I%20need%20help%20with%20KRA%20PIN%20or%20VAT%20registration"
               className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-4 py-2.5 rounded-md hover:bg-brand-hover transition-colors">
-              Ask Us on WhatsApp <ArrowRight size={14} weight="bold" aria-hidden="true" />
+              Ask Us by Email <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
           </div>
 
@@ -379,8 +378,7 @@ export default function KraPinPost() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20VAT"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

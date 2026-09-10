@@ -343,8 +343,7 @@ export default function VatCommercialRentKenyaPage() {
             Check where you stand against the KES 5M line, then register and start invoicing tenants properly &mdash; VAT registration is KES 5,000 flat.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20own%20commercial%20rental%20property%20and%20want%20to%20sort%20my%20VAT%20position."
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20own%20commercial%20rental%20property%20and%20want%20to%20sort%20my%20VAT%20position."
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Sort My Rental VAT

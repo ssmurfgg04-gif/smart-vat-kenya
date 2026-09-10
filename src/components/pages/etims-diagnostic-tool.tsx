@@ -457,9 +457,8 @@ export default function EtimsDiagnosticTool() {
                 A KRA-registered agent works your exact case - device, certificates, rejections - at KES 1,500 per incident.
               </p>
               <a
-                href="https://wa.me/254717344440?text=Hi%2C%20I%20ran%20the%20eTIMS%20diagnostic%20and%20I%27m%20still%20stuck.%20I%27d%20like%20per-incident%20help%20at%20KES%201%2C500."
-                target="_blank" rel="noopener noreferrer"
-                data-track="whatsapp-cta" data-cta-type="etims-incident" data-service="eTIMS Diagnosis"
+                href="/kra-help/"
+                data-track="contact-cta" data-cta-type="etims-incident" data-service="eTIMS Diagnosis"
                 className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-[0.85rem] px-4 py-2.5 rounded-md hover:bg-brand-hover transition-colors min-h-[44px]"
               >
                 Get incident help

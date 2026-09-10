@@ -261,15 +261,14 @@ export default function EtimsWhatDoesKraSee() {
         <div className="mt-10 border border-brand/20 bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-[1rem] font-semibold text-ink mb-1">Stop guessing what KRA can see.</p>
           <p className="text-[0.85rem] text-ink-muted mb-4 max-w-[42ch] mx-auto leading-relaxed">
-            Get eTIMS compliant today with our onboarding service, or ask us anything on WhatsApp.
+            Get eTIMS compliant today with our onboarding service, or ask us anything by email.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <a
-              href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20eTIMS%20onboarding"
-              target="_blank" rel="noopener noreferrer"
+              href="/services/etims-onboarding/"
               className="inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
             >
-              Get eTIMS Help on WhatsApp
+              Get eTIMS Help
               <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
             <a

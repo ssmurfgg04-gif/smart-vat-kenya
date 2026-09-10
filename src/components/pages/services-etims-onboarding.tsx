@@ -22,7 +22,6 @@ import { Testimonials } from "@/components/testimonials"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254717344440"
 const WA_TEXT = "Hi%2C%20I%20need%20help%20with%20eTIMS%20onboarding"
 
 const includedItems = [
@@ -213,9 +212,8 @@ export default function ETIMSOnboardingPage() {
             </span>
           </div>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D"
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Start onboarding
@@ -249,9 +247,8 @@ export default function ETIMSOnboardingPage() {
               through to issuing your first compliant invoice. No add-ons, no upsells.
             </p>
             <a
-              href={`${WA_BASE}?text=${WA_TEXT}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D"
+             
               className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors mt-6"
             >
               Start onboarding
@@ -372,12 +369,11 @@ export default function ETIMSOnboardingPage() {
             </p>
           </div>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D"
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors shrink-0"
           >
-            Get started on WhatsApp
+            Get started
             <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>
         </div>
@@ -420,16 +416,15 @@ export default function ETIMSOnboardingPage() {
             Ready to get eTIMS compliant?
           </h2>
           <p className="text-[0.93rem] text-canvas/70 leading-relaxed max-w-[48ch] mx-auto mb-8">
-            KES 3,000 flat. No hidden fees. No discovery call. Send us a WhatsApp message and we will
+            KES 3,000 flat. No hidden fees. No discovery call. Send us an email and we will
             have you issuing compliant eTIMS invoices within 1–2 days.
           </p>
           <a
-            href={`${WA_BASE}?text=${WA_TEXT}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=%24%7BWA_TEXT%7D"
+           
             className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas text-sm font-semibold px-6 py-3.5 rounded-md hover:bg-brand-hover transition-colors"
           >
-            Start onboarding on WhatsApp
+            Start onboarding
             <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>
         </div>

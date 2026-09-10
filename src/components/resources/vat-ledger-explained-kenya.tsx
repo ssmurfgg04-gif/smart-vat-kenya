@@ -4,7 +4,6 @@ import { LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
-const WHATSAPP_NUMBER = "254717344440"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org" as const,
@@ -415,8 +414,7 @@ export default function VatLedgerExplainedKenyaPage() {
             Send us a screenshot of the ledger line that does not make sense - we will explain it in plain English and tell you whether you need to dispute.
           </p>
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%20need%20help%20reading%20my%20KRA%20VAT%20ledger`}
-            target="_blank" rel="noopener noreferrer"
+            href={`/kra-help/`}
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Get VAT Ledger Help

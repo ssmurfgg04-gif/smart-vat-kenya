@@ -279,8 +279,8 @@ export default function NonResidentRentalIncomeTaxPage() {
                   If you manage property for a non-resident landlord, or you are one, we can help you work out exactly what you owe and how to file it correctly.
                 </p>
                 <p>
-                  <a href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20non-resident%20rental%20income%20tax" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">
-                    Talk to us on WhatsApp →
+                  <a href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20non-resident%20rental%20income%20tax" className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">
+                    Talk to Us by Email →
                   </a>
                 </p>
               </div>
@@ -301,8 +301,7 @@ export default function NonResidentRentalIncomeTaxPage() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20VAT"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

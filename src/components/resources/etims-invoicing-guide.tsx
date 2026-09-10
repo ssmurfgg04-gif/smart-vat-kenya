@@ -484,7 +484,7 @@ export default function ETIMSInvoicingGuidePage() {
                   <strong className="text-ink">Need an eTIMS review?</strong> Smart VAT Kenya can review
                   your current invoicing process and identify compliance gaps. We also offer eTIMS
                   onboarding assistance and can help you set up the right solution for your business.
-                  Message us on WhatsApp for a free initial consultation.
+                  Message us by email for a free initial consultation.
                 </p>
               </div>
               <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
@@ -521,8 +521,7 @@ export default function ETIMSInvoicingGuidePage() {
             We handle your KRA VAT registration and monthly filing so you never miss a deadline.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20help%20with%20VAT"
-            target="_blank" rel="noopener noreferrer"
+            href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20VAT"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
             Register for KES 5,000

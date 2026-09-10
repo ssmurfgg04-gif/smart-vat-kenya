@@ -3,7 +3,6 @@ import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_BASE = "https://wa.me/254717344440"
 
 const articleSchema = {
   "@context": "https://schema.org" as const,
@@ -58,8 +57,8 @@ export default function VatThresholdExplainerPage() {
 
         <div className="bg-brand-muted rounded-lg p-6 text-center">
           <p className="font-display text-lg font-semibold text-ink mb-2">Unsure if you crossed the threshold?</p>
-          <a href={`${WA_BASE}?text=Hi%2C%20I%20want%20to%20check%20if%20my%20business%20needs%20to%20register%20for%20VAT`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold px-6 py-3 rounded-md hover:bg-brand-hover transition-colors">
-            Check With Our Agents on WhatsApp <ArrowRight size={14} weight="bold" />
+          <a href="/services/vat-registration/" className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold px-6 py-3 rounded-md hover:bg-brand-hover transition-colors">
+            Check With Our Agents <ArrowRight size={14} weight="bold" />
           </a>
         </div>
 

@@ -16,7 +16,7 @@ const breadcrumbSchema = {
 
 <BaseLayout
   title="KRA System Status: iTax, eTIMS and VAT"
-  description="KRA system status: check if iTax, eTIMS and VAT returns are operational. Troubleshooting links and WhatsApp help."
+  description="KRA system status: check if iTax, eTIMS and VAT returns are operational. Troubleshooting links and email help."
   canonical="/kra-status/"
   breadcrumbSchema={breadcrumbSchema}
 >
@@ -33,7 +33,7 @@ const breadcrumbSchema = {
         KRA System Status
       </h1>
       <p class="text-[0.9rem] text-canvas/60 max-w-[60ch] leading-relaxed">
-        KRA down? Check the latest status for iTax and eTIMS - plus the workaround so you don't miss the 20th. WhatsApp us for help. Last checked: <time datetime={lastChecked} class="font-mono text-canvas/80">{displayTime} EAT</time>
+        KRA down? Check the latest status for iTax and eTIMS - plus the workaround so you don't miss the 20th. Email us for help. Last checked: <time datetime={lastChecked} class="font-mono text-canvas/80">{displayTime} EAT</time>
       </p>
     </div>
   </div>
@@ -92,7 +92,7 @@ const breadcrumbSchema = {
     <div class="border-2 border-brand/30 rounded-xl p-6 sm:p-8 bg-brand-muted text-center">
       <p class="font-display text-[1.2rem] font-semibold text-ink mb-2">Don't want to monitor KRA yourself?</p>
       <p class="text-[0.85rem] text-ink-muted mb-5 max-w-[50ch] mx-auto">We file on the 17th - before the rush - and handle any portal errors for you. KES 3,500/month.</p>
-      <a href="https://wa.me/254717344440?text=I%20want%20monthly%20VAT%20filing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-sm px-6 py-3 rounded-md hover:bg-brand-hover transition-colors">
+      <a href="/services/monthly-vat-filing/" class="inline-flex items-center gap-2 bg-brand text-white font-semibold text-sm px-6 py-3 rounded-md hover:bg-brand-hover transition-colors">
         Start Monthly Filing
       </a>
     </div>

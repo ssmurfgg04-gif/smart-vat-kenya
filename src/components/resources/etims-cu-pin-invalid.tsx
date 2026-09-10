@@ -4,7 +4,6 @@ import { LAST_VERIFIED, personSchema } from "@/src/lib/authors"
 import { ArticleGrid } from "@/lib/resources"
 import { FAQSection } from "@/components/faq-section"
 
-const WHATSAPP_NUMBER = "254717344440"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org" as const,
@@ -347,12 +346,11 @@ export default function ETimsCuPinInvalidPage() {
               <div className="border border-brand/20 bg-brand-muted rounded-lg p-5">
                 <p className="font-display text-[0.95rem] font-semibold text-ink mb-2">Need a faster PIN reset?</p>
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed mb-4">
-                  We have direct contacts at the major eTIMS device suppliers and at the KRA eTIMS desk. We can usually get a PIN reset done in 24-48 hours instead of the standard 5 working days. Send us the device serial and KRA PIN on WhatsApp.
+                  We have direct contacts at the major eTIMS device suppliers and at the KRA eTIMS desk. We can usually get a PIN reset done in 24-48 hours instead of the standard 5 working days. Send us the device serial and KRA PIN by email.
                 </p>
                 <a
-                  href="https://wa.me/254717344440?text=Hi%2C%20I%20need%20an%20eTIMS%20CU%20PIN%20reset"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/kra-help/"
+                 
                   className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-2.5 rounded-md hover:bg-brand-hover transition-colors"
                 >
                   Get PIN Reset Help
@@ -429,11 +427,10 @@ export default function ETimsCuPinInvalidPage() {
             We can fast-track the reset with our direct contacts at KRA and the major device suppliers. Usually resolved in 24-48 hours.
           </p>
           <a
-            href="https://wa.me/254717344440?text=Hi%2C%20my%20eTIMS%20CU%20PIN%20is%20invalid%20or%20locked"
-            target="_blank" rel="noopener noreferrer"
+            href="/kra-help/"
             className="inline-flex items-center gap-2 bg-brand text-canvas font-semibold text-sm px-5 py-3 rounded-md hover:bg-brand-hover transition-colors"
           >
-            Get PIN Reset Help on WhatsApp
+            Get PIN Reset Help
             <svg viewBox="0 0 12 12" className="w-3 h-3 fill-current" aria-hidden="true"><path d="M6 0L4.59 1.41 9.17 6l-4.58 4.59L6 12l6-6z"/></svg>
           </a>
           <div className="mt-4">
