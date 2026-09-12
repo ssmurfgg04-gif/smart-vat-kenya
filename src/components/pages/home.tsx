@@ -18,6 +18,7 @@
   TrendUp,
 } from "@phosphor-icons/react/dist/ssr"
 import { RelatedLinks } from "@/components/related-links"
+import { HeroVatCalc } from "@/src/components/hero-vat-calc"
 import React from "react"
 import { FACTS } from "@/src/lib/vat-facts"
 
@@ -206,7 +207,7 @@ export default function HomePage() {
                   Fix My eTIMS Issue
                   <ArrowRight size={17} weight="bold" aria-hidden="true" />
                 </span>
-                <span className="text-[0.68rem] text-white/85 font-medium mt-0.5">
+                <span className="text-[0.68rem] text-white font-medium mt-0.5">
                   Free diagnostic — exact fix steps in 2 minutes.
                 </span>
               </a>
@@ -224,12 +225,14 @@ export default function HomePage() {
               </a>
             </div>
 
+            <HeroVatCalc />
+
             <a
               href="/tools/"
               className="inline-flex items-center gap-1.5 text-[0.85rem] font-medium text-[#14243e] hover:text-[#3f4f68] hover:underline mb-5"
             >
               <Calculator size={14} aria-hidden="true" />
-              Just need to check a number? Free VAT calculator &rarr;
+              Need penalty, PAYE or eTIMS math too? All free tools &rarr;
             </a>
 
             <div className="flex flex-wrap gap-x-6 gap-y-3">

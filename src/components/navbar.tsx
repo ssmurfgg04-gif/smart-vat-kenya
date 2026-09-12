@@ -94,7 +94,7 @@ export function Navbar() {
           >
             Get Started
           </a>
-          <span className="hidden sm:block text-[0.7rem] text-ink-muted/60 font-medium whitespace-nowrap">
+          <span className="hidden sm:block text-[0.7rem] text-ink-muted/80 font-medium whitespace-nowrap">
             Free diagnostic tools - no sign-up
           </span>
         </div>
