@@ -102,7 +102,7 @@ export function getPrevNext(slug: string) {
   }
 }
 
-export function ArticleGrid({ currentSlug, limit = 6 }: { currentSlug?: string; limit?: number }) {
+export function ArticleGrid({ currentSlug, limit = 3 }: { currentSlug?: string; limit?: number }) {
   const idx = articles.findIndex((a) => a.slug === currentSlug)
   let related = articles
   if (idx !== -1) {

@@ -131,6 +131,14 @@ export default function VatThresholdKenya() {
               </div>
             </div>
 
+            <p className="not-prose text-[0.85rem] text-ink-muted leading-relaxed border-l-[3px] border-brand pl-4 my-6">
+              Know the number but not sure it applies to <em>you</em>?{" "}
+              <a href="/resources/do-i-need-to-register-for-vat-kenya/" className="text-brand font-medium underline underline-offset-2 hover:text-brand-hover">
+                Take the 4-question decision guide
+              </a>{" "}
+              — covers voluntary cases, B2B pressure, and penalties.
+            </p>
+
             <h2>What Is the Current Threshold?</h2>
             <p>
               The VAT registration threshold is <strong>KES 5 million in taxable turnover</strong> in any period of twelve months (VAT Act, s.34). You must apply for registration within <strong>30 days</strong> of crossing the threshold. KRA's publicly available VAT guidance - together with PwC's worldwide tax summaries and law firms printing the amended VAT Act - all list 5 million as the number in force.

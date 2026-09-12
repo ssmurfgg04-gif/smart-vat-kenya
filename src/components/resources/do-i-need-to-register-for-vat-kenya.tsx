@@ -133,6 +133,15 @@ export default function DoINeedVATPage() {
           </p>
         </div>
 
+        <div className="flex flex-col sm:flex-row gap-3 my-8">
+          <a href="/tools/#quiz" className="inline-flex items-center justify-center gap-2 bg-ink text-canvas text-[0.85rem] font-semibold px-5 py-3 rounded-md hover:bg-canvas-dark transition-colors">
+            Answer 4 questions — do I need to register? <span aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="/resources/vat-threshold-kenya/" className="inline-flex items-center justify-center gap-2 border border-hairline text-ink text-[0.85rem] font-medium px-5 py-3 rounded-md hover:border-ink-muted transition-colors">
+            Just want the number? KES 5M threshold
+          </a>
+        </div>
+
         {/* Table of contents */}
         <nav aria-label="Table of contents" className="mb-12">
           <div className="border border-hairline rounded-lg p-5 bg-canvas-alt">
