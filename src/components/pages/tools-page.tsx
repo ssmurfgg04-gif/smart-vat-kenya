@@ -99,6 +99,10 @@ export default function ToolsPage() {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
+        <a href="/tools/etims-diagnostic/" className="group flex flex-col sm:flex-row sm:items-center gap-4 border-2 border-brand/30 bg-brand/[0.04] rounded-xl p-5 sm:p-6 mb-12 hover:border-brand/60 transition-colors max-w-3xl">
+          <span className="font-display text-[1.05rem] font-semibold text-ink leading-snug">eTIMS invoice failed, locked out, or stuck syncing? <span className="text-brand group-hover:underline">Diagnose it in 3 questions →</span></span>
+          <span className="text-[0.75rem] text-ink-muted sm:ml-auto shrink-0">Most used · no sign-up · 2 min</span>
+        </a>
         <div className="grid grid-cols-2 gap-4 lg:gap-10 items-start">
           {/* VAT Calculator */}
           <section aria-labelledby="vat-calc-heading">
@@ -159,9 +163,14 @@ export default function ToolsPage() {
                 <input id="pen-taxdue" type="text" inputMode="decimal" placeholder="80,000" value={penTaxDue} onChange={(e) => setPenTaxDue(e.target.value)} className="w-full font-display text-[1.25rem] sm:text-[1.6rem] font-semibold text-ink bg-transparent focus:outline-none placeholder:text-ink-muted/30 placeholder:font-normal placeholder:text-xl" />
               </div>
               <div className="p-3 sm:p-5">
-                <label htmlFor="pen-months" className="flex items-baseline justify-between text-[0.78rem] font-medium text-ink-muted mb-3"><span>Months overdue</span><span className="font-display text-[1rem] font-semibold text-ink tabular-nums">{penM}</span></label>
-                <input id="pen-months" type="range" min="1" max="60" value={penMonths} onChange={(e) => setPenMonths(e.target.value)} className="w-full accent-brand" />
-                <div className="flex justify-between text-[0.7rem] text-ink-muted mt-1.5"><span>1 month</span><span>60 months</span></div>
+                <label htmlFor="pen-months" className="block text-[0.78rem] font-medium text-ink-muted mb-2">Months overdue</label>
+                <input id="pen-months" type="text" inputMode="numeric" placeholder="1" value={penMonths} onChange={(e) => setPenMonths(e.target.value.replace(/[^0-9]/g, ""))} className="w-full font-display text-[1.25rem] sm:text-[1.6rem] font-semibold text-ink bg-transparent focus:outline-none placeholder:text-ink-muted/30 placeholder:font-normal placeholder:text-xl" />
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {["1", "3", "6", "12", "24", "60"].map((v) => (
+                    <button key={v} type="button" onClick={() => setPenMonths(v)} className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${penM === parseInt(v, 10) ? "bg-ink text-canvas border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{v}</button>
+                  ))}
+                </div>
+                <p className="text-[0.7rem] text-ink-muted mt-2">Max 60 months. Type exact number or tap a preset.</p>
               </div>
               <div className="p-3 sm:p-5 bg-canvas-alt">
                 <dl className="space-y-3">
@@ -224,7 +233,7 @@ export default function ToolsPage() {
         </div>
 
         {/* Am I Required Quiz */}
-        <section className="mt-14 border-t border-hairline pt-12" aria-labelledby="quiz-heading">
+        <section id="quiz" className="mt-14 border-t border-hairline pt-12 scroll-mt-24" aria-labelledby="quiz-heading">
           <div className="flex items-center gap-2.5 mb-6"><Question size={17} weight="duotone" className="text-brand" aria-hidden="true" /><h2 id="quiz-heading" className="font-display text-[1rem] font-semibold text-ink">Am I Required to Register for VAT in Kenya?</h2></div>
           <div className="border border-hairline rounded-lg overflow-hidden max-w-2xl">
             {quizStep === "start" && (
