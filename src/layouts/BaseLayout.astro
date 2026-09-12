@@ -341,9 +341,9 @@ const citationSchema = {
   <meta name="twitter:description" content={pageDesc} />
   <meta name="twitter:image" content={imageUrl} />
 
-  <!-- Hreflang -->
-  <link rel="alternate" hreflang="en-KE" href="https://smartvatkenya.co.ke" />
-  <link rel="alternate" hreflang="x-default" href="https://smartvatkenya.co.ke" />
+  <!-- Hreflang (self-referencing per page; single-locale site) -->
+  <link rel="alternate" hreflang="en-KE" href={pageUrl} />
+  <link rel="alternate" hreflang="x-default" href={pageUrl} />
 
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -440,7 +440,7 @@ const citationSchema = {
     <slot />
   </main>
   <Footer />
-  <BackToTop client:load />
+  <BackToTop client:visible />
   <script is:inline>
     document.addEventListener('click', function(e){
       var a = e.target.closest('a[data-track="contact-cta"],a[href^="mailto:"]');

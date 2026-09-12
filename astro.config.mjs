@@ -15,6 +15,9 @@ function singleSitemap() {
         const urls = pages
           .map((p) => p.pathname)
           .map((p) => (p.startsWith("/") ? p : `/${p}`))
+          // Match trailingSlash:"always" + canonical URLs: sitemap must list
+          // the final 200 URL, never a variant that 301-redirects.
+          .map((p) => (p.endsWith("/") ? p : `${p}/`))
           .filter((p) => p !== "/404/" && !p.includes("404") && p !== "/blog/")
           .sort()
         logger.info(`writing sitemap with ${urls.length} URLs`)
@@ -62,12 +65,14 @@ export default defineConfig({
       ],
       scriptDirective: {
         resources: ["'self'"],
-        // SHA-256 hashes of the two deliberately inline non-hydrated scripts
-        // in BaseLayout.astro (theme pre-paint hook + speculationrules block).
-        // VERIFY with: node verify-csp.cjs  (after any edit to either script)
+        // SHA-256 hashes of the deliberately inline non-hydrated scripts
+        // in BaseLayout.astro (theme pre-paint hook + speculationrules block
+        // + click/CTA tracking hook).
+        // VERIFY with: node verify-csp.cjs  (after any edit to any of these scripts)
         hashes: [
           "sha256-Gg0/seg1F+l3T1CRtiPaHSLgTl8bS2jSXkuz+6PeAW0=",
           "sha256-/avMCWurbOW+mgAjEyqVaOOGjJyKPiE8ruWr08EiUqU=",
+          "sha256-BR1OJYOtyJAwmk5ni1TI1rdyH0zwqBjbxnmLmgKKupQ=",
         ],
       },
       styleDirective: {
