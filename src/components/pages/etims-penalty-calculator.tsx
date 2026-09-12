@@ -51,24 +51,25 @@ export function EtimsPenaltyCalculator() {
 
       <div className="border border-hairline rounded-lg overflow-hidden divide-y divide-hairline">
         <div className="p-5">
-          <label htmlFor="etims-months" className={`${labelCls} flex items-baseline justify-between`}>
-            <span>Months your system was not integrated after a KRA notice (TPA s.59A(5))</span>
-            <span className="font-display text-[1rem] font-semibold text-ink tabular-nums">{mNon}</span>
+          <label htmlFor="etims-months" className={labelCls}>
+            Months your system was not integrated after a KRA notice (TPA s.59A(5))
           </label>
           <input
             id="etims-months"
-            type="range"
-            min="0"
-            max="12"
-            value={mNon}
-            onChange={(e) => setMonthsNonCompliant(e.target.value)}
-            className="w-full accent-brand"
+            type="text"
+            inputMode="numeric"
+            placeholder="0"
+            value={monthsNonCompliant}
+            onChange={(e) => setMonthsNonCompliant(e.target.value.replace(/[^0-9]/g, ""))}
+            className={inputCls}
           />
-          <div className="flex justify-between text-[0.7rem] text-ink-muted mt-1.5">
-            <span>0 months</span>
-            <span>up to KES 100,000 / month</span>
-            <span>12 months</span>
+          <div className="flex flex-wrap gap-2 mt-3">
+            {["0", "1", "3", "6", "12"].map((v) => (
+              <button key={v} type="button" onClick={() => setMonthsNonCompliant(v)}
+                className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${mNon === parseInt(v, 10) ? "bg-ink text-canvas border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{v}</button>
+            ))}
           </div>
+          <p className="text-[0.7rem] text-ink-muted mt-2">Up to KES 100,000 / month. Max 12.</p>
         </div>
 
         <div className="p-5">
@@ -85,53 +86,55 @@ export function EtimsPenaltyCalculator() {
             className={inputCls}
           />
           <div className="mt-4">
-            <label htmlFor="etims-late-months" className={`${labelCls} flex items-baseline justify-between`}>
-              <span>Months you filed your VAT return late</span>
-              <span className="font-display text-[1rem] font-semibold text-ink tabular-nums">{mLate}</span>
+            <label htmlFor="etims-late-months" className={labelCls}>
+              Months you filed your VAT return late
             </label>
             <input
               id="etims-late-months"
-              type="range"
-              min="0"
-              max="24"
-              value={mLate}
-              onChange={(e) => setMonthsLateFiling(e.target.value)}
-              className="w-full accent-brand"
+              type="text"
+              inputMode="numeric"
+              placeholder="0"
+              value={monthsLateFiling}
+              onChange={(e) => setMonthsLateFiling(e.target.value.replace(/[^0-9]/g, ""))}
+              className={inputCls}
             />
-            <div className="flex justify-between text-[0.7rem] text-ink-muted mt-1.5">
-              <span>0 months</span>
-              <span>KES 10,000 + 5% + 1%/mo</span>
-              <span>24 months</span>
+            <div className="flex flex-wrap gap-2 mt-3">
+              {["0", "1", "3", "6", "12", "24"].map((v) => (
+                <button key={v} type="button" onClick={() => setMonthsLateFiling(v)}
+                  className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${mLate === parseInt(v, 10) ? "bg-ink text-canvas border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{v}</button>
+              ))}
             </div>
+            <p className="text-[0.7rem] text-ink-muted mt-2">KES 10,000 + 5% + 1%/mo. Max 24.</p>
           </div>
         </div>
 
         <div className="p-5">
-          <label htmlFor="etims-invoices" className={`${labelCls} flex items-baseline justify-between`}>
-            <span>Non-compliant eTIMS invoices (issued via eTIMS requires valid control number / QR)</span>
-            <span className="font-display text-[1rem] font-semibold text-ink tabular-nums">{inv}</span>
+          <label htmlFor="etims-invoices" className={labelCls}>
+            Non-compliant eTIMS invoices (issued without a valid control number / QR)
           </label>
           <input
             id="etims-invoices"
-            type="range"
-            min="0"
-            max="20"
-            value={inv}
-            onChange={(e) => setInvoiceCount(e.target.value)}
-            className="w-full accent-brand"
+            type="text"
+            inputMode="numeric"
+            placeholder="0"
+            value={invoiceCount}
+            onChange={(e) => setInvoiceCount(e.target.value.replace(/[^0-9]/g, ""))}
+            className={inputCls}
           />
-          <div className="flex justify-between text-[0.7rem] text-ink-muted mt-1.5">
-            <span>0 invoices</span>
-            <span>up to KES 100,000 (or 5% of the tax, higher) per failure</span>
-            <span>20</span>
+          <div className="flex flex-wrap gap-2 mt-3">
+            {["0", "1", "3", "5", "10", "20"].map((v) => (
+              <button key={v} type="button" onClick={() => setInvoiceCount(v)}
+                className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${inv === parseInt(v, 10) ? "bg-ink text-canvas border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{v}</button>
+            ))}
           </div>
+          <p className="text-[0.7rem] text-ink-muted mt-2">Up to KES 100,000 (or 5% of the tax, whichever is higher) per failure. Max 20.</p>
         </div>
 
         <div className="p-5 bg-canvas-alt">
           {!hasAny ? (
             <div className="flex items-start gap-2.5 text-[0.82rem] text-ink-muted">
               <Info size={14} className="shrink-0 mt-0.5" aria-hidden="true" />
-              Move the sliders to see your penalty exposure. Leave them at 0 and your estimate stays at zero.
+              Type your numbers above to see your penalty exposure. Leave them at 0 and your estimate stays at zero.
             </div>
           ) : (
             <>
