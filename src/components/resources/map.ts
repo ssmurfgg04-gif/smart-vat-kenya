@@ -535,12 +535,12 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "non-resident-rental-income-tax-kenya": {
     title: "Non-Resident Rental Tax Kenya: 30% Guide",
-    description: "Non-resident landlords in Kenya must now self-declare and pay a 30% final tax on gross rent. Who's affected, how it works, and the exception that avoids double filing.",
+    description: "Non-resident landlords: Kenya's 30% final tax on gross rent. Who's affected, how to file, and the double-filing exception.",
     canonical: "/resources/non-resident-rental-income-tax-kenya/",
   },
   "significant-economic-presence-tax-kenya": {
     title: "SEP Tax Kenya: 3% Digital Tax Guide",
-    description: "Kenya's SEP tax charges non-resident digital platforms 3% of gross Kenyan revenue with no minimum threshold. Who it hits and what it means if you're paid from abroad.",
+    description: "Kenya SEP tax: 3% on non-resident platforms' gross Kenyan revenue, no minimum. Who pays and what it means for you.",
     canonical: "/resources/significant-economic-presence-tax-kenya/",
   },
   "kra-pin-registration-foreigners": {
@@ -610,37 +610,37 @@ export const resourceMeta: Record<string, ResourceMeta> = {
   },
   "etims-device-not-registered": {
     title: "eTIMS Device Not Registered - How to Activate on KRA (2026)",
-    description: "If your eTIMS device shows 'Device Not Registered' or 'Device Not Found', it has not been linked to your KRA PIN. Learn why, how to register via eTIMS Lite, and what to do if your PIN is not VAT-registered.",
+    description: "eTIMS 'Device Not Registered'? Link it to your KRA PIN via eTIMS Lite and start invoicing again. Step-by-step fix.",
     canonical: "/resources/etims-device-not-registered/",
   },
   "etims-cu-pin-invalid": {
     title: "eTIMS CU PIN Invalid or Blocked - How to Reset (2026)",
-    description: "When your eTIMS Control Unit PIN is invalid, expired, or blocked after failed login attempts: how to reset, where to find the original PIN, and how to avoid the permanent lockout.",
+    description: "eTIMS Control Unit PIN invalid, expired or blocked? How to reset it, find the original PIN and avoid permanent lockout.",
     canonical: "/resources/etims-cu-pin-invalid/",
   },
   "etims-duplicate-invoice": {
     title: "eTIMS Duplicate Invoice Error - Why It Happens & How to Fix",
-    description: "When KRA rejects your eTIMS invoice with 'duplicate invoice number' or 'duplicate coupon', here is what to check, how to re-issue, and how to use multi-device invoice prefixes to prevent future duplicates.",
+    description: "KRA rejected your eTIMS invoice as duplicate? What to check, how to re-issue, and multi-device prefixes that prevent it.",
     canonical: "/resources/etims-duplicate-invoice/",
   },
   "etims-buyer-pin-missing": {
     title: "eTIMS Buyer PIN Missing or Invalid - How to Invoice B2B (2026)",
-    description: "When KRA rejects your eTIMS invoice with 'buyer PIN required' or 'invalid buyer TIN', here is when the buyer PIN is actually required, how to verify a buyer's KRA PIN, and what to do if the customer has no PIN.",
+    description: "KRA demands a buyer PIN on your eTIMS invoice? When it's required, how to verify one, and invoicing customers with no PIN.",
     canonical: "/resources/etims-buyer-pin-missing/",
   },
   "vat-return-dispute-auto-populated": {
     title: "How to Dispute a Wrong Auto-Populated VAT Return (2026)",
-    description: "When KRA auto-fills a wrong VAT figure - inflated sales, missing purchases, duplicate invoices - here is exactly how to dispute via Notice of Objection, amend, and document the correction before the 20th deadline.",
+    description: "KRA auto-filled a wrong VAT figure? Dispute via Notice of Objection, amend and document before the 20th deadline.",
     canonical: "/resources/vat-return-dispute-auto-populated/",
   },
   "vat-ledger-explained-kenya": {
     title: "KRA VAT Ledger Explained - What KRA Sees on Your Account (2026)",
-    description: "The KRA VAT ledger is the master record of every VAT amount you declared, paid, and owed. Understand the four columns - output VAT, input VAT, payments, and credits - and how the auto-populated return pulls from it.",
+    description: "KRA VAT ledger explained: output VAT, input VAT, payments, credits — and how the auto-populated return pulls from it.",
     canonical: "/resources/vat-ledger-explained-kenya/",
   },
   "vat-auto-population-input-tax-credit": {
     title: "Auto-Populated Input VAT - How to Claim Your Full Credit (2026)",
-    description: "The auto-populated VAT return credits input VAT only when suppliers transmit eTIMS invoices with your correct PIN. Learn the 6-month rule, how to add missing purchases, and how to maximize your legitimate input VAT claim.",
+    description: "Auto-populated VAT returns credit input VAT only with your correct PIN on eTIMS invoices. 6-month rule + missing purchases.",
     canonical: "/resources/vat-auto-population-input-tax-credit/",
   },
 }

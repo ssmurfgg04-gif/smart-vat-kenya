@@ -18,7 +18,7 @@ const articleSchema = {
   "@type": "Article" as const,
   headline: "Significant Economic Presence (SEP) Tax Kenya Guide 2026",
   description:
-    "Kenya's SEP tax charges non-resident digital platforms 3% of gross Kenyan revenue with no minimum threshold. Who it hits and what it means if you're paid from abroad.",
+    "Kenya SEP tax: 3% on non-resident platforms' gross Kenyan revenue, no minimum. Who pays and what it means for you.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-09-08",

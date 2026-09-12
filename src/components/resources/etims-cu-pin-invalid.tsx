@@ -20,7 +20,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "eTIMS CU PIN Invalid or Blocked - How to Reset & Reactivate (2026)",
   description:
-    "If your eTIMS Control Unit PIN is invalid, expired, or blocked after failed login attempts, here is how to reset it, where to find the original PIN, and how to avoid the permanent lockout.",
+    "eTIMS Control Unit PIN invalid, expired or blocked? How to reset it, find the original PIN and avoid permanent lockout.",
   author: personSchema(),
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-18",

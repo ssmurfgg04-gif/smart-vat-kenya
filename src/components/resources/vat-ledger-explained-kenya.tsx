@@ -20,7 +20,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "KRA VAT Ledger Explained - What KRA Sees on Your Account (2026)",
   description:
-    "The KRA VAT ledger is the master record of everything you have declared, paid, and owed. Understand the four columns - output VAT, input VAT, payments, and credits - and how the auto-populated return pulls from this ledger.",
+    "KRA VAT ledger explained: output VAT, input VAT, payments, credits — and how the auto-populated return pulls from it.",
   author: personSchema(),
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-08",

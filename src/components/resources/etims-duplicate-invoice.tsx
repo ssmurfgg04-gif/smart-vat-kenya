@@ -20,7 +20,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "eTIMS Duplicate Invoice Error - Why It Happens & How to Fix (2026)",
   description:
-    "When KRA rejects your eTIMS invoice with a 'duplicate invoice number' or 'duplicate coupon' error, here is what to check, how to re-issue, and how to avoid duplicates when invoicing across multiple devices.",
+    "KRA rejected your eTIMS invoice as duplicate? What to check, how to re-issue, and multi-device prefixes that prevent it.",
   author: personSchema(),
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-20",

@@ -20,7 +20,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "eTIMS Buyer PIN Missing or Invalid - How to Invoice B2B (2026)",
   description:
-    "When KRA rejects your eTIMS invoice with 'buyer PIN required' or 'invalid buyer TIN', here is when the buyer PIN is actually required, how to issue a valid B2B invoice, and what to do when the customer does not have a PIN.",
+    "KRA demands a buyer PIN on your eTIMS invoice? When it's required, how to verify one, and invoicing customers with no PIN.",
   author: personSchema(),
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-22",

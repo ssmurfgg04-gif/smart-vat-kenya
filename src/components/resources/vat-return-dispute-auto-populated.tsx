@@ -20,7 +20,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "How to Dispute a Wrong Auto-Populated VAT Return Amount (2026)",
   description:
-    "When KRA auto-fills a wrong VAT return figure - inflated sales, missing purchases, duplicate invoices - here is exactly how to dispute, amend, and document the correction before the 20th deadline.",
+    "KRA auto-filled a wrong VAT figure? Dispute via Notice of Objection, amend and document before the 20th deadline.",
   author: personSchema(),
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-12",

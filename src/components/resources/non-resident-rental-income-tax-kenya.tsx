@@ -18,7 +18,7 @@ const articleSchema = {
   "@type": "Article" as const,
   headline: "Non-Resident Rental Income Tax Kenya Guide 2026",
   description:
-    "Non-resident landlords in Kenya must now self-declare and pay a 30% final tax on gross rent. Who's affected, how it works, and the exception that avoids double filing.",
+    "Non-resident landlords: Kenya's 30% final tax on gross rent. Who's affected, how to file, and the double-filing exception.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-09-08",

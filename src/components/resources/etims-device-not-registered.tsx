@@ -20,7 +20,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "eTIMS Device Not Registered - How to Activate Your OSCU/VSCU (2026)",
   description:
-    "If your eTIMS device shows 'Device Not Registered' or 'Device Not Found', it has not been activated on KRA's eTIMS platform. Learn why this happens, how to register your device online, and how to start invoicing again.",
+    "eTIMS 'Device Not Registered'? Link it to your KRA PIN via eTIMS Lite and start invoicing again. Step-by-step fix.",
   author: personSchema(),
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-15",

@@ -20,7 +20,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Auto-Populated Input VAT - How to Claim Your Full Credit (2026)",
   description:
-    "The auto-populated VAT return credits your input VAT only when suppliers transmit eTIMS invoices with your correct PIN. Learn the 6-month rule, how to add missing purchases, and how to maximize your legitimate input VAT claim.",
+    "Auto-populated VAT returns credit input VAT only with your correct PIN on eTIMS invoices. 6-month rule + missing purchases.",
   author: personSchema(),
   publisher: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },
   datePublished: "2026-08-14",
