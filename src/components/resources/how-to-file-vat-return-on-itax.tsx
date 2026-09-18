@@ -27,6 +27,20 @@ const articleSchema = {
   mainEntityOfPage: "https://smartvatkenya.co.ke/resources/how-to-file-vat-return-on-itax",
 }
 
+const howToSchema = {
+  "@context": "https://schema.org" as const,
+  "@type": "HowTo",
+  name: "How to File a VAT Return on KRA iTax",
+  description: "File your monthly VAT return on KRA iTax before the 20th. Works for normal returns with sales and purchases.",
+  totalTime: "PT20M",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Log in and open the VAT return form", text: "Go to itax.kra.go.ke, enter your KRA PIN and password, then open Returns > VAT Returns." },
+    { "@type": "HowToStep", position: 2, name: "Enter your total sales (Output VAT)", text: "Fill the sales rows with your total taxable sales for the period; the form computes output VAT at 16%." },
+    { "@type": "HowToStep", position: 3, name: "Enter your total purchases (Input VAT)", text: "Enter purchases backed by eTIMS invoices to claim input VAT credit." },
+    { "@type": "HowToStep", position: 4, name: "Review the calculated VAT payable or refundable", text: "Check the computed net VAT. Output minus input is what you owe; a credit position means a refund or carry-forward." },
+    { "@type": "HowToStep", position: 5, name: "Submit and save your confirmation receipt", text: "Submit the return, then download and keep the acknowledgement receipt as proof of filing." },
+  ],
+}
 const faqSchema = {
   "@context": "https://schema.org" as const,
   "@type": "FAQPage" as const,
@@ -88,6 +102,8 @@ export default function VatReturnFilingPage() {
     <>
       <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script id="howto-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script id="breadcrumb-schema" type="application/ld+json"

@@ -324,7 +324,11 @@ export default function MpesaErrorCodesPage() {
                 <a href="/resources/safaricom-not-working/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
                   Safaricom not working - status &amp; fixes
                 </a>{" "}
-                for network-level outages.
+                for network-level outages, and the {" "}
+                <a href="/tools/mpesa-vat-reconciler/" className="text-brand underline underline-offset-2 hover:text-brand-hover">
+                  M-Pesa VAT Reconciler
+                </a>{" "}
+                to turn a full statement into your output-VAT position.
               </p>
             </div>
           </section>

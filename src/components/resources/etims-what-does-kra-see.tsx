@@ -152,7 +152,7 @@ export default function EtimsWhatDoesKraSee() {
 
             <h2>Your Bank Account and M-Pesa: What KRA Cannot Get - and What It Can</h2>
             <ul>
-              <li>Your private messages, apps or history history history</li>
+              <li>Your private messages, apps or history</li>
               <li>The contents of your phone - no eTIMS app reads other apps or files</li>
               <li>
                 Your M-Pesa statements "live" - mobile-money records sit with the operator. The Commissioner General has
@@ -167,6 +167,12 @@ export default function EtimsWhatDoesKraSee() {
               The "they can watch your computer" version is false. eTIMS transmissions are invoices only - get any
               skilled developer, auditor or tax advisor to trace exactly what KRA's e-invoicing protocol carries and
               they will come back with the items on the first list and nothing else.
+            </p>
+            <p>
+              Running a Paybill or Till? Merchant transaction data <em>is</em> shared with KRA, so reconcile what hits
+              your statement against what you file - the free{" "}
+              <a href="/tools/mpesa-vat-reconciler/" className="text-brand underline underline-offset-2 hover:text-brand-hover">M-Pesa VAT Reconciler</a>{" "}
+              flags real sales and extracts the 16% output VAT in your browser.
             </p>
 
             <h2>The M-Pesa Rumour That Hurt the Most</h2>

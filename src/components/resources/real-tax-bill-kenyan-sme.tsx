@@ -243,7 +243,7 @@ export default function RealTaxBillKenyanSmePage() {
               <div className="border border-hairline rounded-lg p-4 bg-canvas-alt flex items-start gap-3">
                 <Info size={16} weight="fill" className="text-ink-muted shrink-0 mt-0.5" aria-hidden="true" />
                 <p className="text-[0.83rem] text-ink-muted leading-relaxed">
-                  <strong className="text-ink">Figures are illustrative</strong>, rounded for readability, and shift with your margins, staffing and county. Run your own numbers with the <a href="/tools/" className="text-brand underline underline-offset-2 hover:text-brand-hover">free VAT and penalty calculators</a> - the shock value of this table is the structure, not the exact shillings.
+                  <strong className="text-ink">Figures are illustrative</strong>, rounded for readability, and shift with your margins, staffing and county. Run your own numbers with the <a href="/tools/" className="text-brand underline underline-offset-2 hover:text-brand-hover">free VAT and penalty calculators</a>, check any hire&apos;s true cost with the <a href="/tools/salary-calculator/" className="text-brand underline underline-offset-2 hover:text-brand-hover">unified salary calculator</a> (PAYE + SHIF + NSSF + Housing Levy in one payslip) - the shock value of this table is the structure, not the exact shillings.
                 </p>
               </div>
             </div>

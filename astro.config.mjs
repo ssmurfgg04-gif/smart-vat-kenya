@@ -71,8 +71,11 @@ export default defineConfig({
         // VERIFY with: node verify-csp.cjs  (after any edit to any of these scripts)
         hashes: [
           "sha256-Gg0/seg1F+l3T1CRtiPaHSLgTl8bS2jSXkuz+6PeAW0=",
-          "sha256-/avMCWurbOW+mgAjEyqVaOOGjJyKPiE8ruWr08EiUqU=",
-          "sha256-BR1OJYOtyJAwmk5ni1TI1rdyH0zwqBjbxnmLmgKKupQ=",
+          "sha256-QzWFZi+FLIx23tnm9SBU4aEgx4x8DsuASP07mfqol/c=",
+          "sha256-Ya0pUYrC7nM5Cn/056TyVuEiz6dFGrzmkWzgON0pF0U=",
+          "sha256-Q2BPg90ZMplYY+FSdApNErhpWafg2hcRRbndmvxuL/Q=",
+          "sha256-yV6r9l14w1tuDvwVXy/l6fWGlbPG2d7wHT46Yi3jwY4=",
+          "sha256-vFtPhE6E2Ktj3SmNxddPQEdp+ExHnujyOdVi4EjX+q0=",
         ],
       },
       styleDirective: {

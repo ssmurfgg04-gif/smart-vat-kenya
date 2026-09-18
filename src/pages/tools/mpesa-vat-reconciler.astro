@@ -1,0 +1,176 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+import { MpesaReconciler } from "@/src/components/pages/mpesa-reconciler"
+
+// WebApplication schema -> rich-result eligibility for the tool (audit Part 7)
+const webAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "M-Pesa VAT Reconciler",
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "Web",
+  url: "https://smartvatkenya.co.ke/tools/mpesa-vat-reconciler/",
+  description: "Reconcile your M-Pesa statement, flag actual sales, and extract 16% output VAT for your VAT3 return. Free, browser-only, nothing uploaded.",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "KES" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya" },
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Does KRA tax M-Pesa sales?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. If you are VAT-registered, money customers pay into your Paybill or Buy Goods Till is payment for taxable supplies. You must declare it and charge 16% VAT on top (or extract 16/116 from inclusive prices). KRA receives merchant Paybill and Till data from Safaricom and matches it against the returns you file.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I calculate VAT on M-Pesa receipts?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "If your M-Pesa prices already include VAT, extract it by multiplying the amount by 16/116 (about 13.79%). For example, KES 35,000 received includes KES 4,827.59 VAT. If you quoted prices without VAT, add 16%. This tool does the extraction for every sale you flag.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I claim input VAT on M-Pesa transaction charges?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "M-Pesa charges include 16% VAT, but a statement entry is not a tax document. You can only claim the input VAT if you hold a proper eTIMS tax invoice from Safaricom. Request monthly eTIMS invoices covering your M-Pesa charges and keep them with your VAT records.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is my M-Pesa statement data safe with this tool?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. The reconciler runs entirely in your browser using JavaScript. Your statement is never uploaded to any server, stored, or transmitted. Close the tab and it is gone.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can KRA see my M-Pesa transactions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "For merchant accounts (Paybill, Till, agent float) KRA receives transaction data through its integration with Safaricom and can request statements during audits under the Tax Procedures Act record-keeping rules. Personal wallet balances are not visible to eTIMS — but business receipts are matched against filed returns.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What if I file nil but M-Pesa shows sales?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "That mismatch is exactly what KRA's data-matching flags, leading to assessments and the Special Table. Use the amnesty (100% penalty waiver until 31 December 2026) to correct past periods, then file accurately going forward.",
+      },
+    },
+  ],
+}
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Free Tools", item: "https://smartvatkenya.co.ke/tools/" },
+    { "@type": "ListItem", position: 3, name: "M-Pesa VAT Reconciler", item: "https://smartvatkenya.co.ke/tools/mpesa-vat-reconciler/" },
+  ],
+}
+---
+
+<BaseLayout
+  jsonLd={webAppSchema}
+  breadcrumbSchema={breadcrumbSchema}
+  title="M-Pesa VAT Reconciler: Extract 16% Output VAT From Your Statement"
+  description="Upload or paste your M-Pesa statement, flag real sales, and get the 16% output VAT for your VAT3 return. Browser-only — your data never leaves your device."
+  path="/tools/mpesa-vat-reconciler/"
+>
+  <div class="bg-canvas-dark px-6 lg:px-12 py-14">
+    <div class="max-w-4xl mx-auto">
+      <a href="/tools/" class="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">← All tools</a>
+      <div class="flex flex-wrap gap-2 mb-5">
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/60 px-2.5 py-1 rounded-sm">Free tool</span>
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/50 px-2.5 py-1 rounded-sm">Browser-only · nothing uploaded</span>
+      </div>
+      <h1 class="font-display text-[clamp(1.7rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
+        M-Pesa VAT Reconciler
+      </h1>
+      <p class="text-[0.95rem] text-canvas/70 max-w-[62ch] leading-relaxed">
+        Paste your M-Pesa statement and get the output VAT hiding in it. We flag which deposits are real sales, extract 16% VAT (16/116 from inclusive prices), and total your charges — a clean reconciliation for your VAT3 return. Nothing is uploaded; the parsing happens in your browser.
+      </p>
+    </div>
+  </div>
+
+  <div class="px-6 lg:px-12 py-12">
+    <MpesaReconciler client:load />
+
+    <!-- SEO body: how it works -->
+    <div class="max-w-4xl mx-auto mt-16 pt-12 border-t border-hairline">
+      <h2 class="font-display text-[1.3rem] font-semibold text-ink tracking-tight mb-5">Why reconcile M-Pesa against your VAT return?</h2>
+      <div class="grid gap-6 sm:grid-cols-3 mb-10">
+        <div>
+          <p class="font-mono text-[0.65rem] uppercase tracking-[0.16em] text-brand mb-2">1 · Sales you forgot</p>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">Money hitting your Paybill is easy to lose track of when invoice records live in a notebook. The reconciler lists every inflow so nothing undeclared slips into the next period.</p>
+        </div>
+        <div>
+          <p class="font-mono text-[0.65rem] uppercase tracking-[0.16em] text-brand mb-2">2 · VAT you extract correctly</p>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">M-Pesa notifications show gross amounts. KRA wants the VAT component: 16/116 of an inclusive price. Extracting it line-by-line is exactly what the tool automates.</p>
+        </div>
+        <div>
+          <p class="font-mono text-[0.65rem] uppercase tracking-[0.16em] text-brand mb-2">3 · Mismatches KRA sees</p>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">KRA matches Paybill and Till data against filed returns. Filing nil while M-Pesa shows sales is the fastest route to an assessment — reconcile before you file instead.</p>
+        </div>
+      </div>
+
+      <h2 class="font-display text-[1.3rem] font-semibold text-ink tracking-tight mb-5">How to use the reconciler</h2>
+      <ol class="space-y-4 mb-10 max-w-3xl list-none pl-0">
+        <li class="flex gap-3 items-start"><span class="shrink-0 w-6 h-6 rounded-sm bg-ink text-background font-mono text-[0.72rem] font-bold flex items-center justify-center">1</span><p class="text-[0.88rem] text-ink-soft leading-relaxed"><strong class="text-ink font-semibold">Get your statement.</strong> In the M-Pesa app: My Account → M-Pesa Statement, or from Safaricom's statement portal. Download the Full Statement CSV — or open the PDF and copy all text.</p></li>
+        <li class="flex gap-3 items-start"><span class="shrink-0 w-6 h-6 rounded-sm bg-ink text-background font-mono text-[0.72rem] font-bold flex items-center justify-center">2</span><p class="text-[0.88rem] text-ink-soft leading-relaxed"><strong class="text-ink font-semibold">Paste or upload it above.</strong> The parser reads both the official CSV layout (Paid In / Withdrawn columns) and raw PDF text. Nothing is uploaded — it runs in your browser.</p></li>
+        <li class="flex gap-3 items-start"><span class="shrink-0 w-6 h-6 rounded-sm bg-ink text-background font-mono text-[0.72rem] font-bold flex items-center justify-center">3</span><p class="text-[0.88rem] text-ink-soft leading-relaxed"><strong class="text-ink font-semibold">Review the flags.</strong> Bank transfers, M-Shwari movements and reversals are auto-excluded. Tap any row to re-classify it — the VAT figure updates as you go.</p></li>
+        <li class="flex gap-3 items-start"><span class="shrink-0 w-6 h-6 rounded-sm bg-ink text-background font-mono text-[0.72rem] font-bold flex items-center justify-center">4</span><p class="text-[0.88rem] text-ink-soft leading-relaxed"><strong class="text-ink font-semibold">Copy your summary.</strong> Paste the reconciliation into your filing notes, then declare the output VAT on your VAT3 return before the 20th.</p></li>
+      </ol>
+
+      <h2 class="font-display text-[1.3rem] font-semibold text-ink tracking-tight mb-5">M-Pesa VAT: frequently asked questions</h2>
+      <div class="max-w-3xl space-y-6 mb-12">
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">Does KRA tax M-Pesa sales?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">Yes. If you are VAT-registered, Paybill and Till receipts are payments for taxable supplies and belong on your return. KRA receives merchant Paybill and Till data from Safaricom and matches it against what you file — undeclared M-Pesa sales are among the most common triggers for VAT assessments and Special Table listings.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">How do I extract VAT from an M-Pesa amount?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">If the price you quoted already included VAT, the VAT component is 16/116 of the amount — roughly 13.79%. KES 35,000 in, for example, contains KES 4,827.59 of VAT. If your prices exclude VAT, add 16% on top. The tool applies whichever convention you choose to every sale you flag.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">Can I claim input VAT on M-Pesa charges?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">The charges embed 16% VAT, but only a proper eTIMS tax invoice supports the claim — a statement line does not. Ask Safaricom for monthly eTIMS invoices covering your M-Pesa charges and file them with your VAT records. The reconciler totals your charges so you know what to request.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">Is my statement safe here?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">Completely. The reconciler is a static page — there is no backend, no upload, no storage. All parsing happens in your browser's memory, and closing the tab discards everything. You can even disconnect from the internet after the page loads and it still works.</p>
+        </div>
+      </div>
+
+      <!-- Related -->
+      <div class="max-w-3xl border-t border-hairline pt-8">
+        <p class="font-mono text-[0.65rem] uppercase tracking-[0.16em] text-ink-muted mb-4">Related guides</p>
+        <div class="grid gap-4 sm:grid-cols-3">
+          <a href="/resources/etims-what-does-kra-see/" class="border border-hairline rounded-lg p-4 hover:border-ink/20 hover:shadow-sm transition-all group">
+            <p class="font-semibold text-[0.85rem] text-ink group-hover:text-brand transition-colors leading-snug">Can KRA see my M-Pesa?</p>
+            <p class="text-[0.75rem] text-ink-muted mt-1.5 leading-relaxed">Exactly what KRA can and cannot see through eTIMS in 2026.</p>
+          </a>
+          <a href="/resources/mpesa-error-codes/" class="border border-hairline rounded-lg p-4 hover:border-ink/20 hover:shadow-sm transition-all group">
+            <p class="font-semibold text-[0.85rem] text-ink group-hover:text-brand transition-colors leading-snug">M-Pesa error codes MR101, MR105</p>
+            <p class="text-[0.75rem] text-ink-muted mt-1.5 leading-relaxed">Fix failed Paybill payments and stuck reversals.</p>
+          </a>
+          <a href="/resources/how-to-file-vat-return-on-itax/" class="border border-hairline rounded-lg p-4 hover:border-ink/20 hover:shadow-sm transition-all group">
+            <p class="font-semibold text-[0.85rem] text-ink group-hover:text-brand transition-colors leading-snug">File your VAT return on iTax</p>
+            <p class="text-[0.75rem] text-ink-muted mt-1.5 leading-relaxed">The complete step-by-step guide to filing before the 20th.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

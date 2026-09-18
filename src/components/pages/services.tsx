@@ -127,7 +127,7 @@ const services = [
       "Avoids KES 10,000 late penalty",
       "M-PESA payment guidance",
       "Email filing confirmation",
-      "Dedicated support line",
+      "Priority email support",
     ],
     cta: "Start Filing",
   },

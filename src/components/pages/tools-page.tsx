@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Calculator, Info, WarningCircle, Question, Wrench, ClipboardText, CurrencyCircleDollar, Scales, ListChecks, HandCoins } from "@phosphor-icons/react/dist/ssr"
+import { ArrowRight, Calculator, Info, WarningCircle, Question, Wrench, ClipboardText, CurrencyCircleDollar, Scales, ListChecks, HandCoins, Receipt, Wallet } from "@phosphor-icons/react/dist/ssr"
 import { EtimsPenaltyCalculator } from "@/src/components/pages/etims-penalty-calculator"
 import { FACTS } from "@/src/lib/vat-facts"
 
@@ -272,6 +272,8 @@ export default function ToolsPage() {
           <div className="flex items-center gap-2.5 mb-6"><Calculator size={17} weight="duotone" className="text-brand" aria-hidden="true" /><h2 id="advanced-heading" className="font-display text-[1rem] font-semibold text-ink">More Free KRA Tax Tools</h2></div>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
             {[
+              { href: "/tools/mpesa-vat-reconciler/", icon: Receipt, label: "M-Pesa VAT Reconciler", desc: "Flag real sales in your M-Pesa statement and extract 16% output VAT for your VAT3", badge: "New" },
+              { href: "/tools/salary-calculator/", icon: Wallet, label: "Kenya Salary Calculator 2026", desc: "PAYE, SHIF, NSSF & Housing Levy in one payslip breakdown - net pay and employer cost", badge: "New" },
               { href: "/tools/etims-diagnostic/", icon: Wrench, label: "eTIMS Error Diagnostic", desc: "Select your error, get the exact fix steps - rejections, sync, lockouts, PINs", badge: "New" },
               { href: "/tools/youtube-tax-calculator/", icon: Calculator, label: "YouTube Tax Calculator", desc: "The 5% Google withholding on AdSense earnings - monthly and annual figures", badge: "New" },
               { href: "/tools/amnesty-checker/", icon: Scales, label: "Amnesty Eligibility Check", desc: "4 questions to know if the 2026 amnesty wipes your penalties", badge: "Deadline Dec 31" },

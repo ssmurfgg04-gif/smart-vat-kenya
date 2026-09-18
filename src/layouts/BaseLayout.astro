@@ -353,17 +353,15 @@ const citationSchema = {
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" />
 
   <!-- Speculation Rules -->
-  <script type="speculationrules">
-    {JSON.stringify({
-      prefetch: [
-        {
-          source: "list",
-          urls: ["/tools", "/resources", "/services", "/resources/how-to-register-for-vat-in-kenya", "/resources/kra-penalty-for-late-vat-filing", "/resources/how-to-calculate-vat-in-kenya", "/resources/cetis-kenya-2027/", "/resources/kra-tax-amnesty-2026/", "/resources/faq/"],
-          requires: ["anonymous-client-ip-when-cross-origin"],
-        },
-      ],
-    })}
-  </script>
+  <script type="speculationrules" set:html={JSON.stringify({
+    prefetch: [
+      {
+        source: "list",
+        urls: ["/tools/", "/resources/", "/services/", "/resources/how-to-register-for-vat-in-kenya/", "/resources/kra-penalty-for-late-vat-filing/", "/resources/how-to-calculate-vat-in-kenya/", "/resources/cetis-kenya-2027/", "/resources/kra-tax-amnesty-2026/", "/resources/faq/"],
+        requires: ["anonymous-client-ip-when-cross-origin"],
+      },
+    ],
+  })} />
 
   <!-- Inline critical CSS -->
   <style>
@@ -443,7 +441,7 @@ const citationSchema = {
   <BackToTop client:visible />
   <script is:inline>
     document.addEventListener('click', function(e){
-      var a = e.target.closest('a[data-track="contact-cta"],a[href^="mailto:"]');
+      var a = e.target.closest('a[data-track="contact-cta"], a[href^="mailto:"]');
       if(!a) return;
       var cta = a.getAttribute('data-cta-type') || a.getAttribute('data-track') || 'contact';
       var service = a.getAttribute('data-service') || 'general';

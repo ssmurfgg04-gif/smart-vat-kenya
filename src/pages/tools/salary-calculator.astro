@@ -1,0 +1,188 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+import { SalaryCalculator } from "@/src/components/pages/salary-calculator"
+
+// WebApplication schema -> rich-result eligibility for the tool (audit Part 7)
+const webAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Kenya Salary Calculator 2026",
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "Web",
+  url: "https://smartvatkenya.co.ke/tools/salary-calculator/",
+  description: "Unified Kenya salary calculator: PAYE bands, SHIF 2.75%, NSSF Tier I & II and Housing Levy in one payslip breakdown, plus employer cost. Free, no sign-up.",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "KES" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya" },
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How is PAYE calculated in Kenya 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "PAYE is charged on taxable pay (gross minus NSSF, SHIF, Housing Levy and allowable pension/mortgage deductions) at these monthly bands: 10% on the first KES 24,000; 25% on KES 24,001–32,333; 30% on KES 32,334–500,000; 32.5% on KES 500,001–800,000; and 35% above KES 800,000. Personal relief of KES 2,400/month is then deducted from the tax.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much is SHIF in Kenya?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Social Health Insurance Fund contribution is 2.75% of your gross monthly salary, with a minimum of KES 300. It replaced NHIF in October 2024 and is deducted before PAYE, reducing your taxable pay.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much NSSF is deducted from my salary?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "NSSF is 6% of pensionable pay in two tiers: Tier I on the first KES 8,000 (max KES 480) and Tier II on KES 8,001–72,000 (max KES 3,840). The maximum employee contribution is KES 4,320/month, matched by the employer. Effective February 2025 ceilings.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is the Housing Levy mandatory for employees?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Every employee contributes 1.5% of gross salary to the Affordable Housing Levy, matched by an equal 1.5% from the employer. The employee's 1.5% is deducted before PAYE, reducing taxable pay.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What deductions reduce taxable pay in Kenya?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Before PAYE is computed, these are deducted from gross: actual NSSF contributions, the SHIF contribution, the 1.5% Housing Levy, approved retirement contributions up to KES 30,000/month (raised by Finance Act 2025), and mortgage interest up to KES 30,000/month for an owner-occupied home.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the personal tax relief in Kenya?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Every resident individual gets KES 2,400/month (KES 28,800/year) personal relief, credited against PAYE. There is also insurance relief at 15% of premiums paid, up to KES 5,000/month of premiums (max KES 750 relief).",
+      },
+    },
+  ],
+}
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Free Tools", item: "https://smartvatkenya.co.ke/tools/" },
+    { "@type": "ListItem", position: 3, name: "Kenya Salary Calculator", item: "https://smartvatkenya.co.ke/tools/salary-calculator/" },
+  ],
+}
+---
+
+<BaseLayout
+  jsonLd={webAppSchema}
+  breadcrumbSchema={breadcrumbSchema}
+  title="Kenya Salary Calculator 2026: PAYE, SHIF, NSSF & Housing Levy"
+  description="One payslip breakdown: PAYE at 2026 KRA bands, SHIF 2.75%, NSSF tiers and Housing Levy 1.5% — net pay and employer cost in seconds. Free Kenya salary calculator."
+  path="/tools/salary-calculator/"
+>
+  <div class="bg-canvas-dark px-6 lg:px-12 py-14">
+    <div class="max-w-4xl mx-auto">
+      <a href="/tools/" class="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">← All tools</a>
+      <div class="flex flex-wrap gap-2 mb-5">
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/60 px-2.5 py-1 rounded-sm">Free tool</span>
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/50 px-2.5 py-1 rounded-sm">Finance Act 2025 rates</span>
+      </div>
+      <h1 class="font-display text-[clamp(1.7rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
+        Kenya Salary Calculator 2026
+      </h1>
+      <p class="text-[0.95rem] text-canvas/70 max-w-[62ch] leading-relaxed">
+        Every statutory deduction in one payslip: PAYE at the 2026 KRA bands, SHIF at 2.75%, NSSF Tier I &amp; II, and the 1.5% Affordable Housing Levy — with the reliefs applied and your employer's true cost on top. Type a gross salary and the breakdown builds as you type.
+      </p>
+    </div>
+  </div>
+
+  <div class="px-6 lg:px-12 py-12">
+    <SalaryCalculator client:load />
+
+    <!-- SEO body -->
+    <div class="max-w-4xl mx-auto mt-16 pt-12 border-t border-hairline">
+      <h2 class="font-display text-[1.3rem] font-semibold text-ink tracking-tight mb-5">How the 2026 payslip adds up</h2>
+      <div class="max-w-3xl space-y-6 mb-10">
+        <p class="text-[0.88rem] text-ink-soft leading-relaxed">
+          Kenya's payslip has four statutory deductions working together. First, <strong class="text-ink font-semibold">NSSF</strong> takes 6% of pensionable pay across two tiers — KES 480 on the first KES 8,000, then 6% of the slice up to KES 72,000, topping out at KES 4,320 for higher earners. Then <strong class="text-ink font-semibold">SHIF</strong> takes 2.75% of gross (minimum KES 300), and the <strong class="text-ink font-semibold">Affordable Housing Levy</strong> takes another 1.5% of gross. Only after those come off does KRA compute <strong class="text-ink font-semibold">PAYE</strong> on what remains — which is why the calculator subtracts them before applying the bands.
+        </p>
+        <p class="text-[0.88rem] text-ink-soft leading-relaxed">
+          The PAYE bands themselves are progressive: 10% on the first KES 24,000, 25% up to KES 32,333, 30% up to KES 500,000, 32.5% up to KES 800,000, and 35% beyond. Two reliefs shrink the bill — the flat KES 2,400 personal relief every resident gets, and insurance relief worth 15% of premiums up to KES 5,000/month. Voluntary pension contributions are deductible up to KES 30,000/month following the Finance Act 2025 increase, and mortgage interest on an owner-occupied home is deductible up to KES 30,000 — both of which the calculator supports.
+        </p>
+        <p class="text-[0.88rem] text-ink-soft leading-relaxed">
+          On the employer side, the cost of an employee is always more than their gross salary: the employer matches NSSF kesh-for-kesh and adds its own 1.5% Housing Levy on top. The panel below the payslip shows that total cost so HR and founders can budget accurately for each hire.
+        </p>
+      </div>
+
+      <h2 class="font-display text-[1.3rem] font-semibold text-ink tracking-tight mb-5">Worked example: KES 85,000 gross</h2>
+      <div class="max-w-3xl mb-10 overflow-x-auto">
+        <table class="w-full text-[0.85rem] border border-hairline rounded-lg overflow-hidden">
+          <thead>
+            <tr class="bg-canvas-alt text-left">
+              <th class="px-4 py-3 font-medium text-ink-muted">Line</th>
+              <th class="px-4 py-3 font-medium text-ink-muted text-right">Amount (KES)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-hairline">
+            <tr><td class="px-4 py-2.5 text-ink">Gross salary</td><td class="px-4 py-2.5 text-right font-mono tabular-nums text-ink">85,000.00</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink">NSSF (Tier I 480 + Tier II 3,840)</td><td class="px-4 py-2.5 text-right font-mono tabular-nums text-ink">− 4,320.00</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink">SHIF (2.75%)</td><td class="px-4 py-2.5 text-right font-mono tabular-nums text-ink">− 2,337.50</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink">Housing Levy (1.5%)</td><td class="px-4 py-2.5 text-right font-mono tabular-nums text-ink">− 1,275.00</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink">Taxable pay</td><td class="px-4 py-2.5 text-right font-mono tabular-nums text-ink">77,067.50</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink">Tax before reliefs (10% + 25% + 30%)</td><td class="px-4 py-2.5 text-right font-mono tabular-nums text-ink">17,903.60</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink">Personal relief</td><td class="px-4 py-2.5 text-right font-mono tabular-nums text-ink">− 2,400.00</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink font-semibold">PAYE</td><td class="px-4 py-2.5 text-right font-mono tabular-nums text-ink font-semibold">15,503.60</td></tr>
+            <tr class="bg-canvas-alt"><td class="px-4 py-3 font-semibold text-ink">Net pay</td><td class="px-4 py-3 text-right font-display font-bold tabular-nums text-brand">61,563.90</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="font-display text-[1.3rem] font-semibold text-ink tracking-tight mb-5">Salary, SHIF, NSSF &amp; Housing Levy — FAQs</h2>
+      <div class="max-w-3xl space-y-6 mb-12">
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">How is PAYE calculated in Kenya in 2026?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">KRA computes PAYE on taxable pay — gross salary minus NSSF, SHIF, the Housing Levy and any allowable pension or mortgage deductions — using the monthly bands: 10% on the first KES 24,000; 25% on 24,001–32,333; 30% on 32,334–500,000; 32.5% on 500,001–800,000; and 35% above 800,000. The flat KES 2,400 personal relief is then credited. Employers must remit PAYE by the 9th of the following month.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">How much is SHIF and who pays it?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">SHIF is 2.75% of gross monthly salary with a KES 300 minimum, deducted by the employer and remitted to the Social Health Authority. It replaced NHIF from 1 October 2024. Because SHIF is deducted before PAYE, it also reduces your taxable income — a point most quick calculators miss and this one gets right.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">Why did my net pay drop after the NSSF increase?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">NSSF ceilings rose to KES 8,000 (Tier I) and KES 72,000 (Tier II) in February 2025, so the maximum employee contribution climbed to KES 4,320. The upside: NSSF is fully deductible before PAYE, so part of the extra NSSF comes back as lower PAYE — the net effect is smaller than the headline deduction.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">Is the Housing Levy refundable?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">No. The 1.5% employee contribution (plus the employer's 1.5% match) funds the Affordable Housing programme and is not refunded through the payslip. It is, however, deductible before PAYE, and both sides' contributions accrue to the employee's housing levy account for the programme's tenant-purchase schemes.</p>
+        </div>
+      </div>
+
+      <!-- Related -->
+      <div class="max-w-3xl border-t border-hairline pt-8">
+        <p class="font-mono text-[0.65rem] uppercase tracking-[0.16em] text-ink-muted mb-4">Related</p>
+        <div class="grid gap-4 sm:grid-cols-3">
+          <a href="/resources/real-tax-bill-kenyan-sme/" class="border border-hairline rounded-lg p-4 hover:border-ink/20 hover:shadow-sm transition-all group">
+            <p class="font-semibold text-[0.85rem] text-ink group-hover:text-brand transition-colors leading-snug">The real tax on a Kenyan SME</p>
+            <p class="text-[0.75rem] text-ink-muted mt-1.5 leading-relaxed">Every levy a business actually pays, in one worked example.</p>
+          </a>
+          <a href="/tools/mpesa-vat-reconciler/" class="border border-hairline rounded-lg p-4 hover:border-ink/20 hover:shadow-sm transition-all group">
+            <p class="font-semibold text-[0.85rem] text-ink group-hover:text-brand transition-colors leading-snug">M-Pesa VAT Reconciler</p>
+            <p class="text-[0.75rem] text-ink-muted mt-1.5 leading-relaxed">Extract 16% output VAT from your M-Pesa statement.</p>
+          </a>
+          <a href="/tools/" class="border border-hairline rounded-lg p-4 hover:border-ink/20 hover:shadow-sm transition-all group">
+            <p class="font-semibold text-[0.85rem] text-ink group-hover:text-brand transition-colors leading-snug">All free tax tools</p>
+            <p class="text-[0.75rem] text-ink-muted mt-1.5 leading-relaxed">VAT calculator, penalty estimator, PIN checker and more.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
