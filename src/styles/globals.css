@@ -69,6 +69,9 @@ html {
   --brand:       #c8372d;
   --brand-hover: #b02e24;
   --brand-muted: #f5e9e8;
+  /* Brand red tuned for text ON dark navy (--canvas-dark) backgrounds.
+     Base #c8372d fails WCAG on navy (2.8:1); this passes (5.4:1). */
+  --brand-on-dark: #ee7b7b;
   --accent-kra:  #1b2a3b;
   --hairline:    #dedad2;
 
@@ -105,6 +108,7 @@ html.dark {
   --brand:       #e85555;
   --brand-hover: #ef6a6a;
   --brand-muted: #3d1f1f;
+  --brand-on-dark: #ef8b84;
   --accent-kra:  #2a4a6b;
   --hairline:    #2a3542;
 
@@ -365,6 +369,7 @@ html.dark {
   .text-canvas-alt { color: var(--canvas-alt); }
   .text-brand { color: var(--brand); }
   .text-brand-hover { color: var(--brand-hover); }
+  .text-brand-on-dark { color: var(--brand-on-dark); }
 
   .bg-canvas { background-color: var(--canvas); }
   .bg-canvas-alt { background-color: var(--canvas-alt); }

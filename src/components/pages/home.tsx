@@ -219,7 +219,7 @@ export default function HomePage() {
                   <Icon size={24} weight="duotone" className="text-brand mb-3" aria-hidden="true" />
                   <p className="font-display text-[1.05rem] font-semibold text-ink mb-2 group-hover:text-brand transition-colors">{title}</p>
                   <p className="text-[0.82rem] text-ink-muted leading-snug flex-1 mb-4">{desc}</p>
-                  <span className="text-[0.78rem] font-medium text-brand mt-auto inline-block">Open →</span>
+                  <span className="text-[0.78rem] font-medium text-brand-hover mt-auto inline-block">Open →</span>
                 </a>
               ))}
             </div>
@@ -506,7 +506,7 @@ KRA's{" "}
                   "You get back to invoicing",
                 ].map((step, i) => (
                   <li key={i} className="flex items-center gap-2">
-                    <span className="font-mono text-[0.65rem] text-canvas/40 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="font-mono text-[0.65rem] text-canvas/70 shrink-0">{String(i + 1).padStart(2, "0")}</span>
                     <span>{step}</span>
                   </li>
                 ))}
@@ -557,7 +557,7 @@ KRA's{" "}
                   "We guide you through eTIMS onboarding",
                 ].map((step, i) => (
                   <li key={i} className="flex items-center gap-2">
-                    <span className="font-mono text-[0.63rem] text-ink-muted/40 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="font-mono text-[0.63rem] text-ink-muted/85 shrink-0">{String(i + 1).padStart(2, "0")}</span>
                     <span>{step}</span>
                   </li>
                 ))}
@@ -611,7 +611,7 @@ KRA's{" "}
                   "We handle any KRA queries or rejections free",
                 ].map((step, i) => (
                   <li key={i} className="flex items-center gap-2">
-                    <span className="font-mono text-[0.63rem] text-ink-muted/40 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="font-mono text-[0.63rem] text-ink-muted/85 shrink-0">{String(i + 1).padStart(2, "0")}</span>
                     <span>{step}</span>
                   </li>
                 ))}
@@ -647,7 +647,7 @@ KRA's{" "}
                   "If you owe principal, we structure a payment plan",
                 ].map((step, i) => (
                   <li key={i} className="flex items-center gap-2">
-                    <span className="font-mono text-[0.63rem] text-ink-muted/40 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="font-mono text-[0.63rem] text-ink-muted/85 shrink-0">{String(i + 1).padStart(2, "0")}</span>
                     <span>{step}</span>
                   </li>
                 ))}

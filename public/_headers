@@ -3,7 +3,14 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
-  Strict-Transport-Security: max-age=31536000; includeSubDomains
-  // CSP is emitted per-page by Astro via a <meta http-equiv="Content-Security-Policy">
-  // tag (astro.config.mjs -> security.csp). If the Netlify header is set too, the
-  // two policies would be intersected and block our hash-allowlisted inline scripts.
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  # CSP delivery:
+  #  - Netlify builds (NETLIFY=true): scripts/emit-csp-header.mjs runs after the
+  #    build, REMOVES the per-page <meta http-equiv="Content-Security-Policy">
+  #    that Astro injects (astro.config.mjs -> security.csp) and appends the same
+  #    policy below as a real HTTP header. Headers support the full directive set
+  #    (frame-ancestors is silently ignored inside a <meta> CSP) and kill the
+  #    browser console warning.
+  #  - Other hosts (local preview, Vercel): the <meta> CSP stays and covers the
+  #    site. Never serve BOTH the meta and a different header policy — browsers
+  #    enforce their intersection.

@@ -91,31 +91,31 @@ export default function YouTubeTaxCalculator() {
             <div className="border border-hairline rounded-lg overflow-hidden divide-y divide-hairline bg-canvas" aria-live="polite">
               <div className="p-3 sm:p-5 flex items-baseline justify-between gap-4">
                 <p className="text-[0.78rem] text-ink-muted">Withheld this month (5%)</p>
-                <p className={`font-display text-[1.15rem] sm:text-[1.45rem] font-semibold ${base > 0 ? "text-amber-700 dark:text-amber-400" : "text-ink-muted/40"}`}>
+                <p className={`font-display text-[1.15rem] sm:text-[1.45rem] font-semibold ${base > 0 ? "text-amber-700 dark:text-amber-400" : "text-ink-muted/85"}`}>
                   &minus; {base > 0 ? fmt(withheldMonthly) : "KES 0"}
                 </p>
               </div>
               <div className="p-3 sm:p-5 flex items-baseline justify-between gap-4 bg-brand-muted/40">
                 <p className="text-[0.78rem] font-medium text-ink">You receive this month</p>
-                <p className={`font-display text-[1.15rem] sm:text-[1.45rem] font-semibold ${base > 0 ? "text-ink" : "text-ink-muted/40"}`}>
+                <p className={`font-display text-[1.15rem] sm:text-[1.45rem] font-semibold ${base > 0 ? "text-ink" : "text-ink-muted/85"}`}>
                   {base > 0 ? fmt(netMonthly) : "KES 0"}
                 </p>
               </div>
               <div className="p-3 sm:p-5 flex items-baseline justify-between gap-4">
                 <p className="text-[0.78rem] text-ink-muted">Withheld per year (12 months)</p>
-                <p className={`font-display text-[1rem] sm:text-[1.2rem] font-semibold ${base > 0 ? "text-amber-700 dark:text-amber-400" : "text-ink-muted/40"}`}>
+                <p className={`font-display text-[1rem] sm:text-[1.2rem] font-semibold ${base > 0 ? "text-amber-700 dark:text-amber-400" : "text-ink-muted/85"}`}>
                   {base > 0 ? fmt(withheldAnnual) : "KES 0"}
                 </p>
               </div>
               <div className="p-3 sm:p-5 flex items-baseline justify-between gap-4">
                 <p className="text-[0.78rem] text-ink-muted">Gross per year</p>
-                <p className={`font-display text-[1rem] sm:text-[1.2rem] font-medium ${base > 0 ? "text-ink" : "text-ink-muted/40"}`}>
+                <p className={`font-display text-[1rem] sm:text-[1.2rem] font-medium ${base > 0 ? "text-ink" : "text-ink-muted/85"}`}>
                   {base > 0 ? fmt(grossAnnual) : "KES 0"}
                 </p>
               </div>
               <div className="p-3 sm:p-5 flex items-baseline justify-between gap-4">
                 <p className="text-[0.78rem] text-ink-muted">Net per year (after 5%)</p>
-                <p className={`font-display text-[1rem] sm:text-[1.2rem] font-medium ${base > 0 ? "text-ink" : "text-ink-muted/40"}`}>
+                <p className={`font-display text-[1rem] sm:text-[1.2rem] font-medium ${base > 0 ? "text-ink" : "text-ink-muted/85"}`}>
                   {base > 0 ? fmt(netAnnual) : "KES 0"}
                 </p>
               </div>

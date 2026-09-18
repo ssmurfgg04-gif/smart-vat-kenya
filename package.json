@@ -8,9 +8,11 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && pagefind --site dist --output-subdir _pagefind",
+    "build": "astro build && pagefind --site dist --output-subdir _pagefind && node scripts/emit-csp-header.mjs",
     "preview": "astro preview",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "verify:csp": "node verify-csp.cjs",
+    "verify:csp-header": "node verify-csp-header.cjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^7.0.4",
@@ -36,7 +38,7 @@
     "url": "https://github.com/ssmurfgg04-gif/smart-vat-kenya.git"
   },
   "homepage": "https://smartvatkenya.co.ke",
-  "description": "VAT registration and iTax filing services for Kenyan SMEs — Astro + Tailwind + React",
+  "description": "VAT registration and iTax filing services for Kenyan SMEs \u2014 Astro + Tailwind + React",
   "pnpm": {
     "overrides": {
       "hono": "4.12.25"

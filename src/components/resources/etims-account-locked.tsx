@@ -190,7 +190,7 @@ export default function ETIMSAccountLockedPage() {
               <time dateTime={lastVerified} className="font-mono text-canvas/70">
                 {new Date(lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
               </time>
-              <span className="text-canvas/40">against KRA guidance</span>
+              <span className="text-canvas/70">against KRA guidance</span>
             </span>
           </div>
           <p className="text-[0.78rem] text-canvas/50">Smart VAT Kenya &mdash; KRA-registered VAT agents</p>
@@ -220,7 +220,7 @@ export default function ETIMSAccountLockedPage() {
               {toc.map((item, i) => (
                 <li key={item.id}>
                   <a href={`#${item.id}`} className="flex items-center gap-3 text-[0.85rem] text-ink-muted hover:text-brand transition-colors">
-                    <span className="font-mono text-[0.63rem] text-ink-muted/40 w-5 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="font-mono text-[0.63rem] text-ink-muted/85 w-5 shrink-0">{String(i + 1).padStart(2, "0")}</span>
                     {item.label}
                   </a>
                 </li>

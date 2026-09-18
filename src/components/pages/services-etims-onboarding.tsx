@@ -309,7 +309,7 @@ export default function ETIMSOnboardingPage() {
               <div key={title} className="flex flex-col">
                 <Icon size={32} weight="duotone" className="text-brand mb-3" aria-hidden="true" />
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="font-mono text-[0.6rem] uppercase tracking-widest text-canvas/40">
+                  <span className="font-mono text-[0.6rem] uppercase tracking-widest text-canvas/70">
                     Step {i + 1}
                   </span>
                 </div>

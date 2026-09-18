@@ -227,7 +227,7 @@ export function SalaryCalculator() {
               <p className="font-mono text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-canvas">Payslip breakdown</p>
               <p className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-canvas/60 mt-0.5">PAYE · SHIF · NSSF · Housing Levy</p>
             </div>
-            <User size={22} weight="duotone" className="text-canvas/40" aria-hidden="true" />
+            <User size={22} weight="duotone" className="text-canvas/70" aria-hidden="true" />
           </div>
 
           {show ? (

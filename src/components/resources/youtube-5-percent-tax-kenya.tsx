@@ -124,7 +124,7 @@ export default function YoutubeFivePercentTaxPage() {
             <span className="flex items-center gap-1.5">
               <User size={13} weight="fill" aria-hidden="true" />
               <span className="font-medium text-canvas/80">{author.name}</span>
-              <span className="text-canvas/40">|</span>
+              <span className="text-canvas/70">|</span>
               <span>{author.title}</span>
             </span>
             <span className="flex items-center gap-1.5">
@@ -155,7 +155,7 @@ export default function YoutubeFivePercentTaxPage() {
               {toc.map((item, i) => (
                 <li key={item.id}>
                   <a href={`#${item.id}`} className="flex items-center gap-3 text-[0.85rem] text-ink-muted hover:text-brand transition-colors">
-                    <span className="font-mono text-[0.63rem] text-ink-muted/40 w-5 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="font-mono text-[0.63rem] text-ink-muted/85 w-5 shrink-0">{String(i + 1).padStart(2, "0")}</span>
                     {item.label}
                   </a>
                 </li>

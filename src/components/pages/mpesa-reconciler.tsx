@@ -307,7 +307,7 @@ export function MpesaReconciler() {
             onChange={(e) => setPasted(e.target.value)}
             placeholder={"Receipt No,Completion Time,Transaction Type,...,Paid In,Withdrawn,Balance\nSJ8A1K2M9Q,2026-08-03 09:14:22,Customer Deposit,...,\"35,000.00\",\"0.00\",\"135,000.00\"\n\n—or paste PDF statement lines—\n2026-08-03  Customer Deposit  Paybill 4098765  KES 35,000.00  KES 135,000.00"}
             rows={7}
-            className="w-full bg-canvas-alt border border-hairline rounded-lg px-4 py-3 text-[0.82rem] font-mono text-ink placeholder:text-ink-muted/40 focus:outline-none focus:border-brand transition-colors leading-relaxed"
+            className="w-full bg-canvas-alt border border-hairline rounded-lg px-4 py-3 text-[0.82rem] font-mono text-ink placeholder:text-ink-muted/85 focus:outline-none focus:border-brand transition-colors leading-relaxed"
           />
           <div className="flex flex-wrap items-center gap-3 mt-4">
             <button

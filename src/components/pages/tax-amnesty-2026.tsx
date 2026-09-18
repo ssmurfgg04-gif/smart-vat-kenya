@@ -342,7 +342,7 @@ export default function TaxAmnesty2026Page() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {steps.map((step) => (
               <div key={step.num} className="border border-canvas/15 rounded-lg p-6">
-                <p className="font-mono text-[0.7rem] text-canvas/40 tracking-widest mb-3">{step.num}</p>
+                <p className="font-mono text-[0.7rem] text-canvas/70 tracking-widest mb-3">{step.num}</p>
                 <h3 className="font-display text-[1.05rem] font-semibold text-canvas mb-2">{step.title}</h3>
                 <p className="text-[0.85rem] text-canvas/65 leading-relaxed">{step.desc}</p>
               </div>
