@@ -117,7 +117,7 @@ export default function NilReturnsTaxAmnestyPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <main className="max-w-[860px] mx-auto px-6 lg:px-10 py-16 lg:py-20">
+      <main className="max-w-[860px] mx-auto px-6 lg:px-12 py-16 lg:py-20">
         {/* Back link */}
         <a
           href="/resources/"
@@ -289,7 +289,7 @@ export default function NilReturnsTaxAmnestyPage() {
               },
             ].map(({ step, title, detail }) => (
               <div key={step} className="flex gap-4">
-                <span className="bg-ink text-canvas rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 tabular-nums">{step}</span>
+                <span className="bg-ink text-background rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 tabular-nums">{step}</span>
                 <div>
                   <p className="font-semibold text-ink text-[0.9rem]">{title}</p>
                   <p className="text-[0.83rem] text-ink-muted mt-0.5 leading-relaxed" dangerouslySetInnerHTML={{ __html: detail }} />
@@ -428,7 +428,7 @@ export default function NilReturnsTaxAmnestyPage() {
                 },
               ].map(({ step, title, detail }) => (
                 <div key={step} className="flex gap-4">
-                  <span className="bg-ink text-canvas rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 tabular-nums">{step}</span>
+                  <span className="bg-ink text-background rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 tabular-nums">{step}</span>
                   <div>
                     <p className="font-semibold text-ink text-[0.9rem]">{title}</p>
                     <p className="text-[0.83rem] text-ink-muted mt-0.5 leading-relaxed">{detail}</p>

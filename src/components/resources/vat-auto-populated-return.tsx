@@ -94,7 +94,7 @@ export default function AutoPopulatedReturnPage() {
       <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="max-w-[880px] mx-auto px-6 lg:px-10 py-12">
+      <div className="max-w-[880px] mx-auto px-6 lg:px-12 py-12">
         <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">
           <ArrowLeft size={14} aria-hidden="true" /> All Guides
         </a>
@@ -161,7 +161,7 @@ export default function AutoPopulatedReturnPage() {
                   { step: 6, title: "Confirm and submit", detail: "Double-check total sales, total purchases, and the net VAT payable. Ensure your M-PESA or bank has sufficient funds if you owe VAT. Submit the return and make payment by the 20th." },
                 ].map(({ step, title, detail }) => (
                   <div key={step} className="flex gap-4">
-                    <span className="bg-ink text-canvas rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 tabular-nums">{step}</span>
+                    <span className="bg-ink text-background rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 tabular-nums">{step}</span>
                     <div>
                       <p className="font-semibold text-ink text-[0.9rem]">{title}</p>
                       <p className="text-[0.83rem] text-ink-muted mt-0.5 leading-relaxed">{detail}</p>

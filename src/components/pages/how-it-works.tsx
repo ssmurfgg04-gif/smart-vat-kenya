@@ -123,7 +123,7 @@ export default function HowItWorksPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       {/* Header */}
-      <div className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <div className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
             Process
@@ -142,7 +142,7 @@ export default function HowItWorksPage() {
       </div>
 
       {/* Steps */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="steps-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="steps-heading">
         <div className="max-w-[1400px] mx-auto">
           <h2 id="steps-heading" className="sr-only">How it works - 3 steps</h2>
 
@@ -179,7 +179,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Guarantees */}
-      <section className="bg-canvas-alt px-6 lg:px-10 py-16" aria-labelledby="guarantees-heading">
+      <section className="bg-canvas-alt px-6 lg:px-12 py-16" aria-labelledby="guarantees-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             Our commitments
@@ -204,7 +204,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <section className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <h2 className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-canvas mb-2 text-balance">

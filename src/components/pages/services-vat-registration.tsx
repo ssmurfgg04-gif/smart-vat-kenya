@@ -147,7 +147,7 @@ export default function VATRegistrationPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
-      <div className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <div className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
             Service
@@ -188,7 +188,7 @@ export default function VATRegistrationPage() {
       </div>
 
       {/* What's included */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="included-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="included-heading">
         <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-16 lg:grid-cols-2 items-center">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
@@ -223,7 +223,7 @@ export default function VATRegistrationPage() {
       </section>
 
       {/* Process steps */}
-      <section className="bg-canvas-alt px-6 lg:px-10 py-16" aria-labelledby="steps-heading">
+      <section className="bg-canvas-alt px-6 lg:px-12 py-16" aria-labelledby="steps-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             How it works
@@ -268,7 +268,7 @@ export default function VATRegistrationPage() {
       </section>
 
       {/* Comparison table */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="compare-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="compare-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             Why choose us
@@ -304,7 +304,7 @@ export default function VATRegistrationPage() {
       </section>
 
       {/* Mid-page CTA */}
-      <section className="bg-brand-muted px-6 lg:px-10 py-12">
+      <section className="bg-brand-muted px-6 lg:px-12 py-12">
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.1rem] font-semibold text-ink">
@@ -326,7 +326,7 @@ export default function VATRegistrationPage() {
       </section>
 
       {/* ─── PILLAR CONTENT - VAT REGISTRATION KENYA 2026 ─── */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="pillar-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="pillar-heading">
         <div className="max-w-[800px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             VAT Registration Kenya 2026 - the full guide
@@ -386,7 +386,7 @@ export default function VATRegistrationPage() {
       <Testimonials />
 
       {/* FAQ */}
-      <section className="bg-canvas-alt px-6 lg:px-10 py-16" aria-labelledby="faq-heading">
+      <section className="bg-canvas-alt px-6 lg:px-12 py-16" aria-labelledby="faq-heading">
         <div className="max-w-[800px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             FAQ
@@ -414,7 +414,7 @@ export default function VATRegistrationPage() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <section className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <h2 className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-canvas mb-2 text-balance">

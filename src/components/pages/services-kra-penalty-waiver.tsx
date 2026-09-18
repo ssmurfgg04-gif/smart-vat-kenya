@@ -117,7 +117,7 @@ export default function KRAPenaltyWaiverPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* ── Header ──────────────────────────────────────────── */}
-      <div className="bg-canvas-dark px-6 lg:px-10 py-16 lg:py-20">
+      <div className="bg-canvas-dark px-6 lg:px-12 py-16 lg:py-20">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
             KRA Tax Amnesty 2026
@@ -168,7 +168,7 @@ export default function KRAPenaltyWaiverPage() {
       </div>
 
       {/* ── Warning box: what you face without a waiver ────── */}
-      <section className="bg-canvas-alt px-6 lg:px-10 py-14">
+      <section className="bg-canvas-alt px-6 lg:px-12 py-14">
         <div className="max-w-[1400px] mx-auto">
           <div className="border border-brand/20 bg-brand-muted rounded-lg p-6 lg:p-8 flex flex-col lg:flex-row lg:items-start gap-5">
             <div className="shrink-0 w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center">
@@ -200,7 +200,7 @@ export default function KRAPenaltyWaiverPage() {
       </section>
 
       {/* ── What&apos;s included ──────────────────────────────── */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="included-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="included-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             What&apos;s included
@@ -223,7 +223,7 @@ export default function KRAPenaltyWaiverPage() {
       </section>
 
       {/* ── How it works ───────────────────────────────────── */}
-      <section className="bg-canvas-dark px-6 lg:px-10 py-16" aria-labelledby="how-heading">
+      <section className="bg-canvas-dark px-6 lg:px-12 py-16" aria-labelledby="how-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/55 mb-4">
             How it works
@@ -244,7 +244,7 @@ export default function KRAPenaltyWaiverPage() {
       </section>
 
       {/* ── Types of penalties we handle ───────────────────── */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="penalties-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="penalties-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             What we can clean up
@@ -294,7 +294,7 @@ export default function KRAPenaltyWaiverPage() {
       </section>
 
       {/* ── Mid-page CTA ───────────────────────────────────── */}
-      <section className="bg-brand-muted px-6 lg:px-10 py-12">
+      <section className="bg-brand-muted px-6 lg:px-12 py-12">
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.1rem] font-semibold text-ink">
@@ -319,7 +319,7 @@ export default function KRAPenaltyWaiverPage() {
       <Testimonials />
 
       {/* ── FAQ ──────────────────────────────────────────────── */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="faq-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="faq-heading">
         <div className="max-w-[800px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             Frequently asked questions
@@ -344,7 +344,7 @@ export default function KRAPenaltyWaiverPage() {
       </section>
 
       {/* ── Bottom CTA ─────────────────────────────────────── */}
-      <section className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <section className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto text-center">
           <h2 className="font-display text-[clamp(1.5rem,3vw,2.2rem)] font-semibold text-canvas tracking-tight mb-4 text-balance">
             Ready to clear your KRA penalties before the deadline?
@@ -368,7 +368,7 @@ export default function KRAPenaltyWaiverPage() {
         </div>
       </section>
 
-      <section className="bg-canvas px-6 lg:px-10 py-16">
+      <section className="bg-canvas px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <NewsletterSignup />
         </div>

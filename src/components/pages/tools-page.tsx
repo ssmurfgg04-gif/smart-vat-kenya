@@ -87,7 +87,7 @@ export default function ToolsPage() {
 
   return (
     <div className="bg-canvas min-h-[100dvh]">
-      <div className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <div className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">Free tools - no sign-up required</p>
           <p className="font-mono text-[0.7rem] text-brand mb-6">
@@ -98,7 +98,7 @@ export default function ToolsPage() {
         </div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16">
         <a href="/tools/etims-diagnostic/" className="group flex flex-col sm:flex-row sm:items-center gap-4 border-2 border-brand/30 bg-brand/[0.04] rounded-xl p-5 sm:p-6 mb-12 hover:border-brand/60 transition-colors max-w-3xl">
           <span className="font-display text-[1.05rem] font-semibold text-ink leading-snug">eTIMS invoice failed, locked out, or stuck syncing? <span className="text-brand group-hover:underline">Diagnose it in 3 questions →</span></span>
           <span className="text-[0.75rem] text-ink-muted sm:ml-auto shrink-0">Most used · no sign-up · 2 min</span>
@@ -119,7 +119,7 @@ export default function ToolsPage() {
                 <p className="text-[0.78rem] font-medium text-ink-muted mb-3">KRA VAT Rate</p>
                 <div className="flex flex-wrap gap-2">
                   {([{ value: "standard", label: "Standard 16%" }, { value: "zero", label: "Zero-rated 0%" }, { value: "exempt", label: "Exempt" }] as { value: RateType; label: string }[]).map((r) => (
-                    <button key={r.value} onClick={() => setRateType(r.value)} className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${rateType === r.value ? "bg-ink text-canvas border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{r.label}</button>
+                    <button key={r.value} onClick={() => setRateType(r.value)} className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${rateType === r.value ? "bg-ink text-background border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{r.label}</button>
                   ))}
                 </div>
               </div>
@@ -127,7 +127,7 @@ export default function ToolsPage() {
                 <p className="text-[0.78rem] font-medium text-ink-muted mb-3">Calculate</p>
                 <div className="flex gap-2 flex-wrap">
                   {([{ value: "add", label: "Add VAT to amount" }, { value: "extract", label: "Extract VAT from total (reverse)" }] as { value: Direction; label: string }[]).map((d) => (
-                    <button key={d.value} onClick={() => setDirection(d.value)} className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${direction === d.value ? "bg-ink text-canvas border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{d.label}</button>
+                    <button key={d.value} onClick={() => setDirection(d.value)} className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${direction === d.value ? "bg-ink text-background border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{d.label}</button>
                   ))}
                 </div>
               </div>
@@ -167,7 +167,7 @@ export default function ToolsPage() {
                 <input id="pen-months" type="text" inputMode="numeric" placeholder="1" value={penMonths} onChange={(e) => setPenMonths(e.target.value.replace(/[^0-9]/g, ""))} className="w-full font-display text-[1.25rem] sm:text-[1.6rem] font-semibold text-ink bg-transparent focus:outline-none placeholder:text-ink-muted/30 placeholder:font-normal placeholder:text-xl" />
                 <div className="flex flex-wrap gap-2 mt-3">
                   {["1", "3", "6", "12", "24", "60"].map((v) => (
-                    <button key={v} type="button" onClick={() => setPenMonths(v)} className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${penM === parseInt(v, 10) ? "bg-ink text-canvas border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{v}</button>
+                    <button key={v} type="button" onClick={() => setPenMonths(v)} className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${penM === parseInt(v, 10) ? "bg-ink text-background border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{v}</button>
                   ))}
                 </div>
                 <p className="text-[0.7rem] text-ink-muted mt-2">Max 60 months. Type exact number or tap a preset.</p>
@@ -194,7 +194,7 @@ export default function ToolsPage() {
                 )}
                 {penDue > 0 && (
                   <a href={`mailto:info@smartvatkenya.co.ke?subject=${penWaText}`} className="btn-fill mt-5 w-full flex items-center justify-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold py-3 rounded-md hover:bg-brand-hover transition-colors">
-                    Need help with a waiver or amnesty? Chat with us. <ArrowRight size={13} weight="bold" aria-hidden="true" />
+                    Email the team about a waiver or amnesty <ArrowRight size={13} weight="bold" aria-hidden="true" />
                   </a>
                 )}
               </div>
@@ -239,7 +239,7 @@ export default function ToolsPage() {
             {quizStep === "start" && (
               <div className="p-7 flex flex-col items-start gap-5">
                 <p className="text-[0.88rem] text-ink-muted leading-relaxed max-w-prose">Answer 4-5 quick questions to find out whether VAT registration is mandatory, recommended, or optional for your Kenyan business. Includes eTIMS compliance check.</p>
-                <button onClick={() => setQuizStep("turnover")} className="btn-fill inline-flex items-center gap-2 bg-ink text-canvas text-sm font-semibold px-5 py-3 rounded-md hover:bg-canvas-dark transition-colors">Start the quiz <ArrowRight size={14} weight="bold" aria-hidden="true" /></button>
+                <button onClick={() => setQuizStep("turnover")} className="btn-fill inline-flex items-center gap-2 bg-ink text-background text-sm font-semibold px-5 py-3 rounded-md hover:bg-canvas-dark transition-colors">Start the quiz <ArrowRight size={14} weight="bold" aria-hidden="true" /></button>
               </div>
             )}
             {(quizStep === "turnover" || quizStep === "digital" || quizStep === "income_tax" || quizStep === "sector" || quizStep === "etims") && (
@@ -247,7 +247,7 @@ export default function ToolsPage() {
                 <p className="font-mono text-[0.65rem] uppercase tracking-widest text-ink-muted mb-3">Question {["turnover", "digital", "income_tax", "sector", "etims"].indexOf(quizStep) + 1} of 5</p>
                 <p className="font-display text-[0.95rem] font-semibold text-ink mb-6 leading-snug max-w-prose">{quizQuestions[quizStep].question}</p>
                 <div className="flex gap-3">
-                  <button onClick={() => handleQuizAnswer(quizStep, "yes")} className="btn-fill px-6 py-2.5 rounded-md bg-ink text-canvas text-sm font-semibold hover:bg-canvas-dark transition-colors">Yes</button>
+                  <button onClick={() => handleQuizAnswer(quizStep, "yes")} className="btn-fill px-6 py-2.5 rounded-md bg-ink text-background text-sm font-semibold hover:bg-canvas-dark transition-colors">Yes</button>
                   <button onClick={() => handleQuizAnswer(quizStep, "no")} className="px-6 py-2.5 rounded-md border border-hairline text-ink text-sm font-medium hover:border-ink-muted transition-colors">No</button>
                 </div>
                 <button onClick={() => setQuizStep("start")} className="mt-5 text-[0.75rem] text-ink-muted hover:text-ink transition-colors">Start over</button>

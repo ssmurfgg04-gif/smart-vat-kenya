@@ -1,9 +1,14 @@
 ---
 import BaseLayout from "@/src/layouts/BaseLayout.astro"
 import EtimsDiagnosticTool from "@/src/components/pages/etims-diagnostic-tool"
+// WebApplication schema -> rich-result eligibility for the tool (audit Part 7)
+const webAppSchema = {'@context': 'https://schema.org', '@type': 'WebApplication', 'name': 'Kenya eTIMS Error Diagnostic', 'applicationCategory': 'FinanceApplication', 'operatingSystem': 'Web', 'url': 'https://smartvatkenya.co.ke/tools/etims-diagnostic/', 'description': 'Free 3-question eTIMS diagnostic: exact fix steps for rejected invoices, pending sync, lockouts and PIN failures. No sign-up.', 'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'KES'}, 'publisher': {'@type': 'Organization', 'name': 'Smart VAT Kenya'}}
+
+
 ---
 
 <BaseLayout
+  jsonLd={webAppSchema}
   title="eTIMS Error Diagnostic: Find Your Exact Fix"
   description="Free eTIMS diagnostic: 3 questions, exact fix for rejected invoices, sync issues, lockouts and PIN failures. No sign-up."
   canonical="/tools/etims-diagnostic/"

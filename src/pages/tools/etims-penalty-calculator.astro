@@ -1,15 +1,30 @@
 ---
 import BaseLayout from "@/src/layouts/BaseLayout.astro"
 import { EtimsPenaltyCalculator } from "@/src/components/pages/etims-penalty-calculator"
+
+// WebApplication schema -> rich-result eligibility for the calculator (audit Part 7)
+const webAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Kenya eTIMS Penalty Calculator",
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "Web",
+  url: "https://smartvatkenya.co.ke/tools/etims-penalty-calculator/",
+  description:
+    "Estimate KRA penalties for eTIMS non-integration and e-invoice failures: KES 100,000/month (TPA s.59A(5)) plus s.86 exposure. Free, no sign-up.",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "KES" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya" },
+}
 ---
 
 <BaseLayout
   title="eTIMS Penalty Calculator Kenya"
   description="Free eTIMS penalty calculator for Kenya. Estimate your KRA exposure: KES 100,000/month integration failure, s.86 e-invoice penalties and late filing."
   canonical="/tools/etims-penalty-calculator/"
+  jsonLd={webAppSchema}
 >
   <div class="bg-canvas min-h-[100dvh]">
-    <div class="bg-canvas-dark px-6 lg:px-10 py-16">
+    <div class="bg-canvas-dark px-6 lg:px-12 py-16">
       <div class="max-w-[1400px] mx-auto">
         <p class="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">Free tool - no sign-up required</p>
         <h1 class="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
@@ -21,9 +36,9 @@ import { EtimsPenaltyCalculator } from "@/src/components/pages/etims-penalty-cal
       </div>
     </div>
 
-    <div class="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-16">
       <div class="max-w-3xl">
-        <EtimsPenaltyCalculator />
+        <EtimsPenaltyCalculator client:load />
       </div>
     </div>
   </div>

@@ -107,7 +107,7 @@ export default function EtimsFuelStations() {
       <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <main className="max-w-[860px] mx-auto px-6 lg:px-10 py-16 lg:py-20">
+      <main className="max-w-[860px] mx-auto px-6 lg:px-12 py-16 lg:py-20">
         <a
           href="/resources/"
           className="inline-flex items-center gap-1.5 text-[0.8rem] text-ink-muted hover:text-ink transition-colors mb-10"

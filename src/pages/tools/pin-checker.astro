@@ -1,9 +1,14 @@
 ---
 import BaseLayout from "@/src/layouts/BaseLayout.astro"
 import Component from "@/src/components/pages/pin-checker-tool"
+// WebApplication schema -> rich-result eligibility for the tool (audit Part 7)
+const webAppSchema = {'@context': 'https://schema.org', '@type': 'WebApplication', 'name': 'KRA PIN Checker', 'applicationCategory': 'FinanceApplication', 'operatingSystem': 'Web', 'url': 'https://smartvatkenya.co.ke/tools/pin-checker/', 'description': 'Instantly verify KRA PIN format and validity for individuals and companies before claiming input VAT. Free, no sign-up.', 'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'KES'}, 'publisher': {'@type': 'Organization', 'name': 'Smart VAT Kenya'}}
+
+
 ---
 
 <BaseLayout
+  jsonLd={webAppSchema}
   title="KRA PIN Checker: Verify PIN Status"
   description="Instantly verify KRA PIN format for individuals and companies. Ensure eTIMS and iTax compliance before claiming input VAT."
   path="/tools/pin-checker/"

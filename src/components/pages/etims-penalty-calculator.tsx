@@ -32,9 +32,6 @@ export function EtimsPenaltyCalculator() {
   const invoicePenalties = inv * INVOICE_FINE
   const total = etimsNonCompliance + lateFiling + interest + invoicePenalties
   const hasAny = mNon > 0 || mLate > 0 || inv > 0 || vat > 0
-  const waText = encodeURIComponent(
-    `Hi, I used the eTIMS penalty calculator and my estimated exposure is approx ${formatKES(total)}. I need help getting my eTIMS compliance in order.`,
-  )
 
   const inputCls =
     "w-full font-display text-[1.4rem] font-semibold text-ink bg-transparent focus:outline-none placeholder:text-ink-muted/30 placeholder:font-normal placeholder:text-xl"
@@ -66,7 +63,7 @@ export function EtimsPenaltyCalculator() {
           <div className="flex flex-wrap gap-2 mt-3">
             {["0", "1", "3", "6", "12"].map((v) => (
               <button key={v} type="button" onClick={() => setMonthsNonCompliant(v)}
-                className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${mNon === parseInt(v, 10) ? "bg-ink text-canvas border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{v}</button>
+                className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${mNon === parseInt(v, 10) ? "bg-ink text-background border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{v}</button>
             ))}
           </div>
           <p className="text-[0.7rem] text-ink-muted mt-2">Up to KES 100,000 / month. Max 12.</p>
@@ -101,7 +98,7 @@ export function EtimsPenaltyCalculator() {
             <div className="flex flex-wrap gap-2 mt-3">
               {["0", "1", "3", "6", "12", "24"].map((v) => (
                 <button key={v} type="button" onClick={() => setMonthsLateFiling(v)}
-                  className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${mLate === parseInt(v, 10) ? "bg-ink text-canvas border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{v}</button>
+                  className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${mLate === parseInt(v, 10) ? "bg-ink text-background border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{v}</button>
               ))}
             </div>
             <p className="text-[0.7rem] text-ink-muted mt-2">KES 10,000 + 5% + 1%/mo. Max 24.</p>
@@ -124,7 +121,7 @@ export function EtimsPenaltyCalculator() {
           <div className="flex flex-wrap gap-2 mt-3">
             {["0", "1", "3", "5", "10", "20"].map((v) => (
               <button key={v} type="button" onClick={() => setInvoiceCount(v)}
-                className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${inv === parseInt(v, 10) ? "bg-ink text-canvas border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{v}</button>
+                className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] ${inv === parseInt(v, 10) ? "bg-ink text-background border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}>{v}</button>
             ))}
           </div>
           <p className="text-[0.7rem] text-ink-muted mt-2">Up to KES 100,000 (or 5% of the tax, whichever is higher) per failure. Max 20.</p>
@@ -187,11 +184,10 @@ export function EtimsPenaltyCalculator() {
               )}
 
               <a
-                href={`mailto:info@smartvatkenya.co.ke?subject=${waText}`}
-               
+                href="/tools/amnesty-checker/"
                 className="btn-fill mt-5 w-full flex items-center justify-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold py-3 rounded-md hover:bg-brand-hover transition-colors"
               >
-                Fix this before it grows - chat with us <ArrowRight size={13} weight="bold" aria-hidden="true" />
+                Fix this before it grows - run the free amnesty check <ArrowRight size={13} weight="bold" aria-hidden="true" />
               </a>
             </>
           )}

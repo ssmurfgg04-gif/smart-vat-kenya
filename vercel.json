@@ -1,6 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": false,
+  "trailingSlash": true,
   "redirects": [
     {
       "source": "/resources/kra-vat-filing-deadline-august-2026",

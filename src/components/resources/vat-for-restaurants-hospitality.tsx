@@ -67,7 +67,7 @@ export default function VatForRestaurantsHospitality() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script id="faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
+      <div className="max-w-[700px] mx-auto px-6 lg:px-12 py-12">
       <script id="article-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <a href="/resources/" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink text-sm font-medium mb-8 transition-colors">

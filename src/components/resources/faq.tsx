@@ -108,7 +108,7 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
-      <div className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <div className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[880px] mx-auto">
           <p className="font-mono text-[0.67rem] uppercase tracking-[0.18em] text-canvas/50 mb-4">FAQ</p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-5 text-balance">
@@ -134,7 +134,7 @@ export default function FAQPage() {
       </div>
 
       {/* FAQ list */}
-      <div className="max-w-[880px] mx-auto px-6 lg:px-10 py-14">
+      <div className="max-w-[880px] mx-auto px-6 lg:px-12 py-14">
         <div className="divide-y divide-hairline">
           {faqs.map((faq, i) => (
             <details key={i} className="group py-5">

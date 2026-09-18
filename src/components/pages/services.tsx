@@ -183,7 +183,7 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceFaqSchema) }} />
 
       {/* Header */}
-      <div className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <div className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
             Services &amp; pricing
@@ -217,7 +217,7 @@ export default function ServicesPage() {
       </div>
 
       {/* Services grid */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="services-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="services-heading">
         <div className="max-w-[1400px] mx-auto">
           <h2 id="services-heading" className="sr-only">Our VAT services and pricing</h2>
 
@@ -313,7 +313,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Service areas */}
-      <section className="bg-canvas-alt px-6 lg:px-10 py-12" aria-labelledby="areas-heading">
+      <section className="bg-canvas-alt px-6 lg:px-12 py-12" aria-labelledby="areas-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             We work with businesses nationwide
@@ -350,7 +350,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Comparison table */}
-      <section className="bg-canvas-alt px-6 lg:px-10 py-16" aria-labelledby="compare-heading">
+      <section className="bg-canvas-alt px-6 lg:px-12 py-16" aria-labelledby="compare-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             How we compare
@@ -386,7 +386,7 @@ export default function ServicesPage() {
       </section>
 
       {/* What is included */}
-      <section className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <section className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-16 lg:grid-cols-2 items-center">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/55 mb-4">
@@ -419,7 +419,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Service FAQ */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="services-faq-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="services-faq-heading">
         <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-16 lg:grid-cols-[360px_1fr]">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
@@ -471,14 +471,14 @@ export default function ServicesPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-canvas-alt px-6 lg:px-10 py-16">
+      <section className="bg-canvas-alt px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <Testimonials />
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-canvas px-6 lg:px-10 py-16">
+      <section className="bg-canvas px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto border-t border-hairline pt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.05rem] font-semibold text-ink mb-1">
@@ -508,7 +508,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Newsletter */}
-      <section className="bg-canvas-alt px-6 lg:px-10 py-16">
+      <section className="bg-canvas-alt px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <NewsletterSignup />
         </div>

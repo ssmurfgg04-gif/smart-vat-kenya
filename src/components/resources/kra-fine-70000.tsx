@@ -103,7 +103,7 @@ export default function KraFine70000() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Header */}
-      <div className="bg-canvas-dark px-6 lg:px-10 py-14">
+      <div className="bg-canvas-dark px-6 lg:px-12 py-14">
         <div className="max-w-3xl mx-auto">
           <a href="/resources/" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base
@@ -394,7 +394,7 @@ export default function KraFine70000() {
                   },
                 ].map(({ step, title, desc }) => (
                   <div key={step} className="flex gap-4">
-                    <span className="bg-ink text-canvas rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 tabular-nums">{step}</span>
+                    <span className="bg-ink text-background rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 tabular-nums">{step}</span>
                     <div>
                       <p className="font-semibold text-ink text-[0.9rem]">{title}</p>
                       <p className="text-[0.83rem] text-ink-muted mt-0.5 leading-relaxed">{desc}</p>

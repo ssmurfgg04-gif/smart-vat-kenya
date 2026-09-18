@@ -166,7 +166,7 @@ export default function TaxAmnesty2026Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* ── Header ──────────────────────────────────────────── */}
-      <div className="bg-canvas-dark px-6 lg:px-10 py-16 lg:py-20">
+      <div className="bg-canvas-dark px-6 lg:px-12 py-16 lg:py-20">
         <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-12 lg:grid-cols-[1fr_400px] items-center">
           <div>
             <div className="inline-flex items-center gap-2.5 mb-5 text-canvas/70 py-2 pr-4 pl-3 rounded-full bg-canvas/10">
@@ -248,7 +248,7 @@ export default function TaxAmnesty2026Page() {
       </div>
 
       {/* ── Three paths ──────────────────────────────────── */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="paths-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="paths-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             Three ways to qualify
@@ -280,7 +280,7 @@ export default function TaxAmnesty2026Page() {
       </section>
 
       {/* ── What's excluded ───────────────────────────────── */}
-      <section className="bg-canvas-alt px-6 lg:px-10 py-14">
+      <section className="bg-canvas-alt px-6 lg:px-12 py-14">
         <div className="max-w-[1400px] mx-auto">
           <div className="border border-brand/20 bg-brand-muted rounded-lg p-6 lg:p-8 flex flex-col lg:flex-row lg:items-start gap-5">
             <div className="shrink-0 w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center">
@@ -308,7 +308,7 @@ export default function TaxAmnesty2026Page() {
       </section>
 
       {/* ── What's included in the check ──────────────────── */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="included-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="included-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             The free check
@@ -331,7 +331,7 @@ export default function TaxAmnesty2026Page() {
       </section>
 
       {/* ── How it works ──────────────────────────────────── */}
-      <section className="bg-canvas-dark px-6 lg:px-10 py-16" aria-labelledby="how-heading">
+      <section className="bg-canvas-dark px-6 lg:px-12 py-16" aria-labelledby="how-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/55 mb-4">
             How it works
@@ -352,7 +352,7 @@ export default function TaxAmnesty2026Page() {
       </section>
 
       {/* ── Mid-page CTA ──────────────────────────────────── */}
-      <section className="bg-brand-muted px-6 lg:px-10 py-12">
+      <section className="bg-brand-muted px-6 lg:px-12 py-12">
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.1rem] font-semibold text-ink">
@@ -376,7 +376,7 @@ export default function TaxAmnesty2026Page() {
       <Testimonials />
 
       {/* ── FAQ ─────────────────────────────────────────────── */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="faq-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="faq-heading">
         <div className="max-w-[800px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             Frequently asked questions
@@ -401,7 +401,7 @@ export default function TaxAmnesty2026Page() {
       </section>
 
       {/* ── Bottom CTA ─────────────────────────────────────── */}
-      <section className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <section className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto text-center">
           <h2 className="font-display text-[clamp(1.5rem,3vw,2.2rem)] font-semibold text-canvas tracking-tight mb-4 text-balance">
             Don&apos;t let the deadline pass with penalties on your books.
@@ -425,7 +425,7 @@ export default function TaxAmnesty2026Page() {
         </div>
       </section>
 
-      <section className="bg-canvas px-6 lg:px-10 py-16">
+      <section className="bg-canvas px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <NewsletterSignup />
         </div>

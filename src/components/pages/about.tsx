@@ -1,4 +1,4 @@
-﻿import { ArrowRight, ChatCircle, ShieldCheck, MapPin, LockKey, CheckCircle, Clock, Star, User } from "@phosphor-icons/react/dist/ssr"
+import { ArrowRight, ChatCircle, ShieldCheck, MapPin, LockKey, CheckCircle, Clock, Star, User } from "@phosphor-icons/react/dist/ssr"
 import { RelatedLinks } from "@/components/related-links"
 import { FACTS } from "@/src/lib/vat-facts"
 
@@ -51,7 +51,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <section className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-3xl mx-auto">
           <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
             About Smart VAT Kenya
@@ -69,7 +69,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-6 lg:px-10 py-16">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12 py-16">
 
         {/* Founder Story Arc */}
         <section className="mb-20">
@@ -154,7 +154,7 @@ export default function AboutPage() {
                 href="mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20want%20to%20talk%20to%20a%20real%20person%20about%20VAT"
                 className="btn-fill inline-flex items-center gap-2 bg-brand text-canvas font-semibold px-5 py-3 rounded-md text-sm hover:bg-brand-hover transition-colors"
               >
-                <ChatCircle size={16} aria-hidden="true" /> Message a real person
+                <ChatCircle size={16} aria-hidden="true" /> Email a real person
               </a>
             </aside>
           </div>

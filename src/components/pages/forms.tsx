@@ -2,7 +2,7 @@ import { Download, FileText, ArrowUpRight, ChatCircle, SealCheck } from "@phosph
 import { KRA_FORMS } from "@/lib/forms"
 import { FACTS } from "@/src/lib/vat-facts"
 
-const WA_LINK =
+const CONTACT_LINK =
   "mailto:info@smartvatkenya.co.ke?subject=Hi%2C%20I%20need%20help%20with%20the%20iTax%20portal%20or%20eTIMS."
 
 export default function FormsPage() {
@@ -43,7 +43,7 @@ export default function FormsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
       {/* Header */}
-      <div className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <div className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4 flex items-center gap-2">
             <SealCheck size={14} weight="fill" aria-hidden="true" />
@@ -64,7 +64,7 @@ export default function FormsPage() {
       </div>
 
       {/* VAT guides */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="vat-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="vat-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-3">
             VAT
@@ -85,7 +85,7 @@ export default function FormsPage() {
       </section>
 
       {/* eTIMS guides */}
-      <section className="bg-canvas-alt px-6 lg:px-10 py-16" aria-labelledby="etims-heading">
+      <section className="bg-canvas-alt px-6 lg:px-12 py-16" aria-labelledby="etims-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-3">
             eTIMS
@@ -106,7 +106,7 @@ export default function FormsPage() {
       </section>
 
       {/* Strong CTA */}
-      <section className="bg-brand px-6 lg:px-10 py-16">
+      <section className="bg-brand px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <h2 className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-canvas tracking-tight mb-2 text-balance">
@@ -117,7 +117,7 @@ export default function FormsPage() {
             </p>
           </div>
           <a
-            href={WA_LINK}
+            href={CONTACT_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-fill inline-flex items-center gap-2 bg-canvas text-brand text-sm font-semibold px-5 py-3 rounded-md transition-colors hover:bg-canvas/90 shrink-0"
@@ -129,7 +129,7 @@ export default function FormsPage() {
       </section>
 
       {/* Note on VAT 1-5 */}
-      <section className="bg-canvas px-6 lg:px-10 py-14">
+      <section className="bg-canvas px-6 lg:px-12 py-14">
         <div className="max-w-[1400px] mx-auto">
           <div className="rounded-lg border border-hairline bg-card p-6 max-w-[70ch]">
             <h2 className="font-display text-[1.05rem] font-semibold text-ink mb-2">

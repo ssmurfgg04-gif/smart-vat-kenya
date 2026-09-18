@@ -6,7 +6,6 @@ import {
   Clock,
   CurrencyDollar,
   FileText,
-  Phone,
   Prohibit,
   SealCheck,
   ShieldCheck,
@@ -23,8 +22,8 @@ const features = [
   { Icon: CheckCircle, label: "We file on the 17th, not the 20th" },
   { Icon: ShieldCheck, label: "Avoids KES 10,000 late penalty" },
   { Icon: CurrencyDollar, label: "M-PESA payment guidance" },
-  { Icon: Phone, label: "Email filing confirmation" },
-  { Icon: ChatCircle, label: "Dedicated support line" },
+  { Icon: FileText, label: "Email filing confirmation" },
+  { Icon: ChatCircle, label: "Priority email support" },
   { Icon: Clock, label: "Monthly reminder & confirmation" },
 ]
 
@@ -112,7 +111,7 @@ export default function MonthlyVatFilingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
-      <div className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <div className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
             Monthly VAT Filing
@@ -159,7 +158,7 @@ export default function MonthlyVatFilingPage() {
       </div>
 
       {/* What's included */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="included-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="included-heading">
         <div className="max-w-[1400px] mx-auto">
           <h2 id="included-heading" className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-10 text-balance">
             What&apos;s included
@@ -176,7 +175,7 @@ export default function MonthlyVatFilingPage() {
       </section>
 
       {/* Process */}
-      <section className="bg-canvas-alt px-6 lg:px-10 py-16" aria-labelledby="process-heading">
+      <section className="bg-canvas-alt px-6 lg:px-12 py-16" aria-labelledby="process-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             How it works
@@ -202,7 +201,7 @@ export default function MonthlyVatFilingPage() {
       </section>
 
       {/* Comparison table */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="compare-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="compare-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             Filing with us vs. doing it yourself
@@ -234,7 +233,7 @@ export default function MonthlyVatFilingPage() {
       </section>
 
       {/* Mid-page CTA */}
-      <section className="bg-brand-muted px-6 lg:px-10 py-12">
+      <section className="bg-brand-muted px-6 lg:px-12 py-12">
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.1rem] font-semibold text-ink">
@@ -259,7 +258,7 @@ export default function MonthlyVatFilingPage() {
       <Testimonials />
 
       {/* FAQ */}
-      <section className="bg-canvas-alt px-6 lg:px-10 py-16" aria-labelledby="faq-heading">
+      <section className="bg-canvas-alt px-6 lg:px-12 py-16" aria-labelledby="faq-heading">
         <div className="max-w-[800px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             FAQ
@@ -284,7 +283,7 @@ export default function MonthlyVatFilingPage() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-canvas px-6 lg:px-10 py-16">
+      <section className="bg-canvas px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto border-t border-hairline pt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.05rem] font-semibold text-ink mb-1">
@@ -314,7 +313,7 @@ export default function MonthlyVatFilingPage() {
       </section>
 
       {/* Newsletter */}
-      <section className="bg-canvas-alt px-6 lg:px-10 py-16">
+      <section className="bg-canvas-alt px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <NewsletterSignup />
         </div>

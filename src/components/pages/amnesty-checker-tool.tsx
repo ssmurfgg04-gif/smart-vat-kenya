@@ -118,7 +118,7 @@ export default function AmnestyCheckerTool() {
 
   return (
     <div className="bg-canvas min-h-[100dvh]">
-      <div className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <div className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">Free check - nothing is submitted to KRA</p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
@@ -131,7 +131,7 @@ export default function AmnestyCheckerTool() {
         </div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16">
         <div className="grid grid-cols-2 gap-4 lg:gap-10 items-start">
           <section aria-label="Amnesty eligibility questions" aria-live="polite">
             <div className="border border-hairline rounded-xl overflow-hidden bg-canvas">

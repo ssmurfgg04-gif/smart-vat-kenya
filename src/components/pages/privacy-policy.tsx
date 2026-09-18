@@ -22,7 +22,7 @@ const rights = [
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <section className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <section className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-3xl mx-auto">
           <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
             Privacy Policy
@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage() {
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-6 lg:px-10 py-16">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12 py-16">
 
         <section className="mb-20">
           <div className="border-l-[3px] border-brand pl-6 max-w-3xl mb-12">

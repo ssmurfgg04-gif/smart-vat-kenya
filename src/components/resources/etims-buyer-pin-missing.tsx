@@ -104,7 +104,7 @@ export default function ETimsBuyerPinMissingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Header */}
-      <div className="bg-canvas-dark px-6 lg:px-10 py-14">
+      <div className="bg-canvas-dark px-6 lg:px-12 py-14">
         <div className="max-w-3xl mx-auto">
           <a href="/resources/" className="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">
             <ArrowLeft size={14} aria-hidden="true" /> Back to Knowledge Base

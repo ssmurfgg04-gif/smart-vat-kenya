@@ -1,6 +1,5 @@
-﻿import {
+import {
   ArrowRight,
-  ArrowsClockwise,
   Calculator,
   ChatCircle,
   CheckCircle,
@@ -9,7 +8,6 @@
   FileText,
   Invoice,
   Lightning,
-  Prohibit,
   ShieldCheck,
   UsersThree,
   WarningCircle,
@@ -18,7 +16,6 @@
   TrendUp,
 } from "@phosphor-icons/react/dist/ssr"
 import { RelatedLinks } from "@/components/related-links"
-import { HeroVatCalc } from "@/src/components/hero-vat-calc"
 import React from "react"
 import { FACTS } from "@/src/lib/vat-facts"
 
@@ -175,155 +172,8 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* ─── HERO ─── */}
-      <section className="bg-white overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-6 lg:pt-8 pb-8 lg:pb-10">
-          <div className="grid lg:grid-cols-[1fr_minmax(0,520px)] gap-10 lg:gap-14 items-center">
-            <div className="max-w-[560px] min-w-0">
-              <p className="font-mono text-[0.7rem] font-semibold text-blue-600 mb-4 inline-flex items-center gap-2">
-                <ShieldCheck size={14} weight="bold" aria-hidden="true" />
-                Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
-              </p>
-
-              <h1 className="font-display text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight text-[#14243e] mb-2 max-w-[52ch] sm:text-wrap-balance">
-              Your eTIMS invoice failed.
-              <span className="block text-red-600">VAT return is due.</span>
-            </h1>
-              <p className="text-[1.08rem] lg:text-[1.15rem] font-semibold text-[#2c3a52] leading-snug mb-5 max-w-[54ch]">
-              Run the free error diagnostic — the fix in minutes, not days.
-            </p>
-
-            <p className="text-[0.92rem] leading-relaxed text-[#3f4f68] mb-5 max-w-[54ch]">
-              <span className="font-semibold text-red-600">Rejected invoices. Pending sync. Locked accounts.</span>{" "}
-              Overdue VAT registration. Free diagnostic tools for every common error — or a KRA-registered agent handles the KRA work while you get back to business.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
-              <a
-                href="/tools/etims-diagnostic/" data-track="service-cta" data-cta-type="hero-etims-diagnostic" data-service="eTIMS Diagnostic"
-                className="inline-flex w-full sm:w-auto flex-col items-center justify-center bg-red-600 hover:bg-red-700 text-white px-7 py-3 rounded-lg shadow-[0_10px_24px_-10px_rgba(220,38,38,0.6)] transition-colors"
-              >
-                <span className="inline-flex items-center gap-2.5 font-semibold text-[0.95rem]">
-                  Fix My eTIMS Issue
-                  <ArrowRight size={17} weight="bold" aria-hidden="true" />
-                </span>
-                <span className="text-[0.68rem] text-white font-medium mt-0.5">
-                  Free diagnostic — exact fix steps in 2 minutes.
-                </span>
-              </a>
-              <a
-                href="/services/vat-registration/" data-track="service-cta" data-cta-type="hero-vat-registration" data-service="VAT Registration"
-                className="inline-flex w-full sm:w-auto flex-col items-center justify-center border border-[#14243e] text-[#14243e] hover:bg-slate-50 px-7 py-3 rounded-lg transition-colors"
-              >
-                <span className="inline-flex items-center gap-2.5 font-semibold text-[0.95rem]">
-                  Register for VAT - KES 5,000
-                  <ArrowRight size={17} weight="bold" aria-hidden="true" />
-                </span>
-                <span className="text-[0.68rem] text-[#14243e]/80 font-medium mt-0.5">
-                  We handle the iTax work. 1-3 working days.
-                </span>
-              </a>
-            </div>
-
-            <HeroVatCalc />
-
-            <a
-              href="/tools/"
-              className="inline-flex items-center gap-1.5 text-[0.85rem] font-medium text-[#14243e] hover:text-[#3f4f68] hover:underline mb-5"
-            >
-              <Calculator size={14} aria-hidden="true" />
-              Need penalty, PAYE or eTIMS math too? All free tools &rarr;
-            </a>
-
-            <div className="flex flex-wrap gap-x-6 gap-y-3">
-              {[
-                { Icon: ShieldCheck, label: "KRA-Compliant Process" },
-                { Icon: CurrencyDollar, label: "M-PESA Receipts" },
-                { Icon: Prohibit, label: "No Hidden Fees" },
-              ].map(({ Icon, label }) => (
-                <div key={label} className="flex items-center gap-2 text-[0.85rem] font-medium text-[#3f4f68]">
-                  <Icon size={15} weight="bold" className="text-blue-600 shrink-0" aria-hidden="true" />
-                  {label}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* RIGHT - compliance overview */}
-          <div className="relative w-full max-w-[520px] min-w-0 mx-auto lg:mx-0 lg:justify-self-end">
-            <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_24px_60px_-24px_rgba(15,32,70,0.35)] overflow-hidden">
-              <div className="flex items-center justify-between px-5 py-3.5 border-b border-slate-100">
-                <div className="flex items-center gap-2.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-600" aria-hidden="true" />
-                    <p className="font-display text-[1rem] font-semibold text-[#14243e]">
-                     Compliance Overview
-                    </p>
-                </div>
-                <span className="flex items-center gap-1.5 text-[0.72rem] font-medium text-[#3f4f68]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" aria-hidden="true" />
-                  Operational
-                </span>
-              </div>
-
-              <div className="divide-y divide-slate-100">
-                <div className="flex flex-wrap items-center gap-3 sm:gap-4 px-4 sm:px-5 py-4">
-                  <span className="w-11 h-11 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-                    <Invoice size={22} weight="bold" aria-hidden="true" />
-                  </span>
-                  <div className="flex-1 min-w-[55%] sm:min-w-0">
-                    <p className="text-[0.72rem] font-medium uppercase tracking-wide text-[#3f4f68]">eTIMS</p>
-                    <p className="text-[0.95rem] font-medium text-[#14243e]">Operational</p>
-                  </div>
-                  <span className="text-[0.72rem] font-bold uppercase tracking-wide bg-emerald-50 text-emerald-600 border border-emerald-200 rounded-md px-2.5 py-1 shrink-0">
-                    Active
-                  </span>
-                </div>
-
-                <div className="flex flex-wrap items-center gap-3 sm:gap-4 px-4 sm:px-5 py-4">
-                  <span className="w-11 h-11 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
-                    <FileText size={22} weight="bold" aria-hidden="true" />
-                  </span>
-                  <div className="flex-1 min-w-[55%] sm:min-w-0">
-                    <p className="text-[0.72rem] font-medium uppercase tracking-wide text-[#3f4f68]">VAT Returns</p>
-                    <p className="text-[0.95rem] font-medium text-[#14243e]">Due in 3 days</p>
-                  </div>
-                  <span className="text-[0.72rem] font-bold uppercase tracking-wide bg-amber-50 text-amber-600 border border-amber-200 rounded-md px-2.5 py-1 shrink-0">
-                    Due Soon
-                  </span>
-                  <span className="text-[0.8rem] font-semibold text-white bg-amber-600 rounded-md px-3.5 py-2 shrink-0">
-                    File Now
-                  </span>
-                </div>
-
-                <div className="flex flex-wrap items-center gap-3 sm:gap-4 px-4 sm:px-5 py-4">
-                  <span className="w-11 h-11 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-                    <ArrowsClockwise size={22} weight="bold" aria-hidden="true" />
-                  </span>
-                  <div className="flex-1 min-w-[55%] sm:min-w-0">
-                    <p className="text-[0.72rem] font-medium uppercase tracking-wide text-[#3f4f68]">KRA Sync</p>
-                    <p className="text-[0.95rem] font-medium text-emerald-600">Operational</p>
-                  </div>
-                  <span className="text-[0.72rem] font-bold uppercase tracking-wide bg-emerald-50 text-emerald-600 border border-emerald-200 rounded-md px-2.5 py-1 shrink-0">
-                    Operational
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Amnesty status */}
-            <div className="mb-3 w-fit ml-auto rounded-lg bg-emerald-600 text-white px-4 py-3 shadow-[0_12px_30px_-8px_rgba(16,185,129,0.55)] ring-4 ring-white rotate-2">
-              <p className="text-[0.62rem] font-semibold uppercase tracking-[0.12em] leading-tight">Tax Amnesty Active</p>
-              <p className="text-[0.95rem] font-bold leading-tight mt-1">
-                Ends 31 Dec 2026
-              </p>
-            </div>
-          </div>
-          </div>
-        </div>
-      </section>
-
       {/* ─── TRUST SECTION ─── */}
-        <section className="bg-[#0f1f3d] px-6 lg:px-10 py-8" aria-label="Why businesses trust Smart VAT Kenya">
+        <section className="bg-[#0f1f3d] px-6 lg:px-12 py-8" aria-label="Why businesses trust Smart VAT Kenya">
           <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6">
             {[
               { Icon: Lightning, title: "Fast Resolution", body: "Free eTIMS diagnostic - the fix in 2 minutes." },
@@ -345,7 +195,7 @@ export default function HomePage() {
         </section>
 
         {/* ─── KRA PROBLEM SOLVER - Featured Hub ─── */}
-        <section className="bg-canvas py-16 px-6 lg:px-10 border-y border-hairline">
+        <section className="bg-canvas py-16 px-6 lg:px-12 border-y border-hairline">
           <div className="max-w-[1400px] mx-auto">
             <div className="text-center mb-12">
               <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
@@ -383,7 +233,7 @@ export default function HomePage() {
         </section>
 
         {/* ─── SHAME BLOCK ─── */}
-        <section className="bg-canvas py-12 px-6 lg:px-10">
+        <section className="bg-canvas py-12 px-6 lg:px-12">
           <div className="max-w-[1400px] mx-auto text-center">
             <p className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-ink tracking-tight mb-2">
               You're not behind. KRA's portal was never built for you.
@@ -397,7 +247,7 @@ export default function HomePage() {
         </section>
 
         {/* ─── STATUS BLOCK ─── */}
-        <section className="bg-canvas-alt py-12 px-6 lg:px-10">
+        <section className="bg-canvas-alt py-12 px-6 lg:px-12">
           <div className="max-w-[1400px] mx-auto text-center">
             <p className="font-display text-[clamp(1.3rem,2.5vw,1.8rem)] font-semibold text-ink tracking-tight mb-2">
               The tender said "attach a Tax Compliance Certificate."
@@ -409,7 +259,7 @@ export default function HomePage() {
         </section>
 
         {/* ─── TRUST BAND ─── */}
-      <section className="bg-canvas-alt border-y border-hairline py-5 px-6 lg:px-10">
+      <section className="bg-canvas-alt border-y border-hairline py-5 px-6 lg:px-12">
         <div className="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-4">
           {[
             "KRA-Compliant VAT Services",
@@ -431,7 +281,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── PROBLEM ─── */}
-      <section className="bg-canvas py-24 px-6 lg:px-10">
+      <section className="bg-canvas py-24 px-6 lg:px-12">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             Why Kenyan SMEs struggle with VAT
@@ -503,7 +353,7 @@ KRA's{" "}
       </section>
 
       {/* ─── DIY VS YOU ─── */}
-      <section className="bg-canvas-alt py-24 px-6 lg:px-10">
+      <section className="bg-canvas-alt py-24 px-6 lg:px-12">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             Free isn't free
@@ -563,7 +413,7 @@ KRA's{" "}
       </section>
 
       {/* ─── VAT UNLOCKS ─── */}
-      <section className="bg-canvas-dark py-24 px-6 lg:px-10">
+      <section className="bg-canvas-dark py-24 px-6 lg:px-12">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
             The upside
@@ -594,7 +444,7 @@ KRA's{" "}
 
       {/* ─── PRICING ─── */}
       <section
-        className="bg-canvas-alt py-24 px-6 lg:px-10"
+        className="bg-canvas-alt py-24 px-6 lg:px-12"
         id="pricing"
         aria-labelledby="pricing-heading"
       >
@@ -812,7 +662,7 @@ KRA's{" "}
       </section>
 
       {/* ─── SEO PROSE - KRA VAT 16% 2026 ─── */}
-      <section className="bg-canvas-dark py-24 px-6 lg:px-10">
+      <section className="bg-canvas-dark py-24 px-6 lg:px-12">
         <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-24 lg:grid-cols-[480px_1fr]">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/65 mb-4">
@@ -906,7 +756,7 @@ KRA's{" "}
       </section>
 
       {/* ─── HOW IT WORKS ─── */}
-      <section className="bg-canvas py-24 px-6 lg:px-10">
+      <section className="bg-canvas py-24 px-6 lg:px-12">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             The process
@@ -967,7 +817,7 @@ KRA's{" "}
       </section>
 
       {/* ─── SOCIAL PROOF ─── */}
-      <section className="bg-canvas-alt py-20 px-6 lg:px-10">
+      <section className="bg-canvas-alt py-20 px-6 lg:px-12">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-10">
             What our clients say
@@ -1016,7 +866,7 @@ KRA's{" "}
       </section>
 
       {/* ─── FAQ ─── */}
-      <section className="bg-canvas py-24 px-6 lg:px-10" aria-labelledby="faq-heading">
+      <section className="bg-canvas py-24 px-6 lg:px-12" aria-labelledby="faq-heading">
         <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-16 lg:grid-cols-[360px_1fr]">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
@@ -1071,7 +921,7 @@ KRA's{" "}
       </section>
 
       {/* ─── AMNESTY BAND ─── */}
-      <section className="bg-brand-muted py-16 px-6 lg:px-10" aria-labelledby="amnesty-heading">
+      <section className="bg-brand-muted py-16 px-6 lg:px-12" aria-labelledby="amnesty-heading">
         <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-brand mb-3">
@@ -1109,7 +959,7 @@ KRA's{" "}
       </section>
 
       {/* ─── DEADLINE COUNTDOWN ─── */}
-      <section className="bg-canvas-alt py-16 px-6 lg:px-10" aria-labelledby="deadline-heading">
+      <section className="bg-canvas-alt py-16 px-6 lg:px-12" aria-labelledby="deadline-heading">
         <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-3">
@@ -1147,7 +997,7 @@ KRA's{" "}
       </section>
 
       {/* ─── FINAL CTA ─── */}
-      <section className="bg-canvas-dark py-24 px-6 lg:px-10">
+      <section className="bg-canvas-dark py-24 px-6 lg:px-12">
         <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-12 lg:grid-cols-2 items-center">
           <div>
             <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">

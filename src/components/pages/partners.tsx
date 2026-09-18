@@ -4,7 +4,7 @@ import { FACTS } from "@/src/lib/vat-facts"
 
 export default function PartnersPage() {
   return (
-    <div className="max-w-4xl mx-auto px-6 lg:px-10 py-16">
+    <div className="max-w-4xl mx-auto px-6 lg:px-12 py-16">
       <div className="text-center max-w-2xl mx-auto mb-16">
         <span className="font-mono text-[0.65rem] uppercase tracking-widest bg-brand/10 text-brand px-3 py-1 rounded-sm mb-4 inline-block">
           Wholesale Channel

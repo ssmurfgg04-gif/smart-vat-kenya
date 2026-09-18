@@ -29,7 +29,7 @@ const breadcrumbSchema = {
 
 export default function VatDeregistrationPost() {
   return (
-    <div className="max-w-[700px] mx-auto px-6 lg:px-10 py-12">
+    <div className="max-w-[700px] mx-auto px-6 lg:px-12 py-12">
       <script id="breadcrumb-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script id="article-schema" type="application/ld+json"

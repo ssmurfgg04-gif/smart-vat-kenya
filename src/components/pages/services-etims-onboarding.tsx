@@ -180,7 +180,7 @@ export default function ETIMSOnboardingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
-      <div className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <div className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
             Service
@@ -223,7 +223,7 @@ export default function ETIMSOnboardingPage() {
       </div>
 
       {/* Warning banner */}
-      <div className="px-6 lg:px-10 py-4 bg-red-50 border-b border-red-200">
+      <div className="px-6 lg:px-12 py-4 bg-red-50 border-b border-red-200">
         <div className="max-w-[1400px] mx-auto flex items-start gap-3">
           <WarningCircle size={18} weight="fill" className="text-red-500 shrink-0 mt-0.5" aria-hidden="true" />
           <p className="text-[0.85rem] text-red-800 leading-relaxed">
@@ -233,7 +233,7 @@ export default function ETIMSOnboardingPage() {
       </div>
 
       {/* What's included */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="included-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="included-heading">
         <div className="max-w-[1400px] mx-auto grid gap-8 lg:gap-16 lg:grid-cols-2 items-center">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
@@ -267,7 +267,7 @@ export default function ETIMSOnboardingPage() {
       </section>
 
       {/* Solution types */}
-      <section className="bg-canvas-alt px-6 lg:px-10 py-16" aria-labelledby="solutions-heading">
+      <section className="bg-canvas-alt px-6 lg:px-12 py-16" aria-labelledby="solutions-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             Choose your eTIMS solution
@@ -293,7 +293,7 @@ export default function ETIMSOnboardingPage() {
       </section>
 
       {/* Process */}
-      <section className="bg-canvas-dark px-6 lg:px-10 py-16" aria-labelledby="process-heading">
+      <section className="bg-canvas-dark px-6 lg:px-12 py-16" aria-labelledby="process-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/55 mb-4">
             Process
@@ -322,7 +322,7 @@ export default function ETIMSOnboardingPage() {
       </section>
 
       {/* Comparison vs DIY */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="compare-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="compare-heading">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
             Smart VAT vs. doing it yourself
@@ -358,7 +358,7 @@ export default function ETIMSOnboardingPage() {
       </section>
 
       {/* Mid-page CTA */}
-      <section className="bg-brand-muted px-6 lg:px-10 py-12">
+      <section className="bg-brand-muted px-6 lg:px-12 py-12">
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-display text-[1.1rem] font-semibold text-ink">
@@ -380,14 +380,14 @@ export default function ETIMSOnboardingPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-canvas-alt px-6 lg:px-10 py-16">
+      <section className="bg-canvas-alt px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <Testimonials />
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="bg-canvas px-6 lg:px-10 py-16" aria-labelledby="faq-heading">
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="faq-heading">
         <div className="max-w-[800px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">FAQ</p>
           <h2 id="faq-heading" className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-10 text-balance">
@@ -410,7 +410,7 @@ export default function ETIMSOnboardingPage() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <section className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto text-center">
           <h2 className="font-display text-[clamp(1.4rem,2.5vw,2rem)] font-semibold text-canvas tracking-tight mb-3 text-balance">
             Ready to get eTIMS compliant?
@@ -431,7 +431,7 @@ export default function ETIMSOnboardingPage() {
       </section>
 
       {/* Newsletter */}
-      <section className="bg-canvas px-6 lg:px-10 py-16">
+      <section className="bg-canvas px-6 lg:px-12 py-16">
         <div className="max-w-[580px] mx-auto">
           <NewsletterSignup />
         </div>

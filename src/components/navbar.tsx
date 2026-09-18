@@ -1,4 +1,4 @@
-﻿import { Sun, Moon, List, X } from "@phosphor-icons/react/dist/ssr"
+import { Sun, Moon, List, X } from "@phosphor-icons/react/dist/ssr"
 import { useEffect, useState } from "react"
 import { SiteSearch } from "./site-search"
 
@@ -40,7 +40,7 @@ export function Navbar() {
       }`}
     >
       <nav
-        className="max-w-[1400px] mx-auto px-6 lg:px-10 flex items-center justify-between h-[60px]"
+        className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between h-[60px]"
         aria-label="Main navigation"
       >
         <a
@@ -90,7 +90,7 @@ export function Navbar() {
 
           <a
             href={CONTACT_URL}
-            className="btn-fill inline-flex items-center gap-2 bg-emerald-600 text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors hover:bg-emerald-700"
+            className="btn-fill inline-flex items-center gap-2 bg-brand text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors hover:bg-brand-hover"
           >
             Get Started
           </a>
@@ -102,7 +102,7 @@ export function Navbar() {
         <div className="lg:hidden flex items-center gap-2">
           <a
             href={CONTACT_URL}
-            className="inline-flex items-center gap-1.5 bg-emerald-600 text-white text-[0.8rem] font-semibold px-3.5 py-2 rounded-md transition-colors hover:bg-emerald-700 whitespace-nowrap"
+            className="inline-flex items-center gap-1.5 bg-brand text-white text-[0.8rem] font-semibold px-3.5 py-2 rounded-md transition-colors hover:bg-brand-hover whitespace-nowrap"
           >
             Get Started
           </a>

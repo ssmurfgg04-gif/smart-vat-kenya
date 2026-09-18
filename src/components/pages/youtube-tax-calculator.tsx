@@ -21,7 +21,7 @@ export default function YouTubeTaxCalculator() {
 
   return (
     <div className="bg-canvas min-h-[100dvh]">
-      <div className="bg-canvas-dark px-6 lg:px-10 py-16">
+      <div className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">Free tool - no sign-up required</p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
@@ -34,7 +34,7 @@ export default function YouTubeTaxCalculator() {
         </div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16">
         <div className="grid grid-cols-2 gap-4 lg:gap-10 items-start">
           {/* Input panel */}
           <section aria-labelledby="yt-calc-heading">
@@ -64,7 +64,7 @@ export default function YouTubeTaxCalculator() {
                     <button
                       key={s}
                       onClick={() => setAmount(s.toLocaleString("en-KE"))}
-                      className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] min-h-[36px] ${amount === s.toLocaleString("en-KE") ? "bg-ink text-canvas border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}
+                      className={`px-3 py-1.5 rounded-md text-[0.78rem] font-medium border transition-colors active:scale-[0.98] min-h-[36px] ${amount === s.toLocaleString("en-KE") ? "bg-ink text-background border-ink" : "border-hairline text-ink-muted hover:border-ink-muted hover:text-ink"}`}
                     >
                       {s.toLocaleString("en-KE")}
                     </button>

@@ -1,9 +1,14 @@
 ---
 import BaseLayout from "@/src/layouts/BaseLayout.astro"
 import AmnestyCheckerTool from "@/src/components/pages/amnesty-checker-tool"
+// WebApplication schema -> rich-result eligibility for the tool (audit Part 7)
+const webAppSchema = {'@context': 'https://schema.org', '@type': 'WebApplication', 'name': 'KRA Tax Amnesty Eligibility Checker 2026', 'applicationCategory': 'FinanceApplication', 'operatingSystem': 'Web', 'url': 'https://smartvatkenya.co.ke/tools/amnesty-checker/', 'description': "Free 4-question check on whether Kenya's 2026 tax amnesty waives your pre-2026 KRA penalties and interest. No sign-up.", 'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'KES'}, 'publisher': {'@type': 'Organization', 'name': 'Smart VAT Kenya'}}
+
+
 ---
 
 <BaseLayout
+  jsonLd={webAppSchema}
   title="KRA Tax Amnesty Eligibility Check (Free)"
   description="Free 4-question check: does Kenya's 2026 tax amnesty wipe your penalties? 100% waiver of pre-2026 debt until 31 Dec."
   canonical="/tools/amnesty-checker/"
