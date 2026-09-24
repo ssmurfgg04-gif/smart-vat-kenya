@@ -76,3 +76,64 @@
   force = true
 
 # redeploy-trigger: 2026-08-04T14:28:00Z - Force Netlify to rebuild main with latest changes
+
+# Stealth WhatsApp click counters (per-CTA buckets; see docs/whatsapp-click-monitoring.md)
+[[redirects]]
+  from = "/wa"
+  to = "https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%27d%20like%20a%20quote%20for%20VAT%20registration%20or%20monthly%20filing."
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/wa/"
+  to = "https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%27d%20like%20a%20quote%20for%20VAT%20registration%20or%20monthly%20filing."
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/wa/filing"
+  to = "https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%20need%20help%20filing%20my%20VAT%20return."
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/wa/filing/"
+  to = "https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%20need%20help%20filing%20my%20VAT%20return."
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/wa/penalty"
+  to = "https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%20need%20help%20with%20a%20KRA%20penalty%20or%20amnesty."
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/wa/penalty/"
+  to = "https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%20need%20help%20with%20a%20KRA%20penalty%20or%20amnesty."
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/wa/doctor"
+  to = "https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%20just%20used%20the%20KRA%20Doctor%20and%20my%20issue%20is%3A"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/wa/doctor/"
+  to = "https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%20just%20used%20the%20KRA%20Doctor%20and%20my%20issue%20is%3A"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/wa/refer"
+  to = "https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20a%20friend%20referred%20me%20-%20I%20need%20help%20with%3A"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/wa/refer/"
+  to = "https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20a%20friend%20referred%20me%20-%20I%20need%20help%20with%3A"
+  status = 302
+  force = true

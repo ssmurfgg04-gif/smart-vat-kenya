@@ -64,7 +64,17 @@ export default defineConfig({
         "upgrade-insecure-requests",
       ],
       scriptDirective: {
-        resources: ["'self'"],
+        resources: [
+          "'self'",
+          // Analytics tag libraries (see BaseLayout.astro head):
+          //   GA4 gtag.js    -> https://www.googletagmanager.com
+          //   MS Clarity tag -> https://www.clarity.ms
+          // The init/bootstraps live as same-origin files in /public/js/
+          // (covered by 'self'), so no inline hashes are needed for them.
+          // Beacons are already allowed: connect-src 'self' https:, img-src https:.
+          "https://www.googletagmanager.com",
+          "https://www.clarity.ms",
+        ],
         // SHA-256 hashes of the deliberately inline non-hydrated scripts
         // in BaseLayout.astro (theme pre-paint hook + speculationrules block
         // + click/CTA tracking hook).
@@ -75,7 +85,8 @@ export default defineConfig({
           "sha256-Ya0pUYrC7nM5Cn/056TyVuEiz6dFGrzmkWzgON0pF0U=",
           "sha256-Q2BPg90ZMplYY+FSdApNErhpWafg2hcRRbndmvxuL/Q=",
           "sha256-yV6r9l14w1tuDvwVXy/l6fWGlbPG2d7wHT46Yi3jwY4=",
-          "sha256-vFtPhE6E2Ktj3SmNxddPQEdp+ExHnujyOdVi4EjX+q0=",
+          // Unified delegated conversion tracking hook (BaseLayout.astro)
+          "sha256-RFVN1OA8FBW1LqV9CtQD1cDxYQ9HpUyXeAIDyi+OVkE=",
         ],
       },
       styleDirective: {

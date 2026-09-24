@@ -1,0 +1,198 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+import { KraPenaltyCalculatorPro } from "@/components/kra-penalty-calculator-pro"
+import { TrustBadges } from "@/components/trust-badges"
+import { HelpfulWidget } from "@/components/helpful-widget"
+import { FACTS } from "@/src/lib/vat-facts"
+
+const webAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "KRA Penalty Calculator Kenya 2026",
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "Web",
+  url: "https://smartvatkenya.co.ke/tools/kra-penalty-calculator/",
+  description: "Free KRA penalty calculator for all 6 tax regimes: VAT, PAYE, income tax, WHT and TOT. Late-filing penalties, 1%/month interest and 2026 amnesty savings in one estimate.",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "KES" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya" },
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the KRA penalty for late VAT filing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The higher of KES 10,000 or 5% of the tax due, plus late-payment interest of 1% per month on the unpaid principal until it is settled. A return filed late with no tax due still attracts the flat KES 10,000 late-filing penalty.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much interest does KRA charge per month?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Late-payment interest runs at 1% per month on the unpaid principal, compounded monthly, across all tax regimes. It continues accruing until the principal is fully paid, which is why settling principal first is always the priority.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can KRA penalties be waived in Kenya?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. KRA waives penalties and interest at its discretion under the Tax Procedures Act - applications are strongest when you have already filed the outstanding return and paid or arranged the principal. The 2026 tax amnesty separately waives 100% of penalties and interest on pre-2026 debt until 31 December 2026.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the penalty for late PAYE filing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The higher of KES 10,000 or 25% of the tax due for late filing, plus 1% per month late-payment interest. PAYE is due by the 9th of the following month, so the exposure window is longer than VAT's 20th deadline.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does the tax amnesty cover eTIMS penalties?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The 2026 amnesty covers penalties, interest and fines on tax due before January 2026. eTIMS non-compliance penalties arising after that window fall outside it, but a discretionary waiver application remains possible - strongest after compliance is restored.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How accurate is this penalty calculator?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "It applies KRA's published late-filing penalties per regime (the higher-of rule where applicable), 1% monthly interest, and shows your amnesty savings where relevant. KRA's final assessment may differ where offsets, credits or specific notice dates apply - treat the figure as a planning estimate.",
+      },
+    },
+  ],
+}
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Free Tools", item: "https://smartvatkenya.co.ke/tools/" },
+    { "@type": "ListItem", position: 3, name: "KRA Penalty Calculator", item: "https://smartvatkenya.co.ke/tools/kra-penalty-calculator/" },
+  ],
+}
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [webAppSchema, faqSchema],
+}
+---
+
+<BaseLayout
+  jsonLd={jsonLd}
+  breadcrumbSchema={breadcrumbSchema}
+  title="KRA Penalty Calculator 2026: All 6 Tax Regimes + Amnesty Savings"
+  description="Free KRA penalty calculator: late-filing penalties for VAT, PAYE, income tax, WHT and TOT, 1%/month interest, and your 2026 amnesty savings - estimated in seconds."
+  canonical="/tools/kra-penalty-calculator/"
+  path="/tools/kra-penalty-calculator/"
+>
+  <div class="bg-canvas-dark px-6 lg:px-12 py-14">
+    <div class="max-w-4xl mx-auto">
+      <a href="/tools/" class="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">← All tools</a>
+      <div class="flex flex-wrap gap-2 mb-5">
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/60 px-2.5 py-1 rounded-sm">Free tool</span>
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/50 px-2.5 py-1 rounded-sm">All 6 tax regimes</span>
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/50 px-2.5 py-1 rounded-sm">Amnesty included</span>
+      </div>
+      <h1 class="font-display text-[clamp(1.7rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
+        KRA Penalty Calculator 2026
+      </h1>
+      <p class="text-[0.95rem] text-canvas/70 max-w-[62ch] leading-relaxed">
+        Late filing, late payment, and the interest that keeps running - estimated for all six KRA tax regimes, with your 2026 amnesty savings shown side by side. Know the real number before you talk to KRA.
+      </p>
+    </div>
+  </div>
+
+  <div class="px-6 lg:px-12 py-12">
+    <div class="max-w-4xl mx-auto grid lg:grid-cols-[1fr_320px] gap-8 items-start">
+      <KraPenaltyCalculatorPro client:load />
+
+      <aside class="space-y-4 lg:sticky lg:top-6">
+        <div class="border border-hairline rounded-lg p-4 bg-canvas">
+          <p class="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted mb-2">Last verified</p>
+          <p class="text-[0.8rem] text-ink-soft leading-relaxed">{new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}. {FACTS.lateFilingPenalty} (per-regime minimums apply above).</p>
+        </div>
+        <div class="border border-hairline rounded-lg p-4 bg-canvas">
+          <p class="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted mb-3">Related tools &amp; guides</p>
+          <ul class="space-y-2.5" role="list">
+            <li><a href="/tools/amnesty-checker/" class="text-[0.82rem] text-ink hover:text-brand transition-colors">Amnesty eligibility checker →</a></li>
+            <li><a href="/tools/vat-calculator/" class="text-[0.82rem] text-ink hover:text-brand transition-colors">Kenya VAT Calculator →</a></li>
+            <li><a href="/resources/kra-vat-penalties-reference/" class="text-[0.82rem] text-ink hover:text-brand transition-colors">KRA penalties reference table →</a></li>
+            <li><a href="/resources/kra-tax-amnesty-2026/" class="text-[0.82rem] text-ink hover:text-brand transition-colors">Tax amnesty 2026 guide →</a></li>
+            <li><a href="/services/kra-penalty-waiver/" class="text-[0.82rem] text-ink hover:text-brand transition-colors">Penalty waiver service →</a></li>
+          </ul>
+        </div>
+        <TrustBadges columns={2} />
+      </aside>
+    </div>
+
+    <!-- SEO body -->
+    <div class="max-w-3xl mx-auto mt-16 pt-12 border-t border-hairline">
+      <h2 class="font-display text-[1.3rem] font-semibold text-ink tracking-tight mb-5">How KRA penalties actually stack up</h2>
+      <div class="space-y-6 mb-10">
+        <p class="text-[0.88rem] text-ink-soft leading-relaxed">
+          A KRA penalty is never one number - it is two components growing on different clocks. The <strong class="text-ink font-semibold">late-filing penalty</strong> is a one-off charge applied when a return misses its deadline: the higher of a regime minimum or a percentage of tax due (5% for VAT, 25% for PAYE, with minimums from KES 2,000 to KES 20,000 depending on the regime). The <strong class="text-ink font-semibold">late-payment interest</strong> is the compounding part: 1% per month on every shilling of unpaid principal, and it does not stop for negotiations, audits, or forgetfulness. That is why two businesses with the same missed VAT return can owe wildly different totals eighteen months later.
+        </p>
+        <p class="text-[0.88rem] text-ink-soft leading-relaxed">
+          The order you fix things in matters more than most people realise. KRA's discretionary waivers are materially more likely to succeed when you have already <strong class="text-ink font-semibold">filed the outstanding return</strong> and <strong class="text-ink font-semibold">paid or arranged the principal</strong> - you're then asking for relief on the penalty and interest, not the tax itself. And for debt that predates January 2026, the 2026 tax amnesty does something no waiver application can: it wipes 100% of the penalties, interest and fines, leaving only the principal. The calculator above shows both numbers side by side so you can see exactly what the amnesty saves you before the 31 December 2026 window closes.
+        </p>
+        <p class="text-[0.88rem] text-ink-soft leading-relaxed">
+          One caution the calculator can't encode: waiver outcomes depend on your specific file - the notice dates KRA used, whether an assessment is final, and what you've already disputed. The figures here are planning-grade estimates built on KRA's published rules. When the number is large enough to matter, have a human read the actual notice before you pay anything. That's the flat-fee work Smart VAT Kenya does every week.
+        </p>
+      </div>
+
+      <h2 class="font-display text-[1.3rem] font-semibold text-ink tracking-tight mb-5">Late-filing penalties by regime (2026)</h2>
+      <div class="mb-10 overflow-x-auto">
+        <table class="w-full text-[0.85rem] border border-hairline rounded-lg overflow-hidden">
+          <thead>
+            <tr class="bg-canvas-alt text-left">
+              <th class="px-4 py-3 font-medium text-ink-muted">Regime</th>
+              <th class="px-4 py-3 font-medium text-ink-muted">Late-filing penalty</th>
+              <th class="px-4 py-3 font-medium text-ink-muted text-right">Interest</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-hairline">
+            <tr><td class="px-4 py-2.5 text-ink font-medium">VAT</td><td class="px-4 py-2.5 text-ink">Higher of KES 10,000 or 5% of tax due</td><td class="px-4 py-2.5 text-right text-ink">1% / month</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink font-medium">PAYE</td><td class="px-4 py-2.5 text-ink">Higher of KES 10,000 or 25% of tax due</td><td class="px-4 py-2.5 text-right text-ink">1% / month</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink font-medium">Individual income tax</td><td class="px-4 py-2.5 text-ink">Higher of KES 2,000 or 5% of tax due</td><td class="px-4 py-2.5 text-right text-ink">1% / month</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink font-medium">Company income tax</td><td class="px-4 py-2.5 text-ink">Higher of KES 20,000 or 5% of tax due</td><td class="px-4 py-2.5 text-right text-ink">1% / month</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink font-medium">Withholding tax</td><td class="px-4 py-2.5 text-ink">10% of tax due (cap KES 1,000,000)</td><td class="px-4 py-2.5 text-right text-ink">1% / month</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink font-medium">Turnover tax</td><td class="px-4 py-2.5 text-ink">Higher of KES 2,000 or 5% of tax due</td><td class="px-4 py-2.5 text-right text-ink">1% / month</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="font-display text-[1.3rem] font-semibold text-ink tracking-tight mb-5">KRA penalties - FAQs</h2>
+      <div class="max-w-3xl space-y-6 mb-12">
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">What is the KRA penalty for late VAT filing?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">The higher of KES 10,000 or 5% of the tax due, plus 1% monthly interest on unpaid principal. Even a nil return filed late attracts the flat KES 10,000 - which is why filing on time, even nil, is always cheaper than any waiver process.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">Can I negotiate penalties down without paying anything first?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">You can apply, but approval odds improve dramatically once the return is filed and the principal is paid or arranged. KRA's stated position is that waivers reward compliance, not promises - so the sequence is file, pay principal, then apply for the penalty and interest.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">Does the amnesty apply to penalties KRA already assessed?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">It depends on the debt's age and status: pre-2026 principal qualifies, but taxes declared after the window opened and cases with a final agency decision are excluded. Run the amnesty checker for a structured answer, or send the notice to us for a read before the 31 December 2026 deadline.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">Why is my penalty bigger than 5% of the tax?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">Because the late-filing penalty and the monthly interest stack, and the higher-of minimums can exceed the percentage on small tax amounts. A KES 30,000 VAT bill three months late carries KES 10,000 penalty + KES 900 interest - more than a third of the original tax. The calculator above separates the two components so you can see what drove the total.</p>
+        </div>
+      </div>
+
+      <HelpfulWidget context="kra-penalty-calculator" client:load />
+    </div>
+  </div>
+</BaseLayout>

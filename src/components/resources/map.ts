@@ -148,7 +148,7 @@ export const resourceComponents: Record<string, React.ComponentType> = {
   "kra-tax-amnesty-2026": KraTaxAmnesty2026,
   "kra-vat-audit-process": KraVatAuditProcess,
   // kra-vat-filing-deadline-august-2026 removed 2026-09-10: stale single-month page
-  // 301-redirected to /tax-deadlines/ (netlify.toml [[redirects]], public/_redirects, vercel.json)
+  // 301-redirected to /tax-deadlines/ (netlify.toml [[redirects]], public/_redirects)
   "kra-vat-penalties-reference": KraVatPenaltiesReference,
   "kra-data-sources": KraDataSources,
   "mpesa-error-codes": MpesaErrorCodes,

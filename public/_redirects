@@ -25,3 +25,16 @@
 /resources/etims-vs-kra-shuru-chatbot/ /resources/etims-vs-shuru-comparison/  301!
 /resources/real-cost-of-taxes-kenyan-sme  /resources/real-tax-bill-kenyan-sme/  301!
 /resources/real-cost-of-taxes-kenyan-sme/ /resources/real-tax-bill-kenyan-sme/  301!
+
+# Stealth WhatsApp click counters: internal 302s to wa.me (per-CTA buckets
+# visible in host request analytics). See docs/whatsapp-click-monitoring.md
+/wa                       https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%27d%20like%20a%20quote%20for%20VAT%20registration%20or%20monthly%20filing.  302!
+/wa/                      https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%27d%20like%20a%20quote%20for%20VAT%20registration%20or%20monthly%20filing.  302!
+/wa/filing                https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%20need%20help%20filing%20my%20VAT%20return.  302!
+/wa/filing/               https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%20need%20help%20filing%20my%20VAT%20return.  302!
+/wa/penalty               https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%20need%20help%20with%20a%20KRA%20penalty%20or%20amnesty.  302!
+/wa/penalty/              https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%20need%20help%20with%20a%20KRA%20penalty%20or%20amnesty.  302!
+/wa/doctor                https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%20just%20used%20the%20KRA%20Doctor%20and%20my%20issue%20is%3A  302!
+/wa/doctor/               https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%20just%20used%20the%20KRA%20Doctor%20and%20my%20issue%20is%3A  302!
+/wa/refer                 https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20a%20friend%20referred%20me%20-%20I%20need%20help%20with%3A  302!
+/wa/refer/                https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20a%20friend%20referred%20me%20-%20I%20need%20help%20with%3A  302!

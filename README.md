@@ -2,7 +2,7 @@
 
 VAT registration and iTax filing services for Kenyan SMEs - flat KES 5,000 registration, KES 3,500/month filing, M-PESA accepted, handled on WhatsApp.
 
-**Site:** https://smartvatkenya.co.ke · **Status:** production (Astro 7, static, deployed on Vercel)
+**Site:** https://smartvatkenya.co.ke · **Status:** production (Astro 7, static, deployed on Netlify)
 
 ## What this repo is
 
@@ -13,7 +13,7 @@ VAT registration and iTax filing services for Kenyan SMEs - flat KES 5,000 regis
 ## Stack
 
 - Astro 7 (SSG) + React islands + Tailwind 4
-- `@astrojs/sitemap`, Pagefind (client search), Vercel adapter
+- Pagefind (client search); deployed on Netlify (see netlify.toml)
 - Content: TSX components in `src/components/pages` and `src/components/resources` (metadata in `map.ts`)
 
 ## Getting started

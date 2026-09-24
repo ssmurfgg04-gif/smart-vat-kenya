@@ -40,6 +40,9 @@ export const FACTS = {
   contact: {
     email: "info@smartvatkenya.co.ke",
     address: "Pioneer House, Moi Avenue, Nairobi CBD, Kenya",
+    whatsapp: "254705467108",
+    whatsappDisplay: "0705 467 108",
+    whatsappIntl: "+254 705 467 108",
   },
 
   branding: {

@@ -1,0 +1,81 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+import { KraDoctor } from "@/components/kra-doctor"
+import { TrustBadges } from "@/components/trust-badges"
+import { ReferralStrip } from "@/components/referral-strip"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "KRA Doctor", item: "https://smartvatkenya.co.ke/kra-doctor/" },
+  ],
+}
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "KRA Doctor - Diagnose Your KRA Problem",
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "Web",
+  url: "https://smartvatkenya.co.ke/kra-doctor/",
+  description: "Diagnose any KRA problem in two taps: eTIMS, iTax, VAT, TCC, penalties or registration. Get the diagnosis, the exact fix steps, and human help on WhatsApp.",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "KES" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya" },
+}
+---
+
+<BaseLayout
+  jsonLd={jsonLd}
+  breadcrumbSchema={breadcrumbSchema}
+  title="KRA Doctor: Diagnose Any KRA Problem in Two Taps"
+  description="eTIMS stuck, iTax locked, penalty notice, TCC expired? The KRA Doctor diagnoses your exact problem, explains what it means, and gives your next 3 moves - free."
+  canonical="/kra-doctor/"
+  path="/kra-doctor/"
+>
+  <div class="bg-canvas-dark px-6 lg:px-12 py-14">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-wrap gap-2 mb-5">
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/60 px-2.5 py-1 rounded-sm">Free diagnosis</span>
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/50 px-2.5 py-1 rounded-sm">20+ problem map</span>
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/50 px-2.5 py-1 rounded-sm">Human help on demand</span>
+      </div>
+      <h1 class="font-display text-[clamp(1.7rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
+        KRA problems, diagnosed in two taps
+      </h1>
+      <p class="text-[0.95rem] text-canvas/70 max-w-[62ch] leading-relaxed">
+        Tell the KRA Doctor what's failing - eTIMS, iTax, VAT, your TCC, a penalty, or your registration. You get a plain-language diagnosis, the severity, your next three moves, and the exact guide for each step. If you'd rather hand it over entirely, a human is one tap away.
+      </p>
+    </div>
+  </div>
+
+  <div class="px-6 lg:px-12 py-12">
+    <div class="max-w-4xl mx-auto">
+      <KraDoctor client:load />
+
+      <div class="mt-10 max-w-3xl">
+        <TrustBadges />
+      </div>
+
+      <div class="mt-8 max-w-3xl border-t border-hairline pt-8">
+        <h2 class="font-display text-[1.15rem] font-semibold text-ink tracking-tight mb-4">How the KRA Doctor works</h2>
+        <div class="space-y-4 max-w-prose">
+          <p class="text-[0.86rem] text-ink-soft leading-relaxed">
+            Every diagnosis in the KRA Doctor is built from the same problem map our tax agents use when a client messages us - the twenty most common KRA failure modes across eTIMS, iTax, VAT, compliance certificates, penalties and registration. Each one carries the actual legal basis (the TPA section, the Finance Act amendment), the real deadlines, and the fix sequence we run for paying clients. Nothing is stored: your answers stay in your browser, and no diagnosis is sent anywhere unless you choose to contact us.
+          </p>
+          <p class="text-[0.86rem] text-ink-soft leading-relaxed">
+            The severity badge tells you how to prioritise. <strong class="text-ink">"Act now"</strong> diagnoses (lockouts, rejections, notices) carry daily cost or expiring rights - a pending-sync device, for example, exposes you to KES 100,000 per month under TPA s.59A(5). <strong class="text-ink">"Do this soon"</strong> items are mandatory but have runway, like onboarding to eTIMS before a deadline. <strong class="text-ink">"Worth checking"</strong> items are the quiet audit risks - a misclassified supply rate or an obligation on your PIN you didn't know about. If your problem isn't on the map, "Don't know" routes you straight to a human with context preserved.
+          </p>
+          <p class="text-[0.86rem] text-ink-soft leading-relaxed">
+            Prefer to read first? Every diagnosis links to the matching deep-dive guide, and the <a href="/kra-help/" class="text-brand underline underline-offset-2 hover:text-brand-hover">KRA Problem Solver</a> indexes all of them. Prefer to delegate? The handoff button opens WhatsApp with your diagnosis pre-filled - we reply within the hour during business hours, and flat fees are always quoted before any work starts.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 max-w-3xl">
+        <ReferralStrip />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

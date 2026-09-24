@@ -3,7 +3,9 @@
 import { useState } from "react"
 import { ArrowRight, Calculator, Info, WarningCircle, Question, Wrench, ClipboardText, CurrencyCircleDollar, Scales, ListChecks, HandCoins, Receipt, Wallet } from "@phosphor-icons/react/dist/ssr"
 import { EtimsPenaltyCalculator } from "@/src/components/pages/etims-penalty-calculator"
+import { ShareResult } from "@/components/share-result"
 import { FACTS } from "@/src/lib/vat-facts"
+import { WA_PATHS } from "@/src/lib/whatsapp"
 
 
 function formatKES(n: number) {
@@ -90,7 +92,7 @@ export default function ToolsPage() {
       <div className="bg-canvas-dark px-6 lg:px-12 py-16">
         <div className="max-w-[1400px] mx-auto">
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">Free tools - no sign-up required</p>
-          <p className="font-mono text-[0.7rem] text-brand mb-6">
+          <p className="font-mono text-[0.7rem] text-[#ffa198] mb-6">
             Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">Free Kenya Tax Tools - Calculators, Checklists &amp; Guides</h1>
@@ -144,6 +146,16 @@ export default function ToolsPage() {
                   </dl>
                 )}
               </div>
+              {rateType === "standard" && base > 0 && (
+                <div className="p-3 sm:p-5 border-t border-hairline bg-canvas">
+                  <div className="flex flex-col gap-3">
+                    <a href={WA_PATHS.filing} target="_blank" rel="noopener noreferrer" data-track="wa-cta" data-cta-type="vat-calc-result" data-service="monthly-filing" className="btn-fill inline-flex items-center justify-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold py-3 px-4 rounded-md hover:bg-brand-hover transition-colors">
+                      Need help filing it correctly? We file from KES 3,500/month <ArrowRight size={13} weight="bold" aria-hidden="true" />
+                    </a>
+                    <ShareResult resultText={`My VAT estimate: VAT = ${formatKES(vatAmount)}, total incl. VAT = ${formatKES(gross)} (on KES ${Math.round(base).toLocaleString()})`} compact />
+                  </div>
+                </div>
+              )}
             </div>
             <p className="mt-3 text-[0.72rem] text-ink-muted leading-relaxed flex items-start gap-1.5"><Info size={12} className="shrink-0 mt-0.5" aria-hidden="true" />Kenya VAT standard rate is 16% (KRA 2026). For indicative purposes only.<a href="/services/monthly-vat-filing/" className="ml-1 text-brand underline underline-offset-2 hover:text-brand-hover">Need help filing?</a></p>
           </section>
@@ -193,9 +205,15 @@ export default function ToolsPage() {
                   </div>
                 )}
                 {penDue > 0 && (
-                  <a href={`mailto:info@smartvatkenya.co.ke?subject=${penWaText}`} className="btn-fill mt-5 w-full flex items-center justify-center gap-2 bg-brand text-canvas text-[0.82rem] font-semibold py-3 rounded-md hover:bg-brand-hover transition-colors">
-                    Email the team about a waiver or amnesty <ArrowRight size={13} weight="bold" aria-hidden="true" />
-                  </a>
+                  <div className="mt-5 space-y-3">
+                    <a href={WA_PATHS.penalty} target="_blank" rel="noopener noreferrer" data-track="wa-cta" data-cta-type="penalty-calc-result" data-service="penalty-waiver" className="btn-fill w-full flex items-center justify-center gap-2 bg-[#128C7E] text-white text-[0.82rem] font-semibold py-3 rounded-md hover:bg-[#0e6d5c] transition-colors">
+                      Get this penalty waived - WhatsApp us <ArrowRight size={13} weight="bold" aria-hidden="true" />
+                    </a>
+                    <a href={`mailto:info@smartvatkenya.co.ke?subject=${penWaText}`} className="w-full flex items-center justify-center gap-2 border border-hairline text-ink-muted text-[0.78rem] font-medium py-2.5 rounded-md hover:border-ink-muted hover:text-ink transition-colors">
+                      Prefer email? Send your penalty summary
+                    </a>
+                    <ShareResult resultText={`My estimated KRA ${regime.label} penalty: ${formatKES(totalPenalty)} (${penM} month(s) late on ${formatKES(penDue)} principal).`} compact />
+                  </div>
                 )}
               </div>
             </div>
@@ -272,6 +290,9 @@ export default function ToolsPage() {
           <div className="flex items-center gap-2.5 mb-6"><Calculator size={17} weight="duotone" className="text-brand" aria-hidden="true" /><h2 id="advanced-heading" className="font-display text-[1rem] font-semibold text-ink">More Free KRA Tax Tools</h2></div>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
             {[
+              { href: "/tools/vat-calculator/", icon: Calculator, label: "Kenya VAT Calculator", desc: "Add or extract 16% VAT - instant breakdown with share result", badge: "Popular" },
+              { href: "/tools/kra-penalty-calculator/", icon: WarningCircle, label: "KRA Penalty Calculator", desc: "All 6 regimes + interest + 2026 amnesty savings in one estimate", badge: "New" },
+              { href: "/kra-doctor/", icon: Question, label: "KRA Doctor", desc: "Diagnose any KRA problem in two taps - eTIMS, iTax, VAT, TCC", badge: "New" },
               { href: "/tools/mpesa-vat-reconciler/", icon: Receipt, label: "M-Pesa VAT Reconciler", desc: "Flag real sales in your M-Pesa statement and extract 16% output VAT for your VAT3", badge: "New" },
               { href: "/tools/salary-calculator/", icon: Wallet, label: "Kenya Salary Calculator 2026", desc: "PAYE, SHIF, NSSF & Housing Levy in one payslip breakdown - net pay and employer cost", badge: "New" },
               { href: "/tools/etims-diagnostic/", icon: Wrench, label: "eTIMS Error Diagnostic", desc: "Select your error, get the exact fix steps - rejections, sync, lockouts, PINs", badge: "New" },

@@ -1,0 +1,198 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+import { VatCalculatorPro } from "@/components/vat-calculator-pro"
+import { TrustBadges } from "@/components/trust-badges"
+import { HelpfulWidget } from "@/components/helpful-widget"
+import { FACTS } from "@/src/lib/vat-facts"
+
+const webAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Kenya VAT Calculator 2026",
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "Web",
+  url: "https://smartvatkenya.co.ke/tools/vat-calculator/",
+  description: "Free Kenya VAT calculator: add or extract 16% VAT, zero-rated and exempt handling, instant breakdown of net, VAT and gross amounts. No sign-up.",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "KES" },
+  publisher: { "@type": "Organization", name: "Smart VAT Kenya" },
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How do I calculate 16% VAT in Kenya?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "To add VAT: multiply the net amount by 0.16, then add it (KES 50,000 net becomes KES 58,000 incl. VAT). To extract VAT from a VAT-inclusive total: divide the total by 1.16 to get the net, then subtract (KES 58,000 total contains KES 8,000 VAT). The standard rate is 16% under the VAT Act (Cap. 476).",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I remove VAT from a total (reverse VAT)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Divide the VAT-inclusive total by 1.16. The result is the net amount; the VAT is the difference. For example, KES 116,000 inclusive = KES 100,000 net + KES 16,000 VAT. This 'fraction' method is what KRA expects on your VAT3 return.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the VAT rate in Kenya in 2026?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The standard VAT rate is 16%. Certain supplies are zero-rated (0% - VAT charged at nil but input VAT claimable) and others are exempt (no VAT charged and no input VAT credit). The 16% standard rate is verified against KRA guidance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is VAT calculated on top of the price or included in it?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Both scenarios exist. Published retail prices in Kenya must be VAT-inclusive, so you extract VAT by dividing by 1.16. B2B quotations usually show a net price and add 16% on top. This calculator handles both directions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I charge VAT if my business is not VAT-registered?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Only VAT-registered businesses may charge VAT - charging it while unregistered is an offence. If your 12-month turnover approaches KES 5,000,000, registration becomes mandatory and skipping it risks a KES 100,000-per-month penalty.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I claim back the VAT I paid on business expenses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, if you are VAT-registered and the expense relates to taxable supplies - provided you hold a valid eTIMS invoice from the supplier. Exempt supplies and personal expenses do not qualify for input VAT credit.",
+      },
+    },
+  ],
+}
+
+// BaseLayout renders a single jsonLd block, so the WebApplication and
+// FAQPage schemas are combined into one @graph.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [webAppSchema, faqSchema],
+}
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Free Tools", item: "https://smartvatkenya.co.ke/tools/" },
+    { "@type": "ListItem", position: 3, name: "Kenya VAT Calculator", item: "https://smartvatkenya.co.ke/tools/vat-calculator/" },
+  ],
+}
+---
+
+<BaseLayout
+  jsonLd={jsonLd}
+  breadcrumbSchema={breadcrumbSchema}
+  title="VAT Calculator Kenya 2026: Add or Remove 16% VAT Instantly"
+  description="Free Kenya VAT calculator: add 16% VAT to any amount or extract it from a VAT-inclusive total. Zero-rated and exempt handled, instant breakdown, share your result."
+  canonical="/tools/vat-calculator/"
+  path="/tools/vat-calculator/"
+>
+  <div class="bg-canvas-dark px-6 lg:px-12 py-14">
+    <div class="max-w-4xl mx-auto">
+      <a href="/tools/" class="inline-flex items-center gap-1.5 text-canvas/50 hover:text-canvas text-sm mb-6 transition-colors">← All tools</a>
+      <div class="flex flex-wrap gap-2 mb-5">
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/60 px-2.5 py-1 rounded-sm">Free tool</span>
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/50 px-2.5 py-1 rounded-sm">16% standard rate</span>
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/50 px-2.5 py-1 rounded-sm">No sign-up</span>
+      </div>
+      <h1 class="font-display text-[clamp(1.7rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
+        Kenya VAT Calculator 2026
+      </h1>
+      <p class="text-[0.95rem] text-canvas/70 max-w-[62ch] leading-relaxed">
+        Add 16% VAT to any amount, or extract the VAT hidden inside a VAT-inclusive price. Zero-rated and exempt supplies handled. Your breakdown builds as you type - and you can share the result with your accountant in one tap.
+      </p>
+    </div>
+  </div>
+
+  <div class="px-6 lg:px-12 py-12">
+    <div class="max-w-4xl mx-auto grid lg:grid-cols-[1fr_320px] gap-8 items-start">
+      <VatCalculatorPro client:load />
+
+      <aside class="space-y-4 lg:sticky lg:top-6">
+        <div class="border border-hairline rounded-lg p-4 bg-canvas">
+          <p class="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted mb-2">Last verified</p>
+          <p class="text-[0.8rem] text-ink-soft leading-relaxed">{new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance. Standard rate {FACTS.standardRate} (VAT Act, Cap. 476).</p>
+        </div>
+        <div class="border border-hairline rounded-lg p-4 bg-canvas">
+          <p class="font-mono text-[0.6rem] uppercase tracking-widest text-ink-muted mb-3">Related tools &amp; guides</p>
+          <ul class="space-y-2.5" role="list">
+            <li><a href="/tools/kra-penalty-calculator/" class="text-[0.82rem] text-ink hover:text-brand transition-colors">KRA Penalty Calculator →</a></li>
+            <li><a href="/tools/mpesa-vat-reconciler/" class="text-[0.82rem] text-ink hover:text-brand transition-colors">M-Pesa VAT Reconciler →</a></li>
+            <li><a href="/resources/how-to-calculate-vat-in-kenya/" class="text-[0.82rem] text-ink hover:text-brand transition-colors">How to calculate VAT (full guide) →</a></li>
+            <li><a href="/resources/vat-rates-kenya/" class="text-[0.82rem] text-ink hover:text-brand transition-colors">VAT rates in Kenya explained →</a></li>
+          </ul>
+        </div>
+        <TrustBadges columns={2} />
+      </aside>
+    </div>
+
+    <!-- SEO body -->
+    <div class="max-w-3xl mx-auto mt-16 pt-12 border-t border-hairline">
+      <h2 class="font-display text-[1.3rem] font-semibold text-ink tracking-tight mb-5">How to calculate VAT in Kenya (the two directions)</h2>
+      <div class="space-y-6 mb-10">
+        <p class="text-[0.88rem] text-ink-soft leading-relaxed">
+          Kenya's standard VAT rate is <strong class="text-ink font-semibold">16%</strong>, and every calculation you'll ever need is one of two directions. <strong class="text-ink font-semibold">Adding VAT</strong> (the B2B quotation case): multiply your net price by 0.16 and add it - KES 50,000 becomes KES 50,000 + KES 8,000 = KES 58,000. <strong class="text-ink font-semibold">Extracting VAT</strong> (the retail case, where the shelf price already includes VAT): divide the total by 1.16 to recover the net amount, and the difference is the VAT - KES 58,000 ÷ 1.16 = KES 50,000 net, so KES 8,000 was VAT. Getting this backwards is the single most common VAT bookkeeping error we see at Smart VAT Kenya, and it distorts both your pricing and your VAT3 return.
+        </p>
+        <p class="text-[0.88rem] text-ink-soft leading-relaxed">
+          The rate itself is only half the picture - classification is where audits are won and lost. <strong class="text-ink font-semibold">Standard-rated</strong> supplies take 16%. <strong class="text-ink font-semibold">Zero-rated</strong> supplies (like most exports and specified inputs) are invoiced at 0% through eTIMS, but you keep the input VAT credit on your costs. <strong class="text-ink font-semibold">Exempt</strong> supplies carry no VAT and no input credit at all, which is why mixing exempt and taxable sales forces an apportionment exercise. If you're unsure which bucket a supply falls into, the calculator above shows the practical difference instantly - and our full guide walks through the schedules line by line.
+        </p>
+        <p class="text-[0.88rem] text-ink-soft leading-relaxed">
+          A worked example ties it together. A Mombasa retailer sells goods worth KES 116,000 VAT-inclusive in a month and bought stock worth KES 58,000 VAT-inclusive. Output VAT = 116,000 ÷ 1.16 × 0.16 = KES 16,000. Input VAT = 58,000 ÷ 1.16 × 0.16 = KES 8,000. Payable to KRA = KES 16,000 − KES 8,000 = <strong class="text-ink font-semibold">KES 8,000</strong>, filed on the VAT3 by the 20th of the following month. Every figure on that return must match your eTIMS invoices - that reconciliation is exactly what KRA's validators now check automatically.
+        </p>
+      </div>
+
+      <h2 class="font-display text-[1.3rem] font-semibold text-ink tracking-tight mb-5">Worked examples at a glance</h2>
+      <div class="mb-10 overflow-x-auto">
+        <table class="w-full text-[0.85rem] border border-hairline rounded-lg overflow-hidden">
+          <thead>
+            <tr class="bg-canvas-alt text-left">
+              <th class="px-4 py-3 font-medium text-ink-muted">Net amount</th>
+              <th class="px-4 py-3 font-medium text-ink-muted">VAT @ 16%</th>
+              <th class="px-4 py-3 font-medium text-ink-muted text-right">Total (incl. VAT)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-hairline">
+            <tr><td class="px-4 py-2.5 text-ink">KES 1,000</td><td class="px-4 py-2.5 text-ink">KES 160</td><td class="px-4 py-2.5 text-right font-mono tabular-nums text-ink">KES 1,160</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink">KES 10,000</td><td class="px-4 py-2.5 text-ink">KES 1,600</td><td class="px-4 py-2.5 text-right font-mono tabular-nums text-ink">KES 11,600</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink">KES 50,000</td><td class="px-4 py-2.5 text-ink">KES 8,000</td><td class="px-4 py-2.5 text-right font-mono tabular-nums text-ink">KES 58,000</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink">KES 100,000</td><td class="px-4 py-2.5 text-ink">KES 16,000</td><td class="px-4 py-2.5 text-right font-mono tabular-nums text-ink">KES 116,000</td></tr>
+            <tr><td class="px-4 py-2.5 text-ink">KES 1,000,000</td><td class="px-4 py-2.5 text-ink">KES 160,000</td><td class="px-4 py-2.5 text-right font-mono tabular-nums text-ink">KES 1,160,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="font-display text-[1.3rem] font-semibold text-ink tracking-tight mb-5">VAT in Kenya - FAQs</h2>
+      <div class="max-w-3xl space-y-6 mb-12">
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">How do I calculate 16% VAT in Kenya?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">To add VAT, multiply the net amount by 0.16 and add it to the price. To extract VAT from an inclusive total, divide by 1.16. Both directions are handled by the calculator above, including the zero-rated and exempt cases where VAT due is nil.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">Why divide by 1.16 and not multiply by 16%?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">Because 16% of the VAT-inclusive total is not the VAT it contains. A KES 116 total contains KES 16 of VAT - 13.79% of the total, not 16%. Multiplying 116 by 16% gives KES 18.56, which overstates the VAT. Dividing by 1.16 recovers the exact net figure KRA expects on your return.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">What happens if I charge VAT while not registered?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">Charging VAT without registration is an offence under the VAT Act, and the amounts collected are payable to KRA. If your turnover is approaching the KES 5 million threshold, register first - the process takes 1-3 working days and our flat-fee service handles the whole filing.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-[0.95rem] text-ink mb-1.5">Does this calculator store the amounts I type?</h3>
+          <p class="text-[0.85rem] text-ink-soft leading-relaxed">No. The calculation runs entirely in your browser - nothing is transmitted or stored. The share button composes a message locally and opens it in your own WhatsApp; what you send is entirely your choice.</p>
+        </div>
+      </div>
+
+      <HelpfulWidget context="vat-calculator" client:load />
+    </div>
+  </div>
+</BaseLayout>

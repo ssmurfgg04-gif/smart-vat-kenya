@@ -2,6 +2,7 @@
 import "@/src/styles/globals.css"
 import { Navbar } from "@/src/components/navbar"
 import Footer from "@/src/components/Footer.astro"
+import { WhatsAppButton } from "@/components/whatsapp-button"
 import { BackToTop } from "@/components/back-to-top"
 
 export interface Props {
@@ -68,8 +69,9 @@ const organizationSchema = {
   alternateName: "Smart VAT Kenya",
   legalName: "Smart VAT Kenya Limited",
   description:
-    "Professional VAT registration and monthly filing services for Kenyan SMEs. Flat-fee pricing, eTIMS-compliant, M-PESA accepted, email support. KRA-registered tax agents.",
+    "Professional VAT registration and monthly filing services for Kenyan SMEs. Flat-fee pricing, eTIMS-compliant, M-PESA accepted, WhatsApp support. KRA-registered tax agents.",
   email: "info@smartvatkenya.co.ke",
+  telephone: "+254705467108",
   url: "https://smartvatkenya.co.ke",
   logo: {
     "@type": "ImageObject",
@@ -90,6 +92,7 @@ const organizationSchema = {
   ],
   contactPoint: {
     "@type": "ContactPoint",
+    telephone: "+254705467108",
     email: "info@smartvatkenya.co.ke",
     contactType: "customer service",
     availableLanguage: ["English", "Swahili"],
@@ -311,6 +314,14 @@ const citationSchema = {
     })();
   </script>
 
+  <!-- Analytics: GA4 (G-M3LZ5ED02B) + Microsoft Clarity (yn7r51pk7o).
+       Same-origin init files (public/js/) so CSP stays hash-free for these;
+       tag libraries allowed via script-src in astro.config.mjs.
+       Events pushed by the delegated CTA tracker below + src/lib/analytics.ts. -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-M3LZ5ED02B"></script>
+  <script is:inline defer src="/js/analytics-ga4.js"></script>
+  <script is:inline defer src="/js/analytics-clarity.js"></script>
+
   <title>{pageTitle}</title>
   <meta name="description" content={pageDesc} />
   <meta name="author" content={author} />
@@ -439,31 +450,43 @@ const citationSchema = {
   </main>
   <Footer />
   <BackToTop client:visible />
+  <WhatsAppButton client:load />
   <script is:inline>
-    document.addEventListener('click', function(e){
-      var a = e.target.closest('a[data-track="contact-cta"], a[href^="mailto:"]');
-      if(!a) return;
-      var cta = a.getAttribute('data-cta-type') || a.getAttribute('data-track') || 'contact';
-      var service = a.getAttribute('data-service') || 'general';
-      var href = a.getAttribute('href') || '';
-      var payload = {event:'contact_click', cta_type: cta, service: service, page: location.pathname, href: href};
-      if(window.dataLayer) window.dataLayer.push(payload);
-      if(window.gtag) window.gtag('event','contact_click',{cta_type: cta, service: service, page_path: location.pathname});
-      // track other key actions
-      var calc = e.target.closest('[data-track="calculator-used"]');
-      if(calc && window.dataLayer) window.dataLayer.push({event:'calculator_used', page: location.pathname});
-    });
-    // track calculator usage, service CTA, calendar add via data-track
-    document.addEventListener('click', function(e){
-      var t = e.target.closest('[data-track]');
-      if(!t) return;
-      var track = t.getAttribute('data-track');
-      if(track==='calculator-used' || track==='service-cta' || track==='calendar-add'){
-        var p={event: track, page: location.pathname, cta: t.getAttribute('data-cta-type')||track};
-        if(window.dataLayer) window.dataLayer.push(p);
-        if(window.gtag) window.gtag('event', track, {page_path: location.pathname});
+    // Unified delegated conversion tracking. Fires into every analytics layer
+    // that may be present (GA4 dataLayer/gtag, Microsoft Clarity) and is
+    // silent when none are loaded.
+    (function () {
+      function push(event, params) {
+        try {
+          var payload = Object.assign({ event: event, page: location.pathname }, params || {})
+          if (Array.isArray(window.dataLayer)) window.dataLayer.push(payload)
+          if (typeof window.gtag === "function") window.gtag("event", event, params || {})
+          if (typeof window.clarity === "function") window.clarity("event", event)
+        } catch (e) { /* never break the page */ }
       }
-    });
+      document.addEventListener("click", function (e) {
+        var el = e.target.closest("[data-track]")
+        if (el) {
+          var t = el.getAttribute("data-track")
+          if (t === "wa-cta") {
+            push("whatsapp_click", {
+              cta_type: el.getAttribute("data-cta-type") || "unknown",
+              service: el.getAttribute("data-service") || "general",
+              href: el.getAttribute("href") || "",
+            })
+          } else if (t === "calculator-used" || t === "service-cta" || t === "calendar-add" || t === "contact-cta") {
+            push(t, {
+              cta_type: el.getAttribute("data-cta-type") || t,
+              service: el.getAttribute("data-service") || "general",
+              href: el.getAttribute("href") || "",
+            })
+          }
+          return
+        }
+        var mail = e.target.closest('a[href^="mailto:"]')
+        if (mail) push("contact_click", { cta_type: "email", service: "general", href: mail.getAttribute("href") || "" })
+      }, { passive: true })
+    })()
   </script>
 </body>
 </html>

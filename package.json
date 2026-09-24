@@ -17,7 +17,6 @@
   "dependencies": {
     "@astrojs/mdx": "^7.0.4",
     "@astrojs/react": "^6.0.1",
-    "@astrojs/vercel": "^11.0.3",
     "@phosphor-icons/react": "^2.1.10",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.1.4",
@@ -38,7 +37,7 @@
     "url": "https://github.com/ssmurfgg04-gif/smart-vat-kenya.git"
   },
   "homepage": "https://smartvatkenya.co.ke",
-  "description": "VAT registration and iTax filing services for Kenyan SMEs \u2014 Astro + Tailwind + React",
+  "description": "VAT registration and iTax filing services for Kenyan SMEs — Astro + Tailwind + React",
   "pnpm": {
     "overrides": {
       "hono": "4.12.25"

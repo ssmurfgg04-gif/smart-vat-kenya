@@ -18,7 +18,7 @@
  *      browsers enforce the INTERSECTION of meta + header policies).
  *   5. Appends the policy to dist/_headers under "/*".
  *
- * On non-Netlify builds (local preview, Vercel) this script is a no-op and the
+ * On non-Netlify builds (local preview) this script is a no-op and the
  * <meta> CSP keeps covering the site — see the comment block in public/_headers.
  *
  * Sanity-check locally with:

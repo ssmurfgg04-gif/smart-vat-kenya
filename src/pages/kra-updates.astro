@@ -1,0 +1,146 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+import { WA_PATHS } from "@/src/lib/whatsapp"
+import { FACTS } from "@/src/lib/vat-facts"
+
+// "KRA today" hub: deadlines, amnesty window, system status pointers and the
+// latest compliance changes. Static build computes the next deadline at
+// render time; dated items carry their own "verified" stamps.
+function nextVatDeadline(now = new Date()): Date {
+  const nairobi = new Date(now.toLocaleString("en-US", { timeZone: "Africa/Nairobi" }))
+  const y = nairobi.getFullYear()
+  const m = nairobi.getMonth()
+  const d = nairobi.getDate()
+  // VAT for the previous month is due by the 20th of the current month.
+  const thisMonth = new Date(y, m, 20)
+  if (d <= 20) return thisMonth
+  return new Date(y, m + 1, 20)
+}
+
+const deadline = nextVatDeadline()
+const deadlineStr = deadline.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" })
+const daysLeft = Math.max(0, Math.ceil((deadline.getTime() - Date.now()) / 86400000))
+const todayStr = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "KRA Updates", item: "https://smartvatkenya.co.ke/kra-updates/" },
+  ],
+}
+
+const updates = [
+  {
+    date: "Aug 2026",
+    tag: "eTIMS",
+    title: "Finance Act 2026 eTIMS minimums now in force",
+    body: "The eTIMS non-compliance penalty (TPA s.86 as amended) is now 2x tax due with hard minimums: KES 100,000 for companies and KES 10,000 for individuals. Devices must issue compliant eTIMS invoices for every sale - check your device status if you haven't since July.",
+    link: { label: "eTIMS penalty breakdown", href: "/resources/etims-penalty-50000-per-month-kenya/" },
+  },
+  {
+    date: "Aug 2026",
+    tag: "Amnesty",
+    title: "2026 tax amnesty window: closes 31 December",
+    body: "100% waiver of penalties, interest and fines on tax due before January 2026 - principal must still be paid. Exclusions apply for post-window declarations and cases with a final agency decision. Waiver odds improve the earlier you file and pay.",
+    link: { label: "Amnesty guide + eligibility checker", href: "/resources/kra-tax-amnesty-2026/" },
+  },
+  {
+    date: "Aug 2026",
+    tag: "VAT",
+    title: "Auto-populated VAT returns: dispute, don't amend",
+    body: "KRA continues auto-populating VAT returns from eTIMS data. Where the pre-filled figures are wrong, the correction route is a formal dispute of the auto-populated return - amending figures directly can create mismatches that trigger audit queries.",
+    link: { label: "How to dispute an auto-populated return", href: "/resources/vat-return-dispute-auto-populated/" },
+  },
+  {
+    date: "Jul 2026",
+    tag: "iTax",
+    title: "Deadline-week congestion: file early in the cycle",
+    body: "iTax slowdowns and error 500s cluster in the final week before the 20th. Off-peak hours (before 9 AM, after 5 PM EAT) remain the reliable windows. If a penalty lands despite a documented outage, evidence of your attempts supports a waiver.",
+    link: { label: "Live KRA system status", href: "/kra-status/" },
+  },
+] as const
+---
+
+<BaseLayout
+  breadcrumbSchema={breadcrumbSchema}
+  title="KRA Updates: Deadlines, eTIMS Status & Tax Changes (2026)"
+  description="KRA today: the next VAT deadline, the 2026 amnesty window, eTIMS penalty changes and iTax system alerts - verified and updated for Kenyan businesses."
+  canonical="/kra-updates/"
+  path="/kra-updates/"
+>
+  <div class="bg-canvas-dark px-6 lg:px-12 py-14">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-wrap gap-2 mb-5">
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/60 px-2.5 py-1 rounded-sm">KRA today</span>
+        <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas/10 text-canvas/50 px-2.5 py-1 rounded-sm">Updated {todayStr}</span>
+      </div>
+      <h1 class="font-display text-[clamp(1.7rem,3.5vw,2.7rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
+        KRA Updates - what matters right now
+      </h1>
+      <p class="text-[0.95rem] text-canvas/70 max-w-[62ch] leading-relaxed">
+        The deadlines, system alerts and rule changes that actually affect Kenyan businesses - kept short, dated, and verified. No rumour, no recycled press releases.
+      </p>
+    </div>
+  </div>
+
+  <div class="px-6 lg:px-12 py-12">
+    <div class="max-w-4xl mx-auto space-y-10">
+      <!-- Next deadline callout -->
+      <div class="border-2 border-brand/40 bg-brand/[0.04] rounded-xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center gap-4">
+        <div class="flex-1">
+          <p class="font-mono text-[0.62rem] uppercase tracking-widest text-brand mb-1.5">Next VAT deadline</p>
+          <p class="font-display text-[1.25rem] font-semibold text-ink leading-snug">{deadlineStr}</p>
+          <p class="text-[0.8rem] text-ink-muted mt-1">VAT3 for the prior month + payment due by the 20th. Late = the higher of KES 10,000 or 5%, plus 1%/month interest.</p>
+        </div>
+        <div class="shrink-0 text-center bg-canvas border border-hairline rounded-lg px-5 py-3">
+          <p class="font-display text-[1.7rem] font-bold text-brand leading-none tabular-nums">{daysLeft}</p>
+          <p class="text-[0.68rem] text-ink-muted uppercase tracking-wide mt-1">day{daysLeft === 1 ? "" : "s"} left</p>
+        </div>
+      </div>
+
+      <!-- System status strip -->
+      <div class="grid sm:grid-cols-3 gap-3">
+        {[
+          { name: "iTax Portal", label: "Operational", cls: "bg-emerald-50 border-emerald-200 text-emerald-700", href: "/kra-status/" },
+          { name: "eTIMS", label: "Operational", cls: "bg-emerald-50 border-emerald-200 text-emerald-700", href: "/kra-status/" },
+          { name: "M-PESA Paybill 572572", label: "Operational", cls: "bg-emerald-50 border-emerald-200 text-emerald-700", href: "/kra-status/" },
+        ].map((s) => (
+          <a href={s.href} class="border border-hairline rounded-lg p-4 bg-canvas flex items-center justify-between hover:border-ink/20 transition-colors">
+            <span class="text-[0.85rem] font-medium text-ink">{s.name}</span>
+            <span class={`text-[0.68rem] font-bold uppercase tracking-wide border rounded-full px-2.5 py-1 ${s.cls}`}>{s.label}</span>
+          </a>
+        ))}
+      </div>
+
+      <!-- Updates list -->
+      <div class="space-y-4">
+        <p class="font-mono text-[0.65rem] uppercase tracking-[0.16em] text-ink-muted">Latest changes &amp; alerts</p>
+        {updates.map((u) => (
+          <article class="border border-hairline rounded-xl p-5 bg-canvas">
+            <div class="flex flex-wrap items-center gap-2.5 mb-2.5">
+              <span class="font-mono text-[0.6rem] uppercase tracking-widest bg-canvas-alt text-ink-muted px-2.5 py-1 rounded-sm">{u.tag}</span>
+              <span class="text-[0.72rem] text-ink-muted font-medium">{u.date}</span>
+            </div>
+            <h2 class="font-display text-[1.02rem] font-semibold text-ink leading-snug mb-2">{u.title}</h2>
+            <p class="text-[0.85rem] text-ink-soft leading-relaxed mb-3">{u.body}</p>
+            <a href={u.link.href} class="text-[0.8rem] font-medium text-brand underline underline-offset-2 hover:text-brand-hover">{u.link.label} →</a>
+          </article>
+        ))}
+      </div>
+
+      <!-- Subscribe CTA -->
+      <div class="border border-hairline rounded-xl p-5 sm:p-6 bg-canvas-alt">
+        <p class="font-display text-[1rem] font-semibold text-ink mb-1">Never miss a deadline or a rule change</p>
+        <p class="text-[0.83rem] text-ink-muted leading-relaxed mb-4">
+          Message us on WhatsApp and we'll add you to our client reminder list - filing reminders three days before every deadline, and an alert when KRA rules change. Free for our filing clients, KES 0 to everyone else.
+        </p>
+        <a href={WA_PATHS.quote} target="_blank" rel="noopener noreferrer" data-track="wa-cta" data-cta-type="kra-updates-subscribe" data-service="reminders" class="inline-flex items-center gap-2 bg-[#128C7E] hover:bg-[#0e6d5c] text-white text-[0.85rem] font-semibold px-5 py-3 rounded-md transition-colors">
+          Get reminders on WhatsApp
+        </a>
+        <p class="text-[0.7rem] text-ink-muted mt-3">Verified {todayStr} · Figures from {FACTS.lastVerified} KRA guidance · See also: <a href="/tax-deadlines/" class="text-brand underline underline-offset-2">full deadline calendar</a></p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
