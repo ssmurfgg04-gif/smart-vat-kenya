@@ -3,7 +3,7 @@
 // Update ONLY when law changes (Finance Act season) - then bump LAST_VERIFIED.
 
 export const FACTS = {
-  lastVerified: "2026-08-08",
+  lastVerified: "2026-09-27",
   standardRate: "16%",
   standardRateSource: "VAT Act (Cap. 476); KRA VAT page, verified 2026-08-08",
 

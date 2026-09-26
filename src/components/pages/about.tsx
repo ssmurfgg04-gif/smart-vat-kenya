@@ -56,7 +56,7 @@ export default function AboutPage() {
           <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
             About Smart VAT Kenya
           </p>
-          <p className="font-mono text-[0.7rem] text-brand mb-6">
+          <p className="font-mono text-[0.7rem] text-[#ffa198] mb-6">
             Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4.5vw,3.4rem)] font-semibold leading-tight tracking-tight text-canvas mb-6 text-balance">

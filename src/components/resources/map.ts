@@ -489,7 +489,7 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     canonical: "/resources/vat-labour-outsourcing-kenya/",
   },
   "vat-rates-kenya": {
-    title: "Kenya VAT Rates 2026: 16% Standard + Full Zero-Rated & Exempt List",
+    title: "Kenya VAT Rates 2026: 16% Standard, Zero-Rated & Exempt",
     description: "Kenya's VAT is 16% on most goods. See the complete list of zero-rated and exempt supplies, plus who must register at KES 5M. Updated Aug 2026.",
     canonical: "/resources/vat-rates-kenya/",
   },

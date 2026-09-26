@@ -4,7 +4,8 @@
 # These explicit rules are only for pages that are NOT directory-based
 
 # Blog (may be single page, not directory)
-/blog  /blog/  301!
+/blog  /resources/  301!
+/blog/  /resources/  301!
 
 # Explicit non-directory pages
 /forms  /forms/  301!

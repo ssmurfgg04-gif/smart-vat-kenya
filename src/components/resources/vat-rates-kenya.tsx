@@ -16,7 +16,7 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org" as const,
   "@type": "Article",
-  headline: "Kenya VAT Rates 2026: 16% Standard + Full Zero-Rated & Exempt List",
+  headline: "Kenya VAT Rates 2026: 16% Standard, Zero-Rated & Exempt",
   description:
     "Complete guide to Kenya VAT rates 2026 covering the standard rate of 16%, zero-rated supplies (0%), and exempt supplies. Full lists from the VAT Act First and Second Schedules with practical examples and industry guidance.",
   author: { "@type": "Organization", name: "Smart VAT Kenya", url: "https://smartvatkenya.co.ke" },

@@ -42,7 +42,7 @@ export default function PinCheckerTool() {
         <p className="text-ink-muted text-base max-w-xl mx-auto leading-relaxed">
           Verify any Kenyan individual or corporate KRA PIN instantly. Ensure supplier and client PINs are valid before issuing eTIMS invoices or claiming input VAT.
         </p>
-        <p className="font-mono text-[0.7rem] text-brand mt-4">
+        <p className="font-mono text-[0.7rem] text-[#ffa198] mt-4">
           Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
         </p>
       </div>

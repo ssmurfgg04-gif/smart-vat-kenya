@@ -15,7 +15,7 @@ export default function PartnersPage() {
         <p className="text-ink-muted text-lg leading-relaxed">
           You're an accountant or cyber cafe owner with dozens of clients. KRA now requires eTIMS for all of them, and the iTax portal crashes on deadline night. You don't want to become iTax support staff. We already are.
         </p>
-        <p className="font-mono text-[0.7rem] text-brand mt-4">
+        <p className="font-mono text-[0.7rem] text-[#ffa198] mt-4">
           Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
         </p>
       </div>

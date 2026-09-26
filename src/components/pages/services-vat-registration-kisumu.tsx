@@ -227,7 +227,7 @@ export default function VATRegistrationKisumuPage() {
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-canvas/60 mb-4">
             Kisumu - Western Kenya
           </p>
-          <p className="font-mono text-[0.7rem] text-brand mb-6">
+          <p className="font-mono text-[0.7rem] text-[#ffa198] mb-6">
             Last verified {new Date(FACTS.lastVerified).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} against KRA guidance
           </p>
           <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-canvas tracking-tight leading-tight mb-4 text-balance">
