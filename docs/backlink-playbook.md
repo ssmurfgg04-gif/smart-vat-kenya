@@ -120,6 +120,11 @@ paraphrase to citation.
    - official name: Smart VAT Kenya Limited
 3. Once the Q-ID exists (e.g. Q13xxxxx), add it to `sameAs` in
    `src/layouts/BaseLayout.astro` and redeploy — one line.
+   **Pre-built:** collision check already run (2026-09-28 — zero existing
+   "SmartVAT" items, name is clear). Two ready paths:
+   `scripts/wikidata-create.mjs` (API, needs a bot password from
+   Special:BotPasswords via env `WIKIDATA_USERNAME`/`WIKIDATA_BOT_PASS`) or
+   paste `scripts/wikidata-quickstatements.txt` into QuickStatements.
 4. Same-day second step: Google Business Profile is already live? Confirm the
    profile URL matches the `sameAs` socials.
 

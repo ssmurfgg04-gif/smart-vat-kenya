@@ -1,0 +1,15 @@
+# SmartVAT Kenya — Wikidata item via QuickStatements V1
+# Path: open https://quickstatements.toolforge.org → import this batch → authorize with your Wikimedia account → run.
+# Claims are EXACTLY the playbook's Loop 5 list (docs/backlink-playbook.md) — no more, no puffery.
+CREATE
+LAST|Len|"SmartVAT Kenya"
+LAST|Lsw|"SmartVAT Kenya"
+LAST|Den|"Kenyan tax technology firm; publishes smartvatkenya.co.ke, a VAT and eTIMS guidance, calculators and developer tools resource"
+LAST|Aen|"Smart VAT Kenya"
+LAST|P31|Q4830453
+LAST|P452|Q169606
+LAST|P17|Q114
+LAST|P159|Q3870
+LAST|P856|"https://smartvatkenya.co.ke"
+LAST|P973|"https://smartvatkenya.co.ke/about/"
+LAST|P1448|en|"Smart VAT Kenya Limited"
