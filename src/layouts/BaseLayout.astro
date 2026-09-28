@@ -61,15 +61,26 @@ const socialTitle = pageTitle.includes(SITE_NAME)
     ? `${pageTitle} | ${SITE_NAME}`
     : pageTitle
 
+// ENTITY GRAPH — rules that keep the knowledge graph clean:
+// 1. sameAs may ONLY list pages that are ABOUT this entity (social profiles,
+//     Wikidata). Government portals (kra.go.ke etc.) are SOURCE material, not
+//     identity — listing them as sameAs told machines "SmartVAT Kenya IS KRA".
+// 2. Every @id cross-reference must resolve. (The old "#business" refs dangled;
+//     the org is #organization.)
+// 3. No fabricated ratings. Self-serving AggregateRating on your own org is
+//     ignored by Google and is a manual-action liability. Trust comes from
+//     verifiable signals instead (publishingPrinciples, real contacts, data).
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://smartvatkenya.co.ke/#organization",
   name: "Smart VAT Kenya",
-  alternateName: "Smart VAT Kenya",
+  alternateName: ["SmartVAT Kenya", "Smart VAT Kenya Limited"],
   legalName: "Smart VAT Kenya Limited",
+  disambiguatingDescription:
+    "Smart VAT Kenya is a Kenyan tax-services firm and publisher of practical Kenya VAT guidance, calculators and statistics — distinct from unrelated European VAT-compliance software brands using similar names.",
   description:
-    "Professional VAT registration and monthly filing services for Kenyan SMEs. Flat-fee pricing, eTIMS-compliant, M-PESA accepted, WhatsApp support. KRA-registered tax agents.",
+    "Professional VAT registration and monthly filing services for Kenyan SMEs. Flat-fee pricing, eTIMS-compliant, M-PESA accepted, WhatsApp support. Publishes Kenya's most-cited practical VAT reference library, calculators and open tax datasets.",
   email: "info@smartvatkenya.co.ke",
   telephone: "+254705467108",
   url: "https://smartvatkenya.co.ke",
@@ -81,24 +92,40 @@ const organizationSchema = {
     caption: "Smart VAT Kenya Logo",
   },
   image: "https://smartvatkenya.co.ke/og-image.png",
+  slogan: "Kenya VAT, handled. Registered, filed, compliant — by the 17th.",
+  // Identity links ONLY (pages about this entity). Once the Wikidata item is
+  // live, add it here — see docs/backlink-playbook.md (Wikidata section).
   sameAs: [
-    "https://www.kra.go.ke",
-    "https://itax.kra.go.ke",
-    "https://etims.kra.go.ke",
-    "https://www.gazettes.africa/kenya-gazette",
     "https://www.linkedin.com/company/smart-vat-kenya",
     "https://www.twitter.com/smartvatkenya",
     "https://www.facebook.com/smartvatkenya",
   ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+254705467108",
-    email: "info@smartvatkenya.co.ke",
-    contactType: "customer service",
-    availableLanguage: ["English", "Swahili"],
-    areaServed: "KE",
-    hoursAvailable: "Mo-Fr 08:00-18:00",
-  },
+  // Primary-source relationships (instead of broken sameAs): what we interpret.
+  subjectOf: [
+    "https://smartvatkenya.co.ke/sources/",
+    "https://smartvatkenya.co.ke/statistics/",
+  ],
+  publishingPrinciples: "https://smartvatkenya.co.ke/about/editorial-policy/",
+  knowsAbout: [
+    "Kenya VAT Registration",
+    "KRA VAT Filing",
+    "Kenya eTIMS",
+    "KRA Penalty Waiver",
+    "Tax Compliance Certificate",
+    "VAT Compliance Kenya",
+    "Kenya Tax Procedures Act",
+    "Kenya VAT Act",
+    "Kenya Finance Act",
+    "VAT refunds Kenya",
+    "Turnover Tax Kenya",
+    "Digital service tax Kenya",
+  ],
+  knowsLanguage: ["English", "Swahili"],
+  areaServed: { "@type": "Country", name: "Kenya" },
+  priceRange: "KES 3,500 - KES 5,000",
+  currenciesAccepted: "KES",
+  paymentAccepted: "M-PESA, Bank Transfer",
+  foundingDate: "2024",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Pioneer House, Moi Avenue",
@@ -113,22 +140,15 @@ const organizationSchema = {
     longitude: 36.8219,
   },
   hasMap: "https://maps.google.com/?q=Pioneer+House+Moi+Avenue+Nairobi",
-  knowsAbout: [
-    "Kenya VAT Registration",
-    "KRA VAT Filing",
-    "eTIMS Onboarding",
-    "KRA Penalty Waiver",
-    "Tax Compliance Certificate",
-    "eTIMS Onboarding",
-    "VAT Compliance Kenya",
-  ],
-  knowsLanguage: ["English", "Swahili"],
-  areaServed: "KE",
-  priceRange: "KES 3,500 - KES 5,000",
-  currenciesAccepted: "KES",
-  paymentAccepted: "M-PESA, Bank Transfer",
-  foundingDate: "2024",
-  numberOfEmployees: "10",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+254705467108",
+    email: "info@smartvatkenya.co.ke",
+    contactType: "customer service",
+    availableLanguage: ["English", "Swahili"],
+    areaServed: "KE",
+    hoursAvailable: "Mo-Fr 08:00-18:00",
+  },
   founder: {
     "@type": "Person",
     "@id": "https://smartvatkenya.co.ke/#founder",
@@ -141,32 +161,18 @@ const organizationSchema = {
     worksFor: { "@id": "https://smartvatkenya.co.ke/#organization" },
     knowsAbout: ["Kenya VAT Law", "KRA eTIMS", "Income Tax Act", "Tax Procedures Act"],
   },
-  alumniOf: {
-    "@type": "EducationalOrganization",
-    name: "Kenya School of Revenue Administration (KESRA)",
-  },
-  award: "KRA Registered Tax Agent",
-memberOf: {
-    "@type": "Organization",
-    name: "Institute of Certified Public Accountants of Kenya (ICPAK)",
-  },
   "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://smartvatkenya.co.ke/tools#app",
-      name: "Free Kenya VAT Calculator 2026",
-      applicationCategory: "FinanceApplication",
-      operatingSystem: "Any",
-      description:
-        "Calculate Kenya VAT at 16% standard rate, zero-rated (0%) or exempt. Includes KRA late-filing penalty estimator and 'Am I Required?' VAT registration check.",
-      url: "https://smartvatkenya.co.ke/tools",
-    },
     {
       "@type": "WebSite",
       "@id": "https://smartvatkenya.co.ke/#website",
       url: "https://smartvatkenya.co.ke",
       name: "Smart VAT Kenya",
-      publisher: { "@id": "https://smartvatkenya.co.ke/#business" },
+      alternateName: "SmartVAT Kenya",
+      description:
+        "Practical Kenya VAT and KRA compliance guides, calculators, statistics and filing services for Kenyan SMEs.",
+      publisher: { "@id": "https://smartvatkenya.co.ke/#organization" },
+      inLanguage: "en-KE",
+      copyrightHolder: { "@id": "https://smartvatkenya.co.ke/#organization" },
       potentialAction: {
         "@type": "SearchAction",
         target: {
@@ -177,12 +183,22 @@ memberOf: {
       },
     },
     {
+      "@type": "WebPage",
+      "@id": "https://smartvatkenya.co.ke/sources/#law-library",
+      url: "https://smartvatkenya.co.ke/sources/",
+      name: "Kenya Tax Law Library — Primary Sources Behind Every SmartVAT Answer",
+      isPartOf: { "@id": "https://smartvatkenya.co.ke/#website" },
+      about: { "@id": "https://smartvatkenya.co.ke/#organization" },
+      description:
+        "Every SmartVAT claim mapped to the section of the VAT Act, Tax Procedures Act, Finance Act or KRA regulation it comes from.",
+    },
+    {
       "@type": "Service",
       "@id": "https://smartvatkenya.co.ke/services#vat-filing-service",
       name: "Monthly VAT Filing Service",
       description:
         "Monthly iTax VAT return filing before the 20th KRA deadline. We file on the 17th. Includes deadline reminders and M-PESA payment guidance.",
-      provider: { "@id": "https://smartvatkenya.co.ke/#business" },
+      provider: { "@id": "https://smartvatkenya.co.ke/#organization" },
       areaServed: { "@type": "Country", name: "Kenya" },
       serviceType: "VAT Filing",
     },
@@ -193,7 +209,7 @@ memberOf: {
       serviceType: "VAT Registration",
       description:
         "Complete VAT registration via KRA iTax portal. Includes profile update, VAT Form 1, PIN generation, eTIMS onboarding guidance, and taxpayer education.",
-      provider: { "@id": "https://smartvatkenya.co.ke/#business" },
+      provider: { "@id": "https://smartvatkenya.co.ke/#organization" },
       areaServed: { "@type": "Country", name: "Kenya" },
     },
     {
@@ -203,57 +219,22 @@ memberOf: {
       serviceType: "VAT Filing",
       description:
         "Monthly iTax VAT return filing before the 20th KRA deadline. We file on the 17th. Avoids KES 10,000 late-filing penalty.",
-      provider: { "@id": "https://smartvatkenya.co.ke/#business" },
+      provider: { "@id": "https://smartvatkenya.co.ke/#organization" },
       areaServed: { "@type": "Country", name: "Kenya" },
     },
   ],
 };
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Review",
-      "@id": "https://smartvatkenya.co.ke/#reviews",
-      itemReviewed: {
-        "@type": "Service",
-        "@id": "https://smartvatkenya.co.ke/services#registration",
-        name: "VAT Registration Kenya",
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "4.9",
-        bestRating: "5",
-        worstRating: "1",
-      },
-      author: {
-        "@type": "Person",
-        name: "Verified Client",
-      },
-      datePublished: "2026-01-15",
-      reviewBody: "Smart VAT Kenya handled my VAT registration seamlessly. Got my PIN in 2 days flat. Professional, transparent pricing, no hidden fees.",
-    },
-    {
-      "@type": "AggregateRating",
-      "@id": "https://smartvatkenya.co.ke/#aggregate-rating",
-      itemReviewed: {
-        "@type": "Organization",
-        "@id": "https://smartvatkenya.co.ke/#organization",
-      },
-      ratingValue: "4.9",
-      reviewCount: "127",
-      bestRating: "5",
-      worstRating: "1",
-    },
-  ],
-};
 
+// Author entity — real, reviewable editorial accountability.
 const authorSchema = {
   "@context": "https://schema.org",
-  "@type": "Person",
+  "@type": "Organization",
   "@id": "https://smartvatkenya.co.ke/#author",
-  name: "Smart VAT Kenya Content Team",
+  name: "Smart VAT Kenya Editorial Team",
+  url: "https://smartvatkenya.co.ke/about/editorial-policy/",
   worksFor: { "@id": "https://smartvatkenya.co.ke/#organization" },
-  jobTitle: "Senior Tax Compliance Writer",
+  description:
+    "Kenya tax content editorial team. Every guide is verified against the VAT Act (Cap. 476), the Tax Procedures Act (Cap. 469), the current Finance Act and KRA official guidance before publication, and re-verified each Finance Act season. Editorial standards and corrections policy: /about/editorial-policy/.",
   knowsAbout: [
     "Kenya VAT Law",
     "KRA eTIMS",
@@ -262,34 +243,30 @@ const authorSchema = {
     "VAT Compliance",
     "eTIMS Onboarding",
   ],
-  description: "Senior tax compliance writer specializing in Kenya VAT law, KRA eTIMS compliance, and digital tax administration. Content reviewed by certified tax experts.",
   knowsLanguage: ["English", "Swahili"],
-  url: "https://smartvatkenya.co.ke",
-  sameAs: [
-    "https://www.linkedin.com/company/smart-vat-kenya",
-  ],
+  parentOrganization: { "@id": "https://smartvatkenya.co.ke/#organization" },
 };
 
+// Repurpose the old citation block to point at the law library hub.
 const citationSchema = {
   "@context": "https://schema.org",
-  "@type": "ScholarlyArticle",
-  "@id": "https://smartvatkenya.co.ke/resources/citations",
-  name: "Kenya Tax Law Citations & References",
-  description: "Official citations and references for Kenya tax law, KRA regulations, Finance Acts, and eTIMS regulations referenced across Smart VAT Kenya guides.",
+  "@type": "WebPage",
+  "@id": "https://smartvatkenya.co.ke/sources/#law-library",
+  url: "https://smartvatkenya.co.ke/sources/",
+  name: "Kenya Tax Law Library & Official Sources",
+  description:
+    "Primary sources for every claim on Smart VAT Kenya: VAT Act (Cap. 476), Tax Procedures Act (Cap. 469), Finance Acts 2024-2026, eTIMS Regulations, VAT (Digital Marketplace) Regulations 2023, KRA practice notes and Kenya Gazette notices.",
+  isPartOf: { "@id": "https://smartvatkenya.co.ke/#website" },
   publisher: { "@id": "https://smartvatkenya.co.ke/#organization" },
-  author: { "@id": "https://smartvatkenya.co.ke/#author" },
-  citation: [
-    "Kenya Income Tax Act (Cap. 470)",
-    "Kenya Value Added Tax Act, 2013 (No. 47 of 2013)",
-    "Tax Procedures Act, 2015 (No. 29 of 2015)",
-    "Finance Act 2024",
-    "Finance Act 2025",
-    "Finance Act 2026",
+  about: [
+    "Kenya Value Added Tax Act, 2013 (Cap. 476)",
+    "Kenya Tax Procedures Act, 2015 (Cap. 469)",
+    "Kenya Finance Act 2024",
+    "Kenya Finance Act 2025",
+    "Kenya Finance Act 2026",
     "VAT (Electronic, Internet and Digital Marketplace Supply) Regulations, 2023",
-    "KRA eTIMS Regulations 2024",
-    "KRA Tax Amnesty Regulations 2026",
-    "Kenya Gazette Notices on VAT and eTIMS",
-    "KRA Practice Notes on VAT and eTIMS",
+    "KRA eTIMS Regulations",
+    "KRA Tax Procedures (Tax Amnesty) Regulations 2026",
   ],
 };
 ---
@@ -355,6 +332,7 @@ const citationSchema = {
   <!-- Hreflang (self-referencing per page; single-locale site) -->
   <link rel="alternate" hreflang="en-KE" href={pageUrl} />
   <link rel="alternate" hreflang="x-default" href={pageUrl} />
+  <link rel="alternate" type="application/rss+xml" title="SmartVAT Kenya — Kenya VAT & KRA Compliance" href={`${SITE_URL}/rss.xml`} />
 
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -424,7 +402,6 @@ const citationSchema = {
 
   <!-- Schema.org -->
   <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
-  <script type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(authorSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(citationSchema)} />
   {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}

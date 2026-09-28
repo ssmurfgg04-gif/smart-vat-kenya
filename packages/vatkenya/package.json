@@ -1,0 +1,44 @@
+{
+  "name": "vatkenya",
+  "version": "1.0.0",
+  "description": "Kenya VAT & KRA tax calculations as a dependency: 16% VAT add/extract, zero-rated/exempt handling, late-filing & late-payment penalties, eTIMS penalties, filing deadlines. Zero dependencies, fully typed, MIT. Maintained by SmartVAT Kenya (smartvatkenya.co.ke).",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "kenya",
+    "vat",
+    "kra",
+    "etims",
+    "itax",
+    "tax",
+    "penalty",
+    "calculator",
+    "fintech",
+    "invoicing"
+  ],
+  "author": "SmartVAT Kenya <info@smartvatkenya.co.ke> (https://smartvatkenya.co.ke)",
+  "license": "MIT",
+  "homepage": "https://smartvatkenya.co.ke/open-source/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssmurfgg04-gif/smart-vat-kenya.git",
+    "directory": "packages/vatkenya"
+  },
+  "bugs": {
+    "url": "https://smartvatkenya.co.ke/resources/faq/"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://smartvatkenya.co.ke/"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "sideEffects": false
+}

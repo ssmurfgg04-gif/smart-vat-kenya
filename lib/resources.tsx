@@ -3,7 +3,7 @@ export interface Resource {
   title: string
 }
 
-const articles: Resource[] = [
+export const articles: Resource[] = [
   { slug: "how-to-register-for-vat-in-kenya", title: "How to Register for VAT in Kenya on iTax" },
   { slug: "cetis-kenya-2027", title: "CETIS Kenya 2027: Pre-Clearance e-Invoicing Explained" },
   { slug: "kra-penalty-for-late-vat-filing", title: "KRA Penalty for Late VAT Filing" },

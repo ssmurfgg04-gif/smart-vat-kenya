@@ -1,0 +1,54 @@
+{
+  "id": "kenya-vat-rate-timeline-2013-2026",
+  "title": "Kenya VAT Rate Changes Timeline 2013-2026",
+  "description": "Every change to Kenya's VAT rates since the VAT Act 2013 commenced: standard rate movements, the petroleum rate, and the 2026 taxation of payment processing services.",
+  "lastUpdated": "2026-09-27",
+  "license": "CC BY 4.0",
+  "attribution": "SmartVAT Kenya (smartvatkenya.co.ke), compiled from the VAT Act 2013 (Cap. 476), Finance Acts 2018-2026, and KRA public guidance.",
+  "url": "https://smartvatkenya.co.ke/data/kenya-vat-rate-timeline-2013-2026.json",
+  "records": [
+    {
+      "date": "2013-09-02",
+      "change": "VAT Act 2013 commences",
+      "standardRate": "16%",
+      "detail": "The VAT Act 2013 replaces the VAT Act (Cap. 481). Standard rate stays at 16%; zero-rated and exempt lists are restructured into the First and Second Schedules.",
+      "legalBasis": "VAT Act 2013 (Cap. 476), s.5 and Third Schedule"
+    },
+    {
+      "date": "2018-09-21",
+      "change": "Petroleum products reduced to 8%",
+      "standardRate": "16%",
+      "detail": "After public opposition to the Finance Act 2018's initial reinstatement of VAT on petroleum at 16%, Parliament reduced the rate on petroleum oils (kerosene, jet fuel and related products) from 16% to 8%.",
+      "legalBasis": "Finance Act 2018, Third Schedule amendment",
+      "correction": "Rate shown as 8% for petroleum products; the general standard rate remained 16%."
+    },
+    {
+      "date": "2020-04-01",
+      "change": "Standard rate reduced to 14% (COVID-19 relief)",
+      "standardRate": "14%",
+      "detail": "The Tax Laws (Amendment) Act 2020 cuts the standard VAT rate from 16% to 14% as pandemic relief, alongside PAYE and turnover tax relief.",
+      "legalBasis": "Tax Laws (Amendment) Act 2020, Third Schedule amendment"
+    },
+    {
+      "date": "2021-01-01",
+      "change": "Standard rate restored to 16%",
+      "standardRate": "16%",
+      "detail": "The 14% relief period ends; the standard rate returns to 16% with effect from 1 January 2021.",
+      "legalBasis": "Finance Act 2020, Third Schedule amendment"
+    },
+    {
+      "date": "2023-09-01",
+      "change": "Petroleum products restored to 16%",
+      "standardRate": "16%",
+      "detail": "The 8% petroleum rate ends; petroleum oils are again taxed at the standard 16% rate.",
+      "legalBasis": "Finance Act 2023, Third Schedule amendment"
+    },
+    {
+      "date": "2026-07-01",
+      "change": "Payment processing services move from exempt to 16%",
+      "standardRate": "16%",
+      "detail": "Payment processing, settlement, merchant acquiring, gateway and aggregation services supplied over a software platform become taxable at the standard rate. Fintechs must charge 16% VAT on these fees from this date.",
+      "legalBasis": "Finance Act 2026, Second Schedule amendment"
+    }
+  ]
+}

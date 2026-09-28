@@ -7,7 +7,11 @@ const htmls = [];
 (function walk(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     const p = path.join(dir, e.name);
-    if (e.isDirectory()) walk(p);
+    if (e.isDirectory()) {
+      // /widget/* embeds carry their own dedicated CSP — out of scope here.
+      if (p === path.join(dist, "widget")) continue;
+      walk(p);
+    }
     else if (e.name.endsWith(".html")) htmls.push(p);
   }
 })(dist);

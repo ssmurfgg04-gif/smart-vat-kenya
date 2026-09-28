@@ -1,0 +1,31 @@
+{
+  "id": "kenya-vat-registration-threshold-history",
+  "title": "Kenya VAT Registration Threshold History",
+  "description": "The mandatory VAT registration threshold under Kenyan law since the VAT Act 2013 commenced, including the reported-but-not-yet-operative KES 8M change. Essential context for the most-asked VAT question in Kenya: KES 5M or 8M?",
+  "lastUpdated": "2026-09-27",
+  "license": "CC BY 4.0",
+  "attribution": "SmartVAT Kenya (smartvatkenya.co.ke), from VAT Act 2013 (Cap. 476) s.14, KRA official guidance, and Finance Act 2025 commentary. Status verified 2026-09-27.",
+  "url": "https://smartvatkenya.co.ke/data/kenya-vat-registration-threshold-history.json",
+  "records": [
+    {
+      "fromDate": "2013-09-02",
+      "toDate": null,
+      "thresholdKES": 5000000,
+      "basis": "VAT Act 2013 (Cap. 476), s.14 — mandatory registration where taxable turnover meets or exceeds KES 5,000,000 in any twelve consecutive months",
+      "status": "operative",
+      "notes": "Measured on a rolling twelve-month window, not calendar year. KRA official guidance continues to apply this figure as of 2026-09-27."
+    },
+    {
+      "fromDate": "2025-10-01",
+      "toDate": null,
+      "thresholdKES": 8000000,
+      "basis": "Reported via Finance Act 2025 commentary and subsequent tax-advisory publications",
+      "status": "reported-not-confirmed",
+      "notes": "An increase to KES 8,000,000 has been widely reported; KRA's operative systems and guidance continued applying KES 5,000,000 at verification date. SmartVAT tracks this on the threshold explainer and updates the status the moment KRA confirms."
+    }
+  ],
+  "caveats": [
+    "Voluntary registration remains available below the mandatory threshold.",
+    "Non-resident suppliers of digital marketplace supplies register regardless of turnover under the 2023 Digital Marketplace Regulations."
+  ]
+}

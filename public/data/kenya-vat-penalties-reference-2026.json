@@ -1,0 +1,67 @@
+{
+  "id": "kenya-vat-penalties-reference-2026",
+  "title": "Kenya VAT & eTIMS Penalties Reference 2026",
+  "description": "Every VAT-related penalty a Kenyan business can face in 2026, with the exact legal basis, the penalty formula and the interest treatment. Compiled from the VAT Act (Cap. 476), the Tax Procedures Act (Cap. 469) and Finance Act 2026 amendments.",
+  "lastUpdated": "2026-09-27",
+  "license": "CC BY 4.0",
+  "attribution": "SmartVAT Kenya (smartvatkenya.co.ke), compiled from VAT Act (Cap. 476), Tax Procedures Act (Cap. 469) as amended by Finance Act 2026, and KRA guidance. Verified 2026-09-27.",
+  "url": "https://smartvatkenya.co.ke/data/kenya-vat-penalties-reference-2026.json",
+  "records": [
+    {
+      "penalty": "Late filing of VAT return",
+      "legalBasis": "VAT Act s.29 read with TPA s.39",
+      "amount": "Higher of KES 10,000 or 5% of the tax due, per month or part-month the return is outstanding",
+      "interest": "1% per month on unpaid tax (compounding)",
+      "notes": "Applies even to nil returns — the KES 10,000 minimum is the floor."
+    },
+    {
+      "penalty": "Late payment of VAT",
+      "legalBasis": "VAT Act s.30 read with TPA s.40",
+      "amount": "5% of the unpaid tax",
+      "interest": "1% per month on unpaid tax from due date to full payment (compounding)",
+      "notes": "Interest compounds monthly until the principal is cleared."
+    },
+    {
+      "penalty": "Failure to register for VAT",
+      "legalBasis": "TPA s.95 (registration duty under VAT Act s.14)",
+      "amount": "KES 100,000, or the tax that would have been due — whichever is higher; KRA practice applies the sanction per month of continuing failure",
+      "interest": "1% per month on assessed tax",
+      "notes": "Backdated assessments can reach 5 years. Registration is the cheapest exit."
+    },
+    {
+      "penalty": "eTIMS non-compliant invoicing / electronic filing & payment",
+      "legalBasis": "TPA s.86 as amended by Finance Act 2026 (in force 1 July 2026); LN 64/2024",
+      "amount": "Higher of 5% of the tax due, KES 100,000 (companies) or KES 10,000 (individuals). Before 1 July 2026: two times the tax due (Finance Act 2023).",
+      "interest": "Not applicable",
+      "notes": "The Finance Act 2026 minimums made enforcement of small taxpayers economically realistic for KRA."
+    },
+    {
+      "penalty": "eTIMS system integration failure (after written notice, turnover above KES 5M)",
+      "legalBasis": "TPA s.59A(5)",
+      "amount": "Up to KES 100,000 for every month or part-month the failure continues",
+      "interest": "Not applicable",
+      "notes": "Applies after KRA's written notice to integrate; system taxpayer obligations differ from registered-person obligations."
+    },
+    {
+      "penalty": "Understatement of tax / evasion",
+      "legalBasis": "Tax Procedures Act offence provisions; VAT Act s.38",
+      "amount": "75% to 200% of the tax evaded, based on KRA's assessment of intent",
+      "interest": "1% per month on unpaid tax",
+      "notes": "Voluntary disclosure before an audit dramatically reduces exposure — see the 2026 amnesty."
+    },
+    {
+      "penalty": "Blocked input VAT (Special Table / disallowed claims)",
+      "legalBasis": "VAT Act s.17 and First/Second Schedule restrictions",
+      "amount": "Full denial of the input VAT claimed on blocked items (entertainment, passenger vehicles, personal-use goods); KRA may extend audit to other periods",
+      "interest": "Not applicable — the principal claim is denied",
+      "notes": "Supplier vetting prevents this: verify supplier VAT status before relying on their invoices."
+    },
+    {
+      "penalty": "Withholding VAT agent default",
+      "legalBasis": "VAT Act s.44",
+      "amount": "5% of the VAT amount not remitted by the agent",
+      "interest": "1% per month on the unremitted amount",
+      "notes": "Withholding agents hold trust funds; non-remittance is treated severely."
+    }
+  ]
+}

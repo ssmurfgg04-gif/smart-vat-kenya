@@ -1,0 +1,123 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+
+const SITE = "https://smartvatkenya.co.ke"
+
+const widgets = [
+  {
+    name: "Kenya VAT Calculator",
+    slug: "vat-calculator",
+    desc: "Add or remove 16% VAT with instant net/VAT/gross breakdown. The most-used Kenya VAT tool on the web, sized to drop into any sidebar or article.",
+    height: 480,
+    width: "100% (min 280px)",
+  },
+  {
+    name: "KRA VAT Penalty Estimator",
+    slug: "penalty-calculator",
+    desc: "Estimates late-filing and late-payment penalties plus compounding interest using the exact TPA formulas. Perfect next to any article about KRA penalties or deadlines.",
+    height: 520,
+    width: "100% (min 280px)",
+  },
+]
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org" as const,
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+    { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE}/tools/` },
+    { "@type": "ListItem", position: 3, name: "Embed Widgets", item: `${SITE}/tools/embed/` },
+  ],
+}
+---
+
+<BaseLayout
+  title="Embed Free Kenya Tax Calculators on Your Site — VAT & Penalty Widgets"
+  description="Free embeddable Kenya VAT calculator and KRA penalty estimator widgets for blogs, accounting firms, news sites and business directories. One line of HTML, no JavaScript dependency, always up to date."
+  path="/tools/embed/"
+  breadcrumbSchema={breadcrumbSchema}
+>
+  <section class="bg-canvas-dark px-6 lg:px-12 py-16">
+    <div class="max-w-3xl mx-auto">
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
+        Embed Widgets
+      </p>
+      <h1 class="font-display text-[clamp(2rem,4.5vw,3.4rem)] font-semibold leading-tight tracking-tight text-canvas mb-6 text-balance">
+        Put Kenya's tax answers on your own site.
+      </h1>
+      <p class="text-[1rem] text-canvas/75 leading-relaxed max-w-[54ch] text-pretty">
+        Running a business blog, an accounting practice site, a newsroom or a business directory?
+        Paste one iframe and your readers get a live Kenya VAT calculator or penalty estimator —
+        maintained by us, always current with the latest Finance Act, no scripts for you to host
+        or update.
+      </p>
+    </div>
+  </section>
+
+  <div class="max-w-6xl mx-auto px-6 lg:px-12 py-16">
+    {widgets.map((w) => (
+      <section class="mb-20" id={w.slug}>
+        <div class="border-l-[3px] border-brand pl-6 mb-8">
+          <p class="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-brand mb-2">Widget</p>
+          <h2 class="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-3">{w.name}</h2>
+          <p class="text-[0.95rem] text-ink-soft leading-relaxed max-w-3xl">{w.desc}</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 items-start">
+          <div>
+            <p class="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-ink-muted mb-3">Paste this into your page</p>
+            <pre class="bg-canvas-dark text-canvas/90 rounded-lg p-5 overflow-x-auto font-mono text-[0.78rem] leading-relaxed">{`<iframe
+  src="${SITE}/widget/${w.slug}.html"
+  style="width:100%;max-width:400px;height:${w.height}px;border:0;border-radius:12px"
+  loading="lazy"
+  title="${w.name} by SmartVAT Kenya">
+</iframe>`}</pre>
+            <p class="font-mono text-[0.62rem] text-ink-muted/75 mt-4 leading-relaxed">
+              Suggested size: {w.width} × {w.height}px · responsive · lazy-loaded · works on any
+              platform that allows iframes (WordPress, Wix, Squarespace, Ghost, custom sites).
+            </p>
+            <div class="mt-6 border border-hairline rounded-lg p-5">
+              <p class="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-ink-muted mb-3">The fine print (there isn't much)</p>
+              <ul class="space-y-2 text-[0.85rem] text-ink-soft leading-relaxed" role="list">
+                <li>· Free for editorial and business use — no permission needed.</li>
+                <li>· Keep the attribution link; it's how the widget stays free.</li>
+                <li>· Figures update automatically when the law changes.</li>
+                <li>· Don't present estimates as official KRA assessments.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <p class="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-ink-muted mb-3">Live preview</p>
+            <div class="border border-hairline rounded-xl p-4 bg-canvas/5">
+              <iframe
+                src={`/widget/${w.slug}.html`}
+                style={`width:100%;max-width:400px;height:${w.height}px;border:0;border-radius:12px`}
+                loading="lazy"
+                title={`${w.name} by SmartVAT Kenya`}
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    ))}
+
+    <section class="border-t border-hairline pt-10 max-w-3xl">
+      <p class="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">Need a custom widget?</p>
+      <div class="space-y-4 text-[0.95rem] text-ink-soft leading-relaxed">
+        <p>
+          We build custom embeds for accounting firms, media houses and business platforms —
+          threshold checkers, eTIMS penalty estimators, deadline countdowns branded for your site.
+          Write to{" "}
+          <a href="mailto:info@smartvatkenya.co.ke" class="text-brand underline underline-offset-2">info@smartvatkenya.co.ke</a>{" "}
+          with your audience and we will tell you honestly whether a widget makes sense for it.
+        </p>
+        <p>
+          The calculation logic behind these widgets is also open-sourced as the{" "}
+          <a href="/open-source/" class="text-brand underline underline-offset-2">vatkenya npm package</a>{" "}
+          (MIT licensed) if you'd rather run the maths in your own stack.
+        </p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

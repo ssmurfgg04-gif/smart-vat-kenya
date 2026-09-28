@@ -1,0 +1,57 @@
+{
+  "id": "kenya-vat-scenarios-1m-transaction",
+  "title": "What VAT Actually Does to a KES 1,000,000 Transaction in Kenya (2026 Scenarios)",
+  "description": "Sixty-second arithmetic for the six most common VAT situations on a KES 1M Kenyan business transaction: standard-rated sale, VAT-inclusive extraction, zero-rated export with input credit, exempt supply cost leakage, and the cost of filing late. Illustrative calculations at the 16% standard rate.",
+  "lastUpdated": "2026-09-27",
+  "license": "CC BY 4.0",
+  "attribution": "SmartVAT Kenya (smartvatkenya.co.ke). Illustrative scenarios computed at the 16% standard rate (VAT Act, Cap. 476) and penalty formulas (TPA ss.39-40). Figures are rounded to the nearest shilling. This is general information, not tax advice on a specific matter.",
+  "url": "https://smartvatkenya.co.ke/data/kenya-vat-scenarios-1m-transaction.json",
+  "records": [
+    {
+      "scenario": "A. Standard-rated sale, VAT exclusive pricing",
+      "calculation": "KES 1,000,000 net + 16% VAT",
+      "vat": 160000,
+      "gross": 1160000,
+      "note": "The invoice shows KES 1,160,000; you remit KES 160,000 less any input VAT."
+    },
+    {
+      "scenario": "B. Standard-rated sale, VAT inclusive pricing",
+      "calculation": "KES 1,000,000 gross ÷ 1.16",
+      "net": 862069,
+      "vat": 137931,
+      "note": "The KRA 'fraction' method. Your true revenue is KES 862,069 — quoting prices VAT-inclusive changes your margin maths."
+    },
+    {
+      "scenario": "C. Zero-rated export with KES 600,000 inputs",
+      "calculation": "Output VAT 0 - input VAT on KES 600,000 (16%)",
+      "vat": 0,
+      "refundPosition": 96000,
+      "note": "Zero-rated ≠ exempt: you can still claim the KES 96,000 input credit and build a refund position (claimable within 12 months)."
+    },
+    {
+      "scenario": "D. Exempt supply with KES 600,000 inputs",
+      "calculation": "No output VAT; input VAT on KES 600,000 is not claimable",
+      "vat": 0,
+      "costLeakage": 96000,
+      "note": "Exempt status turns KES 96,000 of input VAT into a permanent cost — a 9.6% margin hit on this transaction versus the zero-rated case."
+    },
+    {
+      "scenario": "E. Filing scenario B's return 1 month late",
+      "calculation": "Late filing: higher of KES 10,000 or 5% × KES 137,931 = KES 10,000 (minimum applies, per month outstanding); late payment: 5%; interest: 1%/month compounding",
+      "lateFilingPenalty": 10000,
+      "latePaymentPenalty": 6897,
+      "firstMonthInterest": 1379,
+      "totalFirstMonth": 18276,
+      "note": "Owing KES 137,931 and being one month late already costs KES 18,276 before the principal."
+    },
+    {
+      "scenario": "F. Scenario E left unfiled and unpaid for 12 months",
+      "calculation": "Filing penalty 10,000 × 12 months outstanding + late payment 6,897 + 12 months compounding interest at 1%/month on KES 137,931",
+      "lateFilingPenalty": 120000,
+      "latePaymentPenalty": 6897,
+      "interestAccrued": 17493,
+      "totalTwelveMonths": 282321,
+      "note": "Total cost of KES 282,321 on a KES 137,931 bill: twice the tax itself. The 2026 amnesty or a waiver application exists for exactly this hole."
+    }
+  ]
+}

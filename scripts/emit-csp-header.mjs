@@ -38,8 +38,13 @@ const htmls = [];
 (function walk(dir) {
   for (const e of readdirSync(dir, { withFileTypes: true })) {
     const p = join(dir, e.name);
-    if (e.isDirectory()) walk(p);
-    else if (e.name.endsWith(".html")) htmls.push(p);
+    if (e.isDirectory()) {
+      // /widget/* files are standalone embeddable pages with NO meta CSP;
+      // they are governed by the dedicated /widget/* header rule (see
+      // public/_headers) and must not enter the merged-policy check.
+      if (p === join(dist, "widget")) continue;
+      walk(p);
+    } else if (e.name.endsWith(".html")) htmls.push(p);
   }
 })(dist);
 
@@ -160,8 +165,12 @@ const policy = merged.join("; ");
 // append to dist/_headers (the static security headers from public/_headers are already in dist)
 const headersPath = join(dist, "_headers");
 const block = `\n# Content-Security-Policy as HTTP header (moved from per-page <meta> by scripts/emit-csp-header.mjs).\n# A meta CSP cannot enforce frame-ancestors; the header can. Do NOT also re-add a meta CSP:\n# browsers enforce the intersection of both policies.\n/*\n  Content-Security-Policy: ${policy}\n`;
+// /widget/* embed widgets (see /tools/embed/) must stay iframeable by third
+// parties. Appended LAST and with a more specific path than "/*" so it wins
+// under both precedence readings (Netlify: most-specific path wins).
+const widgetBlock = `\n# Embed widgets stay iframeable — overrides the site-wide CSP frame-ancestors\n# for /widget/* only (see public/_headers and /tools/embed/).\n/widget/*\n  Content-Security-Policy: default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; frame-ancestors *; base-uri 'none'; form-action 'none'\n`;
 const existing = existsSync(headersPath) ? readFileSync(headersPath, "utf8") : "";
-writeFileSync(headersPath, existing + (existing.endsWith("\n") || !existing ? "" : "\n") + block);
+writeFileSync(headersPath, existing + (existing.endsWith("\n") || !existing ? "" : "\n") + block + widgetBlock);
 
 console.log(`[emit-csp-header] Checked ${checked} pages; policy directives: ${merged.length}`);
 console.log(`[emit-csp-header] script-src hashes: ${hashTokens.get("script-src")?.size ?? 0}, style-src hashes: ${hashTokens.get("style-src")?.size ?? 0}`);

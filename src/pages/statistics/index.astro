@@ -1,0 +1,276 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+import ratesTimeline from "@/public/data/kenya-vat-rate-timeline-2013-2026.json"
+import penalties from "@/public/data/kenya-vat-penalties-reference-2026.json"
+import eacRates from "@/public/data/eac-vat-standard-rates-2026.json"
+import scenarios from "@/public/data/kenya-vat-scenarios-1m-transaction.json"
+import deadlines from "@/public/data/kenya-vat-filing-deadlines-2026.json"
+import threshold from "@/public/data/kenya-vat-registration-threshold-history.json"
+import etimsTimeline from "@/public/data/kenya-etims-timeline-2021-2027.json"
+
+type Dataset = {
+  id: string
+  title: string
+  description: string
+  lastUpdated: string
+  license: string
+  attribution: string
+  url: string
+  records: Record<string, unknown>[]
+  caveats?: string[]
+}
+
+const datasets: Dataset[] = [
+  ratesTimeline,
+  penalties,
+  scenarios,
+  eacRates,
+  deadlines,
+  threshold,
+  etimsTimeline,
+] as Dataset[]
+
+const LAST_VERIFIED = "2026-09-27"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org" as const,
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Statistics", item: "https://smartvatkenya.co.ke/statistics/" },
+  ],
+}
+
+// One Dataset entity per dataset + an ItemList hub
+const datasetSchemas = datasets.map((d) => ({
+  "@context": "https://schema.org" as const,
+  "@type": "Dataset" as const,
+  name: d.title,
+  description: d.description,
+  url: d.url,
+  sameAs: `https://smartvatkenya.co.ke/statistics/#${d.id}`,
+  license: "https://creativecommons.org/licenses/by/4.0/",
+  creator: { "@id": "https://smartvatkenya.co.ke/#organization" },
+  publisher: { "@id": "https://smartvatkenya.co.ke/#organization" },
+  dateModified: d.lastUpdated,
+  datePublished: "2026-09-27",
+  version: d.lastUpdated,
+  keywords: ["Kenya", "VAT", "KRA", "eTIMS", "tax", "statistics", "open data"],
+  spatialCoverage: { "@type": "Country", name: "Kenya" },
+  temporalCoverage: d.id.includes("2026") ? "2026" : "2013/2027",
+  distribution: {
+    "@type": "DataDownload",
+    encodingFormat: "application/json",
+    contentUrl: d.url,
+  },
+  variableMeasured: Object.keys(d.records[0] ?? {}),
+}))
+
+const hubSchema = {
+  "@context": "https://schema.org" as const,
+  "@type": "CollectionPage" as const,
+  name: "Kenya VAT & Tax Statistics — Open Datasets",
+  url: "https://smartvatkenya.co.ke/statistics/",
+  description:
+    "Open, citable datasets on Kenya's VAT system: rate history, penalties, thresholds, EAC comparison, filing deadlines and eTIMS rollout. CC BY 4.0 — cite and reuse freely.",
+  isPartOf: { "@id": "https://smartvatkenya.co.ke/#website" },
+  publisher: { "@id": "https://smartvatkenya.co.ke/#organization" },
+  dateModified: LAST_VERIFIED,
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: datasets.map((d, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: d.title,
+      url: d.url,
+    })),
+  },
+}
+
+// Column presentation per dataset (hand-tuned for readability)
+const columns: Record<string, { key: string; label: string }[]> = {
+  "kenya-vat-rate-timeline-2013-2026": [
+    { key: "date", label: "Effective" },
+    { key: "change", label: "Change" },
+    { key: "legalBasis", label: "Legal basis" },
+  ],
+  "kenya-vat-penalties-reference-2026": [
+    { key: "penalty", label: "Penalty" },
+    { key: "amount", label: "Amount" },
+    { key: "legalBasis", label: "Legal basis" },
+  ],
+  "kenya-vat-scenarios-1m-transaction": [
+    { key: "scenario", label: "Scenario" },
+    { key: "calculation", label: "Calculation" },
+    { key: "note", label: "What it means" },
+  ],
+  "eac-vat-standard-rates-2026": [
+    { key: "country", label: "Country" },
+    { key: "standardRate", label: "Standard rate" },
+    { key: "notes", label: "Notes" },
+  ],
+  "kenya-vat-filing-deadlines-2026": [
+    { key: "taxPeriod", label: "Tax period" },
+    { key: "dueDate", label: "Due date" },
+    { key: "weekday", label: "Weekday" },
+  ],
+  "kenya-vat-registration-threshold-history": [
+    { key: "fromDate", label: "From" },
+    { key: "thresholdKES", label: "Threshold (KES)" },
+    { key: "status", label: "Status" },
+    { key: "basis", label: "Basis" },
+  ],
+  "kenya-etims-timeline-2021-2027": [
+    { key: "date", label: "Date" },
+    { key: "phase", label: "Phase" },
+    { key: "event", label: "Event" },
+    { key: "status", label: "Status" },
+  ],
+}
+
+function cite(dataset: Dataset) {
+  const apa = `SmartVAT Kenya. (2026). ${dataset.title} [Data set]. smartvatkenya.co.ke. https://smartvatkenya.co.ke/data/${dataset.id}.json`
+  const mla = `"${dataset.title}." SmartVAT Kenya, smartvatkenya.co.ke, ${dataset.lastUpdated}. Accessed ${new Date().toISOString().slice(0, 10)}. https://smartvatkenya.co.ke/data/${dataset.id}.json`
+  const bibtex = `@dataset{${dataset.id.replace(/-/g, "_")},\n  author  = {{SmartVAT Kenya}},\n  title   = {${dataset.title}},\n  year    = {2026},\n  version = {${dataset.lastUpdated}},\n  url     = {https://smartvatkenya.co.ke/data/${dataset.id}.json},\n  license = {CC-BY-4.0}\n}`
+  return { apa, mla, bibtex }
+}
+
+function fmtCell(key: string, v: unknown) {
+  if (v === null || v === undefined) return "—"
+  if (key === "thresholdKES") return `KES ${(v as number).toLocaleString("en-KE")}`
+  return String(v)
+}
+---
+
+<BaseLayout
+  title="Kenya VAT & Tax Statistics — Open, Citable Datasets (2026)"
+  description="Open datasets on Kenya's VAT: rate changes 2013-2026, every penalty with its legal basis, the KES 5M/8M threshold, EAC rate comparison, 2026 filing deadlines and the eTIMS rollout timeline. CC BY 4.0, JSON downloads."
+  path="/statistics/"
+  type="article"
+  publishedTime="2026-09-27"
+  modifiedTime={LAST_VERIFIED}
+  jsonLd={hubSchema}
+  breadcrumbSchema={breadcrumbSchema}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(datasetSchemas)} slot="head" />
+
+  <section class="bg-canvas-dark px-6 lg:px-12 py-16">
+    <div class="max-w-3xl mx-auto">
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
+        Kenya Tax Statistics · Open Data
+      </p>
+      <h1 class="font-display text-[clamp(2rem,4.5vw,3.4rem)] font-semibold leading-tight tracking-tight text-canvas mb-6 text-balance">
+        Numbers about Kenyan tax you can actually cite.
+      </h1>
+      <p class="text-[1rem] text-canvas/75 leading-relaxed max-w-[54ch] text-pretty">
+        Seven open datasets compiled from the VAT Act, the Tax Procedures Act, the Finance Acts
+        and KRA guidance — each with its legal basis attached, machine-readable JSON, and a ready-made
+        citation. Journalists, accountants, researchers, teachers and AI answer engines: take these
+        numbers, attribute them, and they will stay current.
+      </p>
+      <div class="flex flex-wrap gap-x-8 gap-y-2 font-mono text-[0.7rem] text-canvas/50 mt-6">
+        <span>{datasets.length} datasets</span>
+        <span>{datasets.reduce((n, d) => n + d.records.length, 0)} records</span>
+        <span>License: CC BY 4.0</span>
+        <span>Verified {new Date(LAST_VERIFIED).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-6xl mx-auto px-6 lg:px-12 py-16">
+    {datasets.map((d) => {
+      const c = cite(d)
+      const cols = columns[d.id] ?? Object.keys(d.records[0] ?? {}).slice(0, 3).map((k) => ({ key: k, label: k }))
+      return (
+        <section id={d.id} class="mb-20 scroll-mt-24">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-2">
+            <h2 class="font-display text-[clamp(1.4rem,2.6vw,2rem)] font-semibold text-ink tracking-tight max-w-3xl">
+              {d.title}
+            </h2>
+            <a
+              href={`/data/${d.id}.json`}
+              class="shrink-0 font-mono text-[0.68rem] uppercase tracking-[0.12em] text-brand border border-brand/30 rounded-full px-4 py-1.5 hover:bg-brand hover:text-white transition-colors no-underline"
+              download
+            >
+              ↓ JSON
+            </a>
+          </div>
+          <p class="text-[0.92rem] text-ink-soft leading-relaxed max-w-3xl mb-6">{d.description}</p>
+
+          <div class="overflow-x-auto border border-hairline rounded-lg">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-hairline bg-canvas/5">
+                  {cols.map((col) => (
+                    <th class="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-ink-muted py-3 px-4 whitespace-nowrap">
+                      {col.label}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {d.records.map((rec, i) => (
+                  <tr class="border-b border-hairline/60 align-top" key={i}>
+                    {cols.map((col) => (
+                      <td class="py-3.5 px-4 text-[0.86rem] text-ink-soft leading-relaxed min-w-[10ch]">
+                        {fmtCell(col.key, rec[col.key])}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {d.caveats && (
+            <div class="mt-4 border-l-[3px] border-brand pl-4">
+              {d.caveats.map((cv) => (
+                <p class="text-[0.82rem] text-ink-muted leading-relaxed mb-1">{cv}</p>
+              ))}
+            </div>
+          )}
+
+          <details class="mt-5 border border-hairline rounded-lg">
+            <summary class="cursor-pointer font-mono text-[0.68rem] uppercase tracking-[0.14em] text-ink-muted px-5 py-3.5 select-none">
+              How to cite this dataset
+            </summary>
+            <div class="px-5 pb-5 space-y-4">
+              <div>
+                <p class="font-mono text-[0.6rem] uppercase tracking-[0.14em] text-brand mb-1">APA 7</p>
+                <p class="font-mono text-[0.78rem] text-ink-soft leading-relaxed break-all">{c.apa}</p>
+              </div>
+              <div>
+                <p class="font-mono text-[0.6rem] uppercase tracking-[0.14em] text-brand mb-1">MLA 9</p>
+                <p class="font-mono text-[0.78rem] text-ink-soft leading-relaxed break-all">{c.mla}</p>
+              </div>
+              <div>
+                <p class="font-mono text-[0.6rem] uppercase tracking-[0.14em] text-brand mb-1">BibTeX</p>
+                <pre class="font-mono text-[0.78rem] text-ink-soft leading-relaxed whitespace-pre-wrap">{c.bibtex}</pre>
+              </div>
+              <p class="text-[0.78rem] text-ink-muted leading-relaxed">
+                {d.attribution} Direct JSON: <a href={`/data/${d.id}.json`} class="text-brand underline underline-offset-2 break-all">https://smartvatkenya.co.ke/data/{d.id}.json</a>
+              </p>
+            </div>
+          </details>
+        </section>
+      )
+    })}
+
+    <section class="border-t border-hairline pt-10 max-w-3xl">
+      <p class="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">Reuse &amp; corrections</p>
+      <div class="space-y-4 text-[0.95rem] text-ink-soft leading-relaxed">
+        <p>
+          Everything on this page is licensed CC BY 4.0: copy it, build on it, publish it — just
+          attribute SmartVAT Kenya and link the dataset URL. If you spot an error, or you need a
+          dataset we do not yet publish, email{" "}
+          <a href="mailto:info@smartvatkenya.co.ke" class="text-brand underline underline-offset-2">info@smartvatkenya.co.ke</a>{" "}
+          — corrections ship within one working day and are noted in the dataset version history.
+          Our editorial standards are documented in the{" "}
+          <a href="/about/editorial-policy/" class="text-brand underline underline-offset-2">editorial policy</a>,
+          and the legal basis for every figure is in the{" "}
+          <a href="/sources/" class="text-brand underline underline-offset-2">Kenya Tax Law Library</a>.
+        </p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

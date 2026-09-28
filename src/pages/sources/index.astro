@@ -1,0 +1,121 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+import { LAWS, LAST_VERIFIED } from "@/src/lib/sources"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org" as const,
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Sources", item: "https://smartvatkenya.co.ke/sources/" },
+  ],
+}
+
+const hubSchema = {
+  "@context": "https://schema.org" as const,
+  "@type": "CollectionPage" as const,
+  name: "Kenya Tax Law Library — Primary Sources Behind Every SmartVAT Answer",
+  url: "https://smartvatkenya.co.ke/sources/",
+  description:
+    "The statutes, Finance Acts and KRA guidance that every SmartVAT guide, calculator and statistic is built on — with the key provisions quoted and their practical meaning.",
+  isPartOf: { "@id": "https://smartvatkenya.co.ke/#website" },
+  publisher: { "@id": "https://smartvatkenya.co.ke/#organization" },
+  about: LAWS.map((l) => `${l.name}${l.cap ? ` (${l.cap})` : ""}`),
+  dateModified: LAST_VERIFIED,
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: LAWS.map((l, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: `${l.name}${l.cap ? ` (${l.cap})` : ""}`,
+      url: `https://smartvatkenya.co.ke/sources/${l.id}/`,
+    })),
+  },
+}
+
+const categoryLabels: Record<string, string> = {
+  statute: "Statute",
+  regulations: "Regulations",
+  "finance-act": "Finance Act",
+  "kra-guidance": "KRA Guidance",
+  regional: "Regional Law",
+}
+---
+
+<BaseLayout
+  title="Kenya Tax Law Library — The Primary Sources Behind Every SmartVAT Answer"
+  description="VAT Act Cap 476, Tax Procedures Act Cap 469, Finance Acts 2024-2026, eTIMS regulations and KRA practice notes — key provisions quoted, explained and linked to the official text."
+  path="/sources/"
+  type="article"
+  publishedTime="2026-09-27"
+  modifiedTime={LAST_VERIFIED}
+  jsonLd={hubSchema}
+  breadcrumbSchema={breadcrumbSchema}
+>
+  <section class="bg-canvas-dark px-6 lg:px-12 py-16">
+    <div class="max-w-3xl mx-auto">
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
+        Kenya Tax Law Library
+      </p>
+      <h1 class="font-display text-[clamp(2rem,4.5vw,3.4rem)] font-semibold leading-tight tracking-tight text-canvas mb-6 text-balance">
+        Don't take our word for it. Take the law's.
+      </h1>
+      <p class="text-[1rem] text-canvas/75 leading-relaxed max-w-[54ch] text-pretty">
+        Every SmartVAT guide, calculator and statistic traces back to the legislation and KRA
+        guidance collected here. For each source we quote the provisions that actually answer
+        real business questions, translate them into practice, and link you to the official
+        text — so any claim we make can be checked at the fountainhead.
+      </p>
+      <p class="font-mono text-[0.7rem] text-canvas/50 mt-6">
+        Provisions re-verified {new Date(LAST_VERIFIED).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })} · 10 sources · {LAWS.reduce((n, l) => n + l.provisions.length, 0)} key provisions
+      </p>
+    </div>
+  </section>
+
+  <div class="max-w-6xl mx-auto px-6 lg:px-12 py-16">
+    <div class="grid md:grid-cols-2 gap-4">
+      {LAWS.map((law) => (
+        <a
+          href={`/sources/${law.id}/`}
+          class="group border border-hairline rounded-lg p-6 hover:border-ink/15 hover:shadow-sm transition-all no-underline flex flex-col"
+        >
+          <div class="flex items-center gap-2 mb-3">
+            <span class="font-mono text-[0.6rem] uppercase tracking-[0.14em] text-brand border border-brand/25 rounded-full px-2.5 py-0.5">
+              {categoryLabels[law.category] ?? "Source"}
+            </span>
+            {law.cap && (
+              <span class="font-mono text-[0.6rem] uppercase tracking-[0.14em] text-ink-muted">{law.cap}</span>
+            )}
+          </div>
+          <h2 class="font-display text-[1.15rem] font-semibold text-ink group-hover:text-brand transition-colors leading-snug mb-2">
+            {law.name}
+          </h2>
+          <p class="text-[0.88rem] text-ink-soft leading-relaxed mb-4 flex-1">{law.oneLiner}</p>
+          <p class="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-ink-muted/75">
+            {law.provisions.length} key provisions →
+          </p>
+        </a>
+      ))}
+    </div>
+
+    <section class="mt-16 border-l-[3px] border-brand pl-6 max-w-3xl">
+      <p class="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-brand mb-2">How we use these</p>
+      <h2 class="font-display text-[1.6rem] font-semibold text-ink mb-4">The verification chain</h2>
+      <div class="space-y-4 text-[0.95rem] text-ink-soft leading-relaxed">
+        <p>
+          Every article on SmartVAT ends with the sources block listing the exact laws and official
+          pages behind its claims. Our facts file ties every number site-wide — calculators,
+          guides, statistics — to this library, so when a Finance Act changes a figure, one verified
+          update propagates everywhere at once. Where KRA guidance and statute conflict, we publish
+          both readings and say which one KRA's systems currently apply.
+        </p>
+        <p>
+          If you spot a claim anywhere on this site that you cannot trace back to one of these
+          sources, that is a bug — please report it to{" "}
+          <a href="mailto:info@smartvatkenya.co.ke" class="text-brand underline underline-offset-2">info@smartvatkenya.co.ke</a>{" "}
+          and we will fix it within one working day.
+        </p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

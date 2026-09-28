@@ -21,9 +21,18 @@ const footerSections = {
     { href: "/kra-status/", label: "KRA System Status" },
     { href: "/resources/", label: "Knowledge Base" },
     { href: "/resources/faq/", label: "VAT FAQ" },
+    { href: "/sources/", label: "Kenya Tax Law Library" },
+  ],
+  data: [
+    { href: "/statistics/", label: "Kenya Tax Statistics (Open Data)" },
+    { href: "/tax-deadlines/", label: "2026 Deadline Calendar" },
+    { href: "/tools/embed/", label: "Embed Our Calculators" },
+    { href: "/open-source/", label: "Open Source (npm: vatkenya)" },
+    { href: "/forms/", label: "Official KRA Forms Library" },
   ],
   company: [
     { href: "/about/", label: "About Us" },
+    { href: "/about/editorial-policy/", label: "Editorial Policy" },
     { href: "/how-it-works/", label: "How It Works" },
     { href: "/partners/", label: "Partner Program" },
     { href: "/forms/", label: "Free Forms" },
@@ -41,7 +50,7 @@ const trustItems = [
 ---
 <footer class="bg-canvas-dark border-t border-canvas/10">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-16">
-    <div class="grid sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-12">
       <div class="lg:col-span-1">
         <a href="/" class="font-display text-[1.1rem] font-semibold text-canvas tracking-tight mb-4 inline-block hover:text-canvas/80 transition-colors" aria-label="Smart VAT Kenya - Home">
           Smart<span class="text-brand-on-dark">VAT</span>
@@ -103,6 +112,18 @@ const trustItems = [
         </ul>
       </div>
       <div>
+        <p class="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-gray-400 mb-5">Data & Tools for Pros</p>
+        <ul class="space-y-3" role="list">
+          {footerSections.data.map((link) => (
+            <li>
+              <a href={link.href} class="inline-block py-1 text-[0.85rem] text-gray-300 hover:text-canvas transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
         <p class="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-gray-400 mb-5">Company</p>
         <ul class="space-y-3" role="list">
           {footerSections.company.map((link) => (
@@ -119,7 +140,7 @@ const trustItems = [
       <p class="text-[0.75rem] text-gray-400">&copy; {year} Smart VAT Kenya. All rights reserved. · <a href="/privacy-policy/" class="underline underline-offset-2 hover:text-gray-300 transition-colors">Privacy Policy</a></p>
       <p class="text-[0.75rem] text-gray-400">
         VAT information based on{" "}
-        <a href="https://www.kra.go.ke" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-gray-300 transition-colors">KRA guidelines</a>
+        <a href="/sources/" class="underline underline-offset-2 hover:text-gray-300 transition-colors">primary sources</a> · <a href="/rss.xml" class="underline underline-offset-2 hover:text-gray-300 transition-colors">RSS</a> · <a href="https://www.kra.go.ke" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-gray-300 transition-colors">KRA guidelines</a>
         . Official portal:{" "}
         <a href="https://itax.kra.go.ke" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-gray-300 transition-colors">itax.kra.go.ke</a>
       </p>

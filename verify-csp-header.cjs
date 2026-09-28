@@ -23,9 +23,24 @@ if (!fs.existsSync(headersPath)) {
   process.exit(1);
 }
 const headersSrc = fs.readFileSync(headersPath, "utf8");
-const cspLine = headersSrc.split("\n").find((l) => l.trim().startsWith("Content-Security-Policy:"));
+// The file may carry multiple Content-Security-Policy rules: the site-wide
+// /* policy (appended by emit-csp-header.mjs) plus /widget/* embed carve-outs.
+// Netlify resolves duplicates by most-specific path, so the rule that governs
+// normal pages is the LAST one under a bare "/*" selector. Verify against that.
+const lines = headersSrc.split("\n");
+let cspLine = null;
+for (let i = 0; i < lines.length; i++) {
+  if (lines[i].trim() === "/*") {
+    for (let j = i + 1; j < lines.length; j++) {
+      if (lines[j].trim().startsWith("Content-Security-Policy:")) {
+        cspLine = lines[j].trim();
+        break;
+      }
+    }
+  }
+}
 if (!cspLine) {
-  console.error("FAIL: dist/_headers has no Content-Security-Policy header");
+  console.error("FAIL: dist/_headers has no site-wide Content-Security-Policy header under /*");
   process.exit(1);
 }
 const csp = cspLine.trim().replace(/^Content-Security-Policy:\s*/, "");
@@ -43,8 +58,12 @@ const htmls = [];
 (function walk(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     const p = path.join(dir, e.name);
-    if (e.isDirectory()) walk(p);
-    else if (e.name.endsWith(".html")) htmls.push(p);
+    if (e.isDirectory()) {
+      // /widget/* embeds have their own dedicated CSP header rule and inline
+      // scripts — out of scope for the site-wide merged-policy check.
+      if (p === path.join(dist, "widget")) continue;
+      walk(p);
+    } else if (e.name.endsWith(".html")) htmls.push(p);
   }
 })(dist);
 

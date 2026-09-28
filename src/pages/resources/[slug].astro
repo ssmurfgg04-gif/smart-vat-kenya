@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/src/layouts/BaseLayout.astro"
 import { resourceComponents, resourceMeta } from "@/src/components/resources/map"
+import { sourcesForSlug, LAST_VERIFIED } from "@/src/lib/sources"
 
 export async function getStaticPaths() {
   const slugs = Object.keys(resourceComponents)
@@ -10,12 +11,83 @@ export async function getStaticPaths() {
 const { slug } = Astro.params
 const Component = slug ? resourceComponents[slug] : undefined
 const meta = slug ? resourceMeta[slug] : undefined
+const url = `https://smartvatkenya.co.ke/resources/${slug}/`
+
+// PRIMARY-SOURCE ARCHITECTURE: every article carries a machine-readable link
+// to the legislation it interprets (isBasedOn) and a visible "Official
+// sources" block rendered below the article body.
+const src = sourcesForSlug(slug ?? "")
+const isBasedOnSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": url,
+  url,
+  isPartOf: { "@id": "https://smartvatkenya.co.ke/#website" },
+  publisher: { "@id": "https://smartvatkenya.co.ke/#organization" },
+  dateModified: LAST_VERIFIED,
+  isBasedOn: src.laws.map((law) => ({
+    "@type": "Legislation",
+    name: law.name,
+    legislationIdentifier: law.cap ?? law.id,
+    jurisdiction: { "@type": "Country", name: "Kenya" },
+    sameAs: law.officialUrl,
+  })),
+  ...(src.official.length > 0
+    ? { relatedLink: src.official.map((o) => o.url) }
+    : {}),
+}
 ---
 
 <BaseLayout
   title={meta?.title}
   description={meta?.description}
   canonical={meta?.canonical}
+  jsonLd={isBasedOnSchema}
 >
   {Component && <Component />}
+
+  <div class="max-w-4xl mx-auto px-6 mt-16 pb-4">
+    <section aria-label="Official sources" class="border-t border-hairline pt-8">
+      <p class="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
+        Official sources behind this page
+      </p>
+      <p class="text-[0.88rem] text-ink-soft leading-relaxed max-w-3xl mb-5">
+        The claims on this page are traceable to the following primary sources. Section
+        references and practical interpretation live in our{" "}
+        <a href="/sources/" class="text-brand underline underline-offset-2">Kenya Tax Law Library</a>.
+      </p>
+      <ul class="space-y-2.5" role="list">
+        {src.laws.map((law) => (
+          <li class="flex items-baseline gap-3 text-[0.9rem]">
+            <span class="font-mono text-[0.62rem] uppercase tracking-[0.12em] text-brand whitespace-nowrap">
+              {law.cap ?? (law.category === "finance-act" ? "Act" : "Source")}
+            </span>
+            <a
+              href={`/sources/${law.id}/`}
+              class="text-ink-soft hover:text-brand transition-colors underline-offset-2 hover:underline"
+            >
+              {law.name} — key provisions &amp; practical meaning
+            </a>
+          </li>
+        ))}
+        {src.official.map((o) => (
+          <li class="flex items-baseline gap-3 text-[0.9rem]">
+            <span class="font-mono text-[0.62rem] uppercase tracking-[0.12em] text-brand whitespace-nowrap">KRA</span>
+            <a
+              href={o.url}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              class="text-ink-soft hover:text-brand transition-colors underline-offset-2 hover:underline"
+            >
+              {o.label} (official)
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p class="font-mono text-[0.65rem] text-ink-muted/75 mt-5">
+        Content re-verified {new Date(LAST_VERIFIED).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })} ·{" "}
+        <a href="/about/editorial-policy/" class="hover:text-ink-muted transition-colors underline-offset-2 hover:underline">Editorial standards</a>
+      </p>
+    </section>
+  </div>
 </BaseLayout>

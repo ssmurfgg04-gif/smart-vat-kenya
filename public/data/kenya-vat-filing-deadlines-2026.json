@@ -1,0 +1,23 @@
+{
+  "id": "kenya-vat-filing-deadlines-2026",
+  "title": "Kenya VAT Filing Deadlines 2026 (Monthly, from the 20th Rule)",
+  "description": "Every VAT return deadline in calendar 2026 derived from the statutory rule: returns and payment are due by the 20th of the month following the tax period, including nil returns. Weekends noted; the statutory date remains the 20th and the iTax portal accepts filing on weekends.",
+  "lastUpdated": "2026-09-27",
+  "license": "CC BY 4.0",
+  "attribution": "SmartVAT Kenya (smartvatkenya.co.ke). Generated from VAT Act s.29-30 (return and payment by the 20th of the following month).",
+  "url": "https://smartvatkenya.co.ke/data/kenya-vat-filing-deadlines-2026.json",
+  "records": [
+    { "taxPeriod": "January 2026", "dueDate": "2026-02-20", "weekday": "Friday", "weekend": false },
+    { "taxPeriod": "February 2026", "dueDate": "2026-03-20", "weekday": "Friday", "weekend": false },
+    { "taxPeriod": "March 2026", "dueDate": "2026-04-20", "weekday": "Monday", "weekend": false },
+    { "taxPeriod": "April 2026", "dueDate": "2026-05-20", "weekday": "Wednesday", "weekend": false },
+    { "taxPeriod": "May 2026", "dueDate": "2026-06-20", "weekday": "Saturday", "weekend": true },
+    { "taxPeriod": "June 2026", "dueDate": "2026-07-20", "weekday": "Monday", "weekend": false },
+    { "taxPeriod": "July 2026", "dueDate": "2026-08-20", "weekday": "Thursday", "weekend": false },
+    { "taxPeriod": "August 2026", "dueDate": "2026-09-20", "weekday": "Sunday", "weekend": true },
+    { "taxPeriod": "September 2026", "dueDate": "2026-10-20", "weekday": "Tuesday", "weekend": false },
+    { "taxPeriod": "October 2026", "dueDate": "2026-11-20", "weekday": "Friday", "weekend": false },
+    { "taxPeriod": "November 2026", "dueDate": "2026-12-20", "weekday": "Sunday", "weekend": true },
+    { "taxPeriod": "December 2026", "dueDate": "2027-01-20", "weekday": "Wednesday", "weekend": false }
+  ]
+}

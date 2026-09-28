@@ -1,0 +1,60 @@
+{
+  "id": "kenya-etims-timeline-2021-2027",
+  "title": "Kenya eTIMS Rollout Timeline 2021-2027",
+  "description": "The phases of Kenya's electronic Tax Invoice Management System: announcement, rollout, enforcement, the January 2026 return-validation switch, Finance Act 2026 penalty minimums, and the planned CETIS pre-clearance system.",
+  "lastUpdated": "2026-09-27",
+  "license": "CC BY 4.0",
+  "attribution": "SmartVAT Kenya (smartvatkenya.co.ke), compiled from KRA public notices, the Tax Procedures Act (Cap. 469) as amended, and Finance Act 2026.",
+  "url": "https://smartvatkenya.co.ke/data/kenya-etims-timeline-2021-2027.json",
+  "records": [
+    {
+      "date": "2021-12-01",
+      "phase": "Announcement",
+      "event": "KRA announces eTIMS as the successor to the Tax Invoice Management System (TIMS)",
+      "status": "completed",
+      "detail": "eTIMS broadens electronic invoicing beyond ESC-registered devices to web portal, mobile and paypoint variants."
+    },
+    {
+      "date": "2023-05-01",
+      "phase": "Rollout begins",
+      "event": "Nationwide onboarding of VAT-registered taxpayers starts",
+      "status": "completed",
+      "detail": "KRA begins mass onboarding through iTax integration, OSCU/VSCU devices, the online portal and the eTIMS mobile app."
+    },
+    {
+      "date": "2023-08-31",
+      "phase": "Compliance deadline",
+      "event": "Onboarding deadline for VAT-registered taxpayers; enforcement follows from September 2023",
+      "status": "completed",
+      "detail": "The Tax Procedures (Amendment) Act 2023 inserted s.59A into the TPA, making electronic invoicing a statutory duty."
+    },
+    {
+      "date": "2024-01-01",
+      "phase": "Expansion",
+      "event": "Online-portal and mobile eTIMS extended to non-VAT taxpayers for income tax expense substantiation",
+      "status": "completed",
+      "detail": "Businesses below the VAT threshold begin using eTIMS receipts to support deductible expenses."
+    },
+    {
+      "date": "2026-01-01",
+      "phase": "Return validation",
+      "event": "KRA validates VAT returns against eTIMS invoice data",
+      "status": "completed",
+      "detail": "The eTIMS ledger effectively becomes the draft return: invoice-time errors surface at filing time."
+    },
+    {
+      "date": "2026-07-01",
+      "phase": "Penalty minimums",
+      "event": "Finance Act 2026 eTIMS penalty minimums take effect",
+      "status": "completed",
+      "detail": "Electronic filing and payment non-compliance: higher of 5% of tax due, KES 100,000 (companies) or KES 10,000 (individuals) — replacing the prior 2x tax due rule."
+    },
+    {
+      "date": "2027-01-01",
+      "phase": "CETIS procurement",
+      "event": "Comprehensive Electronic Tax Invoicing System (pre-clearance) procurement and build",
+      "status": "planned",
+      "detail": "CETIS validates and signs invoices before a transaction completes — the Uganda EFRIS model. Expected 2027-28."
+    }
+  ]
+}

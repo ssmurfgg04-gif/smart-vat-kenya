@@ -1,0 +1,164 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+import { LAWS, LAST_VERIFIED } from "@/src/lib/sources"
+import { articles } from "@/lib/resources"
+
+export function getStaticPaths() {
+  return LAWS.map((law) => ({ params: { law: law.id }, props: { law } }))
+}
+
+const { law } = Astro.props as { law: (typeof LAWS)[number] }
+
+const titleBySlug: Record<string, string> = Object.fromEntries(articles.map((a) => [a.slug, a.title]))
+const relatedArticles = law.relatedSlugs.map((slug) => ({
+  slug,
+  title: titleBySlug[slug] ?? slug,
+}))
+
+const title = `${law.name}${law.cap ? ` (${law.cap})` : ""} — Key Provisions & Practical Meaning`
+const description = `${law.oneLiner} Key sections quoted with what they mean for Kenyan businesses, verified against the official text.`
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org" as const,
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Sources", item: "https://smartvatkenya.co.ke/sources/" },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: law.shortName,
+      item: `https://smartvatkenya.co.ke/sources/${law.id}/`,
+    },
+  ],
+}
+
+const articleSchema = {
+  "@context": "https://schema.org" as const,
+  "@type": "Article" as const,
+  headline: title,
+  description,
+  author: { "@id": "https://smartvatkenya.co.ke/#author" },
+  publisher: { "@id": "https://smartvatkenya.co.ke/#organization" },
+  datePublished: LAST_VERIFIED,
+  dateModified: LAST_VERIFIED,
+  url: `https://smartvatkenya.co.ke/sources/${law.id}/`,
+  mainEntityOfPage: `https://smartvatkenya.co.ke/sources/${law.id}/`,
+  isBasedOn: [
+    { "@type": "Legislation", name: law.name, sameAs: law.officialUrl },
+  ],
+  about: {
+    "@type": "Legislation",
+    name: law.name,
+    legislationIdentifier: law.cap ?? law.id,
+    jurisdiction: { "@type": "Country", name: "Kenya" },
+  },
+  citation: law.provisions.map((p) => `${law.name}, ${p.section} — ${p.title}`),
+}
+
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path={`/sources/${law.id}/`}
+  type="article"
+  publishedTime={LAST_VERIFIED}
+  modifiedTime={LAST_VERIFIED}
+  articleSchema={articleSchema}
+  breadcrumbSchema={breadcrumbSchema}
+>
+  <section class="bg-canvas-dark px-6 lg:px-12 py-16">
+    <div class="max-w-3xl mx-auto">
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
+        <a href="/sources/" class="hover:text-canvas transition-colors">Kenya Tax Law Library</a>
+        <span class="mx-2 text-canvas/30">/</span>
+        {law.shortName}
+      </p>
+      <h1 class="font-display text-[clamp(1.9rem,4vw,3.1rem)] font-semibold leading-tight tracking-tight text-canvas mb-6 text-balance">
+        {law.name}{law.cap ? ` (${law.cap})` : ""}
+      </h1>
+      <p class="text-[1rem] text-canvas/75 leading-relaxed max-w-[54ch] text-pretty">
+        {law.oneLiner}
+      </p>
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[0.7rem] text-canvas/50 mt-6">
+        <span>Re-verified {new Date(LAST_VERIFIED).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
+        {law.amendedBy && <span>Amended by: {law.amendedBy.join(", ")}</span>}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-6xl mx-auto px-6 lg:px-12 py-16">
+    <section class="mb-16 border-l-[3px] border-brand pl-6 max-w-3xl">
+      <p class="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-brand mb-2">Why this law matters</p>
+      <p class="text-[1rem] text-ink-soft leading-relaxed">{law.whyItMatters}</p>
+      <p class="mt-4 text-[0.9rem] text-ink-soft leading-relaxed">
+        Official text:{" "}
+        <a
+          href={law.officialUrl}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          class="text-brand underline underline-offset-2"
+        >
+          {law.officialLabel}
+        </a>
+      </p>
+    </section>
+
+    <section class="mb-16">
+      <p class="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">The provisions that matter</p>
+      <h2 class="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-8">
+        What it says, and what it means in practice
+      </h2>
+      <div class="space-y-4">
+        {law.provisions.map((p) => (
+          <article class="border border-hairline rounded-lg p-6">
+            <div class="flex flex-wrap items-baseline gap-x-3 mb-3">
+              <span class="font-mono text-[0.75rem] font-semibold text-brand bg-brand/10 rounded px-2 py-0.5">
+                {p.section}
+              </span>
+              <h3 class="font-display text-[1.05rem] font-semibold text-ink leading-snug">{p.title}</h3>
+            </div>
+            <p class="text-[0.92rem] text-ink-soft leading-relaxed mb-4">
+              <span class="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-ink-muted block mb-1">What it says</span>
+              {p.says}
+            </p>
+            <p class="text-[0.92rem] text-ink-soft leading-relaxed">
+              <span class="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-brand block mb-1">What it means for your business</span>
+              {p.means}
+            </p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <p class="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">Applied guides</p>
+      <h2 class="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-8">
+        Where we interpret {law.shortName} for real situations
+      </h2>
+      <div class="grid grid-cols-2 gap-3 max-w-3xl">
+        {relatedArticles.map(({ slug, title }: { slug: string; title: string }) => (
+          <a
+            href={`/resources/${slug}/`}
+            class="group border border-hairline rounded-lg p-4 hover:border-ink/15 hover:shadow-sm transition-all no-underline"
+          >
+            <p class="text-[0.85rem] font-medium text-ink group-hover:text-brand transition-colors leading-snug">
+              {title}
+            </p>
+            <p class="text-[0.72rem] text-ink-muted/75 font-mono uppercase tracking-wider mt-2">Read Guide</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="border-t border-hairline pt-8 max-w-3xl">
+      <p class="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">Citing this page</p>
+      <div class="bg-canvas/5 rounded-lg p-5 font-mono text-[0.8rem] text-ink-soft leading-relaxed overflow-x-auto">
+        "{law.name}{law.cap ? ` (${law.cap})` : ""}: Key Provisions &amp; Practical Meaning."
+        SmartVAT Kenya, smartvatkenya.co.ke, verified {LAST_VERIFIED}.
+        https://smartvatkenya.co.ke/sources/{law.id}/
+      </div>
+    </section>
+  </div>
+</BaseLayout>

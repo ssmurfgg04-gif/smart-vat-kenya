@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && pagefind --site dist --output-subdir _pagefind && node scripts/emit-csp-header.mjs",
+    "build": "astro build && pagefind --site dist --output-subdir _pagefind && node scripts/generate-llms.mjs && node scripts/emit-csp-header.mjs",
     "preview": "astro preview",
     "lint": "eslint .",
     "verify:csp": "node verify-csp.cjs",

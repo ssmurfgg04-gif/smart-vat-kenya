@@ -14,3 +14,12 @@
   #  - Other hosts (local preview, Vercel): the <meta> CSP stays and covers the
   #    site. Never serve BOTH the meta and a different header policy — browsers
   #    enforce their intersection.
+
+# Embed widgets (see /tools/embed/): deliberately iframeable by third-party
+# sites — that is the entire point of the widget program. Netlify applies the
+# rule with the more specific path for the same header, so this overrides the
+# site-wide CSP's frame-ancestors 'none' for /widget/* only. X-Frame-Options
+# is IGNORED by modern browsers whenever a CSP frame-ancestors is present.
+/widget/*
+  Content-Security-Policy: default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; frame-ancestors *; base-uri 'none'; form-action 'none'
+

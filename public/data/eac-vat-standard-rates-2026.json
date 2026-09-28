@@ -1,0 +1,16 @@
+{
+  "id": "eac-vat-standard-rates-2026",
+  "title": "VAT Standard Rates Across the East African Community, 2026",
+  "description": "Standard VAT rates across EAC member states as of 2026. Kenya maintains the lowest standard rate in the community at 16%, versus 18% in Uganda, Tanzania, Rwanda and Burundi.",
+  "lastUpdated": "2026-09-27",
+  "license": "CC BY 4.0",
+  "attribution": "SmartVAT Kenya (smartvatkenya.co.ke), compiled from member-state revenue authority publications and EAC documentation.",
+  "url": "https://smartvatkenya.co.ke/data/eac-vat-standard-rates-2026.json",
+  "records": [
+    { "country": "Kenya", "standardRate": "16%", "notes": "Lowest in the EAC. Zero-rated and exempt lists are extensive (VAT Act First and Second Schedules)." },
+    { "country": "Uganda", "standardRate": "18%", "notes": "URA administration; e-invoicing via EFRIS since 2021 — the cautionary benchmark for Kenya's CETIS plans." },
+    { "country": "Tanzania", "standardRate": "18%", "notes": "TRA administration; electronic fiscal devices mandated for registered suppliers." },
+    { "country": "Rwanda", "standardRate": "18%", "notes": "RRA administration; EBM e-invoicing required." },
+    { "country": "Burundi", "standardRate": "18%", "notes": "OBR administration." }
+  ]
+}

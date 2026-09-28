@@ -1,0 +1,108 @@
+---
+import BaseLayout from "@/src/layouts/BaseLayout.astro"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org" as const,
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://smartvatkenya.co.ke" },
+    { "@type": "ListItem", position: 2, name: "Open Source", item: "https://smartvatkenya.co.ke/open-source/" },
+  ],
+}
+
+const softwareSchema = {
+  "@context": "https://schema.org" as const,
+  "@type": "SoftwareSourceCode" as const,
+  name: "vatkenya",
+  description:
+    "Kenya VAT & KRA tax calculations as a zero-dependency MIT library: 16% VAT arithmetic, late-filing and late-payment penalties, eTIMS penalties, filing deadlines. Maintained by SmartVAT Kenya.",
+  codeRepository: "https://github.com/ssmurfgg04-gif/smart-vat-kenya",
+  programmingLanguage: "TypeScript",
+  license: "https://opensource.org/licenses/MIT",
+  author: { "@id": "https://smartvatkenya.co.ke/#organization" },
+  runtimePlatform: "Node.js >= 16 / any ES2020 runtime",
+  isAccessibleForFree: true,
+}
+---
+
+<BaseLayout
+  title="vatkenya — Open-Source Kenya Tax Calculations (MIT, npm)"
+  description="The VAT and KRA penalty maths behind SmartVAT Kenya, open-sourced as a zero-dependency TypeScript library. npm install vatkenya — MIT licensed, maintained against every Finance Act."
+  path="/open-source/"
+  jsonLd={softwareSchema}
+  breadcrumbSchema={breadcrumbSchema}
+>
+  <section class="bg-canvas-dark px-6 lg:px-12 py-16">
+    <div class="max-w-3xl mx-auto">
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-canvas/60 mb-6">
+        Open Source
+      </p>
+      <h1 class="font-display text-[clamp(2rem,4.5vw,3.4rem)] font-semibold leading-tight tracking-tight text-canvas mb-6 text-balance">
+        The law belongs to everyone. So does the arithmetic.
+      </h1>
+      <p class="text-[1rem] text-canvas/75 leading-relaxed max-w-[54ch] text-pretty">
+        The calculation engine behind our calculators is published as{" "}
+        <strong>vatkenya</strong> — a zero-dependency, fully typed MIT package covering VAT
+        arithmetic, KRA penalties, eTIMS minimums and filing deadlines. Use it in your own
+        products, audit every line, or file an issue when the law changes.
+      </p>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-6 lg:px-12 py-16">
+    <section class="mb-16">
+      <p class="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-ink-muted mb-3">Install</p>
+      <pre class="bg-canvas-dark text-canvas/90 rounded-lg p-5 overflow-x-auto font-mono text-[0.85rem]">npm install vatkenya</pre>
+
+      <p class="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-ink-muted mt-8 mb-3">Use</p>
+      <pre class="bg-canvas-dark text-canvas/90 rounded-lg p-5 overflow-x-auto font-mono text-[0.8rem] leading-relaxed">{`import { addVat, removeVat, vatPenalty, etimsPenalty, vatDeadline } from "vatkenya"
+
+addVat(1_000_000)          // { net: 1000000, vat: 160000, gross: 1160000 }
+removeVat(1_160_000)       // { net: 1000000, vat: 160000, gross: 1160000 }
+vatPenalty(137_931, 12)    // full penalty + compounding interest breakdown
+etimsPenalty(50_000)       // 100000 — Finance Act 2026 company minimum
+vatDeadline("2026-09-05")  // { periodStart, periodEnd, dueDate: '2026-10-20' }`}</pre>
+    </section>
+
+    <section class="mb-16 border-l-[3px] border-brand pl-6">
+      <p class="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-brand mb-2">Why open-source it</p>
+      <h2 class="font-display text-[1.6rem] font-semibold text-ink mb-4">Correct arithmetic is a public good</h2>
+      <div class="space-y-4 text-[0.95rem] text-ink-soft leading-relaxed">
+        <p>
+          Every Kenyan fintech, ERP and accounting package eventually re-implements the same
+          spreadsheets — and gets the details wrong: flat versus compounding interest, the KES
+          10,000 filing floor, the 2026 eTIMS minimums. Publishing the version we run in
+          production raises the floor for everyone, and makes our own work auditable: if our
+          calculators are wrong, thousands of developers can prove it.
+        </p>
+        <p>
+          The package exports <code class="font-mono text-[0.85rem]">LAW_VERSION</code> — the date
+          the encoded law was last verified. We re-verify after every Finance Act, the same
+          process documented in our{" "}
+          <a href="/about/editorial-policy/" class="text-brand underline underline-offset-2">editorial policy</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid sm:grid-cols-2 gap-4">
+      <a
+        href="https://github.com/ssmurfgg04-gif/smart-vat-kenya/tree/main/packages/vatkenya"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group border border-hairline rounded-lg p-6 hover:border-ink/15 hover:shadow-sm transition-all no-underline"
+      >
+        <p class="font-display text-[1.1rem] font-semibold text-ink group-hover:text-brand transition-colors mb-2">GitHub repository</p>
+        <p class="text-[0.88rem] text-ink-soft leading-relaxed">Read the source, file issues, or open a pull request against the Finance Act season updates.</p>
+      </a>
+      <a
+        href="https://www.npmjs.com/package/vatkenya"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group border border-hairline rounded-lg p-6 hover:border-ink/15 hover:shadow-sm transition-all no-underline"
+      >
+        <p class="font-display text-[1.1rem] font-semibold text-ink group-hover:text-brand transition-colors mb-2">npm package</p>
+        <p class="text-[0.88rem] text-ink-soft leading-relaxed">npm install vatkenya — zero dependencies, ESM + types, works in every modern runtime.</p>
+      </a>
+    </section>
+  </div>
+</BaseLayout>

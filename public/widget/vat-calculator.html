@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-KE">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>Kenya VAT Calculator Widget — SmartVAT Kenya</title>
+<style>
+  :root { --ink:#111827; --muted:#6b7280; --brand:#b45309; --brand-dark:#92400e; --line:#e5e7eb; --bg:#fffdf8; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--ink); padding: 18px; }
+  h1 { font-size: 1rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 4px; }
+  p.sub { font-size: 0.72rem; color: var(--muted); margin-bottom: 14px; line-height: 1.45; }
+  .tabs { display: flex; gap: 6px; margin-bottom: 14px; }
+  .tab { flex: 1; text-align: center; font-size: 0.72rem; font-weight: 600; padding: 7px 4px; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; background: #fff; color: var(--muted); }
+  .tab.active { background: var(--brand); border-color: var(--brand); color: #fff; }
+  label { display: block; font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 5px; }
+  input { width: 100%; font-size: 1.05rem; font-weight: 600; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; outline: none; background: #fff; }
+  input:focus { border-color: var(--brand); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+  .result { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 0; }
+  .row + .row { border-top: 1px dashed var(--line); }
+  .row span { font-size: 0.75rem; color: var(--muted); }
+  .row strong { font-size: 0.95rem; font-variant-numeric: tabular-nums; }
+  .row.total strong { color: var(--brand-dark); font-size: 1.15rem; }
+  .credit { text-align: center; margin-top: 12px; }
+  .credit a { font-size: 0.68rem; color: var(--muted); text-decoration: none; }
+  .credit a:hover { color: var(--brand); text-decoration: underline; }
+  .err { font-size: 0.7rem; color: #b91c1c; margin-top: 6px; display: none; }
+</style>
+</head>
+<body>
+  <h1>Kenya VAT Calculator</h1>
+  <p class="sub">Standard rate 16% (VAT Act, Cap. 476). Verified figures by SmartVAT Kenya.</p>
+
+  <div class="tabs" role="tablist">
+    <div class="tab active" id="tab-add" onclick="setMode('add')" role="tab">Add VAT (16%)</div>
+    <div class="tab" id="tab-remove" onclick="setMode('remove')" role="tab">Remove VAT</div>
+  </div>
+
+  <label for="amount">Amount (KES)</label>
+  <input id="amount" type="text" inputmode="decimal" placeholder="e.g. 100,000" oninput="calc()" />
+  <p class="err" id="err">Enter a positive number.</p>
+
+  <div style="margin-top:14px">
+    <div class="result">
+      <div class="row"><span id="lbl-net">Net amount</span><strong id="r-net">KES 0</strong></div>
+      <div class="row"><span>VAT (16%)</span><strong id="r-vat">KES 0</strong></div>
+      <div class="row total"><span id="lbl-gross">Total incl. VAT</span><strong id="r-gross">KES 0</strong></div>
+    </div>
+  </div>
+
+  <div class="credit">
+    <a href="https://smartvatkenya.co.ke/tools/vat-calculator/" target="_blank" rel="noopener">VAT calculator by SmartVAT Kenya</a>
+  </div>
+
+<script>
+(function () {
+  var mode = "add";
+  window.setMode = function (m) {
+    mode = m;
+    document.getElementById("tab-add").className = "tab" + (m === "add" ? " active" : "");
+    document.getElementById("tab-remove").className = "tab" + (m === "remove" ? " active" : "");
+    calc();
+  };
+  function parse(input) {
+    var n = parseFloat(String(input).replace(/[,\s]/g, ""));
+    return isFinite(n) && n > 0 ? n : null;
+  }
+  function fmt(n) { return "KES " + Math.round(n).toLocaleString("en-KE"); }
+  window.calc = function () {
+    var v = parse(document.getElementById("amount").value);
+    var err = document.getElementById("err");
+    if (v === null) {
+      err.style.display = document.getElementById("amount").value ? "block" : "none";
+      document.getElementById("r-net").textContent = "KES 0";
+      document.getElementById("r-vat").textContent = "KES 0";
+      document.getElementById("r-gross").textContent = "KES 0";
+      return;
+    }
+    err.style.display = "none";
+    var net, vat;
+    if (mode === "add") { net = v; vat = v * 0.16; }
+    else { net = v / 1.16; vat = v - net; }
+    document.getElementById("lbl-net").textContent = mode === "add" ? "Net amount" : "Net amount (extracted)";
+    document.getElementById("lbl-gross").textContent = mode === "add" ? "Total incl. VAT" : "Amount entered (incl. VAT)";
+    document.getElementById("r-net").textContent = fmt(net);
+    document.getElementById("r-vat").textContent = fmt(vat);
+    document.getElementById("r-gross").textContent = fmt(mode === "add" ? net + vat : v);
+  };
+})();
+</script>
+</body>
+</html>
