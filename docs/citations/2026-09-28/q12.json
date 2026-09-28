@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://getrisiti.com",
+    "name": "eTIMS Invoice Rejected? Diagnose and Fix the Failure - Risiti",
+    "snippet": "Sep 14, 2026 — Short answer: Read the exact error and first establish whether KRA accepted the original sale. A validation rejection needs a corrected ... Read more",
+    "host_name": "getrisiti.com",
+    "rank": 0,
+    "date": "Sep 14, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.zoho.com",
+    "name": "eTIMS Troubleshooting Guide | Help Document",
+    "snippet": "Ensure that all items linked to the invoice are pushed from Zoho Books to the eTIMS Taxpayer Portal. · Check if a UQC (Unique Quantity Code) is entered for the ... Read more",
+    "host_name": "www.zoho.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.scribd.com",
+    "name": "Approving eTIMS Invoices via USSD | PDF",
+    "snippet": "It includes a sequence of six steps starting from dialing *222# to selecting the relevant invoice for approval or rejection . Additionally, it mentions that the ... Read more",
+    "host_name": "www.scribd.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  }
+]

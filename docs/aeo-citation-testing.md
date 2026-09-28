@@ -101,7 +101,9 @@ In priority order:
 
 ## 5. Baseline (2026-09-28)
 
-Pre-protocol baseline to beat: not yet measured — first run due next Monday.
-Expectation from the Gemini refusal cited in our AEO audit: error-code queries
-get routed to KRA portals (fine — that's the right answer and we link them
-too), while *interpretation/cost/what-it-means* queries are ours to lose.
+First run complete: **retrieval presence 0/20** (automated retrieval layer;
+engine-UI manual pass pending). Full results, diagnosis and fix list in
+`docs/citation-log.md`. Expectation from the Gemini refusal cited in our AEO
+audit held: official portals sit in top-5 on 9/20 queries, while 6 of 20 SERPs
+are thin enough to capture with dedicated pages (eTIMS sync/unlock, VAT rate
+2026, EAC comparison, commercial rent, digital/YouTube).

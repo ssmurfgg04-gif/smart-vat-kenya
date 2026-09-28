@@ -1,0 +1,298 @@
+[
+  {
+    "n": 1,
+    "query": "How do I register for VAT in Kenya?",
+    "cluster": "money",
+    "results": 6,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": true,
+    "top_competitors": [
+      "hilltechconsultants.co.ke",
+      "kra.go.ke",
+      "lexisnexis.co.uk",
+      "zoho.com",
+      "scribd.com"
+    ]
+  },
+  {
+    "n": 2,
+    "query": "How much does VAT registration cost in Kenya?",
+    "cluster": "money",
+    "results": 5,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": false,
+    "top_competitors": [
+      "taxkenya.com",
+      "jumaauditors.co.ke",
+      "dodopayments.com",
+      "legal500.com",
+      "cleartax.co.ke"
+    ]
+  },
+  {
+    "n": 3,
+    "query": "How do I file a VAT return on iTax?",
+    "cluster": "money",
+    "results": 5,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": false,
+    "top_competitors": [
+      "blog.nestict.com",
+      "facebook.com",
+      "spondoo.ke",
+      "scribd.com",
+      "dawan.africa"
+    ]
+  },
+  {
+    "n": 4,
+    "query": "What is the deadline for filing VAT in Kenya?",
+    "cluster": "money",
+    "results": 5,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": false,
+    "top_competitors": [
+      "kenyans.co.ke",
+      "help.tallysolutions.com",
+      "gichuripartners.com",
+      "sovos.com",
+      "vatupdate.com"
+    ]
+  },
+  {
+    "n": 5,
+    "query": "Do I need to register for VAT in Kenya?",
+    "cluster": "money",
+    "results": 6,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": true,
+    "top_competitors": [
+      "kra.go.ke",
+      "taxkenya.com",
+      "jumaauditors.co.ke",
+      "sovos.com",
+      "businessdailyafrica.com"
+    ]
+  },
+  {
+    "n": 6,
+    "query": "What is the penalty for late VAT filing in Kenya?",
+    "cluster": "penalty",
+    "results": 4,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": false,
+    "top_competitors": [
+      "taxkenya.com",
+      "rcmonlinecollege.co.ke",
+      "gichuripartners.com",
+      "cleartax.co.ke"
+    ]
+  },
+  {
+    "n": 7,
+    "query": "How do I apply for a KRA penalty waiver?",
+    "cluster": "penalty",
+    "results": 6,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": true,
+    "top_competitors": [
+      "kra.go.ke",
+      "scribd.com",
+      "kenyans.co.ke",
+      "sheriahub.com",
+      "x.com"
+    ]
+  },
+  {
+    "n": 8,
+    "query": "KRA tax amnesty 2026 explained",
+    "cluster": "penalty",
+    "results": 4,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": false,
+    "top_competitors": [
+      "5050markets.com",
+      "biasharapros.com",
+      "swalanyeti.co.ke",
+      "fatumasvoice.org"
+    ]
+  },
+  {
+    "n": 9,
+    "query": "What happens if I don't file nil returns in Kenya?",
+    "cluster": "penalty",
+    "results": 4,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": true,
+    "top_competitors": [
+      "ke.andersen.com",
+      "kra.go.ke",
+      "sheriaplex.com",
+      "muteamuthuriadvocates.com"
+    ]
+  },
+  {
+    "n": 10,
+    "query": "How do I calculate KRA penalties and interest?",
+    "cluster": "penalty",
+    "results": 2,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": true,
+    "top_competitors": [
+      "kra.go.ke",
+      "taxkenya.com"
+    ]
+  },
+  {
+    "n": 11,
+    "query": "What is eTIMS and who must register?",
+    "cluster": "etims",
+    "results": 4,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": true,
+    "top_competitors": [
+      "kra.go.ke",
+      "adamjeeauditors.com",
+      "veirahq.com",
+      "tallysolutions.com"
+    ]
+  },
+  {
+    "n": 12,
+    "query": "eTIMS invoice rejected \u2014 what do I do?",
+    "cluster": "etims",
+    "results": 3,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": false,
+    "top_competitors": [
+      "getrisiti.com",
+      "zoho.com",
+      "scribd.com"
+    ]
+  },
+  {
+    "n": 13,
+    "query": "eTIMS pending sync fix",
+    "cluster": "etims",
+    "results": 1,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": false,
+    "top_competitors": [
+      "awraops.com"
+    ]
+  },
+  {
+    "n": 14,
+    "query": "How do I unlock my eTIMS account?",
+    "cluster": "etims",
+    "results": 1,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": false,
+    "top_competitors": [
+      "thekenyatimes.com"
+    ]
+  },
+  {
+    "n": 15,
+    "query": "What is the eTIMS penalty in Kenya?",
+    "cluster": "etims",
+    "results": 6,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": true,
+    "top_competitors": [
+      "veirahq.com",
+      "kra.go.ke",
+      "fonoa.com",
+      "adamjeeauditors.com",
+      "getrisiti.com"
+    ]
+  },
+  {
+    "n": 16,
+    "query": "What is the VAT rate in Kenya 2026?",
+    "cluster": "stats",
+    "results": 1,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": false,
+    "top_competitors": [
+      "allafrica.com"
+    ]
+  },
+  {
+    "n": 17,
+    "query": "What is the VAT registration threshold in Kenya?",
+    "cluster": "stats",
+    "results": 7,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": true,
+    "top_competitors": [
+      "avalara.com",
+      "kra.go.ke",
+      "anrok.com",
+      "kenyans.co.ke",
+      "1stopvat.com"
+    ]
+  },
+  {
+    "n": 18,
+    "query": "Compare VAT rates in East Africa",
+    "cluster": "stats",
+    "results": 3,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": false,
+    "top_competitors": [
+      "documents1.worldbank.org",
+      "sharedata.co.za",
+      "ris.org.in"
+    ]
+  },
+  {
+    "n": 19,
+    "query": "VAT on commercial rent in Kenya",
+    "cluster": "stats",
+    "results": 4,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": false,
+    "top_competitors": [
+      "buyrentkenya.com",
+      "kenyapropertycentre.com",
+      "edenheightsrealty.com",
+      "pamgolding.co.za"
+    ]
+  },
+  {
+    "n": 20,
+    "query": "VAT on digital services / YouTube income tax Kenya",
+    "cluster": "stats",
+    "results": 6,
+    "ours_rank": null,
+    "ours_all": [],
+    "official_in_top5": false,
+    "top_competitors": [
+      "circulareconomyalliance.com",
+      "tiktok.com",
+      "cgspace.cgiar.org",
+      "iite.unesco.org",
+      "issuu.com"
+    ]
+  }
+]
