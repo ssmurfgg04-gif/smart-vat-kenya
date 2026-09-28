@@ -82,31 +82,41 @@ sub-causes show up:
   return single-digit relevant results, UGC platforms (Facebook, TikTok,
   Scribd), or outright off-topic pages. **Nobody has built the authoritative
   answer for these.** Whoever publishes clean, structured, statable answers
-  first becomes the retrievable-and-citable source. All six already have
-  matching or near-matching site content to harden.
+  first becomes the retrievable-and-citable source. Post-audit: five of the six
+  queries already had strong pages on the site (see correction below); the
+  sixth — the EAC comparison — was built the same day.
 
 ### Fix list for November's run (one page of actions)
 
-**Content (thin-SERP captures first):**
-1. `eTIMS pending sync fix` (q13): dedicated error-style page — symptom →
-   cause → fix sequence in an ordered list, 40-60 word direct answer under the
-   H1, dateModified bumped. Currently spread across pages; split it out.
-2. `How do I unlock my eTIMS account?` (q14): same treatment; add a
-   step-numbered list (extractable) + "official portal" link to etims.kra.go.ke.
-3. `What is the VAT rate in Kenya 2026?` (q16): ensure the statistics hub
-   opens with the declarative one-liner "The standard VAT rate in Kenya is 16%
-   in 2026" in raw HTML + a rate-timeline table (already in
-   `kenya-vat-rate-timeline-2013-2026.json`).
-4. `Compare VAT rates in East Africa` (q18): promote `eac-vat-standard-rates-2026.json`
-   into a page-level HTML table with one-sentence answer on top. World Bank PDF
-   is beatable on chunk quality.
-5. `VAT on commercial rent in Kenya` (q19): property portals win on irrelevance —
-   a single declarative page ("Yes — commercial rent is standard-rated at 16%;
-   residential rent is exempt, VAT Act Third Schedule") with the provision
-   quoted takes this.
-6. `VAT on digital services / YouTube income tax Kenya` (q20): split into two
-   pages (digital services VAT vs. content-creator income tax); engines can't
-   cite one page for two questions.
+**Correction (2026-09-28, post-audit):** the original fix list assumed several
+target pages were missing or fragmented. Auditing the live HTML showed **5 of
+the 6 thin-SERP queries already have substantial pages** with question-shaped
+H1s, declarative quick answers, tables and FAQ schema
+(`etims-pending-sync`, `etims-account-locked`, `vat-rates-kenya`,
+`vat-commercial-rent-kenya`, `vat-digital-services-kenya` +
+`youtube-5-percent-tax-kenya`). The gap is retrieval rank (authority), not
+existence. The genuinely missing capture was the EAC comparison — now built.
+
+**Content (done 2026-09-28 / next steps):**
+1. ~~`eTIMS pending sync fix` (q13): split into dedicated page~~ — page exists
+   (`/resources/etims-pending-sync/`, 2,087 words, "Quick Answer" BLUF). No
+   action needed; monitor rank.
+2. ~~`How do I unlock my eTIMS account?` (q14)~~ — page exists
+   (`/resources/etims-account-locked/`, 1,964 words, question H1). Monitor.
+3. `What is the VAT rate in Kenya 2026?` (q16) — page exists
+   (`/resources/vat-rates-kenya/`, 3,037 words, 16% declarative opener +
+   rate tables). Monitor.
+4. ~~`Compare VAT rates in East Africa` (q18): missing~~ — **BUILT
+   2026-09-28**: `/resources/vat-rates-east-africa-comparison/` (1,937 words,
+   5-country table from our CC BY dataset, e-invoicing map, destination
+   principle, FAQ, sources block with EAC Customs Management Act). World Bank
+   PDF is beatable on chunk quality.
+5. `VAT on commercial rent in Kenya` (q19) — page exists
+   (`/resources/vat-commercial-rent-kenya/`, 2,162 words, declarative opener).
+   Monitor.
+6. `VAT on digital services / YouTube income tax Kenya` (q20) — both intents
+   already have dedicated pages (`vat-digital-services-kenya` 1,615 words,
+   `youtube-5-percent-tax-kenya` 2,130 words). Monitor.
 
 **Authority/entity (unblocks the contested 14):**
 7. Create the Wikidata item (`scripts/wikidata-create.mjs` or QuickStatements
