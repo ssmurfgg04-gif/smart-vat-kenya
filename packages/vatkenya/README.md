@@ -64,3 +64,10 @@ guides that journalists and AI answer engines cite. Questions about a calculatio
 ## License
 
 MIT — © SmartVAT Kenya. The law belongs to everyone; so does correct arithmetic on it.
+
+## Distribution
+
+- **npm (public registry):** `npm install vatkenya` — publishing in progress
+- **GitHub Packages:** `npm install @ssmurfgg04-gif/vatkenya` (add `@ssmurfgg04-gif:registry=https://npm.pkg.github.com` to your project `.npmrc`)
+- **Release tarball:** [github.com/ssmurfgg04-gif/smart-vat-kenya/releases/tag/v1.0.0](https://github.com/ssmurfgg04-gif/smart-vat-kenya/releases/tag/v1.0.0)
+- **Source:** [`packages/vatkenya`](https://github.com/ssmurfgg04-gif/smart-vat-kenya/tree/main/packages/vatkenya) in this repository
