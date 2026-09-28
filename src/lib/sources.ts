@@ -548,6 +548,7 @@ const A: Record<string, { laws: string[]; official?: { url: string; label: strin
   "input-vat-deduction-guide": { laws: ["vat-act-2013"] },
   "vat-input-guide": { laws: ["vat-act-2013"] },
   "withholding-vat-kenya": { laws: ["vat-act-2013", "tax-procedures-act-2015"] },
+  "vat-rates-east-africa-comparison": { laws: ["vat-act-2013", "eac-customs-management-act", "finance-act-2026"] },
   "vat-commercial-rent-kenya": { laws: ["vat-act-2013", "income-tax-act-cap-470"] },
   "vat-for-landlords-kenya": { laws: ["income-tax-act-cap-470", "vat-act-2013"] },
   "non-resident-rental-income-tax-kenya": { laws: ["income-tax-act-cap-470"] },

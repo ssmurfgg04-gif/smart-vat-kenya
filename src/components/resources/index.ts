@@ -77,6 +77,7 @@ export { default as VatForRestaurantsHospitality } from "./vat-for-restaurants-h
 export { default as VatForStartupsTechBusinesses } from "./vat-for-startups-tech-businesses"
 export { default as VatLabourOutsourcingKenya } from "./vat-labour-outsourcing-kenya"
 export { default as VatRatesKenya } from "./vat-rates-kenya"
+export { default as VatRatesEastAfricaComparison } from "./vat-rates-east-africa-comparison"
 export { default as VatThresholdKenya } from "./vat-threshold-kenya"
 export { default as VatRefundGuideKenya } from "./vat-refund-guide-kenya"
 export { default as VatRegistrationChecklist } from "./vat-registration-checklist"

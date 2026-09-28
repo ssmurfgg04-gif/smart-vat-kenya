@@ -73,6 +73,7 @@ import {
   VatForRestaurantsHospitality,
   VatForStartupsTechBusinesses,
   VatLabourOutsourcingKenya,
+  VatRatesEastAfricaComparison,
   VatRatesKenya,
   VatRefundGuideKenya,
   VatRegistrationChecklist,
@@ -168,6 +169,7 @@ export const resourceComponents: Record<string, React.ComponentType> = {
   "vat-for-restaurants-hospitality": VatForRestaurantsHospitality,
   "vat-for-startups-tech-businesses": VatForStartupsTechBusinesses,
   "vat-labour-outsourcing-kenya": VatLabourOutsourcingKenya,
+  "vat-rates-east-africa-comparison": VatRatesEastAfricaComparison,
   "vat-rates-kenya": VatRatesKenya,
   "vat-threshold-kenya": VatThresholdKenya,
   "vat-refund-guide-kenya": VatRefundGuideKenya,
@@ -492,6 +494,11 @@ export const resourceMeta: Record<string, ResourceMeta> = {
     title: "Kenya VAT Rates 2026: 16% Standard, Zero-Rated & Exempt",
     description: "Kenya's VAT is 16% on most goods. See the complete list of zero-rated and exempt supplies, plus who must register at KES 5M. Updated Aug 2026.",
     canonical: "/resources/vat-rates-kenya/",
+  },
+  "vat-rates-east-africa-comparison": {
+    title: "VAT Rates in East Africa 2026: EAC Comparison, Country by Country",
+    description: "Kenya's 16% is the lowest standard VAT rate in the EAC vs 18% in Uganda, Tanzania, Rwanda and Burundi. Country table, e-invoicing systems, and cross-border VAT rules for Kenyan traders.",
+    canonical: "/resources/vat-rates-east-africa-comparison/",
   },
   "vat-threshold-kenya": {
     title: "VAT Threshold Kenya: KES 5M Rule",
