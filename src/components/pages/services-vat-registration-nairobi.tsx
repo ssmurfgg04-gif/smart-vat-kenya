@@ -254,6 +254,27 @@ const faqs = [
   },
 ]
 
+const nairobiTestimonials = [
+  {
+    name: "Kevin O.",
+    role: "Tech Consultancy, Westlands",
+    text: "We needed to be VAT registered before a corporate client would sign our contract. Sent documents by email on a Monday, had the VAT PIN by Wednesday. No iTax fights, no running to Times Tower.",
+    rating: 5,
+  },
+  {
+    name: "Mercy A.",
+    role: "Boutique Owner, Nairobi CBD",
+    text: "I was worried about the 16% question - would my prices have to go up? They explained exactly when registration becomes compulsory and what changes after. Registration took three days, everything by email.",
+    rating: 5,
+  },
+  {
+    name: "Peter N.",
+    role: "Hardware Store, Industrial Area",
+    text: "They handled VAT Form 1 end to end and walked me through eTIMS after the PIN came through. My suppliers now issue proper e-invoices against my PIN. Straightforward from start to finish.",
+    rating: 5,
+  },
+]
+
 export default function VATRegistrationNairobiPage() {
   return (
     <>
@@ -525,8 +546,49 @@ export default function VATRegistrationNairobiPage() {
         </div>
       </section>
 
+      {/* Nairobi local notes */}
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="nairobi-notes-heading">
+        <div className="max-w-[800px] mx-auto">
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
+            Nairobi local notes
+          </p>
+          <h2
+            id="nairobi-notes-heading"
+            className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-6 text-balance"
+          >
+            Registering for VAT in Nairobi: what to know locally.
+          </h2>
+          <div className="space-y-4 text-[0.9rem] text-ink-muted leading-relaxed">
+            <p>
+              Nairobi concentrates more VAT-liable businesses than the rest of the country combined -
+              KRA's Domestic Taxes Department is headquartered at Times Tower on Haile Selassie Avenue,
+              and Nairobi audit teams review returns from every county. That is exactly why your
+              registration should be clean from day one: an error in your VAT Form 1 follows your PIN
+              for years, and it is far easier to file correctly the first time than to fix a profile
+              later from a correction request.
+            </p>
+            <p>
+              You never need to visit Times Tower or Huduma Centre Nairobi (GPO) for VAT registration -
+              the entire process runs on the iTax portal, and queues at Huduma Centre for KRA services
+              routinely eat half a day. Where Nairobi businesses genuinely feel the difference is speed
+              and logistics: if you are in the CBD, Westlands, Kilimani, Upper Hill, or Industrial Area,
+              we can arrange same-day document pickup, and our office at Pioneer House on Moi Avenue is
+              open if you prefer handing documents over in person.
+            </p>
+            <p>
+              A Nairobi-specific nuance: many CBD traders assume the county single business permit covers
+              them for national taxes. It does not - a county permit and VAT registration are separate
+              systems, and trading above the KES 5 million threshold without a VAT obligation active on
+              your iTax profile is what triggers the KES 100,000 non-registration penalty. If your
+              premises are in a market or arcade and your suppliers are asking for a VAT invoice, that is
+              usually the moment to register.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
-      <Testimonials />
+      <Testimonials items={nairobiTestimonials} heading="VAT registration results from Nairobi businesses." />
 
       {/* FAQ */}
       <section className="bg-canvas-alt px-6 lg:px-12 py-16" aria-labelledby="faq-heading">

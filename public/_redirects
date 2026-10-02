@@ -39,3 +39,30 @@
 /wa/doctor/               https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20I%20just%20used%20the%20KRA%20Doctor%20and%20my%20issue%20is%3A  302!
 /wa/refer                 https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20a%20friend%20referred%20me%20-%20I%20need%20help%20with%3A  302!
 /wa/refer/                https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20a%20friend%20referred%20me%20-%20I%20need%20help%20with%3A  302!
+
+# 301 (2026-10-02): thin/overlapping resource pages consolidated into their
+# comprehensive siblings. One intent = one page (scaled-content cleanup).
+/resources/vat-threshold-explainer  /resources/vat-threshold-kenya/  301!
+/resources/vat-threshold-explainer/  /resources/vat-threshold-kenya/  301!
+/resources/vat-input-guide  /resources/input-vat-deduction-guide/  301!
+/resources/vat-input-guide/  /resources/input-vat-deduction-guide/  301!
+/resources/how-to-create-kra-pin  /resources/how-to-apply-for-kra-pin/  301!
+/resources/how-to-create-kra-pin/  /resources/how-to-apply-for-kra-pin/  301!
+/resources/how-to-register-kra-pin-individual  /resources/how-to-apply-for-kra-pin/  301!
+/resources/how-to-register-kra-pin-individual/  /resources/how-to-apply-for-kra-pin/  301!
+/resources/kra-pin-registration-foreigners  /resources/how-to-apply-for-kra-pin/  301!
+/resources/kra-pin-registration-foreigners/  /resources/how-to-apply-for-kra-pin/  301!
+/resources/vat-deadline-reminders  /tax-deadlines/  301!
+/resources/vat-deadline-reminders/  /tax-deadlines/  301!
+/resources/vat-2027-auto-filled-returns  /resources/vat-auto-populated-return/  301!
+/resources/vat-2027-auto-filled-returns/  /resources/vat-auto-populated-return/  301!
+/resources/etims-penalties-2026  /resources/kra-vat-penalties-reference/  301!
+/resources/etims-penalties-2026/  /resources/kra-vat-penalties-reference/  301!
+/resources/vat-refund-audit-defense  /resources/vat-refund-guide-kenya/  301!
+/resources/vat-refund-audit-defense/  /resources/vat-refund-guide-kenya/  301!
+/resources/vat-for-freelancers-creators  /resources/do-i-need-to-register-for-vat-kenya/  301!
+/resources/vat-for-freelancers-creators/  /resources/do-i-need-to-register-for-vat-kenya/  301!
+/resources/kra-portal-vs-service  /services/vat-registration/  301!
+/resources/kra-portal-vs-service/  /services/vat-registration/  301!
+/resources/kra-health-check  /kra-doctor/  301!
+/resources/kra-health-check/  /kra-doctor/  301!

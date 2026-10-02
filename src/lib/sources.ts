@@ -114,7 +114,6 @@ export const LAWS: Law[] = [
     relatedSlugs: [
       "vat-rates-kenya",
       "vat-threshold-kenya",
-      "vat-threshold-explainer",
       "how-to-calculate-vat-in-kenya",
       "input-vat-deduction-guide",
       "vat-refund-guide-kenya",
@@ -190,7 +189,6 @@ export const LAWS: Law[] = [
       "kra-penalty-for-late-vat-filing",
       "kra-vat-penalties-reference",
       "kra-tax-amnesty-2026",
-      "etims-penalties-2026",
       "etims-penalty-50000-per-month-kenya",
       "what-happens-if-i-don-t-register-for-vat",
       "vat-deregistration-kenya",
@@ -236,9 +234,7 @@ export const LAWS: Law[] = [
     ],
     relatedSlugs: [
       "finance-act-vat-changes-kenya",
-      "etims-penalties-2026",
       "vat-fintech-digital-payments-kenya",
-      "vat-2027-auto-filled-returns",
       "vat-auto-populated-return",
     ],
   },
@@ -274,7 +270,6 @@ export const LAWS: Law[] = [
     ],
     relatedSlugs: [
       "vat-threshold-kenya",
-      "vat-threshold-explainer",
       "cetis-kenya-2027",
       "finance-act-vat-changes-kenya",
     ],
@@ -313,7 +308,6 @@ export const LAWS: Law[] = [
       "significant-economic-presence-tax-kenya",
       "vat-digital-services-kenya",
       "vat-refund-guide-kenya",
-      "vat-refund-audit-defense",
     ],
   },
   {
@@ -423,7 +417,6 @@ export const LAWS: Law[] = [
       "etims-mandate-guide",
       "kra-itax-maintenance-schedule",
       "kra-itax-traffic-update",
-      "vat-deadline-reminders",
     ],
   },
   {
@@ -532,21 +525,16 @@ const A: Record<string, { laws: string[]; official?: { url: string; label: strin
   },
   "vat-registration-checklist": { laws: ["vat-act-2013", "kra-practice-notes"] },
   "vat-threshold-kenya": { laws: ["vat-act-2013", "finance-act-2025"] },
-  "vat-threshold-explainer": { laws: ["vat-act-2013", "finance-act-2025"] },
   "what-happens-if-i-don-t-register-for-vat": { laws: ["tax-procedures-act-2015", "vat-act-2013"] },
   "vat-deregistration-kenya": { laws: ["vat-act-2013", "tax-procedures-act-2015"] },
   "vat-vs-turnover-tax": { laws: ["vat-act-2013", "income-tax-act-cap-470"] },
   "small-taxpayer-regime-kenya": { laws: ["income-tax-act-cap-470", "vat-act-2013"] },
-  "kra-pin-registration-foreigners": { laws: ["tax-procedures-act-2015", "kra-practice-notes"] },
-  "how-to-register-kra-pin-individual": { laws: ["tax-procedures-act-2015", "kra-practice-notes"] },
-  "how-to-create-kra-pin": { laws: ["tax-procedures-act-2015", "kra-practice-notes"] },
   "how-to-apply-for-kra-pin": { laws: ["tax-procedures-act-2015", "kra-practice-notes"] },
 
   // Rates & calculation cluster
   "vat-rates-kenya": { laws: ["vat-act-2013"] },
   "how-to-calculate-vat-in-kenya": { laws: ["vat-act-2013"] },
   "input-vat-deduction-guide": { laws: ["vat-act-2013"] },
-  "vat-input-guide": { laws: ["vat-act-2013"] },
   "withholding-vat-kenya": { laws: ["vat-act-2013", "tax-procedures-act-2015"] },
   "vat-rates-east-africa-comparison": { laws: ["vat-act-2013", "eac-customs-management-act", "finance-act-2026"] },
   "vat-commercial-rent-kenya": { laws: ["vat-act-2013", "income-tax-act-cap-470"] },
@@ -565,12 +553,10 @@ const A: Record<string, { laws: string[]; official?: { url: string; label: strin
     official: [{ url: "https://itax.kra.go.ke/KRA-Portal/", label: "KRA iTax portal" }],
   },
   "vat-auto-populated-return": { laws: ["vat-act-2013", "finance-act-2026"] },
-  "vat-2027-auto-filled-returns": { laws: ["finance-act-2026", "kra-practice-notes"] },
   "vat-return-dispute-auto-populated": { laws: ["tax-procedures-act-2015", "finance-act-2026"] },
   "vat-auto-population-input-tax-credit": { laws: ["vat-act-2013", "finance-act-2026"] },
   "vat-ledger-explained-kenya": { laws: ["tax-procedures-act-2015", "kra-practice-notes"] },
   "nil-returns-tax-amnesty": { laws: ["tax-amnesty-regulations-2026", "tax-procedures-act-2015"] },
-  "vat-deadline-reminders": { laws: ["vat-act-2013", "kra-practice-notes"] },
 
   // Penalties & amnesty cluster
   "kra-penalty-for-late-vat-filing": { laws: ["tax-procedures-act-2015"] },
@@ -580,8 +566,6 @@ const A: Record<string, { laws: string[]; official?: { url: string; label: strin
   "kra-penalty-waiver-kenya": { laws: ["tax-procedures-act-2015", "tax-amnesty-regulations-2026"] },
   "tax-compliance-certificate-kenya": { laws: ["tax-procedures-act-2015", "kra-practice-notes"] },
   "kra-vat-audit-process": { laws: ["tax-procedures-act-2015", "vat-act-2013"] },
-  "vat-refund-audit-defense": { laws: ["vat-act-2013", "tax-procedures-act-2015"] },
-  "etims-penalties-2026": { laws: ["tax-procedures-act-2015", "finance-act-2026"] },
   "etims-penalty-50000-per-month-kenya": { laws: ["tax-procedures-act-2015", "finance-act-2026"] },
 
   // eTIMS cluster
@@ -610,7 +594,6 @@ const A: Record<string, { laws: string[]; official?: { url: string; label: strin
   "consolidated-cargo-benchmark-kenya": { laws: ["eac-customs-management-act", "vat-act-2013"] },
   "icms-export-guide": { laws: ["eac-customs-management-act", "vat-act-2013"] },
   "vat-for-startups-tech-businesses": { laws: ["vat-act-2013", "income-tax-act-cap-470"] },
-  "vat-for-freelancers-creators": { laws: ["income-tax-act-cap-470", "vat-act-2013"] },
   "youtube-5-percent-tax-kenya": { laws: ["income-tax-act-cap-470"] },
   "vat-for-restaurants-hospitality": { laws: ["vat-act-2013"] },
   "vat-for-construction-real-estate-kenya": { laws: ["vat-act-2013"] },
@@ -631,8 +614,6 @@ const A: Record<string, { laws: string[]; official?: { url: string; label: strin
   "kra-itax-maintenance-schedule": { laws: ["kra-practice-notes"] },
   "kra-itax-traffic-update": { laws: ["kra-practice-notes"] },
   "kra-pin-not-working": { laws: ["kra-practice-notes"] },
-  "kra-portal-vs-service": { laws: ["vat-act-2013", "kra-practice-notes"] },
-  "kra-health-check": { laws: ["kra-practice-notes", "tax-procedures-act-2015"] },
   "kra-data-sources": { laws: ["kra-practice-notes"] },
   "mpesa-error-codes": { laws: ["kra-practice-notes"] },
   "safaricom-not-working": { laws: ["kra-practice-notes"] },

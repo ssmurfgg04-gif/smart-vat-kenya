@@ -137,3 +137,150 @@
   to = "https://wa.me/254705467108?text=Hi%20Smart%20VAT%20Kenya%2C%20a%20friend%20referred%20me%20-%20I%20need%20help%20with%3A"
   status = 302
   force = true
+
+# 301 (2026-10-02): thin/overlapping resource pages consolidated into their
+# comprehensive siblings. One intent = one page (scaled-content cleanup).
+[[redirects]]
+  from = "/resources/vat-threshold-explainer"
+  to = "/resources/vat-threshold-kenya/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/vat-threshold-explainer/"
+  to = "/resources/vat-threshold-kenya/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/vat-input-guide"
+  to = "/resources/input-vat-deduction-guide/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/vat-input-guide/"
+  to = "/resources/input-vat-deduction-guide/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/how-to-create-kra-pin"
+  to = "/resources/how-to-apply-for-kra-pin/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/how-to-create-kra-pin/"
+  to = "/resources/how-to-apply-for-kra-pin/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/how-to-register-kra-pin-individual"
+  to = "/resources/how-to-apply-for-kra-pin/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/how-to-register-kra-pin-individual/"
+  to = "/resources/how-to-apply-for-kra-pin/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/kra-pin-registration-foreigners"
+  to = "/resources/how-to-apply-for-kra-pin/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/kra-pin-registration-foreigners/"
+  to = "/resources/how-to-apply-for-kra-pin/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/vat-deadline-reminders"
+  to = "/tax-deadlines/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/vat-deadline-reminders/"
+  to = "/tax-deadlines/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/vat-2027-auto-filled-returns"
+  to = "/resources/vat-auto-populated-return/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/vat-2027-auto-filled-returns/"
+  to = "/resources/vat-auto-populated-return/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/etims-penalties-2026"
+  to = "/resources/kra-vat-penalties-reference/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/etims-penalties-2026/"
+  to = "/resources/kra-vat-penalties-reference/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/vat-refund-audit-defense"
+  to = "/resources/vat-refund-guide-kenya/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/vat-refund-audit-defense/"
+  to = "/resources/vat-refund-guide-kenya/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/vat-for-freelancers-creators"
+  to = "/resources/do-i-need-to-register-for-vat-kenya/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/vat-for-freelancers-creators/"
+  to = "/resources/do-i-need-to-register-for-vat-kenya/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/kra-portal-vs-service"
+  to = "/services/vat-registration/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/kra-portal-vs-service/"
+  to = "/services/vat-registration/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/kra-health-check"
+  to = "/kra-doctor/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/kra-health-check/"
+  to = "/kra-doctor/"
+  status = 301
+  force = true
+

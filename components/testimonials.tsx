@@ -1,6 +1,13 @@
-import { Star, ChatCircle } from "@phosphor-icons/react/dist/ssr"
+import { Star } from "@phosphor-icons/react/dist/ssr"
 
-const testimonials = [
+export interface TestimonialItem {
+  name: string
+  role: string
+  text: string
+  rating: number
+}
+
+const defaultTestimonials: TestimonialItem[] = [
   {
     name: "Sarah W.",
     role: "Retail Business, Nairobi",
@@ -21,7 +28,15 @@ const testimonials = [
   },
 ]
 
-export function Testimonials() {
+const defaultHeading = "Real results from real penalty waiver clients."
+
+export function Testimonials({
+  items = defaultTestimonials,
+  heading = defaultHeading,
+}: {
+  items?: TestimonialItem[]
+  heading?: string
+}) {
   return (
     <section className="bg-canvas-alt px-6 lg:px-10 py-16" aria-labelledby="testimonials-heading">
       <div className="max-w-[1400px] mx-auto">
@@ -32,10 +47,10 @@ export function Testimonials() {
           id="testimonials-heading"
           className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-10 text-balance"
         >
-          Real results from real penalty waiver clients.
+          {heading}
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-          {testimonials.map((t) => (
+          {items.map((t) => (
             <article key={t.name} className="bg-canvas border border-hairline rounded-lg p-6 flex flex-col">
               <div className="flex gap-0.5 mb-4" aria-label={`${t.rating} out of 5 stars`}>
                 {Array.from({ length: t.rating }).map((_, i) => (

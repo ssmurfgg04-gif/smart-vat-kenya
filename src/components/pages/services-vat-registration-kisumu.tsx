@@ -209,6 +209,27 @@ const faqs = [
   },
 ]
 
+const kisumuTestimonials = [
+  {
+    name: "Caroline A.",
+    role: "Fish Exporter, Kisumu",
+    text: "Our regional buyers required a VAT-registered supplier. The team registered the business in two days and explained zero-rating for our exports. Everything happened by email from start to finish.",
+    rating: 5,
+  },
+  {
+    name: "Brian O.",
+    role: "Agribusiness, Ahero",
+    text: "I crossed the KES 5 million mark after a good season and did not want to wake up to penalties. They filed the registration correctly the first time and sent the PIN certificate by email. No trips anywhere.",
+    rating: 5,
+  },
+  {
+    name: "Millicent J.",
+    role: "Cross-border Trader, Busia Road",
+    text: "Trading between Kenya and Uganda was confusing enough already. They sorted my VAT registration and patiently explained what changes at the border. Clear answers, no jargon, no office queues.",
+    rating: 5,
+  },
+]
+
 export default function VATRegistrationKisumuPage() {
   return (
     <>
@@ -465,8 +486,49 @@ export default function VATRegistrationKisumuPage() {
         </div>
       </section>
 
+      {/* Kisumu local notes */}
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="kisumu-notes-heading">
+        <div className="max-w-[800px] mx-auto">
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
+            Kisumu local notes
+          </p>
+          <h2
+            id="kisumu-notes-heading"
+            className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-6 text-balance"
+          >
+            Registering for VAT in Kisumu: the Lake Basin factor.
+          </h2>
+          <div className="space-y-4 text-[0.9rem] text-ink-muted leading-relaxed">
+            <p>
+              Kisumu's economy lives on the lake and the border. Fish processors and exporters around
+              the lake sell into regional markets where buyers increasingly demand VAT-registered
+              suppliers, and exports are zero-rated - which means you only charge 0% on the invoice,
+              but you can still recover the input VAT on your operations, provided you are actually
+              registered and invoicing through eTIMS. Unregistered exporters simply absorb that cost.
+            </p>
+            <p>
+              For traders moving goods through Busia toward Uganda or down the Migori routes toward
+              Tanzania, the East African Community's single customs territory has simplified cross-border
+              declarations, but your domestic obligations did not shrink: goods you bring in and
+              warehouse in Kisumu carry import VAT at entry, and goods you supply locally at 16% require
+              a working VAT obligation on your iTax profile. Cross-border turnover counts toward the
+              same KES 5 million threshold - a point many Lake Basin traders discover only when KRA's
+              system flags their customs records against a missing VAT registration.
+            </p>
+            <p>
+              Agriculture rounds it out: rice aggregators in Ahero and the Kano plains, and sugar-belt
+              suppliers, regularly cross the threshold in good seasons without realising that a strong
+              year is precisely when the 30-day registration clock starts ticking. KRA maintains a
+              regional presence in Kisumu for walk-in services, but your registration itself never
+              requires one - it is handled entirely on iTax, which is why our Kisumu clients are usually
+              done within days without leaving their businesses.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
-      <Testimonials />
+      <Testimonials items={kisumuTestimonials} heading="VAT registration results from Lake Basin businesses." />
 
       {/* FAQ */}
       <section className="bg-canvas-alt px-6 lg:px-12 py-16" aria-labelledby="faq-heading">

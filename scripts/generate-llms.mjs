@@ -114,19 +114,19 @@ const keyPages = [
   ["vatkenya — Open-Source Kenya Tax Calculations (MIT, npm)", "/open-source/"],
   ["Editorial Policy — How SmartVAT Verifies Every Answer", "/about/editorial-policy/"],
   ["How It Works - VAT Registration in 3 Steps", "/how-it-works/"],
-  ["Free KRA VAT Deadline Reminders — Never Miss the 20th", "/resources/vat-deadline-reminders/"],
+  ["Evergreen KRA Tax Deadlines Calendar", "/tax-deadlines/"],
   ["KRA VAT FAQ — Common Questions Answered 2026", "/resources/faq/"],
 ]
 
 const clusterPages = [
   ["VAT Registration Kenya: Compare All 3 Options (2026)", "/resources/vat-registration-options-kenya/"],
-  ["VAT Threshold Kenya 2026 — KES 5M or 8M? The Real Answer", "/resources/vat-threshold-explainer/"],
+  ["VAT Threshold Kenya 2026 — KES 5M or 8M? The Real Answer", "/resources/vat-threshold-kenya/"],
   ["Kenya VAT Rates 2026: 16% Standard, Zero-Rated & Exempt", "/resources/vat-rates-kenya/"],
   ["How to Calculate 16% VAT in Kenya", "/resources/how-to-calculate-vat-in-kenya/"],
   ["KRA Penalty for Late VAT Filing", "/resources/kra-penalty-for-late-vat-filing/"],
   ["KRA VAT Penalties Kenya 2026: Complete Reference", "/resources/kra-vat-penalties-reference/"],
   ["KRA Tax Amnesty 2026: 100% Penalty Waiver", "/resources/kra-tax-amnesty-2026/"],
-  ["eTIMS Penalties 2026 — Exact Figures From the Law", "/resources/etims-penalties-2026/"],
+  ["eTIMS Penalties Kenya — Facts, Not Circulating Figures", "/resources/etims-penalty-50000-per-month-kenya/"],
   ["eTIMS Kenya Onboarding Guide 2026", "/resources/etims-onboarding-guide/"],
   ["How to File Your VAT Return on KRA iTax", "/resources/how-to-file-vat-return-on-itax/"],
   ["KRA Auto-Populated VAT Return Guide", "/resources/vat-auto-populated-return/"],

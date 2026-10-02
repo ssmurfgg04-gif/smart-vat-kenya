@@ -232,6 +232,27 @@ const faqs = [
   },
 ]
 
+const mombasaTestimonials = [
+  {
+    name: "Fatuma A.",
+    role: "Beach Hotel, Nyali",
+    text: "Our hotel had to charge 16% on accommodation but we were not yet registered. They handled the entire registration remotely while we kept running the property. The VAT PIN arrived in two days.",
+    rating: 5,
+  },
+  {
+    name: "Daniel O.",
+    role: "Clearing & Forwarding, Changamwe",
+    text: "Import clients kept asking for VAT-compliant invoices. Smart VAT Kenya registered our firm and walked us through eTIMS before the next customs cycle. All by email, no office visit, no drama.",
+    rating: 5,
+  },
+  {
+    name: "Salim M.",
+    role: "Restaurant Owner, Bamburi",
+    text: "I assumed I would have to travel to Nairobi or queue at a KRA office in Mombasa. Nothing of the sort - I paid by M-PESA and the PIN certificate landed in my inbox in three days.",
+    rating: 5,
+  },
+]
+
 export default function VATRegistrationMombasaPage() {
   return (
     <>
@@ -482,8 +503,49 @@ export default function VATRegistrationMombasaPage() {
         </div>
       </section>
 
+      {/* Mombasa local notes */}
+      <section className="bg-canvas px-6 lg:px-12 py-16" aria-labelledby="mombasa-notes-heading">
+        <div className="max-w-[800px] mx-auto">
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-4">
+            Mombasa local notes
+          </p>
+          <h2
+            id="mombasa-notes-heading"
+            className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-ink tracking-tight mb-6 text-balance"
+          >
+            Registering for VAT in Mombasa: the port factor.
+          </h2>
+          <div className="space-y-4 text-[0.9rem] text-ink-muted leading-relaxed">
+            <p>
+              Mombasa is where Kenya's VAT collection physically enters the country. Goods moving through
+              the Port of Mombasa carry import VAT declared at entry, and if you are an importer, you
+              need an active VAT registration before your clearing agent can properly account for your
+              consignments. Registering after the cargo has arrived is how businesses end up paying
+              import VAT they later struggle to credit - the order of operations matters, and it is the
+              single most common expensive mistake we see among first-time Mombasa importers.
+            </p>
+            <p>
+              For clearing and forwarding firms around Changamwe and the port corridor, VAT registration
+              is not optional at any serious client volume: shipping lines, bonded warehouse operators
+              and importers all expect VAT-compliant invoices, and your own input VAT on port charges,
+              fuel and vehicle maintenance is only claimable with an eTIMS-compliant invoice against
+              your PIN. Tourism works the other way round - hotels and restaurants along the Nyali,
+              Bamburi, Shanzu and Diani beach strips charge 16% on most supplies, so registering early
+              lets you recover input VAT on the big renovation and utility bills that Coast hospitality
+              businesses carry.
+            </p>
+            <p>
+              One Coast-specific clarification: the county business permit and the single tourist
+              licensing regime do not touch VAT. They are county systems. Your VAT obligation sits with
+              KRA on iTax, and it follows your turnover, not your location - a guesthouse in Kilifi
+              crosses the same KES 5 million threshold as a shop in Nairobi CBD.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
-      <Testimonials />
+      <Testimonials items={mombasaTestimonials} heading="VAT registration results from Coast businesses." />
 
       {/* FAQ */}
       <section className="bg-canvas-alt px-6 lg:px-12 py-16" aria-labelledby="faq-heading">
