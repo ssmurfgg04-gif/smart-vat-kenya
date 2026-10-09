@@ -3,17 +3,16 @@
 # (Astro outputs /resources/foo/index.html -> served at /resources/foo/)
 # These explicit rules are only for pages that are NOT directory-based
 
-# Blog (may be single page, not directory)
+# Blog redirects to the resources hub (blog.astro is shadowed by this rule).
 /blog  /resources/  301!
 /blog/  /resources/  301!
 
-# Explicit non-directory pages
-/forms  /forms/  301!
-/partners  /partners/  301!
-/privacy-policy  /privacy-policy/  301!
-
-# Note: /about, /how-it-works, /tax-amnesty-2026 are directory-based in Astro output (trailingSlash: "always")
-# Netlify natively handles /foo -> /foo/ for directory-based content
+# NOTE (2026-10-09): the former explicit slash rules for /forms, /partners and
+# /privacy-policy were REMOVED. Netlify's `from` path matches both the slash
+# and non-slash variant, so "/forms -> /forms/ !" redirected /forms/ to ITSELF
+# in an infinite 301 loop. GSC reported these sitemap URLs as redirect errors.
+# Netlify natively 301s /foo -> /foo/ for directory-based Astro output
+# (verified live: /about, /how-it-works, /tax-amnesty-2026). No rule needed.
 
 # 301 (2026-09-10): retired stale August 2026 single-month deadline page -> evergreen calendar.
 /resources/kra-vat-filing-deadline-august-2026  /tax-deadlines/  301!

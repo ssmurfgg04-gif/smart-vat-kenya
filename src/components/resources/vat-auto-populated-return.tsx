@@ -62,15 +62,15 @@ const faqSchema = {
       name: "How do I add missing purchases to my auto-populated return?",
       acceptedAnswer: {
         "@type": "Answer" as const,
-        text: "First, contact your supplier and ask them to transmit the eTIMS invoice with your correct KRA PIN. Once they do, the purchase will appear in the CSV file when you download the return the next day. If the supplier cannot or will not transmit, you have two options: (1) declare the purchase manually if you have a valid eTIMS-compliant invoice, or (2) accept that you cannot claim input VAT on that purchase and request your supplier to transmit it in a subsequent period. Purchases transmitted late can be claimed within 6 months of the invoice date.",
+        text: "Ask your supplier to transmit the eTIMS invoice with your correct KRA PIN in the buyer field - once transmitted, the purchase appears in your purchases CSV the next business day. If the filing deadline is near and you hold a valid eTIMS-compliant invoice, add the purchase manually in the return using the supplier's PIN, invoice number, date and VAT amount. Late-transmitted purchases can still be claimed within 6 months of the invoice date.",
       },
     },
     {
       "@type": "Question" as const,
-      name: "What happens if my supplier captured my KRA PIN incorrectly?",
+      name: "What if I already submitted the return and more invoices appear afterwards?",
       acceptedAnswer: {
         "@type": "Answer" as const,
-        text: "If your supplier entered your KRA PIN incorrectly, the invoice will not appear in your auto-populated purchases CSV because KRA matched it against the wrong PIN. Ask your supplier to issue a credit note through eTIMS for the incorrect invoice, then issue a new eTIMS invoice with the correct KRA PIN. Once transmitted, the corrected invoice will appear in your purchases CSV. This is why you should always verify your KRA PIN on every invoice you receive from suppliers.",
+        text: "Late-transmitted invoices do not amend a filed return - they appear in the next tax period's pre-filled data. You claim the late input VAT on a subsequent return within 6 months of the invoice date. If KRA's pre-filled figures on a filed return were actually wrong, the correction path is a Notice of Objection, which is a separate process from routine late transmissions.",
       },
     },
     {
@@ -194,47 +194,42 @@ export default function AutoPopulatedReturnPage() {
               </div>
             </section>
 
-            {/* Section 4 - Missing Purchases */}
+            {/* Section 4 - Missing Purchases (summary only: the full supplier-failure
+                playbook, manual-addition workflow and 6-month rule live on the
+                input-tax-credit guide so the two pages keep distinct intents) */}
             <section id="missing-purchases" aria-labelledby="missing-purchases-h">
               <h2 id="missing-purchases-h" className="font-display text-[1.4rem] font-semibold text-ink mb-5 tracking-tight">
                 Why Are Some Purchases Missing?
               </h2>
               <div className="space-y-4 text-[0.9rem] text-ink-soft leading-[1.75]">
                 <p>
-                  Purchases are missing from your auto-populated return when your supplier has not properly transmitted
-                  their eTIMS invoice with your KRA PIN. Here is what to do:
+                  A purchase appears on the pre-filled return only when a supplier transmits an
+                  eTIMS invoice carrying your KRA PIN in the buyer field. A missing purchase is
+                  therefore almost always a supplier-side issue: not transmitted, transmitted
+                  late, or transmitted against the wrong PIN. The three moves that resolve it:
                 </p>
-                <ol className="space-y-3 list-decimal list-inside">
-                  <li className="text-ink-soft">
-                    <strong className="text-ink">Contact your supplier immediately.</strong> Ask them to check whether
-                    the eTIMS invoice was transmitted successfully and whether your KRA PIN was captured correctly.
-                  </li>
-                  <li className="text-ink-soft">
-                    <strong className="text-ink">Request re-transmission.</strong> If the invoice was not transmitted,
-                    ask the supplier to transmit it. Once transmitted, it will appear in the CSV the next business day.
-                  </li>
-                  <li className="text-ink-soft">
-                    <strong className="text-ink">Add manually if urgent.</strong> If the deadline is approaching and the
-                    supplier has not transmitted, you can add the purchase manually in the return. Keep the eTIMS
-                    invoice as supporting documentation in case of audit.
-                  </li>
-                  <li className="text-ink-soft">
-                    <strong className="text-ink">Claim in a subsequent period.</strong> If transmitted late, the
-                    purchase can be claimed within 6 months from the invoice date under the late transmission rules.
-                  </li>
-                </ol>
-                <div className="border border-amber-200 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-800/40 rounded-lg p-4 flex items-start gap-3 mt-4">
-                  <Warning size={17} weight="fill" className="text-amber-600 shrink-0 mt-0.5" aria-hidden="true" />
-                  <div>
-                    <p className="font-semibold text-amber-800 dark:text-amber-300 text-[0.85rem] mb-1">
-                      Do not claim input VAT without a valid eTIMS invoice
-                    </p>
-                    <p className="text-[0.83rem] text-amber-700 dark:text-amber-400 leading-relaxed">
-                      Even if a supplier verbally confirms they sold to you, you cannot claim input VAT unless a valid
-                      eTIMS invoice was transmitted to KRA with your PIN. Claiming without supporting documentation
-                      risks penalties and rejection during audit.
-                    </p>
-                  </div>
+                <ul className="space-y-2">
+                  {[
+                    "Chase the supplier to transmit (or re-transmit) the invoice with your correct PIN - it lands in your purchases CSV the next business day.",
+                    "If the 20th is near and you hold a valid eTIMS-compliant invoice, add the purchase manually in the return rather than missing the deadline.",
+                    "Late transmissions roll to the next period's CSV and can still be claimed within 6 months of the invoice date.",
+                  ].map((tip) => (
+                    <li key={tip} className="flex gap-3">
+                      <CheckCircle size={14} weight="fill" className="text-brand shrink-0 mt-1.5" aria-hidden="true" />
+                      <span className="text-ink-soft">{tip}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="border border-brand/25 bg-brand-muted rounded-lg p-4 flex items-start gap-3">
+                  <Info size={16} weight="fill" className="text-brand shrink-0 mt-0.5" aria-hidden="true" />
+                  <p className="text-[0.83rem] text-ink-soft leading-relaxed">
+                    <strong className="text-ink">Full playbook on the credit side:</strong> the four
+                    supplier failure modes, the step-by-step manual addition in iTax and the
+                    fraud-prevention rules are covered in{" "}
+                    <a href="/resources/vat-auto-population-input-tax-credit/" className="text-brand underline underline-offset-2 hover:text-brand-hover">Auto-Populated Input VAT - Claim Your Full Credit</a>
+                    . Never claim input VAT on an invoice that was never transmitted to KRA - it
+                    will be struck out on audit.
+                  </p>
                 </div>
               </div>
             </section>
@@ -298,7 +293,6 @@ export default function AutoPopulatedReturnPage() {
                 <div className="space-y-3">
                   {[
                     { q: "Can I file the old way (manual entry)?", a: "KRA encourages all VAT-registered taxpayers to use the auto-populated return. While you can still override and enter figures manually, the pre-filled data from eTIMS cannot be reduced. If you enter a lower figure than what eTIMS transmitted, the system will flag a discrepancy." },
-                    { q: "What about non-VAT suppliers on my purchases?", a: "Purchases from non-VAT suppliers (e.g., a small shop without eTIMS) will not appear in the CSV. You cannot claim input VAT on these purchases. They can be used for income tax deductions but not for VAT input claims." },
                     { q: "Does the return update right up to the 20th?", a: "Yes. The data updates daily through an incremental batch process. Download the latest version on the day you file to capture all recently transmitted invoices. Do not download once and file a week later - you will miss late-transmitted entries." },
                     { q: "What about import entries?", a: "Import declarations from iCMS appear automatically under Section F - Imports. If an import entry is missing, contact your customs clearing agent to verify the declaration was filed correctly. You can also add it manually with the correct customs entry number." },
                   ].map(({ q, a }) => (
