@@ -2,7 +2,6 @@
 import "@/src/styles/globals.css"
 import { Navbar } from "@/src/components/navbar"
 import Footer from "@/src/components/Footer.astro"
-import { WhatsAppButton } from "@/components/whatsapp-button"
 import { BackToTop } from "@/components/back-to-top"
 
 export interface Props {
@@ -78,11 +77,10 @@ const organizationSchema = {
   alternateName: ["SmartVAT Kenya", "Smart VAT Kenya Limited"],
   legalName: "Smart VAT Kenya Limited",
   disambiguatingDescription:
-    "Smart VAT Kenya is a Kenyan tax-services firm and publisher of practical Kenya VAT guidance, calculators and statistics — distinct from unrelated European VAT-compliance software brands using similar names.",
+    "Smart VAT Kenya is a Kenyan tax-services firm and publisher of practical Kenya VAT guidance, calculators and statistics — distinct from unrelated European VAT-compliance software brands using the same name.",
   description:
-    "Professional VAT registration and monthly filing services for Kenyan SMEs. Flat-fee pricing, eTIMS-compliant, M-PESA accepted, WhatsApp support. Publishes Kenya's most-cited practical VAT reference library, calculators and open tax datasets.",
+    "Professional VAT registration and monthly filing services for Kenyan SMEs. Flat-fee pricing, eTIMS-compliant, M-PESA accepted, WhatsApp support. Publishes Kenya's most-cited practical VAT reference content.",
   email: "info@smartvatkenya.co.ke",
-  telephone: "+254705467108",
   url: "https://smartvatkenya.co.ke",
   logo: {
     "@type": "ImageObject",
@@ -93,14 +91,11 @@ const organizationSchema = {
   },
   image: "https://smartvatkenya.co.ke/og-image.png",
   slogan: "Kenya VAT, handled. Registered, filed, compliant — by the 17th.",
-  // Identity links ONLY (pages about this entity). Once the Wikidata item is
-  // live, add it here — see docs/backlink-playbook.md (Wikidata section).
   sameAs: [
     "https://www.linkedin.com/company/smart-vat-kenya",
     "https://www.twitter.com/smartvatkenya",
     "https://www.facebook.com/smartvatkenya",
   ],
-  // Primary-source relationships (instead of broken sameAs): what we interpret.
   subjectOf: [
     "https://smartvatkenya.co.ke/sources/",
     "https://smartvatkenya.co.ke/statistics/",
@@ -142,7 +137,6 @@ const organizationSchema = {
   hasMap: "https://maps.google.com/?q=Pioneer+House+Moi+Avenue+Nairobi",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+254705467108",
     email: "info@smartvatkenya.co.ke",
     contactType: "customer service",
     availableLanguage: ["English", "Swahili"],
@@ -234,7 +228,7 @@ const authorSchema = {
   url: "https://smartvatkenya.co.ke/about/editorial-policy/",
   worksFor: { "@id": "https://smartvatkenya.co.ke/#organization" },
   description:
-    "Kenya tax content editorial team. Every guide is verified against the VAT Act (Cap. 476), the Tax Procedures Act (Cap. 469), the current Finance Act and KRA official guidance before publication, and re-verified each Finance Act season. Editorial standards and corrections policy: /about/editorial-policy/.",
+    "Kenya tax content editorial team. Every guide is verified against the VAT Act (Cap. 476), the Tax Procedures Act (Cap. 469), the current Finance Act and KRA official guidance before publication.",
   knowsAbout: [
     "Kenya VAT Law",
     "KRA eTIMS",
@@ -255,7 +249,7 @@ const citationSchema = {
   url: "https://smartvatkenya.co.ke/sources/",
   name: "Kenya Tax Law Library & Official Sources",
   description:
-    "Primary sources for every claim on Smart VAT Kenya: VAT Act (Cap. 476), Tax Procedures Act (Cap. 469), Finance Acts 2024-2026, eTIMS Regulations, VAT (Digital Marketplace) Regulations 2023, KRA practice notes and Kenya Gazette notices.",
+    "Primary sources for every claim on Smart VAT Kenya: VAT Act (Cap. 476), Tax Procedures Act (Cap. 469), Finance Acts 2024-2026, eTIMS Regulations, VAT (Digital Marketplace) Regulations 2023, KRA guidance and official forms.",
   isPartOf: { "@id": "https://smartvatkenya.co.ke/#website" },
   publisher: { "@id": "https://smartvatkenya.co.ke/#organization" },
   about: [
@@ -306,7 +300,7 @@ const citationSchema = {
   <link rel="canonical" href={pageUrl} />
 
   {keywords && keywords.length > 0 && (
-    <meta name="keywords" content={keywords.join(", ")} />
+    <meta name="keywords" content={keywords.join(", ") } />
   )}
 
   <!-- OG -->
@@ -346,7 +340,7 @@ const citationSchema = {
     prefetch: [
       {
         source: "list",
-        urls: ["/tools/", "/resources/", "/services/", "/resources/how-to-register-for-vat-in-kenya/", "/resources/kra-penalty-for-late-vat-filing/", "/resources/how-to-calculate-vat-in-kenya/", "/resources/cetis-kenya-2027/", "/resources/kra-tax-amnesty-2026/", "/resources/faq/"],
+        urls: ["/tools/", "/resources/", "/services/", "/resources/how-to-register-for-vat-in-kenya/", "/resources/kra-penalty-for-late-vat-filing/", "/resources/how-to-calculate-vat-in-kenya/"],
         requires: ["anonymous-client-ip-when-cross-origin"],
       },
     ],
@@ -427,7 +421,6 @@ const citationSchema = {
   </main>
   <Footer />
   <BackToTop client:visible />
-  <WhatsAppButton client:load />
   <script is:inline>
     // Unified delegated conversion tracking. Fires into every analytics layer
     // that may be present (GA4 dataLayer/gtag, Microsoft Clarity) and is
