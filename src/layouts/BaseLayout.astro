@@ -79,7 +79,7 @@ const organizationSchema = {
   disambiguatingDescription:
     "Smart VAT Kenya is a Kenyan tax-services firm and publisher of practical Kenya VAT guidance, calculators and statistics — distinct from unrelated European VAT-compliance software brands using the same name.",
   description:
-    "Professional VAT registration and monthly filing services for Kenyan SMEs. Flat-fee pricing, eTIMS-compliant, M-PESA accepted, WhatsApp support. Publishes Kenya's most-cited practical VAT reference content.",
+    "Professional VAT registration and monthly filing services for Kenyan SMEs. Flat-fee pricing, eTIMS-compliant, M-PESA accepted. Publishes Kenya's most-cited practical VAT reference content.",
   email: "info@smartvatkenya.co.ke",
   url: "https://smartvatkenya.co.ke",
   logo: {
@@ -438,13 +438,7 @@ const citationSchema = {
         var el = e.target.closest("[data-track]")
         if (el) {
           var t = el.getAttribute("data-track")
-          if (t === "wa-cta") {
-            push("whatsapp_click", {
-              cta_type: el.getAttribute("data-cta-type") || "unknown",
-              service: el.getAttribute("data-service") || "general",
-              href: el.getAttribute("href") || "",
-            })
-          } else if (t === "calculator-used" || t === "service-cta" || t === "calendar-add" || t === "contact-cta") {
+          if (t === "calculator-used" || t === "service-cta" || t === "calendar-add" || t === "contact-cta") {
             push(t, {
               cta_type: el.getAttribute("data-cta-type") || t,
               service: el.getAttribute("data-service") || "general",

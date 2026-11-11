@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "@/src/layouts/BaseLayout.astro"
-import { WA_PATHS } from "@/src/lib/whatsapp"
 import { FACTS } from "@/src/lib/vat-facts"
 
 // "KRA today" hub: deadlines, amnesty window, system status pointers and the
@@ -151,16 +150,7 @@ const updates = [
         ))}
       </div>
 
-      <!-- Subscribe CTA -->
-      <div class="border border-hairline rounded-xl p-5 sm:p-6 bg-canvas-alt">
-        <p class="font-display text-[1rem] font-semibold text-ink mb-1">Never miss a deadline or a rule change</p>
-        <p class="text-[0.83rem] text-ink-muted leading-relaxed mb-4">
-          Message us on WhatsApp and we'll add you to our client reminder list - filing reminders three days before every deadline, and an alert when KRA rules change. Free for our filing clients, KES 0 to everyone else.
-        </p>
-        <a href={WA_PATHS.quote} target="_blank" rel="noopener noreferrer" data-track="wa-cta" data-cta-type="kra-updates-subscribe" data-service="reminders" class="inline-flex items-center gap-2 bg-[#128C7E] hover:bg-[#0e6d5c] text-white text-[0.85rem] font-semibold px-5 py-3 rounded-md transition-colors">
-          Get reminders on WhatsApp
-        </a>
-        <p class="text-[0.7rem] text-ink-muted mt-3">Verified {todayStr} · Figures from {FACTS.lastVerified} KRA guidance · See also: <a href="/tax-deadlines/" class="text-brand underline underline-offset-2">full deadline calendar</a></p>
+              <p class="text-[0.7rem] text-ink-muted mt-3">Verified {todayStr} · Figures from {FACTS.lastVerified} KRA guidance · See also: <a href="/tax-deadlines/" class="text-brand underline underline-offset-2">full deadline calendar</a></p>
       </div>
     </div>
   </div>
