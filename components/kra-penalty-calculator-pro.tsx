@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { ArrowRight, Info, WarningCircle } from "@phosphor-icons/react/dist/ssr"
 import { ShareResult } from "@/components/share-result"
-import { WA_PATHS } from "@/src/lib/whatsapp"
+
 import { track } from "@/src/lib/analytics"
 
 function formatKES(n: number) {
@@ -133,9 +133,7 @@ export function KraPenaltyCalculatorPro() {
                   <p className="font-display text-[1.2rem] font-bold text-amber-700 tabular-nums">+ {formatKES(total)}</p>
                 </div>
                 <p className="text-[0.72rem] text-amber-700 leading-relaxed">Pay principal only ({formatKES(due)}) before 31 December 2026. Amnesty excludes taxes declared after the window opened and cases with a final agency decision - verify eligibility first.</p>
-                <a href={WA_PATHS.penalty} target="_blank" rel="noopener noreferrer" data-track="wa-cta" data-cta-type="penalty-amnesty-result" data-service="penalty-waiver" className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white text-[0.8rem] font-semibold px-4 py-2.5 rounded-md transition-colors">
-                  Check if my penalties qualify <ArrowRight size={13} weight="bold" aria-hidden="true" />
-                </a>
+
               </div>
             )}
 
@@ -144,9 +142,7 @@ export function KraPenaltyCalculatorPro() {
               Interest runs at 1%/month on unpaid principal for all regimes. KRA applies the higher-of rule per regime; waivers are discretionary and strongest when you file first, pay principal, then apply.
             </p>
             <div className="flex flex-col gap-3 pt-1">
-              <a href={WA_PATHS.penalty} target="_blank" rel="noopener noreferrer" data-track="wa-cta" data-cta-type="penalty-calc-result" data-service="penalty-waiver" className="inline-flex items-center justify-center gap-2 bg-brand text-canvas text-[0.85rem] font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">
-                Get this penalty waived or deferred - human help <ArrowRight size={13} weight="bold" aria-hidden="true" />
-              </a>
+
               <ShareResult resultText={resultText} compact />
             </div>
           </div>

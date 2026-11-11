@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { ArrowRight, Info, Receipt } from "@phosphor-icons/react/dist/ssr"
 import { ShareResult } from "@/components/share-result"
-import { WA_PATHS } from "@/src/lib/whatsapp"
+
 import { track } from "@/src/lib/analytics"
 
 function formatKES(n: number) {
@@ -128,9 +128,7 @@ export function VatCalculatorPro() {
               Before filing, verify: your sales invoices are eTIMS-generated, output VAT matches your VAT3, and input VAT claims have valid supplier eTIMS invoices. That's what KRA checks.
             </p>
             <div className="flex flex-col gap-3 pt-1">
-              <a href={WA_PATHS.filing} target="_blank" rel="noopener noreferrer" data-track="wa-cta" data-cta-type="vat-calc-result" data-service="monthly-filing" className="inline-flex items-center justify-center gap-2 bg-brand text-canvas text-[0.85rem] font-semibold px-5 py-3 rounded-md hover:bg-brand-hover transition-colors">
-                Need help filing it correctly? We file from KES 3,500/month <ArrowRight size={13} weight="bold" aria-hidden="true" />
-              </a>
+
               <ShareResult resultText={resultText} compact />
             </div>
           </div>

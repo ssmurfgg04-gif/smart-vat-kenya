@@ -2,7 +2,6 @@
 import BaseLayout from "@/src/layouts/BaseLayout.astro"
 import { KraDoctor } from "@/components/kra-doctor"
 import { TrustBadges } from "@/components/trust-badges"
-import { ReferralStrip } from "@/components/referral-strip"
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -73,9 +72,7 @@ const jsonLd = {
         </div>
       </div>
 
-      <div class="mt-8 max-w-3xl">
-        <ReferralStrip />
-      </div>
+
     </div>
   </div>
 </BaseLayout>

@@ -2,7 +2,9 @@
 
 import { useState } from "react"
 import { ShareNetwork, Copy, Check, ChatsCircle } from "@phosphor-icons/react/dist/ssr"
-import { waShare } from "@/src/lib/whatsapp"
+function waShare(message: string): string {
+  return "https://wa.me/?text=" + encodeURIComponent(message)
+}
 import { track } from "@/src/lib/analytics"
 
 interface ShareResultProps {

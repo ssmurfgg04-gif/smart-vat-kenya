@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { ArrowRight, Stethoscope, CheckCircle, WarningCircle, Info } from "@phosphor-icons/react/dist/ssr"
-import { WA_PATHS, waDirect } from "@/src/lib/whatsapp"
 import { track } from "@/src/lib/analytics"
 
 type Area = "etims" | "itax" | "vat" | "tcc" | "penalty" | "registration" | "unknown"
@@ -76,8 +75,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "eTIMS is mandatory for VAT-registered businesses. Non-compliance exposes you to a penalty of 2x tax due, with 2026 minimums of KES 100,000 (companies) or KES 10,000 (individuals).",
     steps: ["Pick your eTIMS version (OSCU for desktop/POS, eTims Lite on mobile for small sellers).", "Register the device via the eTIMS portal using your KRA credentials.", "Issue your first test invoice and confirm the QR validates."],
     links: [{ label: "eTIMS onboarding guide", href: "/resources/etims-onboarding-guide/" }, { label: "eTIMS compliance checklist", href: "/resources/etims-compliance-checklist/" }],
-    wa: WA_PATHS.doctor,
-    waMessage: "I need eTIMS onboarding",
   },
   "etims-reject": {
     title: "Invoice rejections almost always trace to one of five fields",
@@ -85,8 +82,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "A rejected invoice isn't synced to KRA, so your buyer can't claim input VAT - which strains the relationship and risks penalties if unresolved before filing.",
     steps: ["Check the buyer's PIN is valid and formatted correctly (A000... format).", "Confirm the tax rate and classification code match the supply.", "Re-issue (don't duplicate) if the KRA endpoint returned an error."],
     links: [{ label: "Fix rejected eTIMS invoices", href: "/resources/etims-invoice-rejected/" }, { label: "Buyer PIN missing fix", href: "/resources/etims-buyer-pin-missing/" }],
-    wa: WA_PATHS.doctor,
-    waMessage: "My eTIMS invoice is being rejected",
   },
   "etims-sync": {
     title: "Pending sync = your invoices exist but KRA hasn't confirmed them",
@@ -94,8 +89,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "If sync stays pending, invoices aren't legally transmitted. Common causes: unstable connection, wrong gateway settings, or KRA-side backlog during peak periods.",
     steps: ["Confirm stable internet and retry a manual sync from the OSCU tray.", "Do NOT keep issuing invoices on a blocked device - switch to offline invoicing rules.", "If pending >24h, escalate with your control unit ID."],
     links: [{ label: "Pending sync fix", href: "/resources/etims-pending-sync/" }, { label: "Offline invoicing while eTIMS is down", href: "/resources/etims-down-offline-invoicing/" }],
-    wa: WA_PATHS.doctor,
-    waMessage: "My eTIMS is stuck on pending sync",
   },
   "etims-locked": {
     title: "Locked eTIMS account - recoverable, but stop issuing invoices",
@@ -103,8 +96,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "Lockouts follow failed logins or device tampering. Invoicing on a locked device triggers the s.59A(5) exposure: KES 100,000/month, capped at KES 1,000,000.",
     steps: ["Stop invoicing on the locked device immediately.", "Reset via 'Forgot Password' on etims.kra.go.ke (separate from iTax password).", "If the device itself is unregistered, re-enrol it."],
     links: [{ label: "eTIMS account locked fix", href: "/resources/etims-account-locked/" }, { label: "Device not registered fix", href: "/resources/etims-device-not-registered/" }],
-    wa: WA_PATHS.doctor,
-    waMessage: "My eTIMS account is locked",
   },
   "etims-penalty": {
     title: "eTIMS penalties are real - but often waivable",
@@ -112,8 +103,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "TPA s.86 as amended by Finance Act 2026 sets minimums of KES 100,000 (companies) / KES 10,000 (individuals) for eTIMS non-compliance. Responding early preserves waiver options.",
     steps: ["Confirm the exact section cited on the notice before paying anything.", "File/pay any outstanding principal - waivers work best after compliance.", "Apply for a waiver with a written reason; amnesty may cover pre-2026 debt."],
     links: [{ label: "eTIMS penalty: KES 50K/month explained", href: "/resources/etims-penalty-50000-per-month-kenya/" }, { label: "Tax amnesty 2026", href: "/resources/kra-tax-amnesty-2026/" }],
-    wa: WA_PATHS.penalty,
-    waMessage: "I received an eTIMS penalty notice",
   },
   "itax-login": {
     title: "iTax login failures have three usual culprits",
@@ -121,8 +110,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "Most login failures are Caps Lock, stale passwords, or an account locked by repeated attempts - not a KRA problem with your PIN itself.",
     steps: ["Enter your PIN without spaces; check Caps Lock.", "Use 'Forgot Password' and check spam for the reset email.", "Locked accounts auto-unlock after ~1 hour; don't keep retrying."],
     links: [{ label: "iTax portal not working - all fixes", href: "/resources/itax-portal-not-working/" }, { label: "KRA PIN not working", href: "/resources/kra-pin-not-working/" }],
-    wa: WA_PATHS.doctor,
-    waMessage: "I can't log in to iTax",
   },
   "itax-down": {
     title: "Portal down near the 20th? You're not alone - plan the workaround",
@@ -130,8 +117,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "iTax degrades under deadline load (error 500s, timeouts). Filing early in the cycle is the only durable fix; outages don't remove the obligation.",
     steps: ["Retry at off-peak hours (before 9 AM or after 5 PM EAT).", "Confirm the outage on KRA's channels before assuming it's you.", "Document your attempts - evidence helps if a late-filing penalty lands unfairly."],
     links: [{ label: "Live KRA system status", href: "/kra-status/" }, { label: "KRA status code 500 fixes", href: "/resources/kra-status-code-500-itax-errors/" }],
-    wa: WA_PATHS.filing,
-    waMessage: "iTax keeps failing while I try to file",
   },
   "itax-otp": {
     title: "Missing OTP usually means a stale phone or email on file",
@@ -139,8 +124,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "OTP codes go to the contact details on your KRA profile. If those are outdated, you're locked out of every confirmation flow until they're corrected.",
     steps: ["Wait 5 minutes, then resend once - SMS gateways lag.", "Check whether email OTP is offered as an alternative.", "Outdated contacts require a Huduma Centre or agent-assisted profile update."],
     links: [{ label: "iTax troubleshooting hub", href: "/resources/itax-portal-not-working/" }],
-    wa: WA_PATHS.doctor,
-    waMessage: "My iTax OTP is not arriving",
   },
   "itax-return": {
     title: "Return rejection is almost always a format or ledger issue",
@@ -148,8 +131,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "Validation errors come from the Excel template format, mismatched figures vs your VAT ledger, or auto-populated returns that need a dispute rather than a resubmission.",
     steps: ["Download a fresh template for the period - old forms fail validation.", "Reconcile output/input VAT against your eTIMS invoices before uploading.", "If figures were auto-populated wrongly, dispute instead of amending."],
     links: [{ label: "File VAT return on iTax - step by step", href: "/resources/how-to-file-vat-return-on-itax/" }, { label: "Dispute an auto-populated return", href: "/resources/vat-return-dispute-auto-populated/" }],
-    wa: WA_PATHS.filing,
-    waMessage: "My VAT return won't submit",
   },
   "vat-notreg": {
     title: "Approaching KES 5M turnover? Registration is mandatory - and the penalty for skipping is steep",
@@ -157,8 +138,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "Non-registration carries KES 100,000 per month (TPA s.95). Voluntary registration below the threshold can also make sense if your clients are VAT-registered.",
     steps: ["Check your rolling 12-month turnover against the KES 5M threshold.", "Gather: PIN certificate, business permit/registration docs, bank details.", "File VAT Form 1 on iTax - approval typically takes 1-3 working days."],
     links: [{ label: "Do I need to register for VAT?", href: "/resources/do-i-need-to-register-for-vat-kenya/" }, { label: "Compare all 3 registration options", href: "/resources/vat-registration-options-kenya/" }],
-    wa: WA_PATHS.quote,
-    waMessage: "I may need VAT registration",
   },
   "vat-charge": {
     title: "16% applies to most taxable supplies - but the edge cases bite",
@@ -173,8 +152,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "The VAT3 is due by the 20th of the following month. Late filing costs the higher of KES 10,000 or 5% of tax due, plus 1%/month interest.",
     steps: ["Extract output VAT from eTIMS sales; collect input VAT from supplier eTIMS invoices.", "Complete the VAT3 on iTax and validate before the 20th.", "Pay via the KRA payment gateway (M-PESA Paybill 572572) and keep the receipt."],
     links: [{ label: "File VAT return on iTax", href: "/resources/how-to-file-vat-return-on-itax/" }, { label: "VAT return filing checklist", href: "/resources/vat-return-filing-checklist/" }],
-    wa: WA_PATHS.filing,
-    waMessage: "I want my VAT filing handled monthly",
   },
   "vat-refund": {
     title: "VAT refunds are claimable - but they invite audit scrutiny",
@@ -182,8 +159,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "Persistent input VAT credit (e.g. exporters) can be refunded or carried forward. KRA audits refund claims closely, so your eTIMS paper trail must be airtight.",
     steps: ["Confirm the credit position on your VAT ledger for the period.", "Apply via iTax with supporting eTIMS invoices and reconciliations.", "Expect an audit query; prepare a clean invoice-to-return reconciliation."],
     links: [{ label: "VAT refund guide", href: "/resources/vat-refund-guide-kenya/" }],
-    wa: WA_PATHS.doctor,
-    waMessage: "I'm owed a VAT refund",
   },
   "tcc-expired": {
     title: "Expired TCC? Renew early - tenders and contracts hinge on it",
@@ -191,8 +166,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "A TCC is valid 12 months and proves you're compliant. Applying late risks tender disqualification; rejections usually trace to open obligations or unfiled returns.",
     steps: ["Clear all filed-return gaps and any tax due on iTax first.", "Apply for renewal on iTax at least a month before expiry.", "Download and verify the new certificate shows the correct validity window."],
     links: [{ label: "Tax Compliance Certificate guide", href: "/resources/tax-compliance-certificate-kenya/" }],
-    wa: WA_PATHS.doctor,
-    waMessage: "I need help with my TCC",
   },
   "tcc-rejected": {
     title: "TCC rejections point to a specific compliance gap",
@@ -200,8 +173,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "KRA rejects TCC applications when returns are unfiled, debt is unpaid, or an audit is open. The rejection letter (or ledger) names the blocker.",
     steps: ["Pull your compliance status on iTax - unfiled returns are the usual culprit.", "Clear the named gap (file, pay, or dispute it formally).", "Re-apply once the ledger reflects the fix."],
     links: [{ label: "Tax Compliance Certificate guide", href: "/resources/tax-compliance-certificate-kenya/" }, { label: "Check your KRA status", href: "/kra-status/" }],
-    wa: WA_PATHS.doctor,
-    waMessage: "My TCC application was rejected",
   },
   "pen-late": {
     title: "Late penalties are formula-driven - which means they're predictable",
@@ -209,8 +180,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "Late filing: higher of KES 10,000 or 5% of tax due (VAT), plus 1%/month interest on unpaid principal. Interest keeps running until the principal is settled.",
     steps: ["Estimate the exact exposure with our penalty calculator below.", "File the outstanding return first - waiver odds improve after compliance.", "Pay principal, then apply for waiver of the penalty/interest portion."],
     links: [{ label: "KRA penalty reference table", href: "/resources/kra-vat-penalties-reference/" }, { label: "Late VAT filing penalty", href: "/resources/kra-penalty-for-late-vat-filing/" }],
-    wa: WA_PATHS.penalty,
-    waMessage: "I have a late-filing penalty to deal with",
   },
   "pen-amnesty": {
     title: "The 2026 amnesty can wipe 100% of penalties + interest on pre-2026 debt",
@@ -218,8 +187,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "The amnesty window closes 31 December 2026. It covers penalties, interest and fines on tax due before January 2026 - exclusions apply (post-window declarations, final agency decisions).",
     steps: ["List all periods with debt and confirm they're pre-2026 liabilities.", "File anything still unfiled for those periods.", "Apply for amnesty, then pay the principal - in that order."],
     links: [{ label: "KRA tax amnesty 2026 explained", href: "/resources/kra-tax-amnesty-2026/" }, { label: "Amnesty eligibility checker", href: "/tools/amnesty-checker/" }],
-    wa: WA_PATHS.penalty,
-    waMessage: "I want to apply for the 2026 tax amnesty",
   },
   "pen-shock": {
     title: "Unexpected KRA bills (like the KES 70,000) usually have a paper trail",
@@ -227,8 +194,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "Assessment notices often combine eTIMS non-compliance minimums, late-filing penalties and interest. Never pay before confirming what the notice actually cites.",
     steps: ["Identify the exact legal section each amount on the notice cites.", "Cross-check against your filing history and eTIMS status.", "Object formally if wrong - deadlines for objection are short."],
     links: [{ label: "KRA fine of KES 70,000 explained", href: "/resources/kra-fine-70000/" }, { label: "KRA VAT audit process", href: "/resources/kra-vat-audit-process/" }],
-    wa: WA_PATHS.penalty,
-    waMessage: "I received an unexpected KRA bill",
   },
   "reg-pin": {
     title: "No KRA PIN yet? Everything else (VAT, eTIMS, tenders) starts here",
@@ -236,8 +201,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "The PIN is the foundation for all tax obligations, M-PESA business payments above thresholds, tenders and bank accounts. Registration is free on iTax.",
     steps: ["Gather ID/permit documents and a valid email + phone.", "Register online via iTax (individual or non-individual).", "Receive your PIN certificate by email - keep the password safe."],
     links: [{ label: "How to apply for a KRA PIN", href: "/resources/how-to-apply-for-kra-pin/" }],
-    wa: WA_PATHS.doctor,
-    waMessage: "I need a KRA PIN",
   },
   "reg-pin-broken": {
     title: "A PIN that 'isn't working' is usually an account issue, not the PIN",
@@ -245,8 +208,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "Common causes: locked account, wrong iTax password, or the PIN was never activated. Format issues (spaces) also block logins.",
     steps: ["Retry with the A000... format, no spaces.", "Reset the password; check spam for the reset email.", "Still dead? The profile may need a Huduma Centre correction."],
     links: [{ label: "KRA PIN not working - fixes", href: "/resources/kra-pin-not-working/" }],
-    wa: WA_PATHS.doctor,
-    waMessage: "My KRA PIN is not working",
   },
   "reg-obligation": {
     title: "Wrong obligations cause phantom penalties - fix the profile",
@@ -254,8 +215,6 @@ const DIAGNOSES: Record<string, Diagnosis> = {
     meaning: "If iTax shows obligations you never traded under (or misses ones you must file), KRA generates non-filing penalties automatically. Amend the taxpayer registration to match reality.",
     steps: ["Log in and check 'Obligations' under taxpayer registration.", "Request amendment of wrong obligations (or add missing ones like VAT).", "File any returns the corrected obligations expose, even nil."],
     links: [{ label: "Nil returns & amnesty guide", href: "/resources/how-to-file-nil-returns-2026/" }, { label: "Check your KRA status", href: "/kra-status/" }],
-    wa: WA_PATHS.doctor,
-    waMessage: "My KRA obligations are wrong",
   },
 }
 
@@ -328,17 +287,7 @@ export function KraDoctor() {
           </div>
         )}
 
-        {/* Unknown area: free-text WhatsApp handoff */}
-        {area === "unknown" && (
-          <div className="border border-hairline rounded-lg p-4 bg-canvas">
-            <p className="text-[0.85rem] text-ink-muted leading-relaxed mb-3">
-              No diagnosis needed - describe what KRA sent you or what's failing, and we'll tell you what it is and what to do. Real human, flat fees, no obligation.
-            </p>
-            <a href={WA_PATHS.doctor} target="_blank" rel="noopener noreferrer" data-track="wa-cta" data-cta-type="doctor-unknown" data-service="general" className="inline-flex items-center gap-2 bg-[#128C7E] hover:bg-[#0e6d5c] text-white text-[0.83rem] font-semibold px-4 py-2.5 rounded-md transition-colors">
-              Describe my issue on WhatsApp <ArrowRight size={13} weight="bold" aria-hidden="true" />
-            </a>
-          </div>
-        )}
+
 
         {/* Step 3: diagnosis */}
         {dx && severity && (
@@ -372,19 +321,7 @@ export function KraDoctor() {
                   ))}
                 </div>
               )}
-              {dx.wa && (
-                <a
-                  href={dx.waMessage ? `${dx.wa}?text=${encodeURIComponent((dx.waMessage || "").replace(/^/, "Hi Smart VAT Kenya, "))}` : dx.wa}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-track="wa-cta"
-                  data-cta-type="doctor-handoff"
-                  data-service={area || "general"}
-                  className="inline-flex items-center gap-2 bg-[#128C7E] hover:bg-[#0e6d5c] text-white text-[0.85rem] font-semibold px-5 py-3 rounded-md transition-colors w-full sm:w-auto justify-center"
-                >
-                  Hand this to a human - we'll fix it for you <ArrowRight size={13} weight="bold" aria-hidden="true" />
-                </a>
-              )}
+
               <div className="flex flex-wrap items-center gap-4 pt-1">
                 <button onClick={() => { setArea(null); setSymptom(null) }} className="text-[0.75rem] text-ink-muted hover:text-ink transition-colors">Start over</button>
                 <p className="text-[0.7rem] text-ink-muted">Diagnosis is guidance, not a substitute for advice on your specific file.</p>
@@ -397,5 +334,3 @@ export function KraDoctor() {
   )
 }
 
-// Kept for potential direct deep links (waDirect import used by page-level CTAs)
-export const KRA_DOCTOR_WA = waDirect("Hi Smart VAT Kenya, I just used the KRA Doctor.")

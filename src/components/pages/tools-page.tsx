@@ -5,7 +5,6 @@ import { ArrowRight, Calculator, Info, WarningCircle, Question, Wrench, Clipboar
 import { EtimsPenaltyCalculator } from "@/src/components/pages/etims-penalty-calculator"
 import { ShareResult } from "@/components/share-result"
 import { FACTS } from "@/src/lib/vat-facts"
-import { WA_PATHS } from "@/src/lib/whatsapp"
 
 
 function formatKES(n: number) {
@@ -206,11 +205,8 @@ export default function ToolsPage() {
                 )}
                 {penDue > 0 && (
                   <div className="mt-5 space-y-3">
-                    <a href={WA_PATHS.penalty} target="_blank" rel="noopener noreferrer" data-track="wa-cta" data-cta-type="penalty-calc-result" data-service="penalty-waiver" className="btn-fill w-full flex items-center justify-center gap-2 bg-[#128C7E] text-white text-[0.82rem] font-semibold py-3 rounded-md hover:bg-[#0e6d5c] transition-colors">
-                      Get this penalty waived - WhatsApp us <ArrowRight size={13} weight="bold" aria-hidden="true" />
-                    </a>
                     <a href={`mailto:info@smartvatkenya.co.ke?subject=${penWaText}`} className="w-full flex items-center justify-center gap-2 border border-hairline text-ink-muted text-[0.78rem] font-medium py-2.5 rounded-md hover:border-ink-muted hover:text-ink transition-colors">
-                      Prefer email? Send your penalty summary
+                      Send your penalty summary by email
                     </a>
                     <ShareResult resultText={`My estimated KRA ${regime.label} penalty: ${formatKES(totalPenalty)} (${penM} month(s) late on ${formatKES(penDue)} principal).`} compact />
                   </div>
