@@ -298,7 +298,6 @@ html.dark {
      must NOT be touched here — not even transparent, which would kill their bg. */
   @media (max-width: 430px) {
     main > section:nth-of-type(4) { background-color: var(--navy-tint) !important; } /* Problem-first */
-    main > section:nth-of-type(10) { background-color: var(--navy-tint) !important; } /* Testimonials */
   }
 
   .font-display {
