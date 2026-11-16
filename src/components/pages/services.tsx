@@ -470,12 +470,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="bg-canvas-alt px-6 lg:px-12 py-16">
-        <div className="max-w-[1400px] mx-auto">
-          <Testimonials />
-        </div>
-      </section>
+      {/* Testimonials — renders only when real, consented quotes exist */}
+      <Testimonials />
 
       {/* CTA */}
       <section className="bg-canvas px-6 lg:px-12 py-16">

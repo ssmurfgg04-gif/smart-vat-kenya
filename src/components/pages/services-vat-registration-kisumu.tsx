@@ -209,26 +209,6 @@ const faqs = [
   },
 ]
 
-const kisumuTestimonials = [
-  {
-    name: "Caroline A.",
-    role: "Fish Exporter, Kisumu",
-    text: "Our regional buyers required a VAT-registered supplier. The team registered the business in two days and explained zero-rating for our exports. Everything happened by email from start to finish.",
-    rating: 5,
-  },
-  {
-    name: "Brian O.",
-    role: "Agribusiness, Ahero",
-    text: "I crossed the KES 5 million mark after a good season and did not want to wake up to penalties. They filed the registration correctly the first time and sent the PIN certificate by email. No trips anywhere.",
-    rating: 5,
-  },
-  {
-    name: "Millicent J.",
-    role: "Cross-border Trader, Busia Road",
-    text: "Trading between Kenya and Uganda was confusing enough already. They sorted my VAT registration and patiently explained what changes at the border. Clear answers, no jargon, no office queues.",
-    rating: 5,
-  },
-]
 
 export default function VATRegistrationKisumuPage() {
   return (
@@ -528,7 +508,7 @@ export default function VATRegistrationKisumuPage() {
       </section>
 
       {/* Testimonials */}
-      <Testimonials items={kisumuTestimonials} heading="VAT registration results from Lake Basin businesses." />
+      <Testimonials />
 
       {/* FAQ */}
       <section className="bg-canvas-alt px-6 lg:px-12 py-16" aria-labelledby="faq-heading">

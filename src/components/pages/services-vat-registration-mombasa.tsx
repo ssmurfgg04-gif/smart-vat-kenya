@@ -232,26 +232,6 @@ const faqs = [
   },
 ]
 
-const mombasaTestimonials = [
-  {
-    name: "Fatuma A.",
-    role: "Beach Hotel, Nyali",
-    text: "Our hotel had to charge 16% on accommodation but we were not yet registered. They handled the entire registration remotely while we kept running the property. The VAT PIN arrived in two days.",
-    rating: 5,
-  },
-  {
-    name: "Daniel O.",
-    role: "Clearing & Forwarding, Changamwe",
-    text: "Import clients kept asking for VAT-compliant invoices. Smart VAT Kenya registered our firm and walked us through eTIMS before the next customs cycle. All by email, no office visit, no drama.",
-    rating: 5,
-  },
-  {
-    name: "Salim M.",
-    role: "Restaurant Owner, Bamburi",
-    text: "I assumed I would have to travel to Nairobi or queue at a KRA office in Mombasa. Nothing of the sort - I paid by M-PESA and the PIN certificate landed in my inbox in three days.",
-    rating: 5,
-  },
-]
 
 export default function VATRegistrationMombasaPage() {
   return (
@@ -545,7 +525,7 @@ export default function VATRegistrationMombasaPage() {
       </section>
 
       {/* Testimonials */}
-      <Testimonials items={mombasaTestimonials} heading="VAT registration results from Coast businesses." />
+      <Testimonials />
 
       {/* FAQ */}
       <section className="bg-canvas-alt px-6 lg:px-12 py-16" aria-labelledby="faq-heading">

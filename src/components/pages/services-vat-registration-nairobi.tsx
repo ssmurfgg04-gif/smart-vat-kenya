@@ -254,26 +254,6 @@ const faqs = [
   },
 ]
 
-const nairobiTestimonials = [
-  {
-    name: "Kevin O.",
-    role: "Tech Consultancy, Westlands",
-    text: "We needed to be VAT registered before a corporate client would sign our contract. Sent documents by email on a Monday, had the VAT PIN by Wednesday. No iTax fights, no running to Times Tower.",
-    rating: 5,
-  },
-  {
-    name: "Mercy A.",
-    role: "Boutique Owner, Nairobi CBD",
-    text: "I was worried about the 16% question - would my prices have to go up? They explained exactly when registration becomes compulsory and what changes after. Registration took three days, everything by email.",
-    rating: 5,
-  },
-  {
-    name: "Peter N.",
-    role: "Hardware Store, Industrial Area",
-    text: "They handled VAT Form 1 end to end and walked me through eTIMS after the PIN came through. My suppliers now issue proper e-invoices against my PIN. Straightforward from start to finish.",
-    rating: 5,
-  },
-]
 
 export default function VATRegistrationNairobiPage() {
   return (
@@ -588,7 +568,7 @@ export default function VATRegistrationNairobiPage() {
       </section>
 
       {/* Testimonials */}
-      <Testimonials items={nairobiTestimonials} heading="VAT registration results from Nairobi businesses." />
+      <Testimonials />
 
       {/* FAQ */}
       <section className="bg-canvas-alt px-6 lg:px-12 py-16" aria-labelledby="faq-heading">

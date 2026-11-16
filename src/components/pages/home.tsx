@@ -11,7 +11,6 @@ import {
   ShieldCheck,
   UsersThree,
   WarningCircle,
-  Star,
   Briefcase,
   TrendUp,
 } from "@phosphor-icons/react/dist/ssr"
@@ -812,55 +811,6 @@ KRA's{" "}
               Full process details
               <ArrowRight size={13} weight="bold" aria-hidden="true" />
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── SOCIAL PROOF ─── */}
-      <section className="bg-canvas-alt py-20 px-6 lg:px-12">
-        <div className="max-w-[1400px] mx-auto">
-          <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted mb-10">
-            What our clients say
-          </p>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
-            {[
-              {
-                quote:
-                  "Registered in 2 days. The KRA portal had given me errors for 3 weeks. Smart VAT just handled everything by email.",
-                name: "James M.",
-                business: "Retail trader, Nairobi",
-              },
-              {
-                quote:
-                  "KES 5,000 flat, no surprises. My accountant was quoting KES 20,000. I emailed Smart VAT and had my PIN the next day.",
-                name: "Amina W.",
-                business: "Consulting firm, Westlands",
-              },
-              {
-                quote:
-                  "They have filed my monthly returns for 8 months. Not once have I had to chase them or worry about the 20th deadline.",
-                name: "Peter K.",
-                business: "Wholesale supplier, Industrial Area",
-              },
-            ].map(({ quote, name, business }) => (
-              <article
-                key={name}
-                className="bg-canvas rounded-lg border border-hairline p-5 lg:p-7 flex flex-col"
-              >
-                <div className="flex gap-0.5 mb-4" role="img" aria-label="5 out of 5 stars">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={13} weight="fill" className="text-brand" aria-hidden="true" />
-                  ))}
-                </div>
-                <p className="text-[0.88rem] text-ink-soft leading-relaxed flex-1 mb-5 italic">
-                  &ldquo;{quote}&rdquo;
-                </p>
-                <div>
-                  <p className="text-[0.82rem] font-semibold text-ink">{name}</p>
-                  <p className="text-[0.75rem] text-ink-muted">{business}</p>
-                </div>
-              </article>
-            ))}
           </div>
         </div>
       </section>

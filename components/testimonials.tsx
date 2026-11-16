@@ -7,36 +7,24 @@ export interface TestimonialItem {
   rating: number
 }
 
-const defaultTestimonials: TestimonialItem[] = [
-  {
-    name: "Sarah W.",
-    role: "Retail Business, Nairobi",
-    text: "I had accumulated late filing penalties over three months - nearly KES 30,000. Smart VAT Kenya handled the waiver application and KRA waived everything except a small admin fee. Worth every shilling.",
-    rating: 5,
-  },
-  {
-    name: "James M.",
-    role: "Wholesale Distributor, Mombasa",
-    text: "I registered for VAT late and got hit with the KES 100,000 non-registration penalty. I thought I was going to have to pay it all. Their team drafted a solid waiver letter and KRA reduced it significantly.",
-    rating: 5,
-  },
-  {
-    name: "Grace K.",
-    role: "SME Owner, Nakuru",
-    text: "The regular updates made the whole process stress-free. I didn't have to chase anyone - they kept me informed at every stage. My penalty was fully waived in 2 weeks.",
-    rating: 5,
-  },
-]
+// ONLY real, consented client quotes go here — each one must match a real
+// engagement you can evidence (invoice/receipt) and the client must have
+// agreed in writing to be quoted. Invented or AI-written testimonials are
+// deceptive advertising (Kenya Consumer Protection Act; Google spam policy)
+// and were the likely cause of the site being flagged. While this list is
+// empty the section renders nothing, site-wide.
+export const realTestimonials: TestimonialItem[] = []
 
-const defaultHeading = "Real results from real penalty waiver clients."
+const defaultHeading = "What clients say"
 
 export function Testimonials({
-  items = defaultTestimonials,
+  items = realTestimonials,
   heading = defaultHeading,
 }: {
   items?: TestimonialItem[]
   heading?: string
 }) {
+  if (items.length === 0) return null
   return (
     <section className="bg-canvas-alt px-6 lg:px-10 py-16" aria-labelledby="testimonials-heading">
       <div className="max-w-[1400px] mx-auto">
